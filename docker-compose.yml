@@ -1,0 +1,22 @@
+services:
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cultivee-site
+    restart: unless-stopped
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.cultivee-site.rule=Host(`cultivee.com.br`) || Host(`www.cultivee.com.br`)"
+      - "traefik.http.routers.cultivee-site.entrypoints=websecure"
+      - "traefik.http.routers.cultivee-site.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.cultivee-site-http.rule=Host(`cultivee.com.br`) || Host(`www.cultivee.com.br`)"
+      - "traefik.http.routers.cultivee-site-http.entrypoints=web"
+      - "traefik.http.routers.cultivee-site-http.middlewares=https-redirect@file"
+      - "traefik.http.services.cultivee-site.loadbalancer.server.port=80"
+
+networks:
+  web:
+    external: true

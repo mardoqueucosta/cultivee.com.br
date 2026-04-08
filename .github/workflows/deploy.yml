@@ -1,0 +1,41 @@
+name: Deploy Site to VPS
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 129.121.50.168
+          username: root
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 22022
+          script: |
+            set -e
+            REMOTE_DIR="/opt/sites/cultivee.com.br"
+            mkdir -p $REMOTE_DIR
+
+            # Sync do GitHub
+            rm -rf /tmp/cultivee-site-deploy
+            git clone --depth 1 https://github.com/mardoqueucosta/cultivee.com.br.git /tmp/cultivee-site-deploy
+
+            # Copiar arquivos (preservar docker-compose local se existir)
+            rsync -a --exclude='.git' --exclude='node_modules' --exclude='dist' --exclude='01-imagens' /tmp/cultivee-site-deploy/ $REMOTE_DIR/
+            rm -rf /tmp/cultivee-site-deploy
+
+            # Rebuild container
+            cd $REMOTE_DIR
+            docker compose build --no-cache
+            docker compose up -d
+
+            # Status
+            docker ps --format 'table {{.Names}}\t{{.Status}}' | grep cultivee-site
+            echo "Deploy site concluido!"
