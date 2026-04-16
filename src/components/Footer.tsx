@@ -1,4 +1,4 @@
-import { Leaf, Mail, Phone, MapPin, Instagram, Youtube, MessageCircle } from "lucide-react";
+import { Leaf, Mail, Phone, MapPin, Instagram, Youtube, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -20,9 +20,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "https://instagram.com/cultivee", label: "Instagram" },
-    { icon: Youtube, href: "https://youtube.com/cultivee", label: "YouTube" },
-    { icon: MessageCircle, href: "https://wa.me/5519992805563", label: "WhatsApp" },
+    { icon: Instagram, href: "https://www.instagram.com/cultivee.br", label: "Instagram" },
+    { icon: Youtube, href: "https://www.youtube.com/@cultivee_br", label: "YouTube" },
+    { icon: Facebook, href: "https://www.facebook.com/cultivee.br", label: "Facebook" },
   ];
 
   return (
