@@ -2,32 +2,31 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { Camera, Droplets, ExternalLink, Smartphone, Wifi } from "lucide-react";
+import { Camera, Droplets, ExternalLink, Smartphone, Sparkles } from "lucide-react";
 
 const apps = [
   {
-    name: "Cultivee Camera",
-    description: "Monitore suas plantas em tempo real com o ESP32-CAM. Capture imagens automaticamente, visualize ao vivo e acompanhe o crescimento das suas plantas pelo celular.",
-    features: ["Monitoramento ao vivo", "Captura automatica de imagens", "Historico de fotos"],
-    icon: Camera,
-    color: "#3498db",
-    url: "https://app.cultivee.com.br",
-  },
-  {
-    name: "Cultivee Hidroponia",
-    description: "Controle inteligente do seu sistema hidroponico. Gerencie luz e bomba, configure fases de cultivo e acompanhe o ciclo das suas plantas automaticamente.",
-    features: ["Controle de luz e bomba", "Fases de cultivo configuraveis", "Modo automatico com horarios"],
+    name: "Cultivee Hidro",
+    description: "Automacao essencial do cultivo indoor. Controle luz, bomba, ventilacao e aeracao com ate 10 fases configuraveis. RTC embarcado mantem tudo rodando mesmo offline.",
+    features: ["4 reles (luz, bomba, ventilacao, aeracao)", "10 fases automaticas", "RTC offline - funciona sem internet"],
     icon: Droplets,
     color: "#27ae60",
     url: "https://app.cultivee.com.br/",
   },
   {
-    name: "Cultivee HidroCam",
-    description: "O melhor dos dois mundos: controle hidroponico completo com camera integrada. Monitore visualmente e controle seus cultivos em um unico app.",
-    features: ["Hidroponia + Camera", "Captura sob demanda", "Controle de reles + visualizacao"],
+    name: "Cultivee Hidro Farm",
+    description: "Versao Premium: tudo do Hidro + reposicao automatica de agua, alertas push/email, sensor de temperatura/umidade e bomba de homogeneizacao. Para hidroponia seria.",
+    features: ["Reposicao automatica de agua", "Alertas push + email", "Sensor DHT11 (temp + umidade)"],
+    icon: Sparkles,
+    color: "#047857",
+    url: "https://app.cultivee.com.br/",
+  },
+  {
+    name: "Cultivee Cam",
+    description: "Camera IP standalone pro cultivo. Captura agendada, stream ao vivo e galeria organizada por pastas. Documente timelapses e detecte problemas visualmente.",
+    features: ["Captura agendada (1min a 1h)", "Stream ao vivo ate 10 min", "Galeria com pastas"],
     icon: Camera,
-    secondIcon: Droplets,
-    color: "#e67e22",
+    color: "#3498db",
     url: "https://app.cultivee.com.br/",
   },
 ];
@@ -72,14 +71,7 @@ const AplicativosPage = () => {
                     className="w-20 h-20 rounded-2xl flex items-center justify-center"
                     style={{ background: `${app.color}20` }}
                   >
-                    {app.secondIcon ? (
-                      <div className="flex items-center gap-1">
-                        <app.icon className="w-8 h-8" style={{ color: app.color }} />
-                        <app.secondIcon className="w-8 h-8" style={{ color: app.color }} />
-                      </div>
-                    ) : (
-                      <app.icon className="w-10 h-10" style={{ color: app.color }} />
-                    )}
+                    <app.icon className="w-10 h-10" style={{ color: app.color }} />
                   </div>
                 </div>
 

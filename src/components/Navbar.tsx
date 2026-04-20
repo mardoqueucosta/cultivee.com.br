@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Leaf, ChevronDown, Camera, Droplets } from "lucide-react";
+import { Menu, X, Leaf, ChevronDown, Camera, Droplets, Sparkles } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   DropdownMenu,
@@ -19,8 +19,9 @@ const Navbar = () => {
   ];
 
   const productItems = [
-    { name: "Controle Hidroponia", href: "/produtos/controle-hidroponia", icon: Droplets, color: "text-green-500" },
-    { name: "Controle Câmera", href: "/produtos/controle-camera", icon: Camera, color: "text-blue-500" },
+    { name: "Cultivee Hidro", href: "/produtos/controle-hidroponia", icon: Droplets, color: "text-green-500" },
+    { name: "Cultivee Hidro Farm", href: "/produtos/hidro-farm", icon: Sparkles, color: "text-emerald-700" },
+    { name: "Cultivee Cam", href: "/produtos/controle-camera", icon: Camera, color: "text-blue-500" },
   ];
 
   const isActive = (href: string) => {

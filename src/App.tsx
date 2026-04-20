@@ -15,6 +15,7 @@ import BlogArticlePage from "./pages/BlogArticle";
 import ProjetoPage from "./pages/Projeto";
 import AplicativosPage from "./pages/Aplicativos";
 import ProdutoHidroponiaPage from "./pages/ProdutoHidroponia";
+import ProdutoHidroFarmPage from "./pages/ProdutoHidroFarm";
 import ProdutoCameraPage from "./pages/ProdutoCamera";
 import CursoMicroverdesPage from "./pages/CursoMicroverdes";
 import CursoHidroponiaPage from "./pages/CursoHidroponia";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/projeto" element={<ProjetoPage />} />
           <Route path="/aplicativos" element={<AplicativosPage />} />
           <Route path="/produtos/controle-hidroponia" element={<ProdutoHidroponiaPage />} />
+          <Route path="/produtos/hidro-farm" element={<ProdutoHidroFarmPage />} />
           <Route path="/produtos/controle-camera" element={<ProdutoCameraPage />} />
           <Route path="/cursos/microverdes" element={<CursoMicroverdesPage />} />
           <Route path="/cursos/hidroponia" element={<CursoHidroponiaPage />} />
