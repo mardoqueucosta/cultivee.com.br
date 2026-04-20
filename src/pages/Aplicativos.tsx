@@ -19,7 +19,7 @@ const apps = [
     features: ["Controle de luz e bomba", "Fases de cultivo configuraveis", "Modo automatico com horarios"],
     icon: Droplets,
     color: "#27ae60",
-    url: "https://hidro.cultivee.com.br",
+    url: "https://app.cultivee.com.br/",
   },
   {
     name: "Cultivee HidroCam",
@@ -28,7 +28,7 @@ const apps = [
     icon: Camera,
     secondIcon: Droplets,
     color: "#e67e22",
-    url: "https://hidro-cam.cultivee.com.br",
+    url: "https://app.cultivee.com.br/",
   },
 ];
 
