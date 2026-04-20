@@ -89,7 +89,7 @@ const ProdutoHidroponiaPage = () => {
                 o ciclo das plantas — tudo pelo celular.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://hidro.cultivee.com.br" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-green-600 hover:bg-green-700">
                     <ExternalLink className="w-4 h-4" />
                     Acessar App
@@ -308,7 +308,7 @@ const ProdutoHidroponiaPage = () => {
             Crie sua conta gratuitamente e vincule seu módulo ESP32 em minutos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://hidro.cultivee.com.br" target="_blank" rel="noopener noreferrer">
+            <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-green-700 hover:bg-white/90 gap-2">
                 <ExternalLink className="w-4 h-4" />
                 Acessar App

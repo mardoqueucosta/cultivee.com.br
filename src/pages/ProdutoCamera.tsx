@@ -93,7 +93,7 @@ const ProdutoCameraPage = () => {
                 capture fotos, assista ao vivo e gerencie fases automaticamente.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://hidro-cam.cultivee.com.br" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700">
                     <ExternalLink className="w-4 h-4" />
                     Acessar App
@@ -375,7 +375,7 @@ const ProdutoCameraPage = () => {
             Crie sua conta e vincule seu módulo ESP32-WROVER com câmera OV2640.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://hidro-cam.cultivee.com.br" target="_blank" rel="noopener noreferrer">
+            <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-white/90 gap-2">
                 <ExternalLink className="w-4 h-4" />
                 Acessar App
