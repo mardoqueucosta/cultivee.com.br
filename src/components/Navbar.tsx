@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Leaf, ChevronDown, Camera, Droplets, Sparkles } from "lucide-react";
+import { Menu, X, Leaf, ChevronDown, Camera, Droplets, Sparkles, LayoutGrid } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   DropdownMenu,
@@ -92,6 +92,13 @@ const Navbar = () => {
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center" className="w-56 bg-background border-border">
+                <DropdownMenuItem asChild>
+                  <Link to="/produtos" className="flex items-center gap-2 font-semibold">
+                    <LayoutGrid className="w-4 h-4 text-primary" />
+                    Ver todos os produtos
+                  </Link>
+                </DropdownMenuItem>
+                <div className="h-px bg-border my-1" />
                 {productItems.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
                     <Link
@@ -199,6 +206,17 @@ const Navbar = () => {
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
                 Produtos
               </div>
+
+              <Link
+                to="/produtos"
+                className={`px-4 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 ${
+                  location.pathname === "/produtos" ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                <LayoutGrid className="w-4 h-4 text-primary" />
+                Ver todos os produtos
+              </Link>
 
               {productItems.map((item) => (
                 <Link

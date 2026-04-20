@@ -14,6 +14,7 @@ import BlogPage from "./pages/Blog";
 import BlogArticlePage from "./pages/BlogArticle";
 import ProjetoPage from "./pages/Projeto";
 import AplicativosPage from "./pages/Aplicativos";
+import ProdutosPage from "./pages/Produtos";
 import ProdutoHidroponiaPage from "./pages/ProdutoHidroponia";
 import ProdutoHidroFarmPage from "./pages/ProdutoHidroFarm";
 import ProdutoCameraPage from "./pages/ProdutoCamera";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogArticlePage />} />
           <Route path="/projeto" element={<ProjetoPage />} />
           <Route path="/aplicativos" element={<AplicativosPage />} />
+          <Route path="/produtos" element={<ProdutosPage />} />
           <Route path="/produtos/controle-hidroponia" element={<ProdutoHidroponiaPage />} />
           <Route path="/produtos/hidro-farm" element={<ProdutoHidroFarmPage />} />
           <Route path="/produtos/controle-camera" element={<ProdutoCameraPage />} />
