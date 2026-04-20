@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
+import { MockupPhone, HidroDashboardMockup, HidroPhasesMockup } from "@/components/mockups/DashboardMockups";
 import {
   Droplets, Smartphone, Wifi, Sun, Clock, Shield,
   Zap, ToggleLeft, Layers, ExternalLink, ChevronRight, Timer, Gauge,
@@ -111,20 +112,11 @@ const ProdutoHidroponiaPage = () => {
               </div>
             </div>
 
-            {/* Screenshot */}
+            {/* Mockup ao vivo */}
             <div className="flex justify-center">
-              <div className="relative w-[280px]">
-                <div className="rounded-[2rem] overflow-hidden border-4 border-gray-800 shadow-2xl bg-[#0f1923]">
-                  <img
-                    src="/produtos/hidro-login.jpg"
-                    alt="Cultivee Hidro — Tela de Login"
-                    className="w-full"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                  PWA
-                </div>
-              </div>
+              <MockupPhone badge="PWA" badgeColor="bg-green-500">
+                <HidroDashboardMockup />
+              </MockupPhone>
             </div>
           </div>
         </div>
@@ -164,35 +156,23 @@ const ProdutoHidroponiaPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 place-items-center">
             <div className="text-center">
-              <div className="relative inline-block w-[280px]">
-                <div className="rounded-[2rem] overflow-hidden border-4 border-gray-800 shadow-2xl bg-[#0f1923]">
-                  <img
-                    src="/produtos/hidro-dashboard.jpg"
-                    alt="Dashboard Hidro — Dia do ciclo, fase atual, controles"
-                    className="w-full"
-                  />
-                </div>
-              </div>
+              <MockupPhone>
+                <HidroDashboardMockup />
+              </MockupPhone>
               <h3 className="font-semibold text-foreground mt-6 mb-1">Dashboard Principal</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground max-w-[280px]">
                 Dia do ciclo, fase atual, status dos 4 relés, modo automático e botões manuais.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="relative inline-block w-[280px]">
-                <div className="rounded-[2rem] overflow-hidden border-4 border-gray-800 shadow-2xl bg-[#0f1923]">
-                  <img
-                    src="/produtos/hidro-phases.jpg"
-                    alt="Fases configuradas — Germinação, Vegetativo e Floração"
-                    className="w-full"
-                  />
-                </div>
-              </div>
+              <MockupPhone>
+                <HidroPhasesMockup />
+              </MockupPhone>
               <h3 className="font-semibold text-foreground mt-6 mb-1">Fases Configuradas</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground max-w-[280px]">
                 Até 10 fases com duração, horários de luz e ciclos de irrigação independentes.
               </p>
             </div>

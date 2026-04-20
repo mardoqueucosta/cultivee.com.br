@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
+import { MockupPhone, HidroFarmDashboardMockup, HidroFarmAlertMockup } from "@/components/mockups/DashboardMockups";
 import {
   Droplets, Smartphone, Sun, Clock, Shield, Bell, Mail,
   Zap, ToggleLeft, Layers, ExternalLink, ChevronRight, Thermometer,
@@ -120,20 +121,11 @@ const ProdutoHidroFarmPage = () => {
               </div>
             </div>
 
-            {/* Screenshot */}
+            {/* Mockup ao vivo */}
             <div className="flex justify-center">
-              <div className="relative w-[280px]">
-                <div className="rounded-[2rem] overflow-hidden border-4 border-gray-800 shadow-2xl bg-[#0f1923]">
-                  <img
-                    src="/produtos/hidro-dashboard.jpg"
-                    alt="Cultivee Hidro Farm — Dashboard Premium"
-                    className="w-full"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-emerald-600 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                  PREMIUM
-                </div>
-              </div>
+              <MockupPhone badge="PREMIUM" badgeColor="bg-emerald-600">
+                <HidroFarmDashboardMockup />
+              </MockupPhone>
             </div>
           </div>
         </div>
@@ -283,6 +275,46 @@ const ProdutoHidroFarmPage = () => {
               <p className="text-sm text-muted-foreground">
                 Contador no dashboard: "Nível baixo há 4min 32s" em laranja, pulsando em vermelho após o threshold.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mockup do alerta no celular */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center md:order-1">
+              <MockupPhone badge="ALERTA" badgeColor="bg-red-500">
+                <HidroFarmAlertMockup />
+              </MockupPhone>
+            </div>
+            <div className="md:order-2">
+              <div className="inline-flex items-center gap-2 bg-red-500/10 text-red-600 px-3 py-1.5 rounded-full text-xs font-medium mb-4">
+                Exemplo real de alerta
+              </div>
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Assim é o alerta no seu celular
+              </h2>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Quando o reservatório passa do threshold sem encher, você recebe uma
+                notificação push no celular com o histórico completo do que aconteceu —
+                mesmo com o app fechado. E-mail também é enviado pra conferência.
+              </p>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="w-6 h-6 rounded-full bg-red-500/10 text-red-500 font-bold text-xs flex items-center justify-center flex-shrink-0">⚠</span>
+                  <span><strong className="text-foreground">Alerta visual pulsante</strong> mostra o nível atual e o tempo em que está baixo.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-500 font-bold text-xs flex items-center justify-center flex-shrink-0">✓</span>
+                  <span><strong className="text-foreground">Confirmação de entrega</strong> mostrando que push + e-mail foram enviados com sucesso.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="w-6 h-6 rounded-full bg-blue-500/10 text-blue-500 font-bold text-xs flex items-center justify-center flex-shrink-0">🕒</span>
+                  <span><strong className="text-foreground">Timeline completa</strong> do incidente: quando caiu, quando a válvula abriu, quando o alerta disparou.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
+import { MockupPhone, CamDashboardMockup } from "@/components/mockups/DashboardMockups";
 import {
   Camera, Smartphone, Wifi, Shield, Settings, Image as ImageIcon,
   Video, Eye, ExternalLink, ChevronRight, FolderOpen, Zap,
@@ -116,20 +117,11 @@ const ProdutoCameraPage = () => {
               </div>
             </div>
 
-            {/* Screenshot */}
+            {/* Mockup ao vivo */}
             <div className="flex justify-center">
-              <div className="relative w-[280px]">
-                <div className="rounded-[2rem] overflow-hidden border-4 border-gray-800 shadow-2xl bg-[#0f1923]">
-                  <img
-                    src="/produtos/hidro-cam-login.jpg"
-                    alt="Cultivee Cam — Tela de Login"
-                    className="w-full"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                  PWA
-                </div>
-              </div>
+              <MockupPhone badge="PWA" badgeColor="bg-blue-500">
+                <CamDashboardMockup />
+              </MockupPhone>
             </div>
           </div>
         </div>
@@ -145,52 +137,34 @@ const ProdutoCameraPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 place-items-center">
             <div className="text-center">
-              <div className="relative inline-block w-[250px]">
-                <div className="rounded-[2rem] overflow-hidden border-4 border-gray-800 shadow-2xl bg-[#0f1923]">
-                  <img
-                    src="/produtos/hidro-cam-dashboard.jpg"
-                    alt="Dashboard Cam — status, captura, última foto"
-                    className="w-full"
-                  />
-                </div>
-              </div>
-              <h3 className="font-semibold text-foreground mt-6 mb-1">Dashboard</h3>
-              <p className="text-sm text-muted-foreground">
-                Status do módulo, botões de captura e acesso rápido à última foto tirada.
+              <MockupPhone width={240}>
+                <CamDashboardMockup />
+              </MockupPhone>
+              <h3 className="font-semibold text-foreground mt-6 mb-1">Dashboard + Live</h3>
+              <p className="text-sm text-muted-foreground max-w-[240px]">
+                Preview ao vivo com timestamp, botões de captura e stream, galeria logo abaixo.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="relative inline-block w-[250px]">
-                <div className="rounded-[2rem] overflow-hidden border-4 border-gray-800 shadow-2xl bg-[#0f1923]">
-                  <img
-                    src="/produtos/hidro-cam-camera.jpg"
-                    alt="Câmera expandida com captura ao vivo"
-                    className="w-full"
-                  />
-                </div>
-              </div>
-              <h3 className="font-semibold text-foreground mt-6 mb-1">Câmera Expandida</h3>
-              <p className="text-sm text-muted-foreground">
-                Captura sob demanda, stream ao vivo e visualização da última foto em tela cheia.
+              <MockupPhone width={240}>
+                <CamDashboardMockup />
+              </MockupPhone>
+              <h3 className="font-semibold text-foreground mt-6 mb-1">Captura Sob Demanda</h3>
+              <p className="text-sm text-muted-foreground max-w-[240px]">
+                Toque em "Capturar" e em 3–5 segundos a foto aparece no dashboard.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="relative inline-block w-[250px]">
-                <div className="rounded-[2rem] overflow-hidden border-4 border-gray-800 shadow-2xl bg-[#0f1923]">
-                  <img
-                    src="/produtos/hidro-cam-phases.jpg"
-                    alt="Galeria com pastas e seleção múltipla"
-                    className="w-full"
-                  />
-                </div>
-              </div>
+              <MockupPhone width={240}>
+                <CamDashboardMockup />
+              </MockupPhone>
               <h3 className="font-semibold text-foreground mt-6 mb-1">Galeria Organizada</h3>
-              <p className="text-sm text-muted-foreground">
-                Fotos em pastas, seleção múltipla, exclusão em lote e movimentação entre coleções.
+              <p className="text-sm text-muted-foreground max-w-[240px]">
+                Fotos em pastas, seleção múltipla e exclusão em lote — tudo pelo app.
               </p>
             </div>
           </div>
