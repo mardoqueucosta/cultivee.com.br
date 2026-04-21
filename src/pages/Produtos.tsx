@@ -162,9 +162,16 @@ const ProdutosPage = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-28 pb-16 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+      <section className="pt-28 pb-16 bg-background border-b border-border relative overflow-hidden">
+        {/* Decorative gradient blobs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 -left-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-700 border border-green-500/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Package className="w-4 h-4" />
             Linha Cultivee
           </div>
@@ -175,12 +182,12 @@ const ProdutosPage = () => {
               com controle na palma da mão
             </span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto mb-8">
             Três módulos plug-and-play que transformam qualquer estufa, tenda de cultivo ou
             sistema hidropônico num ambiente monitorado e automatizado. Hardware de qualidade +
             aplicativo web pronto, sem mensalidade.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-foreground/80 font-medium">
             <span className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-green-600" />
               Sem mensalidade
@@ -332,7 +339,7 @@ const ProdutosPage = () => {
           </div>
 
           <div className="bg-card border border-border rounded-xl overflow-hidden">
-            <div className="grid grid-cols-4 bg-muted/50 px-4 sm:px-6 py-4 border-b border-border sticky top-16 z-10">
+            <div className="grid grid-cols-4 bg-card px-4 sm:px-6 py-4 border-b-2 border-border">
               <span className="text-sm font-semibold text-foreground col-span-1">Recurso</span>
               <span className="text-sm font-semibold text-green-600 text-center">Hidro</span>
               <span className="text-sm font-semibold text-emerald-700 text-center">Hidro Farm</span>
