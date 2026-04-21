@@ -162,46 +162,38 @@ const ProdutosPage = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-28 pb-16 bg-background border-b border-border relative overflow-hidden">
-        {/* Decorative gradient blobs */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 -left-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-        </div>
+      <section className="pt-24 pb-20 bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.12),transparent_70%)]" />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-700 border border-green-500/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white border border-white/30 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Package className="w-4 h-4" />
             Linha Cultivee
           </div>
-          <h1 className="text-3xl sm:text-5xl font-bold text-foreground mb-6 leading-tight">
-            Automação inteligente pro cultivo indoor,
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Automação inteligente
             <br />
-            <span className="bg-gradient-to-r from-green-600 via-emerald-600 to-blue-600 bg-clip-text text-transparent">
-              com controle na palma da mão
-            </span>
+            <span className="text-white/90">pro cultivo indoor</span>
           </h1>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl text-white/85 max-w-3xl mx-auto mb-10 leading-relaxed">
             Três módulos plug-and-play que transformam qualquer estufa, tenda de cultivo ou
-            sistema hidropônico num ambiente monitorado e automatizado. Hardware de qualidade +
-            aplicativo web pronto, sem mensalidade.
+            sistema hidropônico num ambiente monitorado e automatizado.
           </p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-foreground/80 font-medium">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-white/90 font-medium">
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-green-600" />
+              <CheckCircle2 className="w-4 h-4 text-white" />
               Sem mensalidade
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-green-600" />
+              <CheckCircle2 className="w-4 h-4 text-white" />
               Plug and play
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-green-600" />
+              <CheckCircle2 className="w-4 h-4 text-white" />
               Funciona offline
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-green-600" />
+              <CheckCircle2 className="w-4 h-4 text-white" />
               Atualizações automáticas
             </span>
           </div>
