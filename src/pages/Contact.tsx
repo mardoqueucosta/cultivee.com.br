@@ -28,28 +28,57 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Campos obrigatórios",
         description: "Por favor, preencha nome, email e mensagem.",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
 
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    
-    toast({
-      title: "Mensagem enviada!",
-      description: "Responderemos em breve. Obrigado pelo contato!",
-    });
+
+    try {
+      const response = await fetch("https://app.cultivee.com.br/api/public/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          // Honeypot — precisa existir no payload mas vem vazio. Bots enchem.
+          company_fax: (document.querySelector<HTMLInputElement>("input[name='company_fax']")?.value) || "",
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        toast({
+          title: "Não foi possível enviar",
+          description:
+            data.error ||
+            "Tente novamente em alguns minutos ou fale pelo WhatsApp: (19) 99280-5563",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      toast({
+        title: "Mensagem enviada!",
+        description: data.message || "Responderemos em breve. Obrigado pelo contato!",
+      });
+    } catch (err) {
+      toast({
+        title: "Erro de conexão",
+        description:
+          "Não conseguimos enviar sua mensagem agora. Tente novamente ou fale pelo WhatsApp: (19) 99280-5563",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -59,12 +88,14 @@ const ContactPage = () => {
   ];
 
   const subjects = [
+    { value: "produtos", label: "Produtos (Hidro / Hidro Farm / Cam)" },
     { value: "cursos-agro", label: "Cursos Agro" },
     { value: "cursos-educa", label: "Cursos Educa" },
     { value: "cursos-tech", label: "Cursos Tech" },
     { value: "hortalicas", label: "Hortaliças" },
+    { value: "projeto", label: "Projeto Cultivee" },
     { value: "parcerias", label: "Parcerias" },
-    { value: "outro", label: "Outro" }
+    { value: "outro", label: "Outro" },
   ];
 
   return (
@@ -95,6 +126,16 @@ const ContactPage = () => {
                 </h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot invisível — bots preenchem, humanos não veem */}
+                  <input
+                    type="text"
+                    name="company_fax"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px" }}
+                  />
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">

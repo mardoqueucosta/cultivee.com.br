@@ -12,29 +12,55 @@ const NewsletterSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !email.includes("@")) {
       toast({
         title: "Email inválido",
         description: "Por favor, insira um email válido.",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
 
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubscribed(true);
-    setEmail("");
-    
-    toast({
-      title: "Inscrição realizada!",
-      description: "Você receberá nosso conteúdo em breve.",
-    });
+
+    try {
+      const response = await fetch("https://app.cultivee.com.br/api/public/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          // Honeypot — precisa vir vazio em humanos
+          company_fax: (document.querySelector<HTMLInputElement>("input[name='company_fax_news']")?.value) || "",
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        toast({
+          title: "Não foi possível inscrever",
+          description: data.error || "Tente novamente em alguns minutos.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      setIsSubscribed(true);
+      setEmail("");
+      toast({
+        title: "Inscrição realizada!",
+        description: data.message || "Você receberá nosso conteúdo em breve.",
+      });
+    } catch (err) {
+      toast({
+        title: "Erro de conexão",
+        description: "Não conseguimos processar sua inscrição agora. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -59,6 +85,15 @@ const NewsletterSection = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            {/* Honeypot — invisível para humanos, bots preenchem */}
+            <input
+              type="text"
+              name="company_fax_news"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px" }}
+            />
             <Input
               type="email"
               placeholder="Seu melhor email"
