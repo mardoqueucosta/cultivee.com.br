@@ -3,11 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Turnstile } from "@/components/Turnstile";
+import { API_BASE, TURNSTILE_SITE_KEY } from "@/lib/config";
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -22,14 +25,24 @@ const NewsletterSection = () => {
       return;
     }
 
+    if (!turnstileToken) {
+      toast({
+        title: "Aguarde a verificação",
+        description: "Confirme que é humano no campo de verificação antes de se inscrever.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://app.cultivee.com.br/api/public/newsletter", {
+      const response = await fetch(`${API_BASE}/api/public/newsletter`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email,
+          turnstileToken,
           // Honeypot — precisa vir vazio em humanos
           company_fax: (document.querySelector<HTMLInputElement>("input[name='company_fax_news']")?.value) || "",
         }),
@@ -101,16 +114,29 @@ const NewsletterSection = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white"
             />
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               variant="secondary"
               size="lg"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !turnstileToken}
               className="h-12 px-8 bg-white text-primary hover:bg-white/90"
             >
               {isSubmitting ? "Enviando..." : "Inscrever-se"}
             </Button>
           </form>
+        )}
+
+        {/* Turnstile widget — fora do form pra nao quebrar layout quando inscrito */}
+        {!isSubscribed && (
+          <div className="flex justify-center mt-6">
+            <Turnstile
+              siteKey={TURNSTILE_SITE_KEY}
+              theme="dark"
+              onVerify={setTurnstileToken}
+              onExpire={() => setTurnstileToken("")}
+              onError={() => setTurnstileToken("")}
+            />
+          </div>
         )}
       </div>
     </section>

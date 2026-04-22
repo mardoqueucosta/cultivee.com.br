@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { Turnstile } from "@/components/Turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,10 +15,12 @@ import {
 } from "@/components/ui/select";
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { API_BASE, TURNSTILE_SITE_KEY } from "@/lib/config";
 
 const ContactPage = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,14 +41,24 @@ const ContactPage = () => {
       return;
     }
 
+    if (!turnstileToken) {
+      toast({
+        title: "Aguarde a verificação",
+        description: "Confirme que é humano no campo de verificação antes de enviar.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://app.cultivee.com.br/api/public/contact", {
+      const response = await fetch(`${API_BASE}/api/public/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
+          turnstileToken,
           // Honeypot — precisa existir no payload mas vem vazio. Bots enchem.
           company_fax: (document.querySelector<HTMLInputElement>("input[name='company_fax']")?.value) || "",
         }),
@@ -208,10 +221,19 @@ const ContactPage = () => {
                     />
                   </div>
                   
-                  <Button 
-                    type="submit" 
+                  <div className="flex justify-center pt-2">
+                    <Turnstile
+                      siteKey={TURNSTILE_SITE_KEY}
+                      onVerify={setTurnstileToken}
+                      onExpire={() => setTurnstileToken("")}
+                      onError={() => setTurnstileToken("")}
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
                     className="w-full h-12 bg-primary hover:bg-primary/90"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !turnstileToken}
                   >
                     {isSubmitting ? (
                       "Enviando..."
