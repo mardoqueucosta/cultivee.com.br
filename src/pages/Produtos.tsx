@@ -173,7 +173,7 @@ const ProdutosPage = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Automação inteligente
             <br />
-            <span className="text-white/90">pro cultivo indoor</span>
+            <span className="text-white/90">para o cultivo indoor</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/85 max-w-3xl mx-auto mb-10 leading-relaxed">
             Três módulos plug-and-play que transformam qualquer estufa, tenda de cultivo ou
