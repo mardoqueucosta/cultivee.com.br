@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { MockupPhone, HidroFarmDashboardMockup, HidroFarmAlertMockup } from "@/components/mockups/DashboardMockups";
+import ConnectionMonitoringSection from "@/components/ConnectionMonitoringSection";
 import {
   Droplets, Smartphone, Sun, Clock, Shield, Bell, Mail,
   Zap, ToggleLeft, Layers, ExternalLink, ChevronRight, Thermometer,
@@ -425,6 +426,9 @@ const ProdutoHidroFarmPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Monitoramento de conexão (v4.1.31) */}
+      <ConnectionMonitoringSection accent="emerald" />
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-emerald-700 to-emerald-600">

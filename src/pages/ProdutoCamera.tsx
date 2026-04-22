@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { MockupPhone, CamDashboardMockup } from "@/components/mockups/DashboardMockups";
+import ConnectionMonitoringSection from "@/components/ConnectionMonitoringSection";
 import {
   Camera, Smartphone, Wifi, Shield, Settings, Image as ImageIcon,
   Video, Eye, ExternalLink, ChevronRight, FolderOpen, Zap,
@@ -384,6 +385,9 @@ const ProdutoCameraPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Monitoramento de conexão (v4.1.31) */}
+      <ConnectionMonitoringSection accent="blue" />
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-500">

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { MockupPhone, HidroDashboardMockup, HidroPhasesMockup } from "@/components/mockups/DashboardMockups";
+import ConnectionMonitoringSection from "@/components/ConnectionMonitoringSection";
 import {
   Droplets, Smartphone, Wifi, Sun, Clock, Shield,
   Zap, ToggleLeft, Layers, ExternalLink, ChevronRight, Timer, Gauge,
@@ -330,6 +331,9 @@ const ProdutoHidroponiaPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Monitoramento de conexão (v4.1.31) */}
+      <ConnectionMonitoringSection accent="green" />
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-green-600 to-green-500">

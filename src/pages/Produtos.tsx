@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import {
   Droplets, Camera, Sparkles, ExternalLink, Wifi, Bell, RefreshCw,
   Shield, Smartphone, Gauge, Home, Plane, Factory, TreePine,
-  CheckCircle2, ArrowRight, Package
+  CheckCircle2, ArrowRight, Package, Activity
 } from "lucide-react";
 
 const produtos = [
@@ -85,7 +85,7 @@ const plataformaFeatures = [
   { icon: Wifi, title: "Funciona Offline", desc: "Módulo continua automatizando sozinho se a internet cair." },
   { icon: RefreshCw, title: "Atualizações Remotas", desc: "Novos recursos chegam automaticamente via OTA. Sem mexer no hardware." },
   { icon: Shield, title: "Múltiplos Módulos, 1 Conta", desc: "Dashboard único para todos os seus módulos. Reordene, agrupe, configure." },
-  { icon: Gauge, title: "Telemetria de Saúde", desc: "Sinal WiFi, uptime, quedas de conexão. Saiba quando precisa ajustar." },
+  { icon: Activity, title: "Histórico de Conexão (90 dias)", desc: "Saiba exatamente quando seu cultivo ficou online e se houve alguma queda — uptime, eventos e duração mantidos por até 90 dias, automaticamente." },
 ];
 
 const casosDeUso = [
@@ -136,6 +136,7 @@ const comparativo = [
   { recurso: "Atualizações remotas (OTA)", hidro: true, farm: true, cam: true },
   { recurso: "Modo offline local", hidro: true, farm: true, cam: true },
   { recurso: "Notificações push", hidro: true, farm: true, cam: true },
+  { recurso: "Histórico de conexão (90 dias)", hidro: true, farm: true, cam: true },
 ];
 
 const comoFunciona = [
@@ -151,6 +152,10 @@ const faqs = [
   { q: "Precisa de computador sempre ligado?", a: "Não. O servidor é nosso. Você acessa app.cultivee.com.br de qualquer dispositivo." },
   { q: "Tem mensalidade?", a: "Não. Plataforma incluída por tempo ilimitado — pagou, é seu." },
   { q: "E se minha internet cair?", a: "O módulo continua automatizando sozinho com o RTC interno. Quando a internet voltar, tudo sincroniza." },
+  {
+    q: "Tem histórico se meu cultivo ficar offline?",
+    a: "Sim. Cada dispositivo Cultivee reporta status ao servidor a cada poucos segundos. Toda conexão e desconexão fica registrada por até 90 dias — com horário, duração e motivo (Wi-Fi fraco, roteador, energia). Você vê tudo direto no painel do dispositivo, incluindo uptime percentual nos últimos 7, 30 ou 60 dias. Útil pra diagnosticar problemas de rede e pra ter prova do que aconteceu durante uma viagem. Ativo automaticamente desde a primeira ligação do kit, sem custo extra.",
+  },
   { q: "Posso acessar de fora de casa?", a: "Sim. De qualquer lugar com internet — funciona via 4G do celular perfeitamente." },
   { q: "Posso controlar mais de um módulo?", a: "Sim, quantos quiser. Todos no mesmo app, mesma conta, dashboard único." },
   { q: "Preciso ser programador?", a: "Não. É plug-and-play. Se você sabe usar um app de celular, sabe usar o Cultivee." },
