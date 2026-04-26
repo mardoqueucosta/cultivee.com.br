@@ -163,10 +163,21 @@ export const HidroDashboardMockup = () => (
       </div>
     </div>
 
+    {/* Uptime banner (v4.1.31 — historico 90 dias) */}
+    <div className="px-3 pt-2 pb-1">
+      <div className="bg-green-500/5 border border-green-500/20 rounded px-2 py-1 flex items-center justify-between">
+        <span className="text-[7px] text-green-400 font-semibold flex items-center gap-1">
+          <span className="w-1 h-1 rounded-full bg-green-400"></span>
+          Uptime 7d 99.2% · 1 queda
+        </span>
+        <span className="text-[7px] text-blue-400">Histórico ›</span>
+      </div>
+    </div>
+
     {/* Status bar bottom */}
-    <div className="px-3 py-1.5 border-t border-white/5 flex items-center justify-between">
+    <div className="px-3 py-1 border-t border-white/5 flex items-center justify-between">
       <span className="text-[7px] text-gray-500">📶 -62dBm</span>
-      <span className="text-[7px] text-gray-500">v4.1.7</span>
+      <span className="text-[7px] text-gray-500">v4.1.33</span>
     </div>
   </div>
 );
@@ -298,10 +309,21 @@ export const HidroFarmDashboardMockup = () => (
 
     <div className="flex-1"></div>
 
+    {/* Uptime banner (v4.1.31) */}
+    <div className="px-3 pb-1">
+      <div className="bg-emerald-500/5 border border-emerald-500/20 rounded px-2 py-1 flex items-center justify-between">
+        <span className="text-[7px] text-emerald-400 font-semibold flex items-center gap-1">
+          <span className="w-1 h-1 rounded-full bg-emerald-400"></span>
+          Uptime 7d 99.8% · 0 quedas
+        </span>
+        <span className="text-[7px] text-blue-400">Histórico ›</span>
+      </div>
+    </div>
+
     {/* Bottom status */}
-    <div className="px-3 py-1.5 border-t border-white/5 flex items-center justify-between">
+    <div className="px-3 py-1 border-t border-white/5 flex items-center justify-between">
       <span className="text-[7px] text-emerald-500">● Online</span>
-      <span className="text-[7px] text-gray-500">v4.1.7</span>
+      <span className="text-[7px] text-gray-500">v4.1.33</span>
     </div>
   </div>
 );
@@ -426,10 +448,21 @@ export const CamDashboardMockup = () => (
       </div>
     </div>
 
+    {/* Uptime banner (v4.1.31) */}
+    <div className="px-3 pb-1">
+      <div className="bg-blue-500/5 border border-blue-500/20 rounded px-2 py-1 flex items-center justify-between">
+        <span className="text-[7px] text-blue-400 font-semibold flex items-center gap-1">
+          <span className="w-1 h-1 rounded-full bg-blue-400"></span>
+          Uptime 7d 99.5% · 1 queda
+        </span>
+        <span className="text-[7px] text-blue-300">Histórico ›</span>
+      </div>
+    </div>
+
     {/* Status bar */}
-    <div className="px-3 py-1.5 border-t border-white/5 flex items-center justify-between">
+    <div className="px-3 py-1 border-t border-white/5 flex items-center justify-between">
       <span className="text-[7px] text-blue-500">📶 -58dBm</span>
-      <span className="text-[7px] text-gray-500">UXGA disponível</span>
+      <span className="text-[7px] text-gray-500">v4.1.33</span>
     </div>
   </div>
 );
