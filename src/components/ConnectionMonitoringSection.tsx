@@ -1,4 +1,4 @@
-import { Activity, TrendingUp, History, Clock, ShieldCheck } from "lucide-react";
+import { Activity, TrendingUp, History, Clock, ShieldCheck, ExternalLink } from "lucide-react";
 
 type Accent = "green" | "emerald" | "blue";
 
@@ -44,7 +44,7 @@ const ConnectionMonitoringSection = ({ accent }: ConnectionMonitoringSectionProp
     {
       icon: TrendingUp,
       title: "Confiabilidade no período",
-      desc: "Percentual de tempo online nos últimos 7, 30 ou 60 dias. Quantas quedas, qual foi a mais longa e a hora exata de cada uma.",
+      desc: "Percentual de tempo online nos últimos 7, 30 ou 60 dias. Quedas do nosso servidor ficam marcadas separadamente — o uptime do seu cultivo conta apenas falhas do dispositivo.",
     },
     {
       icon: History,
@@ -106,14 +106,26 @@ const ConnectionMonitoringSection = ({ accent }: ConnectionMonitoringSectionProp
               <strong className="text-foreground">Tranquilidade em viagens:</strong> ao voltar, você vê um resumo de tudo — se o cultivo ficou online 99% do tempo, não precisa se preocupar.
             </li>
             <li className="list-disc">
+              <strong className="text-foreground">Transparência da plataforma:</strong> quando o problema é nosso (queda do servidor Cultivee), marcamos automaticamente — assumimos a responsabilidade e seu uptime não é penalizado.
+            </li>
+            <li className="list-disc">
               <strong className="text-foreground">Dados seus, exportáveis:</strong> pode baixar o histórico completo a qualquer momento (LGPD garantida).
             </li>
           </ul>
-          <div className={`mt-6 pt-5 border-t border-border flex items-center gap-2 text-xs ${c.cta}`}>
-            <Clock className="w-4 h-4" />
-            <span className="font-medium">
+          <div className={`mt-6 pt-5 border-t border-border flex flex-wrap items-center justify-between gap-3 text-xs ${c.cta}`}>
+            <span className="font-medium flex items-center gap-2">
+              <Clock className="w-4 h-4" />
               Ativo desde a primeira ligação do kit · Sem configuração · Sem custo extra
             </span>
+            <a
+              href="https://status.cultivee.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold hover:underline"
+            >
+              Status da plataforma agora
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
         </div>
       </div>

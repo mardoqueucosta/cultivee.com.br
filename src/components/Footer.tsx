@@ -131,13 +131,32 @@ const Footer = () => {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/50 text-sm">
-              © 2025 Cultivee. Todos os direitos reservados.
+              © 2026 Cultivee. Todos os direitos reservados.
             </p>
-            <div className="flex gap-6">
-              <a href="#" className="text-white/50 hover:text-white/80 transition-colors duration-300 text-sm">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+              <a
+                href="https://status.cultivee.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/50 hover:text-white/80 transition-colors duration-300 text-sm flex items-center gap-1.5"
+              >
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" aria-hidden="true"></span>
+                Status da Plataforma
+              </a>
+              <a
+                href="https://app.cultivee.com.br/privacidade"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/50 hover:text-white/80 transition-colors duration-300 text-sm"
+              >
                 Política de Privacidade
               </a>
-              <a href="#" className="text-white/50 hover:text-white/80 transition-colors duration-300 text-sm">
+              <a
+                href="https://app.cultivee.com.br/termos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/50 hover:text-white/80 transition-colors duration-300 text-sm"
+              >
                 Termos de Uso
               </a>
             </div>

@@ -154,7 +154,7 @@ const faqs = [
   { q: "E se minha internet cair?", a: "O módulo continua automatizando sozinho com o RTC interno. Quando a internet voltar, tudo sincroniza." },
   {
     q: "Tem histórico se meu cultivo ficar offline?",
-    a: "Sim. Cada dispositivo Cultivee reporta status ao servidor a cada poucos segundos. Toda conexão e desconexão fica registrada por até 90 dias — com horário, duração e motivo (Wi-Fi fraco, roteador, energia). Você vê tudo direto no painel do dispositivo, incluindo uptime percentual nos últimos 7, 30 ou 60 dias. Útil pra diagnosticar problemas de rede e pra ter prova do que aconteceu durante uma viagem. Ativo automaticamente desde a primeira ligação do kit, sem custo extra.",
+    a: "Sim. Cada dispositivo Cultivee reporta status ao servidor a cada poucos segundos. Toda conexão e desconexão fica registrada por até 90 dias — com horário, duração e motivo (Wi-Fi fraco, roteador, energia). Você vê tudo direto no painel do dispositivo, incluindo uptime percentual nos últimos 7, 30 ou 60 dias. Quando o problema é nosso (queda da plataforma), as quedas correspondentes ficam marcadas separadamente como 'servidor' e não contam contra o uptime do seu cultivo — você pode acompanhar o status público em status.cultivee.com.br. Ativo automaticamente desde a primeira ligação do kit, sem custo extra.",
   },
   { q: "Posso acessar de fora de casa?", a: "Sim. De qualquer lugar com internet — funciona via 4G do celular perfeitamente." },
   { q: "Posso controlar mais de um módulo?", a: "Sim, quantos quiser. Todos no mesmo app, mesma conta, dashboard único." },
