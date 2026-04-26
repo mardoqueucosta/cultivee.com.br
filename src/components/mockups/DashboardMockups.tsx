@@ -361,35 +361,26 @@ export const CamDashboardMockup = () => (
       </div>
     </div>
 
-    {/* Last capture preview (faux plant photo with gradient) */}
+    {/* Last capture preview — foto real de timelapse de alface hidroponica */}
     <div className="px-3 pt-2">
-      <div className="relative rounded-lg overflow-hidden border border-white/5 aspect-[4/3]" style={{
-        background: "radial-gradient(ellipse at center bottom, #1a3d1a 0%, #0f2410 35%, #081408 70%, #040a04 100%)"
-      }}>
-        {/* Faux plants silhouettes */}
-        <svg viewBox="0 0 200 150" className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-          <path d="M 50 150 Q 45 100 55 80 Q 60 70 62 60 Q 65 50 58 45 M 62 60 Q 70 55 75 48 M 55 80 Q 40 75 35 65" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
-          <ellipse cx="58" cy="45" rx="6" ry="3" fill="#3d8b3d" />
-          <ellipse cx="75" cy="48" rx="5" ry="2.5" fill="#3d8b3d" />
-          <ellipse cx="35" cy="65" rx="5" ry="2.5" fill="#3d8b3d" />
-          <path d="M 130 150 Q 125 95 135 75 Q 140 65 145 55 M 135 75 Q 150 70 155 62" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
-          <ellipse cx="145" cy="55" rx="7" ry="3.5" fill="#3d8b3d" />
-          <ellipse cx="155" cy="62" rx="5" ry="2.5" fill="#3d8b3d" />
-          <path d="M 95 150 Q 92 105 100 85 Q 105 75 108 65" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
-          <ellipse cx="108" cy="65" rx="6" ry="3" fill="#3d8b3d" />
-        </svg>
-
+      <div className="relative rounded-lg overflow-hidden border border-white/5 aspect-[4/3] bg-black">
+        <img
+          src="/produtos/cam-photos/preview.jpg"
+          alt="Cultivo de alface hidroponica capturado pela Cultivee Cam"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
         {/* Overlay badge */}
         <div className="absolute top-1.5 left-1.5 bg-black/60 backdrop-blur rounded px-1.5 py-0.5">
-          <span className="text-[7px] text-white font-mono">28/03 · 14:32</span>
+          <span className="text-[7px] text-white font-mono">10/03 · 14:30</span>
         </div>
         <div className="absolute top-1.5 right-1.5 bg-red-500 rounded-full px-1.5 py-0.5 flex items-center gap-1">
           <div className="w-1 h-1 rounded-full bg-white animate-pulse"></div>
           <span className="text-[7px] text-white font-bold">LIVE</span>
         </div>
         <div className="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between">
-          <span className="text-[7px] text-white/70 font-mono">SVGA · q8</span>
-          <span className="text-[7px] text-white/70 font-mono">~10fps</span>
+          <span className="text-[7px] text-white/80 font-mono drop-shadow">SVGA · q8</span>
+          <span className="text-[7px] text-white/80 font-mono drop-shadow">~10fps</span>
         </div>
       </div>
     </div>
@@ -416,25 +407,18 @@ export const CamDashboardMockup = () => (
         <span className="text-[7px] text-blue-400">Ver todas →</span>
       </div>
       <div className="grid grid-cols-3 gap-1">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
+        {[9, 8, 7, 6, 5, 4].map((i, idx) => (
           <div
             key={i}
-            className="aspect-square rounded border border-white/5 relative overflow-hidden"
-            style={{
-              background: `radial-gradient(ellipse at center bottom, #1a3d1a 0%, #0f2410 50%, #081408 100%)`,
-            }}
+            className="aspect-square rounded border border-white/5 relative overflow-hidden bg-black"
           >
-            <div className="absolute inset-0 opacity-80">
-              <div
-                className="w-1 h-4 mx-auto mt-3 rounded-t-sm"
-                style={{ background: "#2d6b2d" }}
-              ></div>
-              <div
-                className="w-3 h-1.5 mx-auto rounded-full mt-0.5"
-                style={{ background: "#3d8b3d" }}
-              ></div>
-            </div>
-            {i === 1 && (
+            <img
+              src={`/produtos/cam-photos/thumb-${i}.jpg`}
+              alt={`Captura ${i}`}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            {idx === 0 && (
               <div className="absolute top-0.5 right-0.5 bg-blue-500 rounded-full w-2 h-2 flex items-center justify-center">
                 <span className="text-[6px] text-white leading-none">●</span>
               </div>
@@ -443,7 +427,7 @@ export const CamDashboardMockup = () => (
         ))}
       </div>
       <div className="mt-1.5 flex items-center justify-between">
-        <span className="text-[7px] text-gray-500">📁 Cultivo atual · 42 fotos</span>
+        <span className="text-[7px] text-gray-500">📁 Cultivo atual · 247 fotos</span>
         <Download className="w-2.5 h-2.5 text-gray-500" />
       </div>
     </div>
@@ -483,42 +467,20 @@ export const CamCaptureMockup = () => (
       </div>
     </div>
 
-    {/* Foto em destaque (grande, ocupa quase toda a area) */}
+    {/* Foto em destaque — captura real (alface hidroponica timelapse, dia 5) */}
     <div className="px-3 pt-2 flex-1">
-      <div
-        className="relative rounded-lg overflow-hidden border border-white/10"
-        style={{
-          aspectRatio: "4/5",
-          background:
-            "radial-gradient(ellipse at 50% 70%, #2a5a2a 0%, #1a3d1a 25%, #0f2410 55%, #061206 100%)",
-        }}
-      >
-        {/* Plantas mais elaboradas */}
-        <svg viewBox="0 0 200 250" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
-          {/* Halo de luz no topo */}
-          <ellipse cx="100" cy="-20" rx="120" ry="80" fill="rgba(120, 200, 100, 0.15)" />
-          {/* Planta principal central */}
-          <path d="M 100 250 Q 95 180 102 140 Q 105 110 100 80 Q 98 60 105 50" stroke="#3a8b3a" strokeWidth="2" fill="none" />
-          <path d="M 102 140 Q 75 130 60 115" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
-          <path d="M 102 140 Q 130 130 145 118" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
-          <path d="M 100 80 Q 80 75 70 65" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
-          <path d="M 100 80 Q 122 73 132 62" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
-          <ellipse cx="105" cy="50" rx="9" ry="4" fill="#5cb85c" />
-          <ellipse cx="60" cy="115" rx="7" ry="3.5" fill="#4ca84c" />
-          <ellipse cx="145" cy="118" rx="7" ry="3.5" fill="#4ca84c" />
-          <ellipse cx="70" cy="65" rx="6" ry="3" fill="#4ca84c" />
-          <ellipse cx="132" cy="62" rx="6" ry="3" fill="#4ca84c" />
-          {/* Plantas laterais menores */}
-          <path d="M 35 250 Q 32 210 38 185 Q 40 170 36 160" stroke="#2d6b2d" strokeWidth="1.2" fill="none" />
-          <ellipse cx="36" cy="160" rx="4" ry="2" fill="#3a8b3a" />
-          <path d="M 165 250 Q 168 200 162 175 Q 160 160 166 150" stroke="#2d6b2d" strokeWidth="1.2" fill="none" />
-          <ellipse cx="166" cy="150" rx="4" ry="2" fill="#3a8b3a" />
-        </svg>
+      <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black" style={{ aspectRatio: "4/5" }}>
+        <img
+          src="/produtos/cam-photos/hero.jpg"
+          alt="Alface hidroponica capturada pela Cultivee Cam — 10/03/2026 14:30"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
 
         {/* Overlay topo */}
         <div className="absolute top-2 left-2 bg-black/70 backdrop-blur rounded px-2 py-1">
-          <div className="text-[7px] text-white font-mono leading-tight">28 mar 2026</div>
-          <div className="text-[7px] text-white/70 font-mono leading-tight">14:32:18</div>
+          <div className="text-[7px] text-white font-mono leading-tight">10 mar 2026</div>
+          <div className="text-[7px] text-white/70 font-mono leading-tight">14:30:28</div>
         </div>
         <div className="absolute top-2 right-2 bg-blue-500/90 backdrop-blur rounded px-1.5 py-0.5">
           <span className="text-[7px] text-white font-bold">UXGA</span>
@@ -535,7 +497,7 @@ export const CamCaptureMockup = () => (
         {/* Info bottom */}
         <div className="absolute bottom-2 left-2 right-2 bg-black/60 backdrop-blur rounded px-2 py-1 flex items-center justify-between">
           <span className="text-[7px] text-white/90 font-mono">1600×1200</span>
-          <span className="text-[7px] text-white/70 font-mono">387 KB · q5</span>
+          <span className="text-[7px] text-white/70 font-mono">412 KB · q5</span>
         </div>
       </div>
     </div>
@@ -586,17 +548,19 @@ export const CamCaptureMockup = () => (
    CULTIVEE CAM — Galeria com pastas e selecao multipla
    ============================================================ */
 export const CamGalleryMockup = () => {
-  // Variacoes pra cada thumbnail nao parecer copia
+  // 9 thumbs reais do timelapse de alface (em /public/produtos/cam-photos/)
+  // Cada uma corresponde a uma data/hora real da captura — mostra a progressao
+  // do crescimento ao longo de 5 dias.
   const thumbs = [
-    { x: 100, lean: 0, h: 30, leaves: [{ x: 100, y: 90, r: 6 }] },
-    { x: 95, lean: -3, h: 35, leaves: [{ x: 95, y: 80, r: 7 }, { x: 75, y: 100, r: 4 }] },
-    { x: 105, lean: 2, h: 28, leaves: [{ x: 105, y: 95, r: 6 }, { x: 125, y: 110, r: 4 }] },
-    { x: 100, lean: 0, h: 40, leaves: [{ x: 100, y: 75, r: 8 }] },
-    { x: 92, lean: -5, h: 32, leaves: [{ x: 92, y: 85, r: 6 }, { x: 75, y: 95, r: 5 }, { x: 110, y: 105, r: 4 }] },
-    { x: 100, lean: 1, h: 36, leaves: [{ x: 100, y: 82, r: 7 }] },
-    { x: 98, lean: -2, h: 33, leaves: [{ x: 98, y: 88, r: 6 }, { x: 80, y: 102, r: 4 }] },
-    { x: 102, lean: 3, h: 38, leaves: [{ x: 102, y: 78, r: 7 }, { x: 122, y: 100, r: 5 }] },
-    { x: 100, lean: 0, h: 30, leaves: [{ x: 100, y: 90, r: 6 }] },
+    { src: "thumb-1.jpg", date: "05/03", time: "20:26" },
+    { src: "thumb-2.jpg", date: "06/03", time: "07:53" },
+    { src: "thumb-3.jpg", date: "06/03", time: "21:54" },
+    { src: "thumb-4.jpg", date: "07/03", time: "10:39" },
+    { src: "thumb-5.jpg", date: "08/03", time: "00:25" },
+    { src: "thumb-6.jpg", date: "08/03", time: "14:26" },
+    { src: "thumb-7.jpg", date: "09/03", time: "04:28" },
+    { src: "thumb-8.jpg", date: "09/03", time: "20:46" },
+    { src: "thumb-9.jpg", date: "10/03", time: "10:32" },
   ];
   const selected = new Set([0, 2, 5]); // 3 fotos selecionadas
 
@@ -650,7 +614,7 @@ export const CamGalleryMockup = () => {
         </div>
       </div>
 
-      {/* Grid 3 col */}
+      {/* Grid 3 col — fotos reais de timelapse de alface */}
       <div className="px-3 pt-1.5 flex-1">
         <div className="grid grid-cols-3 gap-1">
           {thumbs.map((t, i) => {
@@ -658,31 +622,20 @@ export const CamGalleryMockup = () => {
             return (
               <div
                 key={i}
-                className={`aspect-square rounded relative overflow-hidden border ${
+                className={`aspect-square rounded relative overflow-hidden border bg-black ${
                   isSelected ? "border-blue-400 ring-1 ring-blue-400" : "border-white/5"
                 }`}
-                style={{
-                  background:
-                    "radial-gradient(ellipse at 50% 80%, #1a3d1a 0%, #0f2410 50%, #061206 100%)",
-                }}
               >
-                <svg viewBox="0 0 200 150" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
-                  <line
-                    x1={t.x}
-                    y1="150"
-                    x2={t.x + t.lean}
-                    y2={150 - t.h - 50}
-                    stroke="#2d6b2d"
-                    strokeWidth="2"
-                  />
-                  {t.leaves.map((leaf, j) => (
-                    <ellipse key={j} cx={leaf.x} cy={leaf.y} rx={leaf.r} ry={leaf.r * 0.5} fill="#3d8b3d" />
-                  ))}
-                </svg>
-                {/* Timestamp pequeno */}
-                <div className="absolute bottom-0.5 left-0.5 right-0.5 flex justify-between">
-                  <span className="text-[5px] text-white/60 font-mono">{28 - (i % 5)}/03</span>
-                  <span className="text-[5px] text-white/60 font-mono">14:{32 - i}</span>
+                <img
+                  src={`/produtos/cam-photos/${t.src}`}
+                  alt={`Captura ${t.date} ${t.time}`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+                {/* Timestamp pequeno com fundo pra legibilidade */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-1 pt-1.5 pb-0.5 flex justify-between">
+                  <span className="text-[5px] text-white/90 font-mono">{t.date}</span>
+                  <span className="text-[5px] text-white/90 font-mono">{t.time}</span>
                 </div>
                 {/* Checkbox de selecao */}
                 <div
