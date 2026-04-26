@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import {
   Leaf, LogOut, ChevronDown, Settings, Sun, Droplets, Wind, Waves,
   Thermometer, Camera, Image as ImageIcon, Play, Download, Bell,
-  AlertTriangle, CheckCircle2, Sparkles
+  AlertTriangle, CheckCircle2, Sparkles, FolderOpen, Trash2
 } from "lucide-react";
 
 /**
@@ -466,6 +466,246 @@ export const CamDashboardMockup = () => (
     </div>
   </div>
 );
+
+/* ============================================================
+   CULTIVEE CAM — Captura sob demanda (foto em destaque)
+   ============================================================ */
+export const CamCaptureMockup = () => (
+  <div className="h-full flex flex-col text-[10px] font-sans text-gray-200">
+    {/* Header */}
+    <div className="px-3 py-2.5 border-b border-white/5 flex items-center justify-between">
+      <div className="flex items-center gap-1.5">
+        <ChevronDown className="w-3 h-3 text-gray-400 rotate-90" />
+        <span className="text-[10px] font-semibold text-white">Captura</span>
+      </div>
+      <div className="flex items-center gap-1.5">
+        <span className="text-[7px] text-gray-500 font-mono">1 / 247</span>
+      </div>
+    </div>
+
+    {/* Foto em destaque (grande, ocupa quase toda a area) */}
+    <div className="px-3 pt-2 flex-1">
+      <div
+        className="relative rounded-lg overflow-hidden border border-white/10"
+        style={{
+          aspectRatio: "4/5",
+          background:
+            "radial-gradient(ellipse at 50% 70%, #2a5a2a 0%, #1a3d1a 25%, #0f2410 55%, #061206 100%)",
+        }}
+      >
+        {/* Plantas mais elaboradas */}
+        <svg viewBox="0 0 200 250" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
+          {/* Halo de luz no topo */}
+          <ellipse cx="100" cy="-20" rx="120" ry="80" fill="rgba(120, 200, 100, 0.15)" />
+          {/* Planta principal central */}
+          <path d="M 100 250 Q 95 180 102 140 Q 105 110 100 80 Q 98 60 105 50" stroke="#3a8b3a" strokeWidth="2" fill="none" />
+          <path d="M 102 140 Q 75 130 60 115" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
+          <path d="M 102 140 Q 130 130 145 118" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
+          <path d="M 100 80 Q 80 75 70 65" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
+          <path d="M 100 80 Q 122 73 132 62" stroke="#2d6b2d" strokeWidth="1.5" fill="none" />
+          <ellipse cx="105" cy="50" rx="9" ry="4" fill="#5cb85c" />
+          <ellipse cx="60" cy="115" rx="7" ry="3.5" fill="#4ca84c" />
+          <ellipse cx="145" cy="118" rx="7" ry="3.5" fill="#4ca84c" />
+          <ellipse cx="70" cy="65" rx="6" ry="3" fill="#4ca84c" />
+          <ellipse cx="132" cy="62" rx="6" ry="3" fill="#4ca84c" />
+          {/* Plantas laterais menores */}
+          <path d="M 35 250 Q 32 210 38 185 Q 40 170 36 160" stroke="#2d6b2d" strokeWidth="1.2" fill="none" />
+          <ellipse cx="36" cy="160" rx="4" ry="2" fill="#3a8b3a" />
+          <path d="M 165 250 Q 168 200 162 175 Q 160 160 166 150" stroke="#2d6b2d" strokeWidth="1.2" fill="none" />
+          <ellipse cx="166" cy="150" rx="4" ry="2" fill="#3a8b3a" />
+        </svg>
+
+        {/* Overlay topo */}
+        <div className="absolute top-2 left-2 bg-black/70 backdrop-blur rounded px-2 py-1">
+          <div className="text-[7px] text-white font-mono leading-tight">28 mar 2026</div>
+          <div className="text-[7px] text-white/70 font-mono leading-tight">14:32:18</div>
+        </div>
+        <div className="absolute top-2 right-2 bg-blue-500/90 backdrop-blur rounded px-1.5 py-0.5">
+          <span className="text-[7px] text-white font-bold">UXGA</span>
+        </div>
+
+        {/* Setas navegacao */}
+        <div className="absolute left-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-black/50 backdrop-blur flex items-center justify-center">
+          <span className="text-white text-[9px] leading-none">‹</span>
+        </div>
+        <div className="absolute right-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-black/50 backdrop-blur flex items-center justify-center">
+          <span className="text-white text-[9px] leading-none">›</span>
+        </div>
+
+        {/* Info bottom */}
+        <div className="absolute bottom-2 left-2 right-2 bg-black/60 backdrop-blur rounded px-2 py-1 flex items-center justify-between">
+          <span className="text-[7px] text-white/90 font-mono">1600×1200</span>
+          <span className="text-[7px] text-white/70 font-mono">387 KB · q5</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Acoes */}
+    <div className="px-3 pt-2 grid grid-cols-4 gap-1">
+      <div className="bg-[#0f1923] border border-white/10 rounded-lg py-1.5 flex flex-col items-center gap-0.5">
+        <Download className="w-3 h-3 text-blue-400" />
+        <span className="text-[7px] text-white">Baixar</span>
+      </div>
+      <div className="bg-[#0f1923] border border-white/10 rounded-lg py-1.5 flex flex-col items-center gap-0.5">
+        <FolderOpen className="w-3 h-3 text-purple-400" />
+        <span className="text-[7px] text-white">Mover</span>
+      </div>
+      <div className="bg-[#0f1923] border border-white/10 rounded-lg py-1.5 flex flex-col items-center gap-0.5">
+        <Camera className="w-3 h-3 text-green-400" />
+        <span className="text-[7px] text-white">Nova</span>
+      </div>
+      <div className="bg-red-500/10 border border-red-500/30 rounded-lg py-1.5 flex flex-col items-center gap-0.5">
+        <Trash2 className="w-3 h-3 text-red-400" />
+        <span className="text-[7px] text-red-300">Excluir</span>
+      </div>
+    </div>
+
+    {/* Pasta atual */}
+    <div className="px-3 pt-2">
+      <div className="bg-[#0f1923] border border-white/5 rounded-lg px-2.5 py-1.5 flex items-center gap-2">
+        <FolderOpen className="w-3 h-3 text-blue-400" />
+        <div className="flex-1">
+          <div className="text-[8px] font-semibold text-white leading-none">Cultivo atual</div>
+          <div className="text-[7px] text-gray-500 leading-none mt-0.5">42 fotos · 18 MB</div>
+        </div>
+        <ChevronDown className="w-3 h-3 text-gray-500" />
+      </div>
+    </div>
+
+    <div className="flex-1"></div>
+
+    {/* Status bar */}
+    <div className="px-3 py-1 border-t border-white/5 flex items-center justify-between">
+      <span className="text-[7px] text-blue-500">📶 -58dBm</span>
+      <span className="text-[7px] text-gray-500">Capturada agora</span>
+    </div>
+  </div>
+);
+
+/* ============================================================
+   CULTIVEE CAM — Galeria com pastas e selecao multipla
+   ============================================================ */
+export const CamGalleryMockup = () => {
+  // Variacoes pra cada thumbnail nao parecer copia
+  const thumbs = [
+    { x: 100, lean: 0, h: 30, leaves: [{ x: 100, y: 90, r: 6 }] },
+    { x: 95, lean: -3, h: 35, leaves: [{ x: 95, y: 80, r: 7 }, { x: 75, y: 100, r: 4 }] },
+    { x: 105, lean: 2, h: 28, leaves: [{ x: 105, y: 95, r: 6 }, { x: 125, y: 110, r: 4 }] },
+    { x: 100, lean: 0, h: 40, leaves: [{ x: 100, y: 75, r: 8 }] },
+    { x: 92, lean: -5, h: 32, leaves: [{ x: 92, y: 85, r: 6 }, { x: 75, y: 95, r: 5 }, { x: 110, y: 105, r: 4 }] },
+    { x: 100, lean: 1, h: 36, leaves: [{ x: 100, y: 82, r: 7 }] },
+    { x: 98, lean: -2, h: 33, leaves: [{ x: 98, y: 88, r: 6 }, { x: 80, y: 102, r: 4 }] },
+    { x: 102, lean: 3, h: 38, leaves: [{ x: 102, y: 78, r: 7 }, { x: 122, y: 100, r: 5 }] },
+    { x: 100, lean: 0, h: 30, leaves: [{ x: 100, y: 90, r: 6 }] },
+  ];
+  const selected = new Set([0, 2, 5]); // 3 fotos selecionadas
+
+  return (
+    <div className="h-full flex flex-col text-[10px] font-sans text-gray-200">
+      {/* Header */}
+      <div className="px-3 py-2.5 border-b border-white/5 flex items-center justify-between">
+        <div className="flex items-center gap-1.5">
+          <ChevronDown className="w-3 h-3 text-gray-400 rotate-90" />
+          <span className="text-[10px] font-semibold text-white">Galeria</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-[7px] text-gray-400">247 fotos</span>
+        </div>
+      </div>
+
+      {/* Pastas (chips horizontais) */}
+      <div className="px-3 pt-2">
+        <div className="flex gap-1.5 overflow-x-auto pb-1">
+          <div className="bg-blue-500/20 border border-blue-500/40 rounded-full px-2 py-0.5 flex items-center gap-1 flex-shrink-0">
+            <FolderOpen className="w-2.5 h-2.5 text-blue-400" />
+            <span className="text-[7px] text-white font-semibold">Cultivo atual</span>
+            <span className="text-[7px] text-blue-300">42</span>
+          </div>
+          <div className="bg-[#0f1923] border border-white/10 rounded-full px-2 py-0.5 flex items-center gap-1 flex-shrink-0">
+            <FolderOpen className="w-2.5 h-2.5 text-gray-500" />
+            <span className="text-[7px] text-gray-300">Mudas Mar/26</span>
+            <span className="text-[7px] text-gray-500">68</span>
+          </div>
+          <div className="bg-[#0f1923] border border-white/10 rounded-full px-2 py-0.5 flex items-center gap-1 flex-shrink-0">
+            <FolderOpen className="w-2.5 h-2.5 text-gray-500" />
+            <span className="text-[7px] text-gray-300">Floração Fev</span>
+            <span className="text-[7px] text-gray-500">94</span>
+          </div>
+          <div className="bg-[#0f1923] border border-white/10 rounded-full px-2 py-0.5 flex items-center gap-1 flex-shrink-0">
+            <FolderOpen className="w-2.5 h-2.5 text-gray-500" />
+            <span className="text-[7px] text-gray-300">Arquivo</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Toolbar de selecao */}
+      <div className="px-3 pt-1.5">
+        <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg px-2 py-1.5 flex items-center justify-between">
+          <span className="text-[8px] text-blue-300 font-semibold">3 selecionadas</span>
+          <div className="flex items-center gap-2">
+            <Download className="w-2.5 h-2.5 text-blue-300" />
+            <FolderOpen className="w-2.5 h-2.5 text-blue-300" />
+            <Trash2 className="w-2.5 h-2.5 text-red-400" />
+          </div>
+        </div>
+      </div>
+
+      {/* Grid 3 col */}
+      <div className="px-3 pt-1.5 flex-1">
+        <div className="grid grid-cols-3 gap-1">
+          {thumbs.map((t, i) => {
+            const isSelected = selected.has(i);
+            return (
+              <div
+                key={i}
+                className={`aspect-square rounded relative overflow-hidden border ${
+                  isSelected ? "border-blue-400 ring-1 ring-blue-400" : "border-white/5"
+                }`}
+                style={{
+                  background:
+                    "radial-gradient(ellipse at 50% 80%, #1a3d1a 0%, #0f2410 50%, #061206 100%)",
+                }}
+              >
+                <svg viewBox="0 0 200 150" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
+                  <line
+                    x1={t.x}
+                    y1="150"
+                    x2={t.x + t.lean}
+                    y2={150 - t.h - 50}
+                    stroke="#2d6b2d"
+                    strokeWidth="2"
+                  />
+                  {t.leaves.map((leaf, j) => (
+                    <ellipse key={j} cx={leaf.x} cy={leaf.y} rx={leaf.r} ry={leaf.r * 0.5} fill="#3d8b3d" />
+                  ))}
+                </svg>
+                {/* Timestamp pequeno */}
+                <div className="absolute bottom-0.5 left-0.5 right-0.5 flex justify-between">
+                  <span className="text-[5px] text-white/60 font-mono">{28 - (i % 5)}/03</span>
+                  <span className="text-[5px] text-white/60 font-mono">14:{32 - i}</span>
+                </div>
+                {/* Checkbox de selecao */}
+                <div
+                  className={`absolute top-0.5 right-0.5 w-2.5 h-2.5 rounded ${
+                    isSelected ? "bg-blue-500" : "bg-black/40 border border-white/30"
+                  } flex items-center justify-center`}
+                >
+                  {isSelected && <span className="text-[7px] text-white leading-none font-bold">✓</span>}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Status bar */}
+      <div className="px-3 py-1 border-t border-white/5 flex items-center justify-between">
+        <span className="text-[7px] text-gray-500">📁 9 de 42 visíveis</span>
+        <span className="text-[7px] text-blue-400">Carregar mais ›</span>
+      </div>
+    </div>
+  );
+};
 
 /* ============================================================
    CULTIVEE HIDRO — Phases list (detalhe das fases)

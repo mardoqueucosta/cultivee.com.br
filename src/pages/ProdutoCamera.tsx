@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { MockupPhone, CamDashboardMockup } from "@/components/mockups/DashboardMockups";
+import { MockupPhone, CamDashboardMockup, CamCaptureMockup, CamGalleryMockup } from "@/components/mockups/DashboardMockups";
 import ConnectionMonitoringSection from "@/components/ConnectionMonitoringSection";
 import {
   Camera, Smartphone, Wifi, Shield, Settings, Image as ImageIcon,
@@ -151,17 +151,17 @@ const ProdutoCameraPage = () => {
 
             <div className="text-center">
               <MockupPhone width={240}>
-                <CamDashboardMockup />
+                <CamCaptureMockup />
               </MockupPhone>
               <h3 className="font-semibold text-foreground mt-6 mb-1">Captura Sob Demanda</h3>
               <p className="text-sm text-muted-foreground max-w-[240px]">
-                Toque em "Capturar" e em 3–5 segundos a foto aparece no dashboard.
+                Foto recém-capturada em destaque com timestamp, resolução, navegação e ações em um toque.
               </p>
             </div>
 
             <div className="text-center">
               <MockupPhone width={240}>
-                <CamDashboardMockup />
+                <CamGalleryMockup />
               </MockupPhone>
               <h3 className="font-semibold text-foreground mt-6 mb-1">Galeria Organizada</h3>
               <p className="text-sm text-muted-foreground max-w-[240px]">
