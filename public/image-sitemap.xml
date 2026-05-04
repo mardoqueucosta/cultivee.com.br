@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://cultivee.com.br/blog/como-iniciar-cultivo-microverdes-em-casa</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/microverdes.jpg</image:loc>
+      <image:title>Bandeja de microverdes em cultivo doméstico</image:title>
+      <image:caption>Microverdes de rabanete e brócolis prontos para colheita após 10 dias.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/5-erros-comuns-escrita-tcc</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/tcc-escrita.jpg</image:loc>
+      <image:title>Mesa de estudo com livros e laptop para escrita acadêmica</image:title>
+      <image:caption>Estruturar antes de escrever evita retrabalho e bloqueio criativo.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/arduino-iniciantes-primeiros-passos-automacao</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/arduino.jpg</image:loc>
+      <image:title>Placa Arduino com circuito montado em protoboard</image:title>
+      <image:caption>ESP32 oferece Wi-Fi + Bluetooth integrados, ideal para projetos IoT.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/hidroponia.jpg</image:loc>
+      <image:title>Sistema hidropônico NFT com canais inclinados e plantas</image:title>
+      <image:caption>Sistema NFT em PVC 100mm — 90% menos água que o cultivo em solo.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-estruturar-revisao-bibliografica-eficiente</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/revisao-bibliografica.jpg</image:loc>
+      <image:title>Estação de estudo com livros abertos para revisão de literatura</image:title>
+      <image:caption>Organize sua revisão por temas, não por autores — esse é o erro mais comum.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/sensores-agricultura-guia-escolha-implementacao</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/sensores-agricultura.jpg</image:loc>
+      <image:title>Sensores agrícolas conectados a um ESP32 em estufa</image:title>
+      <image:caption>ESP32 com sensores de solo, ar e luz formam uma estação completa por R$ 60-90.</image:caption>
+    </image:image>
+  </url>
+</urlset>
