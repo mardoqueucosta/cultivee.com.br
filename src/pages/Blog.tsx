@@ -31,12 +31,15 @@ const BlogPage = () => {
 
       <Navbar />
 
-      <PageHeader
-        overline="Blog Cultivee"
-        title="Conteúdo que cultiva conhecimento"
-        description="Artigos práticos sobre agricultura, escrita acadêmica e tecnologia."
-        breadcrumbs={[{ label: "Blog" }]}
-      />
+      <section className="bg-gradient-hero">
+        <PageHeader
+          overline="Blog Cultivee"
+          title="Conteúdo que cultiva conhecimento"
+          description="Artigos práticos sobre agricultura, escrita acadêmica e tecnologia."
+          breadcrumbs={[{ label: "Blog" }]}
+          hero
+        />
+      </section>
 
       <ArticleSearch articles={articlesMeta} />
 

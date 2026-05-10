@@ -44,7 +44,7 @@ const AboutPage = () => {
       </section>
 
       {/* Por que Cultivee */}
-      <section className="py-16 bg-gradient-subtle">
+      <section className="py-16 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-elegant">
             <div className="flex items-center gap-4 mb-6">

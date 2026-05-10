@@ -2,11 +2,201 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia/calculo-e-pesagem-de-sais-para-preparo-de-solucao-nutri-1.jpg</image:loc>
+      <image:title>Cálculo e pesagem de sais para preparo de solução nutritiva com balança digital</image:title>
+      <image:caption>Pesagem precisa dos sais conforme cálculo da fórmula Furlani escalada.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia/medicao-diaria-de-ph-e-ec-com-canetas-digitais-em-soluc-2.jpg</image:loc>
+      <image:title>Medição diária de pH e EC com canetas digitais em solução nutritiva hidropônica</image:title>
+      <image:caption>Medição diária com canetas digitais, prática essencial do manejo da solução.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia/comparativo-entre-solucao-nutritiva-preparada-corretame-3.jpg</image:loc>
+      <image:title>Comparativo entre solução nutritiva preparada corretamente e solução com precipitação química</image:title>
+      <image:caption>À esquerda, solução correta; à direita, precipitação por mistura indevida de cálcio e sulfato.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-tomate-hidroponico-guia-do-iniciante-ao-produto</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-tomate-hidroponico-guia-do-iniciante-ao-produto/cultivo-de-tomate-cereja-hidroponico-em-estufa-com-gote-1.jpg</image:loc>
+      <image:title>Cultivo de tomate cereja hidropônico em estufa com gotejamento em fibra de coco</image:title>
+      <image:caption>Cultivo comercial de tomate cereja em estufa, com gotejamento em slab de fibra de coco.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-tomate-hidroponico-guia-do-iniciante-ao-produto/armadilha-de-feromonio-amarela-com-mariposas-em-estufa--2.jpg</image:loc>
+      <image:title>Armadilha de feromônio amarela com mariposas em estufa hidropônica de tomate</image:title>
+      <image:caption>Monitoramento de traça-do-tomateiro com armadilha de feromônio em estufa hidropônica.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-tomate-hidroponico-guia-do-iniciante-ao-produto/comparativo-entre-tomateiro-saudavel-e-tomateiro-com-mu-3.jpg</image:loc>
+      <image:title>Comparativo entre tomateiro saudável e tomateiro com murcha de Fusarium em hidroponia</image:title>
+      <image:caption>À esquerda, planta saudável; à direita, murcha de Fusarium oxysporum f. sp. lycopersici.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-preparar-solucao-nutritiva-passo-a-passo-tabelas-para-1</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-preparar-solucao-nutritiva-passo-a-passo-tabelas-para-1/preparo-de-solucao-nutritiva-furlani-com-balanca-digita-1.jpg</image:loc>
+      <image:title>Preparo de solução nutritiva Furlani com balança digital sais e canetas de pH e EC</image:title>
+      <image:caption>Preparo passo a passo da solução Furlani, com sais separados em soluções A e B.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-preparar-solucao-nutritiva-passo-a-passo-tabelas-para-1/medicao-diaria-de-ph-e-ec-com-canetas-digitais-em-reser-2.jpg</image:loc>
+      <image:title>Medição diária de pH e EC com canetas digitais em reservatório de solução nutritiva</image:title>
+      <image:caption>Medição diária de pH e EC, fundamental para o manejo correto da solução nutritiva.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-preparar-solucao-nutritiva-passo-a-passo-tabelas-para-1/comparativo-entre-solucao-nutritiva-preparada-corretame-3.jpg</image:loc>
+      <image:title>Comparativo entre solução nutritiva preparada corretamente e solução com precipitação de sais</image:title>
+      <image:caption>À esquerda, solução correta; à direita, precipitação por mistura indevida de cálcio e sulfato.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/guia-completo-de-alface-hidroponica-do-plantio-caseiro-a-pro</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/guia-completo-de-alface-hidroponica-do-plantio-caseiro-a-pro/bancada-de-hidroponia-nft-com-alfaces-crespas-verdes-em-1.jpg</image:loc>
+      <image:title>Bancada de hidroponia NFT com alfaces crespas verdes em perfis brancos dentro de estufa brasileira</image:title>
+      <image:caption>Bancada NFT em operação, com perfis inclinados a 3% e alfaces crespas em fase final.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/guia-completo-de-alface-hidroponica-do-plantio-caseiro-a-pro/manejo-de-solucao-nutritiva-para-alface-hidroponica-com-2.jpg</image:loc>
+      <image:title>Manejo de solução nutritiva para alface hidropônica com canetas de pH e EC sobre reservatório</image:title>
+      <image:caption>Estrutura típica de manejo da solução Furlani, com medição diária de pH e EC.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/guia-completo-de-alface-hidroponica-do-plantio-caseiro-a-pro/comparativo-entre-alface-hidroponica-saudavel-e-alface--3.jpg</image:loc>
+      <image:title>Comparativo entre alface hidropônica saudável e alface com tip-burn nas bordas internas</image:title>
+      <image:caption>À esquerda, alface saudável; à direita, tip-burn por transporte deficiente de cálcio em folhas jovens.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/hidroponia-caseira-passo-a-passo-monte-seu-sistema-em-casa</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/hidroponia-caseira-passo-a-passo-monte-seu-sistema-em-casa/sistema-nft-mini-caseiro-com-alfaces-verdes-em-tubos-pv-1.jpg</image:loc>
+      <image:title>Sistema NFT mini caseiro com alfaces verdes em tubos PVC brancos em varanda urbana</image:title>
+      <image:caption>NFT mini caseiro em varanda, com tubos PVC, bomba submersa e 8 alfaces em fase final.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/hidroponia-caseira-passo-a-passo-monte-seu-sistema-em-casa/preparo-de-solucao-nutritiva-furlani-caseira-com-caneta-2.jpg</image:loc>
+      <image:title>Preparo de solução nutritiva Furlani caseira com canetas digitais de pH e EC</image:title>
+      <image:caption>Preparo da solução Furlani residencial, com canetas de pH e EC para monitoramento.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/hidroponia-caseira-passo-a-passo-monte-seu-sistema-em-casa/comparativo-entre-raizes-hidroponicas-saudaveis-e-raize-3.jpg</image:loc>
+      <image:title>Comparativo entre raízes hidropônicas saudáveis e raízes contaminadas por Pythium</image:title>
+      <image:caption>À esquerda, raiz branca saudável; à direita, raiz marrom indicando contaminação por Pythium.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/microgreens-guia-completo-de-cultivo-comercial-e-viabilidade</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/microgreens-guia-completo-de-cultivo-comercial-e-viabilidade/bandejas-de-microgreens-variados-em-prateleira-com-ilum-1.jpg</image:loc>
+      <image:title>Bandejas de microgreens variados em prateleira com iluminação LED em produção comercial</image:title>
+      <image:caption>Bandejas 1020 com microgreens em diferentes espécies e estágios, sob LED full spectrum.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/microgreens-guia-completo-de-cultivo-comercial-e-viabilidade/comparativo-entre-bandeja-de-microgreens-saudaveis-e-ba-2.jpg</image:loc>
+      <image:title>Comparativo entre bandeja de microgreens saudáveis e bandeja com damping-off</image:title>
+      <image:caption>À esquerda, microgreens saudáveis; à direita, plântulas com damping-off por densidade excessiva.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/microgreens-guia-completo-de-cultivo-comercial-e-viabilidade/fazenda-vertical-urbana-com-prateleiras-de-microgreens--3.jpg</image:loc>
+      <image:title>Fazenda vertical urbana com prateleiras de microgreens iluminadas por LED rosa magenta</image:title>
+      <image:caption>Vertical farming brasileiro com prateleiras de microgreens, modelo Pink Farms e CityFarm.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef/bandejas-variadas-de-microverdes-em-prateleira-com-ilum-1.jpg</image:loc>
+      <image:title>Bandejas variadas de microverdes em prateleira com iluminação LED em produção comercial</image:title>
+      <image:caption>Produção comercial de microverdes em bandejas com substrato e iluminação LED.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef/bandejas-clamshell-de-microverdes-embalados-para-venda--2.jpg</image:loc>
+      <image:title>Bandejas clamshell de microverdes embalados para venda em hortifruti premium</image:title>
+      <image:caption>Microverdes embalados em clamshell para venda direta a hortifrutis e restaurantes premium.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef/comparativo-entre-bandeja-de-microgreens-saudaveis-e-ba-3.jpg</image:loc>
+      <image:title>Comparativo entre bandeja de microgreens saudáveis e bandeja com damping-off</image:title>
+      <image:caption>À esquerda, microgreens saudáveis; à direita, plântulas com damping-off por densidade excessiva.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co/bancada-hidroponica-nft-em-estufa-moderna-com-alfaces-c-1.jpg</image:loc>
+      <image:title>Bancada hidropônica NFT em estufa moderna com alfaces crespas verdes em perfis inclinados</image:title>
+      <image:caption>Sistema NFT em estufa, padrão dominante na produção comercial brasileira de folhosas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co/estufa-hidroponica-comercial-com-varias-bancadas-de-fol-2.jpg</image:loc>
+      <image:title>Estufa hidropônica comercial com várias bancadas de folhosas em produção paralela</image:title>
+      <image:caption>Estufa hidropônica comercial com economia de água e produtividade superior ao cultivo no solo.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co/sistema-kratky-domestico-com-alfaces-verdes-em-caixa-pl-3.jpg</image:loc>
+      <image:title>Sistema Kratky doméstico com alfaces verdes em caixa plástica e instrumentos de medição</image:title>
+      <image:caption>Sistema Kratky residencial com 8 alfaces, ponto de entrada para iniciantes em hidroponia.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen/bancada-nft-em-operacao-com-perfis-brancos-inclinados-e-1.jpg</image:loc>
+      <image:title>Bancada NFT em operação com perfis brancos inclinados e alfaces crespas verdes em estufa</image:title>
+      <image:caption>Bancada NFT em operação, com declividade visível, perfis brancos e alfaces em fase final.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen/preparo-da-solucao-nutritiva-furlani-em-recipientes-a-e-2.jpg</image:loc>
+      <image:title>Preparo da solução nutritiva Furlani em recipientes A e B com canetas de pH e EC</image:title>
+      <image:caption>Preparo da solução Furlani em soluções A e B separadas, com medição de pH e EC.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen/comparativo-entre-raizes-hidroponicas-saudaveis-e-raize-3.jpg</image:loc>
+      <image:title>Comparativo entre raízes hidropônicas saudáveis e raízes contaminadas por Pythium em NFT</image:title>
+      <image:caption>À esquerda, raiz branca saudável em NFT; à direita, raiz marrom indicando Pythium por temperatura excessiva.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora/preparo-da-solucao-nutritiva-furlani-com-balanca-digita-1.jpg</image:loc>
+      <image:title>Preparo da solução nutritiva Furlani com balança digital sais e canetas de pH e EC</image:title>
+      <image:caption>Preparo da solução Furlani com sais simples, em duas soluções concentradas A e B separadas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora/comparativo-entre-folha-de-alface-saudavel-e-folha-com--2.jpg</image:loc>
+      <image:title>Comparativo entre folha de alface saudável e folha com clorose férrica em hidroponia</image:title>
+      <image:caption>À esquerda, folha saudável; à direita, clorose férrica por pH acima de 6,5 com Fe-EDTA precipitado.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora/fazenda-vertical-urbana-com-torres-nft-empilhadas-ilumi-3.jpg</image:loc>
+      <image:title>Fazenda vertical urbana com torres NFT empilhadas iluminadas por LED rosa magenta</image:title>
+      <image:caption>Fazenda vertical brasileira com torres NFT empilhadas, modelo Pink Farms e BeGreen.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://cultivee.com.br/blog/como-iniciar-cultivo-microverdes-em-casa</loc>
     <image:image>
-      <image:loc>https://cultivee.com.br/blog/microverdes.jpg</image:loc>
-      <image:title>Bandeja de microverdes em cultivo doméstico</image:title>
-      <image:caption>Microverdes de rabanete e brócolis prontos para colheita após 10 dias.</image:caption>
+      <image:loc>https://cultivee.com.br/blog/como-iniciar-cultivo-microverdes-em-casa/bandejas-de-microverdes-em-tres-estagios-de-crescimento-1.jpg</image:loc>
+      <image:title>Bandejas de microverdes em três estágios de crescimento sobre bancada de cozinha com luz natural</image:title>
+      <image:caption>Cronograma visual: bandejas em fase de blackout (esquerda), exposição à luz (centro) e prontas para colheita (direita)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-iniciar-cultivo-microverdes-em-casa/cinco-tipos-de-substrato-para-microverdes-dispostos-em--2.jpg</image:loc>
+      <image:title>Cinco tipos de substrato para microverdes dispostos em bandejas identificadas para comparação</image:title>
+      <image:caption>Comparativo de substratos: fibra de coco, manta de juta, espuma fenólica, papel toalha e vermiculita</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-iniciar-cultivo-microverdes-em-casa/diagrama-comparativo-mostrando-microverdes-saudaveis-ve-3.jpg</image:loc>
+      <image:title>Diagrama comparativo mostrando microverdes saudáveis versus três problemas comuns com identificação visual</image:title>
+      <image:caption>Diagnóstico visual: microverdes saudáveis (A), mofo (B), damping-off (C) e estiolamento (D)</image:caption>
     </image:image>
   </url>
   <url>

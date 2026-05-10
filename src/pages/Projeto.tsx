@@ -226,7 +226,7 @@ const ProjetoPage = () => {
       </section>
 
       {/* Solução */}
-      <section id="solucao" className="py-20 bg-gradient-subtle">
+      <section id="solucao" className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -265,7 +265,7 @@ const ProjetoPage = () => {
       </section>
 
       {/* Como Funciona — Fluxo Visual */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -333,7 +333,7 @@ const ProjetoPage = () => {
       </section>
 
       {/* Diferencial — Inovação */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-elegant">
             <div className="text-center mb-8">
@@ -394,7 +394,7 @@ const ProjetoPage = () => {
       </section>
 
       {/* Impacto */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -430,7 +430,7 @@ const ProjetoPage = () => {
       </section>
 
       {/* Modelo de Negócio */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -459,7 +459,7 @@ const ProjetoPage = () => {
       </section>
 
       {/* Maturidade Tecnológica */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -508,7 +508,7 @@ const ProjetoPage = () => {
       </section>
 
       {/* Parceiros e Programa */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

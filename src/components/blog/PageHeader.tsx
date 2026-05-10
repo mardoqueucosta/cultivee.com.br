@@ -14,6 +14,7 @@ export function PageHeader({
   breadcrumbs,
   centered,
   accent = "primary",
+  hero = false,
 }: {
   overline?: string;
   title: string;
@@ -21,25 +22,36 @@ export function PageHeader({
   breadcrumbs?: BreadcrumbCrumb[];
   centered?: boolean;
   accent?: "primary" | "agro" | "educa" | "tech";
+  hero?: boolean;
 }) {
-  const overlineColor =
-    accent === "agro"
-      ? "text-agro"
-      : accent === "educa"
-      ? "text-educa"
-      : accent === "tech"
-      ? "text-tech"
-      : "text-primary";
+  const overlineColor = hero
+    ? "text-white/80"
+    : accent === "agro"
+    ? "text-agro"
+    : accent === "educa"
+    ? "text-educa"
+    : accent === "tech"
+    ? "text-tech"
+    : "text-primary";
 
   return (
-    <div className="bg-background border-b border-border">
+    <div className={hero ? "" : "bg-background border-b border-border"}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         <div className={centered ? "max-w-3xl mx-auto" : ""}>
           {breadcrumbs && (
-            <nav aria-label="Breadcrumb" className="mb-4 text-xs text-muted-foreground">
+            <nav
+              aria-label="Breadcrumb"
+              className={cn("mb-4 text-xs", hero ? "text-white/70" : "text-muted-foreground")}
+            >
               <ol className="flex flex-wrap items-center gap-1.5">
                 <li className="flex-shrink-0">
-                  <Link to="/" className="hover:text-foreground transition-colors">
+                  <Link
+                    to="/"
+                    className={cn(
+                      "transition-colors",
+                      hero ? "hover:text-white" : "hover:text-foreground"
+                    )}
+                  >
                     Início
                   </Link>
                 </li>
@@ -55,12 +67,21 @@ export function PageHeader({
                     >
                       <ChevronRight className="w-3 h-3 flex-shrink-0" aria-hidden />
                       {crumb.href ? (
-                        <Link to={crumb.href} className="hover:text-foreground transition-colors">
+                        <Link
+                          to={crumb.href}
+                          className={cn(
+                            "transition-colors",
+                            hero ? "hover:text-white" : "hover:text-foreground"
+                          )}
+                        >
                           {crumb.label}
                         </Link>
                       ) : (
                         <span
-                          className="text-foreground/80 truncate max-w-[200px] lg:max-w-none"
+                          className={cn(
+                            "truncate max-w-[200px] lg:max-w-none",
+                            hero ? "text-white" : "text-foreground/80"
+                          )}
                           aria-current="page"
                         >
                           {crumb.label}
@@ -80,7 +101,8 @@ export function PageHeader({
           )}
           <h1
             className={cn(
-              "text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance break-words leading-tight",
+              "text-3xl md:text-4xl lg:text-5xl font-bold text-balance break-words leading-tight",
+              hero ? "text-white" : "text-foreground",
               !centered && "max-w-3xl"
             )}
           >
@@ -89,7 +111,8 @@ export function PageHeader({
           {description && (
             <p
               className={cn(
-                "mt-3 text-lg text-muted-foreground leading-relaxed",
+                "mt-3 text-lg leading-relaxed",
+                hero ? "text-white/85" : "text-muted-foreground",
                 !centered && "max-w-2xl"
               )}
             >

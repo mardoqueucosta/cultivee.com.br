@@ -46,5 +46,34 @@ echo "-> Verificando saude..."
 sleep 3
 $SSH_CMD "docker ps --format 'table {{.Names}}\t{{.Status}}' | grep cultivee-site"
 
+# Purge cache do Cloudflare (nao-bloqueante: falhas aqui nao quebram o deploy)
+echo ""
+echo "-> Limpando cache do Cloudflare..."
+CF_ENV="D:/01-projetos-claude/.credentials/cloudflare-cultivee.env"
+if [ -f "$CF_ENV" ]; then
+    (
+        set +e
+        set -a; source "$CF_ENV"; set +a
+        if [ -n "${CF_API_TOKEN:-}" ] && [ -n "${CF_ZONE_ID:-}" ]; then
+            RESULT=$(curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+                -H "Authorization: Bearer $CF_API_TOKEN" \
+                -H "Content-Type: application/json" \
+                --data '{"purge_everything":true}')
+            if echo "$RESULT" | grep -q '"success":true'; then
+                echo "   Cache purgado com sucesso"
+            else
+                echo "   Purge falhou (deploy seguiu). Resposta:"
+                echo "   $(echo "$RESULT" | head -c 200)"
+                echo "   Verifique permissao Zone:Cache Purge:Purge no token cultivee-worker-deploy."
+            fi
+        else
+            echo "   CF_API_TOKEN ou CF_ZONE_ID ausentes em $CF_ENV - pulando purge"
+        fi
+    )
+else
+    echo "   $CF_ENV nao encontrado - pulando purge"
+    echo "   (cache do Cloudflare expira sozinho em max 4h)"
+fi
+
 echo ""
 echo "=== Deploy concluido! ==="
