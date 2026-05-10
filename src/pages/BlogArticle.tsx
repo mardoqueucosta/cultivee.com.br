@@ -345,7 +345,19 @@ const BlogArticlePage = () => {
                   );
                 },
                 blockquote: ({ node: _node, children, ...props }) => {
-                  const raw = JSON.stringify(children);
+                  // Extrai apenas texto dos children (evita JSON.stringify em React elements
+                  // que contêm context circular, ex.: <Link> do React Router em links markdown).
+                  const extractText = (n: React.ReactNode): string => {
+                    if (n === null || n === undefined || typeof n === "boolean") return "";
+                    if (typeof n === "string" || typeof n === "number") return String(n);
+                    if (Array.isArray(n)) return n.map(extractText).join("");
+                    if (typeof n === "object" && "props" in n) {
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      return extractText((n as any).props?.children);
+                    }
+                    return "";
+                  };
+                  const raw = extractText(children);
                   if (raw.includes("Leia também")) {
                     return (
                       <aside
