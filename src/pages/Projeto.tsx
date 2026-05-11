@@ -1,7 +1,10 @@
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
+import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
+import { webPageJsonLd } from "@/lib/seo-schemas";
 import {
   Leaf,
   Factory,
@@ -162,8 +165,29 @@ const ProjetoPage = () => {
     { phase: "TRL 6", label: "Demonstração em ambiente operacional", description: "Protótipo completo testado em cenário real", done: false },
   ];
 
+  const projectLd = webPageJsonLd({
+    pageName: "Projeto — Agricultura Urbana Inteligente (Cultivee)",
+    pageUrl: `${SITE_BASE}/projeto`,
+    description:
+      "Sistema integrado Hub-and-Spoke de produção, distribuição e comercialização de hortaliças vivas em áreas urbanas. Apoio: Programa BASE SENAI-RS, FAPESP PIPE.",
+  });
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Projeto", href: "/projeto" }]);
+
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Projeto Cultivee — Agricultura Urbana Inteligente (Hub-and-Spoke)</title>
+        <meta
+          name="description"
+          content="Sistema integrado de produção, distribuição e comercialização de hortaliças vivas em áreas urbanas. Hub vertical + displays inteligentes + plataforma IoT."
+        />
+        <link rel="canonical" href={`${SITE_BASE}/projeto`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_BASE}/projeto`} />
+        <meta property="og:title" content="Projeto Cultivee — Agricultura Urbana Inteligente" />
+        <script type="application/ld+json">{JSON.stringify(projectLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+      </Head>
       <Navbar />
 
       {/* Hero */}

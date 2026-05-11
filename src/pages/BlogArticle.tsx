@@ -3,7 +3,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Head } from "vite-react-ssg";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Calendar, Clock, RefreshCw, User, ArrowLeft, Lightbulb, List } from "lucide-react";
+import { Calendar, Clock, RefreshCw, User, ArrowLeft, List } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -25,6 +25,12 @@ import {
 import { slugify } from "@/lib/normalize";
 import { knownEntities } from "@/data/entities";
 import { breadcrumbJsonLd, SITE_BASE } from "@/lib/breadcrumb-schema";
+import {
+  AUTHOR_ID,
+  ORG_ID,
+  authorJsonLd,
+  organizationJsonLd,
+} from "@/lib/seo-schemas";
 import imageVariantsRaw from "@/data/image-variants.json";
 import blurDataRaw from "@/data/blur-data.json";
 import type { ImageVariants } from "@/lib/article-utils";
@@ -191,20 +197,8 @@ const BlogArticlePage = () => {
     datePublished: article.data,
     dateModified: article.dataModificacao || article.data,
     image: heroImage ? [ogImage, fallbackImage] : ogImage,
-    author: {
-      "@type": "Organization",
-      name: "Equipe Cultivee",
-      url: SITE_BASE,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Cultivee",
-      url: SITE_BASE,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_BASE}/icon-512.png`,
-      },
-    },
+    author: { "@id": AUTHOR_ID },
+    publisher: { "@id": ORG_ID },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": articleUrl,
@@ -213,7 +207,7 @@ const BlogArticlePage = () => {
     inLanguage: "pt-BR",
     speakable: {
       "@type": "SpeakableSpecification",
-      cssSelector: [".tldr", "h2", ".prose p:first-of-type"],
+      cssSelector: ["h2", ".prose p:first-of-type"],
     },
     ...(mentionedEntities.length > 0 ? { mentions: mentionedEntities } : {}),
   };
@@ -266,6 +260,8 @@ const BlogArticlePage = () => {
         <meta name="twitter:title" content={article.titulo} />
         <meta name="twitter:description" content={article.resumo} />
         <meta name="twitter:image" content={ogImage} />
+        <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(authorJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdArticle)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>
         {jsonLdFaq && (
@@ -328,18 +324,6 @@ const BlogArticlePage = () => {
               {article.leitura} de leitura
             </span>
           </div>
-
-          {article.tldr && (
-            <aside className={`tldr mb-10 rounded-xl border-2 p-6 ${accent.border} ${accent.bg}`}>
-              <div className="flex items-center gap-2 mb-3">
-                <Lightbulb className={`w-5 h-5 ${accent.text}`} />
-                <span className="font-bold text-foreground text-sm uppercase tracking-wider">
-                  TL;DR
-                </span>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">{article.tldr}</p>
-            </aside>
-          )}
 
           {headings.length >= 3 && (
             <nav

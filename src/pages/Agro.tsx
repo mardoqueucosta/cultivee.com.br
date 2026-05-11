@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,6 +11,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
+import { collectionPageJsonLd } from "@/lib/seo-schemas";
 
 const AgroPage = () => {
   const courses = [
@@ -58,10 +61,40 @@ const AgroPage = () => {
     }
   ];
 
+  const collectionLd = collectionPageJsonLd({
+    pageName: "Cultivee Agro — Cursos de cultivo, hidroponia e agricultura urbana",
+    pageUrl: `${SITE_BASE}/agro`,
+    description:
+      "Cursos práticos do pilar Agro: microverdes, hidroponia NFT e cultivo indoor com agricultura vertical.",
+    items: courses.map((c) => ({
+      name: c.title,
+      url: c.link,
+      description: c.description,
+    })),
+  });
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Agro", href: "/agro" }]);
+
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Cultivee Agro — Cursos de Hidroponia, Microverdes e Cultivo Indoor</title>
+        <meta
+          name="description"
+          content="Aprenda hidroponia, microverdes e cultivo indoor com cursos práticos do pilar Agro da Cultivee. Do hobby à produção comercial."
+        />
+        <link rel="canonical" href={`${SITE_BASE}/agro`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_BASE}/agro`} />
+        <meta property="og:title" content="Cultivee Agro — Hidroponia, Microverdes, Cultivo Indoor" />
+        <meta
+          property="og:description"
+          content="Cursos práticos de cultivo, hidroponia e agricultura urbana."
+        />
+        <script type="application/ld+json">{JSON.stringify(collectionLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+      </Head>
       <Navbar />
-      
+
       {/* Hero */}
       <section className="pt-24 pb-16 bg-gradient-agro">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

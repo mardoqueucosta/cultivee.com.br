@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,6 +11,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
+import { collectionPageJsonLd } from "@/lib/seo-schemas";
 
 const TechPage = () => {
   const courses = [
@@ -52,10 +55,40 @@ const TechPage = () => {
     }
   ];
 
+  const collectionLd = collectionPageJsonLd({
+    pageName: "Cultivee Tech — Instrumentação, Arduino, ESP32 e Empreendedorismo Técnico",
+    pageUrl: `${SITE_BASE}/tech`,
+    description:
+      "Cursos do pilar Tech: instrumentação prática (Arduino, ESP32, sensores) e empreendedorismo técnico para transformar protótipos em produtos.",
+    items: courses.map((c) => ({
+      name: c.title,
+      url: "/tech",
+      description: c.description,
+    })),
+  });
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Tech", href: "/tech" }]);
+
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Cultivee Tech — Instrumentação Prática, Arduino, ESP32 e Empreendedorismo</title>
+        <meta
+          name="description"
+          content="Construa soluções tecnológicas: instrumentação eletrônica, prototipagem com Arduino/ESP32 e empreendedorismo técnico."
+        />
+        <link rel="canonical" href={`${SITE_BASE}/tech`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_BASE}/tech`} />
+        <meta property="og:title" content="Cultivee Tech — Instrumentação e Empreendedorismo" />
+        <meta
+          property="og:description"
+          content="Construa suas próprias soluções tecnológicas."
+        />
+        <script type="application/ld+json">{JSON.stringify(collectionLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+      </Head>
       <Navbar />
-      
+
       {/* Hero */}
       <section className="pt-24 pb-16 bg-gradient-tech">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

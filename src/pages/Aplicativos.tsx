@@ -1,8 +1,11 @@
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Camera, Droplets, ExternalLink, Smartphone, Sparkles } from "lucide-react";
+import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
+import { collectionPageJsonLd } from "@/lib/seo-schemas";
 
 const apps = [
   {
@@ -32,8 +35,34 @@ const apps = [
 ];
 
 const AplicativosPage = () => {
+  const collectionLd = collectionPageJsonLd({
+    pageName: "Aplicativos Cultivee — PWAs para monitoramento de cultivo",
+    pageUrl: `${SITE_BASE}/aplicativos`,
+    description:
+      "Apps PWA da Cultivee: Hidro (4 relés + 10 fases offline), Hidro Farm (reposição automática + alertas) e Cam (captura agendada + stream).",
+    items: apps.map((app) => ({
+      name: app.name,
+      url: app.url,
+      description: app.description,
+    })),
+  });
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Aplicativos", href: "/aplicativos" }]);
+
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Aplicativos Cultivee — Hidro, Hidro Farm e Cam (PWAs)</title>
+        <meta
+          name="description"
+          content="Apps PWA para monitoramento de cultivo indoor: controle de relés, alertas, sensores e câmera IP. Instale direto no celular."
+        />
+        <link rel="canonical" href={`${SITE_BASE}/aplicativos`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_BASE}/aplicativos`} />
+        <meta property="og:title" content="Aplicativos Cultivee — PWAs de monitoramento" />
+        <script type="application/ld+json">{JSON.stringify(collectionLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+      </Head>
       <Navbar />
 
       {/* Header */}

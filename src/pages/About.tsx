@@ -1,11 +1,34 @@
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Leaf, Target, Heart, Lightbulb } from "lucide-react";
+import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
+import { aboutPageJsonLd, authorJsonLd } from "@/lib/seo-schemas";
 
 const AboutPage = () => {
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Sobre", href: "/sobre" }]);
+
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Sobre a Cultivee — Cultivar educação, alimentos e autonomia</title>
+        <meta
+          name="description"
+          content="Cultivee nasceu da convergência entre pesquisa acadêmica, tecnologia e agricultura. Conheça nossa missão de democratizar conhecimento técnico."
+        />
+        <link rel="canonical" href={`${SITE_BASE}/sobre`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_BASE}/sobre`} />
+        <meta property="og:title" content="Sobre a Cultivee" />
+        <meta
+          property="og:description"
+          content="Cultivar educação. Cultivar alimentos. Cultivar autonomia."
+        />
+        <script type="application/ld+json">{JSON.stringify(authorJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(aboutPageJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+      </Head>
       <Navbar />
       
       {/* Hero */}

@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -9,6 +10,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
+import { collectionPageJsonLd } from "@/lib/seo-schemas";
 
 const EducaPage = () => {
   const targetAudience = [
@@ -46,10 +49,43 @@ const EducaPage = () => {
     }
   ];
 
+  const collectionLd = collectionPageJsonLd({
+    pageName: "Cultivee Educa — Escrita acadêmica, TCC e metodologia científica",
+    pageUrl: `${SITE_BASE}/educa`,
+    description:
+      "Método estruturado para escrever TCC, dissertação, tese, artigo científico e patente.",
+    items: [
+      {
+        name: "MEAD — Método de Escrita Acadêmica",
+        url: "/cursos/escrita-academica",
+        description:
+          "Carga horária de 40h. Estruturação, revisão bibliográfica, metodologia, ABNT e defesa.",
+      },
+    ],
+  });
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Educa", href: "/educa" }]);
+
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Cultivee Educa — Curso de Escrita Acadêmica, TCC, Dissertação e Tese</title>
+        <meta
+          name="description"
+          content="Método MEAD: estruturação, revisão bibliográfica, metodologia científica, formatação ABNT e defesa. Para qualquer área de conhecimento."
+        />
+        <link rel="canonical" href={`${SITE_BASE}/educa`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_BASE}/educa`} />
+        <meta property="og:title" content="Cultivee Educa — Escrita Acadêmica" />
+        <meta
+          property="og:description"
+          content="Cultive sua carreira acadêmica e científica."
+        />
+        <script type="application/ld+json">{JSON.stringify(collectionLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+      </Head>
       <Navbar />
-      
+
       {/* Hero */}
       <section className="pt-24 pb-16 bg-gradient-educa">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

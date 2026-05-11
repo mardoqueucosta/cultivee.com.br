@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -16,6 +17,8 @@ import {
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { API_BASE, TURNSTILE_SITE_KEY } from "@/lib/config";
+import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
+import { webPageJsonLd } from "@/lib/seo-schemas";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -111,10 +114,34 @@ const ContactPage = () => {
     { value: "outro", label: "Outro" },
   ];
 
+  const contactPageLd = {
+    ...webPageJsonLd({
+      pageName: "Contato — Cultivee",
+      pageUrl: `${SITE_BASE}/contato`,
+      description:
+        "Fale com a Cultivee por e-mail, WhatsApp ou formulário. Atendimento em Piracicaba-SP e online em todo o Brasil.",
+    }),
+    "@type": "ContactPage",
+  };
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Contato", href: "/contato" }]);
+
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Contato — Cultivee</title>
+        <meta
+          name="description"
+          content="Fale com a Cultivee por e-mail, WhatsApp ou formulário. Atendimento em Piracicaba-SP e online."
+        />
+        <link rel="canonical" href={`${SITE_BASE}/contato`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_BASE}/contato`} />
+        <meta property="og:title" content="Contato — Cultivee" />
+        <script type="application/ld+json">{JSON.stringify(contactPageLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+      </Head>
       <Navbar />
-      
+
       {/* Hero */}
       <section className="pt-24 pb-16 bg-gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
