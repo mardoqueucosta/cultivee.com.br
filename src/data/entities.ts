@@ -1,5 +1,11 @@
 export interface KnownEntity {
-  type: "Organization" | "GovernmentOrganization" | "EducationalOrganization" | "Product" | "SoftwareApplication" | "Thing";
+  type:
+    | "Organization"
+    | "GovernmentOrganization"
+    | "EducationalOrganization"
+    | "Brand"
+    | "SoftwareApplication"
+    | "Thing";
   name: string;
   url: string;
   sameAs?: string[];
@@ -40,7 +46,7 @@ export const knownEntities: Record<string, KnownEntity> = {
     url: "https://www.scielo.br",
   },
   scopus: {
-    type: "Product",
+    type: "Thing",
     name: "Scopus",
     url: "https://www.scopus.com",
   },
@@ -65,13 +71,13 @@ export const knownEntities: Record<string, KnownEntity> = {
     url: "https://www.rayyan.ai",
   },
   arduino: {
-    type: "Product",
+    type: "Brand",
     name: "Arduino",
     url: "https://www.arduino.cc",
     sameAs: ["https://en.wikipedia.org/wiki/Arduino"],
   },
   esp32: {
-    type: "Product",
+    type: "Brand",
     name: "ESP32",
     url: "https://www.espressif.com/en/products/socs/esp32",
     sameAs: ["https://en.wikipedia.org/wiki/ESP32"],
