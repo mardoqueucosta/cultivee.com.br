@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ===== FONTE DA VERDADE (atualize aqui e replique com find-replace global) =====
+  WhatsApp ... 5519992805563   (todos os links a[href*="wa.me"] + rodapé)
+  Precos ..... R$ 250/h | R$ 2.500 (acompanhamento) | R$ 4.900 (projetos maiores)
+               -> bloco .pricing, conta de ROI da secao "Quanto esta em jogo" e FAQ de pagamento
+  Prova ...... 18 financiamentos | 7 fontes | dezenas de projetos avaliados
+               -> hero (cred-card + checks), secao de autoridade e secao PROVA
+  Ao mudar preco/telefone: find-replace global do valor antigo + conferir .pricing, ROI e FAQ.
+  CSS ........ inline neste arquivo (extrair para style.css quando existir uma 2a pagina).
+  ============================================================================
+-->
+<title>Mentoria para captação de fomento (FAPESP, CNPq, CAPES) | Leitura do seu projeto antes dos pareceristas</title>
+<link rel="canonical" href="https://cultivee.com.br/fomento">
+<meta property="og:url" content="https://cultivee.com.br/fomento">
+<meta name="description" content="Já avaliei dezenas de projetos e conheço por dentro como as agências de fomento avaliam. Leio o seu com olhar crítico, antes de você submeter. Mentoria individual. Conversa diagnóstica pelo WhatsApp.">
+<meta property="og:title" content="Leitura crítica do seu projeto antes dos pareceristas">
+<meta property="og:description" content="A leitura crítica de quem já avaliou muitos projetos e conhece a avaliação por dentro, antes de você submeter. Submeta com segurança, sabendo o que ela vale.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Mardoqueu M. da Costa, mentoria de captação de fomento">
+<meta property="og:image" content="https://cultivee.com.br/fomento/img/mardoqueu.jpg">
+<meta property="og:image:alt" content="Mardoqueu Martins da Costa, mentor de captação de fomento">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leitura crítica do seu projeto antes dos pareceristas">
+<meta name="twitter:description" content="A leitura crítica de quem já avaliou muitos projetos e conhece a avaliação por dentro, antes de você submeter. Mentoria individual.">
+<meta name="twitter:image" content="https://cultivee.com.br/fomento/img/mardoqueu.jpg">
+<meta name="theme-color" content="#0f6e56">
+<!-- TODO ao publicar: trocar og:image por arte 1200x630 (foto + nome + headline) com URL ABSOLUTA; adicionar <meta property="og:url"> e <link rel="canonical"> com a URL final. -->
+<!-- ANALYTICS: cole aqui o snippet do GA4 (gtag.js) OU Plausible/Umami. O rastreamento de cliques no WhatsApp por seção já está pronto no fim do <body> e dispara sozinho quando um destes provedores estiver presente. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#0b3a2c; --green-800:#0d4d3a; --green-700:#0f6e56; --green-600:#15856a;
+    --green-500:#1d9e75; --green-200:#9fe1cb; --green-100:#dcefe7; --green-50:#eef7f3;
+    --amber-700:#8a5d0b; --amber-100:#fbeccd; --amber-50:#fdf6e9;
+    --ink:#16241f; --body:#33433d; --muted:#62716b;
+    --bg:#f6faf8; --white:#ffffff; --line:#e2ece8; --wa:#0d9488; --action:#0d9488; --action-700:#0f766e;
+    --maxw:1140px; --radius:16px; --shadow:0 1px 2px rgba(13,77,58,.04),0 8px 28px rgba(13,77,58,.07);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--body);background:var(--bg);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Lora',Georgia,serif;color:var(--ink);line-height:1.18;font-weight:600;letter-spacing:-.01em}
+  h1{font-size:clamp(2rem,5vw,3.1rem);text-wrap:balance}
+  h2{font-size:clamp(1.5rem,3.3vw,2.25rem)}
+  h3{font-size:1.15rem}
+  p{margin:0 0 1rem}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .sec{padding:clamp(2.4rem,5vw,4.2rem) 0}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-700);background:var(--green-100);padding:6px 14px;border-radius:999px;margin-bottom:1.1rem}
+  .lead{font-size:1.16rem;color:var(--body)}
+  .muted{color:var(--muted)}
+  .narrow{max-width:780px;margin-left:auto;margin-right:auto}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-weight:600;font-size:1.02rem;padding:15px 26px;border-radius:999px;cursor:pointer;border:0;transition:.18s ease;line-height:1}
+  .btn-primary{background:var(--action);color:#fff;box-shadow:0 6px 18px rgba(13,148,136,.30)}
+  .btn-primary:hover{background:var(--action-700);transform:translateY(-1px);box-shadow:0 10px 24px rgba(13,148,136,.36)}
+  .btn-soft{background:#fff;color:var(--green-700);border:1.5px solid var(--green-200)}
+  .btn-soft:hover{background:var(--green-50);border-color:var(--green-500)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .cta-note{font-size:.92rem;color:var(--muted);margin-top:.7rem}
+  .inline-cta{margin-top:2rem}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,250,248,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Lora',serif;font-weight:600;color:var(--ink);font-size:1.05rem}
+  .brand .mono{width:38px;height:38px;border-radius:11px;background:var(--green-600);color:#fff;display:grid;place-items:center;font-size:1rem;font-weight:700;font-family:'Inter',sans-serif}
+  .brand small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.02em}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{font-size:.95rem;font-weight:500;color:var(--body)}
+  .nav-links a:hover{color:var(--green-700)}
+  .nav .btn{padding:11px 20px;font-size:.95rem}
+  @media(max-width:900px){.nav-links a:not(.btn){display:none}}
+
+  .hero{background:radial-gradient(1100px 560px at 82% -12%,var(--green-100),transparent 60%),linear-gradient(180deg,#fff,var(--bg));border-bottom:1px solid var(--line)}
+  .preheadline{font-family:'Lora',serif;font-style:italic;font-size:1.06rem;color:var(--green-800);border-left:3px solid var(--green-500);padding-left:16px;margin-bottom:1.3rem;max-width:700px;line-height:1.5;text-wrap:balance}
+  .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:50px;align-items:start;padding:clamp(2.4rem,5vw,4rem) 0 clamp(3rem,5vw,4.4rem)}
+  .hero h1 .hl{color:var(--green-700)}
+  .hero .sub{font-size:1.16rem;color:var(--ink);font-weight:500;margin:1.1rem 0 1.2rem;line-height:1.5}
+  .hero p.body{font-size:1.02rem}
+  .hero p.lede{font-size:1.05rem;color:var(--ink)}
+  .hero-cta{margin-top:1.5rem}
+  ul.checks{list-style:none;margin:0;display:grid;gap:12px}
+  ul.checks li{display:flex;gap:11px;align-items:flex-start;font-size:1rem;color:var(--body)}
+  ul.checks li svg{flex:none;margin-top:3px;width:20px;height:20px;color:var(--green-600)}
+  .cred-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);position:sticky;top:90px}
+  .cred-card .ph{display:flex;align-items:center;gap:15px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  .cred-card .ph .av{width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--green-600),var(--green-800));color:#fff;display:grid;place-items:center;font-weight:700;font-size:1.3rem;flex:none;overflow:hidden}
+  .av img{width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:50%;display:block}
+  .cred-card .ph b{font-family:'Lora',serif;font-size:1.08rem;color:var(--ink);display:block}
+  .cred-card .ph span{font-size:.84rem;color:var(--muted)}
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .stat{background:var(--green-50);border-radius:12px;padding:14px 16px}
+  .stat b{font-family:'Lora',serif;font-size:1.5rem;color:var(--green-700);display:block;line-height:1.1}
+  .stat span{font-size:.82rem;color:var(--muted)}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:32px}.cred-card{position:static}}
+
+  .trust{border-bottom:1px solid var(--line);background:#fff}
+  .trust .wrap{display:flex;align-items:center;gap:14px 30px;flex-wrap:wrap;justify-content:center;padding:20px 22px}
+  .trust span.lbl{font-size:.82rem;color:var(--muted);font-weight:500}
+  .trust .ag{font-family:'Lora',serif;font-weight:600;color:var(--green-800);font-size:1.02rem;opacity:.85}
+
+  .values{background:#fff;border-top:1px solid var(--line)}
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:2.2rem}
+  .vcard{background:var(--green-50);border:1px solid var(--green-200);border-radius:14px;padding:22px}
+  .vcard .lbl{font-size:.9rem;color:var(--green-800);font-weight:500;line-height:1.35;min-height:2.7em}
+  .vcard .val{font-family:'Lora',serif;font-size:1.7rem;color:var(--green-700);font-weight:600;line-height:1.1;margin:12px 0 4px}
+  .vcard .dur{font-size:.84rem;color:var(--muted)}
+  @media(max-width:860px){.vgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.vgrid{grid-template-columns:1fr}.vcard .lbl{min-height:0}}
+
+  .pain{background:var(--white)}
+  .quote{font-family:'Lora',serif;font-size:1.28rem;color:var(--ink);font-weight:500;border-left:4px solid var(--green-500);padding:4px 0 4px 22px;margin:1.6rem 0;line-height:1.4}
+  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:2rem}
+  .pain-grid .item{background:var(--green-50);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;gap:11px;align-items:flex-start;font-size:.97rem;color:var(--body)}
+  .pain-grid .item svg{flex:none;color:var(--green-600);width:20px;height:20px;margin-top:3px}
+  @media(max-width:680px){.pain-grid{grid-template-columns:1fr}}
+
+  .ba{display:grid;gap:12px;margin-top:2.4rem}
+  .ba-row{display:grid;grid-template-columns:1fr 48px 1fr;align-items:stretch}
+  .ba-cell{padding:16px 20px;font-size:1rem;display:flex;align-items:center}
+  .ba-before{background:#f3f1ec;border:1px solid #e6e1d6;border-radius:12px 0 0 12px;color:#6f6a5f}
+  .ba-arrow{display:grid;place-items:center}
+  .ba-arrow svg{width:24px;height:24px;color:var(--green-500)}
+  .ba-after{background:var(--green-50);border:1px solid var(--green-200);border-radius:0 12px 12px 0;color:var(--green-800);font-weight:500}
+  @media(max-width:680px){.ba-row{grid-template-columns:1fr}.ba-before{border-radius:12px 12px 0 0}.ba-after{border-radius:0 0 12px 12px}.ba-arrow{transform:rotate(90deg);padding:6px 0}}
+
+  .auth-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:46px;align-items:start}
+  .portrait{background:linear-gradient(160deg,var(--green-700),var(--green-900));border-radius:var(--radius);padding:38px 28px;color:#fff;position:sticky;top:90px}
+  .portrait .av{width:104px;height:104px;border-radius:50%;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.3);display:grid;place-items:center;font-family:'Lora',serif;font-size:2.3rem;font-weight:700;margin-bottom:18px;overflow:hidden}
+  .portrait b{font-family:'Lora',serif;font-size:1.28rem;display:block;margin-bottom:4px}
+  .portrait p{font-size:.94rem;color:var(--green-100);margin:0}
+  .portrait .badges{margin-top:20px;display:grid;gap:9px}
+  .portrait .badges div{font-size:.86rem;display:flex;gap:9px;align-items:flex-start;color:#eafaf3}
+  .portrait .badges svg{flex:none;width:17px;height:17px;margin-top:2px;color:var(--green-200)}
+  ul.facts{list-style:none;margin:1.4rem 0 0;display:grid;gap:13px}
+  ul.facts li{display:flex;gap:12px;align-items:flex-start;font-size:1rem}
+  ul.facts li svg{flex:none;width:21px;height:21px;color:var(--green-600);margin-top:3px}
+  @media(max-width:900px){.auth-grid{grid-template-columns:1fr;gap:26px}.portrait{position:static}}
+
+  .audience{background:#fff}
+  .aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:2.2rem}
+  .aud-col{border-radius:var(--radius);padding:26px;border:1px solid var(--line)}
+  .aud-col.yes{background:var(--green-50);border-color:var(--green-200)}
+  .aud-col.no{background:#fbf7f3;border-color:#eadfce}
+  .aud-col h3{margin-bottom:14px;display:flex;align-items:center;gap:9px}
+  .aud-col ul{list-style:none;display:grid;gap:13px}
+  .aud-col li{display:flex;gap:11px;align-items:flex-start;font-size:.97rem}
+  .aud-col li svg{flex:none;width:20px;height:20px;margin-top:3px}
+  .aud-col.yes li svg{color:var(--green-600)}
+  .aud-col.no li svg{color:#b07a12}
+  @media(max-width:760px){.aud-grid{grid-template-columns:1fr}}
+
+  .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:2.4rem}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .step .n{width:42px;height:42px;border-radius:12px;background:var(--green-600);color:#fff;font-family:'Lora',serif;font-weight:700;font-size:1.25rem;display:grid;place-items:center;margin-bottom:14px}
+  .step h3{margin-bottom:7px}
+  .step p{font-size:.96rem;margin:0;color:var(--body)}
+  .step .deliv{margin-top:12px;font-size:.85rem;color:var(--green-700);background:var(--green-50);border-radius:8px;padding:8px 12px;display:inline-block}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+  .evaluator{background:var(--green-50);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .eval-points{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:2.2rem}
+  .eval-points .ep{background:#fff;border:1px solid var(--green-200);border-radius:14px;padding:20px 22px;display:flex;gap:13px;align-items:flex-start}
+  .eval-points .ep svg{flex:none;width:22px;height:22px;color:var(--green-600);margin-top:2px}
+  .eval-points .ep b{font-family:'Lora',serif;color:var(--ink);font-weight:600}
+  .eval-close{font-family:'Lora',serif;font-size:1.2rem;color:var(--green-800);text-align:center;margin-top:1.8rem;font-style:italic}
+  @media(max-width:680px){.eval-points{grid-template-columns:1fr}}
+
+  .offer{background:#fff}
+  .stack-card{background:var(--green-50);border:1px solid var(--green-200);border-radius:20px;padding:clamp(1.8rem,4vw,2.6rem);margin-top:2rem}
+  .stack-card ul{list-style:none;display:grid;gap:16px}
+  .stack-card li{display:flex;gap:13px;align-items:flex-start;font-size:1.03rem;color:var(--ink)}
+  .stack-card li svg{flex:none;width:24px;height:24px;color:var(--green-600);margin-top:3px}
+  .stack-card li.fix{padding-top:16px;border-top:1px dashed var(--green-200);color:var(--green-800)}
+  .parts{display:flex;flex-wrap:wrap;gap:10px;margin:1.4rem 0 0}
+  .parts span{background:var(--green-50);border:1px solid var(--green-200);color:var(--green-800);font-size:.92rem;font-weight:500;padding:8px 14px;border-radius:999px}
+
+  .proof{background:var(--green-900);color:#fff}
+  .proof .eyebrow{background:rgba(255,255,255,.12);color:var(--green-100)}
+  .proof h2{color:#fff}
+  .proof .sub{color:var(--green-100);font-size:1.1rem;max-width:780px}
+  .proof p.body{color:#d6ece3;max-width:840px}
+  .cases{display:grid;gap:12px;margin-top:2rem}
+  .case{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start}
+  .case svg{flex:none;width:22px;height:22px;color:var(--green-200);margin-top:2px}
+  .case span{color:#dcf0e8;font-size:.97rem}
+  .case .tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--green-900);background:var(--green-200);padding:3px 8px;border-radius:6px;margin-right:8px;vertical-align:middle}
+
+  .faq-list{margin-top:1.8rem;display:grid;gap:12px}
+  details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 22px;box-shadow:var(--shadow)}
+  summary{cursor:pointer;list-style:none;font-family:'Lora',serif;font-weight:600;color:var(--ink);font-size:1.05rem;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary .ic{flex:none;width:24px;height:24px;border-radius:50%;background:var(--green-50);color:var(--green-700);display:grid;place-items:center;transition:.2s;font-size:1.2rem;line-height:1}
+  details[open] summary .ic{transform:rotate(45deg)}
+  details p{padding:0 0 20px;margin:0;color:var(--body);font-size:1rem}
+
+  .urgency{background:var(--amber-50);border-top:1px solid var(--amber-100);border-bottom:1px solid var(--amber-100)}
+  .urgency .eyebrow{background:var(--amber-100);color:var(--amber-700)}
+  .urgency h2{color:#5a3f08}
+  .urgency .alert{display:flex;gap:14px;align-items:flex-start;margin-top:1.4rem}
+  .urgency .alert svg{flex:none;width:26px;height:26px;color:var(--amber-700);margin-top:3px}
+  .u-bullets{list-style:none;display:grid;gap:12px;margin-top:1.6rem}
+  .u-bullets li{display:flex;gap:11px;align-items:flex-start;font-size:1rem;color:#5a4a2a}
+  .u-bullets li svg{flex:none;width:20px;height:20px;color:var(--amber-700);margin-top:3px}
+
+  .final{background:linear-gradient(180deg,var(--green-50),#fff)}
+  .final-card{background:#fff;border:1px solid var(--green-200);border-radius:22px;padding:clamp(2.2rem,5vw,3.4rem);box-shadow:0 18px 50px rgba(13,77,58,.1);text-align:center}
+  .final-card ul.checks{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;margin:1.6rem 0}
+  .final-card ul.checks li{font-size:.96rem}
+
+  footer{background:var(--ink);color:#bcccc5;font-size:.9rem;padding:42px 0 30px}
+  footer .wrap{display:grid;gap:18px}
+  footer b{color:#fff;font-family:'Lora',serif;font-size:1.05rem}
+  footer .row{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+  footer a{color:var(--green-200)}
+  footer .fine{font-size:.8rem;color:#7e918a;border-top:1px solid rgba(255,255,255,.1);padding-top:18px}
+
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:13px 20px 13px 16px;border-radius:999px;font-weight:600;font-size:.96rem;box-shadow:0 10px 30px rgba(13,148,136,.42);transition:.18s}
+  .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(13,148,136,.5)}
+  .wa-float svg{width:24px;height:24px;flex:none}
+  @media(max-width:560px){.wa-float span{display:none}.wa-float{padding:15px;right:16px;bottom:16px}}
+  .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:2rem;align-items:stretch}
+  .pcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 20px 22px;position:relative;display:flex;flex-direction:column}
+  .pcard.feat{border-color:var(--green-500);box-shadow:0 12px 30px rgba(15,110,86,.13);background:var(--green-50)}
+  .pk-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--green-600);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+  .pk-lbl{font-size:.92rem;color:var(--green-800);font-weight:600;min-height:2.6em}
+  .pk-val{font-family:'Lora',serif;font-size:1.9rem;color:var(--green-700);font-weight:700;line-height:1.1;margin:8px 0 12px}
+  .pk-val span{font-family:'Inter',sans-serif;font-size:.95rem;color:var(--muted);font-weight:500}
+  .pk-desc{font-size:.92rem;color:var(--body);margin:0}
+  .pricing-note{font-size:.93rem;color:var(--muted);margin-top:1.3rem;text-align:center}
+  .pricing-note b{color:var(--green-800);font-weight:600}
+  @media(max-width:760px){.pricing{grid-template-columns:1fr}.pk-lbl{min-height:0}}
+  .psob{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;background:var(--green-50);border:1px dashed var(--green-200);border-radius:14px;padding:14px 20px;margin-top:14px}
+  .psob b{color:var(--green-800);font-weight:600}
+  .psob span{color:var(--muted);font-size:.92rem}
+  .psob-val{font-weight:600;color:var(--green-700);font-size:.95rem}
+  .chooser-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:2rem}
+  .chooser-card{display:flex;flex-direction:column;gap:7px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;box-shadow:var(--shadow);transition:.18s}
+  .chooser-card:hover{border-color:var(--green-500);transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,110,86,.14)}
+  .cc-tag{align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--green-700);background:var(--green-100);padding:4px 10px;border-radius:999px}
+  .chooser-card b{font-family:'Lora',serif;color:var(--ink);font-size:1.1rem;margin-top:4px}
+  .cc-desc{font-size:.92rem;color:var(--muted)}
+  .cc-go{margin-top:auto;padding-top:10px;font-weight:600;color:var(--green-700);font-size:.92rem}
+  .publico{border-top:1px solid var(--line)}
+  .pub-note{font-size:.95rem;color:var(--muted);margin:1.1rem 0 1.4rem}
+  @media(max-width:760px){.chooser-grid{grid-template-columns:1fr}}
+  .skip{position:fixed;left:8px;top:-60px;z-index:100;background:var(--green-700);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;font-weight:600;transition:top .15s}
+  .skip:focus{top:8px}
+  a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--green-600);outline-offset:2px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#topo">
+      <span class="mono">MC</span>
+      <span>Mardoqueu M. da Costa<small>Mentoria de captação de fomento</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#dor">O problema</a>
+      <a href="#guia">Com quem contar</a>
+      <a href="#metodo">Método</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="btn btn-primary" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Vi%20a%20p%C3%A1gina%20da%20mentoria%20e%20quero%20agendar%20uma%20conversa%20sobre%20capta%C3%A7%C3%A3o%20de%20fomento." target="_blank" rel="noopener">Quero conversar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap">
+    <p class="preheadline" style="margin-top:clamp(2rem,4vw,3rem)">O dinheiro para o seu projeto existe. Vamos atrás dele, juntos.</p>
+  </div>
+  <div class="wrap hero-grid" style="padding-top:0">
+    <div>
+      <span class="eyebrow">Mentoria individual · FAPESP · CNPq · CAPES · PIPE</span>
+      <h1>Submeta sabendo onde o seu projeto está <span class="hl">forte e onde está frágil.</span></h1>
+      <p class="sub">A leitura crítica de quem já avaliou projetos e já foi aprovado, com tempo de corrigir antes de você enviar.</p>
+      <p class="body">O que faço é trabalhar com você em cada parte da proposta, da introdução ao orçamento, esteja você começando do zero ou com um rascunho na mão.</p>
+      <ul class="checks" style="margin-top:1.5rem">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Para quem já foi reprovado e quer entender, de verdade, o que mudar.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Para quem vai submeter pela primeira vez e quer fazer com segurança.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Um olhar dos dois lados: avaliei projetos de outros pesquisadores e participei de 18 financiamentos aprovados.</li>
+      </ul>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Vi%20a%20p%C3%A1gina%20da%20mentoria%20e%20quero%20agendar%20uma%20conversa%20sobre%20capta%C3%A7%C3%A3o%20de%20fomento." target="_blank" rel="noopener">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Quero conversar sobre o meu projeto
+        </a>
+        <p class="cta-note">Conversa diagnóstica, sem compromisso e sem custo. 🔒 O que você me contar sobre o seu projeto é tratado em sigilo.</p>
+      </div>
+    </div>
+    <aside class="cred-card">
+      <div class="ph">
+        <div class="av"><img src="/fomento/img/mardoqueu.webp" alt="Mardoqueu Martins da Costa" width="120" height="120" decoding="async" loading="lazy" onerror="this.style.display='none';this.parentNode.textContent='MC'"></div>
+        <div>
+          <b>Mardoqueu Martins da Costa</b>
+          <span>Assessor ad hoc e pesquisador · Formação pela USP</span>
+        </div>
+      </div>
+      <ul class="checks">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Graduação, mestrado, doutorado e pós-doutorado, todos pela USP</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Assessor ad hoc: já avaliou dezenas de projetos de outros pesquisadores, na universidade e em empresas</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>18 financiamentos aprovados, de 7 fontes, coordenador titular em vários</li>
+      </ul>
+      <div class="stat-row">
+        <div class="stat"><b>18</b><span>financiamentos aprovados</span></div>
+        <div class="stat"><b>7</b><span>fontes de fomento</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <span class="lbl">Já submeti, coordenei e avaliei em editais de:</span>
+    <span class="ag">FAPESP</span><span class="ag">CNPq</span><span class="ag">CAPES</span>
+    <span class="ag">FINEP</span><span class="ag">EMBRAPII</span><span class="ag">PIPE-FAPESP</span>
+  </div>
+</div>
+
+<!-- SELETOR DE PÚBLICO -->
+<section class="sec" id="caminhos" style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap narrow">
+    <span class="eyebrow">Qual é o seu caso</span>
+    <h2>Você está em qual caminho?</h2>
+    <p class="lead muted" style="margin-top:.6rem">Cada situação tem uma dor e um edital diferentes. Escolha o seu e vá direto ao ponto.</p>
+  </div>
+  <div class="wrap">
+    <div class="chooser-grid">
+      <a class="chooser-card" href="#caminho-academico">
+        <span class="cc-tag">Pesquisador</span>
+        <b>Estou na universidade</b>
+        <span class="cc-desc">Primeiro projeto, ou um que voltou reprovado. FAPESP, CNPq, CAPES, bolsas.</span>
+        <span class="cc-go">Ver o meu caminho</span>
+      </a>
+      <a class="chooser-card" href="#caminho-ponte">
+        <span class="cc-tag">Da pesquisa para a empresa</span>
+        <b>Quero levar a minha pesquisa para o mercado</b>
+        <span class="cc-desc">Tirar a ideia do laboratório, sem precisar ter empresa montada. PIPE Fase 1, Centelha.</span>
+        <span class="cc-go">Ver o meu caminho</span>
+      </a>
+      <a class="chooser-card" href="#caminho-empresa">
+        <span class="cc-tag">Empresa</span>
+        <b>Tenho uma empresa de base tecnológica</b>
+        <span class="cc-desc">Financiar P&amp;D sem ceder participação. PIPE, Finep, EMBRAPII.</span>
+        <span class="cc-go">Ver o meu caminho</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CAMINHO ACADÊMICO -->
+<section class="sec publico" id="caminho-academico" style="background:#fff">
+  <div class="wrap narrow">
+    <span class="eyebrow">Pesquisador na universidade</span>
+    <h2>O seu primeiro projeto, ou o que voltou reprovado, merece uma leitura crítica antes.</h2>
+    <p style="margin-top:1rem">Escrever proposta para FAPESP, CNPq ou CAPES é solitário, e quase ninguém ensina isso na pós-graduação. Seja a sua primeira submissão ou uma que voltou com um parecer curto, eu trabalho com você cada parte, da introdução ao orçamento, até você submeter sabendo onde o projeto está forte e onde precisa de reforço.</p>
+    <div class="parts">
+      <span>FAPESP Auxílio Regular</span><span>CNPq Universal</span><span>CAPES</span><span>Bolsas</span>
+    </div>
+    <p class="pub-note">Comece pela conversa gratuita. A partir dela definimos se uma hora avulsa resolve ou se vale o acompanhamento completo até a submissão. Preço fixo, combinado antes, sem percentual sobre o recurso.</p>
+    <a class="btn btn-primary" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Sou%20pesquisador%20e%20quero%20conversar%20sobre%20o%20meu%20projeto%20(FAPESP%2C%20CNPq%20ou%20CAPES)." target="_blank" rel="noopener">Quero conversar sobre o meu projeto</a>
+  </div>
+</section>
+
+<!-- CAMINHO PONTE -->
+<section class="sec publico" id="caminho-ponte" style="background:var(--bg)">
+  <div class="wrap narrow">
+    <span class="eyebrow">Da pesquisa para a empresa</span>
+    <h2>Você tem a tecnologia. Falta transformá-la numa proposta que a banca de inovação aprova.</h2>
+    <p style="margin-top:1rem">PIPE-FAPESP Fase 1 e Centelha financiam você a tirar a pesquisa do laboratório, e não exigem que você já tenha uma empresa montada. O desafio é escrever pensando em inovação, mercado e viabilidade, não só em mérito acadêmico. É aqui que estar dos dois lados ajuda: conheço a linguagem da academia e a leitura de quem avalia projetos de inovação.</p>
+    <div class="parts">
+      <span>PIPE-FAPESP Fase 1 · até R$ 300 mil</span><span>Programa Centelha · até R$ 128 mil</span>
+    </div>
+    <p class="pub-note">Comece pela conversa gratuita; a partir dela definimos o acompanhamento que faz sentido para a sua submissão.</p>
+    <a class="btn btn-primary" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20conversar%20sobre%20uma%20submiss%C3%A3o%20de%20PIPE%20Fase%201%20ou%20Centelha." target="_blank" rel="noopener">Quero conversar sobre o meu PIPE ou Centelha</a>
+  </div>
+</section>
+
+<!-- CAMINHO EMPRESA -->
+<section class="sec publico" id="caminho-empresa" style="background:#fff">
+  <div class="wrap narrow">
+    <span class="eyebrow">Empresa de base tecnológica</span>
+    <h2>Capital para financiar o seu P&amp;D, sem ceder participação na empresa.</h2>
+    <p style="margin-top:1rem">PIPE-FAPESP, Finep e EMBRAPII apoiam a pesquisa dentro da empresa: dá para contratar a equipe técnica, comprar equipamento e avançar o desenvolvimento com recurso não diluitivo. Cada submissão consome tempo do seu time e parte de um capital escasso, então chegar com a proposta já lida por quem avalia projetos de inovação reduz o risco de queimar uma janela de edital.</p>
+    <div class="parts">
+      <span>PIPE-FAPESP Fase 2 · até R$ 1,5 milhão</span><span>Finep</span><span>EMBRAPII</span>
+    </div>
+    <p class="pub-note">Acompanhamento da proposta com preço fixo, combinado antes. Para projetos maiores e portfólios de editais, orçamento sob medida. Nunca cobro percentual sobre o recurso captado.</p>
+    <a class="btn btn-primary" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Tenho%20uma%20empresa%20e%20quero%20conversar%20sobre%20PIPE%2C%20Finep%20ou%20EMBRAPII." target="_blank" rel="noopener">Quero conversar sobre o edital da minha empresa</a>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="sec values">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow">Quanto está em jogo</span>
+      <h2>Veja quanto cada edital pode financiar.</h2>
+      <p class="lead muted" style="margin-top:1rem">Estes são os tetos por projeto nos principais editais. Mais do que números, é o que o recurso põe em movimento: meses dedicados à sua pergunta de pesquisa, bolsas para a equipe, o equipamento que faltava e o experimento que você adia há tempos finalmente rodando. O valor exato varia por chamada, a aprovação depende sempre da avaliação, e a oportunidade é real.</p>
+    </div>
+    <div class="vgrid">
+      <div class="vcard"><div class="lbl">Programa Centelha · subvenção</div><div class="val">até R$ 128 mil</div><div class="dur">varia por estado (valor de SP)</div></div>
+      <div class="vcard"><div class="lbl">PIPE-FAPESP · Fase 1</div><div class="val">até R$ 300 mil</div><div class="dur">por até 9 meses</div></div>
+      <div class="vcard"><div class="lbl">PIPE-FAPESP · Fase 2</div><div class="val">até R$ 1,5 milhão</div><div class="dur">por até 24 meses</div></div>
+      <div class="vcard"><div class="lbl">Auxílio à Pesquisa Regular · FAPESP</div><div class="val">até R$ 600 mil</div><div class="dur">por até 36 meses</div></div>
+      <div class="vcard"><div class="lbl">Chamada Universal · CNPq</div><div class="val">até R$ 250 mil</div><div class="dur">por faixa (A, B ou C)</div></div>
+      <div class="vcard"><div class="lbl">Finep Mais Inovação · subvenção</div><div class="val">até R$ 5 milhões</div><div class="dur">por projeto (Subvenção Econômica Regional)</div></div>
+    </div>
+    <p class="lead muted" style="margin-top:1.6rem;text-align:center;max-width:780px;margin-left:auto;margin-right:auto">Repare na proporção: um acompanhamento completo custa R$ 2.500, cerca de 1% de uma Chamada Universal de R$ 250 mil e menos de 0,5% de um Auxílio à Pesquisa Regular de R$ 600 mil. O preço é fixo e combinado antes de começar, então você sabe quanto investe para preparar um pedido que pode financiar meses de pesquisa, equipe e equipamento. A aprovação depende sempre da avaliação, e é por isso que vale chegar com a proposta na melhor versão possível.</p>
+    <p class="muted" style="font-size:.86rem;margin-top:1.4rem;text-align:center">Tetos por projeto conforme as normas vigentes de cada edital (2026). Os valores variam por chamada e edição, e a aprovação depende sempre da avaliação dos pareceristas.</p>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="sec pain" id="dor">
+  <div class="wrap narrow">
+    <span class="eyebrow">O problema real</span>
+    <h2>O recurso existe. O que trava é submeter sem saber se está bom.</h2>
+    <p class="lead muted" style="margin-top:1rem">Escrever proposta é solitário. Quase ninguém ensina isso na pós-graduação, e mesmo os bons projetos chegam à agência cheios de dúvida.</p>
+    <p style="margin-top:1.4rem">Há fomento abundante no Brasil, como FAPESP, CNPq, CAPES, as FAPs estaduais, Finep e EMBRAPII. O dinheiro está lá. O problema raramente é a sua ciência: é a forma de pedir, e a falta de alguém que leia antes e te diga a verdade.</p>
+    <div class="quote">Na chamada Universal do CNPq de 2024, cerca de 24% foram aprovados, ou seja, cerca de 1 em cada 4. Os outros três não eram piores pesquisadores. O que decide é o mérito julgado pelos pareceristas somado ao ranking dentro do orçamento. Em muitos casos, foram propostas boas que ninguém leu com olhar crítico antes de submeter.</div>
+    <p>E o parecer, quando volta, costuma ter poucas linhas: avaliadores experientes leem muitos projetos e, quando um não os convence logo, resumem rápido. E chega tarde demais para corrigir o que poderia ter sido ajustado semanas antes.</p>
+    <div class="pain-grid">
+      <div class="item"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h0"/></svg>Você escreve sozinho, sem ninguém qualificado para dizer se o texto está claro e se o mérito aparece.</div>
+      <div class="item"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h0"/></svg>Você relê tantas vezes que já não enxerga as próprias lacunas.</div>
+      <div class="item"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h0"/></svg>Chega a véspera do prazo e você envia sem saber se está bom.</div>
+      <div class="item"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h0"/></svg>Se já foi reprovado, o parecer veio curto e genérico, e você ficou sem saber se o projeto era fraco ou só mal apresentado.</div>
+    </div>
+    <div class="inline-cta">
+      <a class="btn btn-primary" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20uma%20conversa%20honesta%20sobre%20o%20meu%20projeto%20antes%20de%20submeter." target="_blank" rel="noopener">Quero uma conversa honesta sobre o meu projeto <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMAÇÃO -->
+<section class="sec">
+  <div class="wrap narrow">
+    <span class="eyebrow">O que muda</span>
+    <h2>De submeter torcendo para saber o que o parecerista vai ver.</h2>
+    <p class="lead muted" style="margin-top:1rem">A diferença não é escrever mais bonito, nem é sobre a sua competência. É deixar de pedir sem certeza e passar a saber, antes de o projeto chegar aos pareceristas, onde ele está de pé e onde precisa de reforço.</p>
+  </div>
+  <div class="wrap">
+    <div class="ba">
+      <div class="ba-row">
+        <div class="ba-cell ba-before">"Submeti torcendo, sem saber se estava bom."</div>
+        <div class="ba-cell ba-arrow"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="ba-cell ba-after">"Submeti com segurança, depois de um olhar crítico e honesto."</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-before">"Escrevi sozinho e reli até não enxergar mais."</div>
+        <div class="ba-cell ba-arrow"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="ba-cell ba-after">"Tive alguém que leu como parecerista e me apontou o que eu não via."</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-before">"Recebi um parecer de poucas linhas que não explicou nada."</div>
+        <div class="ba-cell ba-arrow"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="ba-cell ba-after">"Eu já sabia onde estava o ponto frágil, porque alguém me disse antes, com tempo de corrigir."</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-before">"Mandei o projeto sem ver se ele atendia às exigências do edital."</div>
+        <div class="ba-cell ba-arrow"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="ba-cell ba-after">"Adequei o projeto às exigências do edital, ponto a ponto."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTORIDADE -->
+<section class="sec" id="guia" style="background:#fff">
+  <div class="wrap">
+    <div class="auth-grid">
+      <div class="portrait">
+        <div class="av"><img src="/fomento/img/mardoqueu.webp" alt="Mardoqueu Martins da Costa" width="120" height="120" decoding="async" loading="lazy" onerror="this.style.display='none';this.parentNode.textContent='MC'"></div>
+        <b>Mardoqueu Martins da Costa</b>
+        <p>Pesquisador que escreve propostas, capta recursos e também avalia projetos como assessor ad hoc, em universidades e empresas.</p>
+        <div class="badges">
+          <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Assessor ad hoc: já avaliou dezenas de projetos</div>
+          <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Pós-doutor em Eng. de Biossistemas, ESALQ/USP</div>
+          <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Coordenador titular de projetos PIPE-FAPESP</div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Com quem você vai contar</span>
+        <h2>Quem irá te guiar nessa jornada?</h2>
+        <p style="margin-top:1.1rem;color:var(--muted)">Sou pesquisador que escreve propostas e capta recursos, e também assessor ad hoc: já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas, entre teses, dissertações, monografias, projetos de bolsa, de pesquisa e de fomento.</p>
+        <p style="margin-top:1rem">Sou pós-doutor em Engenharia de Biossistemas pela ESALQ/USP, doutor e mestre em Engenharia Elétrica pela EESC/USP e graduado em Física pelo IFSC/USP. Fui professor na Universidade Brasil de 2017 a 2025 e sou pesquisador no BIOPDI desde 2011.</p>
+        <p>Já participei de 18 financiamentos aprovados de 7 fontes, entre coordenação e participação. Coordenei como titular diversos projetos em PIPE-FAPESP, CNPq e CAPES.</p>
+        <p>E conheço por dentro como as agências de fomento avaliam, não como parecerista delas, mas porque já passei dezenas de vezes por esse processo, com projetos aprovados como pesquisador responsável, em equipes e como consultor. <strong style="color:var(--green-800);font-weight:600">Junte os dois lados</strong> e você tem o que eu te entrego: a leitura crítica de quem já avaliou muito projeto e sabe como a agência avalia, com tempo de corrigir antes de você submeter.</p>
+        <ul class="facts">
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Sei traduzir mérito em texto que o parecerista entende rápido, com o tempo escasso que ele tem.</li>
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Sei onde os bons projetos tropeçam, porque já julguei dezenas deles.</li>
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>22 artigos, 3 capítulos, 3 patentes, 26+ produtos, 9 softwares, Prêmio Santander de Empreendedorismo e II Prêmio Ibero-Americano de Inovação.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICO -->
+<section class="sec audience">
+  <div class="wrap narrow">
+    <span class="eyebrow">Para quem é</span>
+    <h2>Para quem vai submeter inseguro, tendo já sido reprovado ou não.</h2>
+    <p class="lead muted" style="margin-top:1rem">A insegurança de não saber se o projeto está bom é universal e normal. Não diz nada sobre a sua competência.</p>
+  </div>
+  <div class="wrap">
+    <div class="aud-grid">
+      <div class="aud-col yes">
+        <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:22px;height:22px;color:var(--green-600)"><path d="M20 6 9 17l-5-5"/></svg> É para você se…</h3>
+        <ul>
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Tem um projeto que pode estar ótimo ou precisar de ajustes, e quer descobrir antes de chegar aos pareceristas.</li>
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Já foi reprovado e quer entender o que faltou, sem achismo.</li>
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Vai submeter pela primeira vez e não tem com quem dividir as dúvidas.</li>
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Lidera uma pequena empresa deep-tech mirando editais de inovação (PIPE, Finep, EMBRAPII).</li>
+        </ul>
+      </div>
+      <div class="aud-col no">
+        <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:22px;height:22px;color:#b07a12"><path d="M18 6 6 18M6 6l12 12"/></svg> Não é para você se…</h3>
+        <ul>
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>Quer alguém que escreva a proposta no seu lugar. Eu trabalho ao seu lado, o projeto continua sendo seu.</li>
+          <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>Busca atalho ou garantia de aprovação. Aqui não existe isso: o que ofereço é você chegar sabendo o que está pronto e o que precisa melhorar.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METODO -->
+<section class="sec" id="metodo">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Quatro passos, do diagnóstico honesto até a submissão com segurança.</h2>
+      <p class="lead muted" style="margin-top:1rem">Trabalho individual, no ritmo do seu edital. Cada passo entrega algo concreto na sua mão.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Diagnóstico</h3><p>Olho o que você já tem, mesmo que ainda esteja rascunhado ou pouco delineado, com o olhar de quem julga: onde está forte, onde está frágil e o que ainda falta estruturar.</p><span class="deliv">Entregável: um retrato do que está pronto, do que falta e do que precisa ser delineado</span></div>
+      <div class="step"><div class="n">2</div><h3>Adequação ao edital</h3><p>Ajustamos o projeto às exigências da chamada que você vai submeter: escopo, modalidade, formato, prazos, documentação e critérios de avaliação.</p><span class="deliv">Entregável: projeto enquadrado nas regras do edital</span></div>
+      <div class="step"><div class="n">3</div><h3>Construção da proposta</h3><p>Trabalhamos juntos cada parte, da introdução e da metodologia ao orçamento, à documentação e ao escopo, com foco no que o avaliador lê primeiro.</p><span class="deliv">Entregável: proposta que se lê do ponto de vista de quem vai julgá-la</span></div>
+      <div class="step"><div class="n">4</div><h3>Submissão e defesa</h3><p>Revisar a versão final, conferir os critérios e te preparar para eventual arguição.</p><span class="deliv">Entregável: submissão com confiança no que você entrega</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PERSPECTIVA -->
+<section class="sec evaluator">
+  <div class="wrap narrow">
+    <span class="eyebrow">A perspectiva de quem julga</span>
+    <h2>O que o parecerista vê, e por que te dá segurança saber disso antes.</h2>
+    <p class="lead muted" style="margin-top:1rem">Boa parte das reprovações fala mais de como o projeto foi lido do que do mérito em si.</p>
+    <p style="margin-top:1.3rem">Quem julga o mérito do seu projeto são assessores ad hoc, em geral dois pesquisadores experientes da mesma área, que a agência aciona conforme o campo de conhecimento. Eles já leram muitos projetos, e é essa experiência que pesa: logo nos primeiros parágrafos, percebem se a proposta está bem escrita, clara e relevante o bastante para merecer uma leitura minuciosa. Um projeto que prende a atenção conquista esse mergulho. Um texto confuso, ou que não destaca o que importa, sinaliza a um olho treinado que provavelmente não está entre os mais fortes. Depois, a agência e o comitê de área consolidam os pareceres e ordenam as propostas dentro do orçamento.</p>
+    <p>Esse olhar eu conheço por dentro, por dois caminhos: já avaliei muitos projetos de outros pesquisadores e já passei dezenas de vezes por essa avaliação, com projetos aprovados nas agências. Quando você entende como essa leitura acontece, deixa de escrever para si mesmo e passa a escrever para conquistar, logo nas primeiras linhas, a leitura atenta que o seu projeto merece.</p>
+  </div>
+  <div class="wrap narrow">
+    <div class="eval-points">
+      <div class="ep"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><span><b>Os primeiros parágrafos decidem.</b> Um começo claro e bem escrito conquista a leitura atenta que o resto do projeto merece.</span></div>
+      <div class="ep"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16v4H4zM4 12h10v8H4zM18 12h2v8h-2z"/></svg><span><b>Escopo certo importa.</b> Uma proposta excelente na chamada errada vira um "fora do escopo".</span></div>
+      <div class="ep"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v18M5 10l7-7 7 7"/></svg><span><b>Clareza vence ambição vaga.</b> Um problema bem delimitado convence mais do que uma promessa enorme.</span></div>
+      <div class="ep"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Viabilidade vence ambição.</b> O parecerista precisa acreditar que você entrega o que propõe.</span></div>
+      <div class="ep" style="grid-column:1/-1"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M3 12h18M3 18h12"/></svg><span><b>Mérito é dos pareceristas, e o lugar no ranking depende do orçamento.</b> Você controla o que entrega, não a fila.</span></div>
+    </div>
+    <p class="eval-close">Quase nada disso é sobre talento. É sobre forma, e sobre entregar a leitura certa a quem julga.</p>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="sec offer">
+  <div class="wrap narrow">
+    <span class="eyebrow">O que você recebe</span>
+    <h2>Não é só uma leitura. É acompanhamento em cada parte do projeto.</h2>
+    <p class="lead muted" style="margin-top:1rem">Começamos de onde você está: pode ser um projeto já escrito, que ganha uma leitura crítica, ou só uma ideia no começo, que precisa de ajuda para virar proposta. Nos dois casos, construímos e fortalecemos, juntos, cada parte:</p>
+    <div class="parts">
+      <span>Introdução</span><span>Objetivos</span><span>Metodologia</span><span>Resultados esperados</span><span>Orçamento</span><span>Documentação</span><span>Equipe</span><span>Escopo</span>
+    </div>
+    <div class="stack-card">
+      <ul>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>A leitura crítica do que você já tem, ou, se ainda é só uma ideia, a ajuda para colocá-la no papel com critério de avaliador.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Diagnóstico claro do que já convence e do que ainda precisa de reforço.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>A adequação do projeto às exigências da chamada que você vai submeter: escopo, formato, prazos e documentação.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Escrita e fortalecimento de cada parte da proposta, da introdução ao orçamento e à documentação, feitos ao seu lado.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Revisão final, conferência de critérios e preparo para a submissão e a defesa.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Conheço a leitura de quem julga e te ensino a entregá-la. Jamais interfiro em qualquer avaliação do seu projeto.</li>
+        <li class="fix"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 1v22M5 8h9a3 3 0 0 1 0 6H7"/></svg>Atenção 1:1 do início ao fim. Preço fixo, combinado antes de começar. Nunca cobro percentual sobre bolsa ou auxílio público, e nunca prometo aprovação garantida.</li>
+      </ul>
+    </div>
+
+    <h3 style="font-family:'Lora',serif;font-size:1.3rem;color:var(--ink);text-align:center;margin-top:2.8rem">Quanto custa</h3>
+    <p class="lead muted" style="margin-top:.6rem;text-align:center;font-size:1.02rem">Preço fixo, combinado antes de começar. Nunca cobro percentual sobre bolsa ou auxílio público.</p>
+    <div class="pricing">
+      <div class="pcard">
+        <div class="pk-lbl">Consultoria avulsa</div>
+        <div class="pk-val">R$ 250<span> / hora</span></div>
+        <p class="pk-desc">Para tirar dúvidas, entender o edital ou uma leitura pontual. Você paga só pelo tempo que usar.</p>
+      </div>
+      <div class="pcard feat">
+        <div class="pk-tag">Mais escolhido</div>
+        <div class="pk-lbl">Acompanhamento completo</div>
+        <div class="pk-val">R$ 2.500</div>
+        <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 quando necessários e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas e auxílios (CNPq, FAPESP, CAPES).</p>
+      </div>
+      <div class="pcard">
+        <div class="pk-lbl">Projetos maiores</div>
+        <div class="pk-val">R$ 4.900</div>
+        <p class="pk-desc">Maior envolvimento: construção mais robusta, orçamento e plano de trabalho extensos e preparo de defesa. Indicado para editais de inovação (PIPE, Finep, EMBRAPII).</p>
+      </div>
+    </div>
+    <div class="psob">
+      <div><b>Projetos sob medida.</b> <span>Empresas com vários editais, PIPE Fase 2 ou escopos fora do comum.</span></div>
+      <div class="psob-val">Orçamento sob medida, combinado na conversa</div>
+    </div>
+    <p class="pricing-note"><b>Começamos sempre por uma conversa diagnóstica gratuita</b>, cerca de 20 a 30 minutos pelo WhatsApp. Você conta em que ponto está o projeto e qual edital mira, e eu digo com franqueza se a hora avulsa já resolve, qual acompanhamento faz sentido, ou se ainda não é a hora. Você sai com clareza do próximo passo. A conversa é uma orientação inicial; a leitura detalhada do seu projeto, com os pontos a corrigir, faz parte da consultoria.</p>
+    <div class="guarantee" style="display:flex;gap:13px;align-items:flex-start;background:var(--green-50);border:1px solid var(--green-200);border-radius:14px;padding:16px 20px;margin-top:1.3rem;max-width:680px;margin-left:auto;margin-right:auto">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex:none;width:24px;height:24px;color:var(--green-600);margin-top:2px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <p style="margin:0;font-size:.97rem;color:var(--body)"><b style="color:var(--green-800)">Garantia sobre o meu trabalho</b>, nunca sobre a decisão da agência: se na primeira hora de consultoria você sair sem um diagnóstico claro do seu projeto, essa hora fica por minha conta.</p>
+    </div>
+
+    <div class="inline-cta">
+      <a class="btn btn-primary" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Vi%20a%20p%C3%A1gina%20da%20mentoria%20e%20quero%20agendar%20uma%20conversa%20sobre%20capta%C3%A7%C3%A3o%20de%20fomento." target="_blank" rel="noopener">Quero conversar e ver qual caminho serve <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="cta-note">Gratuito, sem compromisso. Resposta pelo WhatsApp, em sigilo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA -->
+<section class="sec proof">
+  <div class="wrap">
+    <span class="eyebrow">Por que confiar</span>
+    <h2>Minha trajetória nas agências de fomento.</h2>
+    <p class="sub" style="margin-top:1rem">O melhor sinal de que conheço esse caminho é tê-lo percorrido dos dois lados: como autor de propostas aprovadas e como avaliador que já analisou os projetos de muitos outros. Aqui estão, em diferentes papéis e sempre ditos com precisão:</p>
+    <div class="cases">
+      <div class="case"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span><span class="tag">Avaliei</span>Como assessor ad hoc, já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas: teses, dissertações, monografias, projetos de bolsa, de pesquisa e de fomento.</span></div>
+      <div class="case"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span><span class="tag">Coordenei</span>Diversos projetos como titular: PIPE-FAPESP, CNPq e CAPES.</span></div>
+      <div class="case"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span>Ao todo, 18 financiamentos aprovados de 7 fontes diferentes, entre coordenação e participação.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap narrow">
+    <span class="eyebrow">Perguntas frequentes</span>
+    <h2>As dúvidas que você provavelmente está com vontade de fazer.</h2>
+    <p class="lead muted" style="margin-top:.6rem">Respostas diretas, sem rodeio.</p>
+    <div class="faq-list">
+      <details open>
+        <summary>E se o meu projeto não estiver bom o suficiente? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Melhor descobrir comigo, com tempo de corrigir, do que pelo parecer, quando já não dá. O objetivo é fortalecer o seu projeto, não apontar defeitos. E quase todo bom projeto chega cheio de dúvida. Isso é normal.</p>
+      </details>
+      <details>
+        <summary>Você garante a aprovação? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Não. A decisão de mérito é dos pareceristas e a do ranking é da agência ou comitê de área, dentro do orçamento. O que faço é deixar a sua proposta na melhor versão possível e te fazer chegar sabendo o que já está forte e o que precisa de ajuste, com tempo de corrigir.</p>
+      </details>
+      <details>
+        <summary>Como funciona o pagamento? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 250/hora; acompanhamento completo de uma proposta até a submissão por R$ 2.500, sem contador de horas; projetos maiores e de inovação (PIPE, Finep, EMBRAPII) por R$ 4.900, ou orçamento sob medida em casos fora do comum. Nunca cobro percentual sobre o recurso que você captar, jamais success fee sobre bolsa ou auxílio público.</p>
+      </details>
+      <details>
+        <summary>Funciona para o meu edital? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>A lógica vale para FAPESP, CNPq, CAPES, FAPs e PIPE-FAPESP. Para empresas, vale para Finep e EMBRAPII. Na conversa eu te digo se faz sentido para o seu caso.</p>
+      </details>
+      <details>
+        <summary>Quanto tempo leva? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Depende do seu prazo de edital e do ponto em que o projeto está. Por ser individual, ajusto ao seu calendário, por isso o ideal é procurar com folga.</p>
+      </details>
+      <details>
+        <summary>Nunca submeti nada. Serve para mim? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Serve, e talvez seja onde mais ajuda: você começa com um leitor qualificado desde a primeira linha, em vez de aprender no erro.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- URGÊNCIA -->
+<section class="sec urgency">
+  <div class="wrap narrow">
+    <span class="eyebrow">Por que agora</span>
+    <h2>Os editais têm janela fixa. E ler com calma exige tempo.</h2>
+    <div class="alert">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <p style="margin:0;font-size:1.08rem;color:#5a4a2a">A pressa aqui é real: vem do calendário e do formato do trabalho, e começar cedo é o que devolve a segurança.</p>
+    </div>
+    <p style="margin-top:1.3rem;color:#5a4a2a">Editais abrem e fecham em datas fixas, que não dependem de nós. Quem deixa para revisar na véspera recebe o que os pareceristas vão apontar tarde demais para corrigir. Uma leitura crítica de verdade, com tempo de reescrever os pontos frágeis, não cabe na última hora.</p>
+    <p style="color:#5a4a2a">E porque a mentoria é individual, eu consigo acompanhar bem poucas propostas por vez, ainda mais dentro de uma mesma janela de edital. A escassez aqui é só o limite real de quem trabalha um a um.</p>
+    <ul class="u-bullets">
+      <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Janela de edital é fixa: perder o prazo significa esperar o próximo ciclo inteiro.</li>
+      <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Por ser 1:1, acompanho poucas propostas de cada vez.</li>
+      <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>O custo de não agir: submeter de novo sem uma leitura crítica antes.</li>
+    </ul>
+    <p style="margin-top:1.4rem;color:#5a4a2a">Começar cedo não é só sobre o calendário. É o que dá tempo de deixar a proposta do jeito que o seu trabalho merece e de chegar à submissão confiante.</p>
+    <div class="inline-cta">
+      <a class="btn btn-primary" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20garantir%20tempo%20para%20preparar%20meu%20projeto%20com%20calma." target="_blank" rel="noopener">Garantir tempo para corrigir com calma <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="sec final">
+  <div class="wrap narrow">
+    <div class="final-card">
+      <h2>Submeta sabendo o que o parecerista vai ver.</h2>
+      <p class="lead muted" style="margin-top:1rem">Comece por uma conversa diagnóstica, sem compromisso, pelo WhatsApp. Eu olho o seu caso e te digo, com honestidade, se e como posso ajudar.</p>
+      <p style="margin-top:1.2rem">Sem fórmula, sem promessa de aprovação, sem cifra escondida. Só uma conversa franca, de quem já passou muitas vezes por esse processo, sobre o seu projeto e o seu prazo.</p>
+      <p>Se fizer sentido, seguimos. Se não, eu digo. Você não perde nada: na pior hipótese, sai entendendo melhor o próprio projeto e a leitura que ele vai receber.</p>
+      <ul class="checks">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Conversa diagnóstica, sem compromisso</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Atendimento individual, do diagnóstico à submissão</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Honestidade primeiro: se não for para você, eu falo</li>
+      </ul>
+      <a class="btn btn-primary" style="font-size:1.1rem;padding:17px 32px" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Vi%20a%20p%C3%A1gina%20da%20mentoria%20e%20quero%20agendar%20uma%20conversa%20sobre%20capta%C3%A7%C3%A3o%20de%20fomento." target="_blank" rel="noopener">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Quero começar por uma conversa gratuita
+      </a>
+      <p class="cta-note" style="margin-top:.9rem">Conversa diagnóstica, gratuita e em sigilo. Sem compromisso.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Mardoqueu Martins da Costa</b>
+    <div class="row">
+      <span>Assessor ad hoc e pesquisador · Formação completa pela USP, da graduação ao pós-doutorado</span>
+      <a href="https://wa.me/5519992805563" target="_blank" rel="noopener">WhatsApp: (19) 99280-5563</a>
+    </div>
+    <p class="fine">Mentoria educacional de escrita e estratégia de submissão a editais de fomento. Não há garantia de aprovação, porque a decisão de mérito é dos pareceristas e a do ranking é da agência ou comitê de área, dentro do orçamento. O conhecimento dos critérios não implica qualquer influência sobre avaliações. Remuneração por valor fixo pelo serviço de mentoria, nunca percentual sobre recursos públicos aprovados.<br><strong>Privacidade (LGPD):</strong> os dados que você compartilhar (nome, contato e informações do projeto) são usados exclusivamente para responder ao seu contato e conduzir a mentoria, tratados com sigilo e não compartilhados com terceiros. Para acessar ou excluir seus dados, fale pelo WhatsApp indicado acima. Responsável pelo tratamento: Mardoqueu Martins da Costa. © 2026 Mardoqueu Martins da Costa.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5519992805563?text=Ol%C3%A1%2C%20Mardoqueu!%20Vi%20a%20p%C3%A1gina%20da%20mentoria%20e%20quero%20agendar%20uma%20conversa%20sobre%20capta%C3%A7%C3%A3o%20de%20fomento." target="_blank" rel="noopener" aria-label="Agendar conversa pelo WhatsApp">
+  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  <span>Quero conversar</span>
+</a>
+
+<script>
+(function(){
+  function locOf(a){
+    if(a.classList.contains('wa-float')) return 'flutuante';
+    if(a.closest('header')) return 'header';
+    if(a.closest('footer')) return 'footer';
+    var s=a.closest('section');
+    if(s){ if(s.id) return s.id; var c=(s.className||'').split(' ').filter(function(x){return x&&x!=='sec';}); return c[0]||'secao'; }
+    return 'outro';
+  }
+  function track(loc){
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'click_whatsapp',cta_location:loc});
+    if(typeof window.gtag==='function') window.gtag('event','click_whatsapp',{cta_location:loc});
+    if(typeof window.plausible==='function') window.plausible('WhatsApp',{props:{local:loc}});
+    if(window.umami&&typeof window.umami.track==='function') window.umami.track('whatsapp',{local:loc});
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');
+    if(!a) return;
+    track(locOf(a));
+  },{passive:true});
+})();
+</script>
+
+</body>
+</html>
