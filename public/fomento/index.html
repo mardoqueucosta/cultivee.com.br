@@ -32,6 +32,18 @@
 <meta name="theme-color" content="#0f6e56">
 <!-- TODO ao publicar: trocar og:image por arte 1200x630 (foto + nome + headline) com URL ABSOLUTA; adicionar <meta property="og:url"> e <link rel="canonical"> com a URL final. -->
 <!-- ANALYTICS: cole aqui o snippet do GA4 (gtag.js) OU Plausible/Umami. O rastreamento de cliques no WhatsApp por seção já está pronto no fim do <body> e dispara sozinho quando um destes provedores estiver presente. -->
+<!-- Meta Pixel (id 983656691147336). PageView aqui; o evento Lead dispara no clique de WhatsApp, no rastreamento do fim do <body>. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','983656691147336');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
@@ -764,6 +776,7 @@
     window.dataLayer=window.dataLayer||[];
     window.dataLayer.push({event:'click_whatsapp',cta_location:loc});
     if(typeof window.gtag==='function') window.gtag('event','click_whatsapp',{cta_location:loc});
+    if(typeof window.fbq==='function') window.fbq('track','Lead',{content_name:loc});
     if(typeof window.plausible==='function') window.plausible('WhatsApp',{props:{local:loc}});
     if(window.umami&&typeof window.umami.track==='function') window.umami.track('whatsapp',{local:loc});
   }
