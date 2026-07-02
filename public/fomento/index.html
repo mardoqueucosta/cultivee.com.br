@@ -40,7 +40,8 @@ n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','983656691147336');
-fbq('track','PageView');
+window.cvCapi=function(name,extra){try{var id=(self.crypto&&crypto.randomUUID)?crypto.randomUUID():(Date.now()+'-'+Math.random().toString(16).slice(2));if(typeof window.fbq==='function')window.fbq('track',name,extra||{},{eventID:id});var fbp=(document.cookie.match(/(?:^|; )_fbp=([^;]+)/)||[])[1];var fbc=(document.cookie.match(/(?:^|; )_fbc=([^;]+)/)||[])[1];fetch('https://cultivee.com.br/capi',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({event_name:name,event_id:id,event_source_url:location.href,content_name:extra&&extra.content_name,fbp:fbp,fbc:fbc})}).catch(function(){});}catch(e){}};
+cvCapi('PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" alt=""
 src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></noscript>
@@ -776,7 +777,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
     window.dataLayer=window.dataLayer||[];
     window.dataLayer.push({event:'click_whatsapp',cta_location:loc});
     if(typeof window.gtag==='function') window.gtag('event','click_whatsapp',{cta_location:loc});
-    if(typeof window.fbq==='function') window.fbq('track','Lead',{content_name:loc});
+    if(typeof window.cvCapi==='function') window.cvCapi('Lead',{content_name:loc});
     if(typeof window.plausible==='function') window.plausible('WhatsApp',{props:{local:loc}});
     if(window.umami&&typeof window.umami.track==='function') window.umami.track('whatsapp',{local:loc});
   }
