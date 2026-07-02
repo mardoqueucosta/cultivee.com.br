@@ -509,7 +509,7 @@ const BlogArticlePage = () => {
               className="bg-white/20 text-white border-2 border-white hover:bg-white hover:text-primary px-8"
             >
               <a
-                href="https://wa.me/5519992805563"
+                href="https://wa.me/5519991644181"
                 target="_blank"
                 rel="noopener noreferrer"
               >

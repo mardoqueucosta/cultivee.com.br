@@ -34,7 +34,7 @@ export const organizationJsonLd = {
     "@type": "ContactPoint",
     contactType: "customer support",
     email: "contato@cultivee.com.br",
-    telephone: "+55-19-99280-5563",
+    telephone: "+55-19-99164-4181",
     areaServed: "BR",
     availableLanguage: "pt-BR",
   },

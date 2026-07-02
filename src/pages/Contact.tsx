@@ -74,7 +74,7 @@ const ContactPage = () => {
           title: "Não foi possível enviar",
           description:
             data.error ||
-            "Tente novamente em alguns minutos ou fale pelo WhatsApp: (19) 99280-5563",
+            "Tente novamente em alguns minutos ou fale pelo WhatsApp: (19) 99164-4181",
           variant: "destructive",
         });
         return;
@@ -89,7 +89,7 @@ const ContactPage = () => {
       toast({
         title: "Erro de conexão",
         description:
-          "Não conseguimos enviar sua mensagem agora. Tente novamente ou fale pelo WhatsApp: (19) 99280-5563",
+          "Não conseguimos enviar sua mensagem agora. Tente novamente ou fale pelo WhatsApp: (19) 99164-4181",
         variant: "destructive",
       });
     } finally {
@@ -99,7 +99,7 @@ const ContactPage = () => {
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "contato@cultivee.com.br", href: "mailto:contato@cultivee.com.br" },
-    { icon: Phone, label: "WhatsApp", value: "+55 (19) 99280-5563", href: "https://wa.me/5519992805563" },
+    { icon: Phone, label: "WhatsApp", value: "+55 (19) 99164-4181", href: "https://wa.me/5519991644181" },
     { icon: MapPin, label: "Localização", value: "Piracicaba, SP - Brasil", href: null }
   ];
 
@@ -325,7 +325,7 @@ const ContactPage = () => {
                   className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white"
                   asChild
                 >
-                  <a href="https://wa.me/5519992805563" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5519991644181" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Iniciar conversa
                   </a>

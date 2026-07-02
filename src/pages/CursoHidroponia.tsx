@@ -389,7 +389,7 @@ const CursoHidroponiaPage = () => {
                 <span className="flex items-center gap-1.5"><Droplets className="w-4 h-4 text-agro" /> Teoria + prática</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/5519992805563?text=Olá! Tenho interesse no curso de Hidroponia." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5519991644181?text=Olá! Tenho interesse no curso de Hidroponia." target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-agro hover:bg-agro/90 w-full sm:w-auto">
                     Quero me inscrever
                   </Button>
@@ -831,7 +831,7 @@ const CursoHidroponiaPage = () => {
             Monte seu sistema NFT e colha sua primeira alface em 35 dias.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/5519992805563?text=Olá! Tenho interesse no curso de Hidroponia." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5519991644181?text=Olá! Tenho interesse no curso de Hidroponia." target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="gap-2 text-agro font-semibold w-full sm:w-auto">
                 Falar com a equipe
               </Button>

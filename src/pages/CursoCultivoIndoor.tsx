@@ -364,7 +364,7 @@ const CursoCultivoIndoorPage = () => {
                 <span className="flex items-center gap-1.5"><Cpu className="w-4 h-4 text-blue-500" /> Teoria + prática + IoT</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/5519992805563?text=Olá! Tenho interesse no curso de Cultivo Indoor e Fazendas Verticais." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5519991644181?text=Olá! Tenho interesse no curso de Cultivo Indoor e Fazendas Verticais." target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
                     Quero me inscrever
                   </Button>
@@ -882,7 +882,7 @@ const CursoCultivoIndoorPage = () => {
             LED, IoT, automação e controle climático — tudo em um curso.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/5519992805563?text=Olá! Tenho interesse no curso de Cultivo Indoor e Fazendas Verticais." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5519991644181?text=Olá! Tenho interesse no curso de Cultivo Indoor e Fazendas Verticais." target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="gap-2 text-blue-700 font-semibold w-full sm:w-auto">
                 Falar com a equipe
               </Button>

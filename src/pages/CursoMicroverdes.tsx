@@ -334,7 +334,7 @@ const CursoMicroverdesPage = () => {
                 <span className="flex items-center gap-1.5"><Sprout className="w-4 h-4 text-agro" /> Teoria + prática</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/5519992805563?text=Olá! Tenho interesse no curso de Microverdes." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5519991644181?text=Olá! Tenho interesse no curso de Microverdes." target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-agro hover:bg-agro/90 w-full sm:w-auto">
                     Quero me inscrever
                   </Button>
@@ -720,7 +720,7 @@ const CursoMicroverdesPage = () => {
             Do primeiro plantio à sua primeira venda.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/5519992805563?text=Olá! Tenho interesse no curso de Microverdes." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5519991644181?text=Olá! Tenho interesse no curso de Microverdes." target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-agro hover:bg-white/90 gap-2">
                 Quero me inscrever
               </Button>

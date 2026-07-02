@@ -112,13 +112,13 @@ const Footer = () => {
                 <span>contato@cultivee.com.br</span>
               </a>
               <a 
-                href="https://wa.me/5519992805563"
+                href="https://wa.me/5519991644181"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors duration-300"
               >
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>+55 (19) 99280-5563</span>
+                <span>+55 (19) 99164-4181</span>
               </a>
               <div className="flex items-center gap-3 text-white/70">
                 <MapPin className="w-5 h-5 flex-shrink-0" />
