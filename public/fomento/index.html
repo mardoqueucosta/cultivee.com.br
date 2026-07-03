@@ -240,10 +240,8 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(13,148,136,.5)}
   .wa-float svg{width:24px;height:24px;flex:none}
   @media(max-width:560px){.wa-float span{display:none}.wa-float{padding:15px;right:16px;bottom:16px}}
-  .pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:2rem;align-items:stretch}
-  /* 4 cards precisam de mais largura que o container: estoura ate 1280px, centrado */
-  @media(min-width:1001px){.pricing,.psob{width:min(1280px,calc(100vw - 64px));margin-left:50%;transform:translateX(-50%)}}
-  @media(max-width:1000px){.pricing{grid-template-columns:repeat(2,1fr)}}
+  /* 4 tiers em grade 2x2 dentro do container: cards largos, alinhados com a pagina */
+  .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:2rem;align-items:stretch}
   .pcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 20px 22px;position:relative;display:flex;flex-direction:column}
   .pcard.feat{border-color:var(--green-500);box-shadow:0 12px 30px rgba(15,110,86,.13);background:var(--green-50)}
   .pk-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--green-600);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
@@ -545,7 +543,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <div class="pk-tag">Mais escolhido</div>
         <div class="pk-lbl">Acompanhamento completo</div>
         <div class="pk-val">R$ 2.500</div>
-        <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 quando necessários e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas, auxílios (CNPq, FAPESP, CAPES) e Programa Centelha.</p>
+        <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas, auxílios (CNPq, FAPESP, CAPES) e Programa Centelha.</p>
         <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Cerca de 1% do teto de uma Universal (R$ 250 mil).</p>
       </div>
       <div class="pcard">
