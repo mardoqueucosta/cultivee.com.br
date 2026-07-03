@@ -6,7 +6,7 @@
 <!--
   ===== FONTE DA VERDADE (atualize aqui e replique com find-replace global) =====
   WhatsApp ... 5519991644181   (todos os links a[href*="wa.me"] + rodapé)
-  Precos ..... R$ 250/h | R$ 2.500 (acompanhamento) | R$ 4.900 (projetos maiores)
+  Precos ..... R$ 250/h | R$ 2.500 (bolsas/auxilios/Centelha) | R$ 4.900 (PIPE Fase 1) | R$ 9.800 (PIPE F2/Finep/EMBRAPII) — desde 2026-07-03
                -> bloco .pricing (linhas de ROI nos cards) e FAQ de pagamento
   Prova ...... 18 financiamentos | 7 fontes | dezenas de projetos avaliados
                -> hero (cred-card + checks) e secao de autoridade (#guia)
@@ -240,7 +240,8 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(13,148,136,.5)}
   .wa-float svg{width:24px;height:24px;flex:none}
   @media(max-width:560px){.wa-float span{display:none}.wa-float{padding:15px;right:16px;bottom:16px}}
-  .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:2rem;align-items:stretch}
+  .pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:2rem;align-items:stretch}
+  @media(max-width:1000px){.pricing{grid-template-columns:repeat(2,1fr)}}
   .pcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 20px 22px;position:relative;display:flex;flex-direction:column}
   .pcard.feat{border-color:var(--green-500);box-shadow:0 12px 30px rgba(15,110,86,.13);background:var(--green-50)}
   .pk-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--green-600);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
@@ -542,18 +543,24 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <div class="pk-tag">Mais escolhido</div>
         <div class="pk-lbl">Acompanhamento completo</div>
         <div class="pk-val">R$ 2.500</div>
-        <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 quando necessários e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas e auxílios (CNPq, FAPESP, CAPES).</p>
+        <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 quando necessários e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas, auxílios (CNPq, FAPESP, CAPES) e Programa Centelha.</p>
         <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Cerca de 1% do teto de uma Universal (R$ 250 mil).</p>
       </div>
       <div class="pcard">
-        <div class="pk-lbl">Projetos maiores</div>
+        <div class="pk-lbl">PIPE Fase 1</div>
         <div class="pk-val">R$ 4.900</div>
-        <p class="pk-desc">Maior envolvimento: construção mais robusta, orçamento e plano de trabalho extensos e preparo de defesa. Indicado para editais de inovação (PIPE, Finep, EMBRAPII).</p>
-        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Menos de 2% do teto de um PIPE Fase 1 (R$ 300 mil) e cerca de 0,3% de um Fase 2 (R$ 1,5 milhão).</p>
+        <p class="pk-desc">Maior envolvimento: construção mais robusta, orçamento e plano de trabalho extensos e preparo de defesa. Indicado para o PIPE-FAPESP Fase 1.</p>
+        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Menos de 2% do teto de um PIPE Fase 1 (R$ 300 mil).</p>
+      </div>
+      <div class="pcard">
+        <div class="pk-lbl">PIPE Fase 2, Finep e EMBRAPII</div>
+        <div class="pk-val">R$ 9.800</div>
+        <p class="pk-desc">Propostas extensas de inovação: plano de trabalho de até 24 meses, orçamento robusto, equipe e preparo de defesa.</p>
+        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Cerca de 0,65% do teto de um PIPE Fase 2 (R$ 1,5 milhão) e 0,2% da subvenção Finep (R$ 5 milhões).</p>
       </div>
     </div>
     <div class="psob">
-      <div><b>Projetos sob medida.</b> <span>Empresas com vários editais, PIPE Fase 2 ou escopos fora do comum.</span></div>
+      <div><b>Projetos sob medida.</b> <span>Empresas com vários editais ou escopos fora do comum.</span></div>
       <div class="psob-val">Orçamento sob medida, combinado na conversa</div>
     </div>
     <p class="pricing-note"><b>Começamos sempre pelo Diagnóstico de Prontidão gratuito</b>, uma conversa de 20 a 30 minutos pelo WhatsApp: você sai sabendo qual edital cabe no seu caso e qual o próximo passo. O diagnóstico é uma orientação inicial; a leitura detalhada do projeto faz parte da consultoria.</p>
@@ -586,7 +593,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       </details>
       <details>
         <summary>Como funciona o pagamento? <span class="ic" aria-hidden="true">+</span></summary>
-        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 250/hora; acompanhamento completo de uma proposta até a submissão por R$ 2.500, sem contador de horas; projetos maiores e de inovação (PIPE, Finep, EMBRAPII) por R$ 4.900, ou orçamento sob medida em casos fora do comum. Nunca cobro percentual sobre o recurso captado.</p>
+        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 250/hora; acompanhamento completo de uma proposta até a submissão por R$ 2.500, sem contador de horas (bolsas, auxílios e Centelha); PIPE Fase 1 por R$ 4.900; PIPE Fase 2, Finep e EMBRAPII por R$ 9.800; ou orçamento sob medida em casos fora do comum. Nunca cobro percentual sobre o recurso captado.</p>
       </details>
       <details>
         <summary>Funciona para o meu edital? <span class="ic" aria-hidden="true">+</span></summary>
