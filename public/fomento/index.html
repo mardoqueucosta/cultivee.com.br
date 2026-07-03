@@ -240,13 +240,15 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(13,148,136,.5)}
   .wa-float svg{width:24px;height:24px;flex:none}
   @media(max-width:560px){.wa-float span{display:none}.wa-float{padding:15px;right:16px;bottom:16px}}
-  .pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:2rem;align-items:stretch}
+  .pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:2rem;align-items:stretch}
+  /* 4 cards precisam de mais largura que o container: estoura ate 1280px, centrado */
+  @media(min-width:1001px){.pricing,.psob{width:min(1280px,calc(100vw - 64px));margin-left:50%;transform:translateX(-50%)}}
   @media(max-width:1000px){.pricing{grid-template-columns:repeat(2,1fr)}}
   .pcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 20px 22px;position:relative;display:flex;flex-direction:column}
   .pcard.feat{border-color:var(--green-500);box-shadow:0 12px 30px rgba(15,110,86,.13);background:var(--green-50)}
   .pk-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--green-600);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
   .pk-lbl{font-size:.92rem;color:var(--green-800);font-weight:600;min-height:2.6em}
-  .pk-val{font-family:'Lora',serif;font-size:1.9rem;color:var(--green-700);font-weight:700;line-height:1.1;margin:8px 0 12px}
+  .pk-val{font-family:'Lora',serif;font-size:1.9rem;color:var(--green-700);font-weight:700;line-height:1.1;margin:8px 0 12px;white-space:nowrap}
   .pk-val span{font-family:'Inter',sans-serif;font-size:.95rem;color:var(--muted);font-weight:500}
   .pk-desc{font-size:.92rem;color:var(--body);margin:0}
   .pricing-note{font-size:.93rem;color:var(--muted);margin-top:1.3rem;text-align:center}
