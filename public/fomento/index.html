@@ -245,6 +245,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
      (--maxw - padding), igual ao vgrid de valores. */
   .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:2rem;align-items:stretch}
   @media(min-width:781px){.pricing,.psob{width:min(calc(var(--maxw) - 44px),calc(100vw - 44px));margin-left:50%;transform:translateX(-50%)}}
+  @media(min-width:1001px){.pricing{grid-template-columns:repeat(4,1fr);gap:14px}.pcard{padding:22px 18px 20px}}
   .pcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 20px 22px;position:relative;display:flex;flex-direction:column}
   .pcard.feat{border-color:var(--green-500);box-shadow:0 12px 30px rgba(15,110,86,.13);background:var(--green-50)}
   .pk-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--green-600);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
