@@ -46,7 +46,7 @@ Segundo a [Embrapa Hortaliças](https://www.embrapa.br/busca-de-noticias/-/notic
 O estudo seminal de [Xiao et al. (2012)](https://doi.org/10.1021/jf300459b), publicado no Journal of Agricultural and Food Chemistry, analisou 25 variedades de microverdes comerciais e demonstrou concentrações de 4 a 40 vezes mais vitaminas A, C, E e K1 em relação às mesmas hortaliças em estágio adulto. Repolho roxo microverde, por exemplo, contém 6x mais vitamina C e 69x mais vitamina K que o repolho maduro.
 
 > "Microverdes representam alternativa inovadora, sustentável e altamente rentável para o agronegócio brasileiro."
-> — [ESALQ Jr. Consultoria (2025)](https://www.esalqjuniorconsultoria.com/microverdes-tecnologia-nutricao-agronegocio-brasileiro/)
+> Fonte: [ESALQ Jr. Consultoria (2025)](https://www.esalqjuniorconsultoria.com/microverdes-tecnologia-nutricao-agronegocio-brasileiro/)
 
 O mercado global de microverdes alcançou USD 2,79 bilhões em 2023, com projeção de USD 6,12 bilhões até 2030 (CAGR 11,9%), segundo a [Grand View Research (2024)](https://www.grandviewresearch.com/industry-analysis/microgreens-market-report). No Brasil, conforme reportagem da [Campo & Negócios com a Kaya Green](https://campoenegocios.com/o-mercado-de-microverdes-no-brasil-visao-da-kaya-green/), o setor movimenta cerca de R$ 20 milhões/ano com crescimento superior a 25%, podendo dobrar nos próximos 5 anos.
 
@@ -92,9 +92,9 @@ A escolha da espécie determina tanto a dificuldade quanto o prazo até a colhei
 
 **TOP 3 para iniciantes absolutos:**
 
-1. **Rabanete** — germinação em 2-3 dias, colheita em 7-10 dias, taxa de sucesso acima de 90%
-2. **Girassol** — sementes grandes (fáceis de manusear), sabor suave que agrada crianças
-3. **Ervilha** — alta taxa de germinação, permite segundo corte parcial
+1. **Rabanete**: germinação em 2-3 dias, colheita em 7-10 dias, taxa de sucesso acima de 90%
+2. **Girassol**: sementes grandes (fáceis de manusear), sabor suave que agrada crianças
+3. **Ervilha**: alta taxa de germinação, permite segundo corte parcial
 
 As sementes devem ser específicas para microverdes ou, no mínimo, sem tratamento químico. A ISLA Sementes (Porto Alegre-RS) oferece linha dedicada com envelopes identificados. Evite sementes de jardim tratadas com fungicidas, pois o consumo ocorre poucos dias após a germinação.
 
@@ -107,19 +107,19 @@ Este protocolo segue recomendações da [Embrapa Hortaliças](https://www.embrap
 
 ### Dia 0: preparação
 
-1. **Selecione as sementes** — para o primeiro cultivo, escolha rabanete, girassol ou mostarda
-2. **Sanitize a bandeja** — mergulhe em solução de hipoclorito 1% (1 colher de sopa de água sanitária em 1 litro de água) por 5 minutos, depois enxágue bem
-3. **Prepare o substrato** — preencha a bandeja com 2-3 cm de fibra de coco úmida (não encharcada). O substrato deve estar homogêneo e nivelado
-4. **Pré-embeba sementes grandes** — girassol e ervilha devem ficar imersas em água filtrada por 8-12 horas antes da semeadura. Sementes pequenas (rabanete, rúcula, mostarda) não precisam de pré-embebição
+1. **Selecione as sementes**: para o primeiro cultivo, escolha rabanete, girassol ou mostarda
+2. **Sanitize a bandeja**: mergulhe em solução de hipoclorito 1% (1 colher de sopa de água sanitária em 1 litro de água) por 5 minutos, depois enxágue bem
+3. **Prepare o substrato**: preencha a bandeja com 2-3 cm de fibra de coco úmida (não encharcada). O substrato deve estar homogêneo e nivelado
+4. **Pré-embeba sementes grandes**: girassol e ervilha devem ficar imersas em água filtrada por 8-12 horas antes da semeadura. Sementes pequenas (rabanete, rúcula, mostarda) não precisam de pré-embebição
 
 **Dica:** teste a umidade do substrato apertando um punhado na mão. Deve formar um bloco que se desfaz ao toque, sem escorrer água.
 
 ### Dia 1: semeadura
 
-1. **Distribua as sementes uniformemente** — para sementes pequenas, use densidade de 10-15 sementes/cm². Para girassol e ervilha, coloque lado a lado sem sobrepor
-2. **Não cubra com substrato** — microverdes germinam na superfície. Exceção: sementes grandes podem receber camada fina de 1-2 mm de vermiculita
-3. **Borrifar água** — umedeça a superfície com borrifador até visualizar gotículas nas sementes
-4. **Aplique blackout** — cubra com bandeja invertida, plástico preto ou pano escuro. A escuridão total estimula o alongamento do hipocótilo
+1. **Distribua as sementes uniformemente**: para sementes pequenas, use densidade de 10-15 sementes/cm². Para girassol e ervilha, coloque lado a lado sem sobrepor
+2. **Não cubra com substrato**: microverdes germinam na superfície. Exceção: sementes grandes podem receber camada fina de 1-2 mm de vermiculita
+3. **Borrifar água**: umedeça a superfície com borrifador até visualizar gotículas nas sementes
+4. **Aplique blackout**: cubra com bandeja invertida, plástico preto ou pano escuro. A escuridão total estimula o alongamento do hipocótilo
 
 ### Dias 2-4: germinação sob blackout
 
@@ -135,9 +135,9 @@ Nesta fase, as sementes emitem radículas (raízes iniciais) e o hipocótilo com
 
 Quando os brotos atingirem 2-3 cm de altura (geralmente dia 4-5 para rabanete, dia 5-7 para espécies mais lentas):
 
-1. **Remova a cobertura definitivamente** — os cotilédones estarão amarelados/brancos e precisam de luz para iniciar a fotossíntese
-2. **Posicione sob luz** — peitoril de janela com 4-6h de luz indireta, ou LED grow light a 15-30 cm de distância por 12-16h/dia
-3. **Ajuste a irrigação** — pode manter borrifação ou iniciar rega de fundo (colocar água em prato sob a bandeja, deixando o substrato absorver por capilaridade)
+1. **Remova a cobertura definitivamente**: os cotilédones estarão amarelados/brancos e precisam de luz para iniciar a fotossíntese
+2. **Posicione sob luz**: peitoril de janela com 4-6h de luz indireta, ou LED grow light a 15-30 cm de distância por 12-16h/dia
+3. **Ajuste a irrigação**: pode manter borrifação ou iniciar rega de fundo (colocar água em prato sob a bandeja, deixando o substrato absorver por capilaridade)
 
 Em 24-48h sob luz, os cotilédones se expandem e se tornam verdes, indicando que a fotossíntese está ativa.
 
@@ -145,10 +145,10 @@ Em 24-48h sob luz, os cotilédones se expandem e se tornam verdes, indicando que
 
 O ponto ideal de colheita varia por espécie, mas o indicador universal é: cotilédones totalmente expandidos e verdes, com 5-10 cm de altura.
 
-1. **Identifique a maturidade** — cotilédones abertos + coloração intensa (verde, roxa ou avermelhada conforme a espécie)
-2. **Corte com tesoura limpa** — rente ao substrato, em lotes ou conforme necessidade
-3. **Lave delicadamente** — mergulhe em água fria por 30 segundos e seque com papel toalha
-4. **Armazene** — recipiente fechado com papel toalha no fundo, na geladeira, por até 5-7 dias
+1. **Identifique a maturidade**: cotilédones abertos + coloração intensa (verde, roxa ou avermelhada conforme a espécie)
+2. **Corte com tesoura limpa**: rente ao substrato, em lotes ou conforme necessidade
+3. **Lave delicadamente**: mergulhe em água fria por 30 segundos e seque com papel toalha
+4. **Armazene**: recipiente fechado com papel toalha no fundo, na geladeira, por até 5-7 dias
 
 **Cronograma resumido:**
 
@@ -220,9 +220,9 @@ Mesmo com protocolo simples, problemas podem surgir nos primeiros ciclos. A tabe
 
 **Prevenção integrada (3 regras de ouro):**
 
-1. **Ventilação** — nunca feche a cobertura de blackout hermeticamente. Deixe uma fresta de 2-3 mm ou use cobertura porosa
-2. **Umidade controlada** — o substrato deve estar úmido ao toque, nunca com água empoçada. Na dúvida, é melhor borrifar menos
-3. **Higiene** — sanitize bandejas entre ciclos e nunca reutilize substrato
+1. **Ventilação**: nunca feche a cobertura de blackout hermeticamente. Deixe uma fresta de 2-3 mm ou use cobertura porosa
+2. **Umidade controlada**: o substrato deve estar úmido ao toque, nunca com água empoçada. Na dúvida, é melhor borrifar menos
+3. **Higiene**: sanitize bandejas entre ciclos e nunca reutilize substrato
 
 ## Nutrição: por que microverdes são superalimentos
 
@@ -238,7 +238,7 @@ Dados quantitativos da [Embrapa Hortaliças (2023)](https://www.embrapa.br/busca
 Segundo revisão publicada na [Molecules (Khare et al., 2023)](https://doi.org/10.3390/molecules28020867), com 158 citações, microverdes da família Brassicaceae (brócolis, repolho, mostarda, rúcula) são particularmente ricos em glucosinolatos e sulforafano, compostos com propriedades antioxidantes e anti-inflamatórias confirmadas em estudos clínicos.
 
 > "Microverdes podem conter de 4 a 40 vezes mais concentração de vitaminas C, E, K1 e carotenoides em relação às mesmas hortaliças em estágio adulto."
-> — Xiao et al. (2012), [Journal of Agricultural and Food Chemistry](https://doi.org/10.1021/jf300459b)
+> Fonte: Xiao et al. (2012), [Journal of Agricultural and Food Chemistry](https://doi.org/10.1021/jf300459b)
 
 **Destaques por espécie:**
 
@@ -251,13 +251,13 @@ A conclusão prática é que 30-50g de microverdes (o rendimento de uma bandeja 
 
 ## Próximos passos: escalando do hobby para a produção
 
-Após dominar o cultivo de uma bandeja, o caminho natural é escalar: múltiplas bandejas em rotação garantem colheita contínua, e a transição para [sistema hidropônico NFT](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos) permite produção profissional em espaços reduzidos.
+Após dominar o cultivo de uma bandeja, o caminho natural é escalar: múltiplas bandejas em rotação garantem colheita contínua, e a transição para [sistema hidropônico NFT](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen) permite produção profissional em espaços reduzidos.
 
 **Sistema de rotação semanal (3 bandejas):**
 
-1. Bandeja A — semeada no dia 1 (germinação)
-2. Bandeja B — semeada no dia 4 (fase de luz)
-3. Bandeja C — semeada no dia 8 (pronta para colheita no dia 14)
+1. Bandeja A: semeada no dia 1 (germinação)
+2. Bandeja B: semeada no dia 4 (fase de luz)
+3. Bandeja C: semeada no dia 8 (pronta para colheita no dia 14)
 
 Com esse rodízio, você colhe microverdes frescos a cada 3-4 dias, usando o mesmo espaço de 60x40 cm.
 
@@ -267,7 +267,7 @@ A Kaya Green (Jacareí-SP) iniciou produção comercial em apenas 5 m² de espa�
 
 Para quem pensa em comercialização, o investimento para produção em 10-30 m² gira em torno de R$ 2.000-8.000 (prateleiras, LED, bandejas profissionais, substrato em volume) com potencial de renda complementar de R$ 2.000-5.000/mês. Cultivo doméstico para consumo próprio não requer licença, mas a venda exige CAF (Cadastro Agropecuário Federal) e atendimento às normas sanitárias municipais (ANVISA RDC nº 216/2004).
 
-> Leia também: [Hidroponia NFT: Sistema Eficiente para Pequenos Espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [Hidroponia NFT: Sistema Eficiente para Pequenos Espaços](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen)
 
 ## Perguntas frequentes
 

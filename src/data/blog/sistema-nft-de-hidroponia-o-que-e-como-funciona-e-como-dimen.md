@@ -28,7 +28,7 @@ imagens:
     alt: 'Comparativo entre raízes hidropônicas saudáveis e raízes contaminadas por Pythium em NFT'
     caption: 'À esquerda, raiz branca saudável em NFT; à direita, raiz marrom indicando Pythium por temperatura excessiva.'
 ---
-O sistema NFT (*Nutrient Film Technique*, Técnica do Filme de Nutrientes) é a hidroponia mais difundida no Brasil. Em fazendas verticais como a [Pink Farms](https://pinkfarms.com.br) (Vila Maria, São Paulo), 750 metros quadrados de NFT empilhado em torres entregam 2,5 toneladas de folhosas por mês, com 95% menos água que o campo. Em produtores familiares de Mogi das Cruzes, Brazlândia e Caxias do Sul, bancadas NFT de 200 a 1.000 metros quadrados sustentam negócios pequenos com payback inferior a 18 meses. Em apartamentos urbanos, kits NFT de 1,5 metro entregam 14 a 20 alfaces por mês em uma varanda.
+O sistema NFT (*Nutrient Film Technique*, Técnica do Filme de Nutrientes) é a hidroponia mais difundida no Brasil. Em fazendas verticais como a [Pink Farms](https://pinkfarms.com.br) (Vila Leopoldina, São Paulo), 750 metros quadrados de NFT empilhado em torres entregam 2,5 toneladas de folhosas por mês, com 95% menos água que o campo. Em produtores familiares de Mogi das Cruzes, Brazlândia e Caxias do Sul, bancadas NFT de 200 a 1.000 metros quadrados sustentam negócios pequenos com payback inferior a 18 meses. Em apartamentos urbanos, kits NFT de 1,5 metro entregam 14 a 20 alfaces por mês em uma varanda.
 
 O fato curioso é que **o método tem origem britânica e meio século de história**. Allen Cooper, do Glasshouse Crops Research Institute em Littlehampton, descreveu o NFT em 1965 como "uma corrente muito rasa de água com todos os nutrientes dissolvidos". Coube à pesquisa brasileira, capitaneada pelo IAC com a solução nutritiva de [Pedro Roberto Furlani (1995, 1998)](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22), tropicalizar a técnica para a alface, a rúcula e o manjericão que dominam nossos cardápios. Hoje, segundo a revisão bibliométrica de [Palmitessa, Signore e Santamaria (2024)](https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1504792/full), em *Frontiers in Plant Science*, o Brasil ocupa o **primeiro lugar mundial em publicações sobre NFT, com 106 papers**, empatado com os Estados Unidos.
 
@@ -52,9 +52,9 @@ No Brasil, o método foi traduzido para a realidade tropical em duas frentes par
 A produção brasileira hidropônica ocupa hoje entre 1.500 e 3.000 hectares, segundo levantamentos da Embrapa e da Hidrogood. Aproximadamente **80% desse volume é alface**, em sua maioria cultivada em NFT, conforme literatura compilada em SciELO e revisões setoriais.
 
 > "O Brasil aparece em primeiro lugar na lista de países que mais publicam sobre NFT, com 106 documentos registrados, empatado com os Estados Unidos. Isso reflete a maturidade do nosso ecossistema de pesquisa em hidroponia tropical."
-> — [Palmitessa, Signore & Santamaria (2024)](https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1504792/full), em *Frontiers in Plant Science*
+> Fonte: [Palmitessa, Signore & Santamaria (2024)](https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1504792/full), em *Frontiers in Plant Science*
 
-> Leia também: [panorama complementar de NFT em pequenos espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [panorama complementar de NFT em pequenos espaços](/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co)
 
 A maturidade do método explica seu domínio: ferramentas operacionais consolidadas, fornecedores nacionais com garantia de 10 anos no perfil, ciclos previsíveis de 30 a 45 dias para folhosas, manejo nutricional padronizado pela ciência brasileira e ecossistema acadêmico que forma engenheiros, técnicos e pesquisadores há 30 anos. Para quem inicia hoje, NFT continua sendo o caminho de menor risco e maior previsibilidade.
 
@@ -79,8 +79,6 @@ A bomba precisa de potência suficiente para vencer a altura manométrica (a dif
 
 O reservatório é o grande regulador térmico e químico do sistema. Em climas tropicais, mantê-lo na sombra ou enterrado parcialmente é fundamental para evitar que a solução ultrapasse 30 °C, temperatura a partir da qual *Pythium aphanidermatum* prolifera e dizima raízes. O volume também importa: reservatórios pequenos têm flutuações maiores de pH e EC entre reposições, o que dificulta o manejo. A regra dos 0,5 a 1,0 litro por planta funciona bem: para 1.000 plantas adultas, mínimo de 500 litros.
 
-<!-- IMG_SLOT_1 -->
-
 A oxigenação acontece de forma natural na superfície da lâmina fina, sem precisar de bombas de ar. A turbulência criada pela inclinação e pela vazão garante reposição constante do oxigênio dissolvido, mantendo-o acima de 5 mg/L, conforme recomendação consensual nas revisões bibliométricas mais recentes. Esse é, aliás, um dos motivos do sucesso do NFT: sistemas com submersão profunda exigem aeração ativa para evitar anoxia radicular; o NFT resolve passivamente.
 
 ## Dimensionando seu sistema NFT
@@ -98,7 +96,7 @@ Vamos agora ao cálculo prático. Suponha que o objetivo é produzir 1 tonelada 
 **Etapa 5: vazão da bomba e volume do reservatório.** Vazão mínima é 110 perfis × 1,5 L/min × 60 minutos = **9.900 L/h**. Em projetos reais, dimensionar a bomba para 12.000 a 15.000 L/h, com altura manométrica de 4 a 6 metros conforme layout. Reservatório com volume mínimo de 5.300 litros, idealmente 7.000 a 10.000 litros para suportar perdas e reduzir oscilações químicas.
 
 > "Dimensionar uma hidroponia comercial é antes um problema de hidráulica que de horticultura. Bomba subdimensionada e reservatório pequeno são os erros mais frequentes em projetos brasileiros, conforme observamos em consultorias de implantação."
-> — [Hidrogood](https://hidrogood.com.br/artigos/hidroponia/como-funciona-o-sistema-de-hidroponia-nft/), em conteúdo técnico institucional
+> Fonte: [Hidrogood](https://hidrogood.com.br/artigos/hidroponia/como-funciona-o-sistema-de-hidroponia-nft/), em conteúdo técnico institucional
 
 A tabela abaixo consolida os parâmetros padrão validados pela literatura brasileira para alface folhosa em NFT comercial. Use-a como referência rápida em qualquer projeto.
 
@@ -141,8 +139,6 @@ A solução nutritiva é o "solo" do sistema NFT. A formulação canônica brasi
 
 **Importante:** os sais devem ser dissolvidos em **dois recipientes separados**, conhecidos como solução A (nitrato de cálcio + ferro quelatizado) e solução B (todos os demais sais). Misturar nitrato de cálcio com fosfato no mesmo concentrado provoca precipitação de fosfato de cálcio (sólido branco no fundo do recipiente), tirando esses dois nutrientes da disponibilidade nutricional.
 
-<!-- IMG_SLOT_2 -->
-
 Um achado importante para o clima brasileiro vem de [Cometti, Matias, Zonta, Mary e Fernandes (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt), publicado na *Horticultura Brasileira*. Os autores demonstraram que **50% da concentração da solução Furlani entrega massa seca equivalente a 100% em alface 'Vera'**, com EC próxima de 1,0 dS/m e temperatura de 30 ± 4 °C. Em climas quentes, isso representa economia direta de insumos sem comprometer produtividade. A leitura prática é simples: em janeiro e fevereiro, é seguro operar com EC entre 1,0 e 1,2 mS/cm, sem perda de colheita.
 
 A renovação da solução é feita a cada 15 a 21 dias. A reposição parcial, por reposição de água que evapora e adição proporcional de A+B, mantém a EC dentro da faixa-alvo entre renovações. A medição de pH e EC é diária nas duas primeiras semanas e a cada 2 a 3 dias depois, com ajuste de pH usando ácido fosfórico (para baixar) ou hidróxido de potássio diluído (para subir).
@@ -176,7 +172,7 @@ A escolha entre perfis comerciais (HPM, M150, R150 da Hidrogood) ou tubos PVC ar
 
 A pesquisa recente em NFT vai além do horizontal clássico. Três variantes merecem atenção do produtor que pensa em escala ou em diferenciação.
 
-**NFT vertical (CEA urbano).** A versão empilhada do NFT, em torres ou prateleiras, com iluminação LED e climatização, é a base da fazenda vertical brasileira. A [Pink Farms](https://pinkfarms.com.br) opera 750 metros quadrados de galpão na Vila Maria, com 8 níveis de cultivo em torres de 7 metros de altura, totalizando 5.250 metros quadrados de área plantada equivalente. Produção atual de 2,0 a 2,5 toneladas por mês de folhosas, com meta de triplicar para 7,5 a 8,0 toneladas após investimento de R$ 15 milhões em Série A liderada pela SLC Ventures em agosto de 2025, segundo o [Projeto Draft](https://www.projetodraft.com/fazenda-vertical-pioneira-no-pais-a-pink-farms-quer-triplicar-a-producao-mas-a-conta-de-luz-e-so-um-dos-obstaculos-no-caminho/). A produtividade efetiva é 75 vezes maior que o cultivo no solo na mesma área de planta baixa.
+**NFT vertical (CEA urbano).** A versão empilhada do NFT, em torres ou prateleiras, com iluminação LED e climatização, é a base da fazenda vertical brasileira. A [Pink Farms](https://pinkfarms.com.br) opera 750 metros quadrados de galpão na Vila Leopoldina, com 8 níveis de cultivo em torres de 7 metros de altura, totalizando 5.250 metros quadrados de área plantada equivalente. Produção atual de 2,0 a 2,5 toneladas por mês de folhosas, com meta de triplicar para 7,5 a 8,0 toneladas após investimento de R$ 15 milhões em Série A liderada pela SLC Ventures em agosto de 2025, segundo o [Projeto Draft](https://www.projetodraft.com/fazenda-vertical-pioneira-no-pais-a-pink-farms-quer-triplicar-a-producao-mas-a-conta-de-luz-e-so-um-dos-obstaculos-no-caminho/). A produtividade efetiva é 75 vezes maior que o cultivo no solo na mesma área de planta baixa.
 
 **NFT em A-frame (piramidal).** O layout em formato de "A" voltado para a luz é a fronteira da pesquisa em NFT. [Pastor-Arbulú e Rodríguez-Delfín (2025)](https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2025.1639002/full), em *Frontiers in Plant Science*, testaram três configurações em 4,5 metros quadrados e atingiram **14,14 quilos por metro quadrado com a cultivar Tropicana** em layout piramidal de 13 canais. A explicação é direta: o A-frame distribui a luz uniformemente sobre todas as plantas, eliminando o sombreamento entre fileiras que ocorre no NFT horizontal. Para estufas com luz lateral forte, é a melhor configuração disponível.
 
@@ -185,7 +181,7 @@ A pesquisa recente em NFT vai além do horizontal clássico. Três variantes mer
 A [BeGreen](https://www.linkedin.com/company/begreen-fazendas-urbanas) opera fazendas urbanas em shoppings de cinco estados, com hidroponia em estufas climatizadas dentro de pontos comerciais. A produção declarada é 28 vezes maior que o cultivo convencional, com 90% menos água. O modelo capitaliza o tráfego de público e elimina logística complexa. A Fazenda Cubo, em Pinheiros (São Paulo), reúne aproximadamente 35 variedades de folhosas e ervas para o mercado gourmet de restaurantes de alta gastronomia.
 
 > "Em uma sala de cultivo vertical, com 8 níveis de torres NFT, a área plantada equivalente em planta baixa é multiplicada por 8. Combinada à intensidade de cultivo (12 a 14 ciclos por ano de alface) e à eficiência hídrica (15 litros por quilo, 95% menos que o campo), a produtividade por área urbana ocupada chega a 75 vezes a do solo."
-> — [Click Petróleo & Gás (2025)](https://en.clickpetroleoegas.com.br/com-95-menos-agua-e-fazendas-verticais-de-alta-tecnologia-sao-paulo-revoluciona-o-cultivo-de-folhosas-com-hidroponia-luzes-led-e-camadas-empilhadas-que-produzem-75-vezes-mais-em-espacos-urbanos-afch/), reportagem setorial sobre Pink Farms
+> Fonte: [Click Petróleo & Gás (2025)](https://en.clickpetroleoegas.com.br/com-95-menos-agua-e-fazendas-verticais-de-alta-tecnologia-sao-paulo-revoluciona-o-cultivo-de-folhosas-com-hidroponia-luzes-led-e-camadas-empilhadas-que-produzem-75-vezes-mais-em-espacos-urbanos-afch/), reportagem setorial sobre Pink Farms
 
 ## Erros comuns que matam a produtividade
 
@@ -202,8 +198,6 @@ Em sete entre dez consultorias de implantação que produtores brasileiros busca
 6. **Falta de UPS ou backup energético.** Interrupção do bombeamento por mais de 30 a 60 minutos em dia quente mata raízes. Nobreak para a bomba e gerador de emergência são obrigatórios em produção comercial.
 7. **Reposição de água sem reposição proporcional de nutrientes.** A EC cai abaixo de 1,0 dS/m, gerando subnutrição. Repor sempre com solução A+B na mesma proporção da evaporação.
 8. **Densidade excessiva de furos.** Espaçamento de 25 × 15 cm parece econômico, mas reduz peso individual e aumenta sombreamento. Manter 25 × 20 cm a 25 × 30 cm para alface adulta.
-
-<!-- IMG_SLOT_3 -->
 
 ## IoT, automação e o futuro do NFT
 

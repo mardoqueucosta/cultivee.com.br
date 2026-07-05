@@ -52,7 +52,7 @@ A distinção operacional é importante para evitar confusão entre três produt
 A diferença entre os três é mais que cosmética. Sprouts foram historicamente associados a contaminações por *Salmonella* e *E. coli* (ambiente úmido e quente sem luz favorece bactérias), o que gerou regulação rigorosa nos Estados Unidos e na Europa. Microgreens, por serem cultivados em luz e com raízes não consumidas, têm perfil sanitário muito mais favorável e crescem em mercado premium sem esse estigma. Baby leaf é simplesmente uma hortaliça mais nova que o tradicional, cultivada da mesma forma que alface ou rúcula adultas, mas colhida antes do tempo.
 
 > "Microgreens oferecem até 4 a 40 vezes mais densidade de nutrientes que a planta madura da mesma espécie, em ciclo curto e área mínima. São o produto agrícola mais quente da década em mercados desenvolvidos."
-> — [Bhaswant et al. (2023)](https://www.mdpi.com/1420-3049/28/2/867), em *Molecules*
+> Fonte: [Bhaswant et al. (2023)](https://www.mdpi.com/1420-3049/28/2/867), em *Molecules*
 
 > Leia também: [como iniciar cultivo de microverdes em casa](/blog/como-iniciar-cultivo-microverdes-em-casa)
 
@@ -115,8 +115,6 @@ A Embrapa Hortaliças, em publicação técnica de 2024 sobre rabanete roxo, tes
 | Manta de juta ou biofibra | Baixo-médio | Sustentável, descartável | Curva de aprendizado |
 | Mix caseiro (terra + coco + vermiculita) | Baixo | Custo, controle | Esterilização obrigatória |
 
-<!-- IMG_SLOT_1 -->
-
 ## Manejo: irrigação, ambiente e colheita
 
 O manejo de microgreens combina precisão e disciplina. Cinco variáveis principais decidem o resultado.
@@ -165,7 +163,7 @@ Três operações brasileiras lideram o segmento e merecem atenção pelo modelo
 **Be Green (Cotia, São Paulo, e shoppings em 5 estados).** Fundada em 2019, opera fazendas urbanas em shopping centers, com hidroponia em estufas climatizadas dentro de pontos comerciais. Produtividade declarada 28 vezes maior que cultivo convencional, com 90% menos água. O modelo capitaliza tráfego de público em centros comerciais e dispensa logística complexa. O portfólio inclui folhosas premium e microgreens de Brassicaceae.
 
 > "Microgreens são o produto agrícola que mais cresce em valor agregado no Brasil. A combinação de ciclo curto, área mínima e preço de venda alto por quilo torna o modelo extremamente atrativo para o pequeno produtor urbano e periurbano que quer entrar no agronegócio com pouco capital."
-> — [Mello & Freitas (2025)](https://www.campoenegocios.com.br/), em *Campo & Negócios*
+> Fonte: [Mello & Freitas (2025)](https://www.campoenegocios.com.br/), em *Campo & Negócios*
 
 Outros nomes que merecem menção: Fazenda Cubo (São Paulo), em container farming com folhosas e microgreens; Bioma (São Paulo e Rio Grande do Sul), em hidroponia urbana; e urbanFarm (Ipiranga, São Paulo), com modelo similar. O ecossistema brasileiro de fazendas verticais com microgreens é jovem (a maioria fundada entre 2017 e 2020) e está em fase de expansão acelerada nos próximos anos.
 
@@ -189,8 +187,6 @@ Os erros mais frequentes em microgreens são previsíveis e evitáveis. A lista 
 6. **Subestimar pós-colheita.** Temperatura acima de 10 °C derrete cotilédones em 24 horas. Refrigeração imediata após a colheita, embalagem com folga (sem compactar) e transporte refrigerado são obrigatórios.
 
 7. **Confundir microverde com sprout.** Sprouts (brotos) têm regulação sanitária mais rigorosa por histórico de contaminação por *Salmonella*. Microgreens, cultivados em luz com raízes não consumidas, têm perfil sanitário muito mais favorável.
-
-<!-- IMG_SLOT_2 -->
 
 ## Iluminação LED para microgreens indoor
 
@@ -251,13 +247,11 @@ A **UNESP/FCAV-Jaboticabal** mantém linha de pesquisa em cultivo protegido e hi
 
 A formação técnica está acessível. A graduação em Agronomia segue como porta principal, mas o **Senar** oferece cerca de 30 cursos gratuitos a distância em formato híbrido, e operações comerciais como **CityFarm** mantêm cursos abertos ao público em modelo "fazenda na vitrine". O salário mediano do engenheiro agrônomo brasileiro é de R$ 9.803,84, segundo dados do CAGED, com tendência clara de alta no segmento de horticultura intensiva e fazendas verticais.
 
-> Leia também: [como estruturar uma revisão bibliográfica eficiente](/blog/como-estruturar-revisao-bibliografica-eficiente)
+> Leia também: como estruturar uma revisão bibliográfica eficiente
 
 Para o profissional que deseja se especializar, a combinação ideal de formação é graduação em Agronomia ou Engenharia Agronômica, mestrado em Fitotecnia ou Solos e Nutrição de Plantas, e cursos livres da Hidrogood Academy ou da CityFarm. A demanda por especialistas em fazenda vertical, dosagem automatizada de soluções e pós-colheita refrigerada cresceu mais de 35% nos últimos dois anos no LinkedIn brasileiro, sinal claro de mercado em expansão.
 
 O ecossistema de fornecedores brasileiros também se consolidou. Para sementes, [Agristar](https://agristar.com.br) (com a linha TopSeed Blue Line dedicada a microverdes), [ISLA Sementes](https://www.isla.com.br) e Korin Orgânicas lideram. Para substratos, Bioplant, Tropstrato e Carolina Soil têm linhas específicas para microverdes. Para iluminação LED, fabricantes nacionais como Pavão Lighting, GreenPower e importadores autorizados de Heliospectra atendem o mercado profissional. Para bandejas plásticas, sistemas de irrigação por sub-irrigação e estufas, [Hidrogood](https://hidrogood.com.br) é o principal fornecedor, com 30 anos de mercado. A integração entre esses fornecedores e a pesquisa universitária criou condições objetivas para que produtores familiares acessem tecnologia comparável à de líderes globais com fração do custo. Operações de cinco metros quadrados em garagem residencial podem hoje produzir microgreens de qualidade comparável a fazendas de mil metros quadrados em São Paulo, desde que tenham sementes adequadas, substrato esterilizado, iluminação correta e manejo disciplinado de irrigação e ambiente.
-
-<!-- IMG_SLOT_3 -->
 
 ## Perguntas frequentes
 

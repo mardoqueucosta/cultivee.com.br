@@ -48,11 +48,11 @@ Em termos práticos, a alface que demora 60 a 70 dias no solo fica pronta em **3
 - **Baixa exigência luminosa**, com DLI (*Daily Light Integral*) de 12 a 17 mol·m⁻²·d⁻¹.
 
 > "A alface é, sem dúvida, a folhosa que mais cresce em hidroponia. Estimamos que o setor brasileiro ocupe hoje entre 1.500 e 3.000 hectares, com forte presença em São Paulo, Minas Gerais e Rio Grande do Sul."
-> — Hidrogood, em [reportagem setorial 2026](https://hidrogood.com.br/artigos/hidroponia/producaohidroponica-brasil-2026/)
+> Fonte: Hidrogood, em [reportagem setorial 2026](https://hidrogood.com.br/artigos/hidroponia/producaohidroponica-brasil-2026/)
 
 A produção total de alface no Brasil é estimada em cerca de 1,5 milhão de toneladas por ano, com a folhosa respondendo por aproximadamente metade do volume e da receita do segmento. As principais regiões produtoras são o cinturão verde de São Paulo (Mogi das Cruzes, Ibiúna, São José do Rio Preto), o Vale do Paraíba, o Sul de Minas, a região metropolitana de Porto Alegre e o entorno do Distrito Federal, com Brazlândia como polo histórico.
 
-> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen)
 
 ## Os principais sistemas: NFT, DFT, Kratky, aeroponia e substrato
 
@@ -72,13 +72,11 @@ Antes de escolher onde investir, vale entender as cinco arquiteturas que dominam
 
 Em uma bancada hidropônica de 50 metros, perfis brancos inclinados a 3% conduzem o filme nutritivo enquanto raízes brancas se estendem pelos canais. Uma bomba submersa, instalada no reservatório de 1.000 litros, recircula a solução em ciclos de aproximadamente 15 minutos. Esse arranjo, simples na aparência, é o coração do NFT brasileiro e da Hidrogood, fornecedora histórica de perfis nas linhas Standard, Premium e Food Grade NSF.
 
-<!-- IMG_SLOT_1 -->
-
 Para quem está começando em casa, o caminho de menor atrito é o Kratky. Com um pote opaco de cinco litros, espuma fenólica para mudas e a solução nutritiva Furlani diluída a 50%, é possível colher a primeira alface crespa em pouco mais de 30 dias sem usar bomba. O sistema, no entanto, é educacional: não escala e exige cuidado para que o nível d'água decresça gradualmente, expondo a parte alta das raízes ao ar e mantendo oxigenação.
 
 > Leia também: [monitoramento de EC e pH com sensores agrícolas](/blog/sensores-agricultura-guia-escolha-implementacao)
 
-Para a produção comercial pequena ou média, o NFT é o padrão consagrado, com ciclo previsível, controle fino e ferramentas operacionais maduras. Para escala industrial em ambientes urbanos, o vertical farming entra com a promessa de 75 vezes mais produtividade por metro quadrado, conforme dados da Pink Farms (galpão de 750 m² na Vila Maria, capital paulista). O DFT aparece quando há necessidade de inércia térmica, comum em climas com oscilações fortes ou quando há risco de queda de energia, e a aeroponia segue restrita a aplicações de alto valor agregado, em pesquisa ou em casas de produção premium.
+Para a produção comercial pequena ou média, o NFT é o padrão consagrado, com ciclo previsível, controle fino e ferramentas operacionais maduras. Para escala industrial em ambientes urbanos, o vertical farming entra com a promessa de 75 vezes mais produtividade por metro quadrado, conforme dados da Pink Farms (galpão de 750 m² na Vila Leopoldina, capital paulista). O DFT aparece quando há necessidade de inércia térmica, comum em climas com oscilações fortes ou quando há risco de queda de energia, e a aeroponia segue restrita a aplicações de alto valor agregado, em pesquisa ou em casas de produção premium.
 
 ## Cultivares brasileiras: como escolher entre Vera, Vanda, Madona e Pira Roxa
 
@@ -104,7 +102,7 @@ Três pontos costumam decidir a escolha:
 3. **Sistema disponível.** Em NFT, ciclos de 30 a 35 dias compatibilizam-se com Vera, Vanda e Samira; em DFT ou substrato, há mais espaço para americanas, que pedem mais tempo de bancada.
 
 > "A escolha de cultivares para hidroponia exige avaliação contínua. Materiais que rendem bem no solo nem sempre se adaptam ao filme nutritivo, e o programa de melhoramento brasileiro tem evoluído rapidamente."
-> — Sakata Brasil, em [catálogo público de folhosas](https://www.sakata.com.br/hortalicas/folhosas/alface/)
+> Fonte: Sakata Brasil, em [catálogo público de folhosas](https://www.sakata.com.br/hortalicas/folhosas/alface/)
 
 A Pira Roxa, do programa de melhoramento do IAC, merece atenção do produtor que busca diferenciação. Com alta concentração de antocianinas e ciclo entre 35 e 40 dias, ela atende ao mercado gourmet com preços que superam, em médias semanais do CEPEA, em duas a três vezes a crespa convencional. Já a [Topseed Premium Samira](https://agristar.com.br/topseed-premium/alface-crespa/samira/3868/), peletizada, simplifica a semeadura em escala e entrega ciclo competitivo.
 
@@ -124,13 +122,11 @@ A solução nutritiva é, na prática, o solo da hidroponia. A formulação prop
 
 Um achado relevante para o clima brasileiro é o de [Cometti et al. (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt). Em sistema NFT, com a solução de Furlani diluída a 50% (cerca de 0,98 dS/m), os autores não registraram perda significativa de produtividade na alface, o que abre janela de economia em insumos e de manejo em verões muito quentes. A leitura prática é direta: **em janeiro e fevereiro, é seguro operar com EC perto de 1,0 mS/cm**, sem comprometer a colheita.
 
-<!-- IMG_SLOT_2 -->
-
 A receita prática, para uma caixa de 1.000 litros, parte da pesagem de fertilizantes solúveis (nitrato de cálcio, nitrato de potássio, MAP, sulfato de magnésio, micronutrientes quelatizados) em duas soluções concentradas separadas. A solução A reúne nitrato de cálcio e Fe-EDDHA; a B, os demais sais. Ambas são adicionadas em sequência ao reservatório com a água já neutralizada. A medição de EC e pH é diária, com aporte de água para repor evapotranspiração e ajuste de pH com ácido fosfórico ou nítrico (para abaixar) e hidróxido de potássio (para subir).
 
 A renovação completa da solução costuma ser feita a cada três a quatro semanas, ou quando o monitoramento indicar desbalanço entre íons (excesso de Na⁺ acumulado em águas duras, por exemplo). Para hobbyistas, kits prontos da Hidrogood, ICL/Peters, Yara e Agrocea simplificam o aprendizado e dispensam balança analítica.
 
-> **Para estudantes:** se você está fazendo TCC sobre solução nutritiva, vale aprender a [estruturar uma revisão bibliográfica eficiente](/blog/como-estruturar-revisao-bibliografica-eficiente) antes de começar a coletar dados. Boa parte das dúvidas sobre Furlani já foi respondida em teses brasileiras dos últimos 20 anos.
+> **Para estudantes:** se você está fazendo TCC sobre solução nutritiva, vale aprender a estruturar uma revisão bibliográfica eficiente antes de começar a coletar dados. Boa parte das dúvidas sobre Furlani já foi respondida em teses brasileiras dos últimos 20 anos.
 
 A medição de EC, pH e temperatura da solução pode ser manual, com canetas digitais Akso, Hanna ou Mileenium, ou automatizada por sensores conectados a microcontroladores. A automação amplia a precisão e libera tempo do produtor para outras frentes, e é tema de seção dedicada mais à frente.
 
@@ -144,7 +140,7 @@ Vamos juntar tudo num cronograma de produção. O plano abaixo segue o padrão N
 | **Bancada de mudas** | 7 a 10 dias | Berçário com EC entre 0,8 e 1,0 mS/cm | Iluminação difusa; transplante com 2 a 4 folhas verdadeiras |
 | **Bancada intermediária** | 8 a 10 dias | NFT em espaçamento adensado | EC sobe para 1,2 mS/cm |
 | **Bancada final** | 22 a 25 dias | NFT em espaçamento de 25 × 25 cm a 30 × 30 cm | EC entre 1,5 e 1,8 mS/cm |
-| **Ciclo total** | 38 a 47 dias | — | Permite 12 a 14 ciclos por ano |
+| **Ciclo total** | 38 a 47 dias | Todas as bancadas | Permite 12 a 14 ciclos por ano |
 
 **Etapa 1: germinação.** Coloque a semente peletizada em cubo de espuma fenólica de 2 × 2 × 2 cm previamente embebido em água com pH 5,8. Mantenha em ambiente escuro e úmido por 24 a 48 horas. Para volume residencial, uma marmita plástica fechada serve como câmara.
 
@@ -194,20 +190,18 @@ Em sete entre dez consultas que produtores brasileiros fazem a fornecedores, tr�
 
 **Iluminação suplementar mal dimensionada em CEA.** A relação Vermelho:Azul próxima de 3:1 é recomendada para maximizar biomassa em alface. Excesso de far-red (730 nm) induz alongamento e cabeça frouxa.
 
-<!-- IMG_SLOT_3 -->
-
 ## Da casa para o agronegócio: vertical farming e o caso brasileiro
 
 A alface foi a primeira hortaliça a se tornar viável em vertical farming comercial em escala global. No Brasil, o segmento ainda é incipiente, mas avança rápido em São Paulo e Rio Grande do Sul, com três casos que merecem atenção do produtor que pensa em escalar.
 
-**Pink Farms (São Paulo).** Operação em galpão urbano na Vila Maria com cerca de 750 m² de prateleiras empilhadas, produção mensal aproximada de 2 toneladas de folhosas e Série A liderada pela SLC Ventures de R$ 15 milhões em agosto de 2025. O plano é triplicar a capacidade até 2026, alcançando aproximadamente 6 toneladas por mês. O modelo entrega à varejo e foodservice na Grande São Paulo com rota inferior a 30 km, o que mantém shelf life elevado.
+**Pink Farms (São Paulo).** Operação em galpão urbano na Vila Leopoldina com cerca de 750 m² de prateleiras empilhadas, produção mensal aproximada de 2 toneladas de folhosas e Série A liderada pela SLC Ventures de R$ 15 milhões em agosto de 2025. O plano é triplicar a capacidade até 2026, alcançando aproximadamente 6 toneladas por mês. O modelo entrega à varejo e foodservice na Grande São Paulo com rota inferior a 30 km, o que mantém shelf life elevado.
 
 **Be Green.** Atua em shoppings de cinco estados, com o conceito "fazenda na vitrine". Cada unidade combina cultivo NFT vertical e ponto de venda direto, e a empresa reporta produtividade 28 vezes maior que o cultivo no solo. O modelo capitaliza tráfego de público em centros comerciais e dispensa logística complexa.
 
 **Fazenda Cubo (Pinheiros, São Paulo).** Reúne aproximadamente 35 variedades, com posicionamento gourmet em restaurantes de alta gastronomia. Cultiva com forte apelo curatorial, com folhosas selecionadas para chefs e drinks de coquetelaria.
 
 > "A produtividade por área em vertical farming pode chegar a 28 ou 75 vezes a do cultivo no solo, dependendo da arquitetura e da cultivar. O grande desafio brasileiro segue sendo o custo da energia elétrica, que pode representar até 40% do OPEX."
-> — Setor de CEA, em [reportagens compiladas pela Hidrogood](https://hidrogood.com.br/artigos/hidroponia/producaohidroponica-brasil-2026/)
+> Fonte: Setor de CEA, em [reportagens compiladas pela Hidrogood](https://hidrogood.com.br/artigos/hidroponia/producaohidroponica-brasil-2026/)
 
 Nos números globais, [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/hydroponics-market) projeta o mercado de hidroponia indo de US$ 6,80 bilhões em 2026 para US$ 11,10 bilhões em 2031, com CAGR de 10,3%. Folhosas respondem por 47,2% desse volume. O segmento dedicado de hidroponia vertical de alface, segundo o [Business Research Insights](https://www.businessresearchinsights.com/market-reports/vertical-hydroponic-lettuce-market-117449), deve sair de US$ 500 milhões em 2025 para US$ 1,5 bilhão em 2033, num ritmo próximo a 12% ao ano. A [Grand View Research](https://www.grandviewresearch.com/industry-analysis/hydroponics-market) aponta a alface como o segmento com CAGR mais rápido em hidroponia, próximo a 15,4% ao ano até 2030.
 

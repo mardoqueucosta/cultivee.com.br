@@ -47,7 +47,7 @@ Solução nutritiva é uma mistura aquosa de sais inorgânicos solúveis que for
 
 Em hidroponia, a solução nutritiva é o **único meio de nutrição da planta**, substituindo integralmente as funções químicas do solo. Por isso a precisão da composição importa muito: nutriente em falta gera deficiência visível em dias, e nutriente em excesso causa toxicidade ou antagonismo iônico. A definição clássica vem de Hoagland e Arnon (1950), que estabeleceram a primeira fórmula sintética para crescimento vegetal sem solo na California Agricultural Experiment Station Circular 347.
 
-> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen)
 
 No Brasil, a referência adotada por 80% dos produtores comerciais é a formulação de [Pedro Roberto Furlani (IAC, 1998)](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22). Foi calibrada para hortaliças folhosas em sistema NFT sob clima tropical brasileiro e validada em diversos estudos posteriores. A fórmula Furlani é o que está nas cartilhas do Senar, nas apostilas universitárias e nos cursos comerciais. Para 95% dos casos brasileiros, é a escolha padrão.
 
@@ -118,15 +118,13 @@ Para sistemas residenciais com reservatórios menores (30 a 50 litros), divida p
 
 Um achado relevante para o clima brasileiro vem de [Cometti, Matias, Zonta, Mary e Fernandes (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt). Os autores demonstraram em pesquisa peer-reviewed que **50% da concentração da solução Furlani entrega 90% da produtividade máxima** em alface 'Vera', com EC próxima de 1,0 dS/m. Em climas quentes, isso é economia direta de 50% no custo de fertilizantes sem comprometer a colheita. Para iniciantes inseguros, é um excelente ponto de partida com menos risco.
 
-<!-- IMG_SLOT_1 -->
-
 ## Procedimento passo a passo de preparo
 
 Vamos ao tutorial prático. O procedimento abaixo serve para qualquer volume e segue o método de duas soluções concentradas (A e B), garantindo que cálcio e fosfato/sulfato não se encontrem em alta concentração.
 
 **Etapa 1: análise da água.** O passo zero, ignorado por 80% dos iniciantes, é conhecer a química da água de partida. Águas duras (com mais de 100 ppm de carbonato de cálcio, comum em São Paulo, Minas Gerais e Goiás) trazem cálcio e magnésio "gratuitos" que precisam ser descontados da fórmula. Águas cloradas (acima de 0,5 ppm de cloro residual) precisam descansar 24 horas em recipiente aberto ou passar por filtro de carvão ativado. Águas com ferro elevado (comum em poços do Rio de Janeiro) podem exigir osmose reversa.
 
-**Etapa 2: separação dos sais.** Pese todos os sais conforme a tabela escalada do volume escolhido. Use balança de precisão de 0,1 g para volumes domésticos e balança de cozinha para volumes acima de 500 litros. Separe-os em dois grupos: **Grupo A** (nitrato de cálcio mais Fe-EDDHA) e **Grupo B** (todos os demais sais — nitrato de potássio, MAP, sulfato de magnésio, sulfato de potássio se houver, mix de micronutrientes).
+**Etapa 2: separação dos sais.** Pese todos os sais conforme a tabela escalada do volume escolhido. Use balança de precisão de 0,1 g para volumes domésticos e balança de cozinha para volumes acima de 500 litros. Separe-os em dois grupos: **Grupo A** (nitrato de cálcio mais Fe-EDDHA) e **Grupo B** (todos os demais sais, ou seja, nitrato de potássio, MAP, sulfato de magnésio, sulfato de potássio se houver, mix de micronutrientes).
 
 **Etapa 3: preparo da solução A concentrada.** Em recipiente plástico opaco de 20 a 50 litros (proporcional ao volume final), dissolva o nitrato de cálcio em água morna a 30 a 40 °C, sob agitação constante. Quando completamente dissolvido, adicione o Fe-EDDHA. A solução fica amarela alaranjada se for Fe-EDDHA ou amarela clara se for Fe-EDTA. Reserve.
 
@@ -146,8 +144,8 @@ Para produção comercial acima de 1.000 litros ou para hobby que faz reposiçã
 
 | Tanque | Sais que vão lá | Concentração típica | Razão prática |
 |---|---|---|---|
-| **Tanque A** | Nitrato de cálcio + Nitrato de potássio + Fe-EDDHA | 50× a 200× | Cálcio isolado dos ânions sulfato e fosfato |
-| **Tanque B** | MAP + Sulfato de magnésio + Sulfato de potássio + Mix de micros | 50× a 200× | Ânions agressivos longe do Ca, sem precipitação |
+| **Tanque A** | Nitrato de cálcio + Fe-EDDHA | 50× a 200× | Cálcio isolado dos ânions sulfato e fosfato |
+| **Tanque B** | MAP + Nitrato de potássio + Sulfato de magnésio + Sulfato de potássio + Mix de micros | 50× a 200× | Ânions agressivos longe do Ca, sem precipitação |
 
 A razão prática é evitar a **precipitação química**. Quando cálcio (Ca²⁺) encontra sulfato (SO₄²⁻) em alta concentração, forma sulfato de cálcio (CaSO₄, gesso). Quando encontra fosfato (HPO₄²⁻ ou H₂PO₄⁻), forma fosfato tricálcico (Ca₃(PO₄)₂). Ambos os precipitados são sólidos brancos no fundo do recipiente que tiram cálcio, fósforo e enxofre do circuito nutricional, formam crostas em tubulações e bombas e arruínam a operação. Apenas no reservatório final, em concentração diluída, A e B se encontram sem provocar precipitação significativa.
 
@@ -177,8 +175,6 @@ A EC reflete a concentração total de íons na solução. Mas atenção: EC alt
 A temperatura da solução é o terceiro parâmetro crítico, frequentemente subestimado. Acima de 28 °C, *Pythium aphanidermatum* prolifera e mata raízes em 3 a 5 dias. Em climas tropicais brasileiros, sombrear o reservatório, isolar termicamente e em casos extremos instalar chiller refrigerado são medidas essenciais para produção comercial.
 
 A frequência de troca total da solução varia entre 7 e 21 dias. Em sistemas pequenos com volume reduzido, a troca semanal é mais segura. Em sistemas grandes recirculantes, com 5.000 a 10.000 litros, é viável estender para 15 a 21 dias com reposição diária por EC e correções periódicas de íons individuais via análise química laboratorial.
-
-<!-- IMG_SLOT_2 -->
 
 ## Comparativo de custos: caseiro versus kit pronto
 
@@ -224,8 +220,6 @@ Os erros mais frequentes em preparo de solução nutritiva são previsíveis e e
 9. **Negligenciar a sanitização do reservatório entre safras.** Acumula biofilme, restos de substrato e patógenos como *Pythium*. Limpeza com hipoclorito de sódio a 1% e enxágue triplo é obrigatória entre ciclos.
 
 10. **Não trocar a solução quando o pH "foge" do esperado.** Quando o ajuste de pH consome quantidade crescente de ácido ou base ao longo dos dias, é sinal de desequilíbrio iônico avançado. Trocar a solução completa é mais barato que tentar corrigir.
-
-<!-- IMG_SLOT_3 -->
 
 ## Adaptações por cultura
 

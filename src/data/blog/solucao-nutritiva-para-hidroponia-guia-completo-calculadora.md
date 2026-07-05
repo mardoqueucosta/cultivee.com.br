@@ -32,7 +32,7 @@ imagens:
 ---
 A solução nutritiva é o "solo líquido" da hidroponia. Seu papel é entregar 13 nutrientes minerais essenciais às raízes, na concentração e proporção corretas para cada cultura, ao longo de todo o ciclo de produção. Quando bem manejada, ela transforma uma folha de alface em produto pronto em 30 a 45 dias, com economia de até 95% no consumo de água frente ao cultivo no solo, conforme dados da [Pink Farms](https://pinkfarms.com.br) (São Paulo). Quando mal manejada, ela queima raízes, gera tip-burn nas folhas internas e arruína safras inteiras em poucos dias.
 
-A fórmula brasileira de referência é a de **Pedro Roberto Furlani**, descrita no [Boletim Técnico IAC nº 168 (1998)](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22), e ainda hoje a base de 95% das hidroponias comerciais brasileiras de folhosas. A fórmula universal mais antiga é a [Hoagland & Arnon (1938)](https://en.wikipedia.org/wiki/Hoagland_solution), padrão internacional, e há variantes como a Castellane & Araújo (1994) para morango e folhosas, derivada de pesquisas da UNESP/FCAV-Jaboticabal. Este guia compara as três, ensina o passo a passo do preparo e do manejo diário de pH e EC, mostra como diagnosticar deficiências pelos sintomas visuais e oferece uma calculadora prática para qualquer volume.
+A fórmula brasileira de referência é a de **Pedro Roberto Furlani**, descrita no [Boletim Técnico IAC nº 168 (1998)](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22), e ainda hoje a base de 95% das hidroponias comerciais brasileiras de folhosas. A fórmula universal mais antiga é a [Hoagland & Arnon (1938)](https://en.wikipedia.org/wiki/Hoagland_solution), padrão internacional, e há variantes como a Castellane & Araújo (1994) para morango e folhosas, derivada de pesquisas da UNESP/FCAV-Jaboticabal. Este guia compara as três, ensina o [passo a passo do preparo](/blog/como-preparar-solucao-nutritiva-passo-a-passo-tabelas-para-1) e do manejo diário de pH e EC, mostra como diagnosticar deficiências pelos sintomas visuais e oferece uma [calculadora prática](/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia) para qualquer volume.
 
 | Fato-chave | Valor | Fonte |
 |---|---|---|
@@ -47,7 +47,7 @@ Solução nutritiva hidropônica é a fase aquosa que contém todos os nutriente
 
 O conceito-chave é o do **equilíbrio iônico**. A planta consome íons em proporções diferentes daquelas em que aparecem na solução, então a composição relativa muda mesmo com a EC permanecendo constante. Por isso, manejar uma solução não é apenas "manter a concentração", e sim manter simultaneamente três variáveis: a concentração total (medida pela condutividade elétrica), as proporções entre os macronutrientes (especialmente N:K:Ca:Mg) e o pH (que define quais nutrientes estão disponíveis em forma iônica absorvível). Falhar em qualquer uma dessas três frentes resulta em deficiências nutricionais visíveis dias depois.
 
-> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co)
 
 A história da hidroponia é, em boa medida, a história da evolução dessas soluções. Antes da fórmula de Hoagland, cultivos sem solo eram empíricos e instáveis. Os pesquisadores americanos sistematizaram a ideia de que cada nutriente tem uma concentração ótima, mensurável e reproduzível, e que todos os 13 elementos podem ser entregues simultaneamente em uma só solução. O resultado foi a explosão da hidroponia comercial pós-Segunda Guerra Mundial, com aplicação em alface, tomate, pepino e ervas em estufas climatizadas. No Brasil, o IAC pegou esse legado e tropicalizou a receita, fazendo com que produtores de Mogi das Cruzes, Brazlândia e Caxias do Sul possam, há quase três décadas, comprar nitrato de cálcio, nitrato de potássio e sulfato de magnésio em qualquer revenda agropecuária e preparar uma solução padronizada que funciona da varanda urbana à estufa de mil metros quadrados.
 
@@ -97,7 +97,7 @@ A **Castellane & Araújo**, desenvolvida na UNESP/FCAV-Jaboticabal em 1994, foi 
 A **Bolsa Mineira** é uma variante prática difundida pelo Senar de Minas Gerais nos anos 2000. Tem potássio mais alto (270 mg/L), o que beneficia produção de inverno em regiões mais frias. Os números aparecem em apostilas regionais e devem ser validados localmente antes de uso comercial, dada a falta de publicação científica primária consolidada.
 
 > "A fórmula Furlani é o padrão brasileiro para folhosas em NFT. Foi desenvolvida no IAC com a química de fertilizantes simples disponíveis no comércio nacional, e funciona em 95% dos casos sem ajuste. As variantes existem para situações específicas de cultura, água ou clima."
-> — [Pedro Roberto Furlani (2018)](http://www.encontrohidroponia.com.br/images/site/palestras/Pedro_Furlani_2018.pdf), em palestra do Encontro Nacional de Hidroponia
+> Fonte: [Pedro Roberto Furlani (2018)](http://www.encontrohidroponia.com.br/images/site/palestras/Pedro_Furlani_2018.pdf), em palestra do Encontro Nacional de Hidroponia
 
 Um achado importante para o clima brasileiro vem de [Cometti, Matias, Zonta, Mary e Fernandes (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt), publicado na *Horticultura Brasileira*. Os autores demonstraram que **50% da concentração da solução Furlani entrega 90% da produtividade máxima** em alface 'Vera', com EC próxima de 1,0 dS/m. Em climas quentes, isso significa economia direta de até 50% no custo de fertilizantes sem comprometer a colheita. Para iniciantes, é um excelente ponto de partida com menos risco de queimar raízes.
 
@@ -117,8 +117,6 @@ A preparação de uma solução nutritiva pela fórmula Furlani exige cinco insu
 | Sulfato de magnésio (MgSO₄·7H₂O) | 400 | Magnésio, enxofre |
 | Mix de micronutrientes (B, Mn, Zn, Cu, Mo) | 30 mL de solução estoque | Micronutrientes |
 | Quelato de ferro (Fe-EDTA) | 30 g ou 200 mL de solução estoque | Ferro disponível |
-
-<!-- IMG_SLOT_1 -->
 
 **Etapa 1: análise da água.** O passo zero é conhecer a química da água de partida. Águas duras (com mais de 100 ppm de carbonato de cálcio, comum em São Paulo, Minas Gerais e Goiás) trazem cálcio e magnésio "gratuitos" que precisam ser descontados da fórmula. Águas cloradas (acima de 0,5 ppm de cloro residual) precisam descansar 24 horas em recipiente aberto ou passar por filtro de carvão ativado. Águas com ferro elevado (comum em poços do Rio de Janeiro) podem exigir osmose reversa.
 
@@ -198,8 +196,6 @@ Em consultorias de implantação e atendimentos a iniciantes, sete erros se repe
 
 7. **Confiar apenas em TDS ou ppm.** TDS é estimativa baseada em fator de conversão variável (entre 0,5 e 0,7) que depende dos íons presentes. A referência operacional é a EC em mS/cm ou μS/cm.
 
-<!-- IMG_SLOT_2 -->
-
 ## Comprar pronta vs preparar em casa
 
 Uma das decisões iniciais mais importantes é se vale a pena preparar a solução com sais simples ou comprar fórmulas prontas A+B. A resposta depende de escala e disponibilidade de tempo.
@@ -226,14 +222,14 @@ A fronteira do manejo de solução nutritiva no Brasil está nas fazendas vertic
 *Fazenda vertical brasileira com torres NFT empilhadas, modelo Pink Farms e BeGreen.*
 
 
-A **[Pink Farms](https://pinkfarms.com.br)**, em São Paulo (Vila Maria), opera 750 metros quadrados de galpão urbano com 8 níveis de cultivo em torres de 7 metros, totalizando 5.250 metros quadrados de área plantada equivalente. A produção mensal é de 2,0 a 2,5 toneladas de folhosas, com meta de 6 a 8 toneladas após Série A de R$ 15 milhões liderada pela SLC Ventures em agosto de 2025, segundo o [Projeto Draft](https://www.projetodraft.com/fazenda-vertical-pioneira-no-pais-a-pink-farms-quer-triplicar-a-producao-mas-a-conta-de-luz-e-so-um-dos-obstaculos-no-caminho/). O manejo da solução é totalmente recirculante (zero discharge), com filtragem UV e nano para reuso de quase 100% da água. A eficiência hídrica resultante é de **15 litros por quilo de alface**, contra 300 litros por quilo no campo aberto, ou economia de 95%.
+A **[Pink Farms](https://pinkfarms.com.br)**, em São Paulo (Vila Leopoldina), opera 750 metros quadrados de galpão urbano com 8 níveis de cultivo em torres de 7 metros, totalizando 5.250 metros quadrados de área plantada equivalente. A produção mensal é de 2,0 a 2,5 toneladas de folhosas, com meta de 6 a 8 toneladas após Série A de R$ 15 milhões liderada pela SLC Ventures em agosto de 2025, segundo o [Projeto Draft](https://www.projetodraft.com/fazenda-vertical-pioneira-no-pais-a-pink-farms-quer-triplicar-a-producao-mas-a-conta-de-luz-e-so-um-dos-obstaculos-no-caminho/). O manejo da solução é totalmente recirculante (zero discharge), com filtragem UV e nano para reuso de quase 100% da água. A eficiência hídrica resultante é de **15 litros por quilo de alface**, contra 300 litros por quilo no campo aberto, ou economia de 95%.
 
 A **BeGreen** opera fazendas urbanas em shoppings de cinco estados, com produção declarada de 1.841 quilos por mês em 570 metros quadrados (caso Plaza Sul Shopping em São Paulo). O manejo da solução combina recirculação com reposição automática por sensores de EC e dosing pumps. A vantagem do modelo está na proximidade ao consumidor: a folhosa é colhida e vendida no mesmo prédio, eliminando logística e estendendo shelf life.
 
 A **Fazenda Cubo**, em Pinheiros (São Paulo), reúne aproximadamente 35 variedades de folhosas e ervas para o mercado gourmet de restaurantes de alta gastronomia. O manejo da solução é customizado por cultivar, com receitas distintas para alfaces especiais (Pira Roxa, Lollo Rossa, Salanova), microverdes premium e ervas finas. É um exemplo de operação onde a complexidade do manejo nutricional é parte do valor agregado do produto.
 
 > "Em fazendas verticais com manejo recirculante e reposição automatizada, é possível operar com EC variando entre 1,2 e 1,4 mS/cm de forma estável por semanas, com economia de 30 a 50% em fertilizantes em comparação a sistemas open-loop tradicionais."
-> — Análise consolidada de operações brasileiras citada por [Rocha, Rodrigues e Queiroz Júnior (2024)](https://revistaft.com.br/proposta-de-monitoramento-e-manejo-da-solucao-nutritiva-aplicada-a-hidroponia/) na *Revista FT*
+> Fonte: Análise consolidada de operações brasileiras citada por [Rocha, Rodrigues e Queiroz Júnior (2024)](https://revistaft.com.br/proposta-de-monitoramento-e-manejo-da-solucao-nutritiva-aplicada-a-hidroponia/) na *Revista FT*
 
 ## Tendências 2025-2030: IoT, IA e dosagem automatizada
 

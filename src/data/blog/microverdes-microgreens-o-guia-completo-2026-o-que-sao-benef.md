@@ -1,5 +1,5 @@
 ---
-titulo: 'Microverdes (Microgreens): O Guia Completo 2026 — O Que São, Benefícios, Como Cultivar e Vender'
+titulo: 'Microverdes (Microgreens): O Guia Completo 2026, O Que São, Benefícios, Como Cultivar e Vender'
 resumo: >-
   Guia mestre de microverdes no Brasil, com definição científica, 15 espécies
   comerciais, comparativo com brotos e baby leaf, casos brasileiros nominados
@@ -80,7 +80,7 @@ A escolha das espécies é decisão crucial. As mais cultivadas comercialmente c
 
 A família **Brassicaceae** domina globalmente. Brócolis e rabanete representam juntos 48,55% do mercado mundial de microverdes, segundo a Mordor Intelligence (2025), pelo benefício de saúde percebido (sulforafano e glucorafanina em brócolis, alta capacidade antioxidante em rabanete). O repolho-roxo tem o maior teor de glicosinolatos da família, com 197,8 mg por 100 g de matéria seca conforme Bhaswant et al. (2023), o que justifica preço premium.
 
-**Espécies a evitar absolutamente**: família Solanaceae — *Solanum lycopersicum* (tomate), *Solanum melongena* (berinjela) e *Capsicum* spp. (pimentas) — porque os cotilédones contêm alcaloides anti-nutricionais (solanina, tomatina). A confirmação vem da literatura técnica internacional e da Embrapa Hortaliças. Cucurbitaceae grandes (abóbora, melão) também são desaconselhadas por toxicidade em estágio juvenil.
+**Espécies a evitar absolutamente**: família Solanaceae, que inclui *Solanum lycopersicum* (tomate), *Solanum melongena* (berinjela) e *Capsicum* spp. (pimentas), porque os cotilédones contêm alcaloides anti-nutricionais (solanina, tomatina). A confirmação vem da literatura técnica internacional e da Embrapa Hortaliças. Cucurbitaceae grandes (abóbora, melão) também são desaconselhadas por toxicidade em estágio juvenil.
 
 ## Comparativo: brotos, microverdes e baby leaves
 
@@ -111,11 +111,9 @@ A pesquisa da Embrapa Hortaliças e o trabalho de Mello e Freitas (2025) na ESAL
 
 **Abordagem 3: ambiente fechado indoor.** Sistema de 12 metros quadrados com iluminação LED, ar-condicionado e irrigação automatizada, investimento de aproximadamente **R$ 25 mil**, produção de cerca de 26 quilos por semana. É o modelo das fazendas verticais urbanas.
 
-> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen)
 
 Os substratos mais usados em escala global, segundo a Mordor (2025), são turfa ou peat moss (33,20% do mercado) e fibra de coco. A fibra de coco tem CAGR de 15,45% por ano, o substrato de crescimento mais rápido, especialmente em regiões tropicais como o Brasil. Outros substratos comuns são lã de rocha, jute mat, papel-cartão e vermiculita.
-
-<!-- IMG_SLOT_1 -->
 
 ## Parâmetros operacionais críticos
 
@@ -151,7 +149,7 @@ Cinco operações brasileiras lideram o segmento de microverdes em 2026. Vale co
 **Kaya Green.** Operação especializada em microverdes premium para gastronomia, com seleção curatorial de espécies raras e de alto valor agregado.
 
 > "Microgreens são o produto agrícola que mais cresce em valor agregado no Brasil. A combinação de ciclo curto, área mínima e preço de venda alto por quilo torna o modelo extremamente atrativo para o pequeno produtor urbano e periurbano que quer entrar no agronegócio com pouco capital."
-> — [Mello & Freitas (2025)](https://www.campoenegocios.com.br), em *Campo & Negócios*
+> Fonte: [Mello & Freitas (2025)](https://www.campoenegocios.com.br), em *Campo & Negócios*
 
 ## Modelo de negócio e viabilidade econômica
 
@@ -175,8 +173,6 @@ O dado mais consolidado de viabilidade vem do trabalho de Mello e Freitas, da ES
 O preço de varejo brasileiro consolidado é de R$ 160 a R$ 400 por quilo, em bandejas de 40 gramas vendidas a R$ 6,50 a R$ 16,00 dependendo da espécie e do canal. Restaurantes pagam o preço mais alto. Hortifrutis premium (Empório Santa Maria, Hortifruti Natural da Terra, St Marche) pagam intermediário. Venda direta em feiras ou e-commerce próprio entrega margens maiores.
 
 A composição de custo operacional típica é de aproximadamente 35% para sementes (especialmente girassol e ervilha), 25% para substrato e bandejas, 15% para energia (alto no indoor), 10% para mão de obra (modelo familiar) e 15% para embalagem, logística e impostos. A receita por área é definida por três variáveis multiplicativas: produtividade da espécie, número de ciclos por mês e preço de venda no canal.
-
-<!-- IMG_SLOT_2 -->
 
 ## Bioativos e benefícios à saúde
 
@@ -233,8 +229,6 @@ Os erros mais frequentes em microverdes são previsíveis e evitáveis. A lista 
 7. **Reaproveitar substrato sem esterilização.** Risco de *Pythium* e *Fusarium* acumulados. Substrato deve ser descartado após cada ciclo, ou esterilizado a vapor (80 °C por 30 minutos).
 
 8. **Confundir microverde com sprout.** Sprouts têm regulação sanitária mais rigorosa por histórico de contaminação. Microgreens, cultivados em luz com raízes não consumidas, têm perfil sanitário muito mais favorável.
-
-<!-- IMG_SLOT_3 -->
 
 ## Tendências 2025-2030
 

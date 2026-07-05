@@ -45,7 +45,7 @@ Tomate hidropônico é o cultivo de *Solanum lycopersicum* L. (sinônimo antigo 
 
 A FAO classifica os sistemas como cultivo sem solo fechado (com recirculação) ou cultivo sem solo aberto (sem recirculação). No Brasil, três arranjos predominam para o tomate. O primeiro é o **NFT** (*Nutrient Film Technique*), com perfis hidráulicos de 150 mm para recirculação contínua da solução nutritiva. O segundo é o **gotejamento em substrato**, que usa slabs de fibra de coco ou lã de rocha e fertirrigação ponto a ponto. O terceiro é o **bag culture** ou cultivo em vasos, com saco plástico contendo substrato inerte fertirrigado, comum em estufas familiares.
 
-> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen)
 
 A escolha entre os três sistemas depende do porte da operação e do tipo de tomate. Para tomate cereja e grape em estufa pequena ou média, o NFT em perfis Hidrogood M150 ou R150 funciona muito bem. Para tomate de salada (frutos de 150 a 250 g) e tomate Italiano, o gotejamento em fibra de coco é o padrão das estufas comerciais brasileiras em Goiás, São Paulo e Minas Gerais. Para hobby de varanda com 1 a 5 plantas, o vaso de 15 a 25 litros com substrato e fertirrigação manual diária resolve sem precisar bomba.
 
@@ -74,7 +74,7 @@ Três pontos costumam decidir a escolha:
 3. **Ciclo de colheita.** Cereja entra em produção em 60 a 80 dias e mantém colheita contínua por 4 a 6 meses. Salada precisa de 100 a 130 dias para a primeira penca, mas entrega 4 a 5 frutos pesados em cada uma das 8 a 12 pencas que conduz por planta.
 
 > "A escolha de cultivares para hidroponia exige avaliação contínua. Materiais que rendem bem no solo nem sempre se adaptam ao manejo em estufa, e o programa de melhoramento brasileiro tem evoluído rapidamente nos últimos anos."
-> — [Sakata Brasil](https://www.sakata.com.br), em catálogo público de tomates
+> Fonte: [Sakata Brasil](https://www.sakata.com.br), em catálogo público de tomates
 
 A cultivar **BRS Zamir**, do programa de melhoramento da Embrapa Hortaliças, merece atenção do produtor familiar interessado em sistema de tutoramento simplificado. Por ter crescimento determinado (a planta para de crescer em altura após determinado número de pencas), elimina a necessidade de poda contínua de brotos laterais e reduz mão de obra. É uma alternativa moderna em relação às variedades indeterminadas tradicionais que exigem manejo semanal ao longo de todo o ciclo.
 
@@ -97,13 +97,11 @@ A produtividade típica em estufa com gotejamento em substrato é de **130 tonel
 
 A decisão entre NFT e gotejamento depende muito do tipo de tomate. Para cereja e grape, NFT em perfis de 150 mm da [Hidrogood](https://hidrogood.com.br) é solução elegante, com recirculação total e consumo mínimo de água. Para tomate de salada e Italiano, o gotejamento em fibra de coco é o padrão consagrado: a planta encontra suporte radicular adequado para os frutos pesados, o slab oferece volume suficiente de substrato e a fertirrigação ponto a ponto entrega solução fresca a cada planta.
 
-<!-- IMG_SLOT_1 -->
-
 Em uma estufa comercial de 1.224 metros quadrados com gotejamento em fibra de coco, o investimento total documentado em estudo conjunto Hidrogood e CPT é de **R$ 75.481,06** considerando estrutura, fertirrigação automatizada e dois ciclos por ano. A receita esperada na mesma área é de **R$ 96.023,00**, com payback estimado em 12 a 18 meses dependendo do mercado de venda. Para escala maior, em estufas de 2.500 metros quadrados, a Hidrogood reporta produção de 40 mil quilos de cereja por ano ou 70 mil quilos de salada por ano.
 
 ## Solução nutritiva e manejo de pH e EC
 
-A solução nutritiva é o "solo líquido" da hidroponia. Para o tomate, a complexidade é maior que para folhosas porque a planta passa por duas fases distintas com necessidades nutricionais diferentes: vegetativa (do plantio à floração) e produtiva (da floração à colheita).
+A [solução nutritiva](/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora) é o "solo líquido" da hidroponia. Para o tomate, a complexidade é maior que para folhosas porque a planta passa por duas fases distintas com necessidades nutricionais diferentes: vegetativa (do plantio à floração) e produtiva (da floração à colheita).
 
 | Parâmetro | Vegetativa (até floração) | Produtiva (frutificação) |
 |---|---|---|
@@ -178,8 +176,6 @@ Sistemas hidropônicos têm vantagens claras sobre o cultivo no solo em controle
 
 O uso de *Trichoderma harzianum* para controle biológico de *Fusarium* e *Pythium* é prática consolidada no Brasil, conforme a *Revista Cultivar* registra em diversos artigos sobre manejo. A inoculação preventiva, no transplante das mudas e na renovação da solução, reduz substancialmente a incidência desses patógenos sem o uso de fungicidas de síntese.
 
-<!-- IMG_SLOT_2 -->
-
 A traça-do-tomateiro merece atenção especial por ser praga endêmica brasileira que pode causar perdas superiores a 50% da produção sem manejo adequado. O monitoramento com armadilhas de feromônio é obrigatório em estufa comercial, com inspeção semanal e ação imediata ao primeiro sinal. *Bacillus thuringiensis* (Bt) é controle biológico eficaz e compatível com mercado orgânico ou de baixos resíduos.
 
 ## Da varanda à estufa de mil metros quadrados
@@ -238,8 +234,6 @@ Os erros mais frequentes em tomate hidropônico, observados em consultorias e at
 6. **Baixa intensidade luminosa em "tomate de varanda".** Abaixo de 5 a 6 horas de sol direto, a planta vira folhagem sem flor. Nesses casos, vasos perto de janelas não orientadas ao norte (no hemisfério sul) costumam decepcionar.
 
 7. **Ignorar o monitoramento fitossanitário.** Mosca-branca, traça-do-tomateiro e ácaros se multiplicam rápido em estufa fechada. Inspeção semanal com armadilhas de feromônio e ação preventiva são obrigatórias.
-
-<!-- IMG_SLOT_3 -->
 
 ## Tendências 2025-2030
 

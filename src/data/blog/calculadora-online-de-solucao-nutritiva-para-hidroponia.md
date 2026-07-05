@@ -12,9 +12,9 @@ leitura: '23 min'
 tldr: >-
   Calcular solução nutritiva é decidir quanto de cada sal dissolver para
   entregar à planta uma dieta líquida balanceada. A fórmula Furlani (IAC,
-  1998) é a receita-base brasileira para folhosas em NFT, com 950 g de
-  nitrato de cálcio, 610 g de nitrato de potássio, 140 g de MAP, 520 g de
-  sulfato de potássio e 490 g de sulfato de magnésio por 1.000 litros, mais
+  1998) é a receita-base brasileira para folhosas em NFT, com 750 g de
+  nitrato de cálcio, 500 g de nitrato de potássio, 150 g de MAP, 400 g de
+  sulfato de magnésio e 100 g de sulfato de potássio por 1.000 litros, mais
   100 mL de solução estoque de micronutrientes. Este guia entrega as
   equações de conversão ppm-grama, a separação A e B, ajustes por cultura e
   por qualidade da água, e os parâmetros operacionais consolidados.
@@ -48,7 +48,7 @@ Solução nutritiva é um meio aquoso contendo todos os elementos minerais essen
 
 A composição não é universal. Depende da espécie, fase fenológica (vegetativa ou produtiva), sistema (NFT, DFT, aeroponia, substrato), estação do ano e qualidade da água de origem. [Furlani (1998)](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22) consolidou para o Instituto Agronômico de Campinas a fórmula que se tornou padrão de fato no Brasil para hortaliças folhosas em sistema NFT, conhecida como "solução IAC" ou "fórmula Furlani".
 
-> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen)
 
 A frase-chave para entender a calculadora é simples. Calcular solução nutritiva é decidir **quanto de cada sal dissolver** para entregar à planta uma dieta líquida balanceada. A fórmula Furlani é a receita-base brasileira para começar. Variações para tomate, morango e culturas específicas existem e estão consolidadas em outras publicações IAC, na linha Castellane & Araújo (1994) da UNESP/FCAV-Jaboticabal, e na holandesa Sonneveld & Straver (1994) para frutos pesados.
 
@@ -58,14 +58,14 @@ A receita Furlani consolidada para folhosas em sistema NFT, em quantidades para 
 
 | Sal (fertilizante) | Quantidade (g/1.000 L) | Função principal | Tanque |
 |---|---|---|---|
-| **Nitrato de cálcio** Ca(NO₃)₂·4H₂O | 950 | Cálcio + nitrato | A (isolado) |
-| **Nitrato de potássio** KNO₃ | 610 | Potássio + nitrato | B |
-| **Fosfato monoamônico (MAP)** NH₄H₂PO₄ | 140 | Fósforo + amônio | B |
-| **Sulfato de potássio** K₂SO₄ | 520 | Potássio + enxofre | B |
-| **Sulfato de magnésio** MgSO₄·7H₂O | 490 | Magnésio + enxofre | B |
+| **Nitrato de cálcio** Ca(NO₃)₂·4H₂O | 750 | Cálcio + nitrato | A (isolado) |
+| **Nitrato de potássio** KNO₃ | 500 | Potássio + nitrato | B |
+| **Fosfato monoamônico (MAP)** NH₄H₂PO₄ | 150 | Fósforo + amônio | B |
+| **Sulfato de potássio** K₂SO₄ | 100 | Potássio + enxofre | B |
+| **Sulfato de magnésio** MgSO₄·7H₂O | 400 | Magnésio + enxofre | B |
 | **Solução estoque de micronutrientes** | 100 mL | Fe, Mn, Zn, B, Cu, Mo | B |
 
-A composição final entrega aproximadamente 198 mg/L de nitrogênio total, 39 mg/L de fósforo, 183 mg/L de potássio, 142 mg/L de cálcio, 38 mg/L de magnésio e 52 mg/L de enxofre. Com EC entre 1,5 e 2,0 mS/cm e pH ajustado entre 5,8 e 6,2, está pronta para alface, rúcula, manjericão e agrião em qualquer sistema (Kratky, NFT, DFT, substrato).
+A composição final entrega aproximadamente 198 mg/L de nitrogênio total, 39 mg/L de fósforo, 183 mg/L de potássio, 142 mg/L de cálcio, 38 mg/L de magnésio e 52 mg/L de enxofre. Com EC entre 1,5 e 1,8 mS/cm e pH ajustado entre 5,8 e 6,2, está pronta para alface, rúcula, manjericão e agrião em qualquer sistema (Kratky, NFT, DFT, substrato).
 
 A separação obrigatória entre **Tanque A** (apenas nitrato de cálcio mais ferro quelatizado) e **Tanque B** (todos os demais sais) tem razão química clara. O cálcio (Ca²⁺) em alta concentração reage com sulfatos (SO₄²⁻) formando sulfato de cálcio (gesso, CaSO₄) e com fosfatos (HPO₄²⁻ ou H₂PO₄⁻) formando fosfato tricálcico (Ca₃(PO₄)₂). Ambos são sólidos brancos insolúveis que tiram cálcio, fósforo e enxofre do circuito nutricional, formam crostas em tubulações e bombas e arruínam a operação. Apenas no reservatório final, em concentração diluída, A e B se encontram sem provocar precipitação significativa.
 
@@ -107,7 +107,7 @@ Equivalente em notação acadêmica, conforme Penn State Extension: FR (g) = 100
 
 > g por 1.000 L = (198 × 1.000) ÷ (15,5 × 10) = 1.277 g
 
-Esse valor é maior que os 950 g da fórmula Furlani porque a Furlani usa duas fontes de nitrogênio simultaneamente: nitrato de cálcio (15,5% de N) e nitrato de potássio (13% de N). A combinação entrega o N total desejado dividido entre as duas fontes, aproveitando que cada uma também entrega outro macronutriente (Ca ou K).
+Esse valor é maior que os 750 g da fórmula Furlani porque a Furlani usa duas fontes de nitrogênio simultaneamente: nitrato de cálcio (15,5% de N) e nitrato de potássio (13% de N). A combinação entrega o N total desejado dividido entre as duas fontes, aproveitando que cada uma também entrega outro macronutriente (Ca ou K).
 
 **Equação 2: conversão direta entre unidades.**
 
@@ -121,22 +121,20 @@ Para sais que vêm em concentrações comerciais variáveis, a fórmula corrige 
 
 Por exemplo, se a fórmula original previa 30 g de Fe-EDTA a 13%, e o produto disponível no mercado é Fe-EDTA a 6%, a quantidade real necessária é: 30 × (13 ÷ 6) = 65 g. Atenção a essa correção, especialmente em micronutrientes onde a margem de erro é menor.
 
-<!-- IMG_SLOT_1 -->
-
 ## Tabelas escaladas: 100, 500 e 1.000 litros
 
 Aplicando a regra de três simples na receita Furlani, obtemos as tabelas para os três volumes mais usados em produção residencial e comercial. Use a tabela abaixo como calculadora de referência rápida.
 
 | Sal | 100 L | 500 L | 1.000 L |
 |---|---|---|---|
-| Nitrato de cálcio | 95 g | 475 g | 950 g |
-| Nitrato de potássio | 61 g | 305 g | 610 g |
-| MAP (fosfato monoamônico) | 14 g | 70 g | 140 g |
-| Sulfato de potássio | 52 g | 260 g | 520 g |
-| Sulfato de magnésio | 49 g | 245 g | 490 g |
+| Nitrato de cálcio | 75 g | 375 g | 750 g |
+| Nitrato de potássio | 50 g | 250 g | 500 g |
+| MAP (fosfato monoamônico) | 15 g | 75 g | 150 g |
+| Sulfato de potássio | 10 g | 50 g | 100 g |
+| Sulfato de magnésio | 40 g | 200 g | 400 g |
 | Solução estoque de micros | 10 mL | 50 mL | 100 mL |
 
-Para sistemas residenciais com reservatórios menores (30 a 50 litros), continue dividindo proporcionalmente. Em 30 litros: 28,5 g de nitrato de cálcio, 18,3 g de nitrato de potássio, 4,2 g de MAP, 15,6 g de sulfato de potássio, 14,7 g de sulfato de magnésio e 3 mL de mix de micros. Para 50 litros: 47,5 g, 30,5 g, 7 g, 26 g, 24,5 g e 5 mL respectivamente.
+Para sistemas residenciais com reservatórios menores (30 a 50 litros), continue dividindo proporcionalmente. Em 30 litros: 22,5 g de nitrato de cálcio, 15 g de nitrato de potássio, 4,5 g de MAP, 3 g de sulfato de potássio, 12 g de sulfato de magnésio e 3 mL de mix de micros. Para 50 litros: 37,5 g, 25 g, 7,5 g, 5 g, 20 g e 5 mL respectivamente.
 
 Um achado importante para o clima brasileiro vem de [Cometti, Matias, Zonta, Mary e Fernandes (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt). Os autores demonstraram em pesquisa peer-reviewed que **50% da concentração da solução Furlani entrega 90% da produtividade máxima** em alface 'Vera', com EC próxima de 1,0 dS/m. Em climas quentes, isso é economia direta de 50% no custo de fertilizantes sem comprometer a colheita. Para iniciantes inseguros, é um excelente ponto de partida com menos risco. A tabela "50% Furlani" é simplesmente metade dos valores acima.
 
@@ -203,8 +201,6 @@ A temperatura da solução é o terceiro parâmetro crítico. Acima de 28 °C, *
 
 A regra de reposição parcial estabelecida por Furlani (1998, Quadro 8) é simples: para cada 0,25 mS/cm de queda na EC, repor 1 litro de solução A concentrada, 1 litro de solução B concentrada e 50 mL da solução estoque de micronutrientes. Esse procedimento mantém o equilíbrio iônico estável entre trocas totais.
 
-<!-- IMG_SLOT_2 -->
-
 ## Como usar a calculadora na prática
 
 O fluxo prático de cálculo segue cinco passos.
@@ -213,7 +209,7 @@ O fluxo prático de cálculo segue cinco passos.
 
 **Passo 2: definir a cultura e fase fenológica.** Folhosas em geral usam Furlani. Frutos na fase produtiva pedem Sonneveld & Straver. Morango usa Castellane & Araújo. Microgreens usam Furlani diluída a 0-50%.
 
-**Passo 3: escalar a fórmula.** Aplicar a regra de três sobre a tabela base (1.000 litros) para o volume escolhido. Se Furlani pede 950 g de nitrato de cálcio em 1.000 litros, em 200 litros são 190 g, em 500 litros são 475 g, em 5.000 litros são 4.750 g.
+**Passo 3: escalar a fórmula.** Aplicar a regra de três sobre a tabela base (1.000 litros) para o volume escolhido. Se Furlani pede 750 g de nitrato de cálcio em 1.000 litros, em 200 litros são 150 g, em 500 litros são 375 g, em 5.000 litros são 3.750 g.
 
 **Passo 4: ajustar pela qualidade da água.** Se a água é dura, reduzir nitrato de cálcio em 10% a 15%. Se a água é salobra, considerar osmose reversa. Se a água é clorada, descansar 24 horas antes de usar.
 
@@ -302,12 +298,10 @@ Os erros mais frequentes em cálculo e preparo de solução nutritiva são previ
 
 10. **Não documentar o cálculo e os ajustes.** Sem caderno de campo ou planilha digital, o produtor perde a curva de aprendizado e repete erros. Documentação simples (Excel, Google Sheets) entrega ROI alto em poucos meses.
 
-<!-- IMG_SLOT_3 -->
-
 ## Perguntas frequentes
 
 ### Qual a fórmula de solução nutritiva mais usada no Brasil?
-A fórmula Furlani (IAC, 1998), descrita no Boletim Técnico nº 168 do Instituto Agronômico de Campinas. É a base de 80% das operações comerciais brasileiras de folhosas. A receita por 1.000 litros usa 950 g de nitrato de cálcio, 610 g de nitrato de potássio, 140 g de MAP, 520 g de sulfato de potássio, 490 g de sulfato de magnésio e 100 mL de solução estoque de micronutrientes.
+A fórmula Furlani (IAC, 1998), descrita no Boletim Técnico nº 168 do Instituto Agronômico de Campinas. É a base de 80% das operações comerciais brasileiras de folhosas. A receita por 1.000 litros usa 750 g de nitrato de cálcio, 500 g de nitrato de potássio, 150 g de MAP, 100 g de sulfato de potássio, 400 g de sulfato de magnésio e 100 mL de solução estoque de micronutrientes.
 
 ### Como converter ppm em gramas?
 A equação básica é: g por 1.000 L = (ppm desejado × 1.000) ÷ (% do nutriente no sal × 10). Em soluções aquosas diluídas, 1 ppm equivale a 1 mg/L. Para converter mg/L em g/1.000 L, basta dividir por 1.000. Equação acadêmica equivalente: FR (g) = 100 × NA / %N, onde NA é o nutriente-alvo em mg/L.

@@ -49,7 +49,7 @@ A diferença para a horta convencional em vasos é central. No cultivo em terra,
 
 A diferença para a aquaponia também merece nota. Aquaponia integra cultivo de peixes (em geral tilápia ou tambaqui) com hortaliças, usando os resíduos dos animais como fonte de nitrogênio. É sistema mais sustentável e tecnicamente mais complexo, exigindo equilíbrio entre carga de peixes, biofiltro e plantas. Para começar em apartamento, hidroponia pura é o caminho de menor atrito.
 
-> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos)
+> Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen)
 
 ## Escolha do sistema: Kratky, DWC, NFT mini e variantes
 
@@ -77,11 +77,9 @@ A recomendação por perfil é direta:
 3. **Hobby tech com automação.** Adicione sensores de pH e EC conectados a um ESP32 ou Arduino, conforme o protocolo SMART GROW descrito em [HardwareX (2023)](https://www.sciencedirect.com/science/article/pii/S2468067223000639). O ticket técnico entrou abaixo de R$ 1.500 em DIY, com possibilidade de monitoramento remoto via Wi-Fi e alertas no celular.
 
 > "Kratky vive uma segunda onda desde 2020, puxada por TikTok, Reels e por papers que mostram payback inferior a 12 meses em contexto urbano."
-> — [Gumisiriza et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9596717/), em *MethodsX*
+> Fonte: [Gumisiriza et al. (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9596717/), em *MethodsX*
 
 Para quem ainda não decidiu entre Kratky e NFT, a regra prática é simples: se o objetivo é colher de 6 a 12 pés de folhosas por mês, sem bomba e sem manutenção, Kratky resolve. Se o objetivo é produzir continuamente, com ciclos sucessivos e maior número de plantas, NFT mini é o caminho.
-
-<!-- IMG_SLOT_1 -->
 
 ## Lista completa de materiais e custo
 
@@ -168,8 +166,6 @@ A solução nutritiva é, na prática, o solo da hidroponia. A formulação can�
 
 Concentrações finais aproximadas: nitrogênio total 198 mg/L, fósforo 39 mg/L, potássio 180 mg/L, cálcio 143 mg/L, magnésio 41 mg/L, enxofre 52 mg/L. Para uso doméstico em 30 litros, divida proporcionalmente: 22,5 g de nitrato de cálcio, 15 g de nitrato de potássio, 9 g de sulfato de magnésio, 4,5 g de MAP e 0,75 g de mix de micros.
 
-<!-- IMG_SLOT_2 -->
-
 **Importante:** os sais devem ser dissolvidos em **dois recipientes separados**, conhecidos como solução A (nitrato de cálcio + ferro quelatizado) e solução B (demais sais). Misturar nitrato de cálcio com fosfato no mesmo concentrado provoca precipitação de fosfato de cálcio (sólido branco no fundo do recipiente), tirando esses dois nutrientes da disponibilidade.
 
 **Alternativa pronta no varejo brasileiro:** kits do tipo "Hidrogood Folhosas A+B" custam entre R$ 50 e R$ 90 para preparar 200 litros de solução. São mais caros que os sais comprados separadamente, mas isentam o iniciante de manipular reagentes em pó. Para começar, é a opção recomendada.
@@ -249,8 +245,6 @@ Em sete entre dez consultas que iniciantes brasileiros fazem em fóruns e comuni
 
 9. **Reaproveitar solução por mais de 4 semanas.** Provoca desbalanço entre potássio, cálcio e magnésio, e em frutos induz blossom-end rot. Solução: trocar a solução completa a cada 15 a 21 dias.
 
-<!-- IMG_SLOT_3 -->
-
 ## Plantas recomendadas e o que evitar
 
 A hidroponia caseira não atende todas as culturas com a mesma facilidade. A tabela abaixo organiza as opções por dificuldade, ciclo e EC alvo.
@@ -299,7 +293,7 @@ Para comercializar o excedente em feiras, hortifrutis ou restaurantes, é necess
 
 Cabe destacar que **hidroponia não pode ser rotulada como orgânica no Brasil**, mesmo quando dispensa defensivos. A IN MAPA nº 46/2011 exige solo vivo, o que exclui sistemas hidropônicos do enquadramento orgânico. O Ibrahort articula uma proposta de selo "Cultivo Sustentável Sem Solo" que reconheceria a hidroponia em chave própria, mas a discussão regulatória segue em aberto.
 
-> "Para estudantes e curiosos com pretensão acadêmica, vale aprender a [estruturar uma revisão bibliográfica eficiente](/blog/como-estruturar-revisao-bibliografica-eficiente) antes de mergulhar em pesquisa primária. A literatura brasileira sobre hidroponia tem 25 anos de profundidade e cobre praticamente todos os aspectos técnicos."
+> "Para estudantes e curiosos com pretensão acadêmica, vale aprender a estruturar uma revisão bibliográfica eficiente antes de mergulhar em pesquisa primária. A literatura brasileira sobre hidroponia tem 25 anos de profundidade e cobre praticamente todos os aspectos técnicos."
 
 A formação técnica está acessível. A graduação em Agronomia segue como porta principal, mas o Senar oferece cerca de 30 cursos gratuitos a distância em formato 60% online e 40% presencial, e a [Hidrogood Academy](https://hidrogood.com.br) mantém cursos presenciais em Campinas. O salário mediano do engenheiro agrônomo brasileiro é de R$ 9.803,84, com tendência de alta: a especialidade Agricultura registrou crescimento de quase 39% em contratações formais entre dezembro de 2024 e novembro de 2025, sinal de mercado aquecido para quem quer entrar no setor.
 
