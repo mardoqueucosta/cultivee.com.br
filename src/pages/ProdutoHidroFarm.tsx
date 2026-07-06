@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -80,6 +81,9 @@ const comparacao = [
 const ProdutoHidroFarmPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Hidro Farm | Cultivee</title>
+      </Head>
       <Navbar />
 
       {/* Hero */}

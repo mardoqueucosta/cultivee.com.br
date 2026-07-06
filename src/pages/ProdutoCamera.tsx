@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -76,6 +77,9 @@ const techSpecs = [
 const ProdutoCameraPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Controle de Câmera | Cultivee</title>
+      </Head>
       <Navbar />
 
       {/* Hero */}
