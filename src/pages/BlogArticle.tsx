@@ -240,7 +240,7 @@ const BlogArticlePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Head>
-        <title>{article.titulo} | Blog Cultivee</title>
+        <title>{`${article.titulo} | Blog Cultivee`}</title>
         <meta name="description" content={article.resumo} />
         <link rel="canonical" href={articleUrl} />
         <meta property="og:title" content={article.titulo} />
