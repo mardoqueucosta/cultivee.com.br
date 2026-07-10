@@ -27,8 +27,11 @@ jobs:
             rm -rf /tmp/cultivee-site-deploy
             git clone --depth 1 https://github.com/mardoqueucosta/cultivee.com.br.git /tmp/cultivee-site-deploy
 
-            # Copiar arquivos (preservar docker-compose local se existir)
-            rsync -a --exclude='.git' --exclude='node_modules' --exclude='dist' --exclude='01-imagens' /tmp/cultivee-site-deploy/ $REMOTE_DIR/
+            # Copiar arquivos ESPELHANDO o repo (--delete: arquivo removido do repo
+            # sai do servidor — sem isso, artigos deletados continuavam entrando no
+            # build e voltavam ao site/sitemap, como aconteceu em 2026-07-10).
+            # Excludes protegem o que e' so' do servidor (nao sao deletados no destino).
+            rsync -a --delete --exclude='.git' --exclude='node_modules' --exclude='dist' --exclude='01-imagens' --exclude='.env' /tmp/cultivee-site-deploy/ $REMOTE_DIR/
             rm -rf /tmp/cultivee-site-deploy
 
             # Rebuild container
