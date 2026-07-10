@@ -28,11 +28,12 @@ export const organizationJsonLd = {
   description:
     "A Cultivee é uma plataforma brasileira de cultivo inteligente: cursos, produtos de automação e guias técnicos de hidroponia, horta em casa e agricultura urbana.",
   sameAs: [
-    // Perfis oficiais (YouTube/Instagram/Facebook verificados em 2026-07-10;
-    // TikTok e LinkedIn fornecidos pelo dono — atencao: TikTok e @cultivee.br com PONTO)
+    // Perfis oficiais confirmados pelo dono em 2026-07-10.
+    // Atencao aos handles, que variam por rede: YouTube/Instagram @cultivee_br
+    // (underscore), TikTok @cultivee.br (ponto), Facebook cultivee.brasil.
     "https://www.youtube.com/@cultivee_br",
     "https://www.instagram.com/cultivee_br/",
-    "https://www.facebook.com/646209618584176",
+    "https://www.facebook.com/cultivee.brasil",
     "https://www.tiktok.com/@cultivee.br",
     "https://www.linkedin.com/company/cultivee-br",
   ],
