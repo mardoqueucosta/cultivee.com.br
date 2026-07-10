@@ -11,44 +11,8 @@
       "webp"
     ]
   },
-  "/blog/tcc-escrita.jpg": {
-    "base": "/blog/tcc-escrita",
-    "widths": [
-      640,
-      768,
-      1024
-    ],
-    "formats": [
-      "avif",
-      "webp"
-    ]
-  },
   "/blog/arduino.jpg": {
     "base": "/blog/arduino",
-    "widths": [
-      640,
-      768,
-      1024
-    ],
-    "formats": [
-      "avif",
-      "webp"
-    ]
-  },
-  "/blog/hidroponia.jpg": {
-    "base": "/blog/hidroponia",
-    "widths": [
-      640,
-      768,
-      1024
-    ],
-    "formats": [
-      "avif",
-      "webp"
-    ]
-  },
-  "/blog/revisao-bibliografica.jpg": {
-    "base": "/blog/revisao-bibliografica",
     "widths": [
       640,
       768,

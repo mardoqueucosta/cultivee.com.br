@@ -15,14 +15,14 @@ imagens:
     caption: 'Um bom substrato hidropônico garante aeração e retenção hídrica ideais, com macroporos para oxigênio e microporos para água, essenciais para a saúde das raízes sem solo.'
   - src: /blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi/imagem-hyperrealista-dos-4-substratos-hidroponicos-fibr-2.jpg
     alt: 'Imagem hyperrealista dos 4 substratos hidropônicos: fibra de coco, perlita, vermiculita e lã de rocha.'
-    caption: 'Os quatro substratos hidropônicos clássicos — fibra de coco, perlita, vermiculita e lã de rocha — com suas características visuais distintas, resultado de suas origens e processos de fabricação.'
+    caption: 'Os quatro substratos hidropônicos clássicos, fibra de coco, perlita, vermiculita e lã de rocha, com suas características visuais distintas, resultado de suas origens e processos de fabricação.'
   - src: /blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi/diagrama-do-processo-de-buffering-da-fibra-de-coco-most-3.jpg
     alt: 'Diagrama do processo de buffering da fibra de coco, mostrando a troca de íons de sódio e potássio por cálcio.'
     caption: 'O processo de buffering é essencial para a fibra de coco, removendo íons indesejados como sódio e potássio e saturando os sítios de troca com cálcio, garantindo a disponibilidade desse nutriente vital para a planta.'
 ---
 Em hidroponia, o substrato faz quatro trabalhos ao mesmo tempo: sustenta fisicamente a raiz, retém água, entrega oxigênio ao sistema radicular e faz a mediação química com a solução nutritiva. Os quatro candidatos clássicos, **fibra de coco, perlita, vermiculita e lã de rocha**, não disputam um título de "melhor substrato" geral. Cada um vence em um cenário específico, e escolher errado custa produtividade, dinheiro e semanas de cultivo perdidas.
 
-Um dado brasileiro resume bem a armadilha de tratar isso como uma corrida por um único vencedor. Em ensaio da Embrapa Hortaliças em Brasília, a fibra de coco entregou **10,4 kg/m² de tomate contra 6,4 kg/m² da lã de rocha** (Carrijo et al., 2004). No entanto, a lã de rocha é o padrão industrial holandês para tomate e pepino, usada em escala massiva justamente por sua consistência de fábrica. Os dois fatos são verdadeiros ao mesmo tempo, porque dependem do clima, do sistema e do manejo.
+Um dado brasileiro resume bem a armadilha de tratar isso como uma corrida por um único vencedor. Em ensaio da Embrapa Hortaliças em Brasília, a fibra de coco entregou **10,4 kg/m² de tomate contra 6,4 kg/m² da lã de rocha** (Carrijo et al. 2004). No entanto, a lã de rocha é o padrão industrial holandês para tomate e pepino, usada em escala massiva justamente por sua consistência de fábrica. Os dois fatos são verdadeiros ao mesmo tempo, porque dependem do clima, do sistema e do manejo.
 
 | O que você precisa | Substrato que resolve |
 | --- | --- |
@@ -56,7 +56,7 @@ Vale registrar a definição oficial. A Instrução Normativa SDA nº 14/2004 do
 
 Antes de comparar números, vale conhecer a identidade de cada material, porque a origem física explica quase todo o comportamento agronômico.
 ![Imagem hyperrealista dos 4 substratos hidropônicos: fibra de coco, perlita, vermiculita e lã de rocha.](/blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi/imagem-hyperrealista-dos-4-substratos-hidroponicos-fibr-2.jpg)
-*Os quatro substratos hidropônicos clássicos — fibra de coco, perlita, vermiculita e lã de rocha — com suas características visuais distintas, resultado de suas origens e processos de fabricação.*
+*Os quatro substratos hidropônicos clássicos, fibra de coco, perlita, vermiculita e lã de rocha, com suas características visuais distintas, resultado de suas origens e processos de fabricação.*
 
 **Fibra de coco** vem do mesocarpo (a casca fibrosa) do coco. É orgânica e renovável, composta principalmente de lignina, celulose e hemicelulose. Sua marca registrada é a distribuição equilibrada entre ar e água, o que a tornou o substrato mais popular do mundo em hidroponia moderna. O contraponto: por vir de um fruto costeiro, carrega sódio e potássio que precisam de tratamento antes do plantio.
 
@@ -189,7 +189,7 @@ Para quem produz de forma caseira, a regulação passa despercebida. Para quem v
 - **IN SDA nº 17/2007** traz os Métodos Analíticos Oficiais para análise de substratos, definindo como medir pH, condutividade elétrica, densidade seca, capacidade de retenção de água (o método CRA10) e umidade.
 - **IN SDA nº 31/2008** ajustou subitens específicos da IN 17/2007.
 
-As tolerâncias oficiais atuais, combinando IN 17 e IN 31, são de pH ±0,5, condutividade elétrica ±0,3 dS/m e densidade seca ±15%. Um estudo publicado na Bragantia (Abreu et al., 2012) recomendou ampliar alguns desses critérios, sinal de que a norma ainda evolui.
+As tolerâncias oficiais atuais, combinando IN 17 e IN 31, são de pH ±0,5, condutividade elétrica ±0,3 dS/m e densidade seca ±15%. Um estudo publicado na Bragantia (Abreu et al. 2012) recomendou ampliar alguns desses critérios, sinal de que a norma ainda evolui.
 
 > Fonte: [MAPA, IN SDA nº 17/2007, Métodos Analíticos Oficiais para Análise de Substratos](https://www.defesa.agricultura.sp.gov.br/legislacoes/instrucao-normativa-mapa-17-de-13-07-2006,842.html)
 

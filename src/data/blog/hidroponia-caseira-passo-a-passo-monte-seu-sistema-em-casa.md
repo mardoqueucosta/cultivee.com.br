@@ -7,8 +7,8 @@ resumo: >-
 categoria: 'Agro'
 categoriaVariant: 'agro'
 data: '2026-05-09'
-dataModificacao: '2026-05-09'
-leitura: '22 min'
+dataModificacao: '2026-07-10'
+leitura: '20 min'
 tldr: >-
   Hidroponia caseira deixou de ser hobby de geek e virou resposta concreta a
   comida fresca dentro de apartamento. Com R$ 30 (Kratky em garrafa) a R$ 1.500
@@ -41,13 +41,9 @@ Este guia foi pensado para quem está começando do zero e nunca encostou em nut
 
 ## O que é hidroponia caseira
 
-Hidroponia é o cultivo de plantas em solução aquosa contendo todos os elementos minerais essenciais, sem o solo como meio de fixação e nutrição. A definição operacional usada no Brasil deriva do **Boletim Técnico 180 do Instituto Agronômico de Campinas** ([Furlani et al., 1999](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22)), que padronizou termos e a "solução IAC" usada em 99% das hidroponias comerciais brasileiras. A Embrapa Hortaliças classifica hidroponia como modalidade de cultivo protegido, sem solo, em ambiente de controle parcial ou total.
+Se você chegou até aqui, provavelmente já sabe o que é hidroponia: cultivo de plantas em solução nutritiva, sem terra. Se quiser a definição completa, os tipos de sistema e as vantagens frente ao cultivo no solo, veja o [guia definitivo de hidroponia](/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co). Aqui o foco é mão na massa: montar e manter um sistema dentro de casa.
 
-No nível residencial, qualquer reservatório que mantenha as raízes em contato com solução nutritiva oxigenada qualifica como sistema hidropônico, desde uma garrafa PET com pé de alface no método Kratky até um kit NFT comercial de 96 furos. A hidroponia caseira é, em essência, trazer o método NFT/Kratky padronizado pela ciência brasileira para a escala de uma caixa plástica de 30 litros em qualquer varanda ou cozinha.
-
-A diferença para a horta convencional em vasos é central. No cultivo em terra, o solo precisa segurar nutrientes, água e ar simultaneamente, o que cria desperdício e variabilidade. Na hidroponia, esses três elementos são entregues de forma controlada e reciclável. O resultado é um ciclo mais rápido (alface em 30 a 45 dias após o transplante, contra 60 a 70 dias no solo), maior produtividade por metro quadrado e dispensa de defensivos agrícolas em sistema fechado e bem manejado.
-
-A diferença para a aquaponia também merece nota. Aquaponia integra cultivo de peixes (em geral tilápia ou tambaqui) com hortaliças, usando os resíduos dos animais como fonte de nitrogênio. É sistema mais sustentável e tecnicamente mais complexo, exigindo equilíbrio entre carga de peixes, biofiltro e plantas. Para começar em apartamento, hidroponia pura é o caminho de menor atrito.
+No nível residencial, qualquer reservatório que mantenha as raízes em contato com solução nutritiva oxigenada já é um sistema hidropônico, desde uma garrafa PET com pé de alface no método Kratky até um kit NFT de 96 furos. Na prática, hidroponia caseira é trazer o método Kratky ou NFT para a escala de uma caixa plástica de 30 litros em qualquer varanda ou cozinha. A vantagem que interessa ao iniciante é concreta: ciclo mais rápido que na terra (alface em 30 a 45 dias após o transplante, contra 60 a 70 dias no solo), mais plantas por metro quadrado e dispensa de defensivos em sistema fechado e bem manejado.
 
 > Leia também: [como funciona o sistema NFT em pequenos espaços](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen)
 
@@ -129,7 +125,7 @@ A montagem do Kratky em caixa plástica é literalmente um trabalho de meia hora
 2. **Recorte a placa de isopor** para encaixar na boca da caixa, deixando aproximadamente 1 cm de folga em todos os lados.
 3. **Marque os furos** na placa de isopor com 25 cm entre centros, em padrão alternado para folhosas. Use serra copo de 50 mm ou estilete bem afiado.
 4. **Encaixe os net cups** nos furos. Eles devem ficar com a borda apoiada na placa, e o fundo penetrando entre 2 e 3 cm na solução.
-5. **Prepare a solução nutritiva** seguindo as instruções do kit A+B comprado, ou a fórmula Furlani residencial detalhada na próxima seção. Volume final: a caixa cheia até 5 cm da placa de isopor.
+5. **Prepare a solução nutritiva** seguindo as instruções do kit A+B comprado, ou a receita Furlani indicada na seção de solução nutritiva mais adiante. Volume final: a caixa cheia até 5 cm da placa de isopor.
 6. **Posicione a placa com os net cups** sobre a caixa cheia. Verifique que os fundos dos net cups estão tocando a solução.
 7. **Transfira as mudas** já germinadas em espuma fenólica (com 2 a 4 folhas verdadeiras) para os net cups.
 8. **Tampe lateralmente com fita adesiva opaca** se houver entrada de luz. Algas verdes na solução roubam nitrogênio das plantas e devem ser evitadas.
@@ -149,26 +145,16 @@ A montagem do Kratky em caixa plástica é literalmente um trabalho de meia hora
 
 A automação opcional, com ESP32 ou Arduino lendo sensores de pH e EC e acionando a bomba via relé, é o próximo passo natural para quem se interessa por eletrônica e quer evoluir para um manejo "smart". O protocolo SMART GROW de [Cambra-López et al. (2023)](https://www.sciencedirect.com/science/article/pii/S2468067223000639) detalha esse setup com componentes que somam abaixo de R$ 200, considerando ESP32 (R$ 50), sonda pH analógica (R$ 80), sonda EC (R$ 60) e relé.
 
-## Solução nutritiva: receita Furlani residencial e versão pronta
+## Solução nutritiva: pronta ou pela receita
 
-A solução nutritiva é, na prática, o solo da hidroponia. A formulação canônica do IAC, descrita por [Furlani et al. (1999)](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22) no Boletim Técnico 180, recomendada para folhosas em sistema NFT/DFT, em gramas por 1.000 litros:
+A solução nutritiva é, na prática, o solo da hidroponia, e o montador tem dois caminhos. Para começar sem erro, use um **kit pronto A+B** do tipo "Hidrogood Folhosas A+B", que custa entre R$ 50 e R$ 90 para preparar 200 litros: basta diluir conforme o rótulo, sem manipular reagentes em pó. É mais caro que comprar os sais separados, mas é a opção recomendada para a primeira safra.
 ![Preparo de solução nutritiva Furlani caseira com canetas digitais de pH e EC](/blog/hidroponia-caseira-passo-a-passo-monte-seu-sistema-em-casa/preparo-de-solucao-nutritiva-furlani-caseira-com-caneta-2.jpg)
 *Preparo da solução Furlani residencial, com canetas de pH e EC para monitoramento.*
 
 
-| Sal | g por 1.000 L | Função |
-|---|---|---|
-| Nitrato de cálcio (Ca(NO₃)₂·4H₂O) | 750 | Cálcio, nitrato |
-| Nitrato de potássio (KNO₃) | 500 | Potássio, nitrato |
-| Sulfato de magnésio (MgSO₄·7H₂O) | 300 | Magnésio, enxofre |
-| Monoamônio fosfato (MAP) | 150 | Fósforo, amônio |
-| Mix de micronutrientes (Conmicros Standard ou similar) | 25 | Boro, ferro, manganês, zinco, cobre, molibdênio |
+Quando quiser baixar o custo e ajustar a fórmula, prepare a solução a partir dos sais seguindo a receita Furlani/IAC. Não vamos repetir aqui a tabela de gramas por litro e a química dos nutrientes: isso está detalhado, com a formulação completa, no nosso [guia completo de solução nutritiva](/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora) e no [passo a passo com tabelas para diferentes volumes](/blog/como-preparar-solucao-nutritiva-passo-a-passo-tabelas-para-1), que trazem inclusive a divisão proporcional para 30 litros domésticos.
 
-Concentrações finais aproximadas: nitrogênio total 198 mg/L, fósforo 39 mg/L, potássio 180 mg/L, cálcio 143 mg/L, magnésio 41 mg/L, enxofre 52 mg/L. Para uso doméstico em 30 litros, divida proporcionalmente: 22,5 g de nitrato de cálcio, 15 g de nitrato de potássio, 9 g de sulfato de magnésio, 4,5 g de MAP e 0,75 g de mix de micros.
-
-**Importante:** os sais devem ser dissolvidos em **dois recipientes separados**, conhecidos como solução A (nitrato de cálcio + ferro quelatizado) e solução B (demais sais). Misturar nitrato de cálcio com fosfato no mesmo concentrado provoca precipitação de fosfato de cálcio (sólido branco no fundo do recipiente), tirando esses dois nutrientes da disponibilidade.
-
-**Alternativa pronta no varejo brasileiro:** kits do tipo "Hidrogood Folhosas A+B" custam entre R$ 50 e R$ 90 para preparar 200 litros de solução. São mais caros que os sais comprados separadamente, mas isentam o iniciante de manipular reagentes em pó. Para começar, é a opção recomendada.
+**Uma regra que vale para qualquer receita caseira:** dissolva os sais em **dois recipientes separados**, a solução A (nitrato de cálcio e ferro quelatizado) e a solução B (demais sais). Misturar nitrato de cálcio com fosfato no mesmo concentrado provoca precipitação de fosfato de cálcio (sólido branco no fundo), tirando esses dois nutrientes de disponibilidade.
 
 **Faixas operacionais que você precisa monitorar:**
 
@@ -292,10 +278,6 @@ A [Lei nº 14.935, de 29 de julho de 2024](https://www12.senado.leg.br/noticias/
 Para comercializar o excedente em feiras, hortifrutis ou restaurantes, é necessário formalizar como microempreendedor individual e seguir a [RDC ANVISA nº 14/2014](https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2014/rdc0014_28_03_2014.pdf), que dispõe sobre matérias estranhas em alimentos, e a RDC nº 216/2004, que regula boas práticas de manipulação. A vigilância sanitária local é o órgão de referência para licenciamento.
 
 Cabe destacar que **hidroponia não pode ser rotulada como orgânica no Brasil**, mesmo quando dispensa defensivos. A IN MAPA nº 46/2011 exige solo vivo, o que exclui sistemas hidropônicos do enquadramento orgânico. O Ibrahort articula uma proposta de selo "Cultivo Sustentável Sem Solo" que reconheceria a hidroponia em chave própria, mas a discussão regulatória segue em aberto.
-
-> "Para estudantes e curiosos com pretensão acadêmica, vale aprender a estruturar uma revisão bibliográfica eficiente antes de mergulhar em pesquisa primária. A literatura brasileira sobre hidroponia tem 25 anos de profundidade e cobre praticamente todos os aspectos técnicos."
-
-A formação técnica está acessível. A graduação em Agronomia segue como porta principal, mas o Senar oferece cerca de 30 cursos gratuitos a distância em formato 60% online e 40% presencial, e a [Hidrogood Academy](https://hidrogood.com.br) mantém cursos presenciais em Campinas. O salário mediano do engenheiro agrônomo brasileiro é de R$ 9.803,84, com tendência de alta: a especialidade Agricultura registrou crescimento de quase 39% em contratações formais entre dezembro de 2024 e novembro de 2025, sinal de mercado aquecido para quem quer entrar no setor.
 
 ## Perguntas frequentes
 

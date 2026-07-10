@@ -45,13 +45,13 @@ Com Arduino, você pode criar desde projetos simples (piscar um LED) até sistem
 | Preço (Brasil) | R$ 30-50 (clone) | R$ 40-70 |
 | Ideal para | Aprender fundamentos | Projetos IoT e conectados |
 
-**Recomendação**: Comece com Arduino para entender os fundamentos. Quando estiver confortável, migre para ESP32 — a melhor relação custo-benefício para projetos conectados.
+**Recomendação**: Comece com Arduino para entender os fundamentos. Quando estiver confortável, migre para ESP32, a melhor relação custo-benefício para projetos conectados.
 
 ### Variantes ESP32 em destaque (2025-2026)
 
 - **ESP32-S3**: Foco em IA embarcada, aceleração de machine learning
 - **ESP32-C3**: Primeiro RISC-V da Espressif, ultra-baixo consumo (~40 µA em deep sleep)
-- **ESP32-C6**: Wi-Fi 6, Bluetooth 5.3 e suporte a Thread/Zigbee/Matter — ideal para smart home
+- **ESP32-C6**: Wi-Fi 6, Bluetooth 5.3 e suporte a Thread/Zigbee/Matter, ideal para smart home
 
 ## Componentes essenciais
 
@@ -80,7 +80,7 @@ Para começar, você precisa de um kit básico:
 
 ## Seu primeiro projeto: Piscar um LED
 
-Vamos fazer o "Hello World" do Arduino — piscar um LED.
+Vamos fazer o "Hello World" do Arduino, piscar um LED.
 
 ### Circuito
 
@@ -93,15 +93,15 @@ O Arduino Uno já possui um LED embutido conectado ao pino 13. Para este primeir
 const int LED_PIN = 13;
 
 void setup() {
-  // Configura o pino como saída
-  pinMode(LED_PIN, OUTPUT);
+ // Configura o pino como saída
+ pinMode(LED_PIN, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(LED_PIN, HIGH);  // Liga o LED
-  delay(1000);                   // Espera 1 segundo
-  digitalWrite(LED_PIN, LOW);   // Desliga o LED
-  delay(1000);                   // Espera 1 segundo
+ digitalWrite(LED_PIN, HIGH); // Liga o LED
+ delay(1000); // Espera 1 segundo
+ digitalWrite(LED_PIN, LOW); // Desliga o LED
+ delay(1000); // Espera 1 segundo
 }
 ```
 
@@ -140,26 +140,26 @@ Agora vamos ler dados do ambiente usando o sensor DHT22 (mais preciso que o DHT1
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
-  Serial.begin(9600);
-  dht.begin();
+ Serial.begin(9600);
+ dht.begin();
 }
 
 void loop() {
-  float temperatura = dht.readTemperature();
-  float umidade = dht.readHumidity();
+ float temperatura = dht.readTemperature();
+ float umidade = dht.readHumidity();
 
-  if (isnan(temperatura) || isnan(umidade)) {
-    Serial.println("Erro na leitura do sensor!");
-    return;
-  }
+ if (isnan(temperatura) || isnan(umidade)) {
+ Serial.println("Erro na leitura do sensor!");
+ return;
+ }
 
-  Serial.print("Temperatura: ");
-  Serial.print(temperatura);
-  Serial.print("°C | Umidade: ");
-  Serial.print(umidade);
-  Serial.println("%");
+ Serial.print("Temperatura: ");
+ Serial.print(temperatura);
+ Serial.print("°C | Umidade: ");
+ Serial.print(umidade);
+ Serial.println("%");
 
-  delay(2000);
+ delay(2000);
 }
 ```
 
@@ -191,10 +191,10 @@ O Arduino e o ESP32 têm papel central na agricultura de precisão:
 
 - **Monitoramento de solo**: Sensores de umidade, pH, temperatura
 - **Irrigação automatizada**: Acionamento de bombas e válvulas baseado em dados dos sensores
-- **Estufas inteligentes**: Controle de ventilação e iluminação — pesquisadores na China obtiveram aumento de 22% na produção e redução de 35% no uso de água com ESP32
+- **Estufas inteligentes**: Controle de ventilação e iluminação, pesquisadores na China obtiveram aumento de 22% na produção e redução de 35% no uso de água com ESP32
 - **Hidroponia**: Monitoramento de pH e condutividade elétrica
 
-Na Cultivee, usamos ESP32 para automatizar nossos sistemas de cultivo indoor — e ensinamos essas técnicas no Curso de Instrumentação.
+Na Cultivee, usamos ESP32 para automatizar nossos sistemas de cultivo indoor, e ensinamos essas técnicas no Curso de Instrumentação.
 
 ## Projetos em alta para 2025-2026
 
@@ -206,13 +206,13 @@ Na Cultivee, usamos ESP32 para automatizar nossos sistemas de cultivo indoor —
 ## Recursos recomendados
 
 **Tutoriais e comunidades:**
-- **Random Nerd Tutorials** (randomnerdtutorials.com) — 250+ tutoriais ESP32/Arduino
-- **Embarcados** (embarcados.com.br) — comunidade e cursos em português
-- **Hackster.io** — maior comunidade de projetos hardware
+- **Random Nerd Tutorials** (randomnerdtutorials.com), 250+ tutoriais ESP32/Arduino
+- **Embarcados** (embarcados.com.br), comunidade e cursos em português
+- **Hackster.io**, maior comunidade de projetos hardware
 
 **Simuladores online gratuitos:**
-- **Wokwi** (wokwi.com) — melhor simulador: Arduino, ESP32, STM32, Raspberry Pi Pico
-- **Tinkercad** (tinkercad.com) — simulador Arduino ideal para iniciantes
+- **Wokwi** (wokwi.com), melhor simulador: Arduino, ESP32, STM32, Raspberry Pi Pico
+- **Tinkercad** (tinkercad.com), simulador Arduino ideal para iniciantes
 
 **Lojas no Brasil:**
 Eletrogate, MakerHero, Curto Circuito, Usinainfo, RoboCore

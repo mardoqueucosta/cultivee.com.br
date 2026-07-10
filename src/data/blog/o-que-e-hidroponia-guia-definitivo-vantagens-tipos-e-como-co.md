@@ -7,8 +7,8 @@ resumo: >-
 categoria: 'Agro'
 categoriaVariant: 'agro'
 data: '2026-05-09'
-dataModificacao: '2026-05-09'
-leitura: '24 min'
+dataModificacao: '2026-07-10'
+leitura: '22 min'
 tldr: >-
   Hidroponia é o cultivo de plantas sem solo, com nutrição entregue via
   solução aquosa balanceada. O termo foi cunhado em 1937 por William F.
@@ -84,27 +84,9 @@ A escolha do sistema é a decisão de arquitetura mais importante. Cada arranjo 
 
 ## Solução nutritiva: o coração da hidroponia
 
-A [solução nutritiva](/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora) é o "solo líquido" da hidroponia. A formulação canônica brasileira é a [Furlani (1995, 1998)](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22), descrita nos Boletins Técnicos IAC nº 55 e 168, e referência para 95% das operações comerciais brasileiras de folhosas. A receita por 1.000 litros de água é:
+A solução nutritiva é o "solo líquido" da hidroponia: uma mistura de água com os 13 nutrientes minerais essenciais dissolvidos em concentrações conhecidas. A formulação de referência no Brasil é a [Furlani (1995, 1998)](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22), descrita nos Boletins Técnicos IAC nº 55 e 168 e adotada em cerca de 95% das operações comerciais de folhosas. No dia a dia, o produtor acompanha dois parâmetros centrais: a condutividade elétrica (EC), entre 1,5 e 2,2 dS/m para folhosas, e o pH, na faixa de 5,5 a 6,5. Um achado útil para o clima tropical vem de [Cometti et al. (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt), na *Horticultura Brasileira*: 50% da concentração da solução Furlani entrega 90% da produtividade máxima em alface, um ponto de partida de menor custo e risco para iniciantes.
 
-| Sal | Quantidade (g) | Nutriente principal |
-|---|---|---|
-| Nitrato de cálcio (Ca(NO₃)₂·4H₂O) | 750 | Cálcio, nitrato |
-| Nitrato de potássio (KNO₃) | 500 | Potássio, nitrato |
-| Fosfato monoamônico (MAP) | 150 | Fósforo, amônio |
-| Sulfato de magnésio (MgSO₄·7H₂O) | 400 | Magnésio, enxofre |
-| Fe-EDTA 13% | 200 mL de solução | Ferro |
-| Mix de micronutrientes | conforme receita IAC | B, Mn, Zn, Cu, Mo |
-
-Os parâmetros operacionais consolidados pela pesquisa brasileira são:
-
-- **EC** (condutividade elétrica): 1,5 a 2,2 dS/m para folhosas, 2,5 a 3,5 para tomate e pimentão.
-- **pH**: 5,5 a 6,5, com faixa ideal entre 6,0 e 6,2.
-- **Temperatura da solução**: 18 a 25 °C (acima de 28 °C, *Pythium* prolifera e mata raízes).
-- **Oxigênio dissolvido**: mínimo 5 mg/L, ideal 7 a 8 mg/L.
-
-Um achado importante para o clima brasileiro vem de [Cometti et al. (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt) na *Horticultura Brasileira*. Os autores demonstraram que **50% da concentração da solução Furlani entrega 90% da produtividade máxima** em alface, com EC próxima de 1,0 dS/m. Para iniciantes em climas tropicais, é um ponto de partida com menos risco e custo reduzido em insumos.
-
-A medição de pH e EC é diária, com ajustes pontuais. As correções são feitas com ácido fosfórico ou ácido nítrico (para baixar o pH) e hidróxido de potássio diluído (para subir). A renovação completa da solução acontece a cada 7 a 21 dias dependendo do volume e da temperatura. Atenção crítica: nunca misturar nitrato de cálcio com fosfato ou sulfato no mesmo recipiente concentrado, porque a precipitação de fosfato ou sulfato de cálcio (sólido branco no fundo) tira esses nutrientes da disponibilidade. Sempre dois recipientes separados, conhecidos como solução A (cálcio mais ferro) e solução B (todos os demais sais).
+O preparo tem um cuidado que não pode faltar: nitrato de cálcio nunca vai no mesmo recipiente concentrado que fosfato ou sulfato, porque a precipitação retira esses nutrientes da disponibilidade. Por isso a receita é sempre dividida em solução A (cálcio e ferro) e solução B (os demais sais). As dosagens exatas de cada sal por 1.000 litros, os parâmetros completos de EC, pH, temperatura e oxigênio dissolvido, e o passo a passo de mistura e correção estão no [guia completo da solução nutritiva com calculadora](/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora) e no [passo a passo de preparo com tabelas prontas](/blog/como-preparar-solucao-nutritiva-passo-a-passo-tabelas-para-1).
 
 ## Vantagens reais da hidroponia
 
@@ -124,23 +106,11 @@ Quatro vantagens consolidadas justificam o crescimento global do setor.
 > "A produtividade por área em vertical farming pode chegar a 28 ou 75 vezes a do cultivo no solo. O grande desafio brasileiro segue sendo o custo da energia elétrica, que pode representar até 40% do OPEX em sistemas indoor."
 > Fonte: Setor de CEA, em reportagens compiladas pelo [Projeto Draft (2025)](https://www.projetodraft.com/fazenda-vertical-pioneira-no-pais-a-pink-farms-quer-triplicar-a-producao-mas-a-conta-de-luz-e-so-um-dos-obstaculos-no-caminho/)
 
-## Como começar em casa: 7 passos com R$ 80 a R$ 1.500
+## Como começar em casa
 
-A hidroponia caseira é o ponto de entrada natural. Sete passos cobrem do zero à primeira colheita.
+A hidroponia caseira é o ponto de entrada natural e funciona em escalas de investimento muito diferentes. O caminho de menor atrito é o sistema Kratky em caixa plástica de 30 litros: custa de R$ 30 a R$ 80, não usa bomba nem energia e entrega de 6 a 8 alfaces em ciclo único de 35 a 45 dias. Quem quer evoluir para colheita contínua monta um NFT mini com tubo de 1,5 metro, na faixa de R$ 600 a R$ 1.200 em kit pronto da [Hidrogood](https://hidrogood.com.br) ou Todo Hidro.
 
-**Passo 1: escolha o sistema.** Para iniciar, Kratky em caixa plástica de 30 litros é o caminho de menor atrito. Custa R$ 30 a R$ 80, não usa bomba, não consome energia e entrega 6 a 8 alfaces em ciclo único de 35 a 45 dias. Para quem quer evoluir para colheita contínua, NFT mini com tubo único de 1,5 metro custa R$ 600 a R$ 1.200 em kit pronto da [Hidrogood](https://hidrogood.com.br) ou Todo Hidro.
-
-**Passo 2: providencie os materiais.** Para Kratky: caixa plástica opaca, placa de isopor com furos de 50 mm, net cups, espuma fenólica, sementes peletizadas, solução nutritiva pronta A+B e canetas digitais de pH e EC. Para NFT mini: tudo o anterior mais tubo de PVC food grade de 75 mm, bomba submersa de 600 a 1.000 L/h, mangueira flexível, timer digital e estrutura suporte.
-
-**Passo 3: prepare a solução nutritiva.** Compre kit pronto A+B da Hidrogood ou Plantmax (R$ 50 a R$ 90 para 200 litros) e siga as instruções. Adicione primeiro a solução B no reservatório com água, depois a solução A, sempre com agitação. Confira pH (entre 5,8 e 6,2) e EC (entre 1,2 e 1,8 mS/cm para alface).
-
-**Passo 4: germine as mudas.** Coloque a semente peletizada em cubo de espuma fenólica de 2 × 2 × 2 cm previamente embebido em água com pH 5,8. Mantenha em ambiente escuro e úmido por 24 a 48 horas. Para volume residencial, uma marmita plástica fechada serve como câmara de germinação.
-
-**Passo 5: transplante para o sistema.** Quando a muda apresenta 2 a 4 folhas verdadeiras (cerca de 7 a 12 dias após a germinação), transfira o cubo de espuma para um net cup e encaixe-o na placa de isopor (Kratky) ou no furo do tubo NFT. Verifique que o fundo do net cup está em contato com a solução.
-
-**Passo 6: acompanhe o crescimento.** Em Kratky, a única atenção é manter o reservatório sem luz para evitar algas e conferir que o nível baixa gradualmente, expondo as raízes superiores ao ar. Em NFT mini, ligue a bomba e configure o timer para 15 minutos ligada e 15 minutos desligada. Meça pH e EC a cada 2 a 3 dias e ajuste se necessário.
-
-**Passo 7: colha em 30 a 45 dias.** Arranque a planta inteira com o cubo de espuma fenólica. Lave em água corrente, embale e mantenha refrigerada a 4 °C. A alface "viva" com torrão preserva integridade radicular e estende a durabilidade na geladeira para até 10 dias.
+Em qualquer dos dois, o roteiro é o mesmo: preparar a solução com um kit pronto A+B, germinar as sementes em cubos de espuma fenólica, transplantar as mudas para o net cup quando surgem de 2 a 4 folhas verdadeiras, acompanhar pH e EC a cada 2 ou 3 dias e colher em 30 a 45 dias. A lista completa de materiais, o dimensionamento da bomba, a configuração do timer e os cuidados específicos de cada sistema estão detalhados no [guia de hidroponia caseira para montar seu sistema em casa](/blog/hidroponia-caseira-passo-a-passo-monte-seu-sistema-em-casa).
 
 > Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/arduino-iniciantes-primeiros-passos-automacao)
 
@@ -197,7 +167,7 @@ Os erros mais frequentes em hidroponia são previsíveis e evitáveis. A lista a
 
 Cinco frentes consolidam-se nos próximos cinco anos.
 
-**Vertical farming acelerado em segmentos premium.** Apesar das falências em massa do segmento gigante nos EUA, operações de escala média (500 a 5.000 m²) com folhosas premium e [microgreens](/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef) têm economics positiva em centros urbanos. Pink Farms, Be Green e Fazenda Cubo lideram o Brasil.
+**Vertical farming acelerado em segmentos premium.** Apesar das falências em massa do segmento gigante nos EUA, operações de escala média (500 a 5.000 m²) com folhosas premium e [microgreens](/blog/microgreens-guia-completo-de-cultivo-comercial-e-viabilidade) têm economics positiva em centros urbanos. Pink Farms, Be Green e Fazenda Cubo lideram o Brasil.
 
 **IoT e dosagem automatizada.** Sensores de pH, EC, temperatura e oxigênio dissolvido conectados a ESP32 com bombas dosadoras automáticas permitem manejo preciso. Custo abaixo de R$ 1.500 em DIY, com economia de 30 a 50% em fertilizantes documentada em literatura recente.
 

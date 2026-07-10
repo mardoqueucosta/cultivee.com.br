@@ -21,7 +21,7 @@ imagens:
 
 ## Introdução à agricultura de precisão
 
-A agricultura de precisão usa tecnologia para otimizar a produção agrícola. Em vez de tratar uma lavoura inteira de forma uniforme, ela permite decisões específicas para cada ponto do campo — ou cada planta, no caso de sistemas controlados.
+A agricultura de precisão usa tecnologia para otimizar a produção agrícola. Em vez de tratar uma lavoura inteira de forma uniforme, ela permite decisões específicas para cada ponto do campo, ou cada planta, no caso de sistemas controlados.
 
 O mercado global de sensores agrícolas foi avaliado em **US$ 2,3 bilhões em 2025**, com projeção de US$ 6,9 bilhões até 2035. Fazendas que utilizam sensores de precisão reportam até **21% mais produtividade** e redução significativa no uso de água.
 
@@ -47,24 +47,24 @@ Sensores são os "olhos" dessa agricultura inteligente. Eles coletam dados que, 
 **Código exemplo (ESP32):**
 
 ```cpp
-const int SENSOR_PIN = 34;  // ADC1 no ESP32
+const int SENSOR_PIN = 34; // ADC1 no ESP32
 const int SECO = 3200;
 const int MOLHADO = 1400;
 
 void setup() {
-  Serial.begin(115200);
+ Serial.begin(115200);
 }
 
 void loop() {
-  int leitura = analogRead(SENSOR_PIN);
-  int umidade = map(leitura, SECO, MOLHADO, 0, 100);
-  umidade = constrain(umidade, 0, 100);
+ int leitura = analogRead(SENSOR_PIN);
+ int umidade = map(leitura, SECO, MOLHADO, 0, 100);
+ umidade = constrain(umidade, 0, 100);
 
-  Serial.print("Umidade do solo: ");
-  Serial.print(umidade);
-  Serial.println("%");
+ Serial.print("Umidade do solo: ");
+ Serial.print(umidade);
+ Serial.println("%");
 
-  delay(1000);
+ delay(1000);
 }
 ```
 
@@ -154,9 +154,9 @@ Para áreas rurais sem Wi-Fi, o LoRaWAN é a solução:
 - **Mercado**: US$ 10,88 bilhões em 2025, crescendo 33% ao ano
 
 **Placas ESP32 + LoRa:**
-- LILYGO T3S3 (ESP32-S3 + SX1262) — R$ 80-150
-- Heltec WiFi LoRa 32 — R$ 80-120
-- TTGO LoRa32 com OLED — R$ 70-100
+- LILYGO T3S3 (ESP32-S3 + SX1262), R$ 80-150
+- Heltec WiFi LoRa 32, R$ 80-120
+- TTGO LoRa32 com OLED, R$ 70-100
 
 **Infraestrutura:**
 - The Things Network (TTN): rede comunitária gratuita de gateways
@@ -204,7 +204,7 @@ Combinando os sensores apresentados, você pode criar uma estufa que:
 
 Sensores são a base de qualquer sistema de agricultura inteligente. Em 2025, o ecossistema está mais acessível do que nunca: um ESP32 de R$ 50 + sensores de R$ 10-25 + painel solar de R$ 30 já formam uma estação de monitoramento completa.
 
-Começar com projetos simples — um sensor de umidade controlando irrigação — e evoluir gradualmente é o caminho mais seguro.
+Começar com projetos simples, um sensor de umidade controlando irrigação, e evoluir gradualmente é o caminho mais seguro.
 
 Na Cultivee, ensinamos não apenas a conectar fios, mas a entender o sistema como um todo: da planta ao código, do sensor à decisão agronômica.
 

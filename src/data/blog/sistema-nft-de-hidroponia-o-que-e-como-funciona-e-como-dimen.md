@@ -7,7 +7,7 @@ resumo: >-
 categoria: 'Agro'
 categoriaVariant: 'agro'
 data: '2026-05-09'
-dataModificacao: '2026-05-09'
+dataModificacao: '2026-07-10'
 leitura: '23 min'
 tldr: >-
   NFT é a hidroponia de filme fino em canais inclinados, criada em 1965 por
@@ -54,7 +54,7 @@ A produção brasileira hidropônica ocupa hoje entre 1.500 e 3.000 hectares, se
 > "O Brasil aparece em primeiro lugar na lista de países que mais publicam sobre NFT, com 106 documentos registrados, empatado com os Estados Unidos. Isso reflete a maturidade do nosso ecossistema de pesquisa em hidroponia tropical."
 > Fonte: [Palmitessa, Signore & Santamaria (2024)](https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1504792/full), em *Frontiers in Plant Science*
 
-> Leia também: [panorama complementar de NFT em pequenos espaços](/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co)
+> Leia também: [novo em hidroponia? Comece pelo guia definitivo do método](/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co)
 
 A maturidade do método explica seu domínio: ferramentas operacionais consolidadas, fornecedores nacionais com garantia de 10 anos no perfil, ciclos previsíveis de 30 a 45 dias para folhosas, manejo nutricional padronizado pela ciência brasileira e ecossistema acadêmico que forma engenheiros, técnicos e pesquisadores há 30 anos. Para quem inicia hoje, NFT continua sendo o caminho de menor risco e maior previsibilidade.
 
@@ -117,37 +117,24 @@ A tabela abaixo consolida os parâmetros padrão validados pela literatura brasi
 
 Em escala doméstica, o cálculo segue a mesma lógica em proporção menor. Um kit residencial com 32 plantas precisa de bomba de 600 a 1.000 L/h, reservatório de 25 a 30 litros e um único perfil de 1,5 a 2,0 metros com 6 a 8 furos. Um sistema de varanda com 96 plantas (kit Todo Hidro N4) opera com bomba de 1.000 a 1.500 L/h e reservatório de 60 litros.
 
-## A solução nutritiva Furlani
+> Leia também: [monte um sistema caseiro do zero, passo a passo](/blog/hidroponia-caseira-passo-a-passo-monte-seu-sistema-em-casa)
 
-A solução nutritiva é o "solo" do sistema NFT. A formulação canônica brasileira, descrita por [Furlani (1998) no Boletim Técnico IAC nº 168](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22), permanece como referência padrão para folhosas. A receita por 1.000 litros de água é:
+## A solução nutritiva no canal NFT
+
+A solução nutritiva é o "solo" do sistema, e a formulação de referência no Brasil é a de [Furlani (1998), no Boletim Técnico IAC nº 168](https://www.bdpa.cnptia.embrapa.br/consulta/busca?b=ad&busca=autoria:%22FURLANI,+P.+R.%22). A receita completa por 1.000 litros, sal a sal, a separação obrigatória em soluções A (nitrato de cálcio mais ferro quelatizado) e B (demais sais) para evitar a precipitação de fosfato de cálcio, as proporções para reservatórios residenciais e os kits prontos de varejo estão detalhados no guia dedicado. Aqui o foco é o que muda quando essa solução recircula em filme fino dentro do canal.
 ![Preparo da solução nutritiva Furlani em recipientes A e B com canetas de pH e EC](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen/preparo-da-solucao-nutritiva-furlani-em-recipientes-a-e-2.jpg)
 *Preparo da solução Furlani em soluções A e B separadas, com medição de pH e EC.*
 
 
-| Sal | Quantidade | Função principal |
-|---|---|---|
-| Nitrato de cálcio Ca(NO₃)₂·4H₂O | 750 g | Cálcio, nitrato |
-| Nitrato de potássio KNO₃ | 500 g | Potássio, nitrato |
-| Fosfato monoamônico (MAP) NH₄H₂PO₄ | 150 g | Fósforo, amônio |
-| Sulfato de magnésio MgSO₄·7H₂O | 400 g | Magnésio, enxofre |
-| Sulfato de manganês MnSO₄·H₂O | 30 g (em 1.000 mL de mix de micros) | Manganês |
-| Ácido bórico H₃BO₃ | 30 g | Boro |
-| Sulfato de zinco ZnSO₄·7H₂O | 10 g | Zinco |
-| Sulfato de cobre CuSO₄·5H₂O | 3 g | Cobre |
-| Molibdato de sódio Na₂MoO₄·2H₂O | 3 g | Molibdênio |
-| Fe-EDTA | 200 mL | Ferro quelatizado |
+> Leia também: [guia completo da solução nutritiva, com receita Furlani e calculadora](/blog/solucao-nutritiva-para-hidroponia-guia-completo-calculadora)
 
-**Importante:** os sais devem ser dissolvidos em **dois recipientes separados**, conhecidos como solução A (nitrato de cálcio + ferro quelatizado) e solução B (todos os demais sais). Misturar nitrato de cálcio com fosfato no mesmo concentrado provoca precipitação de fosfato de cálcio (sólido branco no fundo do recipiente), tirando esses dois nutrientes da disponibilidade nutricional.
+No canal NFT, a solução recirculante trabalha com **EC entre 1,0 e 2,0 dS/m** (referência operacional de 1,5) e **pH entre 5,5 e 6,5**, com valor ideal próximo de 6,0 para folhosas. A medição é diária nas duas primeiras semanas e a cada 2 a 3 dias depois, com ajuste de pH por ácido fosfórico para baixar ou hidróxido de potássio diluído para subir. Como a lâmina é fina e fica parcialmente exposta ao ar, a oxigenação se mantém naturalmente acima de 5 mg/L sem aeração ativa, desde que a temperatura da solução fique abaixo de 30 °C. Acima disso o oxigênio dissolvido despenca e *Pythium aphanidermatum* prolifera, o principal risco térmico do NFT.
 
-Um achado importante para o clima brasileiro vem de [Cometti, Matias, Zonta, Mary e Fernandes (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt), publicado na *Horticultura Brasileira*. Os autores demonstraram que **50% da concentração da solução Furlani entrega massa seca equivalente a 100% em alface 'Vera'**, com EC próxima de 1,0 dS/m e temperatura de 30 ± 4 °C. Em climas quentes, isso representa economia direta de insumos sem comprometer produtividade. A leitura prática é simples: em janeiro e fevereiro, é seguro operar com EC entre 1,0 e 1,2 mS/cm, sem perda de colheita.
+Um achado importante para o clima brasileiro vem de [Cometti, Matias, Zonta, Mary e Fernandes (2008)](https://www.scielo.br/j/hb/a/HsH735SySknvSv8QyBbFJXs/?lang=pt), publicado na *Horticultura Brasileira*. Os autores demonstraram que **50% da concentração da solução Furlani entrega massa seca equivalente a 100% em alface 'Vera'**, com EC próxima de 1,0 dS/m e temperatura de 30 ± 4 °C. Em janeiro e fevereiro, portanto, é seguro operar o NFT com EC entre 1,0 e 1,2 dS/m, economizando insumos sem perder colheita.
 
-A renovação da solução é feita a cada 15 a 21 dias. A reposição parcial, por reposição de água que evapora e adição proporcional de A+B, mantém a EC dentro da faixa-alvo entre renovações. A medição de pH e EC é diária nas duas primeiras semanas e a cada 2 a 3 dias depois, com ajuste de pH usando ácido fosfórico (para baixar) ou hidróxido de potássio diluído (para subir).
+A solução é renovada por completo a cada 15 a 21 dias. Entre renovações, repor a água que evapora com adição proporcional de A+B mantém a EC dentro da faixa-alvo. Esse é o cuidado crítico do reservatório recirculante: repondo só água, a EC cai rápido abaixo de 1,0 dS/m e as plantas entram em subnutrição.
 
 > Leia também: [como escolher sensores agrícolas de pH e EC](/blog/sensores-agricultura-guia-escolha-implementacao)
-
-A composição final da solução Furlani entrega aproximadamente 198 mg/L de nitrogênio total, 39 mg/L de fósforo, 180 mg/L de potássio, 143 mg/L de cálcio, 41 mg/L de magnésio e 52 mg/L de enxofre. Para sistemas residenciais com reservatórios de 25 a 50 litros, divida proporcionalmente as quantidades dos sais. Em 30 litros: 22,5 g de nitrato de cálcio, 15 g de nitrato de potássio, 9 g de sulfato de magnésio, 4,5 g de MAP e 0,75 g de mix de micros, mais 6 mL de Fe-EDTA.
-
-A alternativa pronta no varejo brasileiro são kits do tipo "Hidrogood Folhosas A+B", com preço entre R$ 50 e R$ 90 para preparar 200 litros. São mais caros que comprar os sais separados, mas isentam o iniciante de manipular reagentes em pó. Para quem está começando, é a opção recomendada.
 
 ## Layout, bancadas e densidade de plantio
 

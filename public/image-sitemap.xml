@@ -22,9 +22,19 @@
   <url>
     <loc>https://cultivee.com.br/blog/vertical-farming-no-brasil-cases-pink-farms-be-green-mighty</loc>
     <image:image>
-      <image:loc>https://cultivee.com.br/blog/vertical-farming-no-brasil-cases-pink-farms-be-green-mighty.jpg</image:loc>
-      <image:title>Prateleiras verticais de folhosas iluminadas por LED rosa em fazenda vertical urbana brasileira</image:title>
-      <image:caption>A luz rosa das fazendas verticais vem da soma de LEDs azul e vermelho, o espectro que a folha usa para crescer.</image:caption>
+      <image:loc>https://cultivee.com.br/blog/vertical-farming-no-brasil-cases-pink-farms-be-green-mighty/prateleiras-verticais-de-folhosas-sob-luz-rosa-de-led-e-1.jpg</image:loc>
+      <image:title>Prateleiras verticais de folhosas sob luz rosa de LED em fazenda vertical urbana de São Paulo</image:title>
+      <image:caption>As torres de cultivo empilhadas sob LED rosa são a assinatura visual das fazendas verticais brasileiras.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/vertical-farming-no-brasil-cases-pink-farms-be-green-mighty/operador-manejando-bandejas-de-folhosas-com-raizes-bran-2.jpg</image:loc>
+      <image:title>Operador manejando bandejas de folhosas com raízes brancas em calhas de hidroponia NFT em estufa</image:title>
+      <image:caption>Nas calhas de NFT, um filme fino de solução nutritiva banha as raízes brancas de forma contínua.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/vertical-farming-no-brasil-cases-pink-farms-be-green-mighty/bandejas-densas-de-microverdes-recem-brotados-sob-luz-d-3.jpg</image:loc>
+      <image:title>Bandejas densas de microverdes recém-brotados sob luz de LED dentro de contêiner de cultivo climatizado</image:title>
+      <image:caption>Microverdes colhidos entre 7 e 21 dias são o produto de maior margem das fazendas verticais.</image:caption>
     </image:image>
   </url>
   <url>
@@ -43,24 +53,6 @@
       <image:loc>https://cultivee.com.br/blog/bioestimulante-de-alga-ascophyllum-nodosum-o-que-a-ciencia/hortalicas-folhosas-em-estufa-de-ambiente-protegido-ond-3.jpg</image:loc>
       <image:title>Hortaliças folhosas em estufa de ambiente protegido onde o bioestimulante de alga reforça o vigor das mudas</image:title>
       <image:caption>Em sistemas protegidos e olericultura, o extrato de alga complementa a nutrição e reforça o vigor inicial das mudas.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://cultivee.com.br/blog/fertilizante-inteligente-brasileiro-como-a-nanotecnologia-de</loc>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-brasileiro-como-a-nanotecnologia-de/granulos-de-ureia-sobre-solo-tropical-avermelhado-e-res-1.jpg</image:loc>
-      <image:title>Grânulos de ureia sobre solo tropical avermelhado e ressecado sob sol forte, ilustrando perda de nitrogênio</image:title>
-      <image:caption>Em solo tropical quente, boa parte do nitrogênio da ureia se perde por volatilização antes de chegar à planta</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-brasileiro-como-a-nanotecnologia-de/diagrama-em-corte-de-granulo-de-fertilizante-revestido--2.jpg</image:loc>
-      <image:title>Diagrama em corte de grânulo de fertilizante revestido com núcleo de ureia e camada de nanopartículas de liberação controlada</image:title>
-      <image:caption>Estrutura de um grânulo de liberação controlada: núcleo de ureia protegido por revestimento que modula a liberação do nitrogênio</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-brasileiro-como-a-nanotecnologia-de/raizes-brancas-de-alface-hidroponica-imersas-em-solucao-3.jpg</image:loc>
-      <image:title>Raízes brancas de alface hidropônica imersas em solução nutritiva dentro de canal NFT em estufa</image:title>
-      <image:caption>Na hidroponia, o nutriente já é entregue no tempo certo pela solução nutritiva, a mesma lógica de eficiência que a nanotecnologia busca no solo</image:caption>
     </image:image>
   </url>
   <url>
@@ -451,30 +443,12 @@
     <image:image>
       <image:loc>https://cultivee.com.br/blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi/imagem-hyperrealista-dos-4-substratos-hidroponicos-fibr-2.jpg</image:loc>
       <image:title>Imagem hyperrealista dos 4 substratos hidropônicos: fibra de coco, perlita, vermiculita e lã de rocha.</image:title>
-      <image:caption>Os quatro substratos hidropônicos clássicos — fibra de coco, perlita, vermiculita e lã de rocha — com suas características visuais distintas, resultado de suas origens e processos de fabricação.</image:caption>
+      <image:caption>Os quatro substratos hidropônicos clássicos, fibra de coco, perlita, vermiculita e lã de rocha, com suas características visuais distintas, resultado de suas origens e processos de fabricação.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://cultivee.com.br/blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi/diagrama-do-processo-de-buffering-da-fibra-de-coco-most-3.jpg</image:loc>
       <image:title>Diagrama do processo de buffering da fibra de coco, mostrando a troca de íons de sódio e potássio por cálcio.</image:title>
       <image:caption>O processo de buffering é essencial para a fibra de coco, removendo íons indesejados como sódio e potássio e saturando os sítios de troca com cálcio, garantindo a disponibilidade desse nutriente vital para a planta.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia</loc>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia/calculo-e-pesagem-de-sais-para-preparo-de-solucao-nutri-1.jpg</image:loc>
-      <image:title>Cálculo e pesagem de sais para preparo de solução nutritiva com balança digital</image:title>
-      <image:caption>Pesagem precisa dos sais conforme cálculo da fórmula Furlani escalada.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia/medicao-diaria-de-ph-e-ec-com-canetas-digitais-em-soluc-2.jpg</image:loc>
-      <image:title>Medição diária de pH e EC com canetas digitais em solução nutritiva hidropônica</image:title>
-      <image:caption>Medição diária com canetas digitais, prática essencial do manejo da solução.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia/comparativo-entre-solucao-nutritiva-preparada-corretame-3.jpg</image:loc>
-      <image:title>Comparativo entre solução nutritiva preparada corretamente e solução com precipitação química</image:title>
-      <image:caption>À esquerda, solução correta; à direita, precipitação por mistura indevida de cálcio e sulfato.</image:caption>
     </image:image>
   </url>
   <url>
@@ -568,24 +542,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://cultivee.com.br/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef</loc>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef/bandejas-variadas-de-microverdes-em-prateleira-com-ilum-1.jpg</image:loc>
-      <image:title>Bandejas variadas de microverdes em prateleira com iluminação LED em produção comercial</image:title>
-      <image:caption>Produção comercial de microverdes em bandejas com substrato e iluminação LED.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef/bandejas-clamshell-de-microverdes-embalados-para-venda--2.jpg</image:loc>
-      <image:title>Bandejas clamshell de microverdes embalados para venda em hortifruti premium</image:title>
-      <image:caption>Microverdes embalados em clamshell para venda direta a hortifrutis e restaurantes premium.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/microverdes-microgreens-o-guia-completo-2026-o-que-sao-benef/comparativo-entre-bandeja-de-microgreens-saudaveis-e-ba-3.jpg</image:loc>
-      <image:title>Comparativo entre bandeja de microgreens saudáveis e bandeja com damping-off</image:title>
-      <image:caption>À esquerda, microgreens saudáveis; à direita, plântulas com damping-off por densidade excessiva.</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://cultivee.com.br/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co</loc>
     <image:image>
       <image:loc>https://cultivee.com.br/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co/bancada-hidroponica-nft-em-estufa-moderna-com-alfaces-c-1.jpg</image:loc>
@@ -658,35 +614,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://cultivee.com.br/blog/5-erros-comuns-escrita-tcc</loc>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/tcc-escrita.jpg</image:loc>
-      <image:title>Mesa de estudo com livros e laptop para escrita acadêmica</image:title>
-      <image:caption>Estruturar antes de escrever evita retrabalho e bloqueio criativo.</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://cultivee.com.br/blog/arduino-iniciantes-primeiros-passos-automacao</loc>
     <image:image>
       <image:loc>https://cultivee.com.br/blog/arduino.jpg</image:loc>
       <image:title>Placa Arduino com circuito montado em protoboard</image:title>
       <image:caption>ESP32 oferece Wi-Fi + Bluetooth integrados, ideal para projetos IoT.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://cultivee.com.br/blog/hidroponia-nft-sistema-eficiente-pequenos-espacos</loc>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/hidroponia.jpg</image:loc>
-      <image:title>Sistema hidropônico NFT com canais inclinados e plantas</image:title>
-      <image:caption>Sistema NFT em PVC 100mm — 90% menos água que o cultivo em solo.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://cultivee.com.br/blog/como-estruturar-revisao-bibliografica-eficiente</loc>
-    <image:image>
-      <image:loc>https://cultivee.com.br/blog/revisao-bibliografica.jpg</image:loc>
-      <image:title>Estação de estudo com livros abertos para revisão de literatura</image:title>
-      <image:caption>Organize sua revisão por temas, não por autores — esse é o erro mais comum.</image:caption>
     </image:image>
   </url>
   <url>
