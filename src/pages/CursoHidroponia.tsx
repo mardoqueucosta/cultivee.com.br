@@ -1,5 +1,5 @@
+import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -17,6 +17,8 @@ import {
   Target, Zap, GraduationCap, Gauge, Pipette, Ruler,
   CircleDot, Settings, Wrench, FlaskConical, BarChart3
 } from "lucide-react";
+import { SITE_BASE } from "@/lib/breadcrumb-schema";
+import { ORG_ID, organizationJsonLd } from "@/lib/seo-schemas";
 
 const modules = [
   {
@@ -348,12 +350,50 @@ const faqs = [
 ];
 
 const CursoHidroponiaPage = () => {
+  const pageUrl = `${SITE_BASE}/cursos/hidroponia`;
+  const pageDescription =
+    "Curso completo de hidroponia: monte seu sistema NFT e produza hortaliças o ano todo. 10 módulos, 60+ horas de teoria e prática. Do zero à produção comercial.";
+  const courseLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Hidroponia: Cultivo de Hortaliças",
+    description: pageDescription,
+    url: pageUrl,
+    inLanguage: "pt-BR",
+    provider: { "@id": ORG_ID },
+    hasCourseInstance: [
+      {
+        "@type": "CourseInstance",
+        courseMode: "online",
+        courseWorkload: "PT60H",
+      },
+    ],
+  };
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Curso de Hidroponia — Cultivo de Hortaliças | Cultivee Agro</title>
-        <meta name="description" content="Curso completo de hidroponia: monte seu sistema NFT e produza hortaliças o ano todo. 10 módulos, 60+ horas de conteúdo teórico e prático. Do zero à produção comercial." />
-      </Helmet>
+      <Head>
+        <title>Curso de Hidroponia: Cultivo de Hortaliças | Cultivee Agro</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content="Curso de Hidroponia: Cultivo de Hortaliças | Cultivee Agro" />
+        <meta property="og:description" content={pageDescription} />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(courseLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
+      </Head>
 
       <Navbar />
 

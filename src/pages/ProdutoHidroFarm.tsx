@@ -11,6 +11,8 @@ import {
   Zap, ToggleLeft, Layers, ExternalLink, ChevronRight, Thermometer,
   Wind, Waves, Beaker, Sparkles, Gauge, AlertTriangle
 } from "lucide-react";
+import { SITE_BASE } from "@/lib/breadcrumb-schema";
+import { ORG_ID } from "@/lib/seo-schemas";
 
 const premiumFeatures = [
   {
@@ -79,10 +81,35 @@ const comparacao = [
 ];
 
 const ProdutoHidroFarmPage = () => {
+  const pageUrl = `${SITE_BASE}/produtos/hidro-farm`;
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Cultivee Hidro Farm",
+    description:
+      "Módulo premium de automação para hidroponia com tudo do Cultivee Hidro somado a reposição automática de água, alertas push e por e-mail, sensor DHT11 de temperatura e umidade e bomba de homogeneização.",
+    brand: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
+    url: pageUrl,
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Head>
-        <title>Hidro Farm | Cultivee</title>
+        <title>Hidro Farm: Automação Premium para Hidroponia | Cultivee</title>
+        <meta
+          name="description"
+          content="Cultivee Hidro Farm: reposição automática de água, alertas push e e-mail, sensor de temperatura e umidade e 8 relés. Ideal para hidroponia NFT e gotejamento."
+        />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content="Hidro Farm: Automação Premium para Hidroponia | Cultivee" />
+        <meta
+          property="og:description"
+          content="Reposição automática de água, alertas no celular e sensores ambientais. A versão definitiva para hidroponia NFT e gotejamento."
+        />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify(productLd)}</script>
       </Head>
       <Navbar />
 

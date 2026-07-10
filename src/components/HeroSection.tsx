@@ -25,9 +25,12 @@ const HeroSection = () => {
             </span>
           </h1>
           
+          {/* Definição extraível da marca (GEO): frase "A Cultivee é..." que LLMs e
+              buscadores conseguem citar isolada para responder "o que é a Cultivee" */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Cursos práticos em agricultura tecnificada, escrita acadêmica e instrumentação. 
-            <span className="font-semibold text-foreground"> Três caminhos para sua autonomia.</span>
+            A Cultivee é uma plataforma brasileira de cultivo inteligente: guias técnicos
+            de hidroponia e horta em casa, cursos práticos e automação de cultivo.
+            <span className="font-semibold text-foreground"> Conhecimento com fonte, da semente à colheita.</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">

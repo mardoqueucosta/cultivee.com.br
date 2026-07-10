@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,6 +9,8 @@ import {
   Shield, Smartphone, Gauge, Home, Plane, Factory, TreePine,
   CheckCircle2, ArrowRight, Package, Activity
 } from "lucide-react";
+import { SITE_BASE } from "@/lib/breadcrumb-schema";
+import { collectionPageJsonLd } from "@/lib/seo-schemas";
 
 const produtos = [
   {
@@ -162,8 +165,36 @@ const faqs = [
 ];
 
 const ProdutosPage = () => {
+  const collectionLd = collectionPageJsonLd({
+    pageName: "Automação para Cultivo Indoor e Hidroponia | Cultivee",
+    pageUrl: `${SITE_BASE}/produtos`,
+    description:
+      "Linha Cultivee de módulos de automação e monitoramento para cultivo indoor: Hidro, Hidro Farm e Cam.",
+    items: produtos.map((p) => ({
+      name: p.name,
+      url: `/produtos/${p.slug}`,
+    })),
+  });
+
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Automação para Cultivo Indoor e Hidroponia | Cultivee</title>
+        <meta
+          name="description"
+          content="Conheça os três módulos Cultivee: Hidro, Hidro Farm e Cam. Automação plug and play para estufas, tendas de cultivo e sistemas hidropônicos, sem mensalidade."
+        />
+        <link rel="canonical" href={`${SITE_BASE}/produtos`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_BASE}/produtos`} />
+        <meta property="og:title" content="Automação para Cultivo Indoor e Hidroponia | Cultivee" />
+        <meta
+          property="og:description"
+          content="Três módulos plug and play: Cultivee Hidro, Hidro Farm e Cam. Automação e monitoramento do cultivo sem mensalidade."
+        />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify(collectionLd)}</script>
+      </Head>
       <Navbar />
 
       {/* Hero */}

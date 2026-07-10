@@ -1,5 +1,5 @@
+import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -16,6 +16,8 @@ import {
   AlertTriangle, Layers, ThermometerSun, Wind, Scissors, Package,
   Target, Zap, GraduationCap
 } from "lucide-react";
+import { SITE_BASE } from "@/lib/breadcrumb-schema";
+import { ORG_ID, organizationJsonLd } from "@/lib/seo-schemas";
 
 const modules = [
   {
@@ -293,12 +295,50 @@ const faqs = [
 ];
 
 const CursoMicroverdesPage = () => {
+  const pageUrl = `${SITE_BASE}/cursos/microverdes`;
+  const pageDescription =
+    "Curso completo de cultivo de microverdes: do zero à comercialização. 10 módulos, 50+ horas de teoria e prática. Aprenda a produzir e vender com alta margem.";
+  const courseLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Cultivo de Microverdes",
+    description: pageDescription,
+    url: pageUrl,
+    inLanguage: "pt-BR",
+    provider: { "@id": ORG_ID },
+    hasCourseInstance: [
+      {
+        "@type": "CourseInstance",
+        courseMode: "online",
+        courseWorkload: "PT50H",
+      },
+    ],
+  };
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
+      <Head>
         <title>Curso de Cultivo de Microverdes | Cultivee Agro</title>
-        <meta name="description" content="Curso completo de cultivo de microverdes: do zero à comercialização. 10 módulos, 50+ horas de conteúdo teórico e prático. Aprenda a produzir e vender microverdes com alta margem de lucro." />
-      </Helmet>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content="Curso de Cultivo de Microverdes | Cultivee Agro" />
+        <meta property="og:description" content={pageDescription} />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(courseLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
+      </Head>
 
       <Navbar />
 

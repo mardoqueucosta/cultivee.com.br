@@ -11,6 +11,8 @@ import {
   Zap, ToggleLeft, Layers, ExternalLink, ChevronRight, Timer, Gauge,
   Wind, Waves
 } from "lucide-react";
+import { SITE_BASE } from "@/lib/breadcrumb-schema";
+import { ORG_ID } from "@/lib/seo-schemas";
 
 const features = [
   {
@@ -70,10 +72,35 @@ const techSpecs = [
 ];
 
 const ProdutoHidroponiaPage = () => {
+  const pageUrl = `${SITE_BASE}/produtos/controle-hidroponia`;
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Cultivee Hidro",
+    description:
+      "Módulo de automação para cultivo indoor que controla luz, bomba d'água, ventilação e aeração, com até 10 fases de cultivo configuráveis e RTC DS3231 embarcado para funcionar offline.",
+    brand: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
+    url: pageUrl,
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Head>
-        <title>Controle de Hidroponia | Cultivee</title>
+        <title>Controle de Hidroponia e Cultivo Indoor | Cultivee Hidro</title>
+        <meta
+          name="description"
+          content="Cultivee Hidro automatiza luz, bomba, ventilação e aeração do cultivo indoor com até 10 fases configuráveis. RTC embarcado funciona offline. Sem mensalidade."
+        />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content="Controle de Hidroponia e Cultivo Indoor | Cultivee Hidro" />
+        <meta
+          property="og:description"
+          content="Automatize luz, bomba, ventilação e aeração com até 10 fases de cultivo. Funciona offline, sem mensalidade."
+        />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify(productLd)}</script>
       </Head>
       <Navbar />
 

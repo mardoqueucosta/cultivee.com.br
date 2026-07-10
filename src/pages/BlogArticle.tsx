@@ -84,6 +84,7 @@ function HeroPicture({ src, alt }: { src: string; alt: string }) {
         src={src}
         alt={alt}
         loading="eager"
+        fetchPriority="high"
         decoding="async"
         className="w-full h-full object-cover"
         style={blurStyle}
@@ -99,6 +100,7 @@ function HeroPicture({ src, alt }: { src: string; alt: string }) {
         src={src}
         alt={alt}
         loading="eager"
+        fetchPriority="high"
         decoding="async"
         className="w-full h-full object-cover"
         style={blurStyle}
@@ -260,6 +262,7 @@ const BlogArticlePage = () => {
         <meta name="twitter:title" content={article.titulo} />
         <meta name="twitter:description" content={article.resumo} />
         <meta name="twitter:image" content={ogImage} />
+        {heroImage && <link rel="preload" as="image" href={heroImage.src} />}
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(authorJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdArticle)}</script>
@@ -324,6 +327,18 @@ const BlogArticlePage = () => {
               {article.leitura} de leitura
             </span>
           </div>
+
+          {article.tldr && (
+            <aside
+              className={`rounded-xl border ${accent.border} ${accent.bg} p-6 mb-8`}
+              aria-label="Resumo do artigo"
+            >
+              <span className={`font-bold text-sm uppercase tracking-wider ${accent.text}`}>
+                Resumo rápido
+              </span>
+              <p className="text-foreground mt-2 leading-relaxed">{article.tldr}</p>
+            </aside>
+          )}
 
           {headings.length >= 3 && (
             <nav
@@ -460,10 +475,13 @@ const BlogArticlePage = () => {
               <User className="w-7 h-7 text-primary" />
             </div>
             <div>
-              <h3 className="font-semibold text-foreground">Equipe Cultivee</h3>
+              <h3 className="font-semibold text-foreground">Prof. Dr. Mardoqueu Costa</h3>
               <p className="text-muted-foreground text-sm mt-1">
-                Especialistas em agricultura, educação e tecnologia, comprometidos em
-                compartilhar conhecimento prático para sua autonomia.
+                Pesquisador e fundador da Cultivee. Escreve sobre hidroponia, cultivo
+                indoor e automação agrícola, sempre com fontes citadas.{" "}
+                <Link to="/sobre" className="text-primary hover:underline">
+                  Sobre a Cultivee
+                </Link>
               </p>
             </div>
           </div>

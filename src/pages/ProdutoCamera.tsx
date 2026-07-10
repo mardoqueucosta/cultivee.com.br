@@ -11,6 +11,8 @@ import {
   Video, Eye, ExternalLink, ChevronRight, FolderOpen, Zap,
   Clock, Sparkles, Plane
 } from "lucide-react";
+import { SITE_BASE } from "@/lib/breadcrumb-schema";
+import { ORG_ID } from "@/lib/seo-schemas";
 
 const features = [
   {
@@ -75,10 +77,35 @@ const techSpecs = [
 ];
 
 const ProdutoCameraPage = () => {
+  const pageUrl = `${SITE_BASE}/produtos/controle-camera`;
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Cultivee Cam",
+    description:
+      "Câmera IP standalone para monitoramento de cultivo com sensor OV2640 de 2 MP, captura agendada de 1 minuto a 1 hora, transmissão ao vivo de até 10 minutos e galeria organizada em pastas no app.",
+    brand: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
+    url: pageUrl,
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Head>
-        <title>Controle de Câmera | Cultivee</title>
+        <title>Câmera de Monitoramento para Cultivo | Cultivee Cam</title>
+        <meta
+          name="description"
+          content="Cultivee Cam: câmera IP para o cultivo com fotos programadas de 1 minuto a 1 hora, stream ao vivo e galeria com pastas no app. Veja as plantas de onde estiver."
+        />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content="Câmera de Monitoramento para Cultivo | Cultivee Cam" />
+        <meta
+          property="og:description"
+          content="Fotos programadas, stream ao vivo e galeria organizada no app. Monitore seu cultivo de qualquer lugar."
+        />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify(productLd)}</script>
       </Head>
       <Navbar />
 

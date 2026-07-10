@@ -1,5 +1,5 @@
+import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -18,6 +18,8 @@ import {
   BarChart3, Cpu, Wifi, Building2, Factory, Ruler,
   CircuitBoard, MonitorSpeaker, Lamp, Eye
 } from "lucide-react";
+import { SITE_BASE } from "@/lib/breadcrumb-schema";
+import { ORG_ID, organizationJsonLd } from "@/lib/seo-schemas";
 
 const modules = [
   {
@@ -323,12 +325,50 @@ const faqs = [
 ];
 
 const CursoCultivoIndoorPage = () => {
+  const pageUrl = `${SITE_BASE}/cursos/cultivo-indoor`;
+  const pageDescription =
+    "Curso de cultivo indoor e fazendas verticais: LED, automação IoT e controle climático. 10 módulos, 62+ horas de conteúdo. Do protótipo à escala comercial.";
+  const courseLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Cultivo Indoor e Fazendas Verticais",
+    description: pageDescription,
+    url: pageUrl,
+    inLanguage: "pt-BR",
+    provider: { "@id": ORG_ID },
+    hasCourseInstance: [
+      {
+        "@type": "CourseInstance",
+        courseMode: "online",
+        courseWorkload: "PT62H",
+      },
+    ],
+  };
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
+      <Head>
         <title>Curso de Cultivo Indoor e Fazendas Verticais | Cultivee Agro</title>
-        <meta name="description" content="Curso completo de cultivo indoor e fazendas verticais: LED, automação IoT, controle climático e viabilidade econômica. 10 módulos, 62+ horas. Do protótipo à escala comercial." />
-      </Helmet>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content="Curso de Cultivo Indoor e Fazendas Verticais | Cultivee Agro" />
+        <meta property="og:description" content={pageDescription} />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(courseLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
+      </Head>
 
       <Navbar />
 
