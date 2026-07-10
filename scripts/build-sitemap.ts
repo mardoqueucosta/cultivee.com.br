@@ -4,6 +4,12 @@ import { loadAllArticles, PROJECT_ROOT } from "./_load-articles";
 
 const SITE = "https://cultivee.com.br";
 
+// lastmod REAL das rotas estaticas — bump manual quando uma pagina estatica mudar
+// de verdade. NUNCA usar a data do build: com deploy diario do pipeline, as 16
+// rotas "mudariam" todo dia e o Google passa a ignorar o lastmod do site inteiro.
+// 2026-07-02 = ultima mudanca site-wide real (troca do numero de WhatsApp).
+const STATIC_LASTMOD = "2026-07-02";
+
 const STATIC_PATHS = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/agro", changefreq: "weekly", priority: "0.9" },
@@ -38,7 +44,7 @@ function buildSitemap(articles: ReturnType<typeof loadAllArticles>): string {
   const staticUrls = STATIC_PATHS.map(
     (p) => `  <url>
     <loc>${SITE}${p.path}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${STATIC_LASTMOD}</lastmod>
     <changefreq>${p.changefreq}</changefreq>
     <priority>${p.priority}</priority>
   </url>`

@@ -2,6 +2,464 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://cultivee.com.br/blog/calendario-de-plantio-o-que-plantar-em-cada-mes-do-ano</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/calendario-de-plantio-o-que-plantar-em-cada-mes-do-ano/canteiro-residencial-brasileiro-com-hortalicas-em-estag-1.jpg</image:loc>
+      <image:title>Canteiro residencial brasileiro com hortaliças em estágios diferentes de crescimento ao amanhecer</image:title>
+      <image:caption>Num mesmo canteiro convivem culturas em janelas diferentes, e o calendário é o que organiza essa sobreposição.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/calendario-de-plantio-o-que-plantar-em-cada-mes-do-ano/maos-semeando-hortalicas-em-bandeja-de-mudas-no-outono--2.jpg</image:loc>
+      <image:title>Mãos semeando hortaliças em bandeja de mudas no outono com canteiro de folhosas ao fundo</image:title>
+      <image:caption>O outono, de março a maio, é a janela de ouro para semear folhosas e brássicas no centro-sul.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/calendario-de-plantio-o-que-plantar-em-cada-mes-do-ano/bancada-de-hidroponia-nft-com-alfaces-uniformes-cultiva-3.jpg</image:loc>
+      <image:title>Bancada de hidroponia NFT com alfaces uniformes cultivadas em estufa o ano todo</image:title>
+      <image:caption>Em ambiente controlado, a alface produz ciclo após ciclo, e o mês do ano deixa de mandar.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/vertical-farming-no-brasil-cases-pink-farms-be-green-mighty</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/vertical-farming-no-brasil-cases-pink-farms-be-green-mighty.jpg</image:loc>
+      <image:title>Prateleiras verticais de folhosas iluminadas por LED rosa em fazenda vertical urbana brasileira</image:title>
+      <image:caption>A luz rosa das fazendas verticais vem da soma de LEDs azul e vermelho, o espectro que a folha usa para crescer.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/bioestimulante-de-alga-ascophyllum-nodosum-o-que-a-ciencia</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/bioestimulante-de-alga-ascophyllum-nodosum-o-que-a-ciencia/diagrama-do-bioestimulante-de-alga-capturando-eros-e-fe-1.jpg</image:loc>
+      <image:title>Diagrama do bioestimulante de alga capturando EROs e fechando estômatos para proteger a planta na seca</image:title>
+      <image:caption>Como o extrato de Ascophyllum nodosum atua por priming: menos EROs, estômatos parcialmente fechados e mais água retida na planta.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/bioestimulante-de-alga-ascophyllum-nodosum-o-que-a-ciencia/lavoura-de-soja-sob-sol-intenso-e-solo-seco-ilustrando--2.jpg</image:loc>
+      <image:title>Lavoura de soja sob sol intenso e solo seco ilustrando o manejo de estresse hídrico no El Niño 2026</image:title>
+      <image:caption>Com o El Niño confirmado para 2026, o manejo preventivo de estresse hídrico virou prioridade nas lavouras de sequeiro do centro-norte.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/bioestimulante-de-alga-ascophyllum-nodosum-o-que-a-ciencia/hortalicas-folhosas-em-estufa-de-ambiente-protegido-ond-3.jpg</image:loc>
+      <image:title>Hortaliças folhosas em estufa de ambiente protegido onde o bioestimulante de alga reforça o vigor das mudas</image:title>
+      <image:caption>Em sistemas protegidos e olericultura, o extrato de alga complementa a nutrição e reforça o vigor inicial das mudas.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/fertilizante-inteligente-brasileiro-como-a-nanotecnologia-de</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-brasileiro-como-a-nanotecnologia-de/granulos-de-ureia-sobre-solo-tropical-avermelhado-e-res-1.jpg</image:loc>
+      <image:title>Grânulos de ureia sobre solo tropical avermelhado e ressecado sob sol forte, ilustrando perda de nitrogênio</image:title>
+      <image:caption>Em solo tropical quente, boa parte do nitrogênio da ureia se perde por volatilização antes de chegar à planta</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-brasileiro-como-a-nanotecnologia-de/diagrama-em-corte-de-granulo-de-fertilizante-revestido--2.jpg</image:loc>
+      <image:title>Diagrama em corte de grânulo de fertilizante revestido com núcleo de ureia e camada de nanopartículas de liberação controlada</image:title>
+      <image:caption>Estrutura de um grânulo de liberação controlada: núcleo de ureia protegido por revestimento que modula a liberação do nitrogênio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-brasileiro-como-a-nanotecnologia-de/raizes-brancas-de-alface-hidroponica-imersas-em-solucao-3.jpg</image:loc>
+      <image:title>Raízes brancas de alface hidropônica imersas em solução nutritiva dentro de canal NFT em estufa</image:title>
+      <image:caption>Na hidroponia, o nutriente já é entregue no tempo certo pela solução nutritiva, a mesma lógica de eficiência que a nanotecnologia busca no solo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/fertilizante-inteligente-com-mofs-a-tecnologia-brasileira</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-com-mofs-a-tecnologia-brasileira/diagrama-comparando-a-liberacao-controlada-do-nutriente-1.jpg</image:loc>
+      <image:title>Diagrama comparando a liberação controlada do nutriente por um MOF poroso versus o adubo convencional</image:title>
+      <image:caption>A estrutura porosa do MOF guarda o nutriente e o libera aos poucos, enquanto o adubo convencional despeja tudo de uma vez.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-com-mofs-a-tecnologia-brasileira/maos-segurando-solo-escuro-e-sadio-com-muda-vigorosa-em-2.jpg</image:loc>
+      <image:title>Mãos segurando solo escuro e sadio com muda vigorosa em lavoura tropical de fundo</image:title>
+      <image:caption>O conceito de mineral sintético regenerativo mira devolver fertilidade e carbono ao solo tropical.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/fertilizante-inteligente-com-mofs-a-tecnologia-brasileira/close-macro-do-po-cristalino-claro-do-fertilizante-mof--3.jpg</image:loc>
+      <image:title>Close macro do pó cristalino claro do fertilizante MOF em escala de laboratório sobre fundo neutro</image:title>
+      <image:caption>O material sintético em escala de quilogramas, etapa anterior à ampliação industrial da produção.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/sensor-le-o-nitrogenio-do-solo-na-hora-como-o-manejo-de</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/sensor-le-o-nitrogenio-do-solo-na-hora-como-o-manejo-de/pulverizador-autopropelido-aplica-adubo-nitrogenado-em--1.jpg</image:loc>
+      <image:title>Pulverizador autopropelido aplica adubo nitrogenado em lavoura extensa de grãos no Brasil</image:title>
+      <image:caption>Fertilizante responde por cerca de 40% do custo variável de soja e milho no Brasil</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/sensor-le-o-nitrogenio-do-solo-na-hora-como-o-manejo-de/comparativo-entre-sensor-de-solo-que-mede-nmin-e-sensor-2.jpg</image:loc>
+      <image:title>Comparativo entre sensor de solo que mede Nmin e sensor de dossel que lê reflectância da folha</image:title>
+      <image:caption>Sensor de solo mede o estoque de nitrogênio; sensor de dossel mede a demanda da planta</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/sensor-le-o-nitrogenio-do-solo-na-hora-como-o-manejo-de/pesquisador-usa-sensor-portatil-de-analise-de-solo-e-ta-3.jpg</image:loc>
+      <image:title>Pesquisador usa sensor portátil de análise de solo e tablet com mapa de zonas em lavoura brasileira</image:title>
+      <image:caption>Centros como ESALQ e Embrapa desenvolvem análise de nitrogênio do solo em tempo real no Brasil</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/agrivoltaica-com-painel-solar-transparente-opv-telhado-da-es</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/agrivoltaica-com-painel-solar-transparente-opv-telhado-da-es/estufa-hidroponica-nft-com-sombrite-branco-50-sob-sol-t-1.jpg</image:loc>
+      <image:title>Estufa hidropônica NFT com sombrite branco 50% sob sol tropical brasileiro intenso mostrando bancadas de alface crespa</image:title>
+      <image:caption>A prática atual no Brasil substitui o telhado transparente por sombrite passivo. O OPV propõe substituir esse sombrite por um filme que gera eletricidade além de filtrar luz.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/agrivoltaica-com-painel-solar-transparente-opv-telhado-da-es/diagrama-tecnico-mostrando-o-filme-opv-absorvendo-uv-e--2.jpg</image:loc>
+      <image:title>Diagrama técnico mostrando o filme OPV absorvendo UV e infravermelho e transmitindo a faixa PAR 400-700 nm para a folha de alface</image:title>
+      <image:caption>O OPV espectralmente seletivo absorve as faixas UV e NIR e transmite a PAR, faixa útil à fotossíntese, para a cultura abaixo.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/agrivoltaica-com-painel-solar-transparente-opv-telhado-da-es/diagrama-de-estufa-hidroponica-nft-com-faixa-opv-no-tel-3.jpg</image:loc>
+      <image:title>Diagrama de estufa hidropônica NFT com faixa OPV no telhado alimentando banco de baterias inversor e sensores ESP32 via cabos</image:title>
+      <image:caption>Arquitetura de estufa OPV integrada, com cobertura parcial de 30% no telhado norte alimentando bomba NFT, exaustão e microcontrolador ESP32.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-alecrim-em-casa-guia-completo</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-alecrim-em-casa-guia-completo/close-de-um-pe-de-alecrim-vicoso-com-folhas-finas-verde-1.jpg</image:loc>
+      <image:title>Close de um pé de alecrim viçoso com folhas finas verde-acinzentadas e caule lenhoso em vaso de barro ao sol</image:title>
+      <image:caption>As folhas finas e o caule lenhoso denunciam a origem mediterrânea da planta.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-alecrim-em-casa-guia-completo/maos-plantando-muda-de-alecrim-em-vaso-de-barro-com-cam-2.jpg</image:loc>
+      <image:title>Mãos plantando muda de alecrim em vaso de barro com camada drenante de argila expandida e substrato arenoso</image:title>
+      <image:caption>Camada drenante no fundo e substrato arenoso mantêm a raiz longe do encharcamento.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-alecrim-em-casa-guia-completo/pe-de-alecrim-compacto-e-verde-em-vaso-de-barro-receben-3.jpg</image:loc>
+      <image:title>Pé de alecrim compacto e verde em vaso de barro recebendo sol pleno direto numa varanda urbana ensolarada</image:title>
+      <image:caption>No mínimo 6 horas de sol direto por dia deixam o alecrim denso e cheio de aroma.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-batata-doce-em-casa-e-no-vaso</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-batata-doce-em-casa-e-no-vaso/raizes-de-batata-doce-recem-colhidas-ao-lado-de-vaso-co-1.jpg</image:loc>
+      <image:title>Raizes de batata-doce recem-colhidas ao lado de vaso com ramas verdes em varanda ensolarada em casa</image:title>
+      <image:caption>Batata-doce cultivada em casa, com raizes coloridas e folhagem vigorosa.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-batata-doce-em-casa-e-no-vaso/vaso-fundo-com-camada-de-drenagem-e-substrato-escuro-so-2.jpg</image:loc>
+      <image:title>Vaso fundo com camada de drenagem e substrato escuro solto pronto para plantar batata-doce em casa</image:title>
+      <image:caption>Vaso fundo com drenagem e substrato aerado, base para boas raizes.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-batata-doce-em-casa-e-no-vaso/maos-inspecionando-folhas-verdes-de-batata-doce-em-vaso-3.jpg</image:loc>
+      <image:title>Maos inspecionando folhas verdes de batata-doce em vaso para prevenir pragas e encharcamento no cultivo caseiro</image:title>
+      <image:caption>Inspecao regular das folhas e do substrato previne pragas e podridao.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-cebolinha-em-casa-e-em-hidroponia</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-cebolinha-em-casa-e-em-hidroponia/touceira-de-cebolinha-verde-cultivada-em-vaso-de-barro--1.jpg</image:loc>
+      <image:title>Touceira de cebolinha verde cultivada em vaso de barro numa varanda com luz natural</image:title>
+      <image:caption>No vaso de 25 cm, a cebolinha forma touceiras densas e rebrota por muitos meses.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-cebolinha-em-casa-e-em-hidroponia/mudas-de-cebolinha-cultivadas-em-sistema-hidroponico-ca-2.jpg</image:loc>
+      <image:title>Mudas de cebolinha cultivadas em sistema hidropônico caseiro com raízes brancas na solução</image:title>
+      <image:caption>Em hidroponia, a cebolinha colhe em 45 a 60 dias, com a EC entre 1,6 e 2,2 mS/cm.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-cebolinha-em-casa-e-em-hidroponia/maos-colhendo-cebolinha-com-tesoura-cortando-as-folhas--3.jpg</image:loc>
+      <image:title>Mãos colhendo cebolinha com tesoura cortando as folhas a dois centímetros acima da base</image:title>
+      <image:caption>O corte a 2 cm acima do solo preserva o ponto de rebrota e garante 15 colheitas ou mais.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-cenoura-em-casa-e-no-vaso</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-cenoura-em-casa-e-no-vaso/vaso-fundo-de-cenoura-com-folhagem-verde-rendilhada-num-1.jpg</image:loc>
+      <image:title>Vaso fundo de cenoura com folhagem verde rendilhada numa varanda urbana ensolarada, com raízes alaranjadas despontando</image:title>
+      <image:caption>Em vaso fundo e ensolarado, a cenoura prospera até em varanda de apartamento.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-cenoura-em-casa-e-no-vaso/maos-peneirando-substrato-escuro-e-fofo-sobre-vaso-alto-2.jpg</image:loc>
+      <image:title>Mãos peneirando substrato escuro e fofo sobre vaso alto para plantar cenoura, com fibra de coco e húmus na mistura</image:title>
+      <image:caption>Substrato peneirado e vaso fundo são o que garantem uma raiz reta e lisa.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-cenoura-em-casa-e-no-vaso/jardineira-com-cenoura-cebolinha-e-alface-consorciadas--3.jpg</image:loc>
+      <image:title>Jardineira com cenoura, cebolinha e alface consorciadas sendo regadas em jato fino, folhagem verde variada em vista superior</image:title>
+      <image:caption>Consorciar cenoura com cebolinha e alface aproveita o espaço e afasta pragas.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-coentro-em-casa-guia-completo</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-coentro-em-casa-guia-completo/planta-de-coentro-verde-e-vicosa-com-folhas-pinadas-cul-1.jpg</image:loc>
+      <image:title>Planta de coentro verde e viçosa com folhas pinadas cultivada em vaso de cerâmica numa bancada de cozinha</image:title>
+      <image:caption>O coentro forma folhas recortadas e aromáticas no vaso, prontas para a colheita em poucas semanas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-coentro-em-casa-guia-completo/maos-fazendo-a-semeadura-direta-de-coentro-numa-jardine-2.jpg</image:loc>
+      <image:title>Mãos fazendo a semeadura direta de coentro numa jardineira comprida com substrato escuro e sulco raso</image:title>
+      <image:caption>A semeadura direta, sem transplantio, é o método padrão para o coentro por causa da raiz pivotante.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-coentro-em-casa-guia-completo/planta-de-coentro-pendoada-com-haste-floral-e-flores-br-3.jpg</image:loc>
+      <image:title>Planta de coentro pendoada com haste floral e flores brancas ao lado de uma planta folhosa e saudável</image:title>
+      <image:caption>No pendoamento, a planta emite a haste floral e para de produzir folhas novas, disparado pelo calor.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-couve-guia-de-cultivo-em-vaso-horta-e-hidroponi</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-couve-guia-de-cultivo-em-vaso-horta-e-hidroponi/folhas-de-couve-manteiga-lisa-couve-crespa-tipo-kale-e--1.jpg</image:loc>
+      <image:title>Folhas de couve-manteiga lisa, couve crespa tipo kale e couve roxa lado a lado mostrando a variedade de cultivares</image:title>
+      <image:caption>Da manteiga lisa ao kale crespo, cada cultivar tem ciclo e uso próprios.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-couve-guia-de-cultivo-em-vaso-horta-e-hidroponi/pes-de-couve-adultos-plantados-em-fileiras-espacadas-nu-2.jpg</image:loc>
+      <image:title>Pés de couve adultos plantados em fileiras espaçadas num canteiro de horta com solo úmido ao sol da manhã</image:title>
+      <image:caption>O espaçamento de 40 a 50 cm entre plantas evita competição e pragas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-couve-guia-de-cultivo-em-vaso-horta-e-hidroponi/maos-de-cultivador-incorporando-adubo-organico-a-borda--3.jpg</image:loc>
+      <image:title>Mãos de cultivador incorporando adubo orgânico à borda de um vaso de couve para a adubação de cobertura</image:title>
+      <image:caption>A adubação a cada 20 a 30 dias mantém a couve produzindo folhas novas.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-espinafre-em-casa-e-em-hidroponia</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-espinafre-em-casa-e-em-hidroponia/tres-tipos-de-folha-vendidas-como-espinafre-no-brasil-d-1.jpg</image:loc>
+      <image:title>Tres tipos de folha vendidas como espinafre no Brasil dispostas lado a lado sobre bancada de madeira clara</image:title>
+      <image:caption>As tres plantas chamadas de espinafre no Brasil, com folhas bem diferentes.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-espinafre-em-casa-e-em-hidroponia/espinafre-hidroponico-crescendo-em-canaletas-brancas-de-2.jpg</image:loc>
+      <image:title>Espinafre hidroponico crescendo em canaletas brancas de NFT com raizes visiveis e folhas verdes vibrantes em ambiente urbano</image:title>
+      <image:caption>Espinafre em sistema NFT, uma das folhosas ancora da hidroponia caseira.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-espinafre-em-casa-e-em-hidroponia/preparo-de-solucao-nutritiva-para-espinafre-hidroponico-3.jpg</image:loc>
+      <image:title>Preparo de solucao nutritiva para espinafre hidroponico com medidor de pH e EC e frascos de nutrientes junto ao reservatorio</image:title>
+      <image:caption>Medir pH e EC todos os dias e a rotina que mantem a solucao no ponto.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-hortela-em-casa-guia-facil-para-iniciantes</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-hortela-em-casa-guia-facil-para-iniciantes/comparacao-em-close-das-folhas-de-hortela-pimenta-escur-1.jpg</image:loc>
+      <image:title>Comparação em close das folhas de hortelã-pimenta escura e hortelã-comum verde-clara mostrando as diferenças</image:title>
+      <image:caption>A hortelã-pimenta, mais escura e intensa, ao lado da hortelã-comum, mais suave e adocicada.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-hortela-em-casa-guia-facil-para-iniciantes/jardineira-larga-de-hortela-vicosa-com-folhas-espalhada-2.jpg</image:loc>
+      <image:title>Jardineira larga de hortelã viçosa com folhas espalhadas lateralmente recebendo a luz da manhã numa varanda</image:title>
+      <image:caption>Vaso largo e profundo, com furos e camada drenante, contém o vigor invasivo da hortelã.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-hortela-em-casa-guia-facil-para-iniciantes/maos-podando-um-ramo-de-hortela-logo-acima-de-um-par-de-3.jpg</image:loc>
+      <image:title>Mãos podando um ramo de hortelã logo acima de um par de folhas para estimular novas brotações laterais</image:title>
+      <image:caption>Cortar sempre acima de um nó faz a planta rebrotar dobrada e mantém a hortelã compacta.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-manjericao-guia-completo-em-vaso-e-hidroponia</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-manjericao-guia-completo-em-vaso-e-hidroponia/manjericao-genovese-vicoso-cultivado-em-vaso-de-ceramic-1.jpg</image:loc>
+      <image:title>Manjericão Genovese viçoso cultivado em vaso de cerâmica recebendo luz da manhã numa varanda</image:title>
+      <image:caption>No vaso, o manjericão pede de 4 a 6 horas de sol direto e substrato leve bem drenado.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-manjericao-guia-completo-em-vaso-e-hidroponia/mudas-de-manjericao-cultivadas-em-canaletas-de-hidropon-2.jpg</image:loc>
+      <image:title>Mudas de manjericão cultivadas em canaletas de hidroponia NFT com raízes brancas banhadas pela solução</image:title>
+      <image:caption>Em NFT, o manjericão rende cerca de 230 gramas por planta em 49 dias, com a EC entre 1,4 e 1,6 dS/m.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-manjericao-guia-completo-em-vaso-e-hidroponia/maos-podando-ramos-de-manjericao-acima-de-um-par-de-fol-3.jpg</image:loc>
+      <image:title>Mãos podando ramos de manjericão acima de um par de folhas para estimular novas brotações</image:title>
+      <image:caption>A poda semanal acima de um par de folhas dobra a ramificação e prolonga a colheita por meses.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-morango-em-casa-e-em-vaso-guia-completo</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-morango-em-casa-e-em-vaso-guia-completo/morangueiros-com-frutos-vermelhos-maduros-em-vasos-e-ja-1.jpg</image:loc>
+      <image:title>Morangueiros com frutos vermelhos maduros em vasos e jardineira numa sacada urbana iluminada</image:title>
+      <image:caption>Vaso de 3 a 5 litros, jardineira ou coluna vertical: o morango se adapta a diferentes formatos em espaço pequeno.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-morango-em-casa-e-em-vaso-guia-completo/muda-de-morango-plantada-em-vaso-com-a-coroa-posicionad-2.jpg</image:loc>
+      <image:title>Muda de morango plantada em vaso com a coroa posicionada acima do nivel do substrato</image:title>
+      <image:caption>A regra de ouro do plantio: coroa acima do substrato, nunca enterrada, para evitar apodrecimento.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-morango-em-casa-e-em-vaso-guia-completo/sistema-hidroponico-caseiro-de-morango-com-slab-de-fibr-3.jpg</image:loc>
+      <image:title>Sistema hidropônico caseiro de morango com slab de fibra de coco e gotejo numa sacada</image:title>
+      <image:caption>O slab caseiro de fibra de coco com gotejamento entrega de 30% a 40% mais produtividade que o vaso comum.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-oregano-em-casa-guia-de-cultivo</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-oregano-em-casa-guia-de-cultivo/ramo-de-oregano-fresco-em-detalhe-macro-folhas-verdes-o-1.jpg</image:loc>
+      <image:title>Ramo de orégano fresco em detalhe macro, folhas verdes ovaladas e pequenas flores brancas e violáceas em espiga</image:title>
+      <image:caption>O orégano-grego concentra de 60 a 80% de carvacrol, o composto que define o aroma intenso.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-oregano-em-casa-guia-de-cultivo/maos-plantando-muda-de-oregano-em-vaso-de-terracota-ao--2.jpg</image:loc>
+      <image:title>Mãos plantando muda de orégano em vaso de terracota ao lado de bandeja de sementes e estaca enraizando em casa</image:title>
+      <image:caption>Muda pronta é o caminho mais rápido, colheita em 30 a 45 dias.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-oregano-em-casa-guia-de-cultivo/mao-colhendo-com-tesoura-um-ramo-de-oregano-no-inicio-d-3.jpg</image:loc>
+      <image:title>Mão colhendo com tesoura um ramo de orégano no início da floração, com folhas verdes e flores brancas se abrindo</image:title>
+      <image:caption>Colher no início da floração, com 15 a 20% das flores abertas, garante o máximo de óleo essencial.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-pepino-em-casa-e-em-hidroponia</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pepino-em-casa-e-em-hidroponia/planta-de-pepino-tutorada-em-vaso-na-varanda-com-frutos-1.jpg</image:loc>
+      <image:title>Planta de pepino tutorada em vaso na varanda com frutos verdes maduros pendurados e folhagem densa ao sol</image:title>
+      <image:caption>O pepino cresce na vertical e cabe bem em varandas e sacadas urbanas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pepino-em-casa-e-em-hidroponia/muda-de-pepino-em-vaso-de-30-litros-com-tutor-de-bambu--2.jpg</image:loc>
+      <image:title>Muda de pepino em vaso de 30 litros com tutor de bambu fincado no substrato escuro em varanda doméstica</image:title>
+      <image:caption>Vaso de 30 litros com tutor de bambu fincado ja no plantio.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pepino-em-casa-e-em-hidroponia/muda-de-pepino-com-raizes-brancas-em-espuma-fenolica-en-3.jpg</image:loc>
+      <image:title>Muda de pepino com raizes brancas em espuma fenolica encaixada em perfil NFT branco com solucao nutritiva circulando</image:title>
+      <image:caption>Muda de pepino em espuma fenolica sobre o perfil NFT, com a lamina de solucao visivel.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-pimenta-em-casa-guia-de-variedades-e-cultivo</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pimenta-em-casa-guia-de-variedades-e-cultivo/variedades-de-pimenta-brasileiras-coloridas-como-biquin-1.jpg</image:loc>
+      <image:title>Variedades de pimenta brasileiras coloridas como biquinho, dedo-de-moça e malagueta dispostas juntas</image:title>
+      <image:caption>O gênero Capsicum reúne dezenas de variedades, do biquinho doce à malagueta muito ardida.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pimenta-em-casa-guia-de-variedades-e-cultivo/mudas-de-pimenta-recem-emergidas-em-bandeja-de-celulas--2.jpg</image:loc>
+      <image:title>Mudas de pimenta recém-emergidas em bandeja de células com substrato pronto para o transplante</image:title>
+      <image:caption>A semente germina melhor com o substrato entre 25 e 30 graus, e a muda vai a vaso com 4 a 6 folhas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pimenta-em-casa-guia-de-variedades-e-cultivo/pimenteira-em-vaso-de-barro-carregada-de-frutos-vermelh-3.jpg</image:loc>
+      <image:title>Pimenteira em vaso de barro carregada de frutos vermelhos e verdes numa varanda ensolarada</image:title>
+      <image:caption>Uma pimenteira compacta e bem cuidada abastece a cozinha com colheitas sucessivas por meses.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-pimentao-em-casa-e-em-hidroponia</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pimentao-em-casa-e-em-hidroponia/maos-colhendo-pimentao-vermelho-maduro-de-planta-em-vas-1.jpg</image:loc>
+      <image:title>Mãos colhendo pimentão vermelho maduro de planta em vaso doméstico com cesto de frutos ao lado</image:title>
+      <image:caption>Colher o próprio pimentão garante um alimento sem resíduos de agrotóxicos</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pimentao-em-casa-e-em-hidroponia/planta-de-pimentao-tutorada-com-estaca-crescendo-em-vas-2.jpg</image:loc>
+      <image:title>Planta de pimentão tutorada com estaca crescendo em vaso grande na varanda com frutos verdes</image:title>
+      <image:caption>Vaso de 15 a 20 litros com tutoramento é o suficiente para uma planta produtiva</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-pimentao-em-casa-e-em-hidroponia/planta-de-pimentao-em-sistema-hidroponico-dutch-bucket--3.jpg</image:loc>
+      <image:title>Planta de pimentão em sistema hidropônico Dutch bucket com fibra de coco e mangueira de irrigação em estufa</image:title>
+      <image:caption>O Dutch bucket com fibra de coco é o sistema hidropônico mais indicado para pimentão</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-rucula-em-casa-e-em-hidroponia</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-rucula-em-casa-e-em-hidroponia/macos-de-rucula-de-folha-larga-e-rucula-selvagem-recort-1.jpg</image:loc>
+      <image:title>Maços de rúcula de folha larga e rúcula selvagem recortada lado a lado sobre bancada de madeira</image:title>
+      <image:caption>A rúcula cultivada de folha larga convive no mercado com a selvagem recortada, mais picante.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-rucula-em-casa-e-em-hidroponia/rucula-cultivada-em-bancada-hidroponica-nft-caseira-com-2.jpg</image:loc>
+      <image:title>Rúcula cultivada em bancada hidropônica NFT caseira com raízes brancas na solução nutritiva e folhas viçosas</image:title>
+      <image:caption>Em hidroponia NFT, a rúcula colhe em 18 a 21 dias no verão, com folhas limpas e sem terra.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-rucula-em-casa-e-em-hidroponia/planta-de-rucula-espigada-emitindo-haste-floral-com-flo-3.jpg</image:loc>
+      <image:title>Planta de rúcula espigada emitindo haste floral com flores no calor, folhas basais endurecidas ao sol</image:title>
+      <image:caption>Acima de 27 graus a rúcula espiga, emite flores e as folhas amargam, por isso o clima ameno é aliado.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/como-plantar-salsinha-guia-completo-de-cultivo-em-vaso-e-hid</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-salsinha-guia-completo-de-cultivo-em-vaso-e-hid/folhas-de-salsa-lisa-e-salsa-crespa-lado-a-lado-mostran-1.jpg</image:loc>
+      <image:title>Folhas de salsa lisa e salsa crespa lado a lado mostrando a diferença de textura em close</image:title>
+      <image:caption>A salsa lisa tem folha plana e sabor marcante, a crespa é frisada, suave e decorativa.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-salsinha-guia-completo-de-cultivo-em-vaso-e-hid/bancada-hidroponica-nft-com-mudas-de-salsa-verde-em-per-2.jpg</image:loc>
+      <image:title>Bancada hidropônica NFT com mudas de salsa verde em perfis brancos dentro de estufa</image:title>
+      <image:caption>Em NFT, a salsa cresce em canais com fluxo de 1,5 a 2 litros por minuto e EC de 2,0 a 2,2 dS/m.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/como-plantar-salsinha-guia-completo-de-cultivo-em-vaso-e-hid/macos-de-cheiro-verde-com-salsa-e-cebolinha-frescas-ama-3.jpg</image:loc>
+      <image:title>Maços de cheiro-verde com salsa e cebolinha frescas amarradas numa banca de feira</image:title>
+      <image:caption>Na feira, a salsa vira cheiro-verde ao lado da cebolinha, o arranjo mais rentável do tempero.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/guia-definitivo-de-horta-em-apartamento-luz-vasos-substrato</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/guia-definitivo-de-horta-em-apartamento-luz-vasos-substrato/horta-em-apartamento-em-varanda-com-vasos-de-alface-e-m-1.jpg</image:loc>
+      <image:title>Horta em apartamento em varanda com vasos de alface e manjericão sob luz matinal e vista urbana ao fundo</image:title>
+      <image:caption>Uma varanda comum vira horta produtiva quando luz, vaso, substrato e irrigação estão certos.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/guia-definitivo-de-horta-em-apartamento-luz-vasos-substrato/vasos-de-plastico-ceramica-e-tecido-de-tamanhos-variado-2.jpg</image:loc>
+      <image:title>Vasos de plástico, cerâmica e tecido de tamanhos variados com substrato e mudas de horta em apartamento</image:title>
+      <image:caption>O tamanho e a drenagem do vaso limitam mais o resultado do que o adubo.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/guia-definitivo-de-horta-em-apartamento-luz-vasos-substrato/rega-de-horta-em-apartamento-com-regador-manual-sobre-f-3.jpg</image:loc>
+      <image:title>Rega de horta em apartamento com regador manual sobre folhosas de alface ao entardecer</image:title>
+      <image:caption>Regar de manhã cedo ou no fim da tarde reduz evaporação e queima foliar.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/panc-guia-completo-de-plantas-alimenticias-nao-convencionais</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/panc-guia-completo-de-plantas-alimenticias-nao-convencionais/horta-domestica-de-panc-em-vasos-com-ora-pro-nobis-capu-1.jpg</image:loc>
+      <image:title>Horta doméstica de PANC em vasos com ora-pro-nóbis, capuchinha florida e jambu, e mãos colhendo folhas verdes</image:title>
+      <image:caption>Poucos metros quadrados de quintal já reúnem ora-pro-nóbis, capuchinha e jambu para colheita contínua em casa.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/panc-guia-completo-de-plantas-alimenticias-nao-convencionais/detalhe-macro-de-ramo-de-ora-pro-nobis-com-folhas-brilh-2.jpg</image:loc>
+      <image:title>Detalhe macro de ramo de ora-pro-nóbis com folhas brilhantes, espinhos curtos e flor branca aberta</image:title>
+      <image:caption>O ora-pro-nóbis mantém folhas verdadeiras macias, incomuns entre os cactos, e floresce em branco.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/panc-guia-completo-de-plantas-alimenticias-nao-convencionais/banca-de-feira-agroecologica-com-macos-frescos-de-panc--3.jpg</image:loc>
+      <image:title>Banca de feira agroecológica com maços frescos de PANC e mãos de agricultor entregando folhas verdes</image:title>
+      <image:caption>Nas feiras agroecológicas, a folha fresca de PANC chega direto do produtor ao consumidor, ainda fora do circuito dos supermercados.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cultivee.com.br/blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi</loc>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi/diagrama-de-substrato-hidroponico-mostrando-equilibrio--1.jpg</image:loc>
+      <image:title>Diagrama de substrato hidropônico mostrando equilíbrio entre macroporos de ar e microporos de água para raízes.</image:title>
+      <image:caption>Um bom substrato hidropônico garante aeração e retenção hídrica ideais, com macroporos para oxigênio e microporos para água, essenciais para a saúde das raízes sem solo.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi/imagem-hyperrealista-dos-4-substratos-hidroponicos-fibr-2.jpg</image:loc>
+      <image:title>Imagem hyperrealista dos 4 substratos hidropônicos: fibra de coco, perlita, vermiculita e lã de rocha.</image:title>
+      <image:caption>Os quatro substratos hidropônicos clássicos — fibra de coco, perlita, vermiculita e lã de rocha — com suas características visuais distintas, resultado de suas origens e processos de fabricação.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cultivee.com.br/blog/substratos-para-hidroponia-fibra-de-coco-vs-perlita-vs-vermi/diagrama-do-processo-de-buffering-da-fibra-de-coco-most-3.jpg</image:loc>
+      <image:title>Diagrama do processo de buffering da fibra de coco, mostrando a troca de íons de sódio e potássio por cálcio.</image:title>
+      <image:caption>O processo de buffering é essencial para a fibra de coco, removendo íons indesejados como sódio e potássio e saturando os sítios de troca com cálcio, garantindo a disponibilidade desse nutriente vital para a planta.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia</loc>
     <image:image>
       <image:loc>https://cultivee.com.br/blog/calculadora-online-de-solucao-nutritiva-para-hidroponia/calculo-e-pesagem-de-sais-para-preparo-de-solucao-nutri-1.jpg</image:loc>

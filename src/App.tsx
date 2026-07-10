@@ -67,6 +67,8 @@ export const routes: RouteObject[] = [
       { path: "cursos/microverdes", element: <CursoMicroverdesPage /> },
       { path: "cursos/hidroponia", element: <CursoHidroponiaPage /> },
       { path: "cursos/cultivo-indoor", element: <CursoCultivoIndoorPage /> },
+      // rota concreta para o SSG emitir dist/404.html (o nginx usa como error_page 404)
+      { path: "404", element: <NotFound /> },
       { path: "*", element: <NotFound /> },
     ],
   },

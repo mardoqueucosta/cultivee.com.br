@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite-react-ssg build",
+    "prebuild": "npm run build:og || exit 0",
     "build:spa": "vite build",
     "build:dev": "vite build --mode development",
     "build:sitemap": "tsx scripts/build-sitemap.ts",
