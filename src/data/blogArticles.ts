@@ -1,4 +1,5 @@
 import { parseFrontmatter } from "@/lib/frontmatter";
+import { rankRelated } from "@/lib/article-utils";
 
 export type CategoriaVariant = "agro" | "educa" | "tech";
 export type Categoria = "Agro" | "Educa" | "Tech";
@@ -73,12 +74,9 @@ export function getRelatedArticles(
   categoria: Categoria,
   limit = 3
 ): ArticleMeta[] {
-  const sameCategory = articlesMeta.filter(
-    (a) => a.categoria === categoria && a.slug !== currentSlug
-  );
-  if (sameCategory.length >= limit) return sameCategory.slice(0, limit);
-  const others = articlesMeta.filter(
-    (a) => a.categoria !== categoria && a.slug !== currentSlug
-  );
-  return [...sameCategory, ...others].slice(0, limit);
+  // relevância por tokens de título+slug (rankRelated); antes era "os N mais
+  // recentes da categoria", o que mandava todo o site pros mesmos 3 artigos
+  const current = articlesMetaMap[currentSlug];
+  if (!current) return articlesMeta.filter((a) => a.slug !== currentSlug).slice(0, limit);
+  return rankRelated(current, articlesMeta, limit);
 }

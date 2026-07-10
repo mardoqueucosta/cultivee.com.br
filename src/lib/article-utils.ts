@@ -46,14 +46,65 @@ export function extractFaqFromMarkdown(markdown: string): FaqItem[] {
   return items;
 }
 
+// ── Relevância para links internos dinâmicos ────────────────────────────────
+// Antes (até 2026-07-10) o "Leia também" e o grid de relacionados pegavam os N
+// artigos MAIS RECENTES da mesma categoria: como ~tudo é 'Agro', o site inteiro
+// apontava para os mesmos 2-3 artigos novos (zero relevância, e todas as páginas
+// re-renderizavam a cada publicação diária). Agora: score por tokens
+// compartilhados de título+slug; empate resolve por recência (pool já vem
+// ordenado por data desc); score zero em tudo cai no comportamento antigo.
+const LINK_STOP = new Set([
+  "guia", "completo", "definitivo", "como", "plantar", "para", "casa", "passo",
+  "vaso", "2026", "2025", "que", "com", "sem", "dos", "das", "seu", "sua",
+  "por", "mes", "ano", "cada", "monte", "sistema", "uma", "nao", "nos", "nas",
+  "ate", "sao", "tem", "ser", "vai", "mais", "sobre", "entre",
+]);
+
+function linkTokens(titulo: string, slug: string): Set<string> {
+  const norm = (s: string) =>
+    s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const words = `${norm(titulo)} ${slug.replace(/-/g, " ")}`
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    // >=3 para não perder siglas-keyword (NFT, IoT, LED); ruído de 3 letras vai pro STOP
+    .filter((w) => w.length >= 3 && !LINK_STOP.has(w));
+  return new Set(words);
+}
+
+export function rankRelated<
+  T extends { slug: string; titulo: string; categoria: string }
+>(current: { slug: string; titulo: string }, pool: T[], limit: number): T[] {
+  const mine = linkTokens(current.titulo, current.slug);
+  const scored = pool
+    .filter((a) => a.slug !== current.slug)
+    .map((a, i) => {
+      let score = 0;
+      for (const t of linkTokens(a.titulo, a.slug)) if (mine.has(t)) score++;
+      return { a, score, i };
+    });
+  scored.sort((x, y) => y.score - x.score || x.i - y.i); // empate: ordem do pool (data desc)
+  const relevant = scored.filter((s) => s.score > 0).slice(0, limit).map((s) => s.a);
+  if (relevant.length >= limit) return relevant;
+  // completa com os mais recentes ainda não escolhidos (comportamento antigo)
+  const chosen = new Set(relevant.map((a) => a.slug));
+  const filler = scored.filter((s) => !chosen.has(s.a.slug)).map((s) => s.a);
+  return [...relevant, ...filler].slice(0, limit);
+}
+
 export function injectCrossReferences(
   markdown: string,
-  current: { slug: string; categoria: string },
+  current: { slug: string; titulo: string; categoria: string },
   pool: { slug: string; titulo: string; resumo: string; categoria: string }[]
 ): string {
-  const related = pool
-    .filter((a) => a.categoria === current.categoria && a.slug !== current.slug)
-    .slice(0, 2);
+  // não repetir alvo que o corpo já linka (o redator já fez esse cross-link)
+  const alreadyLinked = new Set(
+    [...markdown.matchAll(/\]\(\/blog\/([a-z0-9-]+)/g)].map((m) => m[1])
+  );
+  const related = rankRelated(
+    current,
+    pool.filter((a) => !alreadyLinked.has(a.slug)),
+    2
+  );
 
   if (related.length === 0) return markdown;
 

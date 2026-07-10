@@ -122,7 +122,7 @@ const BlogArticlePage = () => {
   const enrichedContent = useMemo(() => {
     let content = injectCrossReferences(
       article.conteudo,
-      { slug: article.slug, categoria: article.categoria },
+      { slug: article.slug, titulo: article.titulo, categoria: article.categoria },
       articlesMeta
     );
     // Os artigos foram gerados com placeholders <!-- IMG_SLOT_N --> que nunca
