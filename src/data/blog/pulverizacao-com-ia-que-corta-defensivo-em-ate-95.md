@@ -1,5 +1,5 @@
 ---
-titulo: 'Pulverização com IA corta defensivo em 95% [2026]'
+titulo: 'Pulverização com IA corta defensivo em até 95% [2026]'
 resumo: >-
   O pulverizador ARA da Ecorobotix chegou ao Brasil prometendo cortar defensivo
   em até 95% na olericultura. Veja o que realmente muda para quem produz hortaliça.
@@ -76,8 +76,7 @@ O "até 95%" repetido nas manchetes é um teto, e tratá-lo como média é o err
 ![Micro-jato de defensivo atingindo uma planta daninha isolada entre folhas de hortaliça](/blog/pulverizacao-com-ia-que-corta-defensivo-em-ate-95/micro-jato-de-defensivo-atingindo-uma-planta-daninha-is-2.jpg)
 *A precisão de 6x6 cm aplica calda só no ponto alvo, reduzindo o volume total de defensivo*
 
-> "A economia média de volume de herbicida foi de 78,9% em cebola e 79,8% em beterraba açucareira, com parte relevante das missões poupando mais de 90% do produto."
-> Anne et al. citado no estudo publicado na [*Frontiers* (2024)](https://doi.org/10.3389/frevc.2024.1394315)
+> No estudo de Anne et al., publicado na [*Frontiers* (2024)](https://doi.org/10.3389/frevc.2024.1394315), a economia média de volume de herbicida foi de 78,9% em cebola e 79,8% em beterraba açucareira, com parte relevante das missões poupando mais de 90% do produto.
 
 O ponto de cautela é que, quando a análise olha a média por parcela (plot), e não o volume total economizado, os valores caem para cerca de 67% em cebola e 58% em beterraba. Ou seja: existem missões chegando a 96% ou 98% de economia, e existem parcelas em que o ganho é bem menor. Tudo depende do alvo (se é a cultura ou a daninha), do estágio de crescimento e do nível de infestação da área.
 
