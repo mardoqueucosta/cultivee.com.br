@@ -129,3 +129,7 @@ O investimento inicial é maior do que o de um viveiro em substrato simples, por
 
 ### Essa técnica pode ser usada em pequena escala, por produtores familiares?
 Em tese sim, com estrutura reduzida, mas o protocolo ainda é mais indicado para viveiros técnicos com controle de solução nutritiva e monitoramento sanitário constante, etapa que exige conhecimento técnico específico.
+
+## Fontes e referências
+
+O conteúdo técnico deste guia é apoiado em pesquisas e dados oficiais do setor de fruticultura do Brasil. Para obter mais detalhes científicos e de mercado, consulte a matéria de divulgação da [Revista Cultivar sobre a pesquisa de hidroponia na biofábrica de mudas de banana](https://revistacultivar.com.br/noticias/hidroponia-reduz-tempo-de-producao-de-mudas-de-banana-na), as informações sobre o Programa de Melhoramento Genético de Banana e Plátano da [Embrapa Mandioca e Fruticultura](https://www.embrapa.br/mandioca-e-fruticultura), os dados de produção nacional do [IBGE Explica sobre a cultura de banana no Brasil](https://www.ibge.gov.br/explica/producao-agropecuaria/banana.html), e os fundamentos originais da pesquisa de aclimatação hidropônica descritos na dissertação de mestrado de Iumi Toyosumi, sob a orientação do Dr. Maurício Antônio Coelho Filho, na Universidade Federal do Recôncavo da Bahia ([UFRB](https://www.ufrb.edu.br)).
