@@ -7,7 +7,7 @@ resumo: >-
 categoria: 'Agro'
 categoriaVariant: 'agro'
 data: '2026-07-16'
-dataModificacao: '2026-07-16'
+dataModificacao: '2026-07-19'
 leitura: '13 min'
 tldr: >-
   A hidroponia de aclimatação reduz o tempo de produção de mudas de banana

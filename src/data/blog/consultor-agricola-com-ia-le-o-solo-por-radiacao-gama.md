@@ -6,7 +6,7 @@ resumo: >-
 categoria: 'Agro'
 categoriaVariant: 'agro'
 data: '2026-07-15'
-dataModificacao: '2026-07-15'
+dataModificacao: '2026-07-19'
 leitura: '15 min'
 tldr: >-
   Um consultor agrícola com IA que "lê o solo por radiação gama" usa sensores
