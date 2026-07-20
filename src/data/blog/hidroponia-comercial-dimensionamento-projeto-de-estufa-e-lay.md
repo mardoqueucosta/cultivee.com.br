@@ -18,11 +18,16 @@ tldr: >-
   Errar essas cotas custa produtividade em todos os ciclos seguintes, porque
   estrutura não se ajusta depois de erguida.
 imagens:
-  - src: /blog/hidroponia-comercial-dimensionamento-projeto-de-estufa-e-lay.jpg
-    alt: Interior de estufa de hidroponia comercial com bancadas NFT de alface em produção
-    caption: Casa de vegetação NFT em operação comercial, com perfis alinhados e plantas em estágios escalonados
+  - src: /blog/hidroponia-comercial-dimensionamento-projeto-de-estufa-e-lay/estrutura-interna-de-estufa-agricola-com-pe-direito-alt-1.jpg
+    alt: 'Estrutura interna de estufa agrícola com pé-direito alto e bancadas de hidroponia comercial ao fundo'
+    caption: 'Pé-direito alto e cumeeira aberta são o que permite a ventilação natural funcionar no verão brasileiro'
+  - src: /blog/hidroponia-comercial-dimensionamento-projeto-de-estufa-e-lay/bancada-nft-inclinada-com-perfis-de-pvc-e-alface-crespa-2.jpg
+    alt: 'Bancada NFT inclinada com perfis de PVC e alface crespa em espaçamento regular em estufa comercial'
+    caption: 'Perfis alinhados, corredor livre e declividade constante ao longo de toda a bancada'
+  - src: /blog/hidroponia-comercial-dimensionamento-projeto-de-estufa-e-lay/tubulacao-de-distribuicao-e-mangueiras-alimentando-cana-3.jpg
+    alt: 'Tubulação de distribuição e mangueiras alimentando canais de bancada NFT em hidroponia comercial'
+    caption: 'Cada canal recebe entre 1 e 2 litros por minuto, e a conferência se faz com balde e cronômetro'
 ---
-
 Existe uma diferença brutal entre montar um sistema hidropônico que funciona e projetar uma estufa comercial que funciona todo dia, durante dez anos, com quinze mil pés de alface girando por mês. A primeira é uma questão de técnica. A segunda é uma questão de engenharia, e é sobre ela que este guia trata.
 
 Este artigo não discute se hidroponia dá lucro nem em quanto tempo o investimento retorna. Esse assunto já tem um guia próprio no Cultivee, e vamos remeter a ele quando o tema encostar aqui. O foco daqui em diante é o projeto físico: quanto mede a estufa, onde ficam as bancadas, com que inclinação, quanta água a bomba precisa empurrar, onde o reservatório fica enterrado e o que acontece quando falta energia às três da manhã de um sábado.
@@ -59,11 +64,11 @@ O predomínio do NFT em folhosas não é acaso. Ele usa pouco volume de soluçã
 
 Se o seu projeto envolve galpão fechado com iluminação artificial, o conjunto de decisões é outro e está descrito em [CEA: agricultura em ambiente controlado no Brasil](/blog/cea-agricultura-em-ambiente-controlado-no-brasil). Este guia trata de casa de vegetação com luz natural.
 
-<!-- IMG_SLOT_1 -->
-
 ## Dimensionamento da estufa: NBR 16032, vãos, pé-direito e cobertura
 
 A norma que rege a estrutura no Brasil é a **ABNT NBR 16032, "Estrutura de estufa e viveiro agrícola: requisitos de projeto, construção, manutenção e restauração"**, publicada em 2012 e disponível para consulta pela [ABNT](https://www.normas.com.br/visualizar/abnt-nbr-nm/31543/abnt-nbr16032-estrutura-de-estufa-e-viveiro-agricola-requisitos-de-projeto-construcao-manutencao-e-restauracao). Ela define resistência mecânica, tolerância a deslocamentos estruturais, durabilidade e vida útil mínima conforme a classe de cobertura. Confirme com a ABNT a versão vigente antes de fechar o projeto executivo, porque a norma passa por revisões periódicas e o fornecedor nem sempre acompanha.
+![Estrutura interna de estufa agrícola com pé-direito alto e bancadas de hidroponia comercial ao fundo](/blog/hidroponia-comercial-dimensionamento-projeto-de-estufa-e-lay/estrutura-interna-de-estufa-agricola-com-pe-direito-alt-1.jpg)
+*Pé-direito alto e cumeeira aberta são o que permite a ventilação natural funcionar no verão brasileiro*
 
 Além dela, dois documentos vizinhos costumam ser esquecidos e cobram caro depois: a **NBR 13206**, sobre instalações elétricas de baixa tensão em edificações rurais, que governa o quadro da bomba e da iluminação suplementar, e a **NR-31**, norma regulamentadora de segurança e saúde no trabalho rural, aplicável a qualquer estufa comercial com empregado registrado.
 
@@ -102,6 +107,8 @@ O escalonamento de espaçamento entre berçário, maternidade e perfil final é 
 ## Layout de bancadas NFT: as cotas que definem a produtividade
 
 Este é o coração do projeto. Cada parâmetro abaixo tem justificativa física, e cada desvio cobra um preço específico.
+![Bancada NFT inclinada com perfis de PVC e alface crespa em espaçamento regular em estufa comercial](/blog/hidroponia-comercial-dimensionamento-projeto-de-estufa-e-lay/bancada-nft-inclinada-com-perfis-de-pvc-e-alface-crespa-2.jpg)
+*Perfis alinhados, corredor livre e declividade constante ao longo de toda a bancada*
 
 | Parâmetro | Recomendação | Consequência de errar |
 | --- | --- | --- |
@@ -163,11 +170,11 @@ O estudo é de 1999 e continua sendo a referência metodológica brasileira mais
 
 A escolha de cultivar e o manejo específico da cultura estão detalhados no [guia completo de alface hidropônica](/blog/guia-completo-de-alface-hidroponica-do-plantio-caseiro-a-pro).
 
-<!-- IMG_SLOT_2 -->
-
 ## Dimensionamento hidráulico: vazão, bomba, reservatório e retorno
 
 Se a bancada é o esqueleto, a hidráulica é o sistema circulatório. E ela se calcula, não se estima.
+![Tubulação de distribuição e mangueiras alimentando canais de bancada NFT em hidroponia comercial](/blog/hidroponia-comercial-dimensionamento-projeto-de-estufa-e-lay/tubulacao-de-distribuicao-e-mangueiras-alimentando-cana-3.jpg)
+*Cada canal recebe entre 1 e 2 litros por minuto, e a conferência se faz com balde e cronômetro*
 
 ### Vazão por canal
 
@@ -212,8 +219,6 @@ Quem quiser automatizar o acionamento, o monitoramento de pH e EC e o alarme de 
 ### Ciclo de acionamento
 
 Duas escolas convivem no Brasil. O bombeamento **contínuo 24 horas** entrega máxima estabilidade térmica e de oxigenação, ao custo de consumo elétrico integral. O bombeamento **intermitente**, com o padrão prático de 15 minutos ligado e 15 desligado durante o dia, reduz o consumo e funciona bem em clima ameno, desde que o intervalo desligado nunca ultrapasse o tempo em que o canal seca. Em dias muito quentes, o intermitente deve ser encurtado ou suspenso, e à noite pode ser bem mais espaçado, porque a demanda hídrica cai.
-
-<!-- IMG_SLOT_3 -->
 
 ## Fluxo de trabalho: projetar a estufa a partir do movimento das pessoas
 
@@ -310,4 +315,3 @@ O recorte técnico de hidroponia comercial começa por volta de 200 m² de área
 ### Quantas plantas por metro quadrado cabem em uma bancada NFT?
 
 Depende de qual área você está medindo. Com o espaçamento de 25 × 20 cm validado por Gualberto, Resende e Braz (1999) para alface, cabem cerca de 20 plantas por metro quadrado de superfície de bancada. Quando se acrescenta o corredor fixo de 0,7 a 1,0 metro entre bancadas de 2,0 metros de largura, a densidade sobre a área construída da estufa cai para algo da ordem de 13 a 15 plantas por metro quadrado, e é esse número que deve entrar no plano de produção. Densidades maiores, na faixa de 20,5 a 26 plantas por metro quadrado divulgada pela Pure Hydroponics, referem-se a bancadas deslizantes (sliding bench), que eliminam o corredor fixo e são solução de escala industrial, acima de 5.000 m². O escalonamento entre berçário, maternidade e espaçamento final é o que permite aproveitar bem a densidade disponível, sem manter planta pequena ocupando área de planta adulta.
-
