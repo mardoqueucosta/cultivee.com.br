@@ -132,7 +132,7 @@ O oxigênio dissolvido merece atenção especial. Abaixo de 6 ppm, o fungo *Pyth
 
 A rotina de manejo é enxuta. Meça pH e EC todos os dias com medidores de bolso, corrija o pH com solução ácida ou básica própria para hidroponia e reponha a solução conforme a EC cai, sinal de que as plantas consumiram nutrientes. Em clima quente, atenção redobrada à temperatura da solução, que sobe rápido e derruba o oxigênio dissolvido. O espinafre baby fica pronto em 30 a 45 dias, um giro rápido que permite muitas colheitas por ano na mesma bancada.
 
-Para automatizar a leitura de pH, EC e temperatura, dá para usar sensores conectados a um microcontrolador. Se você tem perfil maker, o nosso conteúdo sobre [sensores na agricultura, guia de escolha e implementação](/blog/sensores-agricultura-guia-escolha-implementacao) e sobre os [primeiros passos com Arduino para automação](/blog/arduino-iniciantes-primeiros-passos-automacao) mostra como monitorar a solução sem depender de leitura manual o tempo todo.
+Para automatizar a leitura de pH, EC e temperatura, dá para usar sensores conectados a um microcontrolador. Se você tem perfil maker, o nosso conteúdo sobre [sensores na agricultura e primeiros passos com Arduino para automação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) mostra como monitorar a solução sem depender de leitura manual o tempo todo.
 
 ## Indoor com LED: DLI, fotoperíodo e razão vermelho azul
 

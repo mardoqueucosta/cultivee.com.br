@@ -84,7 +84,7 @@ Comece pela altura maior da faixa e aproxime 5 cm por semana observando as plant
 
 ### Temporizador não é opcional
 
-Em cultivo 100% indoor, o temporizador é o componente mais barato e mais crítico do conjunto. Um timer digital de tomada custa entre R$ 25 e R$ 60 e garante regularidade absoluta do fotoperíodo, que é justamente o que a planta usa para regular o próprio metabolismo. Esquecer o painel ligado por 24 horas causa necrose marginal em alface. Esquecer desligado por dois dias derruba o ciclo inteiro. Quem quiser levar adiante, dá para [automatizar com ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao) e programar rampas de amanhecer e anoitecer.
+Em cultivo 100% indoor, o temporizador é o componente mais barato e mais crítico do conjunto. Um timer digital de tomada custa entre R$ 25 e R$ 60 e garante regularidade absoluta do fotoperíodo, que é justamente o que a planta usa para regular o próprio metabolismo. Esquecer o painel ligado por 24 horas causa necrose marginal em alface. Esquecer desligado por dois dias derruba o ciclo inteiro. Quem quiser levar adiante, dá para [automatizar com ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) e programar rampas de amanhecer e anoitecer.
 
 ## Consumo elétrico real: quanto sua horta pesa na conta de luz
 
@@ -179,7 +179,7 @@ Sem sol, sem chuva e sem vento, você assume o papel de todos os elementos. A bo
 
 **A cada ciclo.** Higienize a prateleira antes de reiniciar. Alterne famílias botânicas entre ciclos, evitando plantar brássica atrás de brássica, para não acumular patógeno específico. Reserve o descanso de escuro integral: nunca deixe luz de segurança ou luz de cômodo vazando durante o fotoperíodo escuro, porque a planta usa a duração da noite para regular floração e metabolismo.
 
-Um sinal de leitura útil: se as folhas ficam pequenas, escuras e a planta fica compacta demais, geralmente há luz demais para a nutrição disponível. Se ficam grandes, pálidas e o caule alonga em direção ao painel, falta luz. O caule esticado é o diagnóstico mais confiável de subdimensionamento e aparece já na primeira semana. Para acompanhar a solução com precisão, [sensores de pH e EC](/blog/sensores-agricultura-guia-escolha-implementacao) dão leitura objetiva onde o olho falha.
+Um sinal de leitura útil: se as folhas ficam pequenas, escuras e a planta fica compacta demais, geralmente há luz demais para a nutrição disponível. Se ficam grandes, pálidas e o caule alonga em direção ao painel, falta luz. O caule esticado é o diagnóstico mais confiável de subdimensionamento e aparece já na primeira semana. Para acompanhar a solução com precisão, [sensores de pH e EC](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) dão leitura objetiva onde o olho falha.
 
 ## Vale a pena? A conta honesta
 

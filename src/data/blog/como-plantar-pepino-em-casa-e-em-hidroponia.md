@@ -100,7 +100,7 @@ O pepino, por ser uma planta grande e produtiva, pede perfis mais largos que os 
 
 O processo, na pratica, tem quatro fases. Primeiro, faca as mudas em espuma fenolica ou fibra de coco, mantendo-as umidas ate a planta ter de 3 a 4 folhas verdadeiras e raizes brancas visiveis. Segundo, transplante a muda para o furo do perfil, sem afogar o colo da planta. Terceiro, ligue a bomba para circulacao continua, com fluxo em torno de 2 L/min, ja que o pepino consome cerca de 3 litros de solucao por dia. Quarto, prenda o fitilho vertical assim que a planta comeca a subir, conduzindo o caule ate a altura util da estrutura.
 
-O detalhe que faz diferenca e o manejo da solucao nutritiva, tratado no proximo bloco. Para automatizar o controle de pH e condutividade eletrica de um sistema maior, sensores de baixo custo ja substituem os medidores manuais, como discutimos no [guia de sensores para agricultura](/blog/sensores-agricultura-guia-escolha-implementacao).
+O detalhe que faz diferenca e o manejo da solucao nutritiva, tratado no proximo bloco. Para automatizar o controle de pH e condutividade eletrica de um sistema maior, sensores de baixo custo ja substituem os medidores manuais, como discutimos no [guia de sensores para agricultura](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen).
 
 ## Solucao nutritiva Furlani para pepino
 

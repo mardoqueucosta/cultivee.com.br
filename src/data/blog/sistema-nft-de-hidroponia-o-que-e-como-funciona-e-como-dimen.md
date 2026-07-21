@@ -134,7 +134,7 @@ Um achado importante para o clima brasileiro vem de [Cometti, Matias, Zonta, Mar
 
 A solução é renovada por completo a cada 15 a 21 dias. Entre renovações, repor a água que evapora com adição proporcional de A+B mantém a EC dentro da faixa-alvo. Esse é o cuidado crítico do reservatório recirculante: repondo só água, a EC cai rápido abaixo de 1,0 dS/m e as plantas entram em subnutrição.
 
-> Leia também: [como escolher sensores agrícolas de pH e EC](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [como escolher sensores agrícolas de pH e EC](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Layout, bancadas e densidade de plantio
 
@@ -194,7 +194,7 @@ O *stack* MING (MQTT, InfluxDB, Node-RED, Grafana), descrito em paper recente pu
 
 A frente comercial brasileira ainda é incipiente. Empresas como Solinftec, Aegro e 3DBS lideram em outras áreas do agronegócio, mas a vertical específica de smart hydroponics está aberta para entrantes. Pequenos produtores podem montar seu próprio sistema seguindo tutoriais open-source disponíveis em comunidades como Hackster, Instructables e GitHub.
 
-> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/arduino-iniciantes-primeiros-passos-automacao)
+> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 A combinação ESP32 + sensores + Telegram bot + dashboard Grafana entrega ao produtor visão em tempo real do que está acontecendo na bancada, alertas quando pH ou EC saem da faixa, registros históricos para análise de tendência e capacidade de acionar bomba ou dosagem de fertilizante remotamente. É o salto natural para quem já domina o manejo manual e quer escalar.
 

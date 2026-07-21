@@ -209,7 +209,7 @@ Cinco erros que aparecem com mais frequência do que deveriam: não medir a CE d
 
 Para quem quer transformar isso em monitoramento contínuo em vez de conferência manual, sondas de CE e pH conectadas a microcontrolador resolvem bem o registro de tendência, que é onde o acúmulo de sal aparece antes de virar sintoma.
 
-> Leia também: [Sensores na agricultura: guia de escolha e implementação](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [Sensores na agricultura: guia de escolha e implementação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Perguntas frequentes
 

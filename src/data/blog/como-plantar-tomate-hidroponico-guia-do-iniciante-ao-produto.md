@@ -112,7 +112,7 @@ A [solução nutritiva](/blog/solucao-nutritiva-para-hidroponia-guia-completo-ca
 
 A receita brasileira de referência segue a fórmula Furlani (1998), com adaptação para a fase produtiva. Para 1.000 litros, a Hidrogood recomenda 700 g de nitrato de cálcio e 960 g de HG Fert Veg 7-14-20, mais 35 g de Fe-EDDHA 6%, na fase vegetativa. Após o início da floração (aproximadamente 45 dias após o transplante), migrar para HG Fert Prod 6-7-30, que tem mais potássio e fósforo para suportar o desenvolvimento dos frutos.
 
-> Leia também: [como escolher sensores agrícolas de pH e EC](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [como escolher sensores agrícolas de pH e EC](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 **Aviso crítico**: nunca misturar cálcio com fosfato ou sulfato no mesmo tanque. Provoca precipitação de fosfato ou sulfato de cálcio (sólido branco no fundo) e bloqueia os nutrientes. O padrão é o sistema *two-tank*: tanque A com cálcio e ferro, tanque B com fosfatos e sulfatos. Bombas dosadoras adicionam ambos simultaneamente em água, dissolvendo na proporção correta sem contato direto entre os dois concentrados.
 
@@ -209,8 +209,6 @@ O mercado brasileiro de tomate é um dos maiores entre as hortaliças. Os númer
 O mercado global de hidroponia, segundo a [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/hydroponics-market), está estimado em US$ 6,80 bilhões em 2026, com projeção de US$ 11,10 bilhões em 2031, em CAGR de 10,3%. O segmento de tomate em estufa de high-wire é um dos maiores em valor agregado, junto com folhosas e pepino.
 
 Para o produtor brasileiro, três variáveis decidem a viabilidade econômica: cultivar (cereja e grape entregam três vezes o valor por quilo de salada), canal de venda (restaurantes premium pagam o triplo do supermercado convencional) e produtividade por área (130 toneladas por hectare é mínimo aceitável, abaixo disso o investimento em estufa não compensa).
-
-> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/arduino-iniciantes-primeiros-passos-automacao)
 
 A tendência clara é que pequenos produtores se especializem em cereja e grape para canais premium, deixando salada e Italiano para a produção comercial em escala. A automação com sensores e fertirrigação automática reduz custo de mão de obra e melhora consistência, abrindo caminho para operações familiares mais lucrativas que as tradicionais.
 

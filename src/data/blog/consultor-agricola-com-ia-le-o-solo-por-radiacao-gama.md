@@ -105,7 +105,7 @@ O custo de um serviço de escaneamento gama é cobrado por hectare varrido e cai
 
 ## O papel dos sensores no ecossistema de automação agrícola
 
-O consultor gama+IA se encaixa em uma tendência mais ampla de automação do diagnóstico agrícola, que também inclui sondas de EC/pH, estações meteorológicas conectadas e microcontroladores como ESP32 para telemetria de campo. Quem está começando a estruturar automação e IoT na propriedade, seja em campo aberto seja em estufa, pode aproveitar o guia de [sensores para agricultura: como escolher e implementar](/blog/sensores-agricultura-guia-escolha-implementacao) como ponto de partida antes de somar uma camada mais avançada como a radiometria gama.
+O consultor gama+IA se encaixa em uma tendência mais ampla de automação do diagnóstico agrícola, que também inclui sondas de EC/pH, estações meteorológicas conectadas e microcontroladores como ESP32 para telemetria de campo. Quem está começando a estruturar automação e IoT na propriedade, seja em campo aberto seja em estufa, pode aproveitar o guia de [sensores para agricultura: como escolher e implementar](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) como ponto de partida antes de somar uma camada mais avançada como a radiometria gama.
 
 ## Limitações e cuidados na adoção
 

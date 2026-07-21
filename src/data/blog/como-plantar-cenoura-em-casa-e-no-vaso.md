@@ -143,7 +143,7 @@ Boa parte desse avanço vem da genética nacional. As cultivares tropicais da Em
 > "A cenoura figura entre as dez hortaliças mais plantadas no Brasil, ocupando cerca de 30 mil hectares e produzindo aproximadamente 900 mil toneladas de raízes por ano."
 > Fonte: [Agência Embrapa de Informação Tecnológica](https://www.embrapa.br/en/agencia-de-informacao-tecnologica/cultivos/cenoura)
 
-Se quiser levar o cultivo caseiro para um patamar mais técnico, com monitoramento de umidade e automação da irrigação, é possível acompanhar o solo com [sensores de agricultura](/blog/sensores-agricultura-guia-escolha-implementacao) ligados a um microcontrolador, um caminho natural para quem gosta de unir horta e tecnologia.
+Se quiser levar o cultivo caseiro para um patamar mais técnico, com monitoramento de umidade e automação da irrigação, é possível acompanhar o solo com [sensores de agricultura](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) ligados a um microcontrolador, um caminho natural para quem gosta de unir horta e tecnologia.
 
 ## Perguntas frequentes
 

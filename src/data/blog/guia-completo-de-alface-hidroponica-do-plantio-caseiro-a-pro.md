@@ -74,7 +74,7 @@ Em uma bancada hidropônica de 50 metros, perfis brancos inclinados a 3% conduze
 
 Para quem está começando em casa, o caminho de menor atrito é o Kratky. Com um pote opaco de cinco litros, espuma fenólica para mudas e a solução nutritiva Furlani diluída a 50%, é possível colher a primeira alface crespa em pouco mais de 30 dias sem usar bomba. O sistema, no entanto, é educacional: não escala e exige cuidado para que o nível d'água decresça gradualmente, expondo a parte alta das raízes ao ar e mantendo oxigenação.
 
-> Leia também: [monitoramento de EC e pH com sensores agrícolas](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [monitoramento de EC e pH com sensores agrícolas](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 Para a produção comercial pequena ou média, o NFT é o padrão consagrado, com ciclo previsível, controle fino e ferramentas operacionais maduras. Para escala industrial em ambientes urbanos, o vertical farming entra com a promessa de 75 vezes mais produtividade por metro quadrado, conforme dados da Pink Farms (galpão de 750 m² na Vila Leopoldina, capital paulista). O DFT aparece quando há necessidade de inércia térmica, comum em climas com oscilações fortes ou quando há risco de queda de energia, e a aeroponia segue restrita a aplicações de alto valor agregado, em pesquisa ou em casas de produção premium.
 
@@ -151,8 +151,6 @@ Vamos juntar tudo num cronograma de produção. O plano abaixo segue o padrão N
 **Etapa 4: bancada final.** Em 8 a 10 dias, transplante novamente para a bancada de produção, com espaçamento que permite o desenvolvimento da cabeça (25 × 25 cm para Samira e Vera, 30 × 30 cm para Madona e Lorca). EC entre 1,5 e 1,8 mS/cm.
 
 **Etapa 5: colheita.** A colheita é feita preferencialmente nas primeiras horas do dia, com a planta hidratada. Em produção comercial brasileira, é comum vender a alface "viva", com torrão de espuma e raiz íntegra, o que estende a validade na gôndola. A vertical farming reporta shelf life de até 14 dias refrigerada para folhosas pós-orgânicas.
-
-> Leia também: [automatize bombas e sensores com Arduino e ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao)
 
 A automação básica de uma bancada caseira começa por um sensor de fluxo no retorno da bomba, um nobreak e um simples relógio analógico. À medida que o produtor evolui, sensores de pH e EC, controlados por ESP32 ou Arduino, permitem manter a solução estável sem visitas constantes ao reservatório, e enviam alertas para o celular quando a leitura sai da faixa.
 

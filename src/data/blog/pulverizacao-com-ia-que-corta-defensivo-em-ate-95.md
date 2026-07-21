@@ -68,7 +68,7 @@ A partir daí entra a inteligência artificial proprietária, chamada de Plant-b
 
 Aqui aparece o conceito técnico que separa o fácil do difícil. Existem dois regimes de reconhecimento. O primeiro é o "verde sobre marrom" (green on brown), que consiste em identificar uma planta verde contra solo nu, antes da cultura nascer. É o cenário mais simples, e nele os ganhos são maiores: a John Deere relata até 90% de economia de herbicida com o See & Spray Select nesse caso. O segundo é o "verde sobre verde" (green on green), que exige achar a daninha no meio da cultura já desenvolvida e igualmente verde. Esse é o problema difícil de visão computacional, e é exatamente o que a olericultura impõe, porque a hortaliça permanece no campo o ciclo inteiro.
 
-Essa camada de câmeras, sensores e decisão automática é a mesma família de tecnologia que já chega às hortas menores em escala reduzida. Se o tema de sensoriamento te interessa, vale conhecer o [guia de sensores na agricultura](/blog/sensores-agricultura-guia-escolha-implementacao) e os [primeiros passos em automação e IoT com Arduino e ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao), que explicam a base de hardware por trás desse tipo de leitura de campo.
+Essa camada de câmeras, sensores e decisão automática é a mesma família de tecnologia que já chega às hortas menores em escala reduzida. Se o tema de sensoriamento te interessa, vale conhecer o [guia de sensores e automação e IoT com Arduino e ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), que explica a base de hardware por trás desse tipo de leitura de campo.
 
 ## O número "95%" desmontado com honestidade
 

@@ -69,7 +69,7 @@ O cultivo de microverdes exige poucos materiais, todos acessíveis em agropecuá
 
 **Dica de economia:** potes de sorvete de 2 litros (cortados ao meio na horizontal) funcionam perfeitamente como bandejas. Faça 4-5 furos no fundo com prego aquecido para drenagem.
 
-Para quem pretende escalar o cultivo com múltiplas bandejas e automação de iluminação, [projetos com Arduino para irrigação](/blog/arduino-iniciantes-primeiros-passos-automacao) podem complementar o setup com timers e sensores de umidade por custo adicional de R$ 50-100.
+Para quem pretende escalar o cultivo com múltiplas bandejas e automação de iluminação, [projetos com Arduino para irrigação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) podem complementar o setup com timers e sensores de umidade por custo adicional de R$ 50-100.
 
 ## Escolhendo as melhores sementes para seu primeiro cultivo
 
@@ -179,7 +179,7 @@ A ausência de luz natural direta não impede o cultivo de microverdes. Pesquisa
 - **Peitoril de janela (face norte/leste):** suficiente para 1-2 bandejas, desde que receba 4-6h de luz indireta. Limitação: crescimento pode ser levemente assimétrico (girar a bandeja a cada 2 dias)
 - **LED full spectrum:** resultado mais uniforme, independência do clima e da orientação solar do apartamento. Painéis T5 de 20W cobrem 2-3 bandejas e custam R$ 40-80
 
-Para quem deseja automatizar o fotoperíodo, um timer digital simples (R$ 25-40) liga e desliga o LED nos horários programados. Quem já trabalha com [automação e sensores na agricultura](/blog/sensores-agricultura-guia-escolha-implementacao) pode integrar sensores de luminosidade ao sistema.
+Para quem deseja automatizar o fotoperíodo, um timer digital simples (R$ 25-40) liga e desliga o LED nos horários programados. Quem já trabalha com [automação e sensores na agricultura](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) pode integrar sensores de luminosidade ao sistema.
 
 ## Substratos: qual escolher para cada situação
 

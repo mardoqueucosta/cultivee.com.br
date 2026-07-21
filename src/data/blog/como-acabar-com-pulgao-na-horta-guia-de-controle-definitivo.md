@@ -114,7 +114,7 @@ Em hortaliça vetorial de virose (alface, pepino, pimentão, tomate), desloque o
 
 Vire **5 folhas novas por canteiro**, sempre as mais jovens, porque o pulgão coloniza tecido tenro. Olhe a face inferior. Conte os aglomerados. Procure brilho pegajoso e trilha de formigas subindo pelo caule. Faça isso **duas vezes por semana**, de preferência no mesmo dia da semana, para ter série comparável. Uma lupa de 10× de R$ 20 resolve a identificação da espécie.
 
-Se quiser automatizar a leitura de temperatura e umidade, que antecipam os picos populacionais, o guia de [sensores na agricultura](/blog/sensores-agricultura-guia-escolha-implementacao) cobre a escolha do hardware.
+Se quiser automatizar a leitura de temperatura e umidade, que antecipam os picos populacionais, o guia de [sensores na agricultura](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) cobre a escolha do hardware.
 
 ## O que fazer na infestação ativa: escalonamento em cinco degraus
 

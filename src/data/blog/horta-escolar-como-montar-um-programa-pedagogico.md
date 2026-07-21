@@ -207,7 +207,7 @@ Instrumentos que cabem na lógica de competências e não exigem prova escrita:
 - **Apresentação pública**, uma feira da horta com convite às famílias ao fim do bimestre. É o que dá visibilidade externa e cria pressão positiva pela continuidade.
 - **Avaliação por pares**, uma turma avalia o canteiro da outra com checklist. Barato, rápido e surpreendentemente rigoroso.
 
-Para escolas de fundamental II e médio que queiram elevar o nível, a medição pode ser automatizada com sensores de umidade e temperatura, gerando série temporal para análise em planilha. É um projeto STEM completo, com [Arduino como porta de entrada](/blog/arduino-iniciantes-primeiros-passos-automacao) e a [escolha de sensores](/blog/sensores-agricultura-guia-escolha-implementacao) como conteúdo de aula em si. Além do valor curricular, esse é o formato que produz o dado mais convincente para a mantenedora.
+Para escolas de fundamental II e médio que queiram elevar o nível, a medição pode ser automatizada com sensores de umidade e temperatura, gerando série temporal para análise em planilha. É um projeto STEM completo, com [Arduino como porta de entrada e a escolha de sensores](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) como conteúdo de aula em si. Além do valor curricular, esse é o formato que produz o dado mais convincente para a mantenedora.
 
 ## Perguntas frequentes
 

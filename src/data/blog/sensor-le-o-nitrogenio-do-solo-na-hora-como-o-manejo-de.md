@@ -55,7 +55,7 @@ A fronteira atual propõe inverter essa lógica. O aparelho de mão FarmLab, da 
 
 O arcabouço internacional que dá nome a essa lógica é o [4R Nutrient Stewardship](http://www.ipni.net/4r), do IPNI: aplicar a fonte certa, na dose certa, no momento certo e no lugar certo. Medir o nitrogênio onde ele está transforma o adubo de custo fixo aplicado uniformemente em investimento calibrado à necessidade real de cada talhão.
 
-Vale um alerta de expectativa desde já. A própria Stenon descreve o aparelho de mão como uma solução intermediária, e os números de economia que divulga vêm de dados de clientes, não de validação independente. Antes de decidir por qualquer tecnologia de campo, entender como funcionam os diferentes tipos de instrumento é essencial, e vale conhecer os critérios para [escolher e implementar sensores na agricultura](/blog/sensores-agricultura-guia-escolha-implementacao). O detalhe que separa acerto de desperdício está no que, exatamente, cada sensor mede.
+Vale um alerta de expectativa desde já. A própria Stenon descreve o aparelho de mão como uma solução intermediária, e os números de economia que divulga vêm de dados de clientes, não de validação independente. Antes de decidir por qualquer tecnologia de campo, entender como funcionam os diferentes tipos de instrumento é essencial, e vale conhecer os critérios para [escolher e implementar sensores na agricultura](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen). O detalhe que separa acerto de desperdício está no que, exatamente, cada sensor mede.
 
 ## Sensor de solo versus sensor de planta: não confunda
 
@@ -106,7 +106,7 @@ Na academia, a **ESALQ-USP**, em Piracicaba, mantém o Laboratório de Agricultu
 
 A **Embrapa Instrumentação**, em São Carlos, desenvolve análise de solo em tempo real por LIBS, uma técnica de espectroscopia por plasma a laser que dispensa reagentes químicos; a fase 2 do projeto mira justamente o nitrogênio. A **Embrapa Agricultura Digital**, em Campinas, valida sensores portáteis em parceria com a Jacto. No setor privado nacional, a **Falker**, de Porto Alegre, produz o sensor de dossel Flexum e o sensor de condutividade Terram, enquanto a **Solinftec**, de Araçatuba, aposta na plataforma de decisão ALICE e no robô Solix, alegando até 30% menos insumo.
 
-Quem quer entender a base dessa cadeia, do sensor ao dado, pode começar montando [sua própria automação com ESP32 e Arduino](/blog/arduino-iniciantes-primeiros-passos-automacao), princípio de eletrônica que sustenta desde uma horta caseira monitorada até uma plataforma comercial de campo. E o mesmo raciocínio de precisão vale para o ambiente controlado: em [sistemas hidropônicos como o NFT](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen), o monitoramento constante de nutrientes por sensor é o que garante a nutrição exata da planta.
+Quem quer entender a base dessa cadeia, do sensor ao dado, pode começar montando [sua própria automação com ESP32 e Arduino](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), princípio de eletrônica que sustenta desde uma horta caseira monitorada até uma plataforma comercial de campo. E o mesmo raciocínio de precisão vale para o ambiente controlado: em [sistemas hidropônicos como o NFT](/blog/sistema-nft-de-hidroponia-o-que-e-como-funciona-e-como-dimen), o monitoramento constante de nutrientes por sensor é o que garante a nutrição exata da planta.
 
 <!-- IMG_SLOT_3 -->
 

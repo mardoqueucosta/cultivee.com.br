@@ -270,7 +270,7 @@ Cinco movimentos já em curso devem alterar a forma como o preço se forma nesta
 
 **Rastreabilidade puxada pelo varejo.** QR code em embalagem, histórico de lote e exigência de certificação deixaram de ser diferencial de exportador para virar requisito de fornecedor de rede grande.
 
-**Digitalização da precificação.** O ecossistema agtech brasileiro passou de 1.900 startups e plataformas conectando produtor a varejo com preço dinâmico começam a competir com o modelo de box. O mesmo movimento aparece na produção, com [sensores e automação](/blog/sensores-agricultura-guia-escolha-implementacao) barateando o controle fino de ambiente.
+**Digitalização da precificação.** O ecossistema agtech brasileiro passou de 1.900 startups e plataformas conectando produtor a varejo com preço dinâmico começam a competir com o modelo de box. O mesmo movimento aparece na produção, com [sensores e automação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) barateando o controle fino de ambiente.
 
 **Valor agregado e conveniência.** Salada lavada, mix pronto e minimamente processados crescem acima da média do setor e representam a rota mais direta para o produtor escapar da precificação por commodity.
 

@@ -132,7 +132,7 @@ A preparação de uma solução nutritiva pela fórmula Furlani exige cinco insu
 
 A receita escala linearmente. Para 30 litros (volume típico de hobby), divida tudo por 33: 22,5 g de nitrato de cálcio, 15 g de nitrato de potássio, 4,5 g de MAP, 3 g de sulfato de potássio, 12 g de sulfato de magnésio, 1 mL de mix de micros e 1 g de Fe-EDTA.
 
-> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/arduino-iniciantes-primeiros-passos-automacao)
+> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Manejo diário: pH, EC, temperatura e oxigênio
 
@@ -150,7 +150,7 @@ O pH é a variável mais sensível. Em pH acima de 6,5, o ferro precipita como h
 
 A EC reflete a concentração total de íons na solução. Mas atenção: EC alta não significa planta nutrida. Ela apenas mede sólidos totais, não a proporção entre íons. Pode haver excesso de sódio e cloro "enchendo" a EC com íons inúteis, especialmente em águas salobras. A medição deve ser combinada com observação do crescimento e, em produção comercial, com análise química periódica da solução em laboratório.
 
-> Leia também: [como escolher sensores de pH e EC para sua hidroponia](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [como escolher sensores de pH e EC para sua hidroponia](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 A temperatura da solução é o principal vetor de doenças radiculares. Acima de 28 °C, *Pythium aphanidermatum* prolifera e mata raízes em 3 a 5 dias. Em climas tropicais brasileiros, sombrear a estufa nos picos de calor, isolar termicamente o reservatório e, em casos extremos, instalar chillers refrigerados são medidas essenciais para produção comercial. Em hobby caseiro, manter o reservatório dentro de armário fechado já reduz substancialmente o risco.
 

@@ -156,7 +156,7 @@ O manejo de microgreens combina precisão e disciplina. Cinco variáveis princip
 
 **Colheita** com tesoura ou faca a 1 a 2 cm acima do substrato, no momento em que a primeira folha verdadeira está em formação. Pós-colheita: lavagem opcional (microverdes hidropônicos não precisam), embalagem em PET ou bandeja PP com tampa, refrigeração a 4 °C. Vida útil em geladeira: 7 a 10 dias.
 
-> Leia também: [como escolher sensores de pH e EC para sua hidroponia](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [como escolher sensores de pH e EC para sua hidroponia](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Viabilidade econômica brasileira
 
@@ -227,7 +227,7 @@ Em termos práticos, painéis LED full spectrum de 30 a 60 watts por metro quadr
 
 A relação Vermelho-Azul próxima de 3 para 1 é a recomendação consensual para Brassicaceae. Para microgreens pigmentados (amaranto, repolho roxo, beterraba), aumentar a fração de azul para 25% favorece a produção de antocianinas. Excesso de far-red (acima de 700 nm) causa alongamento e cabeça frouxa, sendo prejudicial em microgreens.
 
-> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/arduino-iniciantes-primeiros-passos-automacao)
+> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Framework regulatório brasileiro
 

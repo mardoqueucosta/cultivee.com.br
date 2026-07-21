@@ -144,7 +144,7 @@ Copiar calendário pronto resolve 80% dos casos. Montar o seu resolve os outros 
 3. **Confira o regime de chuvas.** Pico de chuva combinado com solanáceas é pedido de requeima. Prefira transplantar tomate quando o volume de chuva já estiver caindo.
 4. **Valide no ZARC Plantio Certo.** O app entrega a janela de menor risco para o seu município. Se a sua conclusão bater com a do ZARC, você acertou.
 
-Quem quiser ir além pode trabalhar com **graus-dia acumulados**, a soma térmica que a planta precisa para completar o ciclo. Como referência prática, a alface fecha o ciclo em torno de 600 graus-dia e o tomate perto de 1.200. Conhecendo a soma térmica média dos seus meses, você estima a data de colheita antes mesmo de semear. E se a ideia é automatizar a leitura do microclima, com temperatura, umidade e umidade de solo alimentando as suas decisões, o caminho está no nosso guia de [sensores para a horta](/blog/sensores-agricultura-guia-escolha-implementacao).
+Quem quiser ir além pode trabalhar com **graus-dia acumulados**, a soma térmica que a planta precisa para completar o ciclo. Como referência prática, a alface fecha o ciclo em torno de 600 graus-dia e o tomate perto de 1.200. Conhecendo a soma térmica média dos seus meses, você estima a data de colheita antes mesmo de semear. E se a ideia é automatizar a leitura do microclima, com temperatura, umidade e umidade de solo alimentando as suas decisões, o caminho está no nosso guia de [sensores para a horta](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen).
 
 ## Erros mais comuns com o calendário
 

@@ -133,7 +133,7 @@ Vale ainda um dado de mercado para dimensionar a oportunidade. O segmento de erv
 
 ## Vá além: automação e outras culturas
 
-Quem se anima com a hidroponia logo percebe que medir pH e condutividade elétrica todos os dias dá trabalho. O caminho natural é automatizar. Os nossos guias sobre [sensores para a agricultura](/blog/sensores-agricultura-guia-escolha-implementacao) e sobre [automação com Arduino e ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao) mostram como um microcontrolador barato pode ler os parâmetros da solução em tempo real e até acionar a bomba de forma programada, tirando a leitura manual das suas mãos.
+Quem se anima com a hidroponia logo percebe que medir pH e condutividade elétrica todos os dias dá trabalho. O caminho natural é automatizar. O nosso guia sobre [sensores para a agricultura e automação com Arduino e ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) mostra como um microcontrolador barato pode ler os parâmetros da solução em tempo real e até acionar a bomba de forma programada, tirando a leitura manual das suas mãos.
 
 A salsinha também é uma excelente porta de entrada para uma horta de temperos mais completa. Ela combina na bancada com outras culturas de manejo parecido, como o [manjericão em vaso e hidroponia](/blog/como-plantar-manjericao-guia-completo-em-vaso-e-hidroponia) e a [alface hidropônica](/blog/guia-completo-de-alface-hidroponica-do-plantio-caseiro-a-pro), formando a base de uma produção caseira de saladas e temperos que rende o ano inteiro.
 

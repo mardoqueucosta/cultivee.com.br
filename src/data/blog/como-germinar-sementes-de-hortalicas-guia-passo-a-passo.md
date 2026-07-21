@@ -310,7 +310,7 @@ Três movimentos já visíveis devem mudar a rotina de quem produz muda nos pró
 
 **Substratos de fibra de coco nacional.** A substituição da turfa importada por subproduto brasileiro avança por razão econômica e ambiental, sustentada por pesquisa como a publicada na [*Horticultura Brasileira* sobre fibra de coco em mudas de tomateiro](https://www.scielo.br/j/hb/a/8GxqGNrHR4NPdKwsdTgLRcy/?lang=pt).
 
-Some a isso o monitoramento automatizado de temperatura e umidade em estufas de mudas, viável hoje até em escala de hobby com [sensores de baixo custo](/blog/sensores-agricultura-guia-escolha-implementacao), e a fase de germinação deixa de ser a etapa de maior incerteza da horta.
+Some a isso o monitoramento automatizado de temperatura e umidade em estufas de mudas, viável hoje até em escala de hobby com [sensores de baixo custo](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), e a fase de germinação deixa de ser a etapa de maior incerteza da horta.
 
 ## Perguntas frequentes
 

@@ -80,7 +80,7 @@ A escolha do sistema é a decisão de arquitetura mais importante. Cada arranjo 
 
 **Aquaponia** combina hidroponia com piscicultura em circuito fechado. Os dejetos do peixe (tilápia, tambaqui) são nitrificados por bactérias em biofiltro e viram nutriente para as plantas. Fecha o ciclo do nitrogênio e produz peixe e vegetal simultaneamente, com economia de até 90% de água. O manejo é mais complexo (peixe e planta em equilíbrio biológico), mas o modelo é educacional excepcional e tem aplicação crescente em escolas e propriedades familiares.
 
-> Leia também: [como escolher sensores agrícolas para sua hidroponia](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [como escolher sensores agrícolas para sua hidroponia](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Solução nutritiva: o coração da hidroponia
 
@@ -112,7 +112,7 @@ A hidroponia caseira é o ponto de entrada natural e funciona em escalas de inve
 
 Em qualquer dos dois, o roteiro é o mesmo: preparar a solução com um kit pronto A+B, germinar as sementes em cubos de espuma fenólica, transplantar as mudas para o net cup quando surgem de 2 a 4 folhas verdadeiras, acompanhar pH e EC a cada 2 ou 3 dias e colher em 30 a 45 dias. A lista completa de materiais, o dimensionamento da bomba, a configuração do timer e os cuidados específicos de cada sistema estão detalhados no [guia de hidroponia caseira para montar seu sistema em casa](/blog/hidroponia-caseira-passo-a-passo-monte-seu-sistema-em-casa).
 
-> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/arduino-iniciantes-primeiros-passos-automacao)
+> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Mercado brasileiro e global
 

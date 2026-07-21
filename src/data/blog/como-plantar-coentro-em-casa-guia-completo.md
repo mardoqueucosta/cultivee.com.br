@@ -132,7 +132,7 @@ Se você é novo no assunto, vale começar pelo nosso [guia sobre o que é hidro
 > "O coentro cultivado em substrato de fibra de coco com fertirrigação alcançou produtividade de até 39 toneladas por hectare, viável economicamente para a agricultura urbana e periurbana."
 > Fonte: [Embrapa Amazônia Ocidental (2019), BP29](https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1108940/1/BP29.pdf)
 
-Quem se empolga com a hidroponia logo percebe que medir pH e temperatura da solução todos os dias dá trabalho, e é aí que a automação entra. Nossos guias sobre [sensores para a horta](/blog/sensores-agricultura-guia-escolha-implementacao) e sobre [automação com Arduino e ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao) mostram como um microcontrolador barato pode ler os parâmetros da solução e ajudar a manter a temperatura na faixa amena que segura o pendoamento. Para o coentro, essa é uma vantagem real, não só um enfeite tecnológico.
+Quem se empolga com a hidroponia logo percebe que medir pH e temperatura da solução todos os dias dá trabalho, e é aí que a automação entra. Nosso guia sobre [sensores para a horta e automação com Arduino e ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) mostra como um microcontrolador barato pode ler os parâmetros da solução e ajudar a manter a temperatura na faixa amena que segura o pendoamento. Para o coentro, essa é uma vantagem real, não só um enfeite tecnológico.
 
 ## Coentro, cilantro e coriander: entendendo a nomenclatura
 

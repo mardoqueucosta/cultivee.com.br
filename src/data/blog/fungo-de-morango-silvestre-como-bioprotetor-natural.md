@@ -137,7 +137,7 @@ O morango é uma das principais culturas onde a transição agroecológica esbar
 
 *Bacillus* spp. e *Trichoderma* spp. já constam nessa lista e são o ponto de partida para qualquer protocolo biológico de controle do mofo cinzento. Quando um produto com *A. pullulans* for registrado no Brasil, o histórico regulatório europeu (status GRAS-equivalente na UE, LMR zero no fruto comercializável) sugere que ele também será aprovável para orgânicos.
 
-Para os sistemas semi-hidropônicos de morango, comuns no RS e em SC, há uma oportunidade específica: a inoculação do substrato (fibra de coco ou espuma fenólica) com consortia microbianos protetores antes do transplante. Essa técnica, ainda experimental, permite estabelecer a comunidade protetora na rizosfera desde o início do ciclo. Aliada ao monitoramento de temperatura e umidade via [sensores de precisão para agricultura](/blog/sensores-agricultura-guia-escolha-implementacao), ela integra fitossanidade biológica com gestão de dados em tempo real.
+Para os sistemas semi-hidropônicos de morango, comuns no RS e em SC, há uma oportunidade específica: a inoculação do substrato (fibra de coco ou espuma fenólica) com consortia microbianos protetores antes do transplante. Essa técnica, ainda experimental, permite estabelecer a comunidade protetora na rizosfera desde o início do ciclo. Aliada ao monitoramento de temperatura e umidade via [sensores de precisão para agricultura](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), ela integra fitossanidade biológica com gestão de dados em tempo real.
 
 Quatro erros críticos a evitar ao adotar biofungicidas no morango:
 

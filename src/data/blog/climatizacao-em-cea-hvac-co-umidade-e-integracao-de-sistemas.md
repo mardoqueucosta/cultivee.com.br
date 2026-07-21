@@ -162,7 +162,7 @@ Dois conceitos de controle que evitam a maior parte do desperdício:
 | Industrial modular | Sensores 4-20 mA, Modbus RTU/RS485 | PLC + supervisório | Vertical farm de 200 a 2.000 m² |
 | Plataforma integrada | Pacote do fornecedor | Estratégia proprietária | Operação grande, alto investimento |
 
-A abordagem maker com [ESP32 e sensores acessíveis](/blog/arduino-iniciantes-primeiros-passos-automacao) monta um stack funcional por menos de R$ 1.000 e é excelente para prototipar a estratégia antes de comprá-la pronta. Para operação comercial, porém, ela não substitui redundância, sensores blindados e calibração rastreável.
+A abordagem maker com [ESP32 e sensores acessíveis](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) monta um stack funcional por menos de R$ 1.000 e é excelente para prototipar a estratégia antes de comprá-la pronta. Para operação comercial, porém, ela não substitui redundância, sensores blindados e calibração rastreável.
 
 ## Sensores: onde medir importa tanto quanto medir
 

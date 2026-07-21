@@ -139,7 +139,7 @@ A abobrinha é voraz. A adubação muda de perfil quando a planta sai da fase ve
 
 **Irrigação:** uma planta adulta consome de 2 a 3 litros de água por dia no verão, e cerca de 1 litro em dias amenos. Regue pela manhã, sempre no nível do solo. Molhar a folhagem é o convite direto ao oídio e ao míldio. Cobertura morta reduz a frequência de rega praticamente à metade. O solo deve ficar úmido e nunca encharcado.
 
-Quem quer precisão pode [monitorar umidade e condutividade com sensores](/blog/sensores-agricultura-guia-escolha-implementacao), embora para uma planta em vaso o dedo no substrato resolva.
+Quem quer precisão pode [monitorar umidade e condutividade com sensores](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), embora para uma planta em vaso o dedo no substrato resolva.
 
 ## Flor macho e flor fêmea: por que a abobrinha floresce e não vinga
 

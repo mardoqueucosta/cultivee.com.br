@@ -110,7 +110,7 @@ Nenhum fornecedor vai lhe contar estas seis coisas.
 
 **Dado ruim gera modelo ruim.** Sensor descalibrado ou mal posicionado envenena todo o sistema. Eletrodo de pH deriva com o uso e exige calibração periódica com soluções padrão. Um modelo alimentado por leitura errada não produz erro visível: produz erro confiante. Antes de pensar em algoritmo, resolva a instrumentação.
 
-> Leia também: [Sensores na agricultura: guia de escolha e implementação](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [Sensores na agricultura: guia de escolha e implementação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 **Modelo não transfere direto.** Treinado em outro clima, outra estufa, outra cultivar, ele perde desempenho. Isso vale tanto para visão computacional quanto para predição de série temporal. A literatura recomenda treinar com pelo menos um ciclo completo de dados locais, cobrindo variação sazonal.
 

@@ -141,7 +141,7 @@ A montagem do Kratky em caixa plástica é literalmente um trabalho de meia hora
 7. **Encha o reservatório** com 25 a 30 litros de solução nutritiva preparada. Ligue a bomba e verifique que a solução escorre uniforme pelo tubo, sem vazamentos.
 8. **Encaixe os net cups** com mudas nos furos. As raízes ficarão expostas à lâmina de solução circulante.
 
-> Leia também: [automatize bombas e sensores com Arduino e ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao)
+> Leia também: [automatize bombas e sensores com Arduino e ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 A automação opcional, com ESP32 ou Arduino lendo sensores de pH e EC e acionando a bomba via relé, é o próximo passo natural para quem se interessa por eletrônica e quer evoluir para um manejo "smart". O protocolo SMART GROW de [Cambra-López et al. (2023)](https://www.sciencedirect.com/science/article/pii/S2468067223000639) detalha esse setup com componentes que somam abaixo de R$ 200, considerando ESP32 (R$ 50), sonda pH analógica (R$ 80), sonda EC (R$ 60) e relé.
 
@@ -166,8 +166,6 @@ Quando quiser baixar o custo e ajustar a fórmula, prepare a solução a partir 
 | Oxigênio dissolvido | igual ou superior a 5 mg/L | igual ou superior a 5 mg/L |
 
 A medição de pH e EC pode ser feita com canetas digitais de R$ 80 a R$ 150 cada, marca Akso, Hanna ou Mileenium. Em sistemas mais simples, kits colorimétricos com gota e fita servem para começar, mas a precisão é insuficiente para diagnóstico fino. A medição é diária para ambos os parâmetros nas primeiras semanas, podendo cair para a cada três dias depois que o produtor ganhar confiança no manejo.
-
-> Leia também: [como escolher sensores de pH e EC para sua hidroponia](/blog/sensores-agricultura-guia-escolha-implementacao)
 
 A renovação completa da solução é feita a cada 15 a 21 dias, ou quando o monitoramento indicar acúmulo de sódio ou desbalanço entre macronutrientes. A desinfecção do reservatório, com hipoclorito de sódio a 1% e enxágue triplo, é obrigatória entre safras para reduzir risco de patógenos como *Pythium aphanidermatum*.
 

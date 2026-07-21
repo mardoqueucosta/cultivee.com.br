@@ -195,7 +195,7 @@ O cultivo protegido eleva a produtividade da berinjela de forma expressiva em re
 1. **Reaproveitar o vaso do pimentão ou da pimenta.** O recipiente que serve ao pimentão (15 a 20 litros) e o que serve à pimenta (10 a 15 litros) são pequenos demais aqui: a berinjela pede 20 a 30 litros por planta e pelo menos 40 cm de profundidade útil. Corrija antes do transplante; depois, só na próxima safra. Em recipiente apertado a planta vive, mas entrega frutos pequenos e poucos.
 2. **Plantio fora da janela térmica.** Se as noites estão abaixo de 18 °C, adie. Não há adubo que compense frio.
 3. **Flor caindo sem fruto.** Polinização, não nutrição. Vibre as flores entre 9h e 11h, dia sim, dia não.
-4. **Rega irregular.** Alternar seca e encharcamento derruba flor e racha fruto. Em vaso, no verão, rega diária, com cobertura morta de palha para reduzir a evaporação. Quem quer automatizar o controle de umidade encontra o caminho no guia de [sensores em agricultura](/blog/sensores-agricultura-guia-escolha-implementacao).
+4. **Rega irregular.** Alternar seca e encharcamento derruba flor e racha fruto. Em vaso, no verão, rega diária, com cobertura morta de palha para reduzir a evaporação. Quem quer automatizar o controle de umidade encontra o caminho no guia de [sensores em agricultura](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen).
 5. **Tutor tardio.** Coloque no transplante. Enfiar estaca em planta formada fere raiz e convida a murcha bacteriana.
 6. **Adubação só no plantio.** Cobertura a cada 30 dias com NPK rico em N e K a partir do primeiro fruto.
 7. **Deixar o fruto na planta esperando crescer.** Casca opaca já é ponto perdido, e a planta reduz a floração seguinte.

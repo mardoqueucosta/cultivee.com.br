@@ -89,7 +89,7 @@ O calendário varia por região. No Sudeste e no Sul, o plantio de primavera e v
 
 A estufa caseira (mesmo um túnel baixo de plástico) resolve dois problemas de uma vez: estabiliza a temperatura na floração (o ideal são 20 a 25 graus C) e protege as folhas da chuva direta, o que corta a dispersão de bactérias e fungos. Em ambiente protegido, o pimentão produz por 6 a 10 meses, contra os poucos meses do campo aberto exposto.
 
-Uma vantagem de quem cultiva em estruturas cada vez mais controladas é poder monitorar as condições com [sensores de temperatura e umidade](/blog/sensores-agricultura-guia-escolha-implementacao), que ajudam a antecipar picos de calor e a acionar irrigação ou ventilação antes do estresse.
+Uma vantagem de quem cultiva em estruturas cada vez mais controladas é poder monitorar as condições com [sensores de temperatura e umidade](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), que ajudam a antecipar picos de calor e a acionar irrigação ou ventilação antes do estresse.
 
 ## Cultivo hidropônico do pimentão
 
@@ -124,7 +124,7 @@ Para casa, o **Dutch bucket adaptado** é o mais amigável: um balde de 15 a 20 
 > "A cultivar CLXP 1463 atingiu produtividade de 107 t/ha quando cultivada em fibra da casca de coco, demonstrando o potencial da hidroponia de substrato para pimentão."
 > Fonte: [Charlo et al. (2009), Horticultura Brasileira 27(2)](https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-05362009000200006)
 
-Um trunfo da hidroponia é a possibilidade de automatizar a leitura de pH e EC com sensores e, num passo além, controlar bombas dosadoras. Quem quer trilhar esse caminho pode começar pela [automação DIY com Arduino e ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao), que abre a porta para a fertirrigação inteligente de pequeno porte.
+Um trunfo da hidroponia é a possibilidade de automatizar a leitura de pH e EC com sensores e, num passo além, controlar bombas dosadoras. Quem quer trilhar esse caminho pode começar pela [automação DIY com Arduino e ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), que abre a porta para a fertirrigação inteligente de pequeno porte.
 
 ## Solução nutritiva: a Furlani adaptada para frutos
 

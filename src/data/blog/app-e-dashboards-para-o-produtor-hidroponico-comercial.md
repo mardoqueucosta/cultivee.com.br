@@ -199,7 +199,7 @@ Uma operação com dois anos de registro consistente de ciclo, refugo e produtiv
 
 A ordem importa e é sempre a mesma: **primeiro o indicador e a rotina, depois a automação da coleta, por último a inteligência sobre os dados.** Quem inverte compra sensor caro para alimentar uma planilha que ninguém lê.
 
-> Leia também: [Sensores na agricultura: guia de escolha e implementação](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [Sensores na agricultura: guia de escolha e implementação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 Quando a coleta manual de uma variável passar a consumir tempo demais ou a falhar com frequência, essa variável específica está pronta para virar sensor. Não antes.
 

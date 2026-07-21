@@ -188,7 +188,7 @@ O PRONAF é a via de financiamento mais acessível para pequeno produtor. [Geise
 
 No lado do OPEX, o item que mais surpreende quem vem do cultivo em solo é a energia. Em fazendas verticais com LED e climatização, a conta de luz é o principal gargalo de viabilidade, como relata a própria Pink Farms. O custo de LED caiu cerca de 40% desde 2020 segundo a [Mordor Intelligence](https://www.mordorintelligence.com/pt/industry-reports/hydroponics-market), o que melhora o CAPEX, mas a tarifa brasileira mantém o OPEX pressionado.
 
-Automação reduz custo operacional em dois pontos: menos desperdício de fertilizante por dosagem correta e menos hora-homem em leitura manual de pH e EC. O ponto de partida é entender [como escolher e implementar sensores agrícolas](/blog/sensores-agricultura-guia-escolha-implementacao) e, para quem quer construir a própria solução, os [primeiros passos de automação com Arduino](/blog/arduino-iniciantes-primeiros-passos-automacao).
+Automação reduz custo operacional em dois pontos: menos desperdício de fertilizante por dosagem correta e menos hora-homem em leitura manual de pH e EC. O ponto de partida é entender [como escolher sensores e dar os primeiros passos de automação com Arduino](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen).
 
 ## Cinco erros que destroem a margem
 

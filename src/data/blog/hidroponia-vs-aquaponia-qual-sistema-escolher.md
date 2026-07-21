@@ -85,7 +85,7 @@ Em aquaponia, uma falha de aeração ou de bombeamento pode matar o plantel de p
 Isso muda três coisas no projeto:
 
 - **Redundância deixa de ser luxo.** Aerador reserva, bomba reserva e nobreak são itens de projeto, não upgrades futuros.
-- **Monitoramento contínuo entra no CAPEX.** Sensores de oxigênio dissolvido com alarme deixam de ser opcionais quando o plantel vale meses de receita. Vale olhar o guia de [sensores agrícolas](/blog/sensores-agricultura-guia-escolha-implementacao) para dimensionar isso.
+- **Monitoramento contínuo entra no CAPEX.** Sensores de oxigênio dissolvido com alarme deixam de ser opcionais quando o plantel vale meses de receita. Vale olhar o guia de [sensores agrícolas](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) para dimensionar isso.
 - **Alguém precisa estar por perto.** Aquaponia comercial exige presença ou plantão remoto. Esse custo raramente aparece nas planilhas otimistas que circulam por aí.
 
 ## Tabela comparativa: 13 eixos técnicos

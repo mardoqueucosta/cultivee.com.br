@@ -214,7 +214,7 @@ Em NFT, **30 a 60 minutos sem bombeamento já comprometem a cultura**, porque a 
 
 As três camadas de proteção usuais são: nobreak dedicado à bomba para quedas curtas de até 20 ou 30 minutos, gerador a diesel com partida automática para quedas longas, e um alarme remoto que avise a falha por celular. A terceira camada é a mais barata e a mais esquecida. Uma queda às três da manhã sem alarme vira uma estufa inteira perdida antes do café.
 
-Quem quiser automatizar o acionamento, o monitoramento de pH e EC e o alarme de falha encontra os fundamentos em [sensores para agricultura](/blog/sensores-agricultura-guia-escolha-implementacao) e em [Arduino para iniciantes](/blog/arduino-iniciantes-primeiros-passos-automacao). Um ESP32 com sensor de fluxo na saída da bomba e notificação por aplicativo custa pouco mais que uma bandeja de mudas e evita perdas de milhares de reais.
+Quem quiser automatizar o acionamento, o monitoramento de pH e EC e o alarme de falha encontra os fundamentos no guia de [sensores e automação com Arduino](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen). Um ESP32 com sensor de fluxo na saída da bomba e notificação por aplicativo custa pouco mais que uma bandeja de mudas e evita perdas de milhares de reais.
 
 ### Ciclo de acionamento
 

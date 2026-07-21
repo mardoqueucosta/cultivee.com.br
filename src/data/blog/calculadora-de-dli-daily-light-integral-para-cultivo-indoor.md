@@ -84,7 +84,7 @@ Aqui está o gargalo real de quem cultiva em casa. O quantômetro PAR dedicado �
 
 **Sobre a conversão lux para PPFD.** Ela existe, mas o fator depende do espectro da fonte. Lux é uma unidade ponderada pela sensibilidade do olho humano, que tem pico no verde-amarelo (555 nm), justamente onde a planta absorve menos. Um LED roxo com pico em azul e vermelho pode ter lux baixíssimo e PPFD alto; um LED branco morno tem o oposto. Não existe fator universal, então trate qualquer conversão de lux como estimativa válida apenas para a família de espectro em que foi calibrada.
 
-**Sempre meça em vários pontos.** Faça uma grade de pelo menos cinco leituras: centro, quatro cantos da área útil. Trabalhe com a média, não com o pico. Se você quer instrumentar isso de forma permanente, vale olhar o guia de [sensores agrícolas e como escolher](/blog/sensores-agricultura-guia-escolha-implementacao).
+**Sempre meça em vários pontos.** Faça uma grade de pelo menos cinco leituras: centro, quatro cantos da área útil. Trabalhe com a média, não com o pico. Se você quer instrumentar isso de forma permanente, vale olhar o guia de [sensores agrícolas e como escolher](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen).
 
 ## Tabela de DLI alvo por grupo de cultura
 

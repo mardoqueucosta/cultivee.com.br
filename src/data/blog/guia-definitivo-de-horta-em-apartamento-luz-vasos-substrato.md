@@ -245,7 +245,7 @@ Na prática doméstica, um painel LED full-spectrum de 30 a 50 W por vaso, posic
 > "Adição de iluminação azul noturna combinada a fluxo de ar descendente reduziu a incidência de tipburn em alface cultivada em fazenda indoor."
 > Fonte: [Cornell CEA e ASHS (2025), HortScience 60(3):325](https://journals.ashs.org/hortsci/view/journals/hortsci/60/3/article-p325.xml)
 
-O custo de energia é modesto: um painel pequeno consome de R$ 5 a 15 por mês. Para frutíferas como tomate e pimenta, o investimento sobe, porque elas exigem PPFD maior e fotoperíodo de 12 a 14 horas. Se você quiser monitorar luz e umidade de forma mais técnica, vale conhecer nosso guia de [sensores para agricultura](/blog/sensores-agricultura-guia-escolha-implementacao), e quem gosta de eletrônica pode montar um controlador caseiro de fotoperíodo com [Arduino e ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao).
+O custo de energia é modesto: um painel pequeno consome de R$ 5 a 15 por mês. Para frutíferas como tomate e pimenta, o investimento sobe, porque elas exigem PPFD maior e fotoperíodo de 12 a 14 horas. Se você quiser monitorar luz e umidade de forma mais técnica, vale conhecer nosso guia de [sensores e automação com Arduino e ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen); quem gosta de eletrônica pode montar com essas placas um controlador caseiro de fotoperíodo.
 
 ## Casos brasileiros: o que aprender com Hortas Cariocas e Cidades Sem Fome
 

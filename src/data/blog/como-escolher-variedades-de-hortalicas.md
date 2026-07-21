@@ -329,7 +329,7 @@ Quatro movimentos já em curso mudam o que você vai encontrar no catálogo dos 
 - **Tolerância ao calor como atributo central.** O deslocamento térmico pressiona a janela de cultivo de folhosas e brássicas, e os programas de melhoramento tropical brasileiros vêm respondendo com material adaptado. Esse é um critério que tende a subir na hierarquia de decisão.
 - **Edição gênica.** Técnicas como CRISPR permitem editar genes da própria espécie sem introduzir DNA de outra, o que as coloca em categoria regulatória distinta da transgenia. A CTNBio estabeleceu o marco de avaliação dessas técnicas na Resolução Normativa nº 16/2018. O impacto esperado é maior velocidade de lançamento em características de tolerância a estresse e a doença.
 - **Cultivares desenhadas para ambiente controlado.** À medida que hidroponia e cultivo protegido ganham área, cresce a oferta de material selecionado especificamente para porte compacto, ciclo curto e resposta a luz artificial, tema que se conecta ao manejo de [iluminação LED, espectro, DLI e PPFD](/blog/iluminacao-led-para-plantas-espectro-dli-e-ppfd).
-- **Registro de desempenho por talhão.** Sensores e planilhas de campo tornam viável comparar cultivares com dado próprio em vez de impressão. A infraestrutura básica está descrita no guia de [sensores para agricultura](/blog/sensores-agricultura-guia-escolha-implementacao).
+- **Registro de desempenho por talhão.** Sensores e planilhas de campo tornam viável comparar cultivares com dado próprio em vez de impressão. A infraestrutura básica está descrita no guia de [sensores para agricultura](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen).
 
 ## Índice: onde estão os nomes de cultivar por cultura
 

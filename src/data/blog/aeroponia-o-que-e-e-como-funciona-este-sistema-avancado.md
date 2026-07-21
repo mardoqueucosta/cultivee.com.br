@@ -114,7 +114,7 @@ Em cultivo com substrato, a fibra de coco ou a lã de rocha segura água por hor
 As consequências práticas são três, e nenhuma é opcional em operação séria:
 
 1. **Redundância energética.** Nobreak ou gerador com autonomia de pelo menos 30 a 60 minutos, dimensionado para a bomba, não só para o controlador.
-2. **Alarme, não só automação.** O sistema precisa avisar que parou. Um controlador que apenas aciona a bomba, sem verificar pressão e sem notificar falha, é meio sistema. Sensores e microcontroladores como ESP32 e Arduino resolvem isso a custo baixo, e o [guia de escolha de sensores agrícolas](/blog/sensores-agricultura-guia-escolha-implementacao) e os [primeiros passos com Arduino](/blog/arduino-iniciantes-primeiros-passos-automacao) cobrem o caminho.
+2. **Alarme, não só automação.** O sistema precisa avisar que parou. Um controlador que apenas aciona a bomba, sem verificar pressão e sem notificar falha, é meio sistema. Sensores e microcontroladores como ESP32 e Arduino resolvem isso a custo baixo, e o [guia de sensores agrícolas e primeiros passos com Arduino](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) cobre o caminho.
 3. **Manutenção preventiva agendada**, não reativa. Bico limpo antes de entupir, não depois.
 
 É por isso, e não por falta de mérito técnico, que **a aeroponia não domina a produção comercial de hortaliças**. O risco operacional por unidade de área é alto, e em cultura commodity a margem não paga esse risco. Quem monta uma operação precisa dimensionar isso no plano financeiro, e o raciocínio de CAPEX, OPEX e payback está desenvolvido no artigo sobre [viabilidade econômica e ROI da hidroponia comercial](/blog/viabilidade-economica-e-roi-da-hidroponia-comercial).

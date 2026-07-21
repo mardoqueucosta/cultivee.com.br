@@ -93,7 +93,7 @@ Antes de calcular as quantidades, é importante conhecer os sais comerciais disp
 
 A escolha entre Fe-EDTA e Fe-EDDHA depende do pH da água. Para água potável típica do Brasil (pH 6 a 7,5), o Fe-EDTA serve. Para águas alcalinas (pH acima de 7,5), o Fe-EDDHA é obrigatório porque o Fe-EDTA perde estabilidade. As marcas mais difundidas no varejo brasileiro são YaraLiva (Yara), Krista (Yara), ConMicros (Conduspar) e YaraTera Rexolin (Yara).
 
-> Leia também: [como escolher sensores de pH e EC para sua hidroponia](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [como escolher sensores de pH e EC para sua hidroponia](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Tabelas escaladas: 100, 500 e 1.000 litros
 
@@ -150,8 +150,6 @@ Para produção comercial acima de 1.000 litros ou para hobby que faz reposiçã
 A razão prática é evitar a **precipitação química**. Quando cálcio (Ca²⁺) encontra sulfato (SO₄²⁻) em alta concentração, forma sulfato de cálcio (CaSO₄, gesso). Quando encontra fosfato (HPO₄²⁻ ou H₂PO₄⁻), forma fosfato tricálcico (Ca₃(PO₄)₂). Ambos os precipitados são sólidos brancos no fundo do recipiente que tiram cálcio, fósforo e enxofre do circuito nutricional, formam crostas em tubulações e bombas e arruínam a operação. Apenas no reservatório final, em concentração diluída, A e B se encontram sem provocar precipitação significativa.
 
 Em produção comercial brasileira, dosadoras automáticas (Dosatron, MixRite) entregam essa proporção em linha. O custo é de R$ 200 a R$ 800 para a dosadora mecânica, com payback rápido em operações que fazem reposição frequente. Para hobby, dois baldes de 20 a 50 litros, com sais concentrados nos dois, e jarras de medida resolvem o problema sem investir em equipamento dedicado.
-
-> Leia também: [primeiros passos com Arduino e ESP32 para automação](/blog/arduino-iniciantes-primeiros-passos-automacao)
 
 ## Faixas operacionais e manejo
 

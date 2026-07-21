@@ -50,7 +50,7 @@ A diferença técnica entre um drone agrícola comum e um drone de estufa está 
 
 Por isso, drones indoor como o E13 da Corvus usam navegação visual baseada em SLAM (*Simultaneous Localization and Mapping*), câmeras RGB e multiespectrais, rotas pré-mapeadas e sensores de proximidade para desviar de obstáculos. Uma estação de docking permite recarga automática, o que possibilita operação contínua, praticamente 24 horas por dia, sem intervenção manual repetida. O resultado é um sistema capaz de sobrevoar bancadas de mudas todos os dias, sempre na mesma rota, gerando uma série histórica de imagens comparáveis ao longo do tempo.
 
-Esse tipo de coleta contínua se aproxima do que já existe em fazendas verticais brasileiras equipadas com [sensores para monitoramento agrícola](/blog/sensores-agricultura-guia-escolha-implementacao), que acompanham temperatura, umidade, CO2 e fertirrigação em tempo real. A diferença é que o drone adiciona uma camada visual e móvel de dados, que os sensores fixos, sozinhos, não capturam: imagens de cada bancada, planta a planta, sem precisar de uma pessoa caminhando pela estufa.
+Esse tipo de coleta contínua se aproxima do que já existe em fazendas verticais brasileiras equipadas com [sensores para monitoramento agrícola](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), que acompanham temperatura, umidade, CO2 e fertirrigação em tempo real. A diferença é que o drone adiciona uma camada visual e móvel de dados, que os sensores fixos, sozinhos, não capturam: imagens de cada bancada, planta a planta, sem precisar de uma pessoa caminhando pela estufa.
 
 ## Os casos de uso já validados na Europa
 
@@ -87,7 +87,7 @@ O ecossistema brasileiro de drones e robótica agrícola já é relevante. A XMo
 
 Nenhuma dessas empresas, até a data desta pesquisa, foi encontrada oferecendo um produto de drone autônomo especializado para voo indoor contínuo em estufas. Todas atuam majoritariamente em lavoura a céu aberto ou em soluções terrestres. É um gap de mercado real, não apenas editorial, e um caminho natural de evolução para quem já domina visão computacional aplicada à agricultura no Brasil.
 
-Enquanto essa categoria não existe comercialmente por aqui, produtores menores costumam começar pela [automação DIY com sensores ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao), monitorando variáveis como pH, condutividade elétrica e temperatura de forma fixa, e mantendo a inspeção visual de pragas e crescimento como tarefa manual, exatamente a lacuna que um drone indoor resolveria em escala.
+Enquanto essa categoria não existe comercialmente por aqui, produtores menores costumam começar pela [automação DIY com sensores ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen), monitorando variáveis como pH, condutividade elétrica e temperatura de forma fixa, e mantendo a inspeção visual de pragas e crescimento como tarefa manual, exatamente a lacuna que um drone indoor resolveria em escala.
 
 > Leia também: [O que é hidroponia: guia definitivo, vantagens e tipos](/blog/o-que-e-hidroponia-guia-definitivo-vantagens-tipos-e-como-co)
 

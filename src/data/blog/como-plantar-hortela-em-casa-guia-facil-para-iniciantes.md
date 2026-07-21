@@ -91,7 +91,7 @@ A rega é o ponto onde mais iniciantes erram, e a regra é simples de memorizar:
 
 A adubação é modesta. Um substrato rico em matéria orgânica já alimenta a planta por um bom tempo. Reforce com adubo orgânico, como húmus de minhoca ou composto, a cada **2 a 3 meses**, em pequenas quantidades. E aqui vale um alerta contraintuitivo que a ciência respalda: **mais nutriente não é sempre melhor**. Pesquisas com *Mentha* em cultivo sem solo mostram que concentrações mais altas de potássio aumentam o rendimento de óleo, mas alteram o perfil aromático das folhas, reduzindo alguns compostos que compõem o cheiro fino. Traduzindo para o vaso: o equilíbrio importa mais que a quantidade, e adubar demais pode piorar o sabor.
 
-Se a sua meta é nunca mais errar a rega, o caminho é medir. Um sensor de umidade de solo elimina o palpite e avisa a hora exata de regar. Nossos guias sobre [sensores para a horta](/blog/sensores-agricultura-guia-escolha-implementacao) e sobre [automação com Arduino e ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao) mostram como transformar essa rotina manual em um sistema que rega sozinho, um passo natural para quem já domina o básico da hortelã e quer automatizar.
+Se a sua meta é nunca mais errar a rega, o caminho é medir. Um sensor de umidade de solo elimina o palpite e avisa a hora exata de regar. Nosso guia sobre [sensores para a horta e automação com Arduino e ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) mostra como transformar essa rotina manual em um sistema que rega sozinho, um passo natural para quem já domina o básico da hortelã e quer automatizar.
 
 ## Colheita e poda: o segredo da planta cheia
 

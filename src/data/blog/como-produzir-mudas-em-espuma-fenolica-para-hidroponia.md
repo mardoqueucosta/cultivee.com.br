@@ -230,7 +230,7 @@ O controle de algas e moscas merece nota. A dissertação de Mata (2018, IF Goia
 
 Para operações que querem instrumentar o berçário com leitura contínua de pH e condutividade, o guia de sensores cobre a escolha do equipamento.
 
-> Leia também: [Sensores na agricultura: guia de escolha e implementação](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [Sensores na agricultura: guia de escolha e implementação](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Contexto de mercado
 

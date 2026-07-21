@@ -56,7 +56,7 @@ A planta não espera passivamente pelos microrganismos. Ela libera exsudatos rad
 
 Uma planta estressada, com deficiência hídrica ou nutricional, libera menos exsudatos e atrai menos aliados. Por isso, a nutrição mineral básica não concorre com os bioinsumos: ela potencializa o recrutamento microbiano. Quanto mais vigorosa a planta, mais generosa é a "refeição" que ela oferece ao microbioma, e mais forte o microbioma fica para retribuir.
 
-> Leia também: [Sensores para agricultura: como monitorar a saúde do solo em tempo real](/blog/sensores-agricultura-guia-escolha-implementacao)
+> Leia também: [Sensores para agricultura: como monitorar a saúde do solo em tempo real](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen)
 
 ## Os seis mecanismos pelos quais os microrganismos nutrem a planta
 

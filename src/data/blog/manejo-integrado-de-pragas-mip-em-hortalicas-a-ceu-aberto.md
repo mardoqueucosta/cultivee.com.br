@@ -259,7 +259,7 @@ O MIP de precisão chegou primeiro na soja, mas parte das ferramentas já é vi�
 
 **Aplicativos de identificação por foto** resolvem o gargalo do diagnóstico. Confundir mina de *Liriomyza* com mina de *Tuta* leva a decisão errada, porque o manejo é diferente. Fotografar e comparar em base de imagem é um passo real de qualificação, embora nenhum app dispense confirmação por quem entende.
 
-**Sensores de temperatura e umidade** de baixo custo ajudam a antecipar surtos: ácaro-rajado explode em sequência de dias quentes e secos, e fungo entomopatogênico só funciona com umidade alta. Um registrador simples no canteiro informa as duas decisões. Quem quiser montar o próprio sistema encontra a base em [sensores para agricultura](/blog/sensores-agricultura-guia-escolha-implementacao) e nos [primeiros passos de automação com Arduino](/blog/arduino-iniciantes-primeiros-passos-automacao).
+**Sensores de temperatura e umidade** de baixo custo ajudam a antecipar surtos: ácaro-rajado explode em sequência de dias quentes e secos, e fungo entomopatogênico só funciona com umidade alta. Um registrador simples no canteiro informa as duas decisões. Quem quiser montar o próprio sistema encontra a base no guia de [sensores e primeiros passos de automação com Arduino](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen).
 
 **Visão computacional em armadilha adesiva**, que fotografa a placa e conta os insetos automaticamente, está em piloto no Brasil em parcerias entre agritechs e biofábricas. Ainda não é realidade para quintal, mas a tendência de barateamento é clara.
 

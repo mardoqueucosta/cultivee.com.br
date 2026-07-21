@@ -282,7 +282,7 @@ Nem todo produtor precisa do mesmo aparelho, e nenhum aparelho dura para sempre.
 
 O que muda de verdade entre eles é menos a exatidão e mais a **estabilidade ao longo do tempo** e a manutenibilidade. Bancada e sonda inline geralmente aceitam troca de eletrodo; caneta barata costuma ser descartável por inteiro quando o sensor morre.
 
-Sobre a sonda inline vale um alerta: leitura contínua é excelente para acompanhar tendência e disparar alarme, mas ela suja mais rápido, porque fica permanentemente imersa em solução com biofilme. Exige limpeza e recalibração mais frequentes, não menos. Quem monta [automação caseira com ESP32](/blog/arduino-iniciantes-primeiros-passos-automacao) precisa considerar que o custo real do sistema inclui manutenção periódica do sensor, e os critérios gerais de seleção estão reunidos no guia de [como escolher um sensor agrícola](/blog/sensores-agricultura-guia-escolha-implementacao).
+Sobre a sonda inline vale um alerta: leitura contínua é excelente para acompanhar tendência e disparar alarme, mas ela suja mais rápido, porque fica permanentemente imersa em solução com biofilme. Exige limpeza e recalibração mais frequentes, não menos. Quem monta [automação caseira com ESP32](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) precisa considerar que o custo real do sistema inclui manutenção periódica do sensor, e os critérios gerais de seleção estão reunidos no mesmo guia.
 
 ### Calibração e conservação
 

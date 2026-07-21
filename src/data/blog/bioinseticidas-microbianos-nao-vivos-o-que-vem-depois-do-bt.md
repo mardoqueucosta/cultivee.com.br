@@ -198,7 +198,7 @@ O [MAPA registrou 162 bioinsumos em 2025](https://www.gov.br/agricultura/pt-br/a
 
 A convergência de três fatores aponta para um mercado diferente até 2030: a resistência crescente ao Bt e ao spinosad em campo, o novo marco regulatório brasileiro que facilita o registro de metabólitos, e os investimentos de Bayer, BASF e FMC nessa classe de produtos.
 
-Para produtores que já adotam automação em suas estufas, vale registrar que [sensores de umidade e temperatura integrados a alertas de pragas](/blog/sensores-agricultura-guia-escolha-implementacao) já permitem monitoramento antecipado de infestações. A combinação de detecção precoce com bioinseticidas de metabólitos microbianos de ação mais rápida representa o protocolo mais robusto de manejo integrado disponível para horticultura protegida.
+Para produtores que já adotam automação em suas estufas, vale registrar que [sensores de umidade e temperatura integrados a alertas de pragas](/blog/automacao-e-iot-em-hidroponia-com-esp32-guia-completo-de-sen) já permitem monitoramento antecipado de infestações. A combinação de detecção precoce com bioinseticidas de metabólitos microbianos de ação mais rápida representa o protocolo mais robusto de manejo integrado disponível para horticultura protegida.
 
 ## Guia prático para o horticultor
 
