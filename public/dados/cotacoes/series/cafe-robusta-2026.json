@@ -1,0 +1,84 @@
+{
+  "commodity": "cafe-robusta",
+  "ano": "2026",
+  "fonte": "CEPEA/ESALQ",
+  "licenca": "CC BY-NC 4.0",
+  "atualizado_em": "2026-08-14T07:14:40",
+  "pontos": [
+    {
+      "data_ref": "24/07/2026",
+      "valor": 1070.72,
+      "var_pct": 0.42
+    },
+    {
+      "data_ref": "27/07/2026",
+      "valor": 1087.34,
+      "var_pct": 1.55
+    },
+    {
+      "data_ref": "28/07/2026",
+      "valor": 1114.0,
+      "var_pct": 2.45
+    },
+    {
+      "data_ref": "29/07/2026",
+      "valor": 1079.57,
+      "var_pct": -3.09
+    },
+    {
+      "data_ref": "30/07/2026",
+      "valor": 1080.81,
+      "var_pct": 0.11
+    },
+    {
+      "data_ref": "31/07/2026",
+      "valor": 1092.56,
+      "var_pct": 1.09
+    },
+    {
+      "data_ref": "03/08/2026",
+      "valor": 1087.68,
+      "var_pct": -0.45
+    },
+    {
+      "data_ref": "04/08/2026",
+      "valor": 1095.15,
+      "var_pct": 0.69
+    },
+    {
+      "data_ref": "05/08/2026",
+      "valor": 1111.86,
+      "var_pct": 1.53
+    },
+    {
+      "data_ref": "06/08/2026",
+      "valor": 1090.51,
+      "var_pct": -1.92
+    },
+    {
+      "data_ref": "07/08/2026",
+      "valor": 1089.15,
+      "var_pct": -0.12
+    },
+    {
+      "data_ref": "10/08/2026",
+      "valor": 1092.38,
+      "var_pct": 0.3
+    },
+    {
+      "data_ref": "11/08/2026",
+      "valor": 1086.88,
+      "var_pct": -0.5
+    },
+    {
+      "data_ref": "12/08/2026",
+      "valor": 1077.11,
+      "var_pct": -0.9
+    },
+    {
+      "data_ref": "13/08/2026",
+      "valor": 1064.62,
+      "var_pct": -1.16
+    }
+  ]
+}

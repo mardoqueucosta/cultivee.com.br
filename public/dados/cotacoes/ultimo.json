@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-14T06:25:55",
+  "gerado_em": "2026-08-14T07:14:40",
   "data_carrossel": "13/08/2026",
   "fonte": "CEPEA/ESALQ",
   "fonte_url": "https://cepea.org.br",
@@ -196,6 +196,41 @@
       "var_pct": 3.18,
       "var_base": "05/2026",
       "sequencia": null,
+      "fonte": "CEPEA/ESALQ",
+      "licenca": "CC BY-NC 4.0"
+    },
+    {
+      "key": "cafe-robusta",
+      "nome": "Café robusta",
+      "detalhe": "",
+      "nome_cepea": "Café Robusta",
+      "unidade": "sc de 60kg",
+      "moeda": "R$",
+      "valor": 1064.62,
+      "valor_fmt": "1.064,62",
+      "data_ref": "13/08/2026",
+      "ref_rotulo": "13/08",
+      "periodicidade": "diaria",
+      "defasagem_dias": 1,
+      "var_pct": -1.16,
+      "var_base": "12/08/2026",
+      "sequencia": {
+        "direcao": "baixa",
+        "dias": 3,
+        "desde": "11/08/2026",
+        "var_acumulada_pct": -2.54,
+        "anterior": {
+          "direcao": "alta",
+          "dias": 1,
+          "var_acumulada_pct": 0.3
+        },
+        "extremo_na_janela": "minimo",
+        "janela": {
+          "de": "24/07/2026",
+          "ate": "13/08/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     }
