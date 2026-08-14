@@ -1,0 +1,127 @@
+{
+  "commodity": "milho",
+  "ano": "2026",
+  "fonte": "CEPEA/ESALQ",
+  "licenca": "CC BY-NC 4.0",
+  "atualizado_em": "2026-08-14T06:25:55",
+  "pontos": [
+    {
+      "data_ref": "10/07/2026",
+      "valor": 64.51
+    },
+    {
+      "data_ref": "13/07/2026",
+      "valor": 64.62
+    },
+    {
+      "data_ref": "14/07/2026",
+      "valor": 64.64
+    },
+    {
+      "data_ref": "15/07/2026",
+      "valor": 64.77
+    },
+    {
+      "data_ref": "16/07/2026",
+      "valor": 64.87
+    },
+    {
+      "data_ref": "17/07/2026",
+      "valor": 64.94
+    },
+    {
+      "data_ref": "20/07/2026",
+      "valor": 65.22
+    },
+    {
+      "data_ref": "21/07/2026",
+      "valor": 65.29,
+      "var_pct": 0.11
+    },
+    {
+      "data_ref": "22/07/2026",
+      "valor": 65.27,
+      "var_pct": -0.03
+    },
+    {
+      "data_ref": "23/07/2026",
+      "valor": 65.55,
+      "var_pct": 0.43
+    },
+    {
+      "data_ref": "24/07/2026",
+      "valor": 65.74,
+      "var_pct": 0.29
+    },
+    {
+      "data_ref": "27/07/2026",
+      "valor": 65.47,
+      "var_pct": -0.41
+    },
+    {
+      "data_ref": "28/07/2026",
+      "valor": 65.22,
+      "var_pct": -0.38
+    },
+    {
+      "data_ref": "29/07/2026",
+      "valor": 65.33,
+      "var_pct": 0.17
+    },
+    {
+      "data_ref": "30/07/2026",
+      "valor": 65.3,
+      "var_pct": -0.05
+    },
+    {
+      "data_ref": "31/07/2026",
+      "valor": 65.25,
+      "var_pct": -0.08
+    },
+    {
+      "data_ref": "03/08/2026",
+      "valor": 65.24,
+      "var_pct": -0.02
+    },
+    {
+      "data_ref": "04/08/2026",
+      "valor": 65.17,
+      "var_pct": -0.11
+    },
+    {
+      "data_ref": "05/08/2026",
+      "valor": 64.86,
+      "var_pct": -0.48
+    },
+    {
+      "data_ref": "06/08/2026",
+      "valor": 64.84,
+      "var_pct": -0.03
+    },
+    {
+      "data_ref": "07/08/2026",
+      "valor": 65.02,
+      "var_pct": 0.28
+    },
+    {
+      "data_ref": "10/08/2026",
+      "valor": 65.63,
+      "var_pct": 0.94
+    },
+    {
+      "data_ref": "11/08/2026",
+      "valor": 65.65,
+      "var_pct": 0.03
+    },
+    {
+      "data_ref": "12/08/2026",
+      "valor": 66.15,
+      "var_pct": 0.76
+    },
+    {
+      "data_ref": "13/08/2026",
+      "valor": 66.09,
+      "var_pct": -0.09
+    }
+  ]
+}

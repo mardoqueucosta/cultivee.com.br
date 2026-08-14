@@ -1,0 +1,22 @@
+{
+  "commodity": "leite",
+  "ano": "2026",
+  "fonte": "CEPEA/ESALQ",
+  "licenca": "CC BY-NC 4.0",
+  "atualizado_em": "2026-08-14T06:25:55",
+  "pontos": [
+    {
+      "data_ref": "04/2026",
+      "valor": 2.6584
+    },
+    {
+      "data_ref": "05/2026",
+      "valor": 2.6617
+    },
+    {
+      "data_ref": "06/2026",
+      "valor": 2.7464,
+      "var_pct": 3.18
+    }
+  ]
+}

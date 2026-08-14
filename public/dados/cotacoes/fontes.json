@@ -1,0 +1,76 @@
+{
+  "atualizado_em": "2026-08-14T06:24:12",
+  "fonte": "CEPEA/ESALQ",
+  "fonte_url": "https://www.cepea.esalq.usp.br",
+  "licenca": "CC BY-NC 4.0",
+  "atribuicao": "Fonte: CEPEA/ESALQ (Esalq/USP), licença CC BY-NC 4.0. Crédito obrigatório em toda exibição.",
+  "autorizacao": "Uso autorizado pela condição de pesquisador do responsável na Esalq (registrado em 2026-08-14).",
+  "indicadores": [
+    {
+      "key": "boi-gordo",
+      "nome": "Boi gordo",
+      "praca": null,
+      "periodicidade": "diaria",
+      "pagina_fonte": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx",
+      "serie_desde": "10/07/2026"
+    },
+    {
+      "key": "cafe-arabica",
+      "nome": "Café arábica",
+      "praca": null,
+      "periodicidade": "diaria",
+      "pagina_fonte": "https://www.cepea.org.br/br/indicador/cafe-arabica.aspx",
+      "serie_desde": "10/07/2026"
+    },
+    {
+      "key": "soja",
+      "nome": "Soja",
+      "praca": null,
+      "periodicidade": "diaria",
+      "pagina_fonte": "https://www.cepea.org.br/br/indicador/soja.aspx",
+      "serie_desde": "10/07/2026"
+    },
+    {
+      "key": "milho",
+      "nome": "Milho",
+      "praca": null,
+      "periodicidade": "diaria",
+      "pagina_fonte": "https://www.cepea.org.br/br/indicador/milho.aspx",
+      "serie_desde": "10/07/2026"
+    },
+    {
+      "key": "trigo",
+      "nome": "Trigo",
+      "praca": null,
+      "periodicidade": "diaria",
+      "pagina_fonte": "https://www.cepea.org.br/br/indicador/trigo.aspx",
+      "serie_desde": "10/07/2026"
+    },
+    {
+      "key": "leite",
+      "nome": "Leite",
+      "praca": null,
+      "periodicidade": "mensal",
+      "pagina_fonte": "https://www.cepea.org.br/br/indicador/leite.aspx",
+      "serie_desde": "10/07/2026"
+    }
+  ],
+  "nao_coberto": [
+    {
+      "commodity": "cacau",
+      "motivo": "não há coletor; é a 2ª maior demanda de busca do agro (256.990/mês)"
+    },
+    {
+      "commodity": "cafe-robusta",
+      "motivo": "mapeado no coletor e desligado"
+    },
+    {
+      "commodity": "arroz",
+      "motivo": "sem coletor"
+    },
+    {
+      "commodity": "praça (Manhuaçu, Gandu, ES, Bahia)",
+      "motivo": "a fonte publica indicador de referência, não praça"
+    }
+  ]
+}

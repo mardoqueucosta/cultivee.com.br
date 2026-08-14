@@ -1,0 +1,203 @@
+{
+  "gerado_em": "2026-08-14T06:25:55",
+  "data_carrossel": "13/08/2026",
+  "fonte": "CEPEA/ESALQ",
+  "fonte_url": "https://cepea.org.br",
+  "licenca": "CC BY-NC 4.0",
+  "itens": [
+    {
+      "key": "boi-gordo",
+      "nome": "Boi gordo",
+      "detalhe": "",
+      "nome_cepea": "Boi Gordo",
+      "unidade": "@",
+      "moeda": "R$",
+      "valor": 346.75,
+      "valor_fmt": "346,75",
+      "data_ref": "13/08/2026",
+      "ref_rotulo": "13/08",
+      "periodicidade": "diaria",
+      "defasagem_dias": 1,
+      "var_pct": 0.07,
+      "var_base": "12/08/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 1,
+        "desde": "13/08/2026",
+        "var_acumulada_pct": 0.07,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 2,
+          "var_acumulada_pct": -0.29
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "24/07/2026",
+          "ate": "13/08/2026",
+          "pontos": 15
+        }
+      },
+      "fonte": "CEPEA/ESALQ",
+      "licenca": "CC BY-NC 4.0"
+    },
+    {
+      "key": "cafe-arabica",
+      "nome": "Café arábica",
+      "detalhe": "",
+      "nome_cepea": "Café Arábica",
+      "unidade": "sc de 60kg",
+      "moeda": "R$",
+      "valor": 1779.4,
+      "valor_fmt": "1.779,40",
+      "data_ref": "13/08/2026",
+      "ref_rotulo": "13/08",
+      "periodicidade": "diaria",
+      "defasagem_dias": 1,
+      "var_pct": 0.47,
+      "var_base": "12/08/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 5,
+        "desde": "07/08/2026",
+        "var_acumulada_pct": 2.98,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 1,
+          "var_acumulada_pct": -0.14
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "24/07/2026",
+          "ate": "13/08/2026",
+          "pontos": 15
+        }
+      },
+      "fonte": "CEPEA/ESALQ",
+      "licenca": "CC BY-NC 4.0"
+    },
+    {
+      "key": "soja",
+      "nome": "Soja",
+      "detalhe": "Paranaguá",
+      "nome_cepea": "Soja Paranaguá",
+      "unidade": "sc de 60kg",
+      "moeda": "R$",
+      "valor": 146.94,
+      "valor_fmt": "146,94",
+      "data_ref": "13/08/2026",
+      "ref_rotulo": "13/08",
+      "periodicidade": "diaria",
+      "defasagem_dias": 1,
+      "var_pct": 0.41,
+      "var_base": "12/08/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 2,
+        "desde": "12/08/2026",
+        "var_acumulada_pct": 1.41,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 2,
+          "var_acumulada_pct": -0.18
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "24/07/2026",
+          "ate": "13/08/2026",
+          "pontos": 15
+        }
+      },
+      "fonte": "CEPEA/ESALQ",
+      "licenca": "CC BY-NC 4.0"
+    },
+    {
+      "key": "milho",
+      "nome": "Milho",
+      "detalhe": "",
+      "nome_cepea": "Milho",
+      "unidade": "sc de 60kg",
+      "moeda": "R$",
+      "valor": 66.09,
+      "valor_fmt": "66,09",
+      "data_ref": "13/08/2026",
+      "ref_rotulo": "13/08",
+      "periodicidade": "diaria",
+      "defasagem_dias": 1,
+      "var_pct": -0.09,
+      "var_base": "12/08/2026",
+      "sequencia": {
+        "direcao": "baixa",
+        "dias": 1,
+        "desde": "13/08/2026",
+        "var_acumulada_pct": -0.09,
+        "anterior": {
+          "direcao": "alta",
+          "dias": 4,
+          "var_acumulada_pct": 2.02
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "24/07/2026",
+          "ate": "13/08/2026",
+          "pontos": 15
+        }
+      },
+      "fonte": "CEPEA/ESALQ",
+      "licenca": "CC BY-NC 4.0"
+    },
+    {
+      "key": "trigo",
+      "nome": "Trigo",
+      "detalhe": "Paraná",
+      "nome_cepea": "Trigo - PR",
+      "unidade": "t",
+      "moeda": "R$",
+      "valor": 1416.1,
+      "valor_fmt": "1.416,10",
+      "data_ref": "13/08/2026",
+      "ref_rotulo": "13/08",
+      "periodicidade": "diaria",
+      "defasagem_dias": 1,
+      "var_pct": 0.12,
+      "var_base": "12/08/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 1,
+        "desde": "13/08/2026",
+        "var_acumulada_pct": 0.12,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 1,
+          "var_acumulada_pct": -0.05
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "24/07/2026",
+          "ate": "13/08/2026",
+          "pontos": 15
+        }
+      },
+      "fonte": "CEPEA/ESALQ",
+      "licenca": "CC BY-NC 4.0"
+    },
+    {
+      "key": "leite",
+      "nome": "Leite",
+      "detalhe": "ao produtor",
+      "nome_cepea": "Leite",
+      "unidade": "litro",
+      "moeda": "R$",
+      "valor": 2.7464,
+      "valor_fmt": "2,7464",
+      "data_ref": "06/2026",
+      "ref_rotulo": "jun/26",
+      "periodicidade": "mensal",
+      "defasagem_dias": 74,
+      "var_pct": 3.18,
+      "var_base": "05/2026",
+      "sequencia": null,
+      "fonte": "CEPEA/ESALQ",
+      "licenca": "CC BY-NC 4.0"
+    }
+  ]
+}
