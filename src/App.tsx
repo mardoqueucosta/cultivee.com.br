@@ -26,6 +26,8 @@ const ProdutoCameraPage = lazy(() => import("./pages/ProdutoCamera"));
 const CursoMicroverdesPage = lazy(() => import("./pages/CursoMicroverdes"));
 const CursoHidroponiaPage = lazy(() => import("./pages/CursoHidroponia"));
 const CursoCultivoIndoorPage = lazy(() => import("./pages/CursoCultivoIndoor"));
+const CotacoesPage = lazy(() => import("./pages/Cotacoes"));
+const CotacaoCafePage = lazy(() => import("./pages/CotacaoCafe"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -76,6 +78,11 @@ export const routes: RouteObject[] = [
       { path: "cursos/microverdes", element: <CursoMicroverdesPage /> },
       { path: "cursos/hidroponia", element: <CursoHidroponiaPage /> },
       { path: "cursos/cultivo-indoor", element: <CursoCultivoIndoorPage /> },
+      // Cotacoes (projeto 07-cotacoes-site): o indice e' o painel de todos os
+      // indicadores; a pagina do cafe e' a ancora do tema. O numero sai no HTML
+      // pelo SSG; a serie e' buscada sob demanda do JSON publico.
+      { path: "cotacoes", element: <CotacoesPage /> },
+      { path: "cotacoes/cafe", element: <CotacaoCafePage /> },
       // rota concreta para o SSG emitir dist/404.html (o nginx usa como error_page 404)
       { path: "404", element: <NotFound /> },
       { path: "*", element: <NotFound /> },

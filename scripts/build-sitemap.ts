@@ -27,6 +27,10 @@ const STATIC_PATHS = [
   { path: "/cursos/hidroponia", changefreq: "monthly", priority: "0.7" },
   { path: "/cursos/cultivo-indoor", changefreq: "monthly", priority: "0.7" },
   { path: "/blog", changefreq: "weekly", priority: "0.8" },
+  // Cotacoes (projeto 07-cotacoes-site). `daily` aqui e' verdade, nao chute: o
+  // conteudo troca todo dia util as 05:30, quando o coletor grava o snapshot.
+  { path: "/cotacoes", changefreq: "daily", priority: "0.8" },
+  { path: "/cotacoes/cafe", changefreq: "daily", priority: "0.9" },
 ];
 
 function escapeXml(s: string): string {
@@ -139,6 +143,13 @@ Site: ${SITE} · Contato: contato@cultivee.com.br · Blog: ${SITE}/blog · Feed:
 ## Guias essenciais (pilares)
 
 ${pillars.map(line).join("\n")}
+
+## Cotações agrícolas (dado diário, com fonte e licença)
+
+- [Cotações agrícolas hoje](${SITE}/cotacoes): painel dos indicadores CEPEA/ESALQ de boi gordo, café arábica e conilon, soja, milho, trigo e leite
+- [Cotação do café](${SITE}/cotacoes/cafe): arábica e conilon, com a especificação de cada indicador, série histórica e conversor de saca
+- Dados abertos em JSON: [snapshot do dia](${SITE}/dados/cotacoes/ultimo.json) · [fontes e cobertura](${SITE}/dados/cotacoes/fontes.json)
+- Fonte: CEPEA/ESALQ (Esalq/USP), licença CC BY-NC 4.0. Ao reusar, mantenha o crédito.
 
 ## Cursos e produtos
 
