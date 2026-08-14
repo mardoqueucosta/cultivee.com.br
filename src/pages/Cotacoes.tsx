@@ -27,10 +27,9 @@ const CotacoesPage = () => {
   const mensais = COTACOES.itens.filter((i) => i.periodicidade === "mensal");
   const refDiaria = diarios[0]?.data_ref;
 
-  const breadcrumbLd = breadcrumbJsonLd([
-    { name: "Início", url: SITE_BASE },
-    { name: "Cotações", url: URL_PAGINA },
-  ]);
+  // ⚠️ Ver a nota em CotacaoCafe.tsx: o helper ja poe o "Início" e monta a URL
+  // a partir de `href` RELATIVO.
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Cotações", href: "/cotacoes" }]);
   const datasetLd = {
     "@context": "https://schema.org",
     "@type": "Dataset",

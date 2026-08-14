@@ -203,10 +203,12 @@ function Grafico({ commodity, rotulo }: { commodity: string; rotulo: string }) {
 
 const CotacaoCafePage = () => {
   const refArabica = ARABICA?.data_ref;
+  // ⚠️ `breadcrumbJsonLd` JA acrescenta o "Início" na posicao 1 e monta a URL a
+  // partir de `href` RELATIVO. Passar `{name, url}` absoluto rendia "Início"
+  // duplicado e tres `item` valendo "https://cultivee.com.brundefined".
   const breadcrumbLd = breadcrumbJsonLd([
-    { name: "Início", url: SITE_BASE },
-    { name: "Cotações", url: `${SITE_BASE}/cotacoes` },
-    { name: "Café", url: URL_PAGINA },
+    { name: "Cotações", href: "/cotacoes" },
+    { name: "Café", href: "/cotacoes/cafe" },
   ]);
   const datasetLd = {
     "@context": "https://schema.org",
@@ -235,6 +237,10 @@ const CotacaoCafePage = () => {
        "A saca de 60 kg é a unidade padrão do indicador, então o preço da saca é o próprio valor publicado nesta página."],
       ["Qual a diferença entre café arábica e conilon?",
        "São espécies diferentes, com indicadores apurados em bases diferentes. O arábica é apurado posto na cidade de São Paulo, tipo 6, bebida dura para melhor. O conilon é apurado a retirar na origem, no Espírito Santo, tipo 6, peneira 13 acima."],
+      ["Como a cotação de Nova York vira preço em real?",
+       "Não é uma multiplicação pelo dólar. A cotação é convertida para real e ajustada por um diferencial de origem e de praça. No contrato Coffee C da ICE, o café brasileiro entra com deságio fixo de 600 pontos sobre a referência, contra prêmio de 1.000 pontos da Colômbia. Depois entram o diferencial da praça e o desconto de prazo de pagamento pela taxa CDI."],
+      ["Safra recorde derruba ou levanta o preço do café?",
+       "Em geral derruba. Mais oferta pressiona o preço para baixo, e os boletins do CEPEA registraram esse movimento quando o avanço da colheita reduziu os indicadores."],
       ["Qual a previsão do preço do café para 2026?",
        "Esta página não publica previsão de preço. O que publicamos é apuração: o que foi negociado, quando, e por qual fonte."],
     ].map(([q, a]) => ({
@@ -403,8 +409,129 @@ const CotacaoCafePage = () => {
         </div>
       </section>
 
-      {/* 🟫 perguntas */}
-      <section className="py-16 bg-muted">
+      {/*
+        🟫 como o preco se forma.
+        Vem do dossie `o-que-move-o-preco-do-cafe-no-brasil-como-a-cotacao-se-forma.md`
+        (00-pesquisa/claude-cli-pesquisa), auditado em 14/08/2026: DOI e relatorio
+        USDA conferidos na fonte. E' o bloco que responde, sem prever preco, a
+        demanda por "perspectiva do preco para 2026" que o people_also_ask repete.
+      */}
+      <section className="py-16 bg-muted" id="como-se-forma">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">Como o preço do café se forma</h2>
+          <p className="mt-4 leading-relaxed">
+            O número do topo desta página não nasce numa praça só. Ele desce um funil de
+            camadas, e cada uma tem regra própria: a bolsa internacional define a expectativa
+            em dólar, o câmbio converte, o indicador nacional apura o que foi negociado no
+            mercado físico brasileiro, e o diferencial local ajusta para a qualidade e a
+            distância do lote de verdade.
+          </p>
+
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
+            <table className="w-full min-w-[36rem] text-left text-sm">
+              <caption className="sr-only">
+                As camadas que formam o preço do café no Brasil
+              </caption>
+              <thead>
+                <tr className="border-b border-border text-xs uppercase tracking-wide text-muted-foreground">
+                  <th scope="col" className="px-4 py-3 font-semibold">Camada</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Onde</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Unidade</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">O que ela capta</th>
+                </tr>
+              </thead>
+              <tbody className="[&>tr>td]:py-3 [&>tr>td]:pr-4 [&>tr>td:first-child]:px-4 [&>tr]:border-b [&>tr]:border-border [&>tr:last-child]:border-0">
+                <tr>
+                  <td className="font-medium">Bolsa internacional</td>
+                  <td>ICE Nova York (arábica) e Londres (robusta)</td>
+                  <td className="whitespace-nowrap">¢US/lb e US$/t</td>
+                  <td>expectativa global de oferta e demanda</td>
+                </tr>
+                <tr>
+                  <td className="font-medium">Câmbio</td>
+                  <td>mercado doméstico</td>
+                  <td className="whitespace-nowrap">R$ por US$</td>
+                  <td>converte a bolsa para real</td>
+                </tr>
+                <tr>
+                  <td className="font-medium">Bolsa doméstica</td>
+                  <td>B3, contrato Café Arábica 4/5</td>
+                  <td className="whitespace-nowrap">US$/saca</td>
+                  <td>hedge no mercado local, com entrega física</td>
+                </tr>
+                <tr>
+                  <td className="font-medium">Indicador físico</td>
+                  <td>CEPEA/ESALQ</td>
+                  <td className="whitespace-nowrap">R$/saca de 60 kg</td>
+                  <td>o que foi negociado de fato no Brasil</td>
+                </tr>
+                <tr>
+                  <td className="font-medium">Diferencial local</td>
+                  <td>praça do lote</td>
+                  <td className="whitespace-nowrap">ágio ou deságio</td>
+                  <td>tipo, bebida, peneira, certificação e frete</td>
+                </tr>
+                <tr>
+                  <td className="font-medium">Piso de política</td>
+                  <td>Preço Mínimo, PGPM</td>
+                  <td className="whitespace-nowrap">R$/saca</td>
+                  <td>rede de segurança, só atua abaixo do mínimo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 className="mt-10 text-xl font-bold text-foreground">
+            O café brasileiro entra na bolsa com deságio
+          </h3>
+          <p className="mt-3 leading-relaxed">
+            O contrato Coffee C da ICE aceita café de várias origens, com prêmio ou desconto
+            fixo sobre a referência. A Colômbia entra com prêmio de 1.000 pontos, a Guatemala
+            com 500, e o <strong>Brasil com deságio de 600 pontos</strong>. Não é julgamento de
+            qualidade: é o reconhecimento, dentro da regra do contrato, de que o café brasileiro
+            é predominantemente natural e de bica corrida, enquanto a referência do contrato são
+            os lavados centro-americanos. Fonte: especificação do Coffee C Futures, ICE.
+          </p>
+          <p className="mt-3 leading-relaxed">
+            Por isso a conta popular de multiplicar a cotação de Nova York pelo dólar não bate
+            com o indicador brasileiro. Entre uma coisa e outra existem o deságio de origem, o
+            diferencial da praça e o desconto de prazo de pagamento pela taxa CDI, que o CEPEA
+            aplica na apuração.
+          </p>
+
+          <h3 className="mt-10 text-xl font-bold text-foreground">
+            Três leituras erradas que aparecem toda semana
+          </h3>
+          <div className="mt-4 space-y-4 leading-relaxed">
+            <p className="border-l-4 border-agro pl-4">
+              <strong>Safra recorde faz o preço subir.</strong> Costuma ser o contrário. Mais
+              oferta pressiona o preço para baixo, e os boletins do CEPEA registraram
+              exatamente isso quando o avanço da colheita derrubou os indicadores.
+            </p>
+            <p className="border-l-4 border-agro pl-4">
+              <strong>Arábica e conilon são o mesmo mercado.</strong> Têm bolsas de referência
+              diferentes, Nova York e Londres, praças físicas diferentes, São Paulo e Espírito
+              Santo, e substituem um ao outro em parte: quando o arábica encarece demais, a
+              indústria aumenta o uso de robusta.
+            </p>
+            <p className="border-l-4 border-agro pl-4">
+              <strong>O indicador é o preço do café.</strong> Ele é a média de negócios com
+              características específicas. O café de um produtor pode valer mais ou menos que
+              ele, e a diferença tem nome: tipo, bebida, peneira e frete.
+            </p>
+          </div>
+
+          <p className="mt-8 text-sm text-muted-foreground">
+            Fontes desta seção: CEPEA/ESALQ, ICE (especificação do Coffee C Futures), B3 (ficha
+            do contrato Café Arábica 4/5), CONAB (Preço Mínimo da safra 2026/27) e Cooxupé.
+            Literatura consultada: Cunha (2010) e Silveira, Cruz Júnior e Saes (2012), Revista
+            de Economia e Sociologia Rural.
+          </p>
+        </div>
+      </section>
+
+      {/* ⬜ perguntas */}
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground">Qual é o preço do café hoje?</h2>
           <p className="mt-3 leading-relaxed">
@@ -446,6 +573,28 @@ const CotacaoCafePage = () => {
               </p>
             </>
           ) : null}
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Como a cotação de Nova York vira preço em real?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Não é uma multiplicação pelo dólar. A cotação da bolsa é convertida para real e
+            então ajustada por um diferencial de origem e de praça. No contrato Coffee C da
+            ICE, o café brasileiro entra com deságio fixo de 600 pontos sobre a referência,
+            contra prêmio de 1.000 pontos da Colômbia. Depois disso ainda entram o diferencial
+            da praça onde o lote está e o desconto de prazo de pagamento pela taxa CDI, que o
+            CEPEA aplica na apuração.
+          </p>
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Safra recorde derruba ou levanta o preço do café?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Em geral derruba. Mais oferta pressiona o preço para baixo, e os boletins do CEPEA
+            registraram esse movimento quando o avanço da colheita reduziu os indicadores. A
+            leitura contrária, de que safra grande valoriza o produto, é uma das confusões mais
+            repetidas sobre cotação agrícola.
+          </p>
 
           <h2 className="mt-10 text-3xl font-bold text-foreground">
             Qual a previsão do preço do café para 2026?
