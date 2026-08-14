@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Head } from "vite-react-ssg";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { PageHeader } from "@/components/blog/PageHeader";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import {
   COTACOES, type ItemCotacao, dataPorExtenso, fmt, horaDe, itemPorKey,
@@ -264,70 +266,90 @@ const CotacaoCafePage = () => {
       </Head>
       <Navbar />
 
-      <main className="mx-auto max-w-5xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
-        {/* Bloco 1: o numero, acima da dobra */}
-        <header>
-          <h1 className="text-3xl font-bold sm:text-4xl">Cotação do café hoje</h1>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Indicador {DADOS.fonte}, apuração de {dataPorExtenso(refArabica)}, atualizado às{" "}
-            {horaDe(DADOS.gerado_em)}. Publicado sob licença {DADOS.licenca}.
-          </p>
-        </header>
+      {/*
+        Layout pelo padrao da casa (CLAUDE.md do site): hero verde, alternancia
+        ESTRITA branco/cinza no meio, verde no fim.
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          <Cartao
-            dado={ARABICA}
-            titulo="Café arábica"
-            detalhe="Bica corrida, tipo 6, bebida dura para melhor, posto na cidade de São Paulo."
-          />
-          <Cartao
-            dado={CONILON}
-            titulo="Café conilon (robusta)"
-            detalhe="À vista, tipo 6, peneira 13 acima, com 86 defeitos, a retirar na origem, no Espírito Santo."
-          />
+        Uma adaptacao deliberada: os cartoes de preco ficam DENTRO do hero
+        verde, e nao na primeira secao branca. Numa pagina de dado o numero
+        precisa estar acima da dobra, e empurra-lo para baixo do hero custaria
+        exatamente a consulta que a pagina existe para responder. Cartao branco
+        sobre o gradiente verde resolve os dois: usa o sistema e mantem o
+        numero no topo.
+      */}
+      <section className="pt-24 pb-12 bg-gradient-hero">
+        <PageHeader
+          hero
+          overline="Cotações"
+          title="Cotação do café hoje"
+          description={`Indicador ${DADOS.fonte}, apuração de ${dataPorExtenso(refArabica)}, atualizado às ${horaDe(DADOS.gerado_em)}. Publicado sob licença ${DADOS.licenca}.`}
+          breadcrumbs={[
+            { label: "Cotações", href: "/cotacoes" },
+            { label: "Café" },
+          ]}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Cartao
+              dado={ARABICA}
+              titulo="Café arábica"
+              detalhe="Bica corrida, tipo 6, bebida dura para melhor, posto na cidade de São Paulo."
+            />
+            <Cartao
+              dado={CONILON}
+              titulo="Café conilon (robusta)"
+              detalhe="À vista, tipo 6, peneira 13 acima, com 86 defeitos, a retirar na origem, no Espírito Santo."
+            />
+          </div>
         </div>
+      </section>
 
-        <p className="mt-6 text-base leading-relaxed">
-          O café arábica fechou a {ARABICA?.valor_fmt} reais por saca de 60 kg na última
-          apuração do {DADOS.fonte}
-          {CONILON ? `, e o conilon, a ${CONILON.valor_fmt}` : ""}. Os dois números são
-          indicadores de referência do mercado físico brasileiro, e a seção{" "}
-          <a href="#o-que-cobre" className="underline underline-offset-4">
-            o que este número cobre
-          </a>{" "}
-          explica por que o preço que você recebe na sua praça costuma ser diferente.
-        </p>
+      {/* ⬜ abertura + conversor */}
+      <section className="py-16 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-lg leading-relaxed">
+            O café arábica fechou a {ARABICA?.valor_fmt} reais por saca de 60 kg na última
+            apuração do {DADOS.fonte}
+            {CONILON ? `, e o conilon, a ${CONILON.valor_fmt}` : ""}. Os dois números são
+            indicadores de referência do mercado físico brasileiro, e a seção{" "}
+            <a href="#o-que-cobre" className="text-primary underline underline-offset-4">
+              o que este número cobre
+            </a>{" "}
+            explica por que o preço que você recebe na sua praça costuma ser diferente.
+          </p>
 
-        {/* Bloco 2: conversor */}
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold">Quanto vale a sua saca hoje</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
+          <h2 className="mt-12 text-3xl font-bold text-foreground">
+            Quanto vale a sua saca hoje
+          </h2>
+          <p className="mt-2 text-muted-foreground">
             A saca padrão do café tem 60 kg líquidos. Quatro arrobas de 15 kg formam uma saca,
             e uma tonelada equivale a 16 sacas e dois terços.
           </p>
-          <div className="mt-4">
+          <div className="mt-6">
             <Conversor />
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Bloco 3: serie */}
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold">Como o café se comportou</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
+      {/* 🟫 serie */}
+      <section className="py-16 bg-muted">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">Como o café se comportou</h2>
+          <p className="mt-2 text-muted-foreground">
             A série vem da mesma fonte do número do topo, ponto a ponto, sem suavização. Cada
             ponto é uma apuração do {DADOS.fonte}, e dias sem pregão não aparecem porque não
             existiram.
           </p>
-          <div className="mt-6 space-y-8">
-            <div>
-              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+          <div className="mt-8 space-y-8">
+            <div className="rounded-2xl border border-border bg-card p-6">
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                 Arábica
               </h3>
               <Grafico commodity="cafe-arabica" rotulo="arábica" />
             </div>
             {CONILON ? (
-              <div>
-                <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+              <div className="rounded-2xl border border-border bg-card p-6">
+                <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                   Conilon
                 </h3>
                 <Grafico commodity="cafe-robusta" rotulo="conilon" />
@@ -339,36 +361,38 @@ const CotacaoCafePage = () => {
             os últimos 15 pregões: o histórico de cada indicador começa no dia em que passamos
             a guardá-lo.
           </p>
-        </section>
+        </div>
+      </section>
 
-        {/* Bloco 4: o diferencial */}
-        <section className="mt-12" id="o-que-cobre">
-          <h2 className="text-2xl font-bold">O que o indicador do café cobre</h2>
-          <p className="mt-3 leading-relaxed">
+      {/* ⬜ o diferencial */}
+      <section className="py-16 bg-background" id="o-que-cobre">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">O que o indicador do café cobre</h2>
+          <p className="mt-4 leading-relaxed">
             O Indicador do Café Arábica {DADOS.fonte} é, na definição da própria fonte, o preço
             em <strong>reais por saca de 60 kg líquido, bica corrida, tipo 6, bebida dura para
             melhor, valor descontado o Prazo de Pagamento pela taxa CDI, posto na cidade de São
             Paulo</strong>.
           </p>
-          <p className="mt-3 leading-relaxed">
+          <p className="mt-4 leading-relaxed">
             O Indicador do Café Robusta, que o mercado chama de conilon, é apurado em outra
             base: <strong>reais por saca de 60 kg líquido, à vista, tipo 6, peneira 13 acima,
             com 86 defeitos, valor descontado o Prazo de Pagamento pela taxa CDI, a retirar na
             origem (ES)</strong>.
           </p>
 
-          <h2 className="mt-8 text-2xl font-bold">O que ele não é</h2>
-          <div className="mt-3 space-y-4 leading-relaxed">
-            <p>
+          <h2 className="mt-12 text-3xl font-bold text-foreground">O que ele não é</h2>
+          <div className="mt-4 space-y-5 leading-relaxed">
+            <p className="border-l-4 border-agro pl-4">
               <strong>Não é o preço na sua porteira.</strong> O indicador do arábica é apurado
               posto em São Paulo, ou seja, com o café já entregue na capital. O frete da lavoura
               até lá está dentro do número, e sai do que o produtor recebe.
             </p>
-            <p>
+            <p className="border-l-4 border-agro pl-4">
               <strong>Não é o preço do seu lote.</strong> O indicador tem tipo, bebida e peneira
               fixos. Café fora dessa especificação negocia com ágio ou deságio sobre ele.
             </p>
-            <p>
+            <p className="border-l-4 border-agro pl-4">
               <strong>Não é o preço de uma praça específica.</strong> Manhuaçu, Varginha,
               Patrocínio, Vitória e Guaxupé têm mercados próprios, com compradores, cooperativas
               e corretoras próprios. Preço de praça é apurado por quem opera naquela praça, e o
@@ -376,26 +400,32 @@ const CotacaoCafePage = () => {
               vai dizer de quem é o número.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Bloco 5: perguntas */}
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold">Qual é o preço do café hoje?</h2>
-          <p className="mt-2 leading-relaxed">
+      {/* 🟫 perguntas */}
+      <section className="py-16 bg-muted">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">Qual é o preço do café hoje?</h2>
+          <p className="mt-3 leading-relaxed">
             {ARABICA ? `R$ ${ARABICA.valor_fmt}` : "O indicador"} por saca de 60 kg no arábica
             {CONILON ? ` e R$ ${CONILON.valor_fmt} no conilon` : ""}, pela apuração do{" "}
             {DADOS.fonte} de {refArabica}. O indicador é divulgado em dia útil, com o
             fechamento do pregão anterior.
           </p>
 
-          <h2 className="mt-8 text-2xl font-bold">Qual é o preço da saca de café de 60 kg?</h2>
-          <p className="mt-2 leading-relaxed">
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Qual é o preço da saca de café de 60 kg?
+          </h2>
+          <p className="mt-3 leading-relaxed">
             A saca de 60 kg é a unidade padrão do indicador, então o preço da saca é o próprio
             número do topo desta página. Para arroba, quilo ou tonelada, use o conversor.
           </p>
 
-          <h2 className="mt-8 text-2xl font-bold">Qual a diferença entre café arábica e conilon?</h2>
-          <p className="mt-2 leading-relaxed">
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Qual a diferença entre café arábica e conilon?
+          </h2>
+          <p className="mt-3 leading-relaxed">
             São espécies diferentes, com indicadores e bases de apuração diferentes. O arábica é
             apurado posto em São Paulo, tipo 6, bebida dura para melhor. O conilon é apurado a
             retirar na origem, no Espírito Santo, tipo 6, peneira 13 acima. Por isso os dois
@@ -404,8 +434,10 @@ const CotacaoCafePage = () => {
 
           {CONILON ? (
             <>
-              <h2 className="mt-8 text-2xl font-bold">Como fechou o café conilon?</h2>
-              <p className="mt-2 leading-relaxed">
+              <h2 className="mt-10 text-3xl font-bold text-foreground">
+                Como fechou o café conilon?
+              </h2>
+              <p className="mt-3 leading-relaxed">
                 R$ {CONILON.valor_fmt} por saca na apuração de {CONILON.data_ref}
                 {CONILON.var_pct !== null
                   ? `, com variação de ${fmt(CONILON.var_pct)}% sobre a apuração anterior`
@@ -415,8 +447,10 @@ const CotacaoCafePage = () => {
             </>
           ) : null}
 
-          <h2 className="mt-8 text-2xl font-bold">Qual a previsão do preço do café para 2026?</h2>
-          <p className="mt-2 leading-relaxed">
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Qual a previsão do preço do café para 2026?
+          </h2>
+          <p className="mt-3 leading-relaxed">
             Esta página não publica previsão de preço. O que publicamos é apuração: o que foi
             negociado, quando, e por qual fonte. Projeção de preço de commodity depende de
             safra, clima, câmbio e estoque, e quem a faz assume um risco que não cabe numa
@@ -424,48 +458,57 @@ const CotacaoCafePage = () => {
             caminho que o preço fez.
           </p>
 
-          <h2 className="mt-8 text-2xl font-bold">Onde vejo o preço na minha região?</h2>
-          <p className="mt-2 leading-relaxed">
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Onde vejo o preço na minha região?
+          </h2>
+          <p className="mt-3 leading-relaxed">
             Por enquanto, nas fontes que apuram cada praça: o Centro do Comércio de Café de
             Vitória para o conilon capixaba, as cooperativas para o preço que elas pagam ao
             cooperado, e as corretoras regionais. Estamos trabalhando para reunir essas fontes
             aqui, com o crédito de cada uma.
           </p>
-        </section>
+        </div>
+      </section>
 
-        {/* Bloco 6: dado aberto */}
-        <section className="mt-12 rounded-2xl border border-border bg-muted/40 p-6">
-          <h2 className="text-2xl font-bold">Use estes dados</h2>
-          <p className="mt-2 leading-relaxed">
-            Os números desta página estão disponíveis em JSON, atualizados no mesmo horário:
+      {/* 🟢 fecho verde: o dado aberto E o convite, no lugar do CTA de venda */}
+      <section className="py-16 bg-gradient-hero">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white">Use estes dados</h2>
+          <p className="mt-3 text-lg text-white/90">
+            Os números desta página estão abertos em JSON, atualizados no mesmo horário.
           </p>
-          <ul className="mt-3 space-y-1 text-sm">
-            <li>
-              snapshot do dia:{" "}
-              <a className="underline underline-offset-4" href="/dados/cotacoes/ultimo.json">
-                /dados/cotacoes/ultimo.json
-              </a>
-            </li>
-            <li>
-              série histórica:{" "}
-              <a className="underline underline-offset-4"
-                 href="/dados/cotacoes/series/cafe-arabica-2026.json">
-                /dados/cotacoes/series/cafe-arabica-2026.json
-              </a>
-            </li>
-            <li>
-              fontes e cobertura:{" "}
-              <a className="underline underline-offset-4" href="/dados/cotacoes/fontes.json">
-                /dados/cotacoes/fontes.json
-              </a>
-            </li>
-          </ul>
-          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <a
+              className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-white/90"
+              href="/dados/cotacoes/ultimo.json"
+            >
+              Snapshot do dia
+            </a>
+            <a
+              className="rounded-lg border border-white/70 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              href="/dados/cotacoes/series/cafe-arabica-2026.json"
+            >
+              Série histórica
+            </a>
+            <a
+              className="rounded-lg border border-white/70 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              href="/dados/cotacoes/fontes.json"
+            >
+              Fontes e cobertura
+            </a>
+            <Link
+              className="rounded-lg border border-white/70 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              to="/cotacoes"
+            >
+              Todas as cotações
+            </Link>
+          </div>
+          <p className="mt-6 text-sm text-white/80">
             Fonte: {DADOS.fonte} (Esalq/USP), licença {DADOS.licenca}. Ao reusar, mantenha o
             crédito.
           </p>
-        </section>
-      </main>
+        </div>
+      </section>
 
       <Footer />
       <WhatsAppButton />
