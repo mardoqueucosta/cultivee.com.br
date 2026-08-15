@@ -80,8 +80,8 @@ export const PAGINA_DO_INDICADOR: Record<string, string> = {
  * busca. `cafe-robusta` e' o nome da especie no Cepea, e no Brasil o mercado e a
  * busca dizem CONILON, com folga sobre "robusta".
  *
- * Mapear aqui, e nao no coletor, porque o coletor alimenta tambem o painel
- * diario de redes sociais, e la o rotulo ja esta consolidado.
+ * Mapear na APRESENTACAO, e nao na origem do dado: o rotulo da origem e' usado
+ * por outros consumidores, onde ele ja esta consolidado.
  */
 export const NOME_EXIBICAO: Record<string, string> = {
   "cafe-robusta": "Café conilon (robusta)",
