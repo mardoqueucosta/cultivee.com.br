@@ -50,9 +50,14 @@ consumidor não deveria precisar achar o produtor para saber ler o arquivo.
 cotacoes/
   ultimo.json                    snapshot do dia, o que a página e o post leem
   fontes.json                    fonte, licença, cobertura e periodicidade por indicador
+  resumo.json                    máxima, mínima e amplitude de cada série
   series/
     <commodity>-<ano>.json       série do ano, um arquivo por commodity
 ```
+
+Os três arquivos do topo entram no **build** do site (são pequenos e precisam estar
+no HTML na hora em que o robô rastreia). As séries **não**: elas crescem um ponto
+por dia útil para sempre e são buscadas sob demanda.
 
 ### `ultimo.json`
 
@@ -105,11 +110,42 @@ série da fonte, justamente porque quem escreve o texto não tem como conferir.
 }
 ```
 
-`pontos` é cronológico, sem duplicata de `data_ref`. A série começa em **10/07/2026**, que é
-quando a coleta local passou a guardar histórico. Antes disso não existe e não é
-reconstituível: a página da fonte publica só os últimos 15 pregões.
+`pontos` é cronológico, sem duplicata de `data_ref`. Cada série começa no dia em que aquele
+indicador entrou na coleta, e **não numa data comum**: os seis primeiros começam em
+10/07/2026 e o conilon, em 24/07/2026. Antes disso não existe e não é reconstituível, porque
+a página da fonte publica só os últimos 15 pregões — a data real de cada um está em
+`fontes.json` (`serie_desde`) e em `resumo.json` (`primeiro`).
+
+### `resumo.json`
+
+```jsonc
+{
+  "atualizado_em": "2026-08-15T10:16:10",
+  "series": {
+    "cafe-arabica": {
+      "pontos": 26,
+      "primeiro": "10/07/2026",
+      "ultimo": "14/08/2026",
+      "minimo": 1676.28, "minimo_em": "24/07/2026",
+      "maximo": 1794.15, "maximo_em": "14/08/2026",
+      "amplitude_pct": 7.03            // (máx - mín) / mín, em %
+    }
+  }
+}
+```
+
+Derivado das séries, não coletado: é `atualiza_dados.py` que recalcula a cada rodada.
+Existe separado por um motivo só — a página precisa desses números **no HTML**, e a série
+de onde eles saem é grande demais para entrar no build.
+
+⚠️ São extremos **do período coberto**, nunca máxima e mínima históricas da commodity.
+Quem exibir tem que dizer isso; a série começa quando passamos a guardar, não quando o
+mercado começou.
 
 ### Cobertura atual
 
-Boi gordo, café arábica, soja, milho, trigo e leite. **Cacau ainda não**, e é a segunda maior
-demanda de busca do agro brasileiro. Café robusta está mapeado no coletor e desligado.
+Boi gordo, café arábica, **café conilon (robusta)**, soja, milho, trigo e leite — sete
+indicadores. O conilon foi ligado em 14/08/2026 e por isso a série dele começa depois das
+outras (24/07/2026), o que é declarado em `fontes.json` por indicador.
+
+**Cacau ainda não**, e é a segunda maior demanda de busca do agro brasileiro.
