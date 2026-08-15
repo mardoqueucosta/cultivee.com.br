@@ -87,14 +87,14 @@
   "nao_coberto": [
     {
       "commodity": "cacau",
-      "motivo": "sem coletor; é a 2ª maior demanda de busca do agro (256.990/mês)"
+      "motivo": "ainda não publicamos"
     },
     {
       "commodity": "arroz",
-      "motivo": "sem coletor"
+      "motivo": "ainda não publicamos"
     },
     {
-      "commodity": "preço por praça (Manhuaçu, Varginha, Vitória, Gandu)",
+      "commodity": "preço por praça",
       "motivo": "a fonte publica indicador de referência nacional, não preço de praça"
     }
   ]

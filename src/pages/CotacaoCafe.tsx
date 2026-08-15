@@ -18,8 +18,8 @@ import {
  *
  * DUAS REGRAS QUE NAO PODEM SER QUEBRADAS AQUI:
  *
- * 1. NENHUM NUMERO ESCRITO A MAO. Tudo sai do `ultimo.json`, que o coletor
- *    grava todo dia util as 05:30. Numero no JSX envelhece em um dia e passa a
+ * 1. NENHUM NUMERO ESCRITO A MAO. Tudo sai do `ultimo.json`, que a rotina
+ *    diaria de coleta grava. Numero no JSX envelhece em um dia e passa a
  *    mentir numa pagina cujo produto inteiro e' estar certa hoje.
  *
  * 2. O SNAPSHOT entra no BUILD (import estatico, ~6 KB, e' o que precisa estar
@@ -458,8 +458,7 @@ const CotacaoCafePage = () => {
               <strong>Não é o preço de uma praça específica.</strong> Manhuaçu, Varginha,
               Patrocínio, Vitória e Guaxupé têm mercados próprios, com compradores, cooperativas
               e corretoras próprios. Preço de praça é apurado por quem opera naquela praça, e o
-              indicador nacional não substitui isso. Quando publicarmos praça aqui, cada linha
-              vai dizer de quem é o número.
+              indicador nacional não substitui isso. Todo número publicado aqui diz de quem é.
             </p>
           </div>
         </div>
@@ -695,8 +694,8 @@ const CotacaoCafePage = () => {
               físico.
             </li>
             <li>
-              <strong>Nossa coleta:</strong> todo dia às 05:15, inclusive sábado e domingo —
-              é o que garante que o fechamento de sexta chegue aqui antes da segunda.
+              <strong>Nesta página:</strong> atualizamos todos os dias, inclusive sábado e
+              domingo, para que o fechamento de sexta já esteja aqui antes da segunda.
             </li>
             <li>
               <strong>Feriado e fim de semana:</strong> não há pregão, o indicador não avança e

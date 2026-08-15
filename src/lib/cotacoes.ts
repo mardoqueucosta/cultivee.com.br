@@ -11,7 +11,7 @@ import resumo from "../../public/dados/cotacoes/resumo.json";
  * `/dados/cotacoes/series/`. Ver `07-cotacoes-site/CLAUDE.md` §6.
  *
  * Fonte da verdade do arquivo: `Site/public/dados/cotacoes/ultimo.json`, gravado
- * pelo coletor todo dia util as 05:30. Nenhum numero e' escrito a mao aqui.
+ * pela rotina diaria de coleta. Nenhum numero e' escrito a mao aqui.
  */
 
 export type ItemCotacao = {
@@ -78,8 +78,7 @@ export const PAGINA_DO_INDICADOR: Record<string, string> = {
  * Nome de EXIBICAO, quando o nome tecnico da fonte nao e' a palavra que o
  * leitor usa. O dado guarda o nome do indicador; a pagina fala a lingua de quem
  * busca. `cafe-robusta` e' o nome da especie no Cepea, e no Brasil o mercado e a
- * busca dizem CONILON: sao 22.200 buscas/mes em "preco do cafe conilon" contra
- * praticamente nada em "robusta".
+ * busca dizem CONILON, com folga sobre "robusta".
  *
  * Mapear aqui, e nao no coletor, porque o coletor alimenta tambem o painel
  * diario de redes sociais, e la o rotulo ja esta consolidado.
@@ -130,8 +129,9 @@ export const fontePorKey = (key: string) =>
  * Extremos de cada serie: minima, maxima e amplitude, com a data de cada.
  *
  * Arquivo separado e PEQUENO de proposito. Sao numeros que precisam estar no
- * HTML (dado unico, que nenhum concorrente publica), mas a serie de onde eles
- * saem cresce um ponto por dia util para sempre e nao pode entrar no bundle.
+ * HTML (a fonte publica so os ultimos pregoes, entao extremo de periodo so
+ * existe para quem arquiva), mas a serie de onde eles saem cresce um ponto por
+ * dia util para sempre e nao pode entrar no bundle.
  * Gerado por `07-cotacoes-site/atualiza_dados.py`.
  */
 export type ResumoSerie = {
