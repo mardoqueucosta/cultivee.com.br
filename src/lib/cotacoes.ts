@@ -1,4 +1,6 @@
 import ultimo from "../../public/dados/cotacoes/ultimo.json";
+import fontes from "../../public/dados/cotacoes/fontes.json";
+import resumo from "../../public/dados/cotacoes/resumo.json";
 
 /**
  * Acesso ao snapshot de cotacoes, compartilhado pelas paginas de `/cotacoes`.
@@ -88,3 +90,64 @@ export const NOME_EXIBICAO: Record<string, string> = {
 
 export const nomeDe = (i: Pick<ItemCotacao, "key" | "nome">) =>
   NOME_EXIBICAO[i.key] || i.nome;
+
+/**
+ * Cobertura declarada: o que cada indicador e, desde quando temos serie, e o
+ * que NAO cobrimos. Entra no BUILD do mesmo jeito que o snapshot.
+ *
+ * Vem do `fontes.json`, que tambem e servido como API publica. Uma fonte so
+ * para a pagina e para quem consome o dado: se divergirem, a pagina mente
+ * sobre o proprio arquivo que ela oferece para download.
+ */
+export type IndicadorFonte = {
+  key: string;
+  nome: string;
+  detalhe?: string | null;
+  unidade: string;
+  moeda: string;
+  periodicidade: string;
+  pagina_fonte: string;
+  serie_desde: string | null;
+  pontos_na_serie: number;
+};
+
+export type Fontes = {
+  atualizado_em: string;
+  fonte: string;
+  fonte_url: string;
+  licenca: string;
+  atribuicao: string;
+  indicadores: IndicadorFonte[];
+  nao_coberto: { commodity: string; motivo: string }[];
+};
+
+export const FONTES = fontes as unknown as Fontes;
+
+export const fontePorKey = (key: string) =>
+  FONTES.indicadores.find((i) => i.key === key);
+
+/**
+ * Extremos de cada serie: minima, maxima e amplitude, com a data de cada.
+ *
+ * Arquivo separado e PEQUENO de proposito. Sao numeros que precisam estar no
+ * HTML (dado unico, que nenhum concorrente publica), mas a serie de onde eles
+ * saem cresce um ponto por dia util para sempre e nao pode entrar no bundle.
+ * Gerado por `07-cotacoes-site/atualiza_dados.py`.
+ */
+export type ResumoSerie = {
+  pontos: number;
+  primeiro: string;
+  ultimo: string;
+  minimo: number;
+  minimo_em: string;
+  maximo: number;
+  maximo_em: string;
+  amplitude_pct: number | null;
+};
+
+export const RESUMO = resumo as unknown as {
+  atualizado_em: string;
+  series: Record<string, ResumoSerie>;
+};
+
+export const resumoDe = (key: string): ResumoSerie | undefined => RESUMO.series[key];

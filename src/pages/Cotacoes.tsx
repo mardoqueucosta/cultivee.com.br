@@ -6,7 +6,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { PageHeader } from "@/components/blog/PageHeader";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import {
-  COTACOES, PAGINA_DO_INDICADOR, dataPorExtenso, fmt, horaDe, nomeDe,
+  COTACOES, FONTES, NOME_EXIBICAO, PAGINA_DO_INDICADOR, dataPorExtenso, fmt,
+  horaDe, nomeDe,
 } from "@/lib/cotacoes";
 
 /**
@@ -46,6 +47,27 @@ const CotacoesPage = () => {
         contentUrl: `${SITE_BASE}/dados/cotacoes/ultimo.json`,
       },
     ],
+  };
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      ["O que é uma cotação agrícola?",
+       `É o preço de referência de uma commodity num mercado e num momento. No Brasil, a referência mais usada do mercado físico são os indicadores do ${COTACOES.fonte}, publicados por unidade padrão: saca de 60 kg para grãos e café, arroba para o boi, tonelada para o trigo e litro para o leite.`],
+      ["Qual a diferença entre cotação e preço pago ao produtor?",
+       "A cotação é uma média de negócios com tipo, qualidade e praça de referência fixos. O preço pago a um produtor soma ou subtrai dessa referência conforme a qualidade do lote, o volume, o prazo de pagamento e o frete."],
+      ["Por que a cotação de hoje mostra o fechamento de ontem?",
+       "Porque o indicador do dia só é apurado e divulgado no fim da tarde. Pela manhã, o dado mais recente que existe é o fechamento anterior."],
+      ["Posso usar estes dados no meu site ou trabalho?",
+       `Os números são do ${COTACOES.fonte}, sob licença ${COTACOES.licenca}, que exige atribuição e restringe uso comercial. O JSON é aberto para consulta e estudo, com a fonte declarada.`],
+      ["Vocês publicam previsão de preço?",
+       "Não. Publicamos apuração: o que foi negociado, quando e por qual fonte."],
+    ].map(([q, a]) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
   };
 
   const Linha = ({ i }: { i: (typeof COTACOES.itens)[number] }) => {
@@ -105,6 +127,7 @@ const CotacoesPage = () => {
           content="Indicadores CEPEA/ESALQ de boi, café, soja, milho, trigo e leite, com variação do dia."
         />
         <script type="application/ld+json">{JSON.stringify(datasetLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       </Head>
       <Navbar />
@@ -177,6 +200,145 @@ const CotacoesPage = () => {
           <p className="mt-4 border-l-4 border-agro pl-4 leading-relaxed">
             Indicador de referência não é o preço da sua porteira nem o do seu lote. A página
             de cada commodity explica o que o número dela cobre e o que não cobre.
+          </p>
+        </div>
+      </section>
+
+      {/* ⬜ cobertura declarada: o que cada indicador e, e o que NAO cobrimos */}
+      <section className="py-16 bg-background" id="cobertura">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">O que cada indicador cobre</h2>
+          <p className="mt-2 text-muted-foreground">
+            Unidade, periodicidade e desde quando guardamos a série de cada um. A
+            especificação completa de tipo e qualidade fica na página do indicador na fonte.
+          </p>
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
+            <table className="w-full min-w-[40rem] text-left text-sm">
+              <caption className="sr-only">
+                Cobertura por indicador: unidade, periodicidade, início da série e fonte
+              </caption>
+              <thead>
+                <tr className="border-b border-border text-xs uppercase tracking-wide text-muted-foreground">
+                  <th scope="col" className="px-4 py-3 font-semibold">Indicador</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Unidade</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Periodicidade</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Série desde</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Pontos</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Fonte</th>
+                </tr>
+              </thead>
+              <tbody className="[&>tr>td]:py-3 [&>tr>td]:pr-4 [&>tr>td:first-child]:px-4 [&>tr]:border-b [&>tr]:border-border [&>tr:last-child]:border-0">
+                {FONTES.indicadores.map((i) => (
+                  <tr key={i.key}>
+                    <td className="font-medium">
+                      {NOME_EXIBICAO[i.key] || i.nome}
+                      {i.detalhe ? (
+                        <span className="block text-xs text-muted-foreground">{i.detalhe}</span>
+                      ) : null}
+                    </td>
+                    <td className="whitespace-nowrap">{i.moeda} por {i.unidade}</td>
+                    <td>{i.periodicidade === "mensal" ? "mensal" : "diária, em dia útil"}</td>
+                    <td className="whitespace-nowrap tabular-nums">{i.serie_desde || "s/ série"}</td>
+                    <td className="tabular-nums">{i.pontos_na_serie}</td>
+                    <td>
+                      <a className="underline underline-offset-4" href={i.pagina_fonte}
+                         rel="noopener noreferrer" target="_blank">
+                        CEPEA
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-muted-foreground">
+            As séries começam em datas diferentes porque a página da fonte publica apenas os
+            últimos 15 pregões: o histórico de cada indicador começa no dia em que passamos a
+            guardá-lo, e cresce a partir daí.
+          </p>
+
+          <h3 className="mt-10 text-xl font-bold text-foreground">O que ainda não cobrimos</h3>
+          <p className="mt-2 text-muted-foreground">
+            Dizer o que falta é parte de publicar dado. Estas são as lacunas conhecidas:
+          </p>
+          <ul className="mt-4 space-y-3">
+            {FONTES.nao_coberto.map((n) => (
+              <li key={n.commodity} className="border-l-4 border-agro pl-4">
+                <strong>{n.commodity}</strong>
+                <span className="block text-muted-foreground">{n.motivo}</span>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="mt-10 text-xl font-bold text-foreground">Quando cada número sai</h3>
+          <p className="mt-3 leading-relaxed">
+            Os indicadores diários são apurados no fim da tarde e divulgados na mesma noite,
+            então o número que aparece aqui de manhã é o <strong>fechamento do pregão
+            anterior</strong>. Na segunda-feira, o painel carrega o fechamento de sexta, e isso
+            não é dado velho: é o dado vigente, porque não houve pregão no fim de semana. O
+            leite é <strong>mensal</strong> e sai com um a dois meses de defasagem, por isso a
+            data de referência aparece por linha e não no topo da tabela.
+          </p>
+          <p className="mt-3 leading-relaxed">
+            Esta página é reconstruída todo dia, e a hora da última apuração fica no alto. Se
+            o número não mudou de um dia para o outro, é porque a fonte não avançou.
+          </p>
+        </div>
+      </section>
+
+      {/* 🟫 perguntas */}
+      <section className="py-16 bg-muted">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">
+            O que é uma cotação agrícola?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            É o preço de referência de uma commodity num mercado e num momento. No Brasil, a
+            referência mais usada do mercado físico são os indicadores do {COTACOES.fonte},
+            que apuram diariamente o preço médio negociado entre agentes do setor e o publicam
+            por unidade padrão: saca de 60 kg para grãos e café, arroba para o boi, tonelada
+            para o trigo e litro para o leite.
+          </p>
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Qual a diferença entre cotação e preço pago ao produtor?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            A cotação é uma média de negócios com características definidas: tipo, qualidade e
+            praça de referência fixos. O preço pago a um produtor específico soma ou subtrai
+            dessa referência conforme a qualidade do lote, o volume, o prazo de pagamento e o
+            frete até o ponto de entrega. Por isso duas propriedades vizinhas podem receber
+            valores diferentes no mesmo dia.
+          </p>
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Por que a cotação de hoje mostra o fechamento de ontem?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Porque o indicador do dia só é apurado e divulgado no fim da tarde. Um painel
+            publicado de manhã com "o número de hoje" estaria inventando: o pregão do dia ainda
+            não terminou. O que existe de mais recente pela manhã é o fechamento anterior, e é
+            ele que aparece aqui, com a data ao lado.
+          </p>
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Posso usar estes dados no meu site ou trabalho?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Os números são do {COTACOES.fonte} e estão sob licença {COTACOES.licenca}, que
+            exige atribuição e restringe uso comercial. Nós publicamos o JSON aberto para
+            consulta e estudo, sempre com a fonte declarada. Ao reusar, mantenha o crédito e
+            verifique as condições diretamente com a fonte.
+          </p>
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Vocês publicam previsão de preço?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Não. O que publicamos é apuração: o que foi negociado, quando e por qual fonte.
+            Projeção de preço de commodity depende de safra, clima, câmbio e estoque, e quem a
+            faz assume um risco que não cabe numa página de consulta. Para entender o que move
+            os números, a página de cada commodity explica a formação de preço.
           </p>
         </div>
       </section>

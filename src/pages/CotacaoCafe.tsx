@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { PageHeader } from "@/components/blog/PageHeader";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import {
-  COTACOES, type ItemCotacao, dataPorExtenso, fmt, horaDe, itemPorKey,
+  COTACOES, type ItemCotacao, dataPorExtenso, fmt, horaDe, itemPorKey, resumoDe,
 } from "@/lib/cotacoes";
 
 /**
@@ -35,6 +35,54 @@ const item = itemPorKey;
 
 const ARABICA = item("cafe-arabica");
 const CONILON = item("cafe-robusta");
+
+/**
+ * Vocabulario da cotacao. Esta na pagina ANCORA de proposito: e' o que explica
+ * por que dois numeros do mesmo dia divergem, e essa e' a pergunta da ancora.
+ * A especificacao COMPLETA de cada tipo pertence aos spokes (§6.4).
+ */
+const GLOSSARIO = [
+  {
+    termo: "Saca de 60 kg",
+    oque: "A unidade padrão do café no Brasil: 60 quilos líquidos de café beneficiado.",
+    efeito: "É a base de toda cotação daqui. Bolsa de Nova York cota em centavo de dólar por libra-peso.",
+  },
+  {
+    termo: "Bica corrida",
+    oque: "Café beneficiado como saiu do maquinário, sem separação por peneira ou por tipo.",
+    efeito: "É a especificação do indicador. Café já classificado vale mais que bica corrida.",
+  },
+  {
+    termo: "Tipo (2 a 8)",
+    oque: "Classificação por número de defeitos numa amostra de 300 g. Quanto menor o número, menos defeito.",
+    efeito: "Cada tipo acima vale mais. É por isso que existe cotação de tipo 6 e de tipo 7 separadas.",
+  },
+  {
+    termo: "Bebida",
+    oque: "Classificação sensorial da xícara: estritamente mole, mole, apenas mole, dura, riada, rio.",
+    efeito: "Vale para o arábica. Bebida dura para cima é o café de mercado; riado e rio pagam menos.",
+  },
+  {
+    termo: "Peneira",
+    oque: "Tamanho do grão, medido em furos de peneira (17, 16, 15…).",
+    efeito: "Grão graúdo torra mais uniforme e tem prêmio. Peneira 17 acima é referência de café fino.",
+  },
+  {
+    termo: "Arroba",
+    oque: "15 quilos. Aparece em negócio no interior e em contrato de parceria.",
+    efeito: "Quatro arrobas fazem uma saca — divida a cotação por 4 para chegar ao valor da arroba.",
+  },
+];
+
+/**
+ * Extremos das NOSSAS series. Dado proprio: a pagina do Cepea publica os
+ * ultimos pregoes e substitui os antigos, entao "maxima do periodo" so existe
+ * para quem arquivou. Gerado por `07-cotacoes-site/atualiza_dados.py`.
+ */
+const SERIES_CAFE = [
+  { rotulo: "Café arábica", r: resumoDe("cafe-arabica") },
+  { rotulo: "Café conilon (robusta)", r: resumoDe("cafe-robusta") },
+].filter((s): s is { rotulo: string; r: NonNullable<typeof s.r> } => Boolean(s.r));
 
 /** Cartao de indicador. Sem valor, o cartao nao aparece: melhor faltar do que inventar. */
 function Cartao({ dado, titulo, detalhe }: { dado?: ItemCotacao; titulo: string; detalhe: string }) {
@@ -243,6 +291,14 @@ const CotacaoCafePage = () => {
        "Em geral derruba. Mais oferta pressiona o preço para baixo, e os boletins do CEPEA registraram esse movimento quando o avanço da colheita reduziu os indicadores."],
       ["Qual a previsão do preço do café para 2026?",
        "Esta página não publica previsão de preço. O que publicamos é apuração: o que foi negociado, quando, e por qual fonte."],
+      ["Qual o preço da arroba de café?",
+       `A arroba tem 15 kg e a saca, 60: quatro arrobas fazem uma saca. A arroba do café arábica sai a R$ ${ARABICA ? fmt(ARABICA.valor / 4) : "—"}${CONILON ? `, e a do conilon, a R$ ${fmt(CONILON.valor / 4)}` : ""}, pela apuração de ${refArabica}.`],
+      ["Quanto o produtor recebe pela saca de café?",
+       "Quase sempre menos que o indicador. O número apurado é a média de negócios com uma especificação definida; um lote específico sai dele com abatimentos por tipo, bebida, umidade, frete, prazo de pagamento e classificação na recepção. Café acima da especificação pode receber prêmio. O indicador é referência de negociação, não valor garantido de venda."],
+      ["Por que a cotação de hoje é a do dia anterior?",
+       "Porque o indicador só fecha depois que o dia de negócios acaba. O CEPEA apura os negócios do dia útil e divulga no fim da tarde, então pela manhã o número mais recente é o do dia útil anterior. Na segunda-feira, é o de sexta."],
+      ["O que significa bica corrida na cotação do café?",
+       "Bica corrida é o café beneficiado como saiu do maquinário, sem separação por peneira ou por tipo. É a especificação do indicador publicado nesta página. Café já classificado costuma valer mais que bica corrida, e é por isso que a cotação de uma cooperativa raramente coincide com o indicador."],
     ].map(([q, a]) => ({
       "@type": "Question",
       name: q,
@@ -530,6 +586,126 @@ const CotacaoCafePage = () => {
         </div>
       </section>
 
+      {/* ⬜ glossario */}
+      <section className="py-16 bg-background" id="glossario">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">
+            Como ler uma cotação de café
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Toda cotação de café vem com uma especificação junto, e é ela que explica por que
+            dois números do mesmo dia não batem. Sem esses termos, comparar preço de origens
+            diferentes é comparar coisas diferentes.
+          </p>
+
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full text-sm">
+              <thead className="bg-muted">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Termo</th>
+                  <th className="px-4 py-3 text-left font-semibold">O que significa</th>
+                  <th className="px-4 py-3 text-left font-semibold">Por que muda o preço</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {GLOSSARIO.map((g) => (
+                  <tr key={g.termo}>
+                    <th scope="row" className="px-4 py-3 text-left font-semibold align-top">
+                      {g.termo}
+                    </th>
+                    <td className="px-4 py-3 align-top">{g.oque}</td>
+                    <td className="px-4 py-3 align-top text-muted-foreground">{g.efeito}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mt-6 text-sm text-muted-foreground">
+            O indicador do CEPEA que esta página publica é <strong>bica corrida</strong>, em
+            saca de 60 kg limpos, posto em armazém. Cotação de cooperativa costuma ser de café
+            já classificado, e por isso quase nunca coincide com ele.
+          </p>
+        </div>
+      </section>
+
+      {/* 🟫 nossa serie */}
+      <section className="py-16 bg-muted" id="nossa-serie">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">
+            Máxima, mínima e amplitude da nossa série
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Estes números saem da série que este site guarda, não de terceiros. A página do
+            CEPEA publica os últimos pregões e substitui os antigos; nós arquivamos cada
+            apuração em <a href="/dados/cotacoes/" className="text-agro underline">arquivo por
+            ano</a>, então dá para dizer qual foi o teto e o piso do período inteiro.
+          </p>
+
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-background">
+            <table className="w-full text-sm">
+              <caption className="sr-only">
+                Extremos das séries de café arábica e conilon apuradas pelo Cultivee
+              </caption>
+              <thead className="bg-muted">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Indicador</th>
+                  <th className="px-4 py-3 text-right font-semibold">Mínima</th>
+                  <th className="px-4 py-3 text-right font-semibold">Máxima</th>
+                  <th className="px-4 py-3 text-right font-semibold">Amplitude</th>
+                  <th className="px-4 py-3 text-right font-semibold">Pontos</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {SERIES_CAFE.map(({ rotulo, r }) => (
+                  <tr key={rotulo}>
+                    <th scope="row" className="px-4 py-3 text-left font-medium">{rotulo}</th>
+                    <td className="px-4 py-3 text-right tabular-nums">
+                      R$ {fmt(r.minimo)}
+                      <span className="block text-xs text-muted-foreground">{r.minimo_em}</span>
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums">
+                      R$ {fmt(r.maximo)}
+                      <span className="block text-xs text-muted-foreground">{r.maximo_em}</span>
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums">
+                      {r.amplitude_pct === null ? "—" : `${fmt(r.amplitude_pct)}%`}
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums">{r.pontos}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Amplitude é a distância entre a mínima e a máxima, em percentual da mínima. Série
+            curta: os extremos valem para o período coberto, e não são máxima e mínima
+            históricas do café.
+          </p>
+
+          <h3 className="mt-12 text-2xl font-bold text-foreground">Quando cada número sai</h3>
+          <p className="mt-3 leading-relaxed">
+            O CEPEA apura em dia útil e divulga o fechamento do pregão no fim da tarde. Por
+            isso, o número que você lê pela manhã é o do <strong>dia útil anterior</strong>, e
+            na segunda-feira ele ainda é o de sexta.
+          </p>
+          <ul className="mt-4 space-y-2 list-disc pl-5 leading-relaxed">
+            <li>
+              <strong>Apuração:</strong> dia útil, com os negócios daquele dia no mercado
+              físico.
+            </li>
+            <li>
+              <strong>Nossa coleta:</strong> todo dia às 05:15, inclusive sábado e domingo —
+              é o que garante que o fechamento de sexta chegue aqui antes da segunda.
+            </li>
+            <li>
+              <strong>Feriado e fim de semana:</strong> não há pregão, o indicador não avança e
+              esta página mantém a última apuração, com a data dela visível.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* ⬜ perguntas */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -605,6 +781,41 @@ const CotacaoCafePage = () => {
             safra, clima, câmbio e estoque, e quem a faz assume um risco que não cabe numa
             página de consulta. Para acompanhar o movimento, a série histórica acima mostra o
             caminho que o preço fez.
+          </p>
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Qual o preço da arroba de café?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            A arroba tem 15 quilos, e a saca, 60: quatro arrobas fazem uma saca. Então a arroba
+            do arábica sai a{" "}
+            {ARABICA ? <strong>R$ {fmt(ARABICA.valor / 4)}</strong> : "um quarto do indicador"}
+            {CONILON ? <> e a do conilon, a <strong>R$ {fmt(CONILON.valor / 4)}</strong></> : null}
+            , pela apuração de {refArabica}. O conversor acima faz a conta para qualquer
+            quantidade.
+          </p>
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Quanto o produtor recebe pela saca?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Menos que o indicador, quase sempre. O número apurado é uma média de negócios no
+            mercado físico com uma especificação definida, e o preço de um lote específico sai
+            dele com abatimentos: tipo e bebida abaixo da referência, umidade, frete até o
+            armazém comprador, prazo de pagamento e a classificação feita na recepção. Quem
+            entrega café melhor que a especificação pode receber acima. O indicador serve de
+            <strong> referência para negociar</strong>, não de valor garantido de venda.
+          </p>
+
+          <h2 className="mt-10 text-3xl font-bold text-foreground">
+            Por que a cotação de hoje é a de ontem?
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Porque o indicador só fecha depois que o dia de negócios acaba. O CEPEA apura os
+            negócios do dia útil e divulga no fim da tarde, então pela manhã o número mais
+            recente que existe é o do dia útil anterior. Na segunda-feira, ele é o de sexta.
+            Qualquer página que mostre um preço de café "de hoje" às oito da manhã está
+            mostrando o fechamento anterior — a diferença é declarar isso ou não.
           </p>
 
           <h2 className="mt-10 text-3xl font-bold text-foreground">
