@@ -7,6 +7,7 @@ const Footer = () => {
     { name: "Cultivee Agro", href: "/agro" },
     { name: "Cultivee Educa", href: "/educa" },
     { name: "Cultivee Tech", href: "/tech" },
+    { name: "Cotações do agro", href: "/cotacoes" },
     { name: "Sobre", href: "/sobre" },
     { name: "Contato", href: "/contato" },
   ];

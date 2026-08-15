@@ -124,6 +124,20 @@ const Navbar = () => {
               Projeto
             </Link>
 
+            {/* Cotacoes vem ANTES do Blog: e o unico destino do site que muda
+                todo dia util, e quem volta para ver preco precisa acha-lo em
+                um clique. */}
+            <Link
+              to="/cotacoes"
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
+                isActive("/cotacoes")
+                  ? "text-primary bg-primary/10"
+                  : "text-foreground hover:text-primary hover:bg-primary/5"
+              }`}
+            >
+              Cotações
+            </Link>
+
             <Link
               to="/blog"
               className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
@@ -242,6 +256,16 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Projeto
+              </Link>
+
+              <Link
+                to="/cotacoes"
+                className={`px-4 py-3 rounded-lg font-medium transition-colors ${
+                  isActive("/cotacoes") ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Cotações
               </Link>
 
               <Link
