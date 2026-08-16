@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-15T10:16:10",
+  "gerado_em": "2026-08-16T05:15:04",
   "data_carrossel": "14/08/2026",
   "fonte": "CEPEA/ESALQ",
   "fonte_url": "https://cepea.org.br",
@@ -17,7 +17,7 @@
       "data_ref": "14/08/2026",
       "ref_rotulo": "14/08",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
+      "defasagem_dias": 2,
       "var_pct": 0.0,
       "var_base": "13/08/2026",
       "sequencia": {
@@ -52,7 +52,7 @@
       "data_ref": "14/08/2026",
       "ref_rotulo": "14/08",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
+      "defasagem_dias": 2,
       "var_pct": 0.83,
       "var_base": "13/08/2026",
       "sequencia": {
@@ -87,7 +87,7 @@
       "data_ref": "14/08/2026",
       "ref_rotulo": "14/08",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
+      "defasagem_dias": 2,
       "var_pct": 1.37,
       "var_base": "13/08/2026",
       "sequencia": {
@@ -122,7 +122,7 @@
       "data_ref": "14/08/2026",
       "ref_rotulo": "14/08",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
+      "defasagem_dias": 2,
       "var_pct": 0.39,
       "var_base": "13/08/2026",
       "sequencia": {
@@ -157,7 +157,7 @@
       "data_ref": "14/08/2026",
       "ref_rotulo": "14/08",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
+      "defasagem_dias": 2,
       "var_pct": 0.39,
       "var_base": "13/08/2026",
       "sequencia": {
@@ -192,7 +192,7 @@
       "data_ref": "06/2026",
       "ref_rotulo": "jun/26",
       "periodicidade": "mensal",
-      "defasagem_dias": 75,
+      "defasagem_dias": 76,
       "var_pct": 3.18,
       "var_base": "05/2026",
       "sequencia": null,
@@ -211,7 +211,7 @@
       "data_ref": "14/08/2026",
       "ref_rotulo": "14/08",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
+      "defasagem_dias": 2,
       "var_pct": -1.45,
       "var_base": "13/08/2026",
       "sequencia": {
