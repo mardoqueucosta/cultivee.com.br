@@ -13,8 +13,7 @@ import {
 /**
  * Indice de `/cotacoes`: o painel de TODOS os indicadores que o site publica.
  *
- * DIVISAO DE CONTEUDO (contrato na §6.4 do CLAUDE.md do projeto 07):
- * esta pagina responde "cotacoes agricolas hoje" com uma linha por indicador e
+ * DIVISAO DE CONTEUDO: esta pagina responde "cotacoes agricolas hoje" com uma linha por indicador e
  * ROTEIA para as paginas proprias. Ela NAO repete nada do que e' especifico de
  * uma commodity: especificacao, conversor, serie e metodologia moram na pagina
  * daquela commodity. Repetir aqui seria criar duas paginas dizendo a mesma
@@ -257,19 +256,6 @@ const CotacoesPage = () => {
             guardá-lo, e cresce a partir daí.
           </p>
 
-          <h3 className="mt-10 text-xl font-bold text-foreground">O que ainda não cobrimos</h3>
-          <p className="mt-2 text-muted-foreground">
-            Dizer o que falta é parte de publicar dado. Estas são as lacunas conhecidas:
-          </p>
-          <ul className="mt-4 space-y-3">
-            {FONTES.nao_coberto.map((n) => (
-              <li key={n.commodity} className="border-l-4 border-agro pl-4">
-                <strong>{n.commodity}</strong>
-                <span className="block text-muted-foreground">{n.motivo}</span>
-              </li>
-            ))}
-          </ul>
-
           <h3 className="mt-10 text-xl font-bold text-foreground">Quando cada número sai</h3>
           <p className="mt-3 leading-relaxed">
             Os indicadores diários são apurados no fim da tarde e divulgados na mesma noite,
@@ -363,7 +349,8 @@ const CotacoesPage = () => {
             </Link>
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
-            Os demais indicadores aparecem no painel acima e ainda não têm página própria.
+            Os demais indicadores estão no painel acima, com valor, variação e data de
+            apuração.
           </p>
         </div>
       </section>

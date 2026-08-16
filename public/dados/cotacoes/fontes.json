@@ -4,7 +4,6 @@
   "fonte_url": "https://www.cepea.esalq.usp.br",
   "licenca": "CC BY-NC 4.0",
   "atribuicao": "Fonte: CEPEA/ESALQ (Esalq/USP), licença CC BY-NC 4.0. Crédito obrigatório em toda exibição.",
-  "autorizacao": "Uso autorizado pela condição de pesquisador do responsável na Esalq (registrado em 2026-08-14).",
   "indicadores": [
     {
       "key": "boi-gordo",
@@ -82,20 +81,6 @@
       "pagina_fonte": "https://www.cepea.org.br/br/indicador/cafe-arabica.aspx",
       "serie_desde": "24/07/2026",
       "pontos_na_serie": 16
-    }
-  ],
-  "nao_coberto": [
-    {
-      "commodity": "cacau",
-      "motivo": "ainda não publicamos"
-    },
-    {
-      "commodity": "arroz",
-      "motivo": "ainda não publicamos"
-    },
-    {
-      "commodity": "preço por praça",
-      "motivo": "a fonte publica indicador de referência nacional, não preço de praça"
     }
   ]
 }

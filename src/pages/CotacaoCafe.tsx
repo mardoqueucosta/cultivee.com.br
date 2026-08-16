@@ -13,9 +13,6 @@ import {
 /**
  * Pagina ancora da cotacao do cafe.
  *
- * Contrato de conteudo: `07-cotacoes-site/conteudo/cotacoes-cafe.md`.
- * Arquitetura de ancora e spokes: §6.3 e §6.4 do CLAUDE.md daquele projeto.
- *
  * DUAS REGRAS QUE NAO PODEM SER QUEBRADAS AQUI:
  *
  * 1. NENHUM NUMERO ESCRITO A MAO. Tudo sai do `ultimo.json`, que a rotina
@@ -77,7 +74,7 @@ const GLOSSARIO = [
 /**
  * Extremos das NOSSAS series. Dado proprio: a pagina do Cepea publica os
  * ultimos pregoes e substitui os antigos, entao "maxima do periodo" so existe
- * para quem arquivou. Gerado por `07-cotacoes-site/atualiza_dados.py`.
+ * para quem arquivou. Gerado junto com o dado, fora deste repositorio.
  */
 const SERIES_CAFE = [
   { rotulo: "Café arábica", r: resumoDe("cafe-arabica") },
@@ -329,7 +326,7 @@ const CotacaoCafePage = () => {
       <Navbar />
 
       {/*
-        Layout pelo padrao da casa (CLAUDE.md do site): hero verde, alternancia
+        Layout pelo padrao da casa: hero verde, alternancia
         ESTRITA branco/cinza no meio, verde no fim.
 
         Uma adaptacao deliberada: os cartoes de preco ficam DENTRO do hero
@@ -821,10 +818,10 @@ const CotacaoCafePage = () => {
             Onde vejo o preço na minha região?
           </h2>
           <p className="mt-3 leading-relaxed">
-            Por enquanto, nas fontes que apuram cada praça: o Centro do Comércio de Café de
-            Vitória para o conilon capixaba, as cooperativas para o preço que elas pagam ao
-            cooperado, e as corretoras regionais. Estamos trabalhando para reunir essas fontes
-            aqui, com o crédito de cada uma.
+            Nas fontes que apuram cada praça: o Centro do Comércio de Café de Vitória para o
+            conilon capixaba, as cooperativas para o preço que pagam ao cooperado, e as
+            corretoras regionais. O indicador desta página é nacional e serve de referência
+            para comparar, não substitui a apuração local.
           </p>
         </div>
       </section>

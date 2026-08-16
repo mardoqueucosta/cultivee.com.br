@@ -8,7 +8,7 @@ import resumo from "../../public/dados/cotacoes/resumo.json";
  * O snapshot ENTRA NO BUILD porque e' ele que precisa estar no HTML quando o
  * Google rastreia, e e' pequeno (~7 KB). A SERIE historica NAO entra: ela cresce
  * um ponto por dia util para sempre, e e' buscada sob demanda de
- * `/dados/cotacoes/series/`. Ver `07-cotacoes-site/CLAUDE.md` §6.
+ * `/dados/cotacoes/series/`.
  *
  * Fonte da verdade do arquivo: `Site/public/dados/cotacoes/ultimo.json`, gravado
  * pela rotina diaria de coleta. Nenhum numero e' escrito a mao aqui.
@@ -66,8 +66,7 @@ export const fmt = (n: number) =>
  * Qual pagina propria existe para cada indicador.
  *
  * Chave ausente = ainda nao ha pagina, e o indice mostra o numero SEM link, em
- * vez de prometer "em breve" ou apontar para 404. Ver a regra de link interno
- * na §6.3 do CLAUDE.md do projeto 07.
+ * vez de prometer "em breve" ou apontar para 404.
  */
 export const PAGINA_DO_INDICADOR: Record<string, string> = {
   "cafe-arabica": "/cotacoes/cafe",
@@ -91,8 +90,8 @@ export const nomeDe = (i: Pick<ItemCotacao, "key" | "nome">) =>
   NOME_EXIBICAO[i.key] || i.nome;
 
 /**
- * Cobertura declarada: o que cada indicador e, desde quando temos serie, e o
- * que NAO cobrimos. Entra no BUILD do mesmo jeito que o snapshot.
+ * Cobertura declarada: o que cada indicador e, em que unidade, e desde quando
+ * temos serie dele. Entra no BUILD do mesmo jeito que o snapshot.
  *
  * Vem do `fontes.json`, que tambem e servido como API publica. Uma fonte so
  * para a pagina e para quem consome o dado: se divergirem, a pagina mente
@@ -117,7 +116,6 @@ export type Fontes = {
   licenca: string;
   atribuicao: string;
   indicadores: IndicadorFonte[];
-  nao_coberto: { commodity: string; motivo: string }[];
 };
 
 export const FONTES = fontes as unknown as Fontes;
@@ -132,7 +130,7 @@ export const fontePorKey = (key: string) =>
  * HTML (a fonte publica so os ultimos pregoes, entao extremo de periodo so
  * existe para quem arquiva), mas a serie de onde eles saem cresce um ponto por
  * dia util para sempre e nao pode entrar no bundle.
- * Gerado por `07-cotacoes-site/atualiza_dados.py`.
+ * Gerado junto com o dado, fora deste repositorio.
  */
 export type ResumoSerie = {
   pontos: number;
