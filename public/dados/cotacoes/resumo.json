@@ -1,10 +1,10 @@
 {
-  "atualizado_em": "2026-08-19T05:15:04",
+  "atualizado_em": "2026-08-20T05:15:04",
   "series": {
     "boi-gordo": {
-      "pontos": 28,
+      "pontos": 29,
       "primeiro": "10/07/2026",
-      "ultimo": "18/08/2026",
+      "ultimo": "19/08/2026",
       "minimo": 324.6,
       "minimo_em": "13/07/2026",
       "maximo": 350.2,
@@ -12,9 +12,9 @@
       "amplitude_pct": 7.89
     },
     "cafe-arabica": {
-      "pontos": 28,
+      "pontos": 29,
       "primeiro": "10/07/2026",
-      "ultimo": "18/08/2026",
+      "ultimo": "19/08/2026",
       "minimo": 1676.28,
       "minimo_em": "24/07/2026",
       "maximo": 1815.45,
@@ -22,9 +22,9 @@
       "amplitude_pct": 8.3
     },
     "cafe-robusta": {
-      "pontos": 18,
+      "pontos": 19,
       "primeiro": "24/07/2026",
-      "ultimo": "18/08/2026",
+      "ultimo": "19/08/2026",
       "minimo": 1049.17,
       "minimo_em": "14/08/2026",
       "maximo": 1114.0,
@@ -42,34 +42,34 @@
       "amplitude_pct": 3.31
     },
     "milho": {
-      "pontos": 28,
+      "pontos": 29,
       "primeiro": "10/07/2026",
-      "ultimo": "18/08/2026",
+      "ultimo": "19/08/2026",
       "minimo": 64.51,
       "minimo_em": "10/07/2026",
-      "maximo": 67.2,
-      "maximo_em": "18/08/2026",
-      "amplitude_pct": 4.17
+      "maximo": 67.39,
+      "maximo_em": "19/08/2026",
+      "amplitude_pct": 4.46
     },
     "soja": {
-      "pontos": 28,
+      "pontos": 29,
       "primeiro": "10/07/2026",
-      "ultimo": "18/08/2026",
+      "ultimo": "19/08/2026",
       "minimo": 139.99,
       "minimo_em": "15/07/2026",
-      "maximo": 151.36,
-      "maximo_em": "18/08/2026",
-      "amplitude_pct": 8.12
+      "maximo": 151.65,
+      "maximo_em": "19/08/2026",
+      "amplitude_pct": 8.33
     },
     "trigo": {
-      "pontos": 28,
+      "pontos": 29,
       "primeiro": "10/07/2026",
-      "ultimo": "18/08/2026",
+      "ultimo": "19/08/2026",
       "minimo": 1375.69,
       "minimo_em": "10/07/2026",
-      "maximo": 1421.62,
-      "maximo_em": "14/08/2026",
-      "amplitude_pct": 3.34
+      "maximo": 1444.01,
+      "maximo_em": "19/08/2026",
+      "amplitude_pct": 4.97
     }
   }
 }
