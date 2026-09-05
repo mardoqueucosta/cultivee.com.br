@@ -1,10 +1,10 @@
 {
-  "atualizado_em": "2026-09-02T05:15:34",
+  "atualizado_em": "2026-09-05T05:15:33",
   "series": {
     "boi-gordo": {
-      "pontos": 38,
+      "pontos": 39,
       "primeiro": "10/07/2026",
-      "ultimo": "01/09/2026",
+      "ultimo": "04/09/2026",
       "minimo": 324.6,
       "minimo_em": "13/07/2026",
       "maximo": 350.2,
@@ -12,24 +12,24 @@
       "amplitude_pct": 7.89
     },
     "cafe-arabica": {
-      "pontos": 38,
+      "pontos": 39,
       "primeiro": "10/07/2026",
-      "ultimo": "01/09/2026",
-      "minimo": 1676.28,
-      "minimo_em": "24/07/2026",
+      "ultimo": "04/09/2026",
+      "minimo": 1659.93,
+      "minimo_em": "04/09/2026",
       "maximo": 1826.58,
       "maximo_em": "24/08/2026",
-      "amplitude_pct": 8.97
+      "amplitude_pct": 10.04
     },
     "cafe-robusta": {
-      "pontos": 28,
+      "pontos": 29,
       "primeiro": "24/07/2026",
-      "ultimo": "01/09/2026",
-      "minimo": 1007.35,
-      "minimo_em": "01/09/2026",
+      "ultimo": "04/09/2026",
+      "minimo": 976.71,
+      "minimo_em": "04/09/2026",
       "maximo": 1114.0,
       "maximo_em": "28/07/2026",
-      "amplitude_pct": 10.59
+      "amplitude_pct": 14.06
     },
     "leite": {
       "pontos": 4,
@@ -42,9 +42,9 @@
       "amplitude_pct": 8.19
     },
     "milho": {
-      "pontos": 38,
+      "pontos": 39,
       "primeiro": "10/07/2026",
-      "ultimo": "01/09/2026",
+      "ultimo": "04/09/2026",
       "minimo": 64.51,
       "minimo_em": "10/07/2026",
       "maximo": 70.96,
@@ -52,9 +52,9 @@
       "amplitude_pct": 10.0
     },
     "soja": {
-      "pontos": 38,
+      "pontos": 39,
       "primeiro": "10/07/2026",
-      "ultimo": "01/09/2026",
+      "ultimo": "04/09/2026",
       "minimo": 139.99,
       "minimo_em": "15/07/2026",
       "maximo": 161.14,
@@ -62,9 +62,9 @@
       "amplitude_pct": 15.11
     },
     "trigo": {
-      "pontos": 38,
+      "pontos": 39,
       "primeiro": "10/07/2026",
-      "ultimo": "01/09/2026",
+      "ultimo": "04/09/2026",
       "minimo": 1375.69,
       "minimo_em": "10/07/2026",
       "maximo": 1457.92,
