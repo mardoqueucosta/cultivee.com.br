@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-05T05:15:33",
+  "gerado_em": "2026-09-06T05:15:04",
   "data_carrossel": "04/09/2026",
   "fonte": "CEPEA/ESALQ",
   "fonte_url": "https://cepea.org.br",
@@ -17,10 +17,26 @@
       "data_ref": "04/09/2026",
       "ref_rotulo": "04/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
-      "var_pct": 0.49,
-      "var_base": "01/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 2,
+      "var_pct": 0.03,
+      "var_base": "03/09/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 4,
+        "desde": "01/09/2026",
+        "var_acumulada_pct": 0.96,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 1,
+          "var_acumulada_pct": -0.28
+        },
+        "extremo_na_janela": "maximo",
+        "janela": {
+          "de": "17/08/2026",
+          "ate": "04/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -36,10 +52,26 @@
       "data_ref": "04/09/2026",
       "ref_rotulo": "04/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
-      "var_pct": -4.08,
-      "var_base": "01/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 2,
+      "var_pct": -0.74,
+      "var_base": "03/09/2026",
+      "sequencia": {
+        "direcao": "baixa",
+        "dias": 4,
+        "desde": "01/09/2026",
+        "var_acumulada_pct": -5.06,
+        "anterior": {
+          "direcao": "alta",
+          "dias": 1,
+          "var_acumulada_pct": 1.15
+        },
+        "extremo_na_janela": "minimo",
+        "janela": {
+          "de": "17/08/2026",
+          "ate": "04/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -55,10 +87,26 @@
       "data_ref": "04/09/2026",
       "ref_rotulo": "04/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
-      "var_pct": -0.17,
-      "var_base": "01/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 2,
+      "var_pct": 0.46,
+      "var_base": "03/09/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 1,
+        "desde": "04/09/2026",
+        "var_acumulada_pct": 0.46,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 2,
+          "var_acumulada_pct": -0.62
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "17/08/2026",
+          "ate": "04/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -74,10 +122,26 @@
       "data_ref": "04/09/2026",
       "ref_rotulo": "04/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
-      "var_pct": -0.04,
-      "var_base": "01/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 2,
+      "var_pct": -0.18,
+      "var_base": "03/09/2026",
+      "sequencia": {
+        "direcao": "baixa",
+        "dias": 1,
+        "desde": "04/09/2026",
+        "var_acumulada_pct": -0.18,
+        "anterior": {
+          "direcao": "alta",
+          "dias": 1,
+          "var_acumulada_pct": 0.17
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "17/08/2026",
+          "ate": "04/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -93,10 +157,26 @@
       "data_ref": "04/09/2026",
       "ref_rotulo": "04/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
-      "var_pct": -0.03,
-      "var_base": "01/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 2,
+      "var_pct": 0.07,
+      "var_base": "03/09/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 2,
+        "desde": "03/09/2026",
+        "var_acumulada_pct": 0.27,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 1,
+          "var_acumulada_pct": -0.29
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "17/08/2026",
+          "ate": "04/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -112,7 +192,7 @@
       "data_ref": "07/2026",
       "ref_rotulo": "jul/26",
       "periodicidade": "mensal",
-      "defasagem_dias": 66,
+      "defasagem_dias": 67,
       "var_pct": 4.72,
       "var_base": "06/2026",
       "sequencia": null,
@@ -131,10 +211,26 @@
       "data_ref": "04/09/2026",
       "ref_rotulo": "04/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 1,
-      "var_pct": -3.04,
-      "var_base": "01/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 2,
+      "var_pct": -0.34,
+      "var_base": "03/09/2026",
+      "sequencia": {
+        "direcao": "baixa",
+        "dias": 5,
+        "desde": "31/08/2026",
+        "var_acumulada_pct": -4.95,
+        "anterior": {
+          "direcao": "alta",
+          "dias": 1,
+          "var_acumulada_pct": 0.55
+        },
+        "extremo_na_janela": "minimo",
+        "janela": {
+          "de": "17/08/2026",
+          "ate": "04/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     }
