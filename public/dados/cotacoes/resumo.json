@@ -1,10 +1,10 @@
 {
-  "atualizado_em": "2026-09-10T05:15:08",
+  "atualizado_em": "2026-09-11T05:15:04",
   "series": {
     "boi-gordo": {
-      "pontos": 43,
+      "pontos": 44,
       "primeiro": "10/07/2026",
-      "ultimo": "09/09/2026",
+      "ultimo": "10/09/2026",
       "minimo": 324.6,
       "minimo_em": "13/07/2026",
       "maximo": 350.2,
