@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-09-11T05:15:04",
-  "data_carrossel": "10/09/2026",
+  "gerado_em": "2026-09-12T05:15:04",
+  "data_carrossel": "11/09/2026",
   "fonte": "CEPEA/ESALQ",
   "fonte_url": "https://cepea.org.br",
   "licenca": "CC BY-NC 4.0",
@@ -14,15 +14,15 @@
       "moeda": "R$",
       "valor": 349.5,
       "valor_fmt": "349,50",
-      "data_ref": "10/09/2026",
-      "ref_rotulo": "10/09",
+      "data_ref": "11/09/2026",
+      "ref_rotulo": "11/09",
       "periodicidade": "diaria",
       "defasagem_dias": 1,
       "var_pct": 0.0,
-      "var_base": "09/09/2026",
+      "var_base": "10/09/2026",
       "sequencia": {
         "direcao": "estavel",
-        "dias": 1,
+        "dias": 2,
         "desde": "10/09/2026",
         "var_acumulada_pct": 0.0,
         "anterior": {
@@ -32,8 +32,8 @@
         },
         "extremo_na_janela": "maximo",
         "janela": {
-          "de": "20/08/2026",
-          "ate": "10/09/2026",
+          "de": "21/08/2026",
+          "ate": "11/09/2026",
           "pontos": 15
         }
       },
@@ -47,15 +47,31 @@
       "nome_cepea": "Café Arábica",
       "unidade": "sc de 60kg",
       "moeda": "R$",
-      "valor": 1647.29,
-      "valor_fmt": "1.647,29",
-      "data_ref": "09/09/2026",
-      "ref_rotulo": "09/09",
+      "valor": 1596.87,
+      "valor_fmt": "1.596,87",
+      "data_ref": "11/09/2026",
+      "ref_rotulo": "11/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 2,
-      "var_pct": 0.72,
-      "var_base": "08/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 1,
+      "var_pct": -1.36,
+      "var_base": "10/09/2026",
+      "sequencia": {
+        "direcao": "baixa",
+        "dias": 2,
+        "desde": "10/09/2026",
+        "var_acumulada_pct": -3.06,
+        "anterior": {
+          "direcao": "alta",
+          "dias": 1,
+          "var_acumulada_pct": 0.72
+        },
+        "extremo_na_janela": "minimo",
+        "janela": {
+          "de": "21/08/2026",
+          "ate": "11/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -66,15 +82,31 @@
       "nome_cepea": "Soja Paranaguá",
       "unidade": "sc de 60kg",
       "moeda": "R$",
-      "valor": 160.12,
-      "valor_fmt": "160,12",
-      "data_ref": "09/09/2026",
-      "ref_rotulo": "09/09",
+      "valor": 160.55,
+      "valor_fmt": "160,55",
+      "data_ref": "11/09/2026",
+      "ref_rotulo": "11/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 2,
-      "var_pct": -0.21,
-      "var_base": "08/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 1,
+      "var_pct": -0.73,
+      "var_base": "10/09/2026",
+      "sequencia": {
+        "direcao": "baixa",
+        "dias": 1,
+        "desde": "11/09/2026",
+        "var_acumulada_pct": -0.73,
+        "anterior": {
+          "direcao": "alta",
+          "dias": 1,
+          "var_acumulada_pct": 1.01
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "21/08/2026",
+          "ate": "11/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -85,15 +117,31 @@
       "nome_cepea": "Milho",
       "unidade": "sc de 60kg",
       "moeda": "R$",
-      "valor": 70.52,
-      "valor_fmt": "70,52",
-      "data_ref": "09/09/2026",
-      "ref_rotulo": "09/09",
+      "valor": 69.77,
+      "valor_fmt": "69,77",
+      "data_ref": "11/09/2026",
+      "ref_rotulo": "11/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 2,
-      "var_pct": -0.54,
-      "var_base": "08/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 1,
+      "var_pct": -0.6,
+      "var_base": "10/09/2026",
+      "sequencia": {
+        "direcao": "baixa",
+        "dias": 5,
+        "desde": "04/09/2026",
+        "var_acumulada_pct": -1.82,
+        "anterior": {
+          "direcao": "alta",
+          "dias": 1,
+          "var_acumulada_pct": 0.17
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "21/08/2026",
+          "ate": "11/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -104,15 +152,31 @@
       "nome_cepea": "Trigo - PR",
       "unidade": "t",
       "moeda": "R$",
-      "valor": 1462.05,
-      "valor_fmt": "1.462,05",
-      "data_ref": "09/09/2026",
-      "ref_rotulo": "09/09",
+      "valor": 1489.65,
+      "valor_fmt": "1.489,65",
+      "data_ref": "11/09/2026",
+      "ref_rotulo": "11/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 2,
-      "var_pct": 0.04,
-      "var_base": "08/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 1,
+      "var_pct": 1.12,
+      "var_base": "10/09/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 6,
+        "desde": "03/09/2026",
+        "var_acumulada_pct": 2.48,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 1,
+          "var_acumulada_pct": -0.29
+        },
+        "extremo_na_janela": "maximo",
+        "janela": {
+          "de": "21/08/2026",
+          "ate": "11/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     },
@@ -128,7 +192,7 @@
       "data_ref": "07/2026",
       "ref_rotulo": "jul/26",
       "periodicidade": "mensal",
-      "defasagem_dias": 72,
+      "defasagem_dias": 73,
       "var_pct": 4.72,
       "var_base": "06/2026",
       "sequencia": null,
@@ -142,15 +206,31 @@
       "nome_cepea": "Café Robusta",
       "unidade": "sc de 60kg",
       "moeda": "R$",
-      "valor": 996.9,
-      "valor_fmt": "996,90",
-      "data_ref": "09/09/2026",
-      "ref_rotulo": "09/09",
+      "valor": 992.96,
+      "valor_fmt": "992,96",
+      "data_ref": "11/09/2026",
+      "ref_rotulo": "11/09",
       "periodicidade": "diaria",
-      "defasagem_dias": 2,
-      "var_pct": 1.64,
-      "var_base": "08/09/2026",
-      "sequencia": null,
+      "defasagem_dias": 1,
+      "var_pct": 0.69,
+      "var_base": "10/09/2026",
+      "sequencia": {
+        "direcao": "alta",
+        "dias": 1,
+        "desde": "11/09/2026",
+        "var_acumulada_pct": 0.69,
+        "anterior": {
+          "direcao": "baixa",
+          "dias": 1,
+          "var_acumulada_pct": -1.08
+        },
+        "extremo_na_janela": null,
+        "janela": {
+          "de": "21/08/2026",
+          "ate": "11/09/2026",
+          "pontos": 15
+        }
+      },
       "fonte": "CEPEA/ESALQ",
       "licenca": "CC BY-NC 4.0"
     }
