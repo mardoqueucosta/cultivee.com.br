@@ -3,7 +3,7 @@
   "ano": "2026",
   "fonte": "CEPEA/ESALQ",
   "licenca": "CC BY-NC 4.0",
-  "atualizado_em": "2026-09-15T05:15:04",
+  "atualizado_em": "2026-09-19T05:15:03",
   "pontos": [
     {
       "data_ref": "10/07/2026",
@@ -227,6 +227,26 @@
       "data_ref": "14/09/2026",
       "valor": 1594.86,
       "var_pct": -0.13
+    },
+    {
+      "data_ref": "15/09/2026",
+      "valor": 1588.43,
+      "var_pct": -0.4
+    },
+    {
+      "data_ref": "16/09/2026",
+      "valor": 1566.48,
+      "var_pct": -1.38
+    },
+    {
+      "data_ref": "17/09/2026",
+      "valor": 1541.97,
+      "var_pct": -1.56
+    },
+    {
+      "data_ref": "18/09/2026",
+      "valor": 1546.58,
+      "var_pct": 0.3
     }
   ]
 }
