@@ -1,35 +1,35 @@
 {
-  "atualizado_em": "2026-09-20T05:15:04",
+  "atualizado_em": "2026-09-22T05:15:07",
   "series": {
     "boi-gordo": {
-      "pontos": 50,
+      "pontos": 51,
       "primeiro": "10/07/2026",
-      "ultimo": "18/09/2026",
+      "ultimo": "21/09/2026",
       "minimo": 324.6,
       "minimo_em": "13/07/2026",
-      "maximo": 352.9,
-      "maximo_em": "18/09/2026",
-      "amplitude_pct": 8.72
+      "maximo": 354.65,
+      "maximo_em": "21/09/2026",
+      "amplitude_pct": 9.26
     },
     "cafe-arabica": {
-      "pontos": 50,
+      "pontos": 51,
       "primeiro": "10/07/2026",
-      "ultimo": "18/09/2026",
-      "minimo": 1541.97,
-      "minimo_em": "17/09/2026",
+      "ultimo": "21/09/2026",
+      "minimo": 1534.23,
+      "minimo_em": "21/09/2026",
       "maximo": 1826.58,
       "maximo_em": "24/08/2026",
-      "amplitude_pct": 18.46
+      "amplitude_pct": 19.06
     },
     "cafe-robusta": {
-      "pontos": 40,
+      "pontos": 41,
       "primeiro": "24/07/2026",
-      "ultimo": "18/09/2026",
-      "minimo": 965.02,
-      "minimo_em": "17/09/2026",
+      "ultimo": "21/09/2026",
+      "minimo": 957.72,
+      "minimo_em": "21/09/2026",
       "maximo": 1114.0,
       "maximo_em": "28/07/2026",
-      "amplitude_pct": 15.44
+      "amplitude_pct": 16.32
     },
     "leite": {
       "pontos": 4,
@@ -42,9 +42,9 @@
       "amplitude_pct": 8.19
     },
     "milho": {
-      "pontos": 50,
+      "pontos": 51,
       "primeiro": "10/07/2026",
-      "ultimo": "18/09/2026",
+      "ultimo": "21/09/2026",
       "minimo": 64.51,
       "minimo_em": "10/07/2026",
       "maximo": 71.06,
@@ -52,9 +52,9 @@
       "amplitude_pct": 10.15
     },
     "soja": {
-      "pontos": 50,
+      "pontos": 51,
       "primeiro": "10/07/2026",
-      "ultimo": "18/09/2026",
+      "ultimo": "21/09/2026",
       "minimo": 139.99,
       "minimo_em": "15/07/2026",
       "maximo": 162.02,
@@ -62,14 +62,14 @@
       "amplitude_pct": 15.74
     },
     "trigo": {
-      "pontos": 50,
+      "pontos": 51,
       "primeiro": "10/07/2026",
-      "ultimo": "18/09/2026",
+      "ultimo": "21/09/2026",
       "minimo": 1375.69,
       "minimo_em": "10/07/2026",
-      "maximo": 1512.0,
-      "maximo_em": "16/09/2026",
-      "amplitude_pct": 9.91
+      "maximo": 1532.17,
+      "maximo_em": "21/09/2026",
+      "amplitude_pct": 11.37
     }
   }
 }
