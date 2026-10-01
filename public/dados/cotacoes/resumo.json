@@ -1,20 +1,20 @@
 {
-  "atualizado_em": "2026-09-30T05:15:04",
+  "atualizado_em": "2026-10-01T05:15:04",
   "series": {
     "boi-gordo": {
-      "pontos": 57,
+      "pontos": 58,
       "primeiro": "10/07/2026",
-      "ultimo": "29/09/2026",
+      "ultimo": "30/09/2026",
       "minimo": 324.6,
       "minimo_em": "13/07/2026",
-      "maximo": 363.05,
-      "maximo_em": "29/09/2026",
-      "amplitude_pct": 11.85
+      "maximo": 364.3,
+      "maximo_em": "30/09/2026",
+      "amplitude_pct": 12.23
     },
     "cafe-arabica": {
-      "pontos": 57,
+      "pontos": 58,
       "primeiro": "10/07/2026",
-      "ultimo": "29/09/2026",
+      "ultimo": "30/09/2026",
       "minimo": 1511.31,
       "minimo_em": "22/09/2026",
       "maximo": 1826.58,
@@ -22,9 +22,9 @@
       "amplitude_pct": 20.86
     },
     "cafe-robusta": {
-      "pontos": 47,
+      "pontos": 48,
       "primeiro": "24/07/2026",
-      "ultimo": "29/09/2026",
+      "ultimo": "30/09/2026",
       "minimo": 936.96,
       "minimo_em": "22/09/2026",
       "maximo": 1114.0,
@@ -32,19 +32,19 @@
       "amplitude_pct": 18.9
     },
     "leite": {
-      "pontos": 4,
+      "pontos": 5,
       "primeiro": "04/2026",
-      "ultimo": "07/2026",
+      "ultimo": "08/2026",
       "minimo": 2.6584,
       "minimo_em": "04/2026",
-      "maximo": 2.8761,
-      "maximo_em": "07/2026",
-      "amplitude_pct": 8.19
+      "maximo": 2.8869,
+      "maximo_em": "08/2026",
+      "amplitude_pct": 8.6
     },
     "milho": {
-      "pontos": 57,
+      "pontos": 58,
       "primeiro": "10/07/2026",
-      "ultimo": "29/09/2026",
+      "ultimo": "30/09/2026",
       "minimo": 64.51,
       "minimo_em": "10/07/2026",
       "maximo": 71.06,
@@ -52,9 +52,9 @@
       "amplitude_pct": 10.15
     },
     "soja": {
-      "pontos": 57,
+      "pontos": 58,
       "primeiro": "10/07/2026",
-      "ultimo": "29/09/2026",
+      "ultimo": "30/09/2026",
       "minimo": 139.99,
       "minimo_em": "15/07/2026",
       "maximo": 162.02,
@@ -62,14 +62,14 @@
       "amplitude_pct": 15.74
     },
     "trigo": {
-      "pontos": 57,
+      "pontos": 58,
       "primeiro": "10/07/2026",
-      "ultimo": "29/09/2026",
+      "ultimo": "30/09/2026",
       "minimo": 1375.69,
       "minimo_em": "10/07/2026",
-      "maximo": 1539.43,
-      "maximo_em": "24/09/2026",
-      "amplitude_pct": 11.9
+      "maximo": 1544.33,
+      "maximo_em": "30/09/2026",
+      "amplitude_pct": 12.26
     }
   }
 }
