@@ -232,12 +232,9 @@ const BlogArticlePage = () => {
         }
       : null;
 
-  const cursoSlug =
-    article.categoriaVariant === "agro"
-      ? "/agro"
-      : article.categoriaVariant === "educa"
-      ? "/educa"
-      : "/tech";
+  // Desde 2026-10-07 todos os cursos ficam no Educa (trilha Cultivo); o pilar
+  // Tech deixou de existir e /tech e' 301 para /educa.
+  const cursoSlug = article.categoriaVariant === "agro" ? "/educa#cultivo" : "/educa";
 
   return (
     <div className="min-h-screen bg-background">
@@ -511,7 +508,7 @@ const BlogArticlePage = () => {
             Quer aprofundar?
           </h3>
           <p className="text-lg text-white/85 mb-8 max-w-xl mx-auto">
-            Conheça os cursos Cultivee da área {article.categoria} e transforme teoria em prática.
+            Conheça os cursos do Cultivee Educa: microverdes e hidroponia estão em produção, com lista de espera.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -519,7 +516,7 @@ const BlogArticlePage = () => {
               size="lg"
               className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
             >
-              <Link to={cursoSlug}>Ver cursos {article.categoria}</Link>
+              <Link to={cursoSlug}>Ver os cursos</Link>
             </Button>
             <Button
               asChild

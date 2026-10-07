@@ -1,33 +1,34 @@
 import { Head } from "vite-react-ssg";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { Camera, Droplets, ExternalLink, Smartphone, Sparkles } from "lucide-react";
+import { Camera, Droplets, ExternalLink, FlaskConical, Smartphone, Sparkles } from "lucide-react";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import { collectionPageJsonLd } from "@/lib/seo-schemas";
 
 const apps = [
   {
     name: "Cultivee Hidro",
-    description: "Automacao essencial do cultivo indoor. Controle luz, bomba, ventilacao e aeracao com ate 10 fases configuraveis. RTC embarcado mantem tudo rodando mesmo offline.",
-    features: ["4 reles (luz, bomba, ventilacao, aeracao)", "10 fases automaticas", "RTC offline - funciona sem internet"],
+    description: "Automação essencial do cultivo indoor. Controle luz, bomba, ventilação e aeração com até 10 fases configuráveis. RTC embarcado mantém tudo rodando mesmo offline.",
+    features: ["4 relés (luz, bomba, ventilação, aeração)", "10 fases automáticas", "RTC offline: funciona sem internet"],
     icon: Droplets,
     color: "#27ae60",
     url: "https://app.cultivee.com.br/",
   },
   {
     name: "Cultivee Hidro Farm",
-    description: "Versao Premium: tudo do Hidro + reposicao automatica de agua, alertas push/email, sensor de temperatura/umidade e bomba de homogeneizacao. Para hidroponia seria.",
-    features: ["Reposicao automatica de agua", "Alertas push + email", "Sensor DHT11 (temp + umidade)"],
+    description: "Versão premium: tudo do Hidro + reposição automática de água, alertas push/e-mail, sensor de temperatura/umidade e bomba de homogeneização. Para hidroponia mais exigente.",
+    features: ["Reposição automática de água", "Alertas push + e-mail", "Sensor DHT11 (temperatura + umidade)"],
     icon: Sparkles,
     color: "#047857",
     url: "https://app.cultivee.com.br/",
   },
   {
     name: "Cultivee Cam",
-    description: "Camera IP standalone pro cultivo. Captura agendada, stream ao vivo e galeria organizada por pastas. Documente timelapses e detecte problemas visualmente.",
-    features: ["Captura agendada (1min a 1h)", "Stream ao vivo ate 10 min", "Galeria com pastas"],
+    description: "Câmera IP standalone para o cultivo. Captura agendada, stream ao vivo e galeria organizada por pastas. Documente timelapses e acompanhe visualmente as plantas.",
+    features: ["Captura agendada (1 min a 1 h)", "Stream ao vivo até 10 min", "Galeria com pastas"],
     icon: Camera,
     color: "#3498db",
     url: "https://app.cultivee.com.br/",
@@ -36,10 +37,10 @@ const apps = [
 
 const AplicativosPage = () => {
   const collectionLd = collectionPageJsonLd({
-    pageName: "Aplicativos Cultivee — PWAs para monitoramento de cultivo",
+    pageName: "Aplicativos Cultivee: PWAs para monitoramento de cultivo",
     pageUrl: `${SITE_BASE}/aplicativos`,
     description:
-      "Apps PWA da Cultivee: Hidro (4 relés + 10 fases offline), Hidro Farm (reposição automática + alertas) e Cam (captura agendada + stream).",
+      "Apps PWA dos protótipos Cultivee, em desenvolvimento no projeto PIPE FAPESP: Hidro (4 relés + 10 fases offline), Hidro Farm (reposição automática + alertas) e Cam (captura agendada + stream).",
     items: apps.map((app) => ({
       name: app.name,
       url: app.url,
@@ -51,15 +52,15 @@ const AplicativosPage = () => {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>Aplicativos Cultivee — Hidro, Hidro Farm e Cam (PWAs)</title>
+        <title>Aplicativos Cultivee: Hidro, Hidro Farm e Cam (PWAs)</title>
         <meta
           name="description"
-          content="Apps PWA para monitoramento de cultivo indoor: controle de relés, alertas, sensores e câmera IP. Instale direto no celular."
+          content="Apps PWA dos protótipos Cultivee para monitoramento de cultivo indoor: controle de relés, alertas, sensores e câmera IP. Em desenvolvimento no projeto PIPE FAPESP."
         />
         <link rel="canonical" href={`${SITE_BASE}/aplicativos`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_BASE}/aplicativos`} />
-        <meta property="og:title" content="Aplicativos Cultivee — PWAs de monitoramento" />
+        <meta property="og:title" content="Aplicativos Cultivee: PWAs de monitoramento" />
         <script type="application/ld+json">{JSON.stringify(collectionLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       </Head>
@@ -68,15 +69,15 @@ const AplicativosPage = () => {
       {/* Header */}
       <section className="pt-28 pb-16 bg-gradient-hero">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-white/20 text-white border border-white/30 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Smartphone className="w-4 h-4" />
-            Apps PWA — instale direto no celular
+            Apps PWA: instale direto no celular
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Nossos Aplicativos
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Aplicativos web progressivos para monitorar e controlar seus cultivos.
+          <p className="text-lg text-white/85 max-w-2xl mx-auto">
+            Aplicativos web progressivos para monitorar e controlar os módulos Cultivee.
             Instale no celular sem precisar de loja de apps.
           </p>
         </div>
@@ -85,6 +86,19 @@ const AplicativosPage = () => {
       {/* Cards */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            role="note"
+            className="flex items-start gap-3 rounded-xl border border-tech/30 bg-tech/10 px-4 py-3 text-sm text-foreground text-left max-w-3xl mx-auto mb-12"
+          >
+            <FlaskConical className="w-5 h-5 text-tech-dark flex-shrink-0 mt-0.5" />
+            <p>
+              <strong>Protótipo em desenvolvimento no projeto PIPE FAPESP.</strong> Ainda não está à venda.{" "}
+              <Link to="/projetos" className="font-semibold text-primary underline underline-offset-2 hover:text-primary/80">
+                Conheça o projeto
+              </Link>
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {apps.map((app) => (
               <div
@@ -146,7 +160,7 @@ const AplicativosPage = () => {
                 <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
                 <div>
                   <p className="font-medium text-foreground text-sm">Instale</p>
-                  <p className="text-xs text-muted-foreground">Toque em "Adicionar a tela inicial" ou "Instalar"</p>
+                  <p className="text-xs text-muted-foreground">Toque em "Adicionar à tela inicial" ou "Instalar"</p>
                 </div>
               </div>
               <div className="flex gap-3">

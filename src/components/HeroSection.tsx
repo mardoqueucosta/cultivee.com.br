@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  const whatsappLink = "https://wa.me/5519991644181?text=Olá! Gostaria de saber mais sobre os cursos da Cultivee.";
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle pt-16">
       {/* Background Pattern */}
@@ -28,8 +26,9 @@ const HeroSection = () => {
           {/* Definição extraível da marca (GEO): frase "A Cultivee é..." que LLMs e
               buscadores conseguem citar isolada para responder "o que é a Cultivee" */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A Cultivee é uma plataforma brasileira de cultivo inteligente: guias técnicos
-            de hidroponia e horta em casa, cursos práticos e automação de cultivo.
+            A Cultivee é um instituto de ensino, pesquisa e inovação no agro, incubado na
+            ESALQTec, em Piracicaba-SP: conteúdo gratuito sobre o campo, cursos de cultivo e
+            de negócios, e pesquisa aplicada com financiamento público.
             <span className="font-semibold text-foreground"> Conhecimento com fonte, da semente à colheita.</span>
           </p>
           
@@ -40,8 +39,8 @@ const HeroSection = () => {
               className="text-lg px-8 py-6 w-full sm:w-auto group"
               asChild
             >
-              <Link to="/agro">
-                Explorar Cursos
+              <Link to="/educa">
+                Conhecer os cursos
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -51,15 +50,24 @@ const HeroSection = () => {
               className="text-lg px-8 py-6 w-full sm:w-auto"
               asChild
             >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="mr-2 w-5 h-5" />
-                Falar no WhatsApp
-              </a>
+              <Link to="/agro">
+                <BookOpen className="mr-2 w-5 h-5" />
+                Conteúdo gratuito
+              </Link>
             </Button>
           </div>
+
+          {/* Faixa de credibilidade: so fatos verificaveis (processo publico na BV FAPESP). */}
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-6 text-sm text-muted-foreground">
+            <li>Incubada na ESALQTec (ESALQ/USP)</li>
+            <li aria-hidden="true">·</li>
+            <li>Projeto PIPE FAPESP 2025/27266-8</li>
+            <li aria-hidden="true">·</li>
+            <li>Cotações diárias CEPEA</li>
+          </ul>
         </div>
       </div>
-      
+
       {/* Decorative Elements */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-2">

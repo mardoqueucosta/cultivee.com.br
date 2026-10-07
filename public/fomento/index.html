@@ -229,6 +229,14 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .final-card ul.checks{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;margin:1.6rem 0}
   .final-card ul.checks li{font-size:.96rem}
 
+  .cv-bar{background:var(--ink);color:#d7e3de;font-size:.8rem}
+  .cv-bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:7px;padding-bottom:7px}
+  .cv-bar a{color:#fff;text-decoration:none}
+  .cv-bar a:hover{text-decoration:underline}
+  .cv-bar .cv-brand{font-weight:700;letter-spacing:.06em}
+  .cv-bar .cv-links{display:flex;gap:16px}
+  @media (max-width:560px){.cv-bar .cv-trail{display:none}}
+  footer .cv-org a{color:#fff}
   footer{background:var(--ink);color:#bcccc5;font-size:.9rem;padding:42px 0 30px}
   footer .wrap{display:grid;gap:18px}
   footer b{color:#fff;font-family:'Lora',serif;font-size:1.05rem}
@@ -277,6 +285,13 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
+<div class="cv-bar">
+  <div class="wrap">
+    <span><a class="cv-brand" href="/">CULTIVEE</a><span class="cv-trail"> · Educa · Trilha Negócios</span></span>
+    <span class="cv-links"><a href="/educa">Todos os cursos</a><a href="/">Site da Cultivee</a></span>
+  </div>
+</div>
+
 <header>
   <div class="wrap nav">
     <a class="brand" href="#topo">
@@ -320,12 +335,12 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <div class="av"><img src="/fomento/img/mardoqueu.webp" alt="Mardoqueu Martins da Costa" width="120" height="120" decoding="async" loading="lazy" onerror="this.style.display='none';this.parentNode.textContent='MC'"></div>
         <div>
           <b>Mardoqueu Martins da Costa</b>
-          <span>Assessor ad hoc e pesquisador · Formação pela USP</span>
+          <span>Pesquisador e avaliador de projetos · Formação pela USP</span>
         </div>
       </div>
       <ul class="checks">
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Graduação, mestrado, doutorado e pós-doutorado, todos pela USP</li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Assessor ad hoc: já avaliou dezenas de projetos de outros pesquisadores, na universidade e em empresas</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Avaliador de projetos: já avaliou dezenas de projetos de outros pesquisadores, na universidade e em empresas</li>
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>18 financiamentos aprovados, de 7 fontes, coordenador titular em vários</li>
       </ul>
       <div class="stat-row">
@@ -339,7 +354,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 <!-- TRUST -->
 <div class="trust">
   <div class="wrap">
-    <span class="lbl">Já submeti, coordenei e avaliei em editais de:</span>
+    <span class="lbl">Já submeti e coordenei projetos em editais de:</span>
     <span class="ag">FAPESP</span><span class="ag">CNPq</span><span class="ag">CAPES</span>
     <span class="ag">FINEP</span><span class="ag">EMBRAPII</span><span class="ag">PIPE-FAPESP</span>
   </div>
@@ -439,7 +454,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <div class="av"><img src="/fomento/img/mardoqueu.webp" alt="Mardoqueu Martins da Costa" width="120" height="120" decoding="async" loading="lazy" onerror="this.style.display='none';this.parentNode.textContent='MC'"></div>
         <b>Mardoqueu Martins da Costa</b>
         <div class="badges">
-          <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Assessor ad hoc: já avaliou dezenas de projetos</div>
+          <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Avaliador de projetos na universidade e em empresas</div>
           <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Pós-doutor em Eng. de Biossistemas, ESALQ/USP</div>
           <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Coordenador titular de projetos PIPE-FAPESP</div>
         </div>
@@ -447,7 +462,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       <div>
         <span class="eyebrow">Com quem você vai contar</span>
         <h2>Quem irá te guiar nessa jornada?</h2>
-        <p style="margin-top:1.1rem;color:var(--muted)">Sou pesquisador que escreve propostas e capta recursos, e também assessor ad hoc: já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas, entre teses, dissertações, monografias, projetos de bolsa, de pesquisa e de fomento.</p>
+        <p style="margin-top:1.1rem;color:var(--muted)">Sou pesquisador que escreve propostas e capta recursos, e também avaliador de projetos: já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas, entre teses, dissertações, monografias, projetos de bolsa, de pesquisa e de fomento.</p>
         <p style="margin-top:1rem">Formação completa pela USP: graduação em Física (IFSC), mestrado e doutorado em Engenharia Elétrica (EESC) e pós-doutorado em Engenharia de Biossistemas (ESALQ). Já participei de 18 financiamentos aprovados de 7 fontes, com coordenação titular em PIPE-FAPESP, CNPq e CAPES.</p>
         <p><strong style="color:var(--green-800);font-weight:600">Junte os dois lados</strong> (quem escreve e capta, e quem avalia) e você tem o que eu te entrego: a leitura crítica de quem sabe como a agência avalia, com tempo de corrigir antes de você submeter.</p>
         <ul class="facts">
@@ -544,7 +559,6 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <p class="pk-desc">Para tirar dúvidas, entender o edital ou uma leitura pontual. Você paga só pelo tempo que usar.</p>
       </div>
       <div class="pcard feat">
-        <div class="pk-tag">Mais escolhido</div>
         <div class="pk-lbl">Acompanhamento completo</div>
         <div class="pk-val">R$ 2.500</div>
         <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas, auxílios (CNPq, FAPESP, CAPES) e Programa Centelha.</p>
@@ -656,8 +670,9 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 <footer>
   <div class="wrap">
     <b>Mardoqueu Martins da Costa</b>
+    <span class="cv-org">Mentoria oferecida pela <a href="/educa">Cultivee Educa</a>, trilha Negócios · Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda, incubada na ESALQTec (ESALQ/USP), Piracicaba-SP</span>
     <div class="row">
-      <span>Assessor ad hoc e pesquisador · Formação completa pela USP, da graduação ao pós-doutorado</span>
+      <span>Pesquisador e avaliador de projetos · Formação completa pela USP, da graduação ao pós-doutorado</span>
       <a href="https://wa.me/5519991644181" target="_blank" rel="noopener">WhatsApp: (19) 99164-4181</a>
       <a href="http://lattes.cnpq.br/7819717440359474" target="_blank" rel="noopener">Currículo Lattes</a>
       <a href="https://orcid.org/0000-0002-4395-3069" target="_blank" rel="noopener">ORCID</a>

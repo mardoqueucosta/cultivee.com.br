@@ -100,23 +100,23 @@ const ContactPage = () => {
   const contactInfo = [
     { icon: Mail, label: "Email", value: "contato@cultivee.com.br", href: "mailto:contato@cultivee.com.br" },
     { icon: Phone, label: "WhatsApp", value: "+55 (19) 99164-4181", href: "https://wa.me/5519991644181" },
-    { icon: MapPin, label: "Localização", value: "Piracicaba, SP - Brasil", href: null }
+    { icon: MapPin, label: "Localização", value: "ESALQTec, Piracicaba-SP", href: null }
   ];
 
   const subjects = [
-    { value: "produtos", label: "Produtos (Hidro / Hidro Farm / Cam)" },
-    { value: "cursos-agro", label: "Cursos Agro" },
-    { value: "cursos-educa", label: "Cursos Educa" },
-    { value: "cursos-tech", label: "Cursos Tech" },
+    { value: "produtos", label: "Protótipos (Hidro / Hidro Farm / Cam)" },
+    // values mantidos (o backend pode filtrar por eles); so os rotulos mudaram em 2026-10-07
+    { value: "cursos-agro", label: "Cursos da trilha Cultivo (lista de espera)" },
+    { value: "cursos-educa", label: "Trilha Negócios e captação de recursos" },
     { value: "hortalicas", label: "Hortaliças" },
-    { value: "projeto", label: "Projeto Cultivee" },
-    { value: "parcerias", label: "Parcerias" },
+    { value: "projeto", label: "Projetos de pesquisa" },
+    { value: "parcerias", label: "Parcerias de P&D" },
     { value: "outro", label: "Outro" },
   ];
 
   const contactPageLd = {
     ...webPageJsonLd({
-      pageName: "Contato — Cultivee",
+      pageName: "Contato | Cultivee",
       pageUrl: `${SITE_BASE}/contato`,
       description:
         "Fale com a Cultivee por e-mail, WhatsApp ou formulário. Atendimento em Piracicaba-SP e online em todo o Brasil.",
@@ -128,7 +128,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>Contato — Cultivee</title>
+        <title>Contato | Cultivee</title>
         <meta
           name="description"
           content="Fale com a Cultivee por e-mail, WhatsApp ou formulário. Atendimento em Piracicaba-SP e online."
@@ -136,7 +136,7 @@ const ContactPage = () => {
         <link rel="canonical" href={`${SITE_BASE}/contato`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_BASE}/contato`} />
-        <meta property="og:title" content="Contato — Cultivee" />
+        <meta property="og:title" content="Contato | Cultivee" />
         <script type="application/ld+json">{JSON.stringify(contactPageLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       </Head>

@@ -1,26 +1,26 @@
-import { CheckCircle2, Network, Layers } from "lucide-react";
+import { Award, GraduationCap, BookCheck } from "lucide-react";
 
 const WhySection = () => {
   const reasons = [
     {
-      icon: CheckCircle2,
-      title: "Ensinamos o que praticamos",
-      description: "Comercializamos as hortaliças cultivadas com as mesmas técnicas dos nossos cursos. Você aprende com quem faz."
+      icon: Award,
+      title: "Pesquisa com financiamento público",
+      description: "A Cultivee executa o projeto PIPE FAPESP 2025/27266-8, aprovado para desenvolver um sistema de produção e venda de hortaliças em ambiente urbano."
     },
     {
-      icon: Network,
-      title: "Conhecimento integrado",
-      description: "Conectamos agricultura, ciência e tecnologia em uma jornada de aprendizado completa."
+      icon: GraduationCap,
+      title: "Incubada na ESALQTec",
+      description: "Nasceu junto à ESALQ/USP, em Piracicaba-SP, e é dirigida por um pesquisador com formação completa pela USP, da graduação ao pós-doutorado."
     },
     {
-      icon: Layers,
-      title: "Do iniciante ao avançado",
-      description: "Cursos estruturados para todos os níveis, com suporte e comunidade de alunos."
+      icon: BookCheck,
+      title: "Conteúdo com fonte",
+      description: "Cada guia cita de onde vem o dado (Embrapa, IAC, CEPEA, universidades). Sem fórmula mágica e sem promessa de resultado."
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section className="py-20 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

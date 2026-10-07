@@ -1,4 +1,4 @@
-import { Leaf, BookOpen, Cog, ArrowRight } from "lucide-react";
+import { Leaf, BookOpen, FlaskConical, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -8,37 +8,39 @@ const PillarsSection = () => {
       id: "agro",
       icon: Leaf,
       title: "Cultivee Agro",
-      description: "Microverdes, hidroponia e cultivo indoor. Aprenda técnicas de produção sustentável — e compre direto de quem pratica o que ensina.",
+      description: "Conteúdo gratuito sobre o agro: guias técnicos com fonte, cotações diárias do CEPEA e vídeos do campo, das feiras e da pesquisa.",
       color: "bg-agro",
       gradient: "bg-gradient-agro",
       shadow: "shadow-agro",
       textColor: "text-agro",
       href: "/agro",
-      buttonText: "Ver cursos Agro"
+      buttonText: "Ver conteúdo"
     },
     {
       id: "educa",
       icon: BookOpen,
       title: "Cultivee Educa",
-      description: "TCC, dissertação, tese, artigo, patente e projeto de pesquisa. Método prático para escrever trabalhos acadêmicos com excelência.",
+      description: "A escola da Cultivee, em duas trilhas. Cultivo: microverdes, hidroponia e cultivo indoor. Negócios: captação de recursos, escrita de projetos e vendas.",
       color: "bg-educa",
       gradient: "bg-gradient-educa",
       shadow: "shadow-educa",
       textColor: "text-educa",
       href: "/educa",
-      buttonText: "Ver cursos Educa"
+      buttonText: "Ver cursos e trilhas"
     },
     {
-      id: "tech",
-      icon: Cog,
-      title: "Cultivee Tech",
-      description: "Instrumentação (mecânica, eletrônica, software) e empreendedorismo. Transforme ideias em produtos e conhecimento em negócio.",
+      // Projetos reaproveita a cor do antigo pilar Tech (laranja): o design system
+      // tem 3 cores e nao se cria cor nova (CLAUDE.md).
+      id: "projetos",
+      icon: FlaskConical,
+      title: "Projetos",
+      description: "Pesquisa aplicada com financiamento público, como o PIPE FAPESP em execução desde setembro de 2026, e os protótipos que saem dela.",
       color: "bg-tech",
       gradient: "bg-gradient-tech",
       shadow: "shadow-tech-shadow",
       textColor: "text-tech",
-      href: "/tech",
-      buttonText: "Ver cursos Tech"
+      href: "/projetos",
+      buttonText: "Ver projetos"
     }
   ];
 
@@ -47,10 +49,10 @@ const PillarsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Três caminhos para sua autonomia
+            O que a Cultivee faz
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Escolha sua jornada de aprendizado e desenvolva habilidades práticas para crescer na sua carreira.
+            Conteúdo aberto para quem é do agro, cursos para quem quer aprender e pesquisa para levar a tecnologia ao campo.
           </p>
         </div>
 

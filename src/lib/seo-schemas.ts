@@ -17,7 +17,11 @@ export const organizationJsonLd = {
   "@type": "Organization",
   "@id": ORG_ID,
   name: "Cultivee",
-  alternateName: "Cultivee — Cultivo Indoor, Hidroponia e Tecnologia",
+  legalName: "Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda",
+  alternateName: "Cultivee Instituto de Ensino, Pesquisa e Inovação",
+  taxID: "64.471.739/0001-64",
+  foundingDate: "2026-01-13",
+  founder: { "@id": AUTHOR_ID },
   url: SITE_BASE,
   logo: {
     "@type": "ImageObject",
@@ -26,13 +30,20 @@ export const organizationJsonLd = {
     height: 512,
   },
   description:
-    "A Cultivee é uma plataforma brasileira de cultivo inteligente: cursos, produtos de automação e guias técnicos de hidroponia, horta em casa e agricultura urbana.",
+    "A Cultivee é um instituto de ensino, pesquisa e inovação no agro, incubado na ESALQTec (ESALQ/USP), em Piracicaba-SP. Tem duas frentes: Cultivee Agro, com conteúdo gratuito sobre agro, e Cultivee Educa, com cursos nas trilhas Cultivo e Negócios.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Piracicaba",
+    addressRegion: "SP",
+    addressCountry: "BR",
+  },
   sameAs: [
-    // Perfis oficiais confirmados pelo dono em 2026-07-10.
-    // Atencao aos handles, que variam por rede: YouTube/Instagram @cultivee_br
-    // (underscore), TikTok @cultivee.br (ponto), Facebook cultivee.brasil.
+    // Perfis oficiais confirmados pelo dono (2026-07-10; Instagram corrigido em
+    // 2026-10-07 para cultivee.br, com ponto). Os handles variam por rede:
+    // YouTube @cultivee_br (underscore), Instagram e TikTok cultivee.br (ponto),
+    // Facebook cultivee.brasil. Nao "corrigir" achando que e typo.
     "https://www.youtube.com/@cultivee_br",
-    "https://www.instagram.com/cultivee_br/",
+    "https://www.instagram.com/cultivee.br/",
     "https://www.facebook.com/cultivee.brasil",
     "https://www.tiktok.com/@cultivee.br",
     "https://www.linkedin.com/company/cultivee-br",
@@ -55,8 +66,10 @@ export const authorJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": AUTHOR_ID,
-  name: "Mardoqueu Costa",
-  jobTitle: "Engenheiro Biomédico",
+  name: "Mardoqueu Martins da Costa",
+  alternateName: "Mardoqueu Costa",
+  honorificPrefix: "Prof. Dr.",
+  jobTitle: "Pesquisador e fundador da Cultivee",
   url: `${SITE_BASE}/sobre`,
   worksFor: { "@id": ORG_ID },
   knowsAbout: [
@@ -92,7 +105,7 @@ export const websiteJsonLd = {
   url: SITE_BASE,
   name: "Cultivee",
   description:
-    "Cursos, produtos IoT e blog sobre cultivo indoor, hidroponia e tecnologia agrícola.",
+    "Conteúdo gratuito sobre agro, cotações agrícolas, cursos e projetos de pesquisa aplicada da Cultivee.",
   inLanguage: "pt-BR",
   publisher: { "@id": ORG_ID },
   potentialAction: {
@@ -106,7 +119,7 @@ export const websiteJsonLd = {
 };
 
 /**
- * CollectionPage + ItemList — usado nas pillar pages (Agro/Educa/Tech)
+ * CollectionPage + ItemList — usado nas paginas Agro e Educa
  * e em listagens de cursos/produtos. Google pode renderizar como carousel.
  */
 export function collectionPageJsonLd(opts: {
@@ -144,7 +157,7 @@ export const aboutPageJsonLd = {
   "@type": "AboutPage",
   url: `${SITE_BASE}/sobre`,
   name: "Sobre a Cultivee",
-  description: "Cultivar educação. Cultivar alimentos. Cultivar autonomia.",
+  description: "Quem é a Cultivee: instituto de ensino, pesquisa e inovação no agro, incubado na ESALQTec, Piracicaba-SP.",
   inLanguage: "pt-BR",
   isPartOf: { "@id": `${SITE_BASE}/#website` },
   mainEntity: { "@id": AUTHOR_ID },

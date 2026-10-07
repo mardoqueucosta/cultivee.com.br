@@ -67,7 +67,7 @@ const GLOSSARIO = [
   {
     termo: "Arroba",
     oque: "15 quilos. Aparece em negócio no interior e em contrato de parceria.",
-    efeito: "Quatro arrobas fazem uma saca — divida a cotação por 4 para chegar ao valor da arroba.",
+    efeito: "Quatro arrobas fazem uma saca: divida a cotação por 4 para chegar ao valor da arroba.",
   },
 ];
 
@@ -634,8 +634,8 @@ const CotacaoCafePage = () => {
           <p className="mt-3 leading-relaxed">
             Estes números saem da série que este site guarda, não de terceiros. A página do
             CEPEA publica os últimos pregões e substitui os antigos; nós arquivamos cada
-            apuração em <a href="/dados/cotacoes/" className="text-agro underline">arquivo por
-            ano</a>, então dá para dizer qual foi o teto e o piso do período inteiro.
+            apuração em arquivo por ano (<a href="/dados/cotacoes/series/cafe-arabica-2026.json" className="text-agro underline">série
+            do arábica em 2026</a>), então dá para dizer qual foi o teto e o piso do período inteiro.
           </p>
 
           <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-background">
@@ -811,7 +811,7 @@ const CotacaoCafePage = () => {
             negócios do dia útil e divulga no fim da tarde, então pela manhã o número mais
             recente que existe é o do dia útil anterior. Na segunda-feira, ele é o de sexta.
             Qualquer página que mostre um preço de café "de hoje" às oito da manhã está
-            mostrando o fechamento anterior — a diferença é declarar isso ou não.
+            mostrando o fechamento anterior. A diferença é declarar isso ou não.
           </p>
 
           <h2 className="mt-10 text-3xl font-bold text-foreground">

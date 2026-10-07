@@ -7,17 +7,18 @@ const SITE = "https://cultivee.com.br";
 // lastmod REAL das rotas estaticas — bump manual quando uma pagina estatica mudar
 // de verdade. NUNCA usar a data do build: com deploy diario do pipeline, as 16
 // rotas "mudariam" todo dia e o Google passa a ignorar o lastmod do site inteiro.
-// 2026-07-02 = ultima mudanca site-wide real (troca do numero de WhatsApp).
-const STATIC_LASTMOD = "2026-07-02";
+// 2026-10-07 = ultima mudanca site-wide real (reestruturacao Agro + Educa + Projetos).
+const STATIC_LASTMOD = "2026-10-07";
 
 const STATIC_PATHS = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/agro", changefreq: "weekly", priority: "0.9" },
   { path: "/educa", changefreq: "weekly", priority: "0.9" },
-  { path: "/tech", changefreq: "weekly", priority: "0.9" },
   { path: "/sobre", changefreq: "monthly", priority: "0.6" },
   { path: "/contato", changefreq: "monthly", priority: "0.6" },
-  { path: "/projeto", changefreq: "monthly", priority: "0.5" },
+  { path: "/projetos", changefreq: "monthly", priority: "0.6" },
+  // Landing estatica (public/fomento/index.html): trilha Negocios do Educa.
+  { path: "/fomento", changefreq: "monthly", priority: "0.7" },
   { path: "/aplicativos", changefreq: "monthly", priority: "0.5" },
   { path: "/produtos", changefreq: "monthly", priority: "0.7" },
   { path: "/produtos/controle-hidroponia", changefreq: "monthly", priority: "0.7" },
@@ -134,9 +135,11 @@ function buildLlmsTxt(articles: ReturnType<typeof loadAllArticles>): string {
 
   return `# Cultivee
 
-> A Cultivee é uma plataforma brasileira de cultivo inteligente: guias técnicos de hidroponia,
-> horta em casa e agricultura urbana, cursos e produtos de automação de cultivo. O conteúdo é
-> escrito por pesquisador, sempre com fontes citadas (Embrapa, IAC, SciELO, universidades).
+> A Cultivee (Cultivee Instituto de Ensino, Pesquisa e Inovação, incubada na ESALQTec, Piracicaba-SP)
+> é um instituto de ensino, pesquisa e inovação no agro. Tem duas frentes: Cultivee Agro, com conteúdo
+> gratuito sobre agro em geral (guias técnicos, cotações CEPEA, vídeos), e Cultivee Educa, a escola, com
+> as trilhas Cultivo e Negócios. O conteúdo é escrito por pesquisador, sempre com fontes citadas
+> (Embrapa, IAC, SciELO, universidades).
 
 Site: ${SITE} · Contato: contato@cultivee.com.br · Blog: ${SITE}/blog · Feed: ${SITE}/feed.xml
 
@@ -151,12 +154,18 @@ ${pillars.map(line).join("\n")}
 - Dados abertos em JSON: [snapshot do dia](${SITE}/dados/cotacoes/ultimo.json) · [fontes e cobertura](${SITE}/dados/cotacoes/fontes.json)
 - Fonte: CEPEA/ESALQ (Esalq/USP), licença CC BY-NC 4.0. Ao reusar, mantenha o crédito.
 
-## Cursos e produtos
+## Cultivee Educa (cursos e formação)
 
-- [Curso de Microverdes](${SITE}/cursos/microverdes)
-- [Curso de Hidroponia](${SITE}/cursos/hidroponia)
-- [Curso de Cultivo Indoor](${SITE}/cursos/cultivo-indoor)
-- [Produtos de automação de cultivo](${SITE}/produtos)
+- [Cultivee Educa: trilhas Cultivo e Negócios](${SITE}/educa)
+- [Curso de Microverdes](${SITE}/cursos/microverdes): em produção, lista de espera
+- [Curso de Hidroponia](${SITE}/cursos/hidroponia): em produção, lista de espera
+- [Curso de Cultivo Indoor](${SITE}/cursos/cultivo-indoor): em breve
+- [Mentoria de captação de recursos de fomento](${SITE}/fomento): PIPE, Centelha, Finep, FAPESP, CNPq
+
+## Projetos e protótipos
+
+- [Projetos](${SITE}/projetos): PIPE FAPESP 2025/27266-8 (em execução), Programa Base Deep Techs FIESP/SENAI-RS (concluído), pós-doutorado ESALQ/USP
+- [Protótipos de automação de cultivo](${SITE}/produtos): em desenvolvimento no projeto PIPE, ainda não estão à venda
 
 ## Demais artigos (mais recentes primeiro)
 

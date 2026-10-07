@@ -16,13 +16,13 @@ const BlogPage = () => {
         <title>Blog | Cultivee</title>
         <meta
           name="description"
-          content="Artigos práticos sobre agricultura, escrita acadêmica e tecnologia. Aprenda com quem faz."
+          content="Guias práticos sobre o agro, com fonte: horta, hidroponia, pragas, mercado e tecnologia no campo."
         />
         <link rel="canonical" href="https://cultivee.com.br/blog" />
         <meta property="og:title" content="Blog | Cultivee" />
         <meta
           property="og:description"
-          content="Artigos práticos sobre agricultura, escrita acadêmica e tecnologia."
+          content="Guias práticos sobre o agro, com fonte: horta, hidroponia, pragas, mercado e tecnologia no campo."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://cultivee.com.br/blog" />
@@ -35,7 +35,7 @@ const BlogPage = () => {
         <PageHeader
           overline="Blog Cultivee"
           title="Conteúdo que cultiva conhecimento"
-          description="Artigos práticos sobre agricultura, escrita acadêmica e tecnologia."
+          description="Guias práticos sobre o agro, com fonte: horta, hidroponia, pragas, mercado e tecnologia no campo."
           breadcrumbs={[{ label: "Blog" }]}
           hero
         />

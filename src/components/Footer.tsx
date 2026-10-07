@@ -1,29 +1,34 @@
-import { Leaf, Mail, Phone, MapPin, Instagram, Youtube, Facebook } from "lucide-react";
+import { Leaf, Mail, Phone, MapPin, Instagram, Youtube, Facebook, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // Arquitetura desde 2026-10-07: Agro (conteudo) + Educa (escola) + Projetos.
+  // `external`: pagina estatica fora do React (public/fomento) usa <a href>.
   const quickLinks = [
-    { name: "Home", href: "/" },
     { name: "Cultivee Agro", href: "/agro" },
-    { name: "Cultivee Educa", href: "/educa" },
-    { name: "Cultivee Tech", href: "/tech" },
-    { name: "Cotações do agro", href: "/cotacoes" },
+    { name: "Blog", href: "/blog" },
+    { name: "Cotações agrícolas", href: "/cotacoes" },
+    { name: "Projetos", href: "/projetos" },
+    { name: "Produtos (protótipos)", href: "/produtos" },
     { name: "Sobre", href: "/sobre" },
     { name: "Contato", href: "/contato" },
   ];
 
   const courses = [
-    { name: "Microverdes", href: "/agro" },
-    { name: "Hidroponia", href: "/agro" },
-    { name: "Escrita Acadêmica", href: "/educa" },
-    { name: "Instrumentação", href: "/tech" },
-    { name: "Empreendedorismo", href: "/tech" },
+    { name: "Todos os cursos e trilhas", href: "/educa" },
+    { name: "Microverdes (lista de espera)", href: "/cursos/microverdes" },
+    { name: "Hidroponia (lista de espera)", href: "/cursos/hidroponia" },
+    { name: "Cultivo indoor (em breve)", href: "/cursos/cultivo-indoor" },
+    { name: "Captação de recursos", href: "/fomento", external: true },
   ];
 
+  // Perfis confirmados pelo dono: Instagram cultivee.br (07/10/2026); Facebook
+  // cultivee.brasil (10/07/2026). Os handles variam por rede: nao "corrigir".
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/cultivee.br", label: "Instagram" },
     { icon: Youtube, href: "https://www.youtube.com/@cultivee_br", label: "YouTube" },
-    { icon: Facebook, href: "https://www.facebook.com/cultivee.br", label: "Facebook" },
+    { icon: Facebook, href: "https://www.facebook.com/cultivee.brasil", label: "Facebook" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/cultivee-br", label: "LinkedIn" },
   ];
 
   return (
@@ -41,7 +46,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-white/70 leading-relaxed mb-6">
-              Cultivar educação e alimentos para um futuro mais autônomo.
+              Instituto de ensino, pesquisa e inovação no agro. Conteúdo gratuito, cursos e projetos de pesquisa aplicada.
             </p>
             
             {/* Social Links */}
@@ -64,7 +69,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
-              Links Rápidos
+              Cultivee
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((item) => (
@@ -83,17 +88,23 @@ const Footer = () => {
           {/* Courses */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
-              Cursos
+              Cultivee Educa
             </h3>
             <ul className="space-y-3">
               {courses.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-white/70 hover:text-white transition-colors duration-300"
-                  >
-                    {item.name}
-                  </Link>
+                  {item.external ? (
+                    <a href={item.href} className="text-white/70 hover:text-white transition-colors duration-300">
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-white/70 hover:text-white transition-colors duration-300"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -123,7 +134,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center gap-3 text-white/70">
                 <MapPin className="w-5 h-5 flex-shrink-0" />
-                <span>Piracicaba, SP - Brasil</span>
+                <span>ESALQTec, Piracicaba-SP</span>
               </div>
             </div>
           </div>
@@ -131,8 +142,10 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-sm">
-              © 2026 Cultivee. Todos os direitos reservados.
+            <p className="text-white/50 text-sm text-center md:text-left">
+              © 2026 Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda · CNPJ 64.471.739/0001-64
+              <br />
+              Empresa incubada na ESALQTec (ESALQ/USP), Piracicaba-SP
             </p>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
               <a

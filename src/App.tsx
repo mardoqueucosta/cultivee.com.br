@@ -12,7 +12,6 @@ import { HelmetProvider } from "react-helmet-async";
 const Index = lazy(() => import("./pages/Index"));
 const AgroPage = lazy(() => import("./pages/Agro"));
 const EducaPage = lazy(() => import("./pages/Educa"));
-const TechPage = lazy(() => import("./pages/Tech"));
 const AboutPage = lazy(() => import("./pages/About"));
 const ContactPage = lazy(() => import("./pages/Contact"));
 const BlogPage = lazy(() => import("./pages/Blog"));
@@ -56,7 +55,6 @@ export const routes: RouteObject[] = [
       { index: true, element: <Index /> },
       { path: "agro", element: <AgroPage /> },
       { path: "educa", element: <EducaPage /> },
-      { path: "tech", element: <TechPage /> },
       { path: "sobre", element: <AboutPage /> },
       { path: "contato", element: <ContactPage /> },
       { path: "blog", element: <BlogPage /> },
@@ -69,7 +67,8 @@ export const routes: RouteObject[] = [
         getStaticPaths: async () =>
           (await import("@/data/blogArticles")).articlesMeta.map((a) => `/blog/${a.slug}`),
       },
-      { path: "projeto", element: <ProjetoPage /> },
+      // /projeto e /tech viraram 301 no nginx (reestruturacao 2026-10-07)
+      { path: "projetos", element: <ProjetoPage /> },
       { path: "aplicativos", element: <AplicativosPage /> },
       { path: "produtos", element: <ProdutosPage /> },
       { path: "produtos/controle-hidroponia", element: <ProdutoHidroponiaPage /> },

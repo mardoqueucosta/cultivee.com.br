@@ -9,10 +9,32 @@ import ConnectionMonitoringSection from "@/components/ConnectionMonitoringSectio
 import {
   Camera, Smartphone, Wifi, Shield, Settings, Image as ImageIcon,
   Video, Eye, ExternalLink, ChevronRight, FolderOpen, Zap,
-  Clock, Sparkles, Plane
+  Clock, Sparkles, Plane, FlaskConical, BellRing
 } from "lucide-react";
 import { SITE_BASE } from "@/lib/breadcrumb-schema";
 import { ORG_ID } from "@/lib/seo-schemas";
+
+const WA_AVISO = `https://wa.me/5519991644181?text=${encodeURIComponent(
+  "Quero ser avisado quando o Cultivee Cam estiver disponível",
+)}`;
+const WA_PROJETO = `https://wa.me/5519991644181?text=${encodeURIComponent(
+  "Quero falar sobre o projeto do Cultivee Cam",
+)}`;
+
+const PrototypeNotice = ({ className = "" }: { className?: string }) => (
+  <div
+    role="note"
+    className={`flex items-start gap-3 rounded-xl border border-tech/30 bg-tech/10 px-4 py-3 text-sm text-foreground text-left ${className}`}
+  >
+    <FlaskConical className="w-5 h-5 text-tech-dark flex-shrink-0 mt-0.5" />
+    <p>
+      <strong>Protótipo em desenvolvimento no projeto PIPE FAPESP.</strong> Ainda não está à venda.{" "}
+      <Link to="/projetos" className="font-semibold text-primary underline underline-offset-2 hover:text-primary/80">
+        Conheça o projeto
+      </Link>
+    </p>
+  </div>
+);
 
 const features = [
   {
@@ -80,11 +102,11 @@ const ProdutoCameraPage = () => {
   const pageUrl = `${SITE_BASE}/produtos/controle-camera`;
   const productLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Cultivee Cam",
+    "@type": "CreativeWork",
+    name: "Cultivee Cam (protótipo)",
     description:
-      "Câmera IP standalone para monitoramento de cultivo com sensor OV2640 de 2 MP, captura agendada de 1 minuto a 1 hora, transmissão ao vivo de até 10 minutos e galeria organizada em pastas no app.",
-    brand: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
+      "Protótipo em desenvolvimento no projeto PIPE FAPESP, ainda não disponível para venda. Câmera IP standalone para monitoramento de cultivo com sensor OV2640 de 2 MP, captura agendada de 1 minuto a 1 hora, transmissão ao vivo de até 10 minutos e galeria organizada em pastas no app.",
+    creator: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
     url: pageUrl,
   };
 
@@ -94,7 +116,7 @@ const ProdutoCameraPage = () => {
         <title>Câmera de Monitoramento para Cultivo | Cultivee Cam</title>
         <meta
           name="description"
-          content="Cultivee Cam: câmera IP para o cultivo com fotos programadas de 1 minuto a 1 hora, stream ao vivo e galeria com pastas no app. Veja as plantas de onde estiver."
+          content="Cultivee Cam: protótipo de câmera IP para o cultivo, com fotos programadas de 1 minuto a 1 hora, stream ao vivo e galeria com pastas no app. Em desenvolvimento no projeto PIPE FAPESP."
         />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
@@ -102,7 +124,7 @@ const ProdutoCameraPage = () => {
         <meta property="og:title" content="Câmera de Monitoramento para Cultivo | Cultivee Cam" />
         <meta
           property="og:description"
-          content="Fotos programadas, stream ao vivo e galeria organizada no app. Monitore seu cultivo de qualquer lugar."
+          content="Protótipo em desenvolvimento: fotos programadas, stream ao vivo e galeria organizada no app para monitorar o cultivo à distância."
         />
         <meta name="twitter:card" content="summary" />
         <script type="application/ld+json">{JSON.stringify(productLd)}</script>
@@ -132,18 +154,19 @@ const ProdutoCameraPage = () => {
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Câmera IP standalone pro seu cultivo. Tira fotos programadas,
                 transmite ao vivo e organiza tudo numa galeria acessível pelo celular.
-                Documente timelapses, detecte problemas visualmente e viaje tranquilo.
+                Documente timelapses e acompanhe visualmente a evolução das plantas.
               </p>
+              <PrototypeNotice className="mb-8" />
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
+                <a href={WA_AVISO} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700">
-                    <ExternalLink className="w-4 h-4" />
-                    Acessar App
+                    <BellRing className="w-4 h-4" />
+                    Quero ser avisado
                   </Button>
                 </a>
-                <a href="https://wa.me/5519991644181" target="_blank" rel="noopener noreferrer">
+                <a href={WA_PROJETO} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="gap-2">
-                    Falar com a equipe
+                    Falar sobre o projeto
                   </Button>
                 </a>
               </div>
@@ -196,7 +219,7 @@ const ProdutoCameraPage = () => {
               </MockupPhone>
               <h3 className="font-semibold text-foreground mt-6 mb-1">Galeria Organizada</h3>
               <p className="text-sm text-muted-foreground max-w-[240px]">
-                Fotos em pastas, seleção múltipla e exclusão em lote — tudo pelo app.
+                Fotos em pastas, seleção múltipla e exclusão em lote, tudo pelo app.
               </p>
             </div>
           </div>
@@ -209,7 +232,7 @@ const ProdutoCameraPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Funcionalidades</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Tudo que uma câmera de cultivo precisa, sem frescura, sem mensalidade.
+              Os recursos essenciais de uma câmera de cultivo, num só módulo.
             </p>
           </div>
 
@@ -233,7 +256,7 @@ const ProdutoCameraPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Duas Formas de Ver Suas Plantas</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Captura remota pela internet ou stream direto na rede local — escolha o que funciona melhor pro momento.
+              Captura remota pela internet ou stream direto na rede local: escolha o que funciona melhor para o momento.
             </p>
           </div>
 
@@ -246,7 +269,7 @@ const ProdutoCameraPage = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Captura Remota</h3>
-                  <span className="text-xs text-muted-foreground">Via internet — de qualquer lugar</span>
+                  <span className="text-xs text-muted-foreground">Via internet, de qualquer lugar</span>
                 </div>
               </div>
               <div className="bg-muted/50 rounded-lg p-4 mb-4">
@@ -270,7 +293,7 @@ const ProdutoCameraPage = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Stream ao Vivo Local</h3>
-                  <span className="text-xs text-muted-foreground">Via rede local — 192.168.4.1</span>
+                  <span className="text-xs text-muted-foreground">Via rede local, 192.168.4.1</span>
                 </div>
               </div>
               <div className="bg-muted/50 rounded-lg p-4 mb-4">
@@ -314,7 +337,8 @@ const ProdutoCameraPage = () => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Hardware Incluso</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Hardware do Protótipo</h2>
+            <PrototypeNotice className="max-w-2xl mx-auto mt-6" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -333,7 +357,7 @@ const ProdutoCameraPage = () => {
               </div>
               <h3 className="font-semibold text-foreground mb-2">Suporte Universal 1/4"</h3>
               <p className="text-sm text-muted-foreground">
-                Mesma rosca de câmera fotográfica — encaixa em tripés, garras e braços articulados comuns.
+                Mesma rosca de câmera fotográfica: encaixa em tripés, garras e braços articulados comuns.
               </p>
             </div>
             <div className="text-center">
@@ -424,23 +448,23 @@ const ProdutoCameraPage = () => {
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Veja suas plantas de qualquer lugar
+            Acompanhe o desenvolvimento da Cultivee Cam
           </h2>
           <p className="text-white/80 mb-8">
-            Crie sua conta e vincule seu módulo Cultivee Cam em minutos.
+            A Cam é um protótipo do projeto PIPE FAPESP e ainda não está à venda. Deixe seu contato para ser avisado.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
+            <a href={WA_AVISO} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-white/90 gap-2">
-                <ExternalLink className="w-4 h-4" />
-                Acessar App
+                <BellRing className="w-4 h-4" />
+                Quero ser avisado
               </Button>
             </a>
-            <a href="https://wa.me/5519991644181" target="_blank" rel="noopener noreferrer">
+            <Link to="/projetos">
               <Button size="lg" className="bg-white/20 text-white border-2 border-white hover:bg-white hover:text-blue-700">
-                Falar no WhatsApp
+                Conhecer o projeto
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

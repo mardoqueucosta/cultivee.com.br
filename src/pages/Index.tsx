@@ -13,18 +13,18 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>Cultivee — Cultivo Indoor, Hidroponia e Tecnologia</title>
+        <title>Cultivee: conteúdo, cursos e pesquisa aplicada no agro</title>
         <meta
           name="description"
-          content="Cursos práticos, produtos IoT e blog sobre cultivo indoor, hidroponia, microverdes e tecnologia agrícola. Aprenda com quem faz."
+          content="Instituto de ensino, pesquisa e inovação no agro, incubado na ESALQTec. Guias técnicos com fonte, cotações CEPEA, cursos de cultivo e de negócios."
         />
         <link rel="canonical" href={`${SITE_BASE}/`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_BASE}/`} />
-        <meta property="og:title" content="Cultivee — Cultivo Indoor, Hidroponia e Tecnologia" />
+        <meta property="og:title" content="Cultivee: conteúdo, cursos e pesquisa aplicada no agro" />
         <meta
           property="og:description"
-          content="Cursos práticos, produtos IoT e blog sobre cultivo indoor, hidroponia, microverdes e tecnologia agrícola."
+          content="Guias técnicos com fonte, cotações CEPEA, cursos de cultivo e de negócios, e pesquisa aplicada com financiamento público."
         />
         <meta property="og:locale" content="pt_BR" />
         <meta name="twitter:card" content="summary_large_image" />

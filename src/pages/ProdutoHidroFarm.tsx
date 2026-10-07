@@ -9,16 +9,38 @@ import ConnectionMonitoringSection from "@/components/ConnectionMonitoringSectio
 import {
   Droplets, Smartphone, Sun, Clock, Shield, Bell, Mail,
   Zap, ToggleLeft, Layers, ExternalLink, ChevronRight, Thermometer,
-  Wind, Waves, Beaker, Sparkles, Gauge, AlertTriangle
+  Wind, Waves, Beaker, Sparkles, Gauge, AlertTriangle, FlaskConical, BellRing
 } from "lucide-react";
 import { SITE_BASE } from "@/lib/breadcrumb-schema";
 import { ORG_ID } from "@/lib/seo-schemas";
+
+const WA_AVISO = `https://wa.me/5519991644181?text=${encodeURIComponent(
+  "Quero ser avisado quando o Cultivee Hidro Farm estiver disponível",
+)}`;
+const WA_PROJETO = `https://wa.me/5519991644181?text=${encodeURIComponent(
+  "Quero falar sobre o projeto do Cultivee Hidro Farm",
+)}`;
+
+const PrototypeNotice = ({ className = "" }: { className?: string }) => (
+  <div
+    role="note"
+    className={`flex items-start gap-3 rounded-xl border border-tech/30 bg-tech/10 px-4 py-3 text-sm text-foreground text-left ${className}`}
+  >
+    <FlaskConical className="w-5 h-5 text-tech-dark flex-shrink-0 mt-0.5" />
+    <p>
+      <strong>Protótipo em desenvolvimento no projeto PIPE FAPESP.</strong> Ainda não está à venda.{" "}
+      <Link to="/projetos" className="font-semibold text-primary underline underline-offset-2 hover:text-primary/80">
+        Conheça o projeto
+      </Link>
+    </p>
+  </div>
+);
 
 const premiumFeatures = [
   {
     icon: Droplets,
     title: "Reposição Automática de Água",
-    description: "Duas boias reed-switch (alimentícias, aço inox) monitoram o reservatório 24/7. Válvula solenoide abre quando o nível baixa e fecha quando enche. Nunca mais ficar sem água durante uma viagem.",
+    description: "Duas boias reed-switch (alimentícias, aço inox) monitoram o reservatório 24/7. Válvula solenoide abre quando o nível baixa e fecha quando enche. Ajuda a evitar que o reservatório fique sem água durante uma viagem, desde que haja fonte de água disponível.",
   },
   {
     icon: Bell,
@@ -38,7 +60,7 @@ const premiumFeatures = [
   {
     icon: ToggleLeft,
     title: "6 Relés de Controle",
-    description: "Luz, bomba de irrigação, ventilação, aeração, válvula de entrada e bomba de homogeneização — todos em 8 canais opticamente isolados, 10A cada (2 livres para expansão).",
+    description: "Luz, bomba de irrigação, ventilação, aeração, válvula de entrada e bomba de homogeneização, todos em 8 canais opticamente isolados, 10A cada (2 livres para expansão).",
   },
   {
     icon: Sparkles,
@@ -84,11 +106,11 @@ const ProdutoHidroFarmPage = () => {
   const pageUrl = `${SITE_BASE}/produtos/hidro-farm`;
   const productLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Cultivee Hidro Farm",
+    "@type": "CreativeWork",
+    name: "Cultivee Hidro Farm (protótipo)",
     description:
-      "Módulo premium de automação para hidroponia com tudo do Cultivee Hidro somado a reposição automática de água, alertas push e por e-mail, sensor DHT11 de temperatura e umidade e bomba de homogeneização.",
-    brand: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
+      "Protótipo em desenvolvimento no projeto PIPE FAPESP, ainda não disponível para venda. Módulo premium de automação para hidroponia com tudo do Cultivee Hidro somado a reposição automática de água, alertas push e por e-mail, sensor DHT11 de temperatura e umidade e bomba de homogeneização.",
+    creator: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
     url: pageUrl,
   };
 
@@ -98,7 +120,7 @@ const ProdutoHidroFarmPage = () => {
         <title>Hidro Farm: Automação Premium para Hidroponia | Cultivee</title>
         <meta
           name="description"
-          content="Cultivee Hidro Farm: reposição automática de água, alertas push e e-mail, sensor de temperatura e umidade e 8 relés. Ideal para hidroponia NFT e gotejamento."
+          content="Cultivee Hidro Farm: protótipo com reposição automática de água, alertas push e e-mail, sensor de temperatura e umidade e 8 relés. Em desenvolvimento no projeto PIPE FAPESP."
         />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
@@ -106,7 +128,7 @@ const ProdutoHidroFarmPage = () => {
         <meta property="og:title" content="Hidro Farm: Automação Premium para Hidroponia | Cultivee" />
         <meta
           property="og:description"
-          content="Reposição automática de água, alertas no celular e sensores ambientais. A versão definitiva para hidroponia NFT e gotejamento."
+          content="Protótipo em desenvolvimento: reposição automática de água, alertas no celular e sensores ambientais para hidroponia NFT e gotejamento."
         />
         <meta name="twitter:card" content="summary" />
         <script type="application/ld+json">{JSON.stringify(productLd)}</script>
@@ -135,19 +157,20 @@ const ProdutoHidroFarmPage = () => {
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Tudo do Hidro + reposição automática de água, alertas no celular,
-                sensor de temperatura/umidade e bomba de homogeneização. A versão
-                definitiva para hidroponia NFT, gotejamento e cultivo comercial de pequeno porte.
+                sensor de temperatura/umidade e bomba de homogeneização. Pensado
+                para hidroponia NFT, gotejamento e cultivo comercial de pequeno porte.
               </p>
+              <PrototypeNotice className="mb-8" />
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
+                <a href={WA_AVISO} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-emerald-700 hover:bg-emerald-800">
-                    <ExternalLink className="w-4 h-4" />
-                    Acessar App
+                    <BellRing className="w-4 h-4" />
+                    Quero ser avisado
                   </Button>
                 </a>
-                <a href="https://wa.me/5519991644181" target="_blank" rel="noopener noreferrer">
+                <a href={WA_PROJETO} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="gap-2">
-                    Falar com a equipe
+                    Falar sobre o projeto
                   </Button>
                 </a>
               </div>
@@ -169,7 +192,7 @@ const ProdutoHidroFarmPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">O Que o Hidro Farm Faz a Mais</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Recursos premium pensados pra quem não quer perder uma planta por esquecimento.
+              Recursos premium pensados para reduzir o risco de perder plantas por esquecimento.
             </p>
           </div>
 
@@ -276,7 +299,7 @@ const ProdutoHidroFarmPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Você É Avisado de 3 Formas</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Redundância pensada para não perder nenhum alerta, mesmo de férias ou com o app fechado.
+              Redundância pensada para que o alerta chegue mesmo com o app fechado.
             </p>
           </div>
 
@@ -330,7 +353,7 @@ const ProdutoHidroFarmPage = () => {
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Quando o reservatório passa do threshold sem encher, você recebe uma
-                notificação push no celular com o histórico completo do que aconteceu —
+                notificação push no celular com o histórico completo do que aconteceu,
                 mesmo com o app fechado. E-mail também é enviado pra conferência.
               </p>
               <ul className="space-y-3 text-sm text-muted-foreground">
@@ -356,7 +379,8 @@ const ProdutoHidroFarmPage = () => {
       <section className="py-20 bg-muted/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Hardware Incluso</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Hardware do Protótipo</h2>
+            <PrototypeNotice className="max-w-2xl mx-auto mt-6" />
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -366,7 +390,7 @@ const ProdutoHidroFarmPage = () => {
               { icon: Waves, title: "2× Boias Reed-Switch", desc: "Aço inox, uso alimentício, cabos blindados", color: "blue" },
               { icon: Thermometer, title: "Sensor DHT11", desc: "Temperatura e umidade ambiente", color: "red" },
               { icon: Shield, title: "Fonte 5V / 3A Reforçada", desc: "Dissipação melhorada para carga maior", color: "purple" },
-              { icon: Layers, title: "Gabinete Premium", desc: "Slots livres para sensores extras (pH, EC, CO₂ — em breve)", color: "slate" },
+              { icon: Layers, title: "Gabinete Premium", desc: "Slots livres para sensores extras (pH, EC, CO₂), em estudo", color: "slate" },
             ].map((item) => {
               const colorMap: Record<string, string> = {
                 orange: "bg-orange-500/10 text-orange-500",
@@ -409,8 +433,8 @@ const ProdutoHidroFarmPage = () => {
             {comparacao.map((row, i) => (
               <div key={row.feature} className={`grid grid-cols-3 px-6 py-3 ${i < comparacao.length - 1 ? 'border-b border-border' : ''}`}>
                 <span className="text-sm text-foreground">{row.feature}</span>
-                <span className="text-center">{row.hidro ? '✅' : '—'}</span>
-                <span className="text-center">{row.farm ? '✅' : '—'}</span>
+                <span className="text-center">{row.hidro ? '✅' : 'não'}</span>
+                <span className="text-center">{row.farm ? '✅' : 'não'}</span>
               </div>
             ))}
           </div>
@@ -446,7 +470,7 @@ const ProdutoHidroFarmPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Indicado Para</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Para quem leva o cultivo a sério e quer tranquilidade total.
+            Para quem leva o cultivo a sério e quer mais controle sobre o reservatório.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {["Hidroponia NFT", "Sistemas de gotejamento", "Estufas comerciais pequenas", "Cultivo em maior escala", "Viveiros profissionais"].map((item) => (
@@ -465,23 +489,23 @@ const ProdutoHidroFarmPage = () => {
       <section className="py-16 bg-gradient-to-r from-emerald-700 to-emerald-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Automatize, monitore, durma tranquilo
+            Acompanhe o desenvolvimento do Hidro Farm
           </h2>
           <p className="text-white/80 mb-8">
-            Crie sua conta e vincule seu módulo Cultivee Hidro Farm em minutos. Alertas no celular incluídos.
+            O Hidro Farm é um protótipo do projeto PIPE FAPESP e ainda não está à venda. Deixe seu contato para ser avisado.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
+            <a href={WA_AVISO} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-emerald-800 hover:bg-white/90 gap-2">
-                <ExternalLink className="w-4 h-4" />
-                Acessar App
+                <BellRing className="w-4 h-4" />
+                Quero ser avisado
               </Button>
             </a>
-            <a href="https://wa.me/5519991644181" target="_blank" rel="noopener noreferrer">
+            <Link to="/projetos">
               <Button size="lg" className="bg-white/20 text-white border-2 border-white hover:bg-white hover:text-emerald-800">
-                Falar no WhatsApp
+                Conhecer o projeto
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

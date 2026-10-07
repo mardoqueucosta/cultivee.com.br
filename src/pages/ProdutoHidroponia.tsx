@@ -9,10 +9,32 @@ import ConnectionMonitoringSection from "@/components/ConnectionMonitoringSectio
 import {
   Droplets, Smartphone, Wifi, Sun, Clock, Shield,
   Zap, ToggleLeft, Layers, ExternalLink, ChevronRight, Timer, Gauge,
-  Wind, Waves
+  Wind, Waves, FlaskConical, BellRing
 } from "lucide-react";
 import { SITE_BASE } from "@/lib/breadcrumb-schema";
 import { ORG_ID } from "@/lib/seo-schemas";
+
+const WA_AVISO = `https://wa.me/5519991644181?text=${encodeURIComponent(
+  "Quero ser avisado quando o Cultivee Hidro estiver disponível",
+)}`;
+const WA_PROJETO = `https://wa.me/5519991644181?text=${encodeURIComponent(
+  "Quero falar sobre o projeto do Cultivee Hidro",
+)}`;
+
+const PrototypeNotice = ({ className = "" }: { className?: string }) => (
+  <div
+    role="note"
+    className={`flex items-start gap-3 rounded-xl border border-tech/30 bg-tech/10 px-4 py-3 text-sm text-foreground text-left ${className}`}
+  >
+    <FlaskConical className="w-5 h-5 text-tech-dark flex-shrink-0 mt-0.5" />
+    <p>
+      <strong>Protótipo em desenvolvimento no projeto PIPE FAPESP.</strong> Ainda não está à venda.{" "}
+      <Link to="/projetos" className="font-semibold text-primary underline underline-offset-2 hover:text-primary/80">
+        Conheça o projeto
+      </Link>
+    </p>
+  </div>
+);
 
 const features = [
   {
@@ -27,13 +49,13 @@ const features = [
   },
   {
     icon: Shield,
-    title: "RTC — Funciona Offline",
+    title: "RTC: funciona offline",
     description: "Relógio DS3231 embarcado mantém a hora mesmo sem internet ou WiFi. Se a rede cair, o cultivo continua automatizado sem perder um ciclo.",
   },
   {
     icon: Gauge,
     title: "Dashboard em Tempo Real",
-    description: "Dia do ciclo, fase atual, status dos 4 relés, sinal WiFi (RSSI), uptime do módulo e IP na rede local — tudo numa tela dark responsiva.",
+    description: "Dia do ciclo, fase atual, status dos 4 relés, sinal WiFi (RSSI), uptime do módulo e IP na rede local, tudo numa tela dark responsiva.",
   },
   {
     icon: Wifi,
@@ -43,7 +65,7 @@ const features = [
   {
     icon: Smartphone,
     title: "PWA Instalável",
-    description: "Abre pelo navegador, instala como app nativo na tela inicial. Atualizações automáticas via OTA remoto — sem mensalidade, sem loja de apps.",
+    description: "Abre pelo navegador, instala como app nativo na tela inicial. Atualizações automáticas via OTA remoto, sem loja de apps.",
   },
 ];
 
@@ -75,11 +97,11 @@ const ProdutoHidroponiaPage = () => {
   const pageUrl = `${SITE_BASE}/produtos/controle-hidroponia`;
   const productLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Cultivee Hidro",
+    "@type": "CreativeWork",
+    name: "Cultivee Hidro (protótipo)",
     description:
-      "Módulo de automação para cultivo indoor que controla luz, bomba d'água, ventilação e aeração, com até 10 fases de cultivo configuráveis e RTC DS3231 embarcado para funcionar offline.",
-    brand: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
+      "Protótipo em desenvolvimento no projeto PIPE FAPESP, ainda não disponível para venda. Módulo de automação para cultivo indoor que controla luz, bomba d'água, ventilação e aeração, com até 10 fases de cultivo configuráveis e RTC DS3231 embarcado para funcionar offline.",
+    creator: { "@type": "Organization", "@id": ORG_ID, name: "Cultivee" },
     url: pageUrl,
   };
 
@@ -89,7 +111,7 @@ const ProdutoHidroponiaPage = () => {
         <title>Controle de Hidroponia e Cultivo Indoor | Cultivee Hidro</title>
         <meta
           name="description"
-          content="Cultivee Hidro automatiza luz, bomba, ventilação e aeração do cultivo indoor com até 10 fases configuráveis. RTC embarcado funciona offline. Sem mensalidade."
+          content="Cultivee Hidro: protótipo de automação de luz, bomba, ventilação e aeração do cultivo indoor, com até 10 fases configuráveis e RTC embarcado. Em desenvolvimento no projeto PIPE FAPESP."
         />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
@@ -97,7 +119,7 @@ const ProdutoHidroponiaPage = () => {
         <meta property="og:title" content="Controle de Hidroponia e Cultivo Indoor | Cultivee Hidro" />
         <meta
           property="og:description"
-          content="Automatize luz, bomba, ventilação e aeração com até 10 fases de cultivo. Funciona offline, sem mensalidade."
+          content="Protótipo em desenvolvimento: automação de luz, bomba, ventilação e aeração com até 10 fases de cultivo e funcionamento offline."
         />
         <meta name="twitter:card" content="summary" />
         <script type="application/ld+json">{JSON.stringify(productLd)}</script>
@@ -125,20 +147,21 @@ const ProdutoHidroponiaPage = () => {
                 Cultivee Hidro
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Automatize os 4 equipamentos fundamentais do cultivo indoor —
-                luz, bomba, ventilação e aeração — com até 10 fases configuráveis.
-                Relógio offline embarcado: se a internet cair, seu cultivo continua.
+                Protótipo que automatiza os 4 equipamentos fundamentais do cultivo indoor:
+                luz, bomba, ventilação e aeração, com até 10 fases configuráveis.
+                Relógio offline embarcado: se a internet cair, a automação continua.
               </p>
+              <PrototypeNotice className="mb-8" />
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
+                <a href={WA_AVISO} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-green-600 hover:bg-green-700">
-                    <ExternalLink className="w-4 h-4" />
-                    Acessar App
+                    <BellRing className="w-4 h-4" />
+                    Quero ser avisado
                   </Button>
                 </a>
-                <a href="https://wa.me/5519991644181" target="_blank" rel="noopener noreferrer">
+                <a href={WA_PROJETO} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="gap-2">
-                    Falar com a equipe
+                    Falar sobre o projeto
                   </Button>
                 </a>
               </div>
@@ -242,7 +265,7 @@ const ProdutoHidroponiaPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Exemplo de Configuração</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Configure até 10 fases. O sistema conta os dias sozinho e troca automaticamente — nunca mais esquecer de ajustar o timer.
+              Configure até 10 fases. O sistema conta os dias sozinho e troca de fase automaticamente, sem precisar ajustar o timer à mão.
             </p>
           </div>
 
@@ -287,7 +310,8 @@ const ProdutoHidroponiaPage = () => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Hardware Incluso</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Hardware do Protótipo</h2>
+            <PrototypeNotice className="max-w-2xl mx-auto mt-6" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -345,7 +369,7 @@ const ProdutoHidroponiaPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Indicado Para</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            O Hidro é a escolha ideal para quem está começando ou tem um setup simples.
+            O Hidro foi pensado para quem está começando ou tem um setup simples.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {["Cultivo caseiro", "Tendas de cultivo (grow tents)", "Estufas pequenas", "Sistemas DWC", "Hidroponia básica"].map((item) => (
@@ -370,23 +394,23 @@ const ProdutoHidroponiaPage = () => {
       <section className="py-16 bg-gradient-to-r from-green-600 to-green-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Comece a automatizar seu cultivo
+            Acompanhe o desenvolvimento do Cultivee Hidro
           </h2>
           <p className="text-white/80 mb-8">
-            Crie sua conta gratuitamente e vincule seu módulo Cultivee Hidro em minutos.
+            O Hidro é um protótipo do projeto PIPE FAPESP e ainda não está à venda. Deixe seu contato para ser avisado.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://app.cultivee.com.br/" target="_blank" rel="noopener noreferrer">
+            <a href={WA_AVISO} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-green-700 hover:bg-white/90 gap-2">
-                <ExternalLink className="w-4 h-4" />
-                Acessar App
+                <BellRing className="w-4 h-4" />
+                Quero ser avisado
               </Button>
             </a>
-            <a href="https://wa.me/5519991644181" target="_blank" rel="noopener noreferrer">
+            <Link to="/projetos">
               <Button size="lg" className="bg-white/20 text-white border-2 border-white hover:bg-white hover:text-green-700">
-                Falar no WhatsApp
+                Conhecer o projeto
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

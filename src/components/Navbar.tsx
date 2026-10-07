@@ -5,29 +5,87 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+// Arquitetura desde 2026-10-07: Cultivee = Agro (conteudo) + Educa (escola, trilhas
+// Cultivo e Negocios) + Projetos. `external: true` = pagina estatica fora do React
+// (public/fomento/index.html): precisa de <a href>, porque o <Link> do router
+// cairia no NotFound do SPA.
+type NavItem = { name: string; href: string; external?: boolean; note?: string };
+
+const agroItems: NavItem[] = [
+  { name: "Visão geral", href: "/agro" },
+  { name: "Blog", href: "/blog" },
+  { name: "Cotações agrícolas", href: "/cotacoes" },
+];
+
+const educaGroups: { label: string; items: NavItem[] }[] = [
+  {
+    label: "Trilha Cultivo",
+    items: [
+      { name: "Microverdes", href: "/cursos/microverdes", note: "lista de espera" },
+      { name: "Hidroponia", href: "/cursos/hidroponia", note: "lista de espera" },
+      { name: "Cultivo indoor", href: "/cursos/cultivo-indoor", note: "em breve" },
+    ],
+  },
+  {
+    label: "Trilha Negócios",
+    items: [{ name: "Captação de recursos", href: "/fomento", external: true }],
+  },
+];
+
+const productItems = [
+  { name: "Cultivee Hidro", href: "/produtos/controle-hidroponia", icon: Droplets },
+  { name: "Cultivee Hidro Farm", href: "/produtos/hidro-farm", icon: Sparkles },
+  { name: "Cultivee Cam", href: "/produtos/controle-camera", icon: Camera },
+];
+
+const NavLink = ({ item, className, onClick }: { item: NavItem; className: string; onClick?: () => void }) => {
+  const content = (
+    <>
+      {item.name}
+      {item.note && <span className="ml-auto text-xs text-muted-foreground">{item.note}</span>}
+    </>
+  );
+  return item.external ? (
+    <a href={item.href} className={className} onClick={onClick}>
+      {content}
+    </a>
+  ) : (
+    <Link to={item.href} className={className} onClick={onClick}>
+      {content}
+    </Link>
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const pillarItems = [
-    { name: "Agro", href: "/agro", color: "text-agro" },
-    { name: "Educa", href: "/educa", color: "text-educa" },
-    { name: "Tech", href: "/tech", color: "text-tech" },
-  ];
-
-  const productItems = [
-    { name: "Cultivee Hidro", href: "/produtos/controle-hidroponia", icon: Droplets, color: "text-green-500" },
-    { name: "Cultivee Hidro Farm", href: "/produtos/hidro-farm", icon: Sparkles, color: "text-emerald-700" },
-    { name: "Cultivee Cam", href: "/produtos/controle-camera", icon: Camera, color: "text-blue-500" },
-  ];
-
   const isActive = (href: string) => {
     if (href === "/") return location.pathname === "/";
     return location.pathname.startsWith(href);
   };
+
+  const agroActive = ["/agro", "/blog", "/cotacoes"].some(isActive);
+  const educaActive = ["/educa", "/cursos"].some(isActive);
+
+  const topLink = (active: boolean) =>
+    `px-3 lg:px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
+      active ? "text-primary bg-primary/10" : "text-foreground hover:text-primary hover:bg-primary/5"
+    }`;
+
+  const trigger = (active: boolean) => `flex items-center gap-1.5 ${topLink(active)}`;
+
+  const mobileLink = (active: boolean) =>
+    `px-4 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+      active ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
+    }`;
+
+  const close = () => setIsOpen(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
@@ -45,48 +103,63 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            <Link
-              to="/"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-                isActive("/")
-                  ? "text-primary bg-primary/10"
-                  : "text-foreground hover:text-primary hover:bg-primary/5"
-              }`}
-            >
-              Home
-            </Link>
-
-            {/* Pillar Dropdown */}
+            {/* Agro: conteudo */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-colors duration-300">
-                  Cursos
+                <button className={trigger(agroActive)}>
+                  <span className="w-2 h-2 rounded-full bg-agro" aria-hidden="true" />
+                  Agro
                   <ChevronDown className="w-4 h-4" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="center" className="w-48 bg-background border-border">
-                {pillarItems.map((item) => (
-                  <DropdownMenuItem key={item.name} asChild>
-                    <Link
-                      to={item.href}
-                      className={`flex items-center gap-2 ${item.color}`}
-                    >
-                      <span className={`w-2 h-2 rounded-full ${item.color.replace('text-', 'bg-')}`}></span>
-                      Cultivee {item.name}
-                    </Link>
+              <DropdownMenuContent align="center" className="w-56 bg-background border-border">
+                {agroItems.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild>
+                    <NavLink item={item} className="flex items-center gap-2 w-full" />
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Produtos Dropdown */}
+            {/* Educa: a escola */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-                  isActive("/produtos")
-                    ? "text-primary bg-primary/10"
-                    : "text-foreground hover:text-primary hover:bg-primary/5"
-                }`}>
+                <button className={trigger(educaActive)}>
+                  <span className="w-2 h-2 rounded-full bg-educa" aria-hidden="true" />
+                  Educa
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="center" className="w-64 bg-background border-border">
+                <DropdownMenuItem asChild>
+                  <Link to="/educa" className="flex items-center gap-2 font-semibold">
+                    Todos os cursos e trilhas
+                  </Link>
+                </DropdownMenuItem>
+                {educaGroups.map((group) => (
+                  <div key={group.label}>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuLabel className="text-xs uppercase tracking-wide text-muted-foreground">
+                      {group.label}
+                    </DropdownMenuLabel>
+                    {group.items.map((item) => (
+                      <DropdownMenuItem key={item.href} asChild>
+                        <NavLink item={item} className="flex items-center gap-2 w-full" />
+                      </DropdownMenuItem>
+                    ))}
+                  </div>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link to="/projetos" className={topLink(isActive("/projetos"))}>
+              Projetos
+            </Link>
+
+            {/* Produtos: prototipos do projeto PIPE (ainda nao estao a venda) */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className={trigger(isActive("/produtos"))}>
                   Produtos
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -95,17 +168,14 @@ const Navbar = () => {
                 <DropdownMenuItem asChild>
                   <Link to="/produtos" className="flex items-center gap-2 font-semibold">
                     <LayoutGrid className="w-4 h-4 text-primary" />
-                    Ver todos os produtos
+                    Todos os protótipos
                   </Link>
                 </DropdownMenuItem>
-                <div className="h-px bg-border my-1" />
+                <DropdownMenuSeparator />
                 {productItems.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
-                    <Link
-                      to={item.href}
-                      className="flex items-center gap-2"
-                    >
-                      <item.icon className={`w-4 h-4 ${item.color}`} />
+                    <Link to={item.href} className="flex items-center gap-2">
+                      <item.icon className="w-4 h-4 text-primary" />
                       {item.name}
                     </Link>
                   </DropdownMenuItem>
@@ -113,61 +183,11 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link
-              to="/projeto"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-                isActive("/projeto")
-                  ? "text-primary bg-primary/10"
-                  : "text-foreground hover:text-primary hover:bg-primary/5"
-              }`}
-            >
-              Projeto
-            </Link>
-
-            {/* Cotacoes vem ANTES do Blog: e o unico destino do site que muda
-                todo dia util, e quem volta para ver preco precisa acha-lo em
-                um clique. */}
-            <Link
-              to="/cotacoes"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-                isActive("/cotacoes")
-                  ? "text-primary bg-primary/10"
-                  : "text-foreground hover:text-primary hover:bg-primary/5"
-              }`}
-            >
-              Cotações
-            </Link>
-
-            <Link
-              to="/blog"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-                isActive("/blog")
-                  ? "text-primary bg-primary/10"
-                  : "text-foreground hover:text-primary hover:bg-primary/5"
-              }`}
-            >
-              Blog
-            </Link>
-
-            <Link
-              to="/sobre"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-                isActive("/sobre")
-                  ? "text-primary bg-primary/10"
-                  : "text-foreground hover:text-primary hover:bg-primary/5"
-              }`}
-            >
+            <Link to="/sobre" className={topLink(isActive("/sobre"))}>
               Sobre
             </Link>
 
-            <Link
-              to="/contato"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-                isActive("/contato")
-                  ? "text-primary bg-primary/10"
-                  : "text-foreground hover:text-primary hover:bg-primary/5"
-              }`}
-            >
+            <Link to="/contato" className={topLink(isActive("/contato"))}>
               Contato
             </Link>
           </div>
@@ -176,6 +196,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
               className="p-2 text-foreground hover:text-primary transition-colors duration-300"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -185,116 +206,43 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4">
+          <div className="md:hidden pb-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <div className="flex flex-col space-y-1 bg-background rounded-xl border border-border p-4 mt-2 shadow-elegant">
-              <Link
-                to="/"
-                className={`px-4 py-3 rounded-lg font-medium transition-colors ${
-                  isActive("/") ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
+              <Link to="/" className={mobileLink(isActive("/"))} onClick={close}>
                 Home
               </Link>
 
-              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Cursos
-              </div>
-
-              {pillarItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-4 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 ${
-                    isActive(item.href) ? `${item.color} bg-muted` : "text-foreground hover:bg-muted"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <span className={`w-2 h-2 rounded-full ${item.color.replace('text-', 'bg-')}`}></span>
-                  Cultivee {item.name}
-                </Link>
+              <div className="border-t border-border my-2" />
+              <div className="px-4 py-2 text-xs font-semibold text-agro uppercase tracking-wide">Agro</div>
+              {agroItems.map((item) => (
+                <NavLink key={item.href} item={item} className={mobileLink(isActive(item.href))} onClick={close} />
               ))}
 
-              <div className="border-t border-border my-2"></div>
-
-              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Produtos
-              </div>
-
-              <Link
-                to="/produtos"
-                className={`px-4 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 ${
-                  location.pathname === "/produtos" ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                <LayoutGrid className="w-4 h-4 text-primary" />
-                Ver todos os produtos
+              <div className="border-t border-border my-2" />
+              <div className="px-4 py-2 text-xs font-semibold text-educa uppercase tracking-wide">Educa</div>
+              <Link to="/educa" className={mobileLink(location.pathname === "/educa")} onClick={close}>
+                Todos os cursos e trilhas
               </Link>
-
-              {productItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-4 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 ${
-                    isActive(item.href) ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <item.icon className={`w-4 h-4 ${item.color}`} />
-                  {item.name}
-                </Link>
+              {educaGroups.map((group) => (
+                <div key={group.label} className="flex flex-col space-y-1">
+                  <div className="px-4 pt-2 text-xs text-muted-foreground">{group.label}</div>
+                  {group.items.map((item) => (
+                    <NavLink key={item.href} item={item} className={mobileLink(isActive(item.href))} onClick={close} />
+                  ))}
+                </div>
               ))}
 
-              <div className="border-t border-border my-2"></div>
-
-              <Link
-                to="/projeto"
-                className={`px-4 py-3 rounded-lg font-medium transition-colors ${
-                  isActive("/projeto") ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                Projeto
+              <div className="border-t border-border my-2" />
+              <Link to="/projetos" className={mobileLink(isActive("/projetos"))} onClick={close}>
+                Projetos
               </Link>
-
-              <Link
-                to="/cotacoes"
-                className={`px-4 py-3 rounded-lg font-medium transition-colors ${
-                  isActive("/cotacoes") ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                Cotações
+              <Link to="/produtos" className={mobileLink(isActive("/produtos"))} onClick={close}>
+                Produtos (protótipos)
               </Link>
-
-              <Link
-                to="/blog"
-                className={`px-4 py-3 rounded-lg font-medium transition-colors ${
-                  isActive("/blog") ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                Blog
-              </Link>
-
-              <Link
-                to="/sobre"
-                className={`px-4 py-3 rounded-lg font-medium transition-colors ${
-                  isActive("/sobre") ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
+              <Link to="/sobre" className={mobileLink(isActive("/sobre"))} onClick={close}>
                 Sobre
               </Link>
-
-              <Link
-                to="/contato"
-                className={`px-4 py-3 rounded-lg font-medium transition-colors ${
-                  isActive("/contato") ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
+              <Link to="/contato" className={mobileLink(isActive("/contato"))} onClick={close}>
                 Contato
               </Link>
             </div>

@@ -16,7 +16,7 @@ import {
   AlertTriangle, Layers, ThermometerSun, Wind, Scissors, Package,
   Target, Zap, GraduationCap
 } from "lucide-react";
-import { SITE_BASE } from "@/lib/breadcrumb-schema";
+import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import { ORG_ID, organizationJsonLd } from "@/lib/seo-schemas";
 
 const modules = [
@@ -24,11 +24,10 @@ const modules = [
     number: "01",
     title: "Fundamentos",
     icon: BookOpen,
-    hours: "6h",
     topics: [
       "O que são microverdes: definição e diferenças de brotos e baby greens",
-      "Benefícios nutricionais: até 40x mais nutrientes que plantas adultas",
-      "Panorama do mercado: R$ 3,5 bi global, crescimento de 15-20% ao ano no Brasil",
+      "Composição nutricional: o que a pesquisa mediu e por que varia por espécie",
+      "Panorama do mercado de microverdes no Brasil",
       "Perfil do consumidor e oportunidades de negócio",
     ],
   },
@@ -36,7 +35,6 @@ const modules = [
     number: "02",
     title: "Variedades e Botânica",
     icon: Sprout,
-    hours: "4h",
     topics: [
       "Catálogo de 20+ variedades com características de cultivo",
       "Classificação: fáceis (rabanete, brócolis), intermediárias (girassol, ervilha) e avançadas (manjericão, coentro)",
@@ -48,7 +46,6 @@ const modules = [
     number: "03",
     title: "Infraestrutura e Equipamentos",
     icon: Layers,
-    hours: "4h",
     topics: [
       "Bandejas, substratos (fibra de coco, solo, mats) e sementes",
       "Iluminação LED: espectro, PPFD 100-400 µmol/m²/s, fotoperiodo 16h",
@@ -58,22 +55,20 @@ const modules = [
   },
   {
     number: "04",
-    title: "Técnica de Cultivo — Prática",
+    title: "Técnica de Cultivo: Prática",
     icon: Leaf,
-    hours: "10h",
     topics: [
       "Demolho, semeadura e densidades por variedade",
       "Blackout: duração, peso e monitoramento",
       "Fase de crescimento: irrigação inferior e fotoperiodo",
       "Colheita no ponto ideal: técnica, ferramentas e pós-colheita",
-      "Atividade prática: plantio de 5 variedades ao vivo",
+      "Passo a passo do plantio de 5 variedades",
     ],
   },
   {
     number: "05",
     title: "Controle Ambiental",
     icon: ThermometerSun,
-    hours: "4h",
     topics: [
       "Temperatura ideal: 18-22°C (germinação e crescimento)",
       "Umidade relativa: 40-60% com ventilação constante",
@@ -85,7 +80,6 @@ const modules = [
     number: "06",
     title: "Resolução de Problemas",
     icon: AlertTriangle,
-    hours: "4h",
     topics: [
       "Mofo vs. pelos radiculares: como diferenciar",
       "Damping off: prevenção e manejo",
@@ -97,9 +91,8 @@ const modules = [
     number: "07",
     title: "Negócio e Comercialização",
     icon: ShoppingCart,
-    hours: "6h",
     topics: [
-      "Precificação: R$ 160-400/kg conforme variedade",
+      "Precificação: como calcular custo e preço por variedade",
       "Canais de venda: restaurantes, feiras, D2C por Instagram/WhatsApp",
       "Modelo de assinatura semanal e prospecção de clientes",
       "Embalagem, rotulagem e logística de entrega",
@@ -109,7 +102,6 @@ const modules = [
     number: "08",
     title: "Segurança Alimentar e Legislação",
     icon: Shield,
-    hours: "4h",
     topics: [
       "Boas práticas de fabricação (BPF) aplicadas a microverdes",
       "Higiene pessoal, ambiental e rastreabilidade",
@@ -121,9 +113,8 @@ const modules = [
     number: "09",
     title: "Técnicas Avançadas",
     icon: Zap,
-    hours: "4h",
     topics: [
-      "Agricultura vertical: até 390x mais produtivo por m²",
+      "Agricultura vertical: quando faz sentido empilhar bandejas",
       "Hidroponia vs. solo: quando usar cada abordagem",
       "Automação: irrigação, iluminação e monitoramento IoT",
       "Otimização de espectro luminoso para nutrição",
@@ -131,14 +122,12 @@ const modules = [
   },
   {
     number: "10",
-    title: "Projeto Final e Mentoria",
+    title: "Projeto Final",
     icon: GraduationCap,
-    hours: "4h",
     topics: [
       "Desenvolvimento do seu plano de produção individual",
       "Cálculo de viabilidade econômica",
-      "Apresentação e feedback personalizado",
-      "Certificado de conclusão + acesso à comunidade",
+      "Revisão do plano: custos, riscos e próximos passos",
     ],
   },
 ];
@@ -252,52 +241,52 @@ const steps = [
     title: "Colheita",
     description: "Corte 1-2 cm acima do substrato com tesoura higienizada. Refrigerar a 2-4°C.",
     icon: Scissors,
-    duration: "Dia 7-21",
+    duration: "Cerca de 7-14 dias",
   },
 ];
 
 const businessNumbers = [
-  { label: "Investimento inicial", value: "R$ 1.500", subtitle: "produção artesanal" },
-  { label: "Preço por kg", value: "R$ 160-400", subtitle: "conforme variedade" },
-  { label: "Margem bruta", value: "85-90%", subtitle: "após estabilização" },
-  { label: "Ciclos por mês", value: "4-6", subtitle: "colheita semanal" },
+  { label: "Investimento inicial", value: "Custo", subtitle: "como orçar cada escala de produção" },
+  { label: "Preço por kg", value: "Preço", subtitle: "varia por variedade e canal de venda" },
+  { label: "Custo por bandeja", value: "Insumos", subtitle: "sementes, substrato, energia e embalagem" },
+  { label: "Ciclos por mês", value: "Rotina", subtitle: "como escalonar plantios para colher toda semana" },
 ];
 
 const faqs = [
   {
     question: "Preciso de experiência prévia em agricultura?",
-    answer: "Não! O curso é desenhado para iniciantes absolutos. Começamos do zero e avançamos até técnicas profissionais. Tudo com linguagem acessível e muita prática.",
+    answer: "Não. O curso está sendo desenhado para quem está começando: parte do zero e avança até técnicas de produção, com linguagem acessível.",
   },
   {
     question: "Quanto espaço preciso para começar?",
-    answer: "Para começar em casa, basta uma bancada de 1m². Para produção artesanal comercial, recomendamos 6-12m². No curso, ensinamos layouts otimizados para cada escala.",
+    answer: "Para aprender e produzir para consumo próprio, uma bancada pequena costuma bastar. Uma produção comercial pede mais espaço e controle de ambiente. O curso mostra como planejar o layout para cada escala.",
   },
   {
     question: "Qual o investimento inicial para produção comercial?",
-    answer: "Produção caseira: R$ 150-300. Artesanal (5-10 bandejas/semana): R$ 1.500-3.000. Semi-profissional (12m² indoor): ~R$ 25.000. No módulo de negócios, detalhamos cada cenário.",
+    answer: "Depende da escala, das variedades e do local. A produção caseira usa bandejas, substrato, sementes e uma luminária LED; a comercial exige mais espaço, controle ambiental e licenças. No módulo de negócio, você aprende a montar a planilha de custo de cada cenário antes de investir.",
   },
   {
     question: "Microverdes são a mesma coisa que brotos?",
-    answer: "Não. Brotos germinam em água (3-7 dias) e a raiz é consumida. Microverdes crescem em substrato com luz (7-21 dias) e são cortados acima do solo. São mais nutritivos, saborosos e seguros.",
+    answer: "Não. Brotos germinam em água (3 a 7 dias) e a raiz é consumida. Microverdes crescem em substrato com luz (cerca de 7 a 14 dias, conforme a espécie) e são cortados acima do substrato, sem a raiz. Por isso o manejo e os cuidados sanitários são diferentes.",
   },
   {
     question: "Quais variedades são mais fáceis para começar?",
-    answer: "Rabanete (5-12 dias), brócolis (8-12 dias) e rúcula (6-12 dias) são as mais indicadas para iniciantes — germinação rápida, alta taxa de sucesso e boa demanda comercial.",
+    answer: "Rabanete (5 a 12 dias), brócolis (8 a 12 dias) e rúcula (6 a 12 dias) são as mais indicadas para iniciantes: germinam rápido e toleram pequenos erros de manejo.",
   },
   {
     question: "Consigo vender para restaurantes?",
-    answer: "Sim! No módulo de comercialização, ensinamos como prospectar, precificar e fechar contratos semanais com restaurantes. Chefs pagam premium por frescor e qualidade constante.",
+    answer: "Restaurantes são um canal possível. O módulo de comercialização mostra como prospectar, precificar e negociar entregas regulares. Fechar a venda depende da regularidade da sua produção, da qualidade e da negociação com cada cliente.",
   },
   {
-    question: "O curso oferece certificado?",
-    answer: "Sim. Ao concluir todos os módulos e apresentar seu projeto final, você recebe certificado de conclusão + acesso vitalício à comunidade de alunos para suporte contínuo.",
+    question: "Quando o curso começa?",
+    answer: "O curso está em produção. Entre na lista de espera pelo WhatsApp para ser avisado quando as inscrições abrirem, já com formato, carga horária e valor definidos.",
   },
 ];
 
 const CursoMicroverdesPage = () => {
   const pageUrl = `${SITE_BASE}/cursos/microverdes`;
   const pageDescription =
-    "Curso completo de cultivo de microverdes: do zero à comercialização. 10 módulos, 50+ horas de teoria e prática. Aprenda a produzir e vender com alta margem.";
+    "Curso de cultivo de microverdes da Cultivee Educa, em produção. 10 módulos previstos, do plantio ao planejamento de uma pequena produção. Entre na lista de espera.";
   const courseLd = {
     "@context": "https://schema.org",
     "@type": "Course",
@@ -310,10 +299,14 @@ const CursoMicroverdesPage = () => {
       {
         "@type": "CourseInstance",
         courseMode: "online",
-        courseWorkload: "PT50H",
       },
     ],
   };
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: "Educa", href: "/educa" },
+    { name: "Cultivo", href: "/educa#cultivo" },
+    { name: "Cultivo de Microverdes", href: "/cursos/microverdes" },
+  ]);
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -327,16 +320,17 @@ const CursoMicroverdesPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Head>
-        <title>Curso de Cultivo de Microverdes | Cultivee Agro</title>
+        <title>Curso de Cultivo de Microverdes | Cultivee Educa</title>
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content="Curso de Cultivo de Microverdes | Cultivee Agro" />
+        <meta property="og:title" content="Curso de Cultivo de Microverdes | Cultivee Educa" />
         <meta property="og:description" content={pageDescription} />
         <meta name="twitter:card" content="summary" />
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(courseLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
       </Head>
 
@@ -349,7 +343,9 @@ const CursoMicroverdesPage = () => {
             <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
               <li><Link to="/" className="hover:text-foreground transition-colors">Home</Link></li>
               <ChevronRight className="w-3.5 h-3.5" />
-              <li><Link to="/agro" className="hover:text-foreground transition-colors">Agro</Link></li>
+              <li><Link to="/educa" className="hover:text-foreground transition-colors">Educa</Link></li>
+              <ChevronRight className="w-3.5 h-3.5" />
+              <li><Link to="/educa#cultivo" className="hover:text-foreground transition-colors">Cultivo</Link></li>
               <ChevronRight className="w-3.5 h-3.5" />
               <li className="text-foreground font-medium">Cultivo de Microverdes</li>
             </ol>
@@ -357,31 +353,30 @@ const CursoMicroverdesPage = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-agro/10 text-agro px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <Leaf className="w-4 h-4" />
-                Mais vendido
+              <div className="inline-flex items-center gap-2 bg-educa/10 text-educa border border-educa/30 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <Clock className="w-4 h-4" />
+                Em produção · lista de espera
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Cultivo de Microverdes
               </h1>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                Curso completo do zero à comercialização. Aprenda a produzir alimentos com
-                até 40x mais nutrientes em ciclos de 7 a 21 dias — no espaço de uma bancada.
+                Curso do zero à comercialização, em produção. Você vai aprender a cultivar
+                microverdes em ciclos de cerca de 7 a 14 dias, conforme a espécie, no espaço de uma bancada.
               </p>
               <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
-                <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-agro" /> 50+ horas</span>
-                <span className="flex items-center gap-1.5"><BookOpen className="w-4 h-4 text-agro" /> 10 módulos</span>
+                <span className="flex items-center gap-1.5"><BookOpen className="w-4 h-4 text-agro" /> 10 módulos previstos</span>
                 <span className="flex items-center gap-1.5"><Sprout className="w-4 h-4 text-agro" /> Teoria + prática</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/5519991644181?text=Olá! Tenho interesse no curso de Microverdes." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5519991644181?text=Olá! Quero entrar na lista de espera do curso de Microverdes." target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 bg-agro hover:bg-agro/90 w-full sm:w-auto">
-                    Quero me inscrever
+                    Entrar na lista de espera
                   </Button>
                 </a>
                 <a href="#modulos">
                   <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
-                    Ver conteúdo completo
+                    Ver conteúdo previsto
                   </Button>
                 </a>
               </div>
@@ -396,12 +391,12 @@ const CursoMicroverdesPage = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white dark:bg-card rounded-xl shadow-lg p-4 border border-border">
-                <div className="text-2xl font-bold text-agro">40x</div>
-                <div className="text-xs text-muted-foreground">mais nutrientes</div>
+                <div className="text-2xl font-bold text-agro">20+</div>
+                <div className="text-xs text-muted-foreground">variedades abordadas</div>
               </div>
               <div className="absolute -top-4 -right-4 bg-white dark:bg-card rounded-xl shadow-lg p-4 border border-border">
-                <div className="text-2xl font-bold text-agro">7-21</div>
-                <div className="text-xs text-muted-foreground">dias até colheita</div>
+                <div className="text-2xl font-bold text-agro">7-14</div>
+                <div className="text-xs text-muted-foreground">dias até a colheita, conforme a espécie</div>
               </div>
             </div>
           </div>
@@ -415,14 +410,14 @@ const CursoMicroverdesPage = () => {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">O que são Microverdes?</h2>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Microverdes são plantas jovens comestíveis colhidas entre 7 e 21 dias após a germinação,
+                Microverdes são plantas jovens comestíveis colhidas cerca de 7 a 14 dias após a semeadura, conforme a espécie,
                 quando apresentam as primeiras folhas verdadeiras. Medem de 2,5 a 10 cm e são cortados
                 acima do substrato.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Estudos da Universidade de Maryland/USDA comprovaram que microverdes contêm até 40 vezes
-                mais nutrientes que as versões adultas — incluindo vitaminas C, E, K, betacaroteno,
-                polifenóis e antioxidantes em concentrações superiores.
+                Pesquisadores do USDA e da Universidade de Maryland mediram vitaminas C, E, K e
+                carotenoides em 25 variedades de microverdes (Xiao et al., 2012). Os teores variaram
+                muito de uma espécie para outra, e o curso trata o tema com esse cuidado.
               </p>
               <div className="bg-agro/5 border border-agro/20 rounded-xl p-4">
                 <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
@@ -431,17 +426,17 @@ const CursoMicroverdesPage = () => {
                 </h4>
                 <p className="text-sm text-muted-foreground">
                   Brotos germinam em água (3-7 dias) e a raiz é consumida. Microverdes crescem
-                  em substrato com luz e são cortados — mais nutritivos, saborosos e seguros.
+                  em substrato com luz e são cortados acima dele, sem a raiz.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Leaf, label: "Vitaminas C, E, K", detail: "Concentração superior" },
-                { icon: Beaker, label: "Sulforafano", detail: "100x mais que brócolis adulto" },
-                { icon: TrendingUp, label: "Mercado global", detail: "R$ 3,5 bi em 2025" },
-                { icon: Clock, label: "Colheita rápida", detail: "7-21 dias do plantio" },
+                { icon: Leaf, label: "Vitaminas e pigmentos", detail: "Teor varia por espécie" },
+                { icon: Beaker, label: "Compostos bioativos", detail: "Tema de pesquisa em andamento" },
+                { icon: Layers, label: "Pouco espaço", detail: "Cabe em uma bancada" },
+                { icon: Clock, label: "Ciclo curto", detail: "Cerca de 7 a 14 dias, conforme a espécie" },
               ].map((item) => (
                 <div key={item.label} className="bg-card border border-border rounded-xl p-5 text-center">
                   <div className="w-10 h-10 rounded-lg bg-agro/10 flex items-center justify-center mx-auto mb-3">
@@ -462,7 +457,7 @@ const CursoMicroverdesPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Da Semente à Colheita</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              O processo completo em 5 etapas — simples, rápido e replicável.
+              O processo em 5 etapas, que o curso detalha passo a passo.
             </p>
           </div>
 
@@ -537,9 +532,9 @@ const CursoMicroverdesPage = () => {
       <section id="modulos" className="py-20 bg-muted/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Conteúdo Completo do Curso</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Conteúdo previsto do curso</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              10 módulos que cobrem teoria, prática e negócios. Do iniciante ao profissional.
+              10 módulos previstos, cobrindo teoria, prática e negócio. O conteúdo pode ser ajustado até o lançamento.
             </p>
           </div>
 
@@ -555,7 +550,6 @@ const CursoMicroverdesPage = () => {
                       <span className="text-xs font-bold text-agro bg-agro/10 px-2 py-0.5 rounded">
                         MÓDULO {mod.number}
                       </span>
-                      <span className="text-xs text-muted-foreground">{mod.hours}</span>
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-3">{mod.title}</h3>
                     <ul className="space-y-1.5">
@@ -578,9 +572,9 @@ const CursoMicroverdesPage = () => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Números do Negócio</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">As Contas do Negócio</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Microverdes são um dos negócios agrícolas com maior margem de lucro e menor barreira de entrada.
+              No módulo de negócio, você aprende a fazer as contas antes de investir. Os resultados dependem da escala, das variedades e do canal de venda.
             </p>
           </div>
 
@@ -601,9 +595,9 @@ const CursoMicroverdesPage = () => {
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
               {[
-                { title: "Restaurantes gourmet", detail: "Contratos semanais, R$ 500-2.500/semana" },
+                { title: "Restaurantes", detail: "Entregas regulares, combinadas com o chef" },
                 { title: "Lojas de naturais", detail: "Público consciente, demanda crescente" },
-                { title: "Feiras orgânicas", detail: "Venda direta, margem total" },
+                { title: "Feiras", detail: "Venda direta ao consumidor" },
                 { title: "Direto ao consumidor", detail: "Instagram/WhatsApp, assinatura semanal" },
               ].map((t) => (
                 <div key={t.title} className="bg-card rounded-lg p-3 border border-border">
@@ -753,19 +747,19 @@ const CursoMicroverdesPage = () => {
       <section className="py-16 bg-gradient-to-r from-agro to-agro/80">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Comece a produzir microverdes
+            Quer ser avisado quando o curso abrir?
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            10 módulos, 50+ horas de conteúdo, prática orientada e mentoria.
-            Do primeiro plantio à sua primeira venda.
+            O curso está em produção, com 10 módulos previstos. Do primeiro plantio a um plano
+            de produção com as contas feitas. Entre na lista de espera para receber a novidade.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/5519991644181?text=Olá! Tenho interesse no curso de Microverdes." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5519991644181?text=Olá! Quero entrar na lista de espera do curso de Microverdes." target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-agro hover:bg-white/90 gap-2">
-                Quero me inscrever
+                Entrar na lista de espera
               </Button>
             </a>
-            <Link to="/agro">
+            <Link to="/educa">
               <Button size="lg" className="bg-white/20 text-white border-2 border-white hover:bg-white hover:text-agro">
                 Ver todos os cursos
               </Button>

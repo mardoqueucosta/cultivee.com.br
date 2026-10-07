@@ -1,138 +1,172 @@
 import { Head } from "vite-react-ssg";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { Leaf, Target, Heart, Lightbulb } from "lucide-react";
+import { Leaf, GraduationCap, Landmark, ExternalLink, ArrowRight, Building2 } from "lucide-react";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import { aboutPageJsonLd, authorJsonLd } from "@/lib/seo-schemas";
 
+const LATTES_URL = "http://lattes.cnpq.br/7819717440359474";
+const ORCID_URL = "https://orcid.org/0000-0002-4395-3069";
+
+const ABOUT_DESCRIPTION =
+  "Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda: conteúdo gratuito sobre agro, cursos de cultivo e negócios e projetos de pesquisa aplicada. Incubada na ESALQTec, Piracicaba-SP.";
+
 const AboutPage = () => {
   const breadcrumbLd = breadcrumbJsonLd([{ name: "Sobre", href: "/sobre" }]);
+  const personLd = {
+    ...authorJsonLd,
+    name: "Mardoqueu Martins da Costa",
+    alternateName: "Mardoqueu Costa",
+    honorificPrefix: "Prof. Dr.",
+  };
+  const aboutLd = { ...aboutPageJsonLd, description: ABOUT_DESCRIPTION };
+
+  const fronts = [
+    {
+      icon: Leaf,
+      title: "Agro",
+      color: "text-agro",
+      bg: "bg-agro/10",
+      text: "Conteúdo gratuito sobre o agro em geral: artigos no blog, cotações diárias com dados do CEPEA e vídeos.",
+      href: "/agro",
+      cta: "Ir para o Agro",
+    },
+    {
+      icon: GraduationCap,
+      title: "Educa",
+      color: "text-educa",
+      bg: "bg-educa/10",
+      text: "Cursos e formação em duas trilhas: Cultivo, para quem produz, e Negócios, para quem empreende no agro.",
+      href: "/educa",
+      cta: "Ir para a Educa",
+    },
+    {
+      icon: Landmark,
+      title: "Projetos",
+      color: "text-tech",
+      bg: "bg-tech/10",
+      text: "Pesquisa aplicada com financiamento público, como o projeto PIPE Fase 1 FAPESP em execução.",
+      href: "/projetos",
+      cta: "Ver os projetos",
+    },
+  ];
 
   return (
     <div className="min-h-screen">
       <Head>
-        <title>Sobre a Cultivee — Cultivar educação, alimentos e autonomia</title>
-        <meta
-          name="description"
-          content="Cultivee nasceu da convergência entre pesquisa acadêmica, tecnologia e agricultura. Conheça nossa missão de democratizar conhecimento técnico."
-        />
+        <title>Sobre a Cultivee | Ensino, pesquisa e inovação no agro</title>
+        <meta name="description" content={ABOUT_DESCRIPTION} />
         <link rel="canonical" href={`${SITE_BASE}/sobre`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_BASE}/sobre`} />
         <meta property="og:title" content="Sobre a Cultivee" />
         <meta
           property="og:description"
-          content="Cultivar educação. Cultivar alimentos. Cultivar autonomia."
+          content="Conhecimento técnico e científico para o agro e para quem empreende. Incubada na ESALQTec, Piracicaba-SP."
         />
-        <script type="application/ld+json">{JSON.stringify(authorJsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(aboutPageJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(personLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(aboutLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       </Head>
       <Navbar />
-      
+
       {/* Hero */}
       <section className="pt-24 pb-16 bg-gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Sobre a Cultivee
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Sobre a Cultivee</h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Cultivar educação. Cultivar alimentos. Cultivar autonomia.
+            Ensino, pesquisa e inovação para o agro e para quem empreende.
           </p>
         </div>
       </section>
 
-      {/* Nossa História */}
+      {/* Quem somos */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Nossa História
-          </h2>
-          
-          <div className="prose prose-lg max-w-none text-muted-foreground">
-            <p className="leading-relaxed mb-6">
-              A Cultivee nasceu da convergência de experiências em pesquisa acadêmica, desenvolvimento 
-              de tecnologia e agricultura. Fundada por um pesquisador com pós-doutorado e anos de 
-              experiência em bioengenharia e agricultura de precisão, a empresa surgiu da percepção 
-              de que conhecimento prático transforma vidas.
-            </p>
-            <p className="leading-relaxed">
-              Após orientar dezenas de trabalhos acadêmicos, desenvolver protótipos de equipamentos 
-              e cultivar hortaliças em sistemas controlados, percebemos que poderíamos compartilhar 
-              esse conhecimento de forma estruturada e acessível.
-            </p>
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Quem somos</h2>
+          <div className="bg-card rounded-2xl p-8 border border-border shadow-elegant">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Building2 className="w-6 h-6 text-primary" />
+              </div>
+              <div className="text-muted-foreground leading-relaxed space-y-4">
+                <p>
+                  A <strong className="text-foreground">Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda</strong>{" "}
+                  (CNPJ 64.471.739/0001-64) foi aberta em janeiro de 2026 e é incubada na{" "}
+                  <strong className="text-foreground">ESALQTec</strong>, a incubadora da ESALQ/USP, em Piracicaba-SP.
+                </p>
+                <p>
+                  O nome carrega um duplo sentido: cultivar conhecimento e cultivar o que vem do campo.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Por que Cultivee */}
+      {/* O que fazemos */}
       <section className="py-16 bg-muted">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-elegant">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center">
-                <Leaf className="w-8 h-8 text-white" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">O que fazemos</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {fronts.map((f) => (
+              <div key={f.title} className="bg-card rounded-2xl p-8 border border-border shadow-elegant flex flex-col">
+                <div className={`inline-flex items-center justify-center w-14 h-14 ${f.bg} rounded-xl mb-5`}>
+                  <f.icon className={`w-7 h-7 ${f.color}`} />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">{f.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-1">{f.text}</p>
+                <Link
+                  to={f.href}
+                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+                >
+                  {f.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-              <h2 className="text-2xl font-bold text-foreground">
-                Por que "Cultivee"?
-              </h2>
-            </div>
-            
-            <p className="text-muted-foreground leading-relaxed">
-              O nome "Cultivee" carrega um duplo significado: <strong className="text-foreground">cultivar educação</strong> e 
-              <strong className="text-foreground"> cultivar produtos agrícolas</strong>. Representa nossa essência de unir 
-              conhecimento e prática, ensinando técnicas que nós mesmos aplicamos no dia a dia.
-            </p>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Nossa Filosofia */}
+      {/* Fundador */}
       <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
-            Nossa Filosofia
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-                <Lightbulb className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Ensinamos fazendo
-              </h3>
-              <p className="text-muted-foreground">
-                Não oferecemos apenas teoria — demonstramos na prática o que ensinamos, 
-                seja cultivando hortaliças, publicando artigos ou desenvolvendo protótipos.
-              </p>
-            </div>
-            
-            <div className="text-center p-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-full mb-6">
-                <Heart className="w-8 h-8 text-secondary" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Conhecimento acessível
-              </h3>
-              <p className="text-muted-foreground">
-                Acreditamos que conhecimento técnico não deve ser exclusivo de poucos. 
-                Nossos cursos são desenhados para ser claros, práticos e aplicáveis.
-              </p>
-            </div>
-            
-            <div className="text-center p-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-tertiary/10 rounded-full mb-6">
-                <Target className="w-8 h-8 text-tertiary" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Autonomia como objetivo
-              </h3>
-              <p className="text-muted-foreground">
-                Nosso maior sucesso é ver alunos aplicando o que aprenderam de forma 
-                independente, seja produzindo alimentos, publicando trabalhos ou criando negócios.
-              </p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Fundador</h2>
+          <div className="bg-card rounded-2xl p-8 md:p-10 border border-border shadow-elegant">
+            <h3 className="text-2xl font-bold text-foreground mb-1">Prof. Dr. Mardoqueu Martins da Costa</h3>
+            <p className="text-sm text-primary font-medium mb-6">Formação completa pela USP</p>
+            <ul className="space-y-2 text-muted-foreground mb-6">
+              <li>Graduação em Física (IFSC/USP)</li>
+              <li>Mestrado e doutorado em Engenharia Elétrica (EESC/USP)</li>
+              <li>Pós-doutorado em Engenharia de Biossistemas (ESALQ/USP)</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Autor de 22 artigos, 3 patentes e 9 softwares. Recebeu o Prêmio Santander de Empreendedorismo e o
+              II Prêmio Ibero-Americano de Inovação. Soma 18 financiamentos aprovados, de 7 fontes, entre
+              coordenação e participação.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={LATTES_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+              >
+                Currículo Lattes
+                <ExternalLink className="w-4 h-4" />
+              </a>
+              <a
+                href={ORCID_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+              >
+                ORCID
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -141,12 +175,9 @@ const AboutPage = () => {
       {/* Missão */}
       <section className="py-16 bg-gradient-hero">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Nossa Missão
-          </h2>
+          <h2 className="text-3xl font-bold text-white mb-6">Nossa missão</h2>
           <p className="text-xl text-white/90 leading-relaxed">
-            Democratizar conhecimento técnico para que mais pessoas conquistem autonomia produtiva 
-            — seja produzindo alimentos, avançando na carreira acadêmica ou criando soluções tecnológicas.
+            Levar conhecimento técnico e científico ao agro e a quem empreende, de forma clara e aplicável.
           </p>
         </div>
       </section>
