@@ -406,7 +406,7 @@ const CursoCultivoIndoorPage = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/cursos/cultivo-indoor.jpg"
+                  src="/img/site/curso-cultivo-indoor.jpg"
                   alt="Fazenda vertical com LED e prateleiras de plantas"
                   className="w-full h-[400px] object-cover"
                 />

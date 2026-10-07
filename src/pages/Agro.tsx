@@ -4,9 +4,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Leaf, LineChart, PlayCircle, BookOpen, Sprout } from "lucide-react";
+import { ArrowRight, LineChart, PlayCircle, BookOpen, Sprout } from "lucide-react";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import { collectionPageJsonLd } from "@/lib/seo-schemas";
+import ImageHero from "@/components/ImageHero";
 
 // Cultivee Agro (reestruturacao 2026-10-07): a frente de CONTEUDO sobre agro em
 // geral (decisao de 14/08: nao e so hidroponia). Os cursos sairam daqui para o
@@ -78,30 +79,20 @@ const AgroPage = () => {
       </Head>
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-24 pb-16 bg-gradient-agro">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
-            <Leaf className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Cultivee Agro</h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-            Conteúdo gratuito sobre o agro, com fonte: da horta em casa às cotações do mercado.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button asChild size="lg" className="bg-white text-agro hover:bg-white/90 font-semibold">
-              <Link to="/blog">Ler o blog</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              className="bg-white/20 text-white border-2 border-white hover:bg-white hover:text-agro"
-            >
-              <Link to="/cotacoes">Ver cotações de hoje</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <ImageHero
+        image="/img/site/topo-agro.jpg"
+        alt="Lavoura em curvas de nível sobre terra vermelha no interior de São Paulo, ao entardecer"
+        eyebrow="Cultivee Agro"
+        title="Conteúdo gratuito sobre o agro"
+        subtitle="Guias com fonte, cotações diárias do CEPEA e vídeos: da horta em casa ao mercado."
+      >
+        <Link to="/blog" className="inline-flex items-center justify-center rounded-full bg-sun text-deep font-bold px-7 py-3.5 hover:brightness-105 transition">
+          Ler o blog
+        </Link>
+        <Link to="/cotacoes" className="inline-flex items-center justify-center rounded-full border-2 border-white/60 text-white font-bold px-7 py-3.5 hover:bg-white/10 transition">
+          Ver cotações de hoje
+        </Link>
+      </ImageHero>
 
       {/* Guias em destaque */}
       <section className="py-16 bg-background">

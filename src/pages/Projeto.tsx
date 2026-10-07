@@ -1,6 +1,7 @@
 import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ImageHero from "@/components/ImageHero";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
@@ -214,31 +215,21 @@ const ProjetoPage = () => {
       </Head>
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-24 pb-20 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_70%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Projetos
-          </h1>
-          <p className="text-xl md:text-2xl text-white/85 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Pesquisa aplicada com financiamento público, executada pela Cultivee na ESALQTec.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#portfolio">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8">
-                Ver projetos
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </a>
-            <a href="#pipe">
-              <Button size="lg" className="bg-white/20 text-white border-2 border-white hover:bg-white hover:text-primary px-8">
-                Detalhe do PIPE
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
+      <ImageHero
+        ilustrativa
+        image="/img/site/topo-projetos.jpg"
+        alt="Módulo eletrônico com antena e sensores ao lado de canais de hidroponia numa estufa"
+        eyebrow="Projetos"
+        title="Pesquisa aplicada com financiamento público"
+        subtitle="Executada pela Cultivee na ESALQTec, em Piracicaba-SP."
+      >
+        <a href="#portfolio" className="inline-flex items-center justify-center rounded-full bg-sun text-deep font-bold px-7 py-3.5 hover:brightness-105 transition">
+          Ver projetos
+        </a>
+        <a href="#pipe" className="inline-flex items-center justify-center rounded-full border-2 border-white/60 text-white font-bold px-7 py-3.5 hover:bg-white/10 transition">
+          Detalhe do PIPE
+        </a>
+      </ImageHero>
 
       {/* Portfólio */}
       <section id="portfolio" className="py-20 bg-background">

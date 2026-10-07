@@ -1,8 +1,7 @@
 import { Head } from "vite-react-ssg";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import PillarsSection from "@/components/PillarsSection";
-import WhySection from "@/components/WhySection";
+import { HomeCursos, HomeProjetos, HomeGuias } from "@/components/HomeSections";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -38,8 +37,9 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <PillarsSection />
-        <WhySection />
+        <HomeCursos />
+        <HomeProjetos />
+        <HomeGuias />
         <NewsletterSection />
       </main>
       <Footer />

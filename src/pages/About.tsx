@@ -2,6 +2,7 @@ import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ImageHero from "@/components/ImageHero";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Leaf, GraduationCap, Landmark, ExternalLink, ArrowRight, Building2 } from "lucide-react";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
@@ -72,15 +73,13 @@ const AboutPage = () => {
       </Head>
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-24 pb-16 bg-gradient-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Sobre a Cultivee</h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Ensino, pesquisa e inovação para o agro e para quem empreende.
-          </p>
-        </div>
-      </section>
+      <ImageHero
+        image="/img/site/topo-sobre.jpg"
+        alt="Canteiros experimentais e uma pequena estufa ao amanhecer"
+        eyebrow="Sobre a Cultivee"
+        title="Ensino, pesquisa e inovação no agro"
+        subtitle="Para quem produz e para quem empreende, a partir da ESALQTec, em Piracicaba-SP."
+      />
 
       {/* Quem somos */}
       <section className="py-16 bg-background">

@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Manrope', 'system-ui', 'sans-serif'],
+				serif: ['Lora', 'Georgia', 'serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -69,22 +73,28 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Pillar colors
+				// Pillar colors (direcao de design 2026-10-07; `tech` = Projetos)
 				agro: {
-					DEFAULT: 'hsl(142 71% 45%)',
-					light: 'hsl(142 71% 55%)',
-					dark: 'hsl(142 71% 35%)'
+					DEFAULT: 'hsl(147 50% 32%)',
+					light: 'hsl(135 47% 46%)',
+					dark: 'hsl(157 64% 18%)'
 				},
 				educa: {
-					DEFAULT: 'hsl(217 91% 60%)',
-					light: 'hsl(217 91% 70%)',
-					dark: 'hsl(217 91% 50%)'
+					DEFAULT: 'hsl(205 55% 34%)',
+					light: 'hsl(205 50% 48%)',
+					dark: 'hsl(210 60% 22%)'
 				},
 				tech: {
-					DEFAULT: 'hsl(25 95% 53%)',
-					light: 'hsl(25 95% 63%)',
-					dark: 'hsl(25 95% 43%)'
-				}
+					DEFAULT: 'hsl(32 80% 42%)',
+					light: 'hsl(40 77% 60%)',
+					dark: 'hsl(28 80% 32%)'
+				},
+				deep: {
+					DEFAULT: 'hsl(var(--deep))',
+					light: 'hsl(152 50% 22%)',
+					dark: 'hsl(157 70% 8%)'
+				},
+				sun: 'hsl(var(--sun))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -97,18 +107,18 @@ export default {
 				'gradient-tertiary': 'var(--gradient-tertiary)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-agro': 'linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 55%))',
-				'gradient-educa': 'linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%))',
-				'gradient-tech': 'linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 63%))'
+				'gradient-agro': 'linear-gradient(135deg, hsl(147 50% 32%), hsl(157 64% 18%))',
+				'gradient-educa': 'linear-gradient(135deg, hsl(205 55% 34%), hsl(210 60% 22%))',
+				'gradient-tech': 'linear-gradient(135deg, hsl(32 80% 42%), hsl(38 77% 52%))'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
 				'glow': 'var(--shadow-glow)',
 				'tech': 'var(--shadow-tech)',
 				'tertiary': 'var(--shadow-tertiary)',
-				'agro': '0 8px 32px hsl(142 71% 45% / 0.25)',
-				'educa': '0 8px 32px hsl(217 91% 60% / 0.25)',
-				'tech-shadow': '0 8px 32px hsl(25 95% 53% / 0.25)'
+				'agro': '0 18px 40px -20px hsl(157 64% 14% / 0.4)',
+				'educa': '0 18px 40px -20px hsl(210 60% 22% / 0.4)',
+				'tech-shadow': '0 18px 40px -20px hsl(28 80% 32% / 0.4)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',

@@ -49,15 +49,22 @@ Declaradas em [`src/App.tsx`](./src/App.tsx). Ordem importa — o `*` catch-all 
 
 `blog/:slug` usa `getStaticPaths` retornando `articlesMeta.map(a => '/blog/' + a.slug)` — `vite-react-ssg` pré-renderiza um HTML por artigo no build. Toda nova página deve (1) viver em `src/pages/`, (2) ser adicionada em `App.tsx` **antes** do `*`, (3) também entrar em [`scripts/build-sitemap.ts`](./scripts/build-sitemap.ts) na lista `STATIC_PATHS`. A página precisa importar `<Navbar />` e `<Footer />` por conta própria — não há layout global.
 
-## Design system de 3 pilares
+## Design system (direção "escola do agro", desde 2026-10-07)
 
-O site é construído em torno de 3 pilares com cores dedicadas. **Nunca introduzir novas cores sem estender esse sistema** — use os tokens existentes.
+Arquitetura: Cultivee = **Agro** (conteúdo) + **Educa** (escola, trilhas Cultivo e Negócios) + **Projetos**. Direção de design escolhida pelo dono: "A + títulos da C" (mockups em `../design-mockups/`). **Nunca introduzir cores fora destes tokens.**
 
-| Pilar | Cor HSL | Classes Tailwind | Gradient | Shadow |
-|---|---|---|---|---|
-| **Agro** (verde) | `142 71% 45%` | `text-agro`, `bg-agro`, `text-agro-dark` | `bg-gradient-agro` | `shadow-agro` |
-| **Educa** (azul) | `217 91% 60%` | `text-educa`, `bg-educa`, `text-educa-dark` | `bg-gradient-educa` | `shadow-educa` |
-| **Tech** (laranja) | `25 95% 53%` | `text-tech`, `bg-tech`, `text-tech-dark` | `bg-gradient-tech` | `shadow-tech-shadow` |
+| Token | Cor HSL | Uso |
+|---|---|---|
+| `agro` / `--primary` | `147 50% 32%` (light `135 47% 46%`, dark `157 64% 18%`) | verde-folha: links, selos, botão padrão |
+| `deep` | `157 64% 14%` (light `152 50% 22%`, dark `157 70% 8%`) | verde-escuro: topos, faixas, rodapé (`deep-dark`) |
+| `sun` | `40 77% 60%` | dourado: botão de destaque (`bg-sun text-deep`) e sobrelinhas |
+| `educa` / `--secondary` | `205 55% 34%` | azul-petróleo |
+| `tech` / `--tertiary` | `32 80% 42%` | âmbar, usado em **Projetos** (o pilar Tech não existe mais) |
+
+- **Fontes:** Manrope no texto; **Lora** (a mesma da landing /fomento) em `h1` e `h2` (regra global em `src/index.css`). Carregadas no `<head>` do `index.html`.
+- **Topos de página:** componente [`ImageHero`](./src/components/ImageHero.tsx) (foto em tela cheia + degradê `deep`). Prop `ilustrativa` mostra a legenda "Imagem ilustrativa" quando a cena representa algo da Cultivee.
+- **Imagens de design** (topos, capas de curso, faixas, guias em destaque) ficam em `public/img/site/` e são **geradas no estilo da casa** por `00-Sites/Projeto-gerador-artigos-e-posts/02-Gerador-imagem-API/gerar_site_cultivee.py` (sem pessoas, sem texto, sem marca; conferir cada imagem antes de usar). Cards em **16:9**. Fotos reais ficam para prova: protótipos, telas do app.
+- **Cursos:** fonte única em [`src/data/cursos.ts`](./src/data/cursos.ts) (home e /educa) e card em [`CourseCard`](./src/components/CourseCard.tsx).
 
 Adicionalmente, o CSS variables em [`src/index.css`](./src/index.css) expõe:
 - `--primary` = Agro (verde) — é o **padrão global** do site (botões primários, ring do input, acento do Navbar)

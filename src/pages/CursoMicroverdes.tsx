@@ -385,7 +385,7 @@ const CursoMicroverdesPage = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/cursos/microverdes.jpg"
+                  src="/img/site/curso-microverdes.jpg"
                   alt="Microverdes frescos prontos para colheita"
                   className="w-full h-[400px] object-cover"
                 />

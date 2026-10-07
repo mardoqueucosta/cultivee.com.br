@@ -436,7 +436,7 @@ const CursoHidroponiaPage = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/cursos/hidroponia.jpg"
+                  src="/img/site/curso-hidroponia.jpg"
                   alt="Sistema hidropônico NFT com hortaliças"
                   className="w-full h-[400px] object-cover"
                 />

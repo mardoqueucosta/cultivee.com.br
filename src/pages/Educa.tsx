@@ -1,10 +1,8 @@
 import { Head } from "vite-react-ssg";
-import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Sprout, Briefcase, FileText, Store } from "lucide-react";
+import { BookOpen, Sprout, Briefcase } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -13,86 +11,12 @@ import {
 } from "@/components/ui/accordion";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import { collectionPageJsonLd } from "@/lib/seo-schemas";
+import ImageHero from "@/components/ImageHero";
+import CourseCard from "@/components/CourseCard";
+import { cursosCultivo as cultivo, cursosNegocios as negocios, type Curso } from "@/data/cursos";
 
-// Cultivee Educa (reestruturacao 2026-10-07): a escola, com duas trilhas.
-// Status honesto em cada curso: nenhum curso esta aberto; Cultivo em producao
-// (lista de espera via WhatsApp, decisao do dono) e Negocios com a mentoria de
-// captacao ja funcionando (landing estatica /fomento, por isso <a href>).
-const WHATSAPP = "https://wa.me/5519991644181?text=";
-
-type Course = {
-  title: string;
-  description: string;
-  status: string;
-  href: string;
-  external?: boolean;
-  cta: string;
-  image?: string;
-  icon?: typeof BookOpen;
-};
-
-const cultivo: Course[] = [
-  {
-    title: "Microverdes",
-    description:
-      "Do substrato à colheita: espécies, iluminação, irrigação, higiene e como planejar a venda para restaurantes e feiras.",
-    status: "Em produção · lista de espera",
-    href: "/cursos/microverdes",
-    cta: "Ver o curso",
-    image: "/cursos/microverdes.jpg",
-  },
-  {
-    title: "Hidroponia",
-    description:
-      "Sistema NFT na prática: montagem, solução nutritiva, pH e condutividade, manejo de pragas e planejamento da produção.",
-    status: "Em produção · lista de espera",
-    href: "/cursos/hidroponia",
-    cta: "Ver o curso",
-    image: "/cursos/hidroponia.jpg",
-  },
-  {
-    title: "Cultivo indoor",
-    description:
-      "Ambiente controlado: LED, clima, automação e os riscos de quem quer escalar uma fazenda vertical.",
-    status: "Em breve",
-    href: "/cursos/cultivo-indoor",
-    cta: "Ver o conteúdo previsto",
-    image: "/cursos/cultivo-indoor.jpg",
-  },
-];
-
-const negocios: Course[] = [
-  {
-    title: "Captação de recursos",
-    description:
-      "Mentoria para escrever e submeter projetos a agências de fomento: PIPE e FAPESP, Centelha, CNPq, Finep e EMBRAPII. Preço fixo, sem percentual sobre o recurso.",
-    status: "Mentoria disponível",
-    href: "/fomento",
-    external: true,
-    cta: "Conhecer a mentoria",
-    image: "/cursos/empreendedorismo.jpg",
-  },
-  {
-    title: "Escrita de projetos",
-    description:
-      "Como transformar uma ideia ou resultado de pesquisa em projeto: problema, objetivos, metas verificáveis, cronograma e orçamento.",
-    status: "Em breve",
-    href: `${WHATSAPP}${encodeURIComponent("Quero entrar na lista de espera do curso de Escrita de Projetos da Cultivee")}`,
-    external: true,
-    cta: "Entrar na lista de espera",
-    icon: FileText,
-  },
-  {
-    title: "Venda o que você produz",
-    description:
-      "Marketing e vendas para quem produz: precificação, canais de venda direta, restaurantes e feiras, e presença nas redes.",
-    status: "Em breve",
-    href: `${WHATSAPP}${encodeURIComponent("Quero entrar na lista de espera do curso de Marketing e Vendas da Cultivee")}`,
-    external: true,
-    cta: "Entrar na lista de espera",
-    icon: Store,
-  },
-];
+// Cultivee Educa (reestruturacao 2026-10-07): a escola, com duas trilhas. Os cursos
+// vem de src/data/cursos.ts (fonte unica, tambem usada na home).
 
 const faqs = [
   {
@@ -117,54 +41,6 @@ const faqs = [
   },
 ];
 
-const CourseCard = ({ course }: { course: Course }) => {
-  const Icon = course.icon;
-  const linkClass = "inline-flex items-center gap-2 font-semibold text-educa hover:text-educa-dark";
-  const label = (
-    <>
-      {course.cta}
-      <ArrowRight className="w-4 h-4" />
-    </>
-  );
-  return (
-    <article className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-educa transition-shadow duration-300 flex flex-col">
-      {course.image ? (
-        <img
-          src={course.image}
-          alt={`Curso de ${course.title}`}
-          className="w-full aspect-[16/9] object-cover bg-muted"
-          loading="lazy"
-          decoding="async"
-        />
-      ) : (
-        <div className="w-full aspect-[16/9] bg-educa/10 flex items-center justify-center">
-          {Icon && <Icon className="w-14 h-14 text-educa" aria-hidden="true" />}
-        </div>
-      )}
-      <div className="p-6 flex flex-col flex-1">
-        <span className="self-start px-3 py-1 bg-educa/10 text-educa text-xs font-semibold rounded-full mb-3">
-          {course.status}
-        </span>
-        <h3 className="text-xl font-bold text-foreground mb-2">{course.title}</h3>
-        <p className="text-muted-foreground mb-6 flex-1">{course.description}</p>
-        {course.external ? (
-          <a
-            href={course.href}
-            className={linkClass}
-            {...(course.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-          >
-            {label}
-          </a>
-        ) : (
-          <Link to={course.href} className={linkClass}>
-            {label}
-          </Link>
-        )}
-      </div>
-    </article>
-  );
-};
-
 const Track = ({
   id,
   icon: Icon,
@@ -177,14 +53,14 @@ const Track = ({
   icon: typeof BookOpen;
   title: string;
   description: string;
-  courses: Course[];
+  courses: Curso[];
   muted?: boolean;
 }) => (
   <section id={id} className={`py-16 scroll-mt-20 ${muted ? "bg-muted" : "bg-background"}`}>
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex items-start gap-4 mb-10">
-        <div className="inline-flex items-center justify-center w-14 h-14 bg-educa/10 rounded-xl flex-shrink-0">
-          <Icon className="w-7 h-7 text-educa" />
+        <div className="inline-flex items-center justify-center w-14 h-14 bg-accent rounded-xl flex-shrink-0">
+          <Icon className="w-7 h-7 text-deep" />
         </div>
         <div>
           <h2 className="text-3xl font-bold text-foreground mb-2">{title}</h2>
@@ -250,30 +126,26 @@ const EducaPage = () => {
       </Head>
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-24 pb-16 bg-gradient-educa">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
-            <BookOpen className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Cultivee Educa</h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-            Aprenda a produzir e a transformar o que você sabe em projeto, recurso e venda.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button asChild size="lg" className="bg-white text-educa hover:bg-white/90 font-semibold">
-              <a href="#cultivo">Trilha Cultivo</a>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              className="bg-white/20 text-white border-2 border-white hover:bg-white hover:text-educa"
-            >
-              <a href="#negocios">Trilha Negócios</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <ImageHero
+        image="/img/site/topo-educa.jpg"
+        alt="Bancada de aula prática numa estufa, com bandejas de mudas e canais de hidroponia"
+        eyebrow="Cultivee Educa"
+        title="Aprenda a produzir e a empreender no agro"
+        subtitle="Duas trilhas: Cultivo, para quem quer produzir, e Negócios, para quem quer transformar o que sabe em projeto, recurso e venda."
+      >
+        <a
+          href="#cultivo"
+          className="inline-flex items-center justify-center rounded-full bg-sun text-deep font-bold px-7 py-3.5 hover:brightness-105 transition"
+        >
+          Trilha Cultivo
+        </a>
+        <a
+          href="#negocios"
+          className="inline-flex items-center justify-center rounded-full border-2 border-white/60 text-white font-bold px-7 py-3.5 hover:bg-white/10 transition"
+        >
+          Trilha Negócios
+        </a>
+      </ImageHero>
 
       <Track
         id="cultivo"
@@ -301,7 +173,7 @@ const EducaPage = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card border border-border rounded-xl px-6 data-[state=open]:shadow-educa transition-shadow"
+                className="bg-card border border-border rounded-xl px-6 data-[state=open]:shadow-elegant transition-shadow"
               >
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}
