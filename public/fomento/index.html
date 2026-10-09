@@ -41,20 +41,10 @@
 <meta property="og:url" content="https://cultivee.com.br/fomento">
 <link rel="canonical" href="https://cultivee.com.br/fomento">
 <!-- og:image = foto quadrada do rosto (mardoqueu.jpg): o WhatsApp renderiza preview compacto com thumb quadrado, onde o rosto preenche bem e a arte paisagem vira tira ilegível (testado 2026-07-03). A arte 1200x630 (img/og-fomento-v2.jpg, retrato circular + gancho R$ + chips) fica no twitter:image e disponível para criativos de anúncio. Ao trocar imagens, usar URL NOVA (cache de preview do WhatsApp é por URL e não expira) e re-scrape via Graph API ou Sharing Debugger (developers.facebook.com/tools/debug). -->
-<!-- Google Analytics 4: propriedade do site Cultivee (G-42DX5PZB0B), pois a landing está no domínio cultivee.com.br. Trocar por propriedade dedicada do fomento se quiser separar os dados. O clique no WhatsApp por seção dispara evento GA4 via gtag automaticamente. -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-42DX5PZB0B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-42DX5PZB0B');</script>
-<!-- Meta Pixel (id 983656691147336). PageView aqui; o evento Lead dispara no clique de WhatsApp, no rastreamento do fim do <body>. -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','983656691147336');
-window.cvCapi=function(name,extra){try{var id=(self.crypto&&crypto.randomUUID)?crypto.randomUUID():(Date.now()+'-'+Math.random().toString(16).slice(2));if(typeof window.fbq==='function')window.fbq('track',name,extra||{},{eventID:id});var fbp=(document.cookie.match(/(?:^|; )_fbp=([^;]+)/)||[])[1];var fbc=(document.cookie.match(/(?:^|; )_fbc=([^;]+)/)||[])[1];fetch('https://cultivee.com.br/capi',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({event_name:name,event_id:id,event_source_url:location.href,content_name:extra&&extra.content_name,fbp:fbp,fbc:fbc})}).catch(function(){});}catch(e){}};
-cvCapi('PageView');
-</script>
+<!-- Medicao (GA4 G-42DX5PZB0B + slot Google Ads desligado + Pixel 983656691147336 + CAPI + atribuicao + ref):
+     TUDO em medicao.js, o ponto unico de medicao. Ver projeto-curso-captacao-recursos/MEDICAO-DO-SITE.md.
+     PREVIA usa caminho relativo; em PRODUCAO trocar por src="/fomento/medicao.js" (a URL final nao tem barra). -->
+<script src="/fomento/medicao.js"></script>
 <noscript><img height="1" width="1" style="display:none" alt=""
 src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -279,6 +269,44 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .skip{position:fixed;left:8px;top:-60px;z-index:100;background:var(--green-700);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;font-weight:600;transition:top .15s}
   .skip:focus{top:8px}
   a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--green-600);outline-offset:2px;border-radius:4px}
+
+  /* ===== Formulario do Diagnostico de Prontidao (dialog nativo) ===== */
+  .wa-direct{display:inline-block;margin-top:.55rem;font-size:.88rem;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+  .wa-direct:hover{color:var(--green-700)}
+  body:has(dialog.fdx[open]){overflow:hidden}
+  dialog.fdx{border:0;padding:0;margin:auto;width:min(560px,calc(100vw - 24px));max-height:calc(100dvh - 24px);border-radius:18px;background:#fff;color:var(--body);box-shadow:0 24px 70px rgba(11,58,44,.28);overflow:auto;overscroll-behavior:contain}
+  dialog.fdx::backdrop{background:rgba(11,36,30,.55)}
+  .fdx-in{padding:22px 22px 20px}
+  .fdx-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  .fdx h2{font-size:1.32rem;outline:none}
+  .fdx-sub{font-size:.92rem;color:var(--muted);margin:.5rem 0 0;line-height:1.5}
+  .fdx-x{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:1.4rem;line-height:1;cursor:pointer;display:grid;place-items:center}
+  .fdx-x:hover{background:var(--green-50)}
+  .fdx form{margin-top:1rem;display:grid;gap:16px}
+  .fdx fieldset{border:0;min-width:0}
+  .fdx legend{font-weight:600;color:var(--ink);font-size:.97rem;margin-bottom:8px;padding:0;line-height:1.4}
+  .fdx legend .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:var(--green-600);color:#fff;font-size:.78rem;margin-right:7px;vertical-align:1px}
+  .fdx .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .fdx .opt{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--green-50);border-radius:999px;padding:9px 14px;font-size:.92rem;line-height:1.25;cursor:pointer;max-width:100%}
+  .fdx .opt input{accent-color:var(--green-700);width:17px;height:17px;flex:none;margin:0}
+  .fdx .opt:has(input:checked){border-color:var(--green-600);background:var(--green-100);color:var(--green-900);font-weight:600}
+  .fdx .opt:has(input:focus-visible){outline:2px solid var(--green-600);outline-offset:2px}
+  .fdx .extra{margin-top:10px}
+  .fdx .extra[hidden]{display:none}
+  .fdx label.txt{display:block;font-size:.88rem;color:var(--muted);margin-bottom:5px}
+  .fdx input[type=text],.fdx input[type=date]{width:100%;font:inherit;font-size:16px;color:var(--ink);border:1px solid #cfdcd6;border-radius:12px;padding:11px 13px;background:#fff}
+  .fdx input[type=text]:focus,.fdx input[type=date]:focus{outline:2px solid var(--green-600);outline-offset:1px;border-color:var(--green-600)}
+  .fdx fieldset.err .opts .opt{border-color:#c0761a}
+  .fdx .err-msg{color:#9a4f00;font-size:.86rem;margin-top:6px}
+  .fdx .err-msg:empty{display:none}
+  .fdx .send{width:100%;justify-content:center}
+  .fdx-fine{font-size:.82rem;color:var(--muted);margin:0;text-align:center;line-height:1.5}
+  .fdx-alt{text-align:center;margin:0}
+  @media(max-width:560px){
+    dialog.fdx{width:100vw;max-width:100vw;max-height:100dvh;height:100dvh;border-radius:0}
+    .fdx-in{padding:16px 16px 22px}
+    .fdx .opt{padding:9px 12px;font-size:.9rem}
+  }
 </style>
 </head>
 <body>
@@ -303,7 +331,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       <a href="#guia">Com quem contar</a>
       <a href="#metodo">Método</a>
       <a href="#faq">Dúvidas</a>
-      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Quero conversar</a>
+      <a class="btn btn-primary" data-origem="header" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Quero conversar</a>
     </nav>
   </div>
 </header>
@@ -323,11 +351,12 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Um olhar dos dois lados: avaliei projetos de outros pesquisadores e participei de 18 financiamentos aprovados.</li>
       </ul>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">
+        <button type="button" class="btn btn-primary" data-abre-form="hero">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
           Quero conversar sobre o meu projeto
-        </a>
+        </button>
         <p class="cta-note">Diagnóstico de Prontidão gratuito, 20 a 30 minutos, sem compromisso. 🔒 O que você me contar sobre o seu projeto é tratado em sigilo.</p>
+        <a class="wa-direct" data-origem="hero-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a>
       </div>
     </div>
     <aside class="cred-card">
@@ -377,7 +406,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       <div class="vcard"><div class="lbl">Finep Mais Inovação · subvenção</div><div class="val">até R$ 5 milhões</div><div class="dur">por projeto (Subvenção Econômica Regional)</div></div>
     </div>
     <div class="inline-cta" style="text-align:center">
-      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Vi%20os%20valores%20dos%20editais%20e%20quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20do%20meu%20projeto." target="_blank" rel="noopener">Quero o Diagnóstico de Prontidão gratuito <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Vi%20os%20valores%20dos%20editais%20e%20quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20do%20meu%20projeto." data-origem="valores" target="_blank" rel="noopener">Quero o Diagnóstico de Prontidão gratuito <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p class="cta-note">Gratuito, 20 a 30 minutos pelo WhatsApp. Você sai sabendo qual edital cabe no seu projeto e se dá tempo para a próxima janela.</p>
     </div>
     <p class="muted" style="font-size:.86rem;margin-top:1.4rem;text-align:center">Tetos por projeto conforme as normas vigentes de cada edital (2026). Os valores variam por chamada e edição, e a aprovação depende sempre da avaliação dos pareceristas.</p>
@@ -396,19 +425,19 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <span class="cc-tag">Pesquisador</span>
         <b>Estou na universidade</b>
         <span class="cc-desc">Primeiro projeto, ou um que voltou reprovado. FAPESP Auxílio Regular (até R$ 600 mil), CNPq Universal (até R$ 250 mil) e bolsas CAPES.</span>
-        <a class="btn btn-primary cc-cta" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Sou%20pesquisador%20e%20quero%20conversar%20sobre%20o%20meu%20projeto%20(FAPESP%2C%20CNPq%20ou%20CAPES)." target="_blank" rel="noopener">Conversar sobre o meu projeto</a>
+        <button type="button" class="btn btn-primary cc-cta" data-abre-form="caminho-academico" data-perfil="academico">Conversar sobre o meu projeto</button>
       </div>
       <div class="chooser-card">
         <span class="cc-tag">Da pesquisa para a empresa</span>
         <b>Quero levar a minha pesquisa para o mercado</b>
         <span class="cc-desc">PIPE Fase 1 (até R$ 300 mil) e Centelha (até R$ 128 mil) financiam tirar a ideia do laboratório, sem exigir empresa montada.</span>
-        <a class="btn btn-primary cc-cta" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20conversar%20sobre%20uma%20submiss%C3%A3o%20de%20PIPE%20Fase%201%20ou%20Centelha." target="_blank" rel="noopener">Conversar sobre PIPE ou Centelha</a>
+        <button type="button" class="btn btn-primary cc-cta" data-abre-form="caminho-ponte" data-perfil="ponte">Conversar sobre PIPE ou Centelha</button>
       </div>
       <div class="chooser-card">
         <span class="cc-tag">Empresa</span>
         <b>Tenho uma empresa de base tecnológica</b>
         <span class="cc-desc">PIPE Fase 2 (até R$ 1,5 milhão), Finep e EMBRAPII: capital para o seu P&amp;D sem ceder participação na empresa.</span>
-        <a class="btn btn-primary cc-cta" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Tenho%20uma%20empresa%20e%20quero%20conversar%20sobre%20PIPE%2C%20Finep%20ou%20EMBRAPII." target="_blank" rel="noopener">Conversar sobre o meu edital</a>
+        <button type="button" class="btn btn-primary cc-cta" data-abre-form="caminho-empresa" data-perfil="empresa">Conversar sobre o meu edital</button>
       </div>
     </div>
   </div>
@@ -441,7 +470,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       </div>
     </div>
     <div class="inline-cta">
-      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20uma%20conversa%20honesta%20sobre%20o%20meu%20projeto%20antes%20de%20submeter." target="_blank" rel="noopener">Quero uma conversa honesta sobre o meu projeto <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20uma%20conversa%20honesta%20sobre%20o%20meu%20projeto%20antes%20de%20submeter." data-origem="dor" target="_blank" rel="noopener">Quero uma conversa honesta sobre o meu projeto <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
@@ -588,7 +617,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
     </div>
 
     <div class="inline-cta">
-      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Quero conversar sobre o meu caso <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." data-origem="oferta" target="_blank" rel="noopener">Quero conversar sobre o meu caso <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p class="cta-note">Gratuito, sem compromisso. Resposta pelo WhatsApp, em sigilo.</p>
     </div>
   </div>
@@ -640,7 +669,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>O custo de não agir: submeter sem uma leitura crítica antes.</li>
     </ul>
     <div class="inline-cta">
-      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20garantir%20tempo%20para%20preparar%20meu%20projeto%20com%20calma." target="_blank" rel="noopener">Garantir tempo para corrigir com calma <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-primary" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20garantir%20tempo%20para%20preparar%20meu%20projeto%20com%20calma." data-origem="urgencia" target="_blank" rel="noopener">Garantir tempo para corrigir com calma <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
@@ -656,11 +685,12 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Diagnóstico de Prontidão gratuito, sem compromisso</li>
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Atendimento individual, do diagnóstico à submissão</li>
       </ul>
-      <a class="btn btn-primary" style="font-size:1.1rem;padding:17px 32px" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">
+      <button type="button" class="btn btn-primary" style="font-size:1.1rem;padding:17px 32px" data-abre-form="cta-final">
         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
         Quero começar por uma conversa gratuita
-      </a>
+      </button>
       <p class="cta-note" style="margin-top:.9rem">Resposta pelo WhatsApp, em sigilo.</p>
+      <a class="wa-direct" data-origem="cta-final-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -673,7 +703,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
     <span class="cv-org">Mentoria oferecida pela <a href="/educa">Cultivee Educa</a>, trilha Negócios · Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda, incubada na ESALQTec (ESALQ/USP), Piracicaba-SP</span>
     <div class="row">
       <span>Pesquisador e avaliador de projetos · Formação completa pela USP, da graduação ao pós-doutorado</span>
-      <a href="https://wa.me/5519991644181" target="_blank" rel="noopener">WhatsApp: (19) 99164-4181</a>
+      <a data-origem="rodape" href="https://wa.me/5519991644181" target="_blank" rel="noopener">WhatsApp: (19) 99164-4181</a>
       <a href="http://lattes.cnpq.br/7819717440359474" target="_blank" rel="noopener">Currículo Lattes</a>
       <a href="https://orcid.org/0000-0002-4395-3069" target="_blank" rel="noopener">ORCID</a>
     </div>
@@ -681,53 +711,198 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener" aria-label="Agendar conversa pelo WhatsApp">
+<!-- FORMULARIO DO DIAGNOSTICO (abre pelos CTAs do hero, dos caminhos e do CTA final).
+     Ao enviar: abre o wa.me com as respostas + [ref: X-XXXX anuncio] (nova aba ou app) e leva esta
+     aba para /obrigado/?tipo=diagnostico, que dispara a conversao do formulario (medicao.js). -->
+<dialog class="fdx" id="diagnostico" aria-labelledby="fdx-titulo" aria-describedby="fdx-sub">
+  <div class="fdx-in">
+    <div class="fdx-top">
+      <h2 id="fdx-titulo" tabindex="-1">Diagnóstico de Prontidão gratuito</h2>
+      <button type="button" class="fdx-x" data-fecha-form aria-label="Fechar o formulário">&times;</button>
+    </div>
+    <p class="fdx-sub" id="fdx-sub">Cinco respostas rápidas para eu chegar à conversa já sabendo do seu caso. Ao enviar, o WhatsApp abre com tudo escrito; você revisa e manda.</p>
+    <form id="fdx-form" novalidate>
+      <fieldset data-q="edital">
+        <legend><span class="n" aria-hidden="true">1</span>Qual edital você tem em vista?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="edital" value="PIPE Fase 1" required>PIPE Fase 1</label>
+          <label class="opt"><input type="radio" name="edital" value="PIPE Fase 2">PIPE Fase 2</label>
+          <label class="opt"><input type="radio" name="edital" value="Centelha">Centelha</label>
+          <label class="opt"><input type="radio" name="edital" value="Universal CNPq">Universal (CNPq)</label>
+          <label class="opt"><input type="radio" name="edital" value="Finep">Finep</label>
+          <label class="opt"><input type="radio" name="edital" value="Outro">Outro</label>
+          <label class="opt"><input type="radio" name="edital" value="Ainda não sei">Ainda não sei</label>
+        </div>
+        <div class="extra" id="fdx-outro-box" hidden>
+          <label class="txt" for="fdx-outro">Qual? (opcional)</label>
+          <input type="text" id="fdx-outro" name="edital_outro" maxlength="60" autocomplete="off" placeholder="Ex.: Auxílio Regular FAPESP, EMBRAPII">
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset data-q="prazo">
+        <legend><span class="n" aria-hidden="true">2</span>Qual é o prazo?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="prazo" value="data" required>Tenho data limite</label>
+          <label class="opt"><input type="radio" name="prazo" value="Fluxo contínuo">Fluxo contínuo</label>
+          <label class="opt"><input type="radio" name="prazo" value="Não sei">Não sei</label>
+        </div>
+        <div class="extra" id="fdx-data-box" hidden>
+          <label class="txt" for="fdx-data">Data limite</label>
+          <input type="date" id="fdx-data" name="prazo_data">
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset data-q="estagio">
+        <legend><span class="n" aria-hidden="true">3</span>Em que ponto está a proposta?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="estagio" value="Ideia" required>Ideia</label>
+          <label class="opt"><input type="radio" name="estagio" value="Rascunho">Rascunho</label>
+          <label class="opt"><input type="radio" name="estagio" value="Projeto pronto para revisar">Pronto para revisar</label>
+          <label class="opt"><input type="radio" name="estagio" value="Já submeti e voltou com parecer">Já submeti e voltou com parecer</label>
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset data-q="perfil">
+        <legend><span class="n" aria-hidden="true">4</span>Qual destes descreve você?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="perfil" value="Acadêmico" data-perfil="academico" required>Acadêmico</label>
+          <label class="opt"><input type="radio" name="perfil" value="Pesquisador virando empresário" data-perfil="ponte">Pesquisador virando empresário</label>
+          <label class="opt"><input type="radio" name="perfil" value="Empresa" data-perfil="empresa">Empresa</label>
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset data-q="investe">
+        <legend><span class="n" aria-hidden="true">5</span>Se o diagnóstico mostrar que vale a pena, você tem condição de investir em ajuda especializada nesta submissão?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="investe" value="Sim" required>Sim</label>
+          <label class="opt"><input type="radio" name="investe" value="Depende do valor">Depende do valor</label>
+          <label class="opt"><input type="radio" name="investe" value="Não agora">Não agora</label>
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <div data-q="nome">
+        <label class="txt" for="fdx-nome" style="font-weight:600;color:var(--ink);font-size:.97rem">Seu nome</label>
+        <input type="text" id="fdx-nome" name="nome" required maxlength="60" autocomplete="name" placeholder="Como prefere ser chamado(a)">
+        <p class="err-msg" aria-live="polite"></p>
+      </div>
+
+      <button type="submit" class="btn btn-primary send">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Pedir a minha conversa gratuita
+      </button>
+      <p class="fdx-fine">A conversa é gratuita em qualquer resposta. 🔒 Seu nome segue só na mensagem do WhatsApp, que você revisa antes de enviar.</p>
+      <p class="fdx-alt"><a class="wa-direct" data-origem="formulario-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a></p>
+    </form>
+  </div>
+</dialog>
+
+<a class="wa-float" data-origem="flutuante" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20gratuito%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener" aria-label="Agendar conversa pelo WhatsApp">
   <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
   <span>Quero conversar</span>
 </a>
 
 <script>
 (function(){
-  /* Atribuicao anuncio -> conversa: le utm_content da URL (persiste na sessao) e
-     anexa "[ref: ...]" a mensagem pre-preenchida de todos os botoes de WhatsApp.
-     Sem isso o CPQL por anuncio (KPI da campanha) nao e legivel no WhatsApp. */
-  var ref='';
-  try{
-    ref=new URLSearchParams(location.search).get('utm_content')||sessionStorage.getItem('cv_ref')||'';
-    ref=String(ref).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,40);
-    if(ref){
-      try{sessionStorage.setItem('cv_ref',ref);}catch(_){/* sem sessao, segue */}
-      document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-        try{
-          var u=new URL(a.href);
-          var t=u.searchParams.get('text');
-          if(t===null||t.indexOf('[ref: ')!==-1) return;
-          a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(t+' [ref: '+ref+']');
-        }catch(_){/* link fora do padrao: nao mexe */}
-      });
+  /* A medicao inteira (GA4, Pixel/CAPI, atribuicao, [ref], clique no WhatsApp) mora em medicao.js.
+     Aqui fica so o comportamento do formulario. O clique em qualquer a[href*="wa.me"] e tratado
+     pelo listener de medicao.js: 1 gerar_lead_whatsapp + 1 Lead por clique, com origem = data-origem.
+     click_whatsapp (evento antigo) foi SUBSTITUIDO por gerar_lead_whatsapp: ver MEDICAO-DO-SITE.md. */
+  var M=window.cvMedicao;
+  var dlg=document.getElementById('diagnostico');
+  var form=document.getElementById('fdx-form');
+  if(!dlg||!form) return;
+  var origem='form', opener=null;
+  function ga(name,params){ try{ if(M) M.evento(name,params); }catch(_){} }
+  var MSG_PADRAO='Olá, Mardoqueu! Quero o Diagnóstico de Prontidão gratuito do meu projeto (captação de fomento).';
+  /* Codigos fechados das respostas: e SO isto que vai ao GA4 e ao registro (nunca nome, data ou texto livre). */
+  var COD={
+    edital:{'PIPE Fase 1':'pipe-f1','PIPE Fase 2':'pipe-f2','Centelha':'centelha','Universal CNPq':'universal-cnpq','Finep':'finep','Outro':'outro','Ainda não sei':'nao-sei'},
+    prazo:{'data':'data-limite','Fluxo contínuo':'fluxo-continuo','Não sei':'nao-sei'},
+    estagio:{'Ideia':'ideia','Rascunho':'rascunho','Projeto pronto para revisar':'pronto-revisar','Já submeti e voltou com parecer':'parecer'},
+    perfil:{'Acadêmico':'academico','Pesquisador virando empresário':'ponte','Empresa':'empresa'},
+    investe:{'Sim':'sim','Depende do valor':'depende','Não agora':'nao-agora'}
+  };
+  function hoje(){var d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,10);}
+  function val(n){var el=form.querySelector('input[name="'+n+'"]:checked');return el?el.value:'';}
+  function sync(){
+    document.getElementById('fdx-outro-box').hidden=val('edital')!=='Outro';
+    document.getElementById('fdx-data-box').hidden=val('prazo')!=='data';
+  }
+  function limpa(e){
+    sync();
+    var box=e.target.closest('[data-q]');
+    if(box){box.classList.remove('err');var m=box.querySelector('.err-msg');if(m)m.textContent='';}
+  }
+  form.addEventListener('change',limpa);
+  form.addEventListener('input',limpa);
+  function abrirForm(btn){
+    opener=btn; origem=btn.getAttribute('data-abre-form')||'form';
+    var p=btn.getAttribute('data-perfil');
+    if(p){var r=form.querySelector('input[name="perfil"][data-perfil="'+p+'"]');if(r)r.checked=true;}
+    document.getElementById('fdx-data').min=hoje();
+    sync();
+    /* Abrir o formulario NAO e lead: evento de funil, sem valor e sem Pixel. */
+    ga('form_diagnostico_open',{origem:origem});
+    if(typeof dlg.showModal!=='function'){
+      /* Navegador sem <dialog>: segue direto ao WhatsApp como clique comum (1 Lead). */
+      var a=document.createElement('a'); a.href=M?M.urlWhatsApp(MSG_PADRAO):'https://wa.me/5519991644181';
+      a.target='_blank'; a.rel='noopener'; a.setAttribute('data-origem',origem); a.hidden=true;
+      document.body.appendChild(a); a.click(); a.remove(); return;
     }
-  }catch(_){/* atribuicao nunca pode quebrar a pagina */}
-  function locOf(a){
-    if(a.classList.contains('wa-float')) return 'flutuante';
-    if(a.closest('header')) return 'header';
-    if(a.closest('footer')) return 'footer';
-    var s=a.closest('section');
-    if(s){ if(s.id) return s.id; var c=(s.className||'').split(' ').filter(function(x){return x&&x!=='sec';}); return c[0]||'secao'; }
-    return 'outro';
+    dlg.showModal();
+    document.getElementById('fdx-titulo').focus();
   }
-  function track(loc){
-    window.dataLayer=window.dataLayer||[];
-    window.dataLayer.push({event:'click_whatsapp',cta_location:loc,cta_ref:ref||''});
-    if(typeof window.gtag==='function') window.gtag('event','click_whatsapp',{cta_location:loc,cta_ref:ref||''});
-    if(typeof window.cvCapi==='function') window.cvCapi('Lead',{content_name:loc});
-    if(typeof window.plausible==='function') window.plausible('WhatsApp',{props:{local:loc}});
-    if(window.umami&&typeof window.umami.track==='function') window.umami.track('whatsapp',{local:loc});
+  document.querySelectorAll('[data-abre-form]').forEach(function(b){
+    b.addEventListener('click',function(){abrirForm(b);});
+  });
+  function fechar(){if(dlg.open)dlg.close();}
+  dlg.querySelectorAll('[data-fecha-form]').forEach(function(b){b.addEventListener('click',fechar);});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)fechar();});
+  dlg.addEventListener('close',function(){if(opener&&opener.focus)opener.focus();});
+  function erro(q,msg){
+    var box=form.querySelector('[data-q="'+q+'"]');
+    box.classList.add('err'); box.querySelector('.err-msg').textContent=msg;
+    return box;
   }
-  document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');
-    if(!a) return;
-    track(locOf(a));
-  },{passive:true});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    form.querySelectorAll('[data-q]').forEach(function(b){b.classList.remove('err');b.querySelector('.err-msg').textContent='';});
+    var r={edital:val('edital'),prazo:val('prazo'),estagio:val('estagio'),perfil:val('perfil'),investe:val('investe')};
+    var data=document.getElementById('fdx-data').value;
+    var nome=document.getElementById('fdx-nome').value.replace(/\s+/g,' ').trim();
+    var outro=document.getElementById('fdx-outro').value.replace(/\s+/g,' ').trim();
+    var bad=[];
+    if(!r.edital) bad.push(erro('edital','Escolha uma opção.'));
+    if(!r.prazo) bad.push(erro('prazo','Escolha uma opção.'));
+    else if(r.prazo==='data'&&!data) bad.push(erro('prazo','Informe a data limite, ou escolha outra opção.'));
+    if(!r.estagio) bad.push(erro('estagio','Escolha uma opção.'));
+    if(!r.perfil) bad.push(erro('perfil','Escolha uma opção.'));
+    if(!r.investe) bad.push(erro('investe','Escolha uma opção.'));
+    if(!nome) bad.push(erro('nome','Escreva o seu nome.'));
+    if(bad.length){
+      var f=bad[0].querySelector('input:not([type=hidden])');
+      if(f){f.focus();}
+      return;
+    }
+    var prazoTxt=r.prazo==='data'?data.split('-').reverse().join('/'):r.prazo;
+    var editalTxt=r.edital==='Outro'&&outro?'Outro ('+outro+')':r.edital;
+    var texto='Olá, Mardoqueu! Quero o Diagnóstico de Prontidão gratuito.\n'+
+      'Nome: '+nome+'\n'+
+      'Edital: '+editalTxt+'\n'+
+      'Prazo: '+prazoTxt+'\n'+
+      'Estágio: '+r.estagio+'\n'+
+      'Perfil: '+r.perfil+'\n'+
+      'Investir em ajuda especializada: '+r.investe;
+    var categorias={edital:COD.edital[r.edital],prazo_tipo:COD.prazo[r.prazo],estagio:COD.estagio[r.estagio],perfil:COD.perfil[r.perfil],investe:COD.investe[r.investe]};
+    fechar();
+    if(M){ M.enviarFormulario(texto,origem,categorias); }
+    else { window.open('https://wa.me/5519991644181?text='+encodeURIComponent(texto),'_blank'); }
+  });
 })();
 </script>
 

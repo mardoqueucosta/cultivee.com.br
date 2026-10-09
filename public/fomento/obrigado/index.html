@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  Pagina de obrigado do formulario do Diagnostico de Prontidao.
+  Producao: cultivee.com.br/fomento/obrigado?tipo=diagnostico (arquivo public/fomento/obrigado/index.html).
+  E ELA que dispara a conversao do formulario (GA4 gerar_lead_formulario + Pixel/CAPI Lead + Ads
+  quando existir), UMA vez por envio, via cvMedicao.conversaoObrigado() em medicao.js.
+  noindex de proposito: pagina de funil. NAO entra no sitemap.
+  Teste sem lead real: /fomento/obrigado?tipo=diagnostico&teste=1
+  PREVIA usa caminhos relativos; em PRODUCAO: src="/fomento/medicao.js" e href="/fomento".
+-->
+<title>Pedido recebido | Diagnóstico de Prontidão</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f6e56">
+<script src="/fomento/medicao.js"></script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#0b3a2c; --green-800:#0d4d3a; --green-700:#0f6e56; --green-600:#15856a;
+    --green-200:#9fe1cb; --green-100:#dcefe7; --green-50:#eef7f3;
+    --ink:#16241f; --body:#33433d; --muted:#62716b;
+    --bg:#f6faf8; --white:#ffffff; --line:#e2ece8; --action:#0d9488; --action-700:#0f766e;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--body);background:var(--bg);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Lora',Georgia,serif;color:var(--ink);line-height:1.2;font-weight:600;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:3px solid var(--green-600);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .cv-bar{background:var(--green-900);color:#cfe9df;font-size:.8rem}
+  .cv-bar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:7px;padding-bottom:7px;max-width:1120px}
+  .cv-brand{font-weight:700;letter-spacing:.12em;color:#fff}
+  header{background:#fff;border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;min-height:68px;max-width:1120px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Lora',serif;font-weight:600;color:var(--ink);font-size:1.05rem}
+  .brand .mono{width:38px;height:38px;border-radius:11px;background:var(--green-600);color:#fff;display:grid;place-items:center;font-size:1rem;font-weight:700;font-family:'Inter',sans-serif;flex:none}
+  .brand small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.02em}
+  main{padding:clamp(2.2rem,6vw,4rem) 0}
+  .ok{width:56px;height:56px;border-radius:50%;background:var(--green-100);color:var(--green-700);display:grid;place-items:center;margin-bottom:1.2rem}
+  .ok svg{width:28px;height:28px}
+  h1{font-size:clamp(1.65rem,4.6vw,2.3rem)}
+  .sub{font-size:1.1rem;color:var(--ink);margin-top:1rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(1.2rem,4vw,1.8rem);margin-top:1.8rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Inter',sans-serif;font-weight:600;font-size:1.02rem;padding:15px 26px;border-radius:999px;cursor:pointer;border:0;line-height:1.3;max-width:100%}
+  .btn svg{width:22px;height:22px;flex:none}
+  .btn-primary{background:var(--action);color:#fff;box-shadow:0 6px 18px rgba(13,148,136,.30)}
+  .btn-primary:hover{background:var(--action-700)}
+  .aviso{font-size:.95rem;color:var(--muted);margin-top:.8rem}
+  .aviso.forte{color:var(--green-800);font-weight:600}
+  .passos{list-style:none;display:grid;gap:1rem;margin-top:1rem}
+  .passos li{display:flex;gap:12px;align-items:flex-start}
+  .passos .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--green-600);color:#fff;font-weight:700;display:grid;place-items:center;font-size:.92rem;margin-top:2px}
+  h2{font-size:1.3rem}
+  .voltar{display:inline-block;margin-top:1.8rem;color:var(--green-700);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  .teste{background:#fff7e0;border:1px solid #f0d58a;color:#6b5210;border-radius:12px;padding:10px 14px;font-size:.92rem;margin-bottom:1.4rem}
+  footer{border-top:1px solid var(--line);padding:1.6rem 0;font-size:.85rem;color:var(--muted)}
+  @media (max-width:520px){ .cv-bar .cv-links{display:none} .btn{width:100%} }
+</style>
+</head>
+<body>
+
+<div class="cv-bar">
+  <div class="wrap">
+    <span><span class="cv-brand">CULTIVEE</span> · Educa · Trilha Negócios</span>
+    <span class="cv-links">Mentoria de captação de fomento</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <span class="brand">
+      <span class="mono">MC</span>
+      <span>Mardoqueu M. da Costa<small>Mentoria de captação de fomento</small></span>
+    </span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="teste" id="aviso-teste" hidden>Modo teste ativo: este acesso não gera lead real e a linha do registro sai marcada como teste.</p>
+
+    <div class="ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h1 id="titulo">Suas respostas estão prontas no WhatsApp.</h1>
+    <p class="sub" id="sub">O WhatsApp abriu em outra aba ou no aplicativo, com a mensagem já escrita. Revise e toque em enviar: é assim que o seu pedido chega até mim.</p>
+
+    <div class="card">
+      <a class="btn btn-primary" id="abrir-wa" href="https://wa.me/5519991644181" target="_blank" rel="noopener">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        <span id="abrir-wa-txt">Abrir o WhatsApp de novo</span>
+      </a>
+      <p class="aviso" id="aviso-wa">Se o WhatsApp não abriu, ou se você fechou sem enviar, o botão acima abre a mesma mensagem.</p>
+    </div>
+
+    <div class="card">
+      <h2>O que acontece agora</h2>
+      <ol class="passos">
+        <li><span class="n">1</span><span>Leio as suas respostas antes de responder, para a conversa já começar pelo seu caso.</span></li>
+        <li><span class="n">2</span><span>Conversamos no Diagnóstico de Prontidão: gratuito, de 20 a 30 minutos, pelo WhatsApp. Você sai sabendo qual edital cabe no seu projeto e qual é o próximo passo.</span></li>
+        <li><span class="n">3</span><span>Se fizer sentido seguir, combinamos o formato e o valor antes de começar. Se não fizer, eu digo.</span></li>
+      </ol>
+    </div>
+
+    <a class="voltar" id="voltar" href="/fomento">Voltar para a página da mentoria</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Mardoqueu Martins da Costa · Mentoria oferecida pela Cultivee Educa, trilha Negócios. O que você me contar sobre o seu projeto é tratado em sigilo.</div>
+</footer>
+
+<script>
+(function(){
+  var M=window.cvMedicao;
+  var btn=document.getElementById('abrir-wa');
+  if(!M) return;
+  if(M.teste) document.getElementById('aviso-teste').hidden=false;
+  var tipo=new URLSearchParams(location.search).get('tipo');
+  /* Conversao do formulario: uma vez por envio (recarregar nao conta de novo). */
+  var r=(tipo==='diagnostico')?M.conversaoObrigado():{disparou:false,motivo:'tipo-desconhecido'};
+  var envio=r.envio||M.lerEnvio();
+  if(envio&&envio.texto){
+    /* A mensagem ja foi contada como lead no envio: o botao nao conta de novo. */
+    btn.href=M.urlWhatsApp(envio.texto);
+    btn.setAttribute('data-sem-lead','');
+    if(envio.popup===false){
+      document.getElementById('abrir-wa-txt').textContent='Abrir o WhatsApp com a minha mensagem';
+      document.getElementById('sub').textContent='Falta um toque: o navegador não abriu o WhatsApp sozinho. Use o botão abaixo, revise a mensagem e toque em enviar.';
+      var av=document.getElementById('aviso-wa'); av.textContent='Sua mensagem já está escrita, com as respostas do formulário.'; av.className='aviso forte';
+    }
+  } else {
+    /* Visita direta, sem envio nesta aba: nenhum lead foi contado. O botao vira um contato comum (medido). */
+    document.getElementById('titulo').textContent='Quer conversar sobre o seu projeto?';
+    document.getElementById('sub').textContent='Toque no botão para abrir o WhatsApp com a mensagem já escrita.';
+    document.getElementById('abrir-wa-txt').textContent='Falar no WhatsApp';
+    document.getElementById('aviso-wa').textContent='Diagnóstico de Prontidão gratuito, 20 a 30 minutos, sem compromisso.';
+    btn.href=M.urlWhatsApp(M.MSG_PADRAO);
+    btn.setAttribute('data-origem','obrigado');
+  }
+})();
+</script>
+</body>
+</html>
