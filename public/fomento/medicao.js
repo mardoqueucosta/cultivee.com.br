@@ -12,6 +12,10 @@
  *    nenhum outro lugar pode injetar de novo.
  *  - Lead SO no envio do formulario (na pagina de obrigado) ou no clique no WhatsApp.
  *    Nunca em visita.
+ *  - Filtro de robos (09/10/2026, secao 8b): no maximo 1 Lead por sessao de contato
+ *    (30 min, sessionStorage) e nenhum Lead com navigator.webdriver === true (navegador
+ *    automatizado, como o robo de revisao de anuncios da Meta). O GA4 recebe todo clique,
+ *    com lead_contado = 'true' ou 'false'.
  *  - fbclid sozinho = social. So vira pago com utm_medium pago (a campanha Meta usa paid).
  *  - Quem dispara evento chama cvMedicao.evento() ou cvMedicao.conversao(), nunca
  *    window.gtag direto.
@@ -46,6 +50,8 @@
   var CHAVE_TESTE = 'cultivee_fomento_teste';               // sessionStorage + cookie
   var CHAVE_ENVIO = 'cultivee_fomento_envio';               // sessionStorage: ultimo envio do formulario
   var CHAVE_CONVERTIDOS = 'cultivee_fomento_convertidos';   // sessionStorage: envios ja contados
+  var CHAVE_LEAD = 'cultivee_fomento_lead_sessao';          // sessionStorage: Lead ja contado nesta sessao
+  var JANELA_LEAD_MIN = 30;                                 // sessao de contato: 1 Lead a cada 30 min
   var JANELA_PAGO_DIAS = 90;
 
   var MEDIAS_PAGAS = ['cpc', 'ppc', 'paid', 'paidsearch', 'paid-search', 'paid_social', 'paidsocial', 'cpm', 'display', 'ads'];
@@ -233,17 +239,22 @@
     if (typeof w.gtag !== 'function') return;
     w.gtag('event', nome, params || {});
   }
-  /** Conversao nos dois destinos: GA4 sempre; Ads so com rotulo e fora do modo teste. */
+  /**
+   * Conversao nos dois destinos: GA4 sempre; Ads so com rotulo e fora do modo teste.
+   * params.lead_contado = 'false' (clique repetido na sessao ou robo): o GA4 recebe o evento
+   * SEM value (nao infla o valor) e o Ads nao recebe conversao.
+   */
   function conversao(tipo, params) {
     params = params || {};
+    var contado = params.lead_contado !== 'false';
     var valor = VALORES[tipo];
     var p = { currency: 'BRL' };
-    if (valor !== undefined) p.value = valor;
+    if (valor !== undefined && contado) p.value = valor;
     for (var k in params) if (params[k] !== undefined && params[k] !== '') p[k] = params[k];
     if (TESTE) { p.secao = p.origem; p.origem = 'teste-claude'; p.debug_mode = true; }
     evento('gerar_lead_' + tipo, p);
     var sendTo = ADS_CONVERSOES[tipo];
-    if (!ADS_ID || !sendTo || TESTE) return;
+    if (!contado || !ADS_ID || !sendTo || TESTE) return;
     w.gtag('event', 'conversion', { send_to: sendTo, value: valor, currency: 'BRL' });
   }
 
@@ -302,6 +313,34 @@
     };
   }
 
+  // ===== 8b. Filtro de robos: no maximo 1 Lead por sessao de contato, nenhum com webdriver =====
+  function automatizado() {
+    try { return navigator.webdriver === true; } catch (_) { return false; }
+  }
+  /**
+   * Decide se este contato conta como Lead (Pixel + CAPI + registro no Sheet).
+   *  - navigator.webdriver === true: nunca conta (robo de revisao de anuncios, scripts).
+   *  - ja houve Lead nesta sessao nos ultimos 30 min: nao conta (o robo clica em todos os
+   *    botoes em segundos; uma pessoa que clica de novo ja foi contada no primeiro clique).
+   *  - modo teste: sempre conta, sem gravar a sessao (o Lead de teste nunca chega a Meta e o
+   *    dono precisa poder clicar varias vezes para conferir o Sheet).
+   * O link do WhatsApp funciona igual nos tres casos; so a medicao muda.
+   */
+  function decidirLead() {
+    if (TESTE) return { contar: true };
+    if (automatizado()) return { contar: false, robo: 'webdriver' };
+    var ultimo = leJson(sessionStorage, CHAVE_LEAD);
+    if (ultimo && ultimo.em) {
+      var min = (Date.now() - new Date(ultimo.em).getTime()) / 60000;
+      if (min >= 0 && min < JANELA_LEAD_MIN) return { contar: false };
+    }
+    return { contar: true };
+  }
+  function marcarLead(tipo, ref) {
+    if (TESTE) return;
+    gravaJson(sessionStorage, CHAVE_LEAD, { em: new Date().toISOString(), tipo: tipo, ref: ref });
+  }
+
   // ===== 9. Clique no WhatsApp (whatsapp.ts + LinkContatoMedido.tsx) =====
   function urlWhatsApp(texto) { return WA_BASE + '?text=' + encodeURIComponent(texto); }
   function textoDoLink(a) {
@@ -317,14 +356,21 @@
     if (s && s.id) return s.id;
     return 'outro';
   }
-  /** Registra o clique (GA4 + Pixel/CAPI + registro) e devolve a URL final do wa.me. */
+  /**
+   * Registra o clique e devolve a URL final do wa.me. GA4 sempre; Pixel/CAPI + registro so
+   * no primeiro contato da sessao e fora de navegador automatizado (decidirLead).
+   */
   function cliqueWhatsApp(textoBase, origem) {
     var a = lerAtribuicao();
     var r = novoRef(a);
     var sep = textoBase.indexOf('\n') > -1 ? '\n' : ' ';
     var texto = textoBase + sep + r.etiqueta;
-    conversao('whatsapp', { origem: origem, canal: a.canal, ref: r.ref });
-    meta('Lead', origem, registroBase('whatsapp', origem, a, r));
+    var dec = decidirLead();
+    conversao('whatsapp', { origem: origem, canal: a.canal, ref: r.ref, lead_contado: dec.contar ? 'true' : 'false', robo: dec.robo });
+    if (dec.contar) {
+      marcarLead('whatsapp', r.ref);
+      meta('Lead', origem, registroBase('whatsapp', origem, a, r));
+    }
     return urlWhatsApp(texto);
   }
   // Listener delegado: troca o href no clique, antes de o navegador seguir o link.
@@ -385,10 +431,17 @@
     gravaJson(sessionStorage, CHAVE_CONVERTIDOS, feitos);
     var a = lerAtribuicao();
     var c = envio.categorias || {};
+    // Filtro de robos: se ja houve Lead nesta sessao (ex.: clique no WhatsApp antes do envio)
+    // ou o navegador e automatizado, o GA4 recebe o envio com lead_contado='false' e a Meta
+    // e o Sheet nao recebem nada. A mensagem do WhatsApp sai igual.
+    var dec = decidirLead();
     conversao('formulario', {
       origem: envio.origem, canal: envio.canal || a.canal, ref: envio.ref,
-      edital: c.edital, prazo_tipo: c.prazo_tipo, estagio: c.estagio, perfil: c.perfil, investe: c.investe
+      edital: c.edital, prazo_tipo: c.prazo_tipo, estagio: c.estagio, perfil: c.perfil, investe: c.investe,
+      lead_contado: dec.contar ? 'true' : 'false', robo: dec.robo
     });
+    if (!dec.contar) return { disparou: false, motivo: dec.robo ? 'robo' : 'lead-da-sessao', envio: envio };
+    marcarLead('formulario', envio.ref);
     var reg = registroBase('formulario', envio.origem, a, { ref: envio.ref });
     reg.canal = envio.canal || a.canal;
     reg.edital = c.edital; reg.prazo_tipo = c.prazo_tipo; reg.estagio = c.estagio; reg.perfil = c.perfil; reg.investe = c.investe;

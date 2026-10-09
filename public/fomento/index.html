@@ -810,7 +810,8 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 (function(){
   /* A medicao inteira (GA4, Pixel/CAPI, atribuicao, [ref], clique no WhatsApp) mora em medicao.js.
      Aqui fica so o comportamento do formulario. O clique em qualquer a[href*="wa.me"] e tratado
-     pelo listener de medicao.js: 1 gerar_lead_whatsapp + 1 Lead por clique, com origem = data-origem.
+     pelo listener de medicao.js: 1 gerar_lead_whatsapp por clique, com origem = data-origem, e no
+     maximo 1 Lead por sessao de contato (nenhum em navegador automatizado; filtro de robos, 09/10).
      click_whatsapp (evento antigo) foi SUBSTITUIDO por gerar_lead_whatsapp: ver MEDICAO-DO-SITE.md. */
   var M=window.cvMedicao;
   var dlg=document.getElementById('diagnostico');
