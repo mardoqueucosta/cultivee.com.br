@@ -17,6 +17,7 @@ import {
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { API_BASE, TURNSTILE_SITE_KEY } from "@/lib/config";
+import { eventoContato } from "@/lib/medicao";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import { webPageJsonLd } from "@/lib/seo-schemas";
 
@@ -80,6 +81,7 @@ const ContactPage = () => {
         return;
       }
 
+      eventoContato("gerar_lead_formulario", "contato");
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
       toast({
         title: "Mensagem enviada!",

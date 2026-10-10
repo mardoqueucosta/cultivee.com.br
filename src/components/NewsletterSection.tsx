@@ -5,6 +5,7 @@ import { Mail, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Turnstile } from "@/components/Turnstile";
 import { API_BASE, TURNSTILE_SITE_KEY } from "@/lib/config";
+import { eventoContato } from "@/lib/medicao";
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
@@ -59,6 +60,7 @@ const NewsletterSection = () => {
         return;
       }
 
+      eventoContato("inscricao_newsletter", "newsletter");
       setIsSubscribed(true);
       setEmail("");
       toast({
