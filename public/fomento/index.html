@@ -6,7 +6,7 @@
 <!--
   ===== FONTE DA VERDADE (atualize aqui e replique com find-replace global) =====
   WhatsApp ... 5519991644181   (todos os links a[href*="wa.me"] + rodapé)
-  Precos ..... R$ 250/h | R$ 2.500 (bolsas/auxilios/Centelha) | R$ 4.900 (PIPE Fase 1) | R$ 9.800 (PIPE F2/Finep/EMBRAPII), desde 2026-07-03
+  Precos ..... R$ 250/h | curso online R$ 497 (desde 2026-10-18) | R$ 2.500 (bolsas/auxilios/Centelha) | R$ 4.900 (PIPE Fase 1) | R$ 9.800 (PIPE F2/Finep/EMBRAPII), desde 2026-07-03
                -> bloco .pricing (linhas de ROI nos cards) e FAQ de pagamento
   Prova ...... 18 financiamentos | 7 fontes | dezenas de projetos avaliados
                -> hero (cred-card + checks) e secao de autoridade (#guia)
@@ -238,7 +238,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(13,148,136,.5)}
   .wa-float svg{width:24px;height:24px;flex:none}
   @media(max-width:560px){.wa-float span{display:none}.wa-float{padding:15px;right:16px;bottom:16px}}
-  /* 4 tiers em grade 2x2. A secao .offer usa wrap "narrow" (780px); os cards e a
+  /* curso online + 4 tiers: 5 colunas no desktop largo; abaixo disso o ultimo (R$ 9.800) ocupa a linha inteira. A secao .offer usa wrap "narrow" (780px); os cards e a
      faixa sob medida estouram para a MESMA largura do container das outras secoes
      (--maxw - padding), igual ao vgrid de valores. */
   .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:2rem;align-items:stretch}
@@ -258,6 +258,14 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .psob b{color:var(--green-800);font-weight:600}
   .psob span{color:var(--muted);font-size:.92rem}
   .psob-val{font-weight:600;color:var(--green-700);font-size:.95rem}
+  /* cards por ordem de valor; com grade de 2 ou 4 colunas o ultimo (R$ 9.800) ocupa a linha; 5 colunas a partir de 1101 px */
+  .pcard.curso{border-color:var(--green-200)}
+  .pricing .pcard:last-child{grid-column:1/-1}
+  @media(min-width:1101px){.pricing{grid-template-columns:repeat(5,1fr);gap:12px}.pcard{padding:22px 16px 20px}.pricing .pcard:last-child{grid-column:auto}}
+  .pk-cta{margin-top:auto;padding-top:14px}
+  .pk-cta a{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.92rem;color:#fff;background:var(--action);border-radius:999px;padding:9px 16px;text-decoration:none;transition:.18s ease}
+  .pk-cta a:hover{background:var(--action-700)}
+  .pk-cta a svg{width:15px;height:15px;flex:none}
   .chooser-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:2rem}
   .chooser-card{display:flex;flex-direction:column;gap:7px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;box-shadow:var(--shadow);transition:.18s}
   .chooser-card:hover{border-color:var(--green-500);transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,110,86,.14)}
@@ -587,6 +595,12 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <div class="pk-val">R$ 250<span> / hora</span></div>
         <p class="pk-desc">Para tirar dúvidas, entender o edital ou uma leitura pontual. Você paga só pelo tempo que usar.</p>
       </div>
+      <div class="pcard curso">
+        <div class="pk-lbl">Curso online PIPE Fase 1</div>
+        <div class="pk-val">R$ 497</div>
+        <p class="pk-desc">Para quem quer escrever sozinho, com método: o caminho completo da ideia à submissão no SAGe em 7 módulos e 26 videoaulas, com a pasta-modelo da submissão e a norma da FAPESP. Assista no seu ritmo pela Área do aluno.</p>
+        <div class="pk-cta"><a data-origem="curso-online" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20curso%20online%20PIPE%20Fase%201%20(R%24%20497)." target="_blank" rel="noopener">Quero o curso <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
       <div class="pcard feat">
         <div class="pk-lbl">Acompanhamento completo</div>
         <div class="pk-val">R$ 2.500</div>
@@ -640,7 +654,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       </details>
       <details>
         <summary>Como funciona o pagamento? <span class="ic" aria-hidden="true">+</span></summary>
-        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 250/hora; acompanhamento completo de uma proposta até a submissão por R$ 2.500, sem contador de horas (bolsas, auxílios e Centelha); PIPE Fase 1 por R$ 4.900; PIPE Fase 2, Finep e EMBRAPII por R$ 9.800; ou orçamento sob medida em casos fora do comum. Nunca cobro percentual sobre o recurso captado.</p>
+        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 250/hora; curso online PIPE Fase 1 por R$ 497, para quem quer escrever sozinho; acompanhamento completo de uma proposta até a submissão por R$ 2.500, sem contador de horas (bolsas, auxílios e Centelha); PIPE Fase 1 por R$ 4.900; PIPE Fase 2, Finep e EMBRAPII por R$ 9.800; ou orçamento sob medida em casos fora do comum. Nunca cobro percentual sobre o recurso captado.</p>
       </details>
       <details>
         <summary>Funciona para o meu edital? <span class="ic" aria-hidden="true">+</span></summary>
