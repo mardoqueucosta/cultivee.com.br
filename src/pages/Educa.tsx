@@ -131,21 +131,30 @@ const EducaPage = () => {
         alt="Bancada de aula prática numa estufa, com bandejas de mudas e canais de hidroponia"
         eyebrow="Cultivee Educa"
         title="Aprenda a produzir e a empreender no agro"
-        subtitle="Duas trilhas: Cultivo, para quem quer produzir, e Negócios, para quem quer transformar o que sabe em projeto, recurso e venda."
+        subtitle="Duas trilhas: Negócios, para quem quer transformar o que sabe em projeto, recurso e venda, e Cultivo, para quem quer produzir."
       >
         <a
-          href="#cultivo"
-          className="inline-flex items-center justify-center rounded-full bg-sun text-deep font-bold px-7 py-3.5 hover:brightness-105 transition"
-        >
-          Trilha Cultivo
-        </a>
-        <a
           href="#negocios"
-          className="inline-flex items-center justify-center rounded-full border-2 border-white/60 text-white font-bold px-7 py-3.5 hover:bg-white/10 transition"
+          className="inline-flex items-center justify-center rounded-full bg-sun text-deep font-bold px-7 py-3.5 hover:brightness-105 transition"
         >
           Trilha Negócios
         </a>
+        <a
+          href="#cultivo"
+          className="inline-flex items-center justify-center rounded-full border-2 border-white/60 text-white font-bold px-7 py-3.5 hover:bg-white/10 transition"
+        >
+          Trilha Cultivo
+        </a>
       </ImageHero>
+
+      {/* Ordem das trilhas (dono, 18/10/2026): Negócios primeiro, Cultivo depois */}
+      <Track
+        id="negocios"
+        icon={Briefcase}
+        title="Trilha Negócios"
+        description="Para quem quer transformar conhecimento em empresa, projeto financiado e venda."
+        courses={negocios}
+      />
 
       <Track
         id="cultivo"
@@ -153,14 +162,6 @@ const EducaPage = () => {
         title="Trilha Cultivo"
         description="Para quem quer produzir: técnica, equipamento e manejo, com o que a pesquisa e a prática já mostraram."
         courses={cultivo}
-      />
-
-      <Track
-        id="negocios"
-        icon={Briefcase}
-        title="Trilha Negócios"
-        description="Para quem quer transformar conhecimento em empresa, projeto financiado e venda."
-        courses={negocios}
         muted
       />
 
