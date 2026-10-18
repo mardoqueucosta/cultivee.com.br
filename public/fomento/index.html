@@ -263,9 +263,13 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .pricing .pcard:last-child{grid-column:1/-1}
   @media(min-width:1101px){.pricing{grid-template-columns:repeat(5,1fr);gap:12px}.pcard{padding:22px 16px 20px}.pricing .pcard:last-child{grid-column:auto}}
   .pk-cta{margin-top:auto;padding-top:14px}
-  .pk-cta a{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.92rem;color:#fff;background:var(--action);border-radius:999px;padding:9px 16px;text-decoration:none;transition:.18s ease}
-  .pk-cta a:hover{background:var(--action-700)}
+  /* um botao por card (origem card-*): contorno; cheio so no card em destaque */
+  .pk-cta a{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.9rem;line-height:1.25;color:var(--action-700);background:#fff;border:1.5px solid var(--action);border-radius:999px;padding:9px 12px;text-decoration:none;transition:.18s ease;width:100%;justify-content:center}
+  .pk-cta a:hover{background:var(--green-50)}
+  .pcard.feat .pk-cta a{color:#fff;background:var(--action)}
+  .pcard.feat .pk-cta a:hover{background:var(--action-700);border-color:var(--action-700)}
   .pk-cta a svg{width:15px;height:15px;flex:none}
+  @media(min-width:1101px){.pk-cta a{white-space:nowrap}.pk-cta a svg{display:none}}
   .chooser-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:2rem}
   .chooser-card{display:flex;flex-direction:column;gap:7px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;box-shadow:var(--shadow);transition:.18s}
   .chooser-card:hover{border-color:var(--green-500);transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,110,86,.14)}
@@ -594,30 +598,34 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <div class="pk-lbl">Consultoria avulsa</div>
         <div class="pk-val">R$ 250<span> / hora</span></div>
         <p class="pk-desc">Para tirar dúvidas, entender o edital ou uma leitura pontual. Você paga só pelo tempo que usar.</p>
+        <div class="pk-cta"><a data-origem="card-hora" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20agendar%20uma%20hora%20de%20consultoria%20avulsa%20(R%24%20250)." target="_blank" rel="noopener">Agendar uma hora <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard curso">
         <div class="pk-lbl">Curso online PIPE Fase 1</div>
         <div class="pk-val">R$ 497</div>
         <p class="pk-desc">Para quem quer escrever sozinho, com método: o caminho completo da ideia à submissão no SAGe em 7 módulos e 26 videoaulas, com a pasta-modelo da submissão e a norma da FAPESP. Assista no seu ritmo pela Área do aluno.</p>
-        <div class="pk-cta"><a data-origem="curso-online" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20curso%20online%20PIPE%20Fase%201%20(R%24%20497)." target="_blank" rel="noopener">Quero o curso <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="pk-cta"><a data-origem="card-curso" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20curso%20online%20PIPE%20Fase%201%20(R%24%20497)." target="_blank" rel="noopener">Quero o curso <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard feat">
         <div class="pk-lbl">Acompanhamento completo</div>
         <div class="pk-val">R$ 2.500</div>
         <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas, auxílios (CNPq, FAPESP, CAPES) e Programa Centelha.</p>
         <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Cerca de 1% do teto de uma Universal (R$ 250 mil).</p>
+        <div class="pk-cta"><a data-origem="card-2500" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20o%20acompanhamento%20completo%20de%20uma%20proposta%20(R%24%202.500)." target="_blank" rel="noopener">Quero esta mentoria <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard">
         <div class="pk-lbl">PIPE Fase 1</div>
         <div class="pk-val">R$ 4.900</div>
         <p class="pk-desc">Maior envolvimento: construção mais robusta, orçamento e plano de trabalho extensos e preparo de defesa. Indicado para o PIPE-FAPESP Fase 1.</p>
         <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Menos de 2% do teto de um PIPE Fase 1 (R$ 300 mil).</p>
+        <div class="pk-cta"><a data-origem="card-4900" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20conversar%20sobre%20o%20acompanhamento%20do%20PIPE%20Fase%201%20(R%24%204.900)." target="_blank" rel="noopener">Quero esta mentoria <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard">
         <div class="pk-lbl">PIPE Fase 2, Finep e EMBRAPII</div>
         <div class="pk-val">R$ 9.800</div>
         <p class="pk-desc">Propostas extensas de inovação: plano de trabalho de até 24 meses, orçamento robusto, equipe e preparo de defesa.</p>
         <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Cerca de 0,65% do teto de um PIPE Fase 2 (R$ 1,5 milhão) e 0,2% da subvenção Finep (R$ 5 milhões).</p>
+        <div class="pk-cta"><a data-origem="card-9800" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20conversar%20sobre%20o%20acompanhamento%20de%20PIPE%20Fase%202%2C%20Finep%20ou%20EMBRAPII%20(R%24%209.800)." target="_blank" rel="noopener">Quero esta mentoria <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
     </div>
     <div class="psob">
