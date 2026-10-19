@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ===== /fomento/pipe: pagina de venda do PIPE-FAPESP Fase 1 (19/10/2026) =====
+  Destino da campanha Meta v3 "Consultoria PIPE F1" (anuncios F, C2, C5). A /fomento continua como pagina
+  central (Educa, organico, outros editais). Avaliacao: projeto-ADS/.../AVALIACAO-CONSULTORIA-2026-10-19.md.
+  Precos ..... Diagnostico de Prontidao R$ 250 (Asaas d0bs53iy8d2f5467) | Acompanhamento PIPE F1 R$ 4.900 (Asaas puponpp5j8dlqmzn)
+               | Curso PIPE F1 R$ 497 = LISTA DE ESPERA (aulas em gravacao; clique no WhatsApp, origem pipe-card-curso;
+               mede interesse). Quando o curso for vendido: trocar por link de pagamento com data-checkout.
+  Prova ...... 2 PIPE como responsavel na BV (2018/22628-5, 2010/52057-8) + PIPE F1 da Cultivee em execucao
+               (numero 2025/27266-8 so quando a BV publicar, KIT-DE-PROVA) | 18 financiamentos, 7 fontes
+  Fatos PIPE . teto F1 R$ 300 mil com bolsas, ate 9 meses, fluxo continuo, empresa a constituir (normas 15/09/2026)
+  Estilo ..... /fomento/estilo.css (comum) + <style> abaixo (so desta pagina). Caminhos ABSOLUTOS (URL sem barra).
+  Medicao .... /fomento/medicao.js (Pixel, CAPI, GA4, ref no WhatsApp; clique no Asaas = InitiateCheckout).
+  Formulario . o mesmo do /fomento (5 perguntas -> WhatsApp -> /fomento/obrigado conta o lead), edital ja em PIPE F1.
+               Se mudar o formulario no /fomento, replicar aqui (dialog + script copiados em 19/10/2026).
+-->
+<title>PIPE-FAPESP Fase 1: consultoria pelos critérios da banca</title>
+<meta name="description" content="Escreva o seu PIPE-FAPESP Fase 1 pelos critérios que a banca usa para dar nota. Diagnóstico de Prontidão: 1 hora de consultoria, R$ 250. De quem foi pesquisador responsável em projetos PIPE.">
+<meta property="og:title" content="Escreva o seu PIPE pelos critérios que a banca usa para dar nota">
+<meta property="og:description" content="PIPE-FAPESP Fase 1: até R$ 300 mil, não reembolsáveis. Leitura pelo critério em 3 ajustes. Diagnóstico de Prontidão: 1 hora, R$ 250.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Mardoqueu M. da Costa, mentoria de captação de fomento">
+<meta property="og:image" content="https://cultivee.com.br/fomento/img/mardoqueu.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1122">
+<meta property="og:image:height" content="1122">
+<meta property="og:image:alt" content="Mardoqueu Martins da Costa, consultoria para o PIPE-FAPESP">
+<meta name="theme-color" content="#0f6e56">
+<meta property="og:url" content="https://cultivee.com.br/fomento/pipe">
+<link rel="canonical" href="https://cultivee.com.br/fomento/pipe">
+<script src="/fomento/medicao.js"></script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fomento/estilo.css?v=2026101901">
+<style>
+  .steps.tres{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.steps.tres{grid-template-columns:1fr}}
+  .ba-lbl{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;display:block}
+  .ba-before .ba-lbl{color:#8a8172}
+  .ba-after .ba-lbl{color:var(--green-700)}
+  .ba-cell{flex-direction:column;align-items:flex-start}
+  ul.proof{list-style:none;margin:1.4rem 0 0;display:grid;gap:12px}
+  ul.proof li{background:var(--green-50);border:1px solid var(--line);border-radius:12px;padding:13px 16px;font-size:.96rem}
+  ul.proof li b{color:var(--green-800)}
+  ul.proof a{color:var(--green-700);text-decoration:underline;text-underline-offset:3px}
+  /* 3 cards (diagnostico, curso, acompanhamento): 3 colunas a partir de 1001 px, 1 coluna no celular */
+  @media(min-width:1001px){.pricing.tres{grid-template-columns:repeat(3,1fr)}}
+  .pk-tag.espera{background:var(--amber-700)}
+  .outros{text-align:center;font-size:.93rem;color:var(--muted);margin-top:1.1rem}
+  .outros a{color:var(--green-700);text-decoration:underline;text-underline-offset:3px}
+  button.wa-direct{background:none;border:0;padding:0;font:inherit;font-size:.88rem;cursor:pointer}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="cv-bar">
+  <div class="wrap">
+    <span><a class="cv-brand" href="/">CULTIVEE</a><span class="cv-trail"> · Educa · Trilha Negócios</span></span>
+    <span class="cv-links"><a href="https://cursos.cultivee.com.br/cursos">Área do aluno</a><a href="/fomento">Outros editais</a><a href="/">Site da Cultivee</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#topo">
+      <span class="mono">MC</span>
+      <span>Mardoqueu M. da Costa<small>Consultoria para o PIPE-FAPESP</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#ajustes">Os 3 ajustes</a>
+      <a href="#guia">Quem sou</a>
+      <a href="#precos">Preços</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="btn btn-primary" data-origem="pipe-header" data-checkout="consultoria-avulsa" data-valor="250" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid" style="padding-top:clamp(2rem,4vw,3rem)">
+    <div>
+      <span class="eyebrow">PIPE-FAPESP Fase 1 · até R$ 300 mil, não reembolsáveis</span>
+      <h1>Escreva o seu PIPE pelos critérios que <span class="hl">a banca usa para dar nota.</span></h1>
+      <p class="sub">Uma tecnologia forte perde pontos quando a proposta é escrita como artigo científico. Eu leio o seu projeto pelos critérios do PIPE, com tempo de corrigir antes de você enviar.</p>
+      <ul class="checks" style="margin-top:1.5rem">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Até R$ 300 mil, contando as bolsas, por até 9 meses. A FAPESP recebe propostas o ano todo.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Não precisa ter empresa aberta: a norma aceita empresa a constituir.</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Fui pesquisador responsável em três projetos PIPE e já avaliei dezenas de projetos de outros pesquisadores.</li>
+      </ul>
+      <!-- VIDEO: quando o video do PIPE estiver gravado (roteiro VSL v4), entra aqui, acima do botao. -->
+      <div class="hero-cta">
+        <a class="btn btn-primary" data-origem="pipe-hero" data-checkout="consultoria-avulsa" data-valor="250" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar meu Diagnóstico de Prontidão <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="cta-note">1 hora de consultoria, R$ 250 (Pix ou cartão em até 12x). Você sai sabendo o que está forte, o que falta e o próximo passo. 🔒 O que você me contar sobre o projeto fica em sigilo.</p>
+        <button type="button" class="wa-direct" data-abre-form="pipe-hero">Prefiro conversar antes pelo WhatsApp</button>
+      </div>
+    </div>
+    <aside class="cred-card">
+      <div class="ph">
+        <div class="av"><img src="/fomento/img/mardoqueu.webp" alt="Mardoqueu Martins da Costa" width="120" height="120" decoding="async" onerror="this.style.display='none';this.parentNode.textContent='MC'"></div>
+        <div>
+          <b>Mardoqueu Martins da Costa</b>
+          <span>Pesquisador responsável em projetos PIPE-FAPESP · Formação pela USP</span>
+        </div>
+      </div>
+      <ul class="checks">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Dois PIPE como pesquisador responsável, públicos na Biblioteca Virtual da FAPESP</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>O terceiro, o PIPE Fase 1 da Cultivee, em execução</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Avaliador de dezenas de projetos, na universidade e em empresas</li>
+      </ul>
+      <div class="stat-row">
+        <div class="stat"><b>3</b><span>PIPE como responsável</span></div>
+        <div class="stat"><b>18</b><span>financiamentos aprovados</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- O QUE TRAVA -->
+<section class="sec pain" id="dor">
+  <div class="wrap narrow">
+    <span class="eyebrow">O que trava</span>
+    <h2>O problema raramente é a tecnologia. É a proposta escrita como artigo.</h2>
+    <p class="lead" style="margin-top:1.1rem">No artigo, você abre pela literatura e escreve para outro pesquisador. No PIPE, quem dá a nota lê pensando em mercado, viabilidade e risco, além do mérito. Uma tecnologia forte na bancada pode chegar frágil no papel só por falar a língua de outro edital.</p>
+    <p class="muted" style="margin-top:1.6rem;font-weight:600;color:var(--ink)">Mesma tecnologia, dois primeiros parágrafos. Um sensor que detecta doença na planta antes de a mancha aparecer:</p>
+    <div class="ba" style="margin-top:1rem">
+      <div class="ba-row">
+        <div class="ba-cell ba-before"><span class="ba-lbl">Escrito como artigo</span>"A técnica tal permite medir a grandeza tal com alta sensibilidade."</div>
+        <div class="ba-arrow"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="ba-cell ba-after"><span class="ba-lbl">Escrito para a banca do PIPE</span>"O produtor descobre a doença quando ela já se espalhou e perde parte da safra."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OS 3 AJUSTES -->
+<section class="sec" id="ajustes">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow">Leitura pelo critério</span>
+      <h2>Três ajustes que mudam a leitura da banca.</h2>
+      <p class="lead muted" style="margin-top:1rem">É o que eu aplico no seu projeto, parte por parte.</p>
+    </div>
+    <div class="steps tres">
+      <div class="step"><div class="n">1</div><h3>Mercado antes da ciência</h3><p>O primeiro parágrafo diz quem tem o problema, quanto ele custa hoje e por que as soluções atuais não resolvem. A ciência vem logo depois, como a razão de a sua solução funcionar.</p></div>
+      <div class="step"><div class="n">2</div><h3>Risco técnico explícito</h3><p>O PIPE Fase 1 financia justamente o que ainda não está resolvido. Diga qual é a pergunta técnica em aberto, como vai testá-la e o que faz se o primeiro caminho não der certo.</p></div>
+      <div class="step"><div class="n">3</div><h3>Metas que dá para conferir</h3><p>Primeiro as metas, cada uma com número e prazo que alguém de fora consegue conferir. Depois o orçamento, com cada item ligado a uma meta.</p></div>
+    </div>
+    <p class="eval-close" style="max-width:780px;margin-left:auto;margin-right:auto">Os critérios estão na norma do PIPE. Conhecer os critérios não dá influência sobre a avaliação: a decisão de mérito é dos pareceristas.</p>
+  </div>
+</section>
+
+<!-- AUTORIDADE E PROVA -->
+<section class="sec" id="guia" style="background:#fff">
+  <div class="wrap">
+    <div class="auth-grid">
+      <div class="portrait">
+        <div class="av"><img src="/fomento/img/mardoqueu.webp" alt="Mardoqueu Martins da Costa" width="120" height="120" decoding="async" loading="lazy" onerror="this.style.display='none';this.parentNode.textContent='MC'"></div>
+        <b>Mardoqueu Martins da Costa</b>
+        <div class="badges">
+          <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Pesquisador responsável em projetos PIPE-FAPESP</div>
+          <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Avaliador de projetos na universidade e em empresas</div>
+          <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Graduação, mestrado, doutorado e pós-doutorado pela USP</div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Dos dois lados da mesa</span>
+        <h2>Quem escreve e capta, e quem avalia.</h2>
+        <p style="margin-top:1.1rem">Do lado de quem capta, fui pesquisador responsável em três projetos PIPE e participei de 18 financiamentos aprovados, de 7 fontes. Do lado de quem avalia, já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. Juntando os dois lados, eu enxergo cedo onde uma proposta boa perde pontos.</p>
+        <p style="margin-top:.4rem;font-weight:600;color:var(--ink)">Nada disso depende da minha palavra:</p>
+        <ul class="proof">
+          <li><b>PIPE 2018/22628-5</b>, pesquisador responsável: equipamento de ensaio físico e virtual para materiais biomédicos. <a href="https://bv.fapesp.br/pt/auxilios/104484/" target="_blank" rel="noopener">Ver na BV FAPESP</a></li>
+          <li><b>PIPE 2010/52057-8</b>, pesquisador responsável: imagens de fluorescência e infravermelho para cáries dentais. <a href="https://bv.fapesp.br/pt/auxilios/46254/" target="_blank" rel="noopener">Ver na BV FAPESP</a></li>
+          <li><b>PIPE Fase 1 da Cultivee</b>, pesquisador responsável, em execução.</li>
+          <li><b>Na equipe de um PIPE que seguiu para a Fase 2</b> (2015/00811-4 e 2016/08097-1). <a href="https://bv.fapesp.br/pt/auxilios/91288/" target="_blank" rel="noopener">Ver na BV FAPESP</a></li>
+        </ul>
+        <p class="muted" style="font-size:.93rem;margin-top:1.3rem">Confira em fontes públicas: <a href="https://bv.fapesp.br/pt/pesquisador/106837/" target="_blank" rel="noopener" style="color:var(--green-700);text-decoration:underline">Biblioteca Virtual da FAPESP</a> · <a href="http://lattes.cnpq.br/7819717440359474" target="_blank" rel="noopener" style="color:var(--green-700);text-decoration:underline">Currículo Lattes</a> · <a href="https://orcid.org/0000-0002-4395-3069" target="_blank" rel="noopener" style="color:var(--green-700);text-decoration:underline">ORCID</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec" id="metodo">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Do diagnóstico à submissão no SAGe.</h2>
+      <p class="lead muted" style="margin-top:1rem">Trabalho individual, no seu ritmo. O projeto continua seu: eu trabalho ao seu lado, e a autoria e o mérito são seus.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Diagnóstico de Prontidão</h3><p>Leio o que você já tem, mesmo que seja só a ideia, pelos critérios do PIPE: o que está forte, o que falta e o que precisa ser estruturado.</p><span class="deliv">1 hora, R$ 250</span></div>
+      <div class="step"><div class="n">2</div><h3>Adequação à norma</h3><p>Escopo da Fase 1, requisitos do Pesquisador Responsável e da empresa, equipe, bolsas e documentos.</p></div>
+      <div class="step"><div class="n">3</div><h3>Construção da proposta</h3><p>Trabalhamos juntos o projeto, o plano de trabalho, o orçamento e os textos dos campos do SAGe, com os três ajustes em cada parte.</p></div>
+      <div class="step"><div class="n">4</div><h3>Submissão</h3><p>Revisamos a versão final e conferimos cada critério e cada documento antes do envio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECOS -->
+<section class="sec offer" id="precos">
+  <div class="wrap narrow">
+    <span class="eyebrow">Quanto custa</span>
+    <h2>Preço fixo, combinado antes. Nunca percentual sobre o recurso.</h2>
+    <div class="pricing tres">
+      <div class="pcard feat">
+        <span class="pk-tag">Comece por aqui</span>
+        <div class="pk-lbl">Diagnóstico de Prontidão</div>
+        <div class="pk-val">R$ 250<span> / 1 hora</span></div>
+        <p class="pk-desc">Leio o seu projeto ou a sua ideia pelos critérios do PIPE e digo o que está forte, o que falta e qual o próximo passo.</p>
+        <div class="pk-cta"><a data-origem="pipe-card-250" data-checkout="consultoria-avulsa" data-valor="250" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar o diagnóstico <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="pcard curso">
+        <span class="pk-tag espera">Lista de espera</span>
+        <div class="pk-lbl">Curso online PIPE Fase 1</div>
+        <div class="pk-val">R$ 497</div>
+        <p class="pk-desc">Para quem quer escrever sozinho, com método: da ideia à submissão no SAGe, com a pasta-modelo da submissão e a norma da FAPESP.</p>
+        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">As aulas estão em gravação. Entre na lista e seja avisado primeiro, sem pagar nada agora.</p>
+        <div class="pk-cta"><a data-origem="pipe-card-curso" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20entrar%20na%20lista%20de%20espera%20do%20curso%20online%20PIPE%20Fase%201%20(R%24%20497)." target="_blank" rel="noopener">Quero entrar na lista <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="pcard">
+        <div class="pk-lbl">Acompanhamento PIPE Fase 1</div>
+        <div class="pk-val">R$ 4.900</div>
+        <p class="pk-desc">Do diagnóstico à submissão, sem contador de horas: projeto, plano de trabalho, orçamento, equipe, bolsas e documentos.</p>
+        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Menos de 2% do teto de um PIPE Fase 1 (R$ 300 mil).</p>
+        <div class="pk-cta"><a data-origem="pipe-card-4900" data-checkout="pipe-fase-1" data-valor="4900" href="https://www.asaas.com/c/puponpp5j8dlqmzn" target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+    <div class="guarantee" style="display:flex;gap:13px;align-items:flex-start;background:var(--green-50);border:1px solid var(--green-200);border-radius:14px;padding:16px 20px;margin-top:1.3rem">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex:none;width:24px;height:24px;color:var(--green-600);margin-top:2px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <p style="margin:0;font-size:.97rem;color:var(--body)"><b style="color:var(--green-800)">Garantia sobre o meu trabalho</b>, nunca sobre a decisão da FAPESP: se na primeira hora você sair sem um diagnóstico claro do seu projeto, essa hora fica por minha conta.</p>
+    </div>
+    <p class="outros">Vai submeter a outro edital (Centelha, CNPq, bolsas)? <a href="/fomento">Veja os outros planos</a>.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap narrow">
+    <span class="eyebrow">Perguntas frequentes</span>
+    <h2>Dúvidas sobre o PIPE e sobre a consultoria.</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>Preciso ter empresa aberta para submeter? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Não. A norma do PIPE aceita empresa a constituir: você submete com a tecnologia e o plano, e o CNPJ entra na contratação. No Diagnóstico eu confiro com você os requisitos do Pesquisador Responsável e da empresa.</p>
+      </details>
+      <details>
+        <summary>Quanto o PIPE Fase 1 financia? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Até R$ 300 mil, contando as bolsas, por até 9 meses (normas do PIPE de 15/09/2026). Os Benefícios Complementares e a parcela de infraestrutura ficam fora desse teto. O recurso não é reembolsável.</p>
+      </details>
+      <details>
+        <summary>Tem prazo para submeter? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>O PIPE recebe propostas em fluxo contínuo, pelo SAGe. O prazo é o seu: quanto antes a leitura, mais tempo para corrigir com calma.</p>
+      </details>
+      <details>
+        <summary>Você escreve o projeto por mim? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Não. Eu trabalho ao seu lado, parte por parte, e o projeto continua seu. Quem submete e responde pelo projeto é você, como Pesquisador Responsável.</p>
+      </details>
+      <details>
+        <summary>Você garante a aprovação? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Não. A decisão de mérito é dos pareceristas e a contratação depende do orçamento da FAPESP. O que faço é deixar a sua proposta na melhor versão possível, com tempo de corrigir.</p>
+      </details>
+      <details>
+        <summary>Como funciona o pagamento? <span class="ic" aria-hidden="true">+</span></summary>
+        <p>Pelo Asaas, em nome da Cultivee: Pix, boleto ou cartão em até 12x sem juros. Você recebe o comprovante na hora e a nota fiscal de serviço por e-mail depois. Pago o plano, eu te chamo no WhatsApp para marcar o primeiro encontro.</p>
+        <p>Se mudar de ideia, você pode desistir em até 7 dias da contratação, com devolução integral do valor (art. 49 do Código de Defesa do Consumidor).</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="sec final">
+  <div class="wrap narrow">
+    <div class="final-card">
+      <h2>Submeta o seu PIPE sabendo o que a banca vai ler.</h2>
+      <p class="lead muted" style="margin-top:1rem">Comece pelo Diagnóstico de Prontidão: 1 hora em que eu leio o seu caso pelos critérios do PIPE e te digo, com franqueza, o que fazer primeiro.</p>
+      <p style="margin-top:1.2rem">Por ser um trabalho individual, acompanho poucas propostas de cada vez.</p>
+      <a class="btn btn-primary" style="font-size:1.1rem;padding:17px 32px;margin-top:1rem" data-origem="pipe-cta-final" data-checkout="consultoria-avulsa" data-valor="250" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar meu Diagnóstico de Prontidão <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="cta-note" style="margin-top:.9rem">R$ 250, Pix ou cartão em até 12x. Depois do pagamento, marcamos pelo WhatsApp, em sigilo.</p>
+      <button type="button" class="wa-direct" data-abre-form="pipe-cta-final">Prefiro conversar antes pelo WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Mardoqueu Martins da Costa</b>
+    <span class="cv-org">Consultoria oferecida pela <a href="/educa">Cultivee Educa</a>, trilha Negócios · Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda, incubada na ESALQTec (ESALQ/USP), Piracicaba-SP</span>
+    <div class="row">
+      <span>Pesquisador e avaliador de projetos · Formação completa pela USP, da graduação ao pós-doutorado</span>
+      <a data-origem="pipe-rodape" href="https://wa.me/5519991644181" target="_blank" rel="noopener">WhatsApp: (19) 99164-4181</a>
+      <a href="/fomento">Outros editais</a>
+      <a href="http://lattes.cnpq.br/7819717440359474" target="_blank" rel="noopener">Currículo Lattes</a>
+      <a href="https://orcid.org/0000-0002-4395-3069" target="_blank" rel="noopener">ORCID</a>
+    </div>
+    <p class="fine">Consultoria educacional de escrita e estratégia de submissão ao PIPE-FAPESP. Não há garantia de aprovação, porque a decisão de mérito é dos pareceristas e a contratação depende do orçamento da FAPESP. O conhecimento dos critérios não implica qualquer influência sobre avaliações. Remuneração por valor fixo, nunca percentual sobre recursos públicos aprovados.<br><strong>Privacidade (LGPD):</strong> os dados que você compartilhar (nome, contato e informações do projeto) são usados exclusivamente para responder ao seu contato e conduzir a consultoria, tratados com sigilo e não compartilhados com terceiros. Para acessar ou excluir seus dados, fale pelo WhatsApp indicado acima. Responsável pelo tratamento: Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda.<br>Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda · CNPJ 64.471.739/0001-64 · Rua Francisco Maricondi, 338, Vila Marina, São Carlos-SP, CEP 13566-400 · contato@cultivee.com.br · © 2026 Cultivee.</p>
+  </div>
+</footer>
+
+<!-- FORMULARIO DO DIAGNOSTICO (copiado do /fomento/index.html em 19/10/2026; abre pelo "Prefiro conversar antes" do hero e do CTA final;
+     aqui o edital ja vem marcado em PIPE Fase 1).
+     Ao enviar: abre o wa.me com as respostas + [ref: X-XXXX anuncio] (nova aba ou app) e leva esta
+     aba para /obrigado/?tipo=diagnostico, que dispara a conversao do formulario (medicao.js). -->
+<dialog class="fdx" id="diagnostico" aria-labelledby="fdx-titulo" aria-describedby="fdx-sub">
+  <div class="fdx-in">
+    <div class="fdx-top">
+      <h2 id="fdx-titulo" tabindex="-1">Conte sobre o seu projeto</h2>
+      <button type="button" class="fdx-x" data-fecha-form aria-label="Fechar o formulário">&times;</button>
+    </div>
+    <p class="fdx-sub" id="fdx-sub">Cinco respostas rápidas. Ao enviar, o WhatsApp abre com tudo escrito; você revisa e manda, e eu respondo com o caminho indicado para o seu caso. A leitura do projeto é feita no Diagnóstico de Prontidão (1 hora, R$ 250).</p>
+    <form id="fdx-form" novalidate>
+      <fieldset data-q="edital">
+        <legend><span class="n" aria-hidden="true">1</span>Qual edital você tem em vista?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="edital" value="PIPE Fase 1" required checked>PIPE Fase 1</label>
+          <label class="opt"><input type="radio" name="edital" value="PIPE Fase 2">PIPE Fase 2</label>
+          <label class="opt"><input type="radio" name="edital" value="Centelha">Centelha</label>
+          <label class="opt"><input type="radio" name="edital" value="Universal CNPq">Universal (CNPq)</label>
+          <label class="opt"><input type="radio" name="edital" value="Finep">Finep</label>
+          <label class="opt"><input type="radio" name="edital" value="Outro">Outro</label>
+          <label class="opt"><input type="radio" name="edital" value="Ainda não sei">Ainda não sei</label>
+        </div>
+        <div class="extra" id="fdx-outro-box" hidden>
+          <label class="txt" for="fdx-outro">Qual? (opcional)</label>
+          <input type="text" id="fdx-outro" name="edital_outro" maxlength="60" autocomplete="off" placeholder="Ex.: Auxílio Regular FAPESP, EMBRAPII">
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset data-q="prazo">
+        <legend><span class="n" aria-hidden="true">2</span>Qual é o prazo?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="prazo" value="data" required>Tenho data limite</label>
+          <label class="opt"><input type="radio" name="prazo" value="Fluxo contínuo">Fluxo contínuo</label>
+          <label class="opt"><input type="radio" name="prazo" value="Não sei">Não sei</label>
+        </div>
+        <div class="extra" id="fdx-data-box" hidden>
+          <label class="txt" for="fdx-data">Data limite</label>
+          <input type="date" id="fdx-data" name="prazo_data">
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset data-q="estagio">
+        <legend><span class="n" aria-hidden="true">3</span>Em que ponto está a proposta?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="estagio" value="Ideia" required>Ideia</label>
+          <label class="opt"><input type="radio" name="estagio" value="Rascunho">Rascunho</label>
+          <label class="opt"><input type="radio" name="estagio" value="Projeto pronto para revisar">Pronto para revisar</label>
+          <label class="opt"><input type="radio" name="estagio" value="Já submeti e voltou com parecer">Já submeti e voltou com parecer</label>
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset data-q="perfil">
+        <legend><span class="n" aria-hidden="true">4</span>Qual destes descreve você?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="perfil" value="Acadêmico" data-perfil="academico" required>Acadêmico</label>
+          <label class="opt"><input type="radio" name="perfil" value="Pesquisador virando empresário" data-perfil="ponte">Pesquisador virando empresário</label>
+          <label class="opt"><input type="radio" name="perfil" value="Empresa" data-perfil="empresa">Empresa</label>
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset data-q="investe">
+        <legend><span class="n" aria-hidden="true">5</span>Se o diagnóstico mostrar que vale a pena, você tem condição de investir em ajuda especializada nesta submissão?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="investe" value="Sim" required>Sim</label>
+          <label class="opt"><input type="radio" name="investe" value="Depende do valor">Depende do valor</label>
+          <label class="opt"><input type="radio" name="investe" value="Não agora">Não agora</label>
+        </div>
+        <p class="err-msg" aria-live="polite"></p>
+      </fieldset>
+
+      <div data-q="nome">
+        <label class="txt" for="fdx-nome" style="font-weight:600;color:var(--ink);font-size:.97rem">Seu nome</label>
+        <input type="text" id="fdx-nome" name="nome" required maxlength="60" autocomplete="name" placeholder="Como prefere ser chamado(a)">
+        <p class="err-msg" aria-live="polite"></p>
+      </div>
+
+      <button type="submit" class="btn btn-primary send">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+      <p class="fdx-fine">🔒 Seu nome segue só na mensagem do WhatsApp, que você revisa antes de enviar.</p>
+      <p class="fdx-alt"><a class="wa-direct" data-origem="pipe-formulario-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20o%20meu%20projeto%20PIPE%20Fase%201." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a></p>
+    </form>
+  </div>
+</dialog>
+
+<a class="wa-float" data-origem="pipe-flutuante" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20o%20meu%20projeto%20PIPE%20Fase%201." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span>Falar no WhatsApp</span></a>
+
+<script>
+(function(){
+  /* A medicao inteira (GA4, Pixel/CAPI, atribuicao, [ref], clique no WhatsApp) mora em medicao.js.
+     Aqui fica so o comportamento do formulario. O clique em qualquer a[href*="wa.me"] e tratado
+     pelo listener de medicao.js: 1 gerar_lead_whatsapp por clique, com origem = data-origem, e no
+     maximo 1 Lead por sessao de contato (nenhum em navegador automatizado; filtro de robos, 09/10).
+     click_whatsapp (evento antigo) foi SUBSTITUIDO por gerar_lead_whatsapp: ver MEDICAO-DO-SITE.md. */
+  var M=window.cvMedicao;
+  var dlg=document.getElementById('diagnostico');
+  var form=document.getElementById('fdx-form');
+  if(!dlg||!form) return;
+  var origem='form', opener=null;
+  function ga(name,params){ try{ if(M) M.evento(name,params); }catch(_){} }
+  var MSG_PADRAO='Olá, Mardoqueu! Quero falar sobre o Diagnóstico de Prontidão do meu projeto (captação de fomento).';
+  /* Codigos fechados das respostas: e SO isto que vai ao GA4 e ao registro (nunca nome, data ou texto livre). */
+  var COD={
+    edital:{'PIPE Fase 1':'pipe-f1','PIPE Fase 2':'pipe-f2','Centelha':'centelha','Universal CNPq':'universal-cnpq','Finep':'finep','Outro':'outro','Ainda não sei':'nao-sei'},
+    prazo:{'data':'data-limite','Fluxo contínuo':'fluxo-continuo','Não sei':'nao-sei'},
+    estagio:{'Ideia':'ideia','Rascunho':'rascunho','Projeto pronto para revisar':'pronto-revisar','Já submeti e voltou com parecer':'parecer'},
+    perfil:{'Acadêmico':'academico','Pesquisador virando empresário':'ponte','Empresa':'empresa'},
+    investe:{'Sim':'sim','Depende do valor':'depende','Não agora':'nao-agora'}
+  };
+  function hoje(){var d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,10);}
+  function val(n){var el=form.querySelector('input[name="'+n+'"]:checked');return el?el.value:'';}
+  function sync(){
+    document.getElementById('fdx-outro-box').hidden=val('edital')!=='Outro';
+    document.getElementById('fdx-data-box').hidden=val('prazo')!=='data';
+  }
+  function limpa(e){
+    sync();
+    var box=e.target.closest('[data-q]');
+    if(box){box.classList.remove('err');var m=box.querySelector('.err-msg');if(m)m.textContent='';}
+  }
+  form.addEventListener('change',limpa);
+  form.addEventListener('input',limpa);
+  function abrirForm(btn){
+    opener=btn; origem=btn.getAttribute('data-abre-form')||'form';
+    var p=btn.getAttribute('data-perfil');
+    if(p){var r=form.querySelector('input[name="perfil"][data-perfil="'+p+'"]');if(r)r.checked=true;}
+    document.getElementById('fdx-data').min=hoje();
+    sync();
+    /* Abrir o formulario NAO e lead: evento de funil, sem valor e sem Pixel. */
+    ga('form_diagnostico_open',{origem:origem});
+    if(typeof dlg.showModal!=='function'){
+      /* Navegador sem <dialog>: segue direto ao WhatsApp como clique comum (1 Lead). */
+      var a=document.createElement('a'); a.href=M?M.urlWhatsApp(MSG_PADRAO):'https://wa.me/5519991644181';
+      a.target='_blank'; a.rel='noopener'; a.setAttribute('data-origem',origem); a.hidden=true;
+      document.body.appendChild(a); a.click(); a.remove(); return;
+    }
+    dlg.showModal();
+    document.getElementById('fdx-titulo').focus();
+  }
+  document.querySelectorAll('[data-abre-form]').forEach(function(b){
+    b.addEventListener('click',function(){abrirForm(b);});
+  });
+  /* Link dos artigos do blog (?abrir=diagnostico&de=artigo-...): abre o formulario direto, com a origem do artigo. */
+  try{
+    var qs=new URLSearchParams(location.search);
+    if(qs.get('abrir')==='diagnostico'){
+      var de=(qs.get('de')||'artigo').replace(/[^\w\-]/g,'').slice(0,60)||'artigo';
+      abrirForm({getAttribute:function(k){return k==='data-abre-form'?de:null;},focus:function(){}});
+    }
+  }catch(_){}
+  function fechar(){if(dlg.open)dlg.close();}
+  dlg.querySelectorAll('[data-fecha-form]').forEach(function(b){b.addEventListener('click',fechar);});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)fechar();});
+  dlg.addEventListener('close',function(){if(opener&&opener.focus)opener.focus();});
+  function erro(q,msg){
+    var box=form.querySelector('[data-q="'+q+'"]');
+    box.classList.add('err'); box.querySelector('.err-msg').textContent=msg;
+    return box;
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    form.querySelectorAll('[data-q]').forEach(function(b){b.classList.remove('err');b.querySelector('.err-msg').textContent='';});
+    var r={edital:val('edital'),prazo:val('prazo'),estagio:val('estagio'),perfil:val('perfil'),investe:val('investe')};
+    var data=document.getElementById('fdx-data').value;
+    var nome=document.getElementById('fdx-nome').value.replace(/\s+/g,' ').trim();
+    var outro=document.getElementById('fdx-outro').value.replace(/\s+/g,' ').trim();
+    var bad=[];
+    if(!r.edital) bad.push(erro('edital','Escolha uma opção.'));
+    if(!r.prazo) bad.push(erro('prazo','Escolha uma opção.'));
+    else if(r.prazo==='data'&&!data) bad.push(erro('prazo','Informe a data limite, ou escolha outra opção.'));
+    if(!r.estagio) bad.push(erro('estagio','Escolha uma opção.'));
+    if(!r.perfil) bad.push(erro('perfil','Escolha uma opção.'));
+    if(!r.investe) bad.push(erro('investe','Escolha uma opção.'));
+    if(!nome) bad.push(erro('nome','Escreva o seu nome.'));
+    if(bad.length){
+      var f=bad[0].querySelector('input:not([type=hidden])');
+      if(f){f.focus();}
+      return;
+    }
+    var prazoTxt=r.prazo==='data'?data.split('-').reverse().join('/'):r.prazo;
+    var editalTxt=r.edital==='Outro'&&outro?'Outro ('+outro+')':r.edital;
+    var texto='Olá, Mardoqueu! Quero falar sobre o meu projeto.\n'+
+      'Nome: '+nome+'\n'+
+      'Edital: '+editalTxt+'\n'+
+      'Prazo: '+prazoTxt+'\n'+
+      'Estágio: '+r.estagio+'\n'+
+      'Perfil: '+r.perfil+'\n'+
+      'Investir em ajuda especializada: '+r.investe;
+    var categorias={edital:COD.edital[r.edital],prazo_tipo:COD.prazo[r.prazo],estagio:COD.estagio[r.estagio],perfil:COD.perfil[r.perfil],investe:COD.investe[r.investe]};
+    fechar();
+    if(M){ M.enviarFormulario(texto,origem,categorias); }
+    else { window.open('https://wa.me/5519991644181?text='+encodeURIComponent(texto),'_blank'); }
+  });
+})();
+</script>
+
+<script>
+  /* Clique num botao de pagamento (link do Asaas): begin_checkout no GA4 e InitiateCheckout na Meta (Pixel + Worker). Igual ao da /fomento. */
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-checkout]');if(!a||!window.cvMedicao)return;try{window.cvMedicao.evento('begin_checkout',{origem:a.getAttribute('data-origem'),plano:a.getAttribute('data-checkout'),value:Number(a.getAttribute('data-valor')),currency:'BRL'});if(window.cvMedicao.checkout)window.cvMedicao.checkout(a.getAttribute('data-checkout'));}catch(_){}} ,true);
+</script>
+</body>
+</html>

@@ -19,6 +19,8 @@ const STATIC_PATHS = [
   { path: "/projetos", changefreq: "monthly", priority: "0.6" },
   // Landing estatica (public/fomento/index.html): trilha Negocios do Educa.
   { path: "/fomento", changefreq: "monthly", priority: "0.7" },
+  // Pagina de venda por programa (public/fomento/pipe/index.html, 19/10/2026): destino da campanha Meta v3.
+  { path: "/fomento/pipe", changefreq: "monthly", priority: "0.7" },
   { path: "/aplicativos", changefreq: "monthly", priority: "0.5" },
   { path: "/produtos", changefreq: "monthly", priority: "0.7" },
   { path: "/produtos/controle-hidroponia", changefreq: "monthly", priority: "0.7" },
@@ -161,6 +163,7 @@ ${pillars.map(line).join("\n")}
 - [Curso de Hidroponia](${SITE}/cursos/hidroponia): em produção, lista de espera
 - [Curso de Cultivo Indoor](${SITE}/cursos/cultivo-indoor): em breve
 - [Mentoria de captação de recursos de fomento](${SITE}/fomento): PIPE, Centelha, Finep, FAPESP, CNPq
+- [Consultoria para o PIPE-FAPESP Fase 1](${SITE}/fomento/pipe): escrever o projeto pelos critérios da banca, Diagnóstico de Prontidão
 
 ## Projetos e protótipos
 
