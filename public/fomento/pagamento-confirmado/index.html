@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  Página de retorno depois do pagamento da mentoria no Asaas.
+  Produção: cultivee.com.br/fomento/pagamento-confirmado?plano=<plano> (arquivo public/fomento/pagamento-confirmado/index.html).
+  Cada link de pagamento do Asaas tem callback.successUrl apontando para cá, com o seu plano.
+  Medição: GA4 "purchase" com o valor do plano, UMA vez por plano a cada 24 h neste navegador (recarregar não conta
+  de novo). É medição do navegador: quem fecha o Asaas antes do redirecionamento não é contado; a venda real fica
+  registrada no Asaas e no aviso por e-mail do Moodle. Meta (Pixel/CAPI Purchase): ainda não, o Worker só aceita Lead.
+  noindex: página de funil, fora do sitemap. Teste sem contar compra: acrescentar &teste=1.
+-->
+<title>Pagamento recebido | Mentoria de captação de fomento</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f6e56">
+<script src="/fomento/medicao.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#0b3a2c; --green-800:#0d4d3a; --green-700:#0f6e56; --green-600:#15856a;
+    --green-100:#dcefe7; --ink:#16241f; --body:#33433d; --muted:#62716b;
+    --bg:#f6faf8; --line:#e2ece8; --action:#0d9488; --action-700:#0f766e; --maxw:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--body);background:var(--bg);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2{font-family:'Lora',Georgia,serif;color:var(--ink);line-height:1.2;font-weight:600;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:3px solid var(--green-600);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .cv-bar{background:var(--green-900);color:#cfe9df;font-size:.8rem}
+  .cv-bar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:7px;padding-bottom:7px;max-width:1120px}
+  .cv-brand{font-weight:700;letter-spacing:.12em;color:#fff}
+  header{background:#fff;border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;min-height:68px;max-width:1120px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Lora',serif;font-weight:600;color:var(--ink);font-size:1.05rem}
+  .brand .mono{width:38px;height:38px;border-radius:11px;background:var(--green-600);color:#fff;display:grid;place-items:center;font-size:1rem;font-weight:700;font-family:'Inter',sans-serif;flex:none}
+  .brand small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.02em}
+  main{padding:clamp(2.2rem,6vw,4rem) 0}
+  .ok{width:56px;height:56px;border-radius:50%;background:var(--green-100);color:var(--green-700);display:grid;place-items:center;margin-bottom:1.2rem}
+  .ok svg{width:28px;height:28px}
+  h1{font-size:clamp(1.65rem,4.6vw,2.3rem)}
+  .sub{font-size:1.1rem;color:var(--ink);margin-top:1rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(1.2rem,4vw,1.8rem);margin-top:1.8rem}
+  h2{font-size:1.3rem}
+  .passos{list-style:none;display:grid;gap:1rem;margin-top:1rem}
+  .passos li{display:flex;gap:12px;align-items:flex-start}
+  .passos .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--green-600);color:#fff;font-weight:700;display:grid;place-items:center;font-size:.92rem;margin-top:2px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:1.02rem;padding:15px 26px;border-radius:999px;border:0;line-height:1.3;max-width:100%;background:var(--action);color:#fff;box-shadow:0 6px 18px rgba(13,148,136,.30)}
+  .btn:hover{background:var(--action-700)}
+  .btn svg{width:22px;height:22px;flex:none}
+  .aviso{font-size:.95rem;color:var(--muted);margin-top:.8rem}
+  .voltar{display:inline-block;margin-top:1.8rem;color:var(--green-700);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  .teste{background:#fff7e0;border:1px solid #f0d58a;color:#6b5210;border-radius:12px;padding:10px 14px;font-size:.92rem;margin-bottom:1.4rem}
+  footer{border-top:1px solid var(--line);padding:1.6rem 0;font-size:.85rem;color:var(--muted)}
+  @media (max-width:520px){ .cv-bar .cv-links{display:none} .btn{width:100%} }
+</style>
+</head>
+<body>
+
+<div class="cv-bar">
+  <div class="wrap">
+    <span><span class="cv-brand">CULTIVEE</span> · Educa · Trilha Negócios</span>
+    <span class="cv-links">Mentoria de captação de fomento</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <span class="brand">
+      <span class="mono">MC</span>
+      <span>Mardoqueu M. da Costa<small>Mentoria de captação de fomento</small></span>
+    </span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="teste" id="aviso-teste" hidden>Modo teste: esta visita não conta como compra.</p>
+
+    <div class="ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h1>Pagamento recebido. Obrigado pela confiança!</h1>
+    <p class="sub" id="sub">Sua contratação da mentoria está confirmada.</p>
+
+    <div class="card">
+      <h2>O que acontece agora</h2>
+      <ol class="passos">
+        <li><span class="n">1</span><span>O comprovante do pagamento chega no seu e-mail, enviado pelo Asaas em nome da Cultivee.</span></li>
+        <li><span class="n">2</span><span>Eu te chamo no WhatsApp, no número que você informou, para marcar o primeiro encontro.</span></li>
+        <li><span class="n">3</span><span>A nota fiscal de serviço é emitida e enviada por e-mail depois.</span></li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <a class="btn" id="abrir-wa" data-origem="pagamento-confirmado" href="https://wa.me/5519991644181" target="_blank" rel="noopener">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        <span>Falar no WhatsApp agora</span>
+      </a>
+      <p class="aviso">Se preferir adiantar, mande uma mensagem: já começamos pelo seu edital e pelo prazo.</p>
+    </div>
+
+    <a class="voltar" href="/fomento">Voltar para a página da mentoria</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Cultivee Instituto de Ensino, Pesquisa e Inovação Ltda · CNPJ 64.471.739/0001-64 · contato@cultivee.com.br. O que você me contar sobre o seu projeto é tratado em sigilo.</div>
+</footer>
+
+<script>
+(function(){
+  var PLANOS={
+    'consultoria-avulsa':{nome:'Consultoria avulsa (1 hora)',valor:250},
+    'acompanhamento-completo':{nome:'Acompanhamento completo',valor:2500},
+    'pipe-fase-1':{nome:'Mentoria PIPE Fase 1',valor:4900},
+    'pipe-fase-2-finep-embrapii':{nome:'Mentoria PIPE Fase 2, Finep e EMBRAPII',valor:9800}
+  };
+  var qs=new URLSearchParams(location.search);
+  var chave=qs.get('plano')||'';
+  var p=PLANOS[chave];
+  var M=window.cvMedicao;
+  var teste=qs.get('teste')==='1'||(M&&M.teste);
+  if(teste) document.getElementById('aviso-teste').hidden=false;
+  if(p){
+    document.getElementById('sub').textContent='Sua contratação de "'+p.nome+'" está confirmada.';
+    var msg='Olá, Mardoqueu! Acabei de pagar "'+p.nome+'" pelo site e quero marcar o primeiro encontro.';
+    document.getElementById('abrir-wa').href=M&&M.urlWhatsApp?M.urlWhatsApp(msg):'https://wa.me/5519991644181?text='+encodeURIComponent(msg);
+  }
+  /* Compra no GA4: uma vez por plano a cada 24 h neste navegador (recarregar não conta de novo). */
+  if(!p||!M||teste) return;
+  var k='cultivee_fomento_compra_'+chave, agora=Date.now();
+  try{ var antes=Number(localStorage.getItem(k)||0); if(agora-antes<864e5) return; localStorage.setItem(k,String(agora)); }catch(_){}
+  M.evento('purchase',{currency:'BRL',value:p.valor,transaction_id:chave+'-'+agora,
+    items:[{item_id:chave,item_name:p.nome,item_category:'mentoria',price:p.valor,quantity:1}]});
+})();
+</script>
+</body>
+</html>
