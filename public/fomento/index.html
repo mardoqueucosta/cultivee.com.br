@@ -6,7 +6,7 @@
 <!--
   ===== FONTE DA VERDADE (atualize aqui e replique com find-replace global) =====
   WhatsApp ... 5519991644181   (todos os links a[href*="wa.me"] + rodapé)
-  Precos ..... R$ 250/h | curso online R$ 497 (desde 2026-10-18) | R$ 2.500 (bolsas/auxilios/Centelha) | R$ 4.900 (PIPE Fase 1) | R$ 9.800 (PIPE F2/Finep/EMBRAPII), desde 2026-07-03
+  Precos ..... R$ 250/h | curso online R$ 497 (desde 2026-10-18) | R$ 2.500 (bolsas/auxilios/Centelha) | R$ 4.900 (PIPE Fase 1), desde 2026-07-03 (R$ 9.800 PIPE F2/Finep/EMBRAPII retirado em 2026-10-19: moodle-cultivee/versoes/2026-10-19-plano-pipe-fase-2)
                -> bloco .pricing (linhas de ROI nos cards) e FAQ de pagamento
   Prova ...... 18 financiamentos | 7 fontes | dezenas de projetos avaliados
                -> hero (cred-card + checks) e secao de autoridade (#guia)
@@ -238,7 +238,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(13,148,136,.5)}
   .wa-float svg{width:24px;height:24px;flex:none}
   @media(max-width:560px){.wa-float span{display:none}.wa-float{padding:15px;right:16px;bottom:16px}}
-  /* curso online + 4 tiers: 5 colunas no desktop largo; abaixo disso o ultimo (R$ 9.800) ocupa a linha inteira. A secao .offer usa wrap "narrow" (780px); os cards e a
+  /* 4 cards (hora, curso, acompanhamento, PIPE Fase 1): 4 colunas no desktop largo, 2x2 abaixo disso. A secao .offer usa wrap "narrow" (780px); os cards e a
      faixa sob medida estouram para a MESMA largura do container das outras secoes
      (--maxw - padding), igual ao vgrid de valores. */
   .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:2rem;align-items:stretch}
@@ -258,10 +258,8 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .psob b{color:var(--green-800);font-weight:600}
   .psob span{color:var(--muted);font-size:.92rem}
   .psob-val{font-weight:600;color:var(--green-700);font-size:.95rem}
-  /* cards por ordem de valor; com grade de 2 ou 4 colunas o ultimo (R$ 9.800) ocupa a linha; 5 colunas a partir de 1101 px */
+  /* cards por ordem de valor (4 desde 19/10/2026, sem o PIPE Fase 2): 2x2 ate 1000 px, 4 colunas acima */
   .pcard.curso{border-color:var(--green-200)}
-  .pricing .pcard:last-child{grid-column:1/-1}
-  @media(min-width:1101px){.pricing{grid-template-columns:repeat(5,1fr);gap:12px}.pcard{padding:22px 16px 20px}.pricing .pcard:last-child{grid-column:auto}}
   .pk-cta{margin-top:auto;padding-top:14px}
   /* um botao por card (origem card-*): contorno; cheio so no card em destaque */
   .pk-cta a{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.9rem;line-height:1.25;color:var(--action-700);background:#fff;border:1.5px solid var(--action);border-radius:999px;padding:9px 12px;text-decoration:none;transition:.18s ease;width:100%;justify-content:center}
@@ -620,13 +618,6 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Menos de 2% do teto de um PIPE Fase 1 (R$ 300 mil).</p>
         <div class="pk-cta"><a data-origem="card-4900" data-checkout="pipe-fase-1" data-valor="4900" href="https://www.asaas.com/c/puponpp5j8dlqmzn" target="_blank" rel="noopener">Quero esta mentoria <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
-      <div class="pcard">
-        <div class="pk-lbl">PIPE Fase 2, Finep e EMBRAPII</div>
-        <div class="pk-val">R$ 9.800</div>
-        <p class="pk-desc">Propostas extensas de inovação: plano de trabalho de até 24 meses, orçamento robusto, equipe e preparo de defesa.</p>
-        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Cerca de 0,65% do teto de um PIPE Fase 2 (R$ 1,5 milhão) e 0,2% da subvenção Finep (R$ 5 milhões).</p>
-        <div class="pk-cta"><a data-origem="card-9800" data-checkout="pipe-fase-2-finep-embrapii" data-valor="9800" href="https://www.asaas.com/c/zusbczfgxkhflfg6" target="_blank" rel="noopener">Quero esta mentoria <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
     </div>
     <div class="psob">
       <div><b>Projetos sob medida.</b> <span>Empresas com vários editais ou escopos fora do comum.</span></div>
@@ -662,7 +653,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       </details>
       <details>
         <summary>Como funciona o pagamento? <span class="ic" aria-hidden="true">+</span></summary>
-        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 250/hora; curso online PIPE Fase 1 por R$ 497, para quem quer escrever sozinho; acompanhamento completo de uma proposta até a submissão por R$ 2.500, sem contador de horas (bolsas, auxílios e Centelha); PIPE Fase 1 por R$ 4.900; PIPE Fase 2, Finep e EMBRAPII por R$ 9.800; ou orçamento sob medida em casos fora do comum. Nunca cobro percentual sobre o recurso captado.</p>
+        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 250/hora; curso online PIPE Fase 1 por R$ 497, para quem quer escrever sozinho; acompanhamento completo de uma proposta até a submissão por R$ 2.500, sem contador de horas (bolsas, auxílios e Centelha); PIPE Fase 1 por R$ 4.900; ou orçamento sob medida em casos fora do comum. Nunca cobro percentual sobre o recurso captado.</p>
         <p>O pagamento é feito pelo Asaas, em nome da Cultivee: Pix, boleto ou cartão em até 12x sem juros. Você recebe o comprovante na hora, e a nota fiscal de serviço é emitida e enviada por e-mail depois. Pago o plano, eu te chamo no WhatsApp para marcar o primeiro encontro.</p>
         <p>Se mudar de ideia, você pode desistir em até 7 dias da contratação, com devolução integral do valor (art. 49 do Código de Defesa do Consumidor).</p>
       </details>
