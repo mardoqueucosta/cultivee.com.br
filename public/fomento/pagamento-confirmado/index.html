@@ -7,9 +7,9 @@
   Página de retorno depois do pagamento da mentoria no Asaas.
   Produção: cultivee.com.br/fomento/pagamento-confirmado?plano=<plano> (arquivo public/fomento/pagamento-confirmado/index.html).
   Cada link de pagamento do Asaas tem callback.successUrl apontando para cá, com o seu plano.
-  Medição: GA4 "purchase" com o valor do plano, UMA vez por plano a cada 24 h neste navegador (recarregar não conta
+  Medição: GA4 "purchase" e Meta "Purchase" (Pixel + Worker, desde 19/10/2026) com o valor do plano, UMA vez por plano a cada 24 h neste navegador (recarregar não conta
   de novo). É medição do navegador: quem fecha o Asaas antes do redirecionamento não é contado; a venda real fica
-  registrada no Asaas e no aviso por e-mail do Moodle. Meta (Pixel/CAPI Purchase): ainda não, o Worker só aceita Lead.
+  registrada no Asaas e no aviso por e-mail do Moodle.
   noindex: página de funil, fora do sitemap. Teste sem contar compra: acrescentar &teste=1.
 -->
 <title>Pagamento recebido | Mentoria de captação de fomento</title>
@@ -136,6 +136,7 @@
   try{ var antes=Number(localStorage.getItem(k)||0); if(agora-antes<864e5) return; localStorage.setItem(k,String(agora)); }catch(_){}
   M.evento('purchase',{currency:'BRL',value:p.valor,transaction_id:chave+'-'+agora,
     items:[{item_id:chave,item_name:p.nome,item_category:'mentoria',price:p.valor,quantity:1}]});
+  if(M.compra) M.compra(chave);
 })();
 </script>
 </body>

@@ -919,8 +919,8 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 </script>
 
 <script>
-  /* Clique num botão de pagamento (link do Asaas): evento begin_checkout no GA4, com o plano e o valor. */
-  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-checkout]');if(!a||!window.cvMedicao)return;try{window.cvMedicao.evento('begin_checkout',{origem:a.getAttribute('data-origem'),plano:a.getAttribute('data-checkout'),value:Number(a.getAttribute('data-valor')),currency:'BRL'});}catch(_){}} ,true);
+  /* Clique num botão de pagamento (link do Asaas): begin_checkout no GA4 e InitiateCheckout na Meta (Pixel + Worker), com o plano e o valor. */
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-checkout]');if(!a||!window.cvMedicao)return;try{window.cvMedicao.evento('begin_checkout',{origem:a.getAttribute('data-origem'),plano:a.getAttribute('data-checkout'),value:Number(a.getAttribute('data-valor')),currency:'BRL'});if(window.cvMedicao.checkout)window.cvMedicao.checkout(a.getAttribute('data-checkout'));}catch(_){}} ,true);
 </script>
 </body>
 </html>

@@ -280,16 +280,19 @@
    * Em modo teste o Pixel do navegador NAO recebe Lead (o Lead e o evento de otimizacao do
    * conjunto de anuncios; Lead falso ensina a Meta errado). O Worker grava a linha marcada.
    */
-  function meta(nome, contentName, registro) {
+  function meta(nome, contentName, registro, dados) {
     try {
       var id = uuid();
       var extra = contentName ? { content_name: contentName } : {};
-      if (typeof w.fbq === 'function' && !(TESTE && nome === 'Lead')) w.fbq('track', nome, extra, { eventID: id });
+      for (var k in (dados || {})) extra[k] = dados[k];
+      var venda = nome === 'InitiateCheckout' || nome === 'Purchase';
+      if (typeof w.fbq === 'function' && !(TESTE && (nome === 'Lead' || venda))) w.fbq('track', nome, extra, { eventID: id });
       var corpo = {
         event_name: nome, event_id: id, event_source_url: w.location.href,
         content_name: contentName || undefined, fbp: cookie('_fbp'), fbc: cookie('_fbc')
       };
       if (registro) corpo.registro = registro;
+      if (TESTE && venda) corpo.teste = 'teste-claude';
       enviar(corpo);
     } catch (_) {}
   }
@@ -453,6 +456,29 @@
   capturarAtribuicao();
   meta('PageView');
 
+  // ===== 8c. Venda direta (link do Asaas, desde 19/10/2026) =====
+  // InitiateCheckout e o evento de otimizacao da campanha v3: mesmo filtro de robos do Lead
+  // (nenhum com webdriver, 1 por sessao a cada 30 min). O Worker confere o plano e poe o valor.
+  var PLANOS = { 'consultoria-avulsa': 250, 'acompanhamento-completo': 2500, 'pipe-fase-1': 4900 };
+  var CHAVE_CHECKOUT = 'cultivee_fomento_checkout_sessao';  // sessionStorage: ultimo InitiateCheckout
+  function dadosDoPlano(plano) {
+    return { value: PLANOS[plano], currency: 'BRL', content_ids: [plano], content_type: 'product' };
+  }
+  function checkout(plano) {
+    if (!PLANOS[plano] || automatizado()) return;
+    try {
+      var antes = Number(sessionStorage.getItem(CHAVE_CHECKOUT) || 0);
+      if (!TESTE && Date.now() - antes < JANELA_LEAD_MIN * 60000) return;
+      sessionStorage.setItem(CHAVE_CHECKOUT, String(Date.now()));
+    } catch (_) {}
+    meta('InitiateCheckout', plano, null, dadosDoPlano(plano));
+  }
+  /** Compra confirmada (pagina de retorno do Asaas). Quem chama garante 1 vez por plano. */
+  function compra(plano) {
+    if (!PLANOS[plano] || automatizado()) return;
+    meta('Purchase', plano, null, dadosDoPlano(plano));
+  }
+
   w.cvMedicao = {
     GA_ID: GA_ID, ADS_ID: ADS_ID, teste: TESTE, MSG_PADRAO: MSG_PADRAO,
     evento: function (nome, params) {
@@ -467,6 +493,8 @@
     urlWhatsApp: urlWhatsApp,
     enviarFormulario: enviarFormulario,
     conversaoObrigado: conversaoObrigado,
+    checkout: checkout,
+    compra: compra,
     lerEnvio: function () { return leJson(sessionStorage, CHAVE_ENVIO); }
   };
 })(window, document);
