@@ -42,7 +42,7 @@
   var CAPI_URL = 'https://cultivee.com.br/capi';
   var WA_NUMERO = '5519991644181';
   var WA_BASE = 'https://wa.me/' + WA_NUMERO;
-  var MSG_PADRAO = 'Olá, Mardoqueu! Quero o Diagnóstico de Prontidão gratuito do meu projeto (captação de fomento).';
+  var MSG_PADRAO = 'Olá, Mardoqueu! Quero falar sobre o Diagnóstico de Prontidão do meu projeto (captação de fomento).';
 
   // Chaves de armazenamento (prefixo proprio, para nao colidir com o resto do site da Cultivee)
   var CHAVE_SESSAO = 'cultivee_fomento_origem_sessao';      // sessionStorage
