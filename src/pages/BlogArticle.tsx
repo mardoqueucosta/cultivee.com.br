@@ -289,7 +289,7 @@ const BlogArticlePage = () => {
 
       {/* 2. Preâmbulo branco — imagem destacada + meta + TL;DR + ToC */}
       <section className="bg-background py-10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {heroImage && (
             <div className="mb-10">
               <figure className="rounded-2xl overflow-hidden shadow-elegant aspect-[16/9] bg-muted">
@@ -375,7 +375,7 @@ const BlogArticlePage = () => {
             key={idx}
             className={`py-8 ${idx % 2 === 0 ? "bg-background" : "bg-muted"}`}
           >
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div lang="pt-BR" className="prose prose-lg max-w-none hyphens-auto [&_p]:text-justify [&_li]:text-justify prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-table:border prose-th:bg-muted prose-th:p-3 prose-td:p-3 prose-td:border prose-th:border">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
@@ -466,7 +466,7 @@ const BlogArticlePage = () => {
 
       {/* 4. Bloco contínuo — Bio + Related + Voltar (alterna com último bloco do markdown) */}
       <section className={`py-10 ${markdownSections.length % 2 === 1 ? "bg-muted" : "bg-background"}`}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-start gap-4 pb-8 border-b border-border">
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
               <User className="w-7 h-7 text-primary" />
@@ -503,7 +503,7 @@ const BlogArticlePage = () => {
 
       {/* 5. CTA verde final — "Quer aprofundar?" */}
       <section className="bg-gradient-hero py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Quer aprofundar?
           </h3>

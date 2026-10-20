@@ -27,6 +27,7 @@ const CursoHidroponiaPage = lazy(() => import("./pages/CursoHidroponia"));
 const CursoCultivoIndoorPage = lazy(() => import("./pages/CursoCultivoIndoor"));
 const CotacoesPage = lazy(() => import("./pages/Cotacoes"));
 const CotacaoCafePage = lazy(() => import("./pages/CotacaoCafe"));
+const EditalPage = lazy(() => import("./pages/Edital"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -82,6 +83,13 @@ export const routes: RouteObject[] = [
       // pelo SSG; a serie e' buscada sob demanda do JSON publico.
       { path: "cotacoes", element: <CotacoesPage /> },
       { path: "cotacoes/cafe", element: <CotacaoCafePage /> },
+      // Editais (captacao-recursos/vendas/paginas-editais): copia integral + guia proprio
+      {
+        path: "editais/:slug",
+        element: <EditalPage />,
+        // @ts-expect-error vite-react-ssg getStaticPaths augmentation
+        getStaticPaths: async () => (await import("@/data/editais")).editais.map((e) => `/editais/${e.slug}`),
+      },
       // rota concreta para o SSG emitir dist/404.html (o nginx usa como error_page 404)
       { path: "404", element: <NotFound /> },
       { path: "*", element: <NotFound /> },
