@@ -21,6 +21,8 @@ const STATIC_PATHS = [
   { path: "/fomento", changefreq: "monthly", priority: "0.7" },
   // Pagina de venda por programa (public/fomento/pipe/index.html, 19/10/2026): destino da campanha Meta v3.
   { path: "/fomento/pipe", changefreq: "monthly", priority: "0.7" },
+  // Edital PIPE na integra com guia proprio (public/editais/fapesp-pipe, 20/10/2026). A de Tecnologias Educacionais e noindex: fora.
+  { path: "/editais/fapesp-pipe", changefreq: "monthly", priority: "0.6" },
   { path: "/aplicativos", changefreq: "monthly", priority: "0.5" },
   { path: "/produtos", changefreq: "monthly", priority: "0.7" },
   { path: "/produtos/controle-hidroponia", changefreq: "monthly", priority: "0.7" },
@@ -164,6 +166,7 @@ ${pillars.map(line).join("\n")}
 - [Curso de Cultivo Indoor](${SITE}/cursos/cultivo-indoor): em breve
 - [Mentoria de captação de recursos de fomento](${SITE}/fomento): PIPE, Centelha, Finep, FAPESP, CNPq
 - [Consultoria para o PIPE-FAPESP Fase 1](${SITE}/fomento/pipe): escrever o projeto pelos critérios da banca, Diagnóstico de Prontidão
+- [Edital PIPE FAPESP 2026 na íntegra](${SITE}/editais/fapesp-pipe): normas vigentes desde 15/09/2026, valores (Fase 1 até R$ 300 mil, Fase 2 até R$ 1,5 milhão), quem pode, como submeter
 
 ## Projetos e protótipos
 
