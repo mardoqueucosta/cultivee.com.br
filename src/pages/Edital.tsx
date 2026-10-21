@@ -27,6 +27,9 @@ const checkout = (origem: string, plano: string, valor: number) => () => {
   w.gtag?.("event", "begin_checkout", { origem, plano, value: valor, currency: "BRL" });
 };
 
+// Páginas sem o quadro da fonte no topo do texto integral (dono, 21/10/2026); a nota do fim, com o link oficial, fica.
+const SEM_NOTA_NO_TOPO = ["fapesp-pipe-tecnologias-educacionais"];
+
 const dataBR = (iso: string) => (iso ? `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}` : "");
 
 /** Cabeçalho de seção igual ao da /editais e das trilhas do Educa. */
@@ -252,6 +255,7 @@ const EditalPage = () => {
       <section className={`py-16 ${bg()}`}>
         <div className={CAIXA}>
           <Cabecalho id="texto-integral" icon={FileText} titulo={`Texto integral ${ed.deTitulo} (cópia da FAPESP)`} />
+          {!SEM_NOTA_NO_TOPO.includes(ed.slug) && (
           <aside className="flex gap-3 rounded-2xl border border-border bg-card p-5 mb-10 text-sm text-muted-foreground">
             <BookOpen className="w-5 h-5 flex-shrink-0 mt-0.5 text-agro" />
             <p>
@@ -261,6 +265,7 @@ const EditalPage = () => {
               submeter, confira sempre a versão no site da FAPESP: as regras e as datas podem mudar.
             </p>
           </aside>
+          )}
           <div lang="pt-BR" className={PROSA} dangerouslySetInnerHTML={{ __html: ed.integralHtml }} />
           {/* Nota no fim do texto integral (pedido do dono, 21/10/2026) */}
           <aside className="mt-12 flex gap-3 rounded-2xl border border-border bg-card p-5 text-muted-foreground">
