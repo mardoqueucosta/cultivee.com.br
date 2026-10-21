@@ -124,8 +124,9 @@ const EditalPage = () => {
           onClick={checkout(`${o}-topo`, "consultoria-avulsa", 250)} className={BOTAO_SOL}>
           Agendar meu Diagnóstico de Prontidão
         </a>
-        <a href={ed.oficial} target="_blank" rel="noopener" className={BOTAO_BORDA_CLARA}>
-          Edital no site da FAPESP <ExternalLink className="w-4 h-4" />
+        {/* Sem link para a FAPESP no topo (dono, 21/10/2026): o lead fica na página; o link oficial está no texto integral */}
+        <a href="#texto-integral" className={BOTAO_BORDA_CLARA}>
+          Ler o edital na íntegra
         </a>
       </ImageHero>
 
