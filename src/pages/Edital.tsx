@@ -262,6 +262,14 @@ const EditalPage = () => {
             </p>
           </aside>
           <div lang="pt-BR" className={PROSA} dangerouslySetInnerHTML={{ __html: ed.integralHtml }} />
+          {/* Nota no fim do texto integral (pedido do dono, 21/10/2026) */}
+          <aside className="mt-12 flex gap-3 rounded-2xl border border-border bg-card p-5 text-muted-foreground">
+            <ExternalLink className="w-5 h-5 flex-shrink-0 mt-0.5 text-agro" />
+            <p>
+              Para mais informações, é necessário consultar o edital no site da FAPESP:{" "}
+              <a href={ed.oficial} target="_blank" rel="noopener" className="font-semibold text-agro underline break-all">{ed.oficial}</a>
+            </p>
+          </aside>
         </div>
       </section>
 
