@@ -3,7 +3,7 @@
   "ano": "2026",
   "fonte": "CEPEA/ESALQ",
   "licenca": "CC BY-NC 4.0",
-  "atualizado_em": "2026-10-20T05:15:04",
+  "atualizado_em": "2026-10-21T05:15:03",
   "pontos": [
     {
       "data_ref": "24/07/2026",
@@ -304,6 +304,11 @@
       "data_ref": "19/10/2026",
       "valor": 973.27,
       "var_pct": 1.04
+    },
+    {
+      "data_ref": "20/10/2026",
+      "valor": 967.97,
+      "var_pct": -0.54
     }
   ]
 }
