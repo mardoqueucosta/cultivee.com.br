@@ -27,6 +27,7 @@ const CursoHidroponiaPage = lazy(() => import("./pages/CursoHidroponia"));
 const CursoCultivoIndoorPage = lazy(() => import("./pages/CursoCultivoIndoor"));
 const CotacoesPage = lazy(() => import("./pages/Cotacoes"));
 const CotacaoCafePage = lazy(() => import("./pages/CotacaoCafe"));
+const EditaisPage = lazy(() => import("./pages/Editais"));
 const EditalPage = lazy(() => import("./pages/Edital"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -83,6 +84,8 @@ export const routes: RouteObject[] = [
       // pelo SSG; a serie e' buscada sob demanda do JSON publico.
       { path: "cotacoes", element: <CotacoesPage /> },
       { path: "cotacoes/cafe", element: <CotacaoCafePage /> },
+      // Lista semanal de editais abertos (le public/dados/editais/editais.json, feito pela busca-editais)
+      { path: "editais", element: <EditaisPage /> },
       // Editais (captacao-recursos/vendas/paginas-editais): copia integral + guia proprio
       {
         path: "editais/:slug",
