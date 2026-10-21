@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
 import { Head } from "vite-react-ssg";
-import { ArrowLeft, ArrowRight, BookOpen, ExternalLink, FileText, HelpCircle, List, RefreshCw, Wallet } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, FileText, HelpCircle, List, RefreshCw, Wallet } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -26,9 +26,6 @@ const checkout = (origem: string, plano: string, valor: number) => () => {
   const w = window as unknown as { gtag?: (...a: unknown[]) => void };
   w.gtag?.("event", "begin_checkout", { origem, plano, value: valor, currency: "BRL" });
 };
-
-// Páginas sem o quadro da fonte no topo do texto integral (dono, 21/10/2026); a nota do fim, com o link oficial, fica.
-const SEM_NOTA_NO_TOPO = ["fapesp-pipe-tecnologias-educacionais"];
 
 const dataBR = (iso: string) => (iso ? `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}` : "");
 
@@ -256,17 +253,7 @@ const EditalPage = () => {
       <section className={`py-16 ${bg()}`}>
         <div className={CAIXA}>
           <Cabecalho id="texto-integral" icon={FileText} titulo={`Texto integral ${ed.deTitulo} (cópia da FAPESP)`} />
-          {!SEM_NOTA_NO_TOPO.includes(ed.slug) && (
-          <aside className="flex gap-3 rounded-2xl border border-border bg-card p-5 mb-10 text-sm text-muted-foreground">
-            <BookOpen className="w-5 h-5 flex-shrink-0 mt-0.5 text-agro" />
-            <p>
-              Cópia integral do texto publicado pela FAPESP em{" "}
-              <a href={ed.oficial} target="_blank" rel="noopener" className="font-semibold text-agro underline break-all">{ed.oficial}</a>{" "}
-              (página atualizada em {ed.atualizada}). Tiramos só os menus do site da FAPESP; o texto não foi alterado. Antes de
-              submeter, confira sempre a versão no site da FAPESP: as regras e as datas podem mudar.
-            </p>
-          </aside>
-          )}
+          {/* Sem o quadro da fonte no topo (dono, 21/10/2026): a fonte e o link oficial ficam na nota do fim */}
           <div lang="pt-BR" className={PROSA} dangerouslySetInnerHTML={{ __html: ed.integralHtml }} />
           {/* Nota no fim do texto integral (pedido do dono, 21/10/2026) */}
           <aside className="mt-12 flex gap-3 rounded-2xl border border-border bg-card p-5 text-muted-foreground">
