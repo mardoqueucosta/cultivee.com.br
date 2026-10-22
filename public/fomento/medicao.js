@@ -79,7 +79,10 @@
       return s === '1' || (new RegExp('(?:^|; )' + CHAVE_TESTE + '=1')).test(d.cookie);
     } catch (_) { return false; }
   }
-  var TESTE = modoTeste();
+  // Previa (localhost, 127.0.0.1, arquivo aberto do disco) e SEMPRE teste, mesmo sem ?teste=1 (22/10/2026):
+  // antes, a previa local mandava begin_checkout e purchase de verdade ao GA4 (2 compras falsas de R$ 4.900 em 19/10).
+  var FORA_DO_SITE = !/(^|\.)cultivee\.com\.br$/i.test(w.location.hostname || '');
+  var TESTE = modoTeste() || FORA_DO_SITE;
 
   // ===== 3. Tag do Google: UM gtag.js, dois config (GoogleTags.tsx) =====
   w.dataLayer = w.dataLayer || [];
