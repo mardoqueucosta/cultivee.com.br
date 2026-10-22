@@ -66,7 +66,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 <div class="cv-bar">
   <div class="wrap">
     <span><a class="cv-brand" href="/">CULTIVEE</a><span class="cv-trail"> · Educa · Trilha Negócios</span></span>
-    <span class="cv-links"><a href="https://cursos.cultivee.com.br/cursos">Área do aluno</a><a href="/fomento">Outros editais</a><a href="/">Site da Cultivee</a></span>
+    <!-- sem links de saida no topo (22/10/2026): pagina de anuncio; os links ficam no rodape -->
   </div>
 </div>
 
@@ -91,10 +91,10 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 <!-- HERO -->
 <section class="hero" id="topo">
   <div class="wrap hero-grid" style="padding-top:clamp(2rem,4vw,3rem)">
-    <div>
-      <span class="eyebrow">PIPE-FAPESP Fase 1 · até R$ 300 mil, não reembolsáveis</span>
-      <h1>Escreva o seu PIPE pelos critérios que <span class="hl">a banca usa para dar nota.</span></h1>
-      <p class="sub">Uma tecnologia forte perde pontos quando a proposta é escrita como artigo científico. Eu leio o seu projeto pelos critérios do PIPE, com tempo de corrigir antes de você enviar.</p>
+    <div class="hero-texto">
+      <span class="eyebrow" id="hero-eyebrow">PIPE-FAPESP Fase 1 · até R$ 300 mil, não reembolsáveis</span>
+      <h1 id="hero-h1">Escreva o seu PIPE pelos critérios que <span class="hl">a banca usa para dar nota.</span></h1>
+      <p class="sub" id="hero-sub">Uma tecnologia forte perde pontos quando a proposta é escrita como artigo científico. Eu leio o seu projeto pelos critérios do PIPE, com tempo de corrigir antes de você enviar.</p>
       <ul class="checks" style="margin-top:1.5rem">
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Até R$ 300 mil, contando as bolsas, por até 9 meses. A FAPESP recebe propostas o ano todo.</li>
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Não precisa ter empresa aberta: a norma aceita empresa a constituir.</li>
@@ -107,6 +107,32 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <button type="button" class="wa-direct" data-abre-form="pipe-hero">Prefiro conversar antes pelo WhatsApp</button>
       </div>
     </div>
+    <script>
+    /* Topo conforme o anuncio (22/10/2026): cada anuncio do conjunto A abre com um gancho; a pagina retoma o
+       mesmo gancho pelo utm_content. Sem utm (busca, Google, link direto) fica o texto padrao acima.
+       Anuncios C5 e V2 ja batem com o padrao. Copy dos anuncios: projeto-ADS/.../REVISAO-COPY-V3-2026-10-20.md */
+    (function () {
+      var T = {
+        'v1-mudou': ['PIPE-FAPESP Fase 1 · norma de 15/09/2026', 'O PIPE mudou em 15/09. ', 'Escreva a sua proposta pela regra nova.',
+          'O modelo de negócio saiu da submissão, o Pesquisador Responsável não precisa mais ser especialista na área e pode indicar até 2 Pesquisadores Principais. Eu leio o seu projeto pela norma nova e pelos critérios da banca, antes de você enviar.'],
+        'v3-parecer': [null, 'Voltou com parecer negativo? ', 'Antes de reenviar, leia como a banca leu.',
+          'Perto de 1 em cada 4 propostas de PIPE é contratada, e um parecer negativo quase nunca quer dizer que a tecnologia é fraca. Eu leio o seu projeto pelos critérios do PIPE e te digo o que mudar na nova tentativa.'],
+        'v4-orcamento': [null, 'Comece pelas metas, ', 'não pelo orçamento.',
+          'A banca lê o orçamento procurando saber se a equipe entrega o que promete. Primeiro as metas, cada uma com número e prazo. Depois cada item de gasto ligado a uma meta. Eu leio o seu projeto pelos critérios do PIPE e te mostro onde ajustar.'],
+        'v5-empresario': [null, 'Empresário com tecnologia? ', 'O PIPE ficou mais aberto para você.',
+          'Desde 15/09/2026, o Pesquisador Responsável precisa ser sócio da empresa, mas não precisa mais ser especialista na área, e pode indicar até 2 Pesquisadores Principais. Eu leio o seu caso pelos critérios do PIPE e te digo como montar a proposta e a equipe.'],
+        'c2-sem-cnpj': [null, 'Sem empresa aberta? ', 'O PIPE aceita.',
+          'A norma do PIPE Fase 1 aceita empresa a constituir: você submete com a tecnologia e o plano, e o CNPJ entra na contratação. Eu leio o seu projeto pelos critérios da banca, com tempo de corrigir antes de enviar.']
+      };
+      var t = T[new URLSearchParams(location.search).get('utm_content')];
+      if (!t) return;
+      if (t[0]) document.getElementById('hero-eyebrow').textContent = t[0];
+      var h = document.getElementById('hero-h1'), s = document.createElement('span');
+      s.className = 'hl'; s.textContent = t[2];
+      h.textContent = t[1]; h.appendChild(s);
+      document.getElementById('hero-sub').textContent = t[3];
+    })();
+    </script>
     <aside class="cred-card">
       <div class="ph">
         <div class="av"><img src="/fomento/img/mardoqueu.webp" alt="Mardoqueu Martins da Costa" width="120" height="120" decoding="async" onerror="this.style.display='none';this.parentNode.textContent='MC'"></div>

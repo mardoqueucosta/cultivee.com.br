@@ -73,7 +73,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 <div class="cv-bar">
   <div class="wrap">
     <span><a class="cv-brand" href="/">CULTIVEE</a><span class="cv-trail"> · Educa · Trilha Negócios</span></span>
-    <span class="cv-links"><a href="https://cursos.cultivee.com.br/cursos">Área do aluno</a><a href="/fomento">Outros editais</a><a href="/">Site da Cultivee</a></span>
+    <!-- sem links de saida no topo (22/10/2026): pagina de anuncio; os links ficam no rodape -->
   </div>
 </div>
 
@@ -98,9 +98,15 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 <!-- HERO -->
 <section class="hero" id="topo">
   <div class="wrap hero-grid" style="padding-top:clamp(2rem,4vw,3rem)">
-    <div>
+    <div class="hero-texto">
       <span class="eyebrow">Para empresas de São Paulo · programa da FAPESP</span>
-      <h1>Até R$ 300 mil, sem devolver, <span class="hl">para a sua empresa desenvolver tecnologia.</span></h1>
+      <h1 id="hero-h1">Até R$ 300 mil, sem devolver, <span class="hl">para a sua empresa desenvolver tecnologia.</span></h1>
+      <script>
+      /* Topo conforme o anuncio (22/10/2026): o R1 abre perguntando pelos requisitos. R2 e R3 ja batem com o padrao. */
+      if (new URLSearchParams(location.search).get('utm_content') === 'r1-requisitos') {
+        document.getElementById('hero-h1').innerHTML = 'Você cumpre os requisitos para pedir <span class="hl">até R$ 300 mil, sem devolver?</span>';
+      }
+      </script>
       <p class="sub">O recurso existe e recebe propostas o ano todo. Para pedir, a empresa e o projeto precisam cumprir alguns requisitos. Em 1 hora de consultoria eu te mostro se você cumpre e o que fazer primeiro.</p>
       <ul class="checks" style="margin-top:1.5rem">
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Recurso não reembolsável: não é empréstimo e não pede participação na empresa.</li>

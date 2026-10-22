@@ -51,6 +51,11 @@
     .brand small{display:none}
     .nav .btn{white-space:nowrap;padding:10px 14px;font-size:.85rem;flex:none}
     .eyebrow{border-radius:14px;letter-spacing:.08em;line-height:1.6}
+    /* celular: botao do topo antes da lista de vantagens, para caber na primeira tela (22/10/2026) */
+    .hero-texto{display:flex;flex-direction:column}
+    .hero-texto .eyebrow{align-self:flex-start}
+    .hero-texto .hero-cta{order:1;margin-top:.4rem}
+    .hero-texto .checks{order:2}
   }
 
   .hero{background:radial-gradient(1100px 560px at 82% -12%,var(--green-100),transparent 60%),linear-gradient(180deg,#fff,var(--bg));border-bottom:1px solid var(--line)}
