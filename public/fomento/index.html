@@ -261,6 +261,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .psob-val{font-weight:600;color:var(--green-700);font-size:.95rem}
   /* cards por ordem de valor (4 desde 19/10/2026, sem o PIPE Fase 2): 2x2 ate 1000 px, 4 colunas acima */
   .pcard.curso{border-color:var(--green-200)}
+  .pk-tag.espera{background:var(--amber-700)}
   .pk-cta{margin-top:auto;padding-top:14px}
   /* um botao por card (origem card-*): contorno; cheio so no card em destaque */
   .pk-cta a{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.9rem;line-height:1.25;color:var(--action-700);background:#fff;border:1.5px solid var(--action);border-radius:999px;padding:9px 12px;text-decoration:none;transition:.18s ease;width:100%;justify-content:center}
@@ -622,21 +623,22 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
     <h3 style="font-family:'Lora',serif;font-size:1.3rem;color:var(--ink);text-align:center;margin-top:2.8rem">Quanto custa</h3>
     <p class="lead muted" style="margin-top:.6rem;text-align:center;font-size:1.02rem">Preço fixo, combinado antes de começar. Nunca cobro percentual sobre bolsa ou auxílio público.</p>
     <div class="pricing">
-      <div class="pcard">
+      <div class="pcard feat">
+        <span class="pk-tag">Comece por aqui</span>
         <div class="pk-lbl">Diagnóstico de Prontidão</div>
-        <div class="pk-val">R$ 250<span> / hora</span></div>
-        <p class="pk-desc">1 hora de consultoria: leio o seu projeto ou a sua ideia, digo qual edital cabe e o que falta. Serve também para dúvidas pontuais e leituras curtas.</p>
+        <div class="pk-val">R$ 250<span> / 1 hora</span></div>
+        <p class="pk-desc">Leio o seu projeto ou a sua ideia e digo qual edital cabe, o que está forte, o que falta e qual o próximo passo.</p>
         <div class="pk-cta"><a data-origem="card-hora" data-checkout="consultoria-avulsa" data-valor="250" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar o diagnóstico <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard curso">
-        <span class="pk-tag" style="background:var(--amber-700)">Lista de espera</span>
+        <span class="pk-tag espera">Lista de espera</span>
         <div class="pk-lbl">Curso online PIPE Fase 1</div>
         <div class="pk-val">R$ 497</div>
         <p class="pk-desc">Para quem quer escrever sozinho, com método: da ideia à submissão no SAGe, com a pasta-modelo da submissão e a norma da FAPESP.</p>
         <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">As aulas estão em gravação. Entre na lista e seja avisado primeiro, sem pagar nada agora.</p>
         <div class="pk-cta"><a data-origem="card-curso" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20entrar%20na%20lista%20de%20espera%20do%20curso%20online%20PIPE%20Fase%201%20(R%24%20497)." target="_blank" rel="noopener">Quero entrar na lista <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
-      <div class="pcard feat">
+      <div class="pcard">
         <div class="pk-lbl">Acompanhamento completo</div>
         <div class="pk-val">R$ 2.500</div>
         <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas, auxílios (CNPq, FAPESP, CAPES) e Programa Centelha.</p>
@@ -644,9 +646,9 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <div class="pk-cta"><a data-origem="card-2500" data-checkout="acompanhamento-completo" data-valor="2500" href="https://www.asaas.com/c/bglpzt54qj6fq6mo" target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard">
-        <div class="pk-lbl">PIPE Fase 1</div>
+        <div class="pk-lbl">Acompanhamento PIPE Fase 1</div>
         <div class="pk-val">R$ 4.900</div>
-        <p class="pk-desc">Maior envolvimento: construção mais robusta, orçamento e plano de trabalho extensos e preparo de defesa. Indicado para o PIPE-FAPESP Fase 1.</p>
+        <p class="pk-desc">Do diagnóstico à submissão, sem contador de horas: projeto, plano de trabalho, orçamento, equipe, bolsas e documentos.</p>
         <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Menos de 2% do teto de um PIPE Fase 1 (R$ 300 mil).</p>
         <div class="pk-cta"><a data-origem="card-4900" data-checkout="pipe-fase-1" data-valor="4900" href="https://www.asaas.com/c/puponpp5j8dlqmzn" target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
