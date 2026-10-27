@@ -1,10 +1,10 @@
 {
-  "atualizado_em": "2026-10-26T05:15:04",
+  "atualizado_em": "2026-10-27T05:15:04",
   "series": {
     "boi-gordo": {
-      "pontos": 74,
+      "pontos": 75,
       "primeiro": "10/07/2026",
-      "ultimo": "23/10/2026",
+      "ultimo": "26/10/2026",
       "minimo": 324.6,
       "minimo_em": "13/07/2026",
       "maximo": 381.4,
@@ -12,9 +12,9 @@
       "amplitude_pct": 17.5
     },
     "cafe-arabica": {
-      "pontos": 74,
+      "pontos": 75,
       "primeiro": "10/07/2026",
-      "ultimo": "23/10/2026",
+      "ultimo": "26/10/2026",
       "minimo": 1511.31,
       "minimo_em": "22/09/2026",
       "maximo": 1826.58,
@@ -22,9 +22,9 @@
       "amplitude_pct": 20.86
     },
     "cafe-robusta": {
-      "pontos": 64,
+      "pontos": 65,
       "primeiro": "24/07/2026",
-      "ultimo": "23/10/2026",
+      "ultimo": "26/10/2026",
       "minimo": 936.73,
       "minimo_em": "23/10/2026",
       "maximo": 1114.0,
@@ -42,9 +42,9 @@
       "amplitude_pct": 8.6
     },
     "milho": {
-      "pontos": 74,
+      "pontos": 75,
       "primeiro": "10/07/2026",
-      "ultimo": "23/10/2026",
+      "ultimo": "26/10/2026",
       "minimo": 64.24,
       "minimo_em": "22/10/2026",
       "maximo": 71.06,
@@ -52,9 +52,9 @@
       "amplitude_pct": 10.62
     },
     "soja": {
-      "pontos": 74,
+      "pontos": 75,
       "primeiro": "10/07/2026",
-      "ultimo": "23/10/2026",
+      "ultimo": "26/10/2026",
       "minimo": 139.99,
       "minimo_em": "15/07/2026",
       "maximo": 162.02,
@@ -62,9 +62,9 @@
       "amplitude_pct": 15.74
     },
     "trigo": {
-      "pontos": 74,
+      "pontos": 75,
       "primeiro": "10/07/2026",
-      "ultimo": "23/10/2026",
+      "ultimo": "26/10/2026",
       "minimo": 1375.69,
       "minimo_em": "10/07/2026",
       "maximo": 1574.15,
