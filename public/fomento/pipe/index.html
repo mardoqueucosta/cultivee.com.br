@@ -100,7 +100,37 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Não precisa ter empresa aberta: a norma aceita empresa a constituir.</li>
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Fui pesquisador responsável em três projetos PIPE e já avaliei dezenas de projetos de outros pesquisadores.</li>
       </ul>
-      <!-- VIDEO: quando o video do PIPE estiver gravado (roteiro VSL v4), entra aqui, acima do botao. -->
+      <!-- VSL v6 (27/10/2026): video NAO LISTADO no YouTube, carregado so no clique (capa local, pagina leve).
+           Trocar o video: mudar data-yt e a capa. Fonte: captacao-recursos/vendas/vsl/roteiro-VSL-consultoria-v6.md -->
+      <style>
+        .vsl{position:relative;margin-top:1.5rem;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#0b2a1f;box-shadow:0 14px 34px rgba(11,42,31,.18)}
+        .vsl button{all:unset;cursor:pointer;position:absolute;inset:0;display:block}
+        .vsl img,.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+        .vsl .play{position:absolute;left:50%;top:50%;width:78px;height:78px;margin:-39px 0 0 -39px;border-radius:50%;background:rgba(255,255,255,.94);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.28);transition:transform .15s}
+        .vsl button:hover .play,.vsl button:focus-visible .play{transform:scale(1.07)}
+        .vsl button:focus-visible{outline:3px solid #fff;outline-offset:-6px}
+        .vsl .play svg{width:30px;height:30px;margin-left:5px;fill:#0b2a1f}
+        .vsl .dur{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.72);color:#fff;font:600 .82rem/1 Inter,sans-serif;padding:6px 9px;border-radius:7px}
+      </style>
+      <div class="vsl" data-yt="MOpXIaMSTuQ" data-pagina="pipe">
+        <button type="button" aria-label="Assistir ao vídeo (12:34)">
+          <img src="/fomento/img/vsl-pipe-completa-capa.webp" width="960" height="540" alt="Mardoqueu Martins da Costa explica o caminho para a sua proposta" decoding="async">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="dur" aria-hidden="true">▶ 12:34</span>
+        </button>
+      </div>
+      <script>
+      (function(){
+        var v=document.currentScript.previousElementSibling, b=v.querySelector('button');
+        b.addEventListener('click',function(){
+          var f=document.createElement('iframe');
+          f.src='https://www.youtube-nocookie.com/embed/'+v.dataset.yt+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+          f.title='Vídeo: Diagnóstico de Prontidão'; f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen=true;
+          v.replaceChildren(f);
+          try{ if(window.gtag) gtag('event','vsl_play',{pagina:v.dataset.pagina}); }catch(_){}
+        },{once:true});
+      })();
+      </script>
       <div class="hero-cta">
         <a class="btn btn-primary" data-origem="pipe-hero" data-checkout="consultoria-avulsa" data-valor="250" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar meu Diagnóstico de Prontidão <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <p class="cta-note">1 hora de consultoria, R$ 250 (Pix ou cartão em até 12x). Você sai sabendo o que está forte, o que falta e o próximo passo. 🔒 O que você me contar sobre o projeto fica em sigilo.</p>
