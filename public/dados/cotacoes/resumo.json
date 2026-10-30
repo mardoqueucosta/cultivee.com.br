@@ -1,20 +1,20 @@
 {
-  "atualizado_em": "2026-10-29T05:15:04",
+  "atualizado_em": "2026-10-30T05:15:04",
   "series": {
     "boi-gordo": {
-      "pontos": 77,
+      "pontos": 78,
       "primeiro": "10/07/2026",
-      "ultimo": "28/10/2026",
+      "ultimo": "29/10/2026",
       "minimo": 324.6,
       "minimo_em": "13/07/2026",
-      "maximo": 389.05,
-      "maximo_em": "28/10/2026",
-      "amplitude_pct": 19.86
+      "maximo": 389.2,
+      "maximo_em": "29/10/2026",
+      "amplitude_pct": 19.9
     },
     "cafe-arabica": {
-      "pontos": 77,
+      "pontos": 78,
       "primeiro": "10/07/2026",
-      "ultimo": "28/10/2026",
+      "ultimo": "29/10/2026",
       "minimo": 1511.31,
       "minimo_em": "22/09/2026",
       "maximo": 1826.58,
@@ -22,9 +22,9 @@
       "amplitude_pct": 20.86
     },
     "cafe-robusta": {
-      "pontos": 67,
+      "pontos": 68,
       "primeiro": "24/07/2026",
-      "ultimo": "28/10/2026",
+      "ultimo": "29/10/2026",
       "minimo": 936.73,
       "minimo_em": "23/10/2026",
       "maximo": 1114.0,
@@ -42,9 +42,9 @@
       "amplitude_pct": 8.6
     },
     "milho": {
-      "pontos": 77,
+      "pontos": 78,
       "primeiro": "10/07/2026",
-      "ultimo": "28/10/2026",
+      "ultimo": "29/10/2026",
       "minimo": 64.24,
       "minimo_em": "22/10/2026",
       "maximo": 71.06,
@@ -52,9 +52,9 @@
       "amplitude_pct": 10.62
     },
     "soja": {
-      "pontos": 77,
+      "pontos": 78,
       "primeiro": "10/07/2026",
-      "ultimo": "28/10/2026",
+      "ultimo": "29/10/2026",
       "minimo": 139.99,
       "minimo_em": "15/07/2026",
       "maximo": 162.02,
@@ -62,14 +62,14 @@
       "amplitude_pct": 15.74
     },
     "trigo": {
-      "pontos": 77,
+      "pontos": 78,
       "primeiro": "10/07/2026",
-      "ultimo": "28/10/2026",
+      "ultimo": "29/10/2026",
       "minimo": 1375.69,
       "minimo_em": "10/07/2026",
-      "maximo": 1574.15,
-      "maximo_em": "15/10/2026",
-      "amplitude_pct": 14.43
+      "maximo": 1578.12,
+      "maximo_em": "29/10/2026",
+      "amplitude_pct": 14.71
     }
   }
 }
