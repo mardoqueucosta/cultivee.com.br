@@ -8,7 +8,7 @@ categoriaVariant: 'educa'
 funil: 'fomento'
 data: '2026-10-10'
 dataModificacao: '2026-11-03'
-leitura: '16 min'
+leitura: '17 min'
 tldr: >-
   O PIPE Fase 1 da FAPESP financia, com recurso não reembolsável, até R$ 300 mil
   para uma pequena empresa paulista testar a viabilidade técnico-científica de uma
@@ -16,6 +16,19 @@ tldr: >-
   15/09/2026 a Fase 1 não pede mais o modelo de negócio (Canvas) na submissão, o
   pesquisador responsável pode ser o sócio sem formação na área, desde que indique
   até dois pesquisadores principais, e a equipe tem novas categorias.
+imagens:
+  - src: /blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou/bancada-de-prototipo-em-startup-do-agro.jpg
+    alt: 'Bancada de protótipo numa pequena empresa de tecnologia agrícola, com placa eletrônica, cabos e sensores ligados a bandejas de mudas de alface'
+    caption: 'Bancada de protótipo numa pequena empresa de tecnologia agrícola. Imagem ilustrativa'
+  - src: /blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou/pipe-quatro-etapas-da-analise-da-proposta.jpg
+    alt: 'Esquema das quatro etapas da análise do PIPE: enquadramento, pareceres ad hoc, recomendação e decisão, com os seis critérios avaliados nos pareceres'
+    caption: 'As quatro etapas da análise e os seis critérios dos pareceres'
+  - src: /blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou/bancada-com-material-permanente-e-de-consumo.jpg
+    alt: 'Bancada de laboratório de uma pequena empresa do agro com medidor de bancada novo, frascos sem rótulo, caixas de ponteiras e saquinhos de amostras de folhas'
+    caption: 'Equipamento e material de consumo numa bancada de pesquisa do agro. Imagem ilustrativa'
+  - src: /blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou/pipe-cultivee-composicao-do-valor-aprovado.jpg
+    alt: 'Barras com os itens do PIPE da Cultivee e a soma: R$ 278.974,00 dentro do teto de R$ 300 mil e R$ 44.180,10 de Reserva Técnica, total de R$ 323.154,10'
+    caption: 'Composição do valor aprovado no PIPE da Cultivee, dentro e fora do teto'
 ---
 O PIPE Fase 1 é o programa da FAPESP que financia, sem devolução do dinheiro, até R$ 300 mil para uma empresa de até 250 empregados no estado de São Paulo testar se uma inovação é viável do ponto de vista técnico e científico, em até 9 meses. A empresa pode nem existir ainda na hora de submeter, e a submissão é aberta o ano todo.
 
@@ -32,6 +45,13 @@ Três pontos costumam surpreender quem chega ao programa, e todos estão nas [d�
 - **A propriedade intelectual é da empresa.** A titularidade do que o projeto gerar pertence à empresa sede.
 
 O PIPE é organizado em fases. A Fase 1 testa a viabilidade técnico-científica. A Fase 2 executa a pesquisa propriamente dita. O PIPE Invest acelera a chegada ao mercado quando há um investidor privado. A Fase 3 cuida do desenvolvimento comercial e industrial. Existe ainda o [PIPE Jornada](https://fapesp.br/pipejornada), com chamadas temáticas e prazo, que funciona à parte.
+
+Em todas as fases, a pesquisa é feita dentro da própria empresa, e não na universidade. Na foto, a bancada de uma pequena empresa de tecnologia agrícola, com um protótipo de sensor ligado a bandejas de mudas: é o tipo de montagem com que se testa se uma ideia funciona antes de ela virar produto.
+
+![Bancada de protótipo numa pequena empresa de tecnologia agrícola, com placa eletrônica, cabos e sensores ligados a bandejas de mudas de alface](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou/bancada-de-prototipo-em-startup-do-agro.jpg)
+*Bancada de protótipo numa pequena empresa de tecnologia agrícola. Imagem ilustrativa*
+
+Responder se esse protótipo funciona é o trabalho da Fase 1. Quanto ela paga, por quanto tempo e quando dá para pedir está na seção seguinte.
 
 ## PIPE Fase 1 em números
 
@@ -124,6 +144,13 @@ Os critérios da etapa 2 são públicos (item 11.1.5). Em resumo:
 | Orçamento | Se cada item se justifica pelos objetivos e pela metodologia, e se tem finalidade de pesquisa, não de produção |
 | Condições na empresa | Infraestrutura e equipe compatíveis, ou mecanismos para suprir o que falta |
 
+O esquema abaixo junta as duas partes: as quatro etapas em sequência e os seis critérios que os pareceres da etapa 2 avaliam. Na primeira etapa, a proposta não enquadrada é denegada antes de seguir para os pareceres.
+
+![Esquema das quatro etapas da análise do PIPE: enquadramento, pareceres ad hoc, recomendação e decisão, com os seis critérios avaliados nos pareceres](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou/pipe-quatro-etapas-da-analise-da-proposta.jpg)
+*As quatro etapas da análise e os seis critérios dos pareceres*
+
+As etapas 3 e 4 examinam a proposta junto com esses pareceres, e por isso o que o parecerista anotar em cada critério acompanha a proposta até a decisão.
+
 As normas também dizem o que o PIPE não financia: conceito já demonstrado, assistência técnica, construção de planta piloto, revisão de literatura, pesquisa de mercado, pesquisa confidencial, pedido de patente e mera reaplicação de conhecimento existente. Produto pronto também não entra: o PIPE financia a pesquisa que leva ao produto, não a comercialização dele ([dúvidas frequentes do PIPE](https://fapesp.br/pipe/faq)).
 
 Uma forma útil de escrever a proposta é partir dessa tabela, e não do texto de um artigo científico. Cada critério vira uma pergunta que o texto precisa responder de forma explícita, na seção certa do modelo.
@@ -162,6 +189,13 @@ O orçamento é detalhado e cada item precisa de justificativa ligada aos objeti
 
 Não são financiáveis itens de produção nem despesas de funcionamento da empresa. Para cada material permanente acima de dez salários mínimos, a FAPESP pede 3 orçamentos (ou a justificativa de fornecedor único) antes da concessão.
 
+Na foto, uma bancada de pesquisa com os dois tipos de material lado a lado: o medidor de bancada, que é material permanente, e os frascos, as ponteiras e as amostras de folhas, que são material de consumo. No orçamento, cada um aparece com a sua justificativa e a memória de cálculo, como pede o item 10 do modelo de projeto.
+
+![Bancada de laboratório de uma pequena empresa do agro com medidor de bancada novo, frascos sem rótulo, caixas de ponteiras e saquinhos de amostras de folhas](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou/bancada-com-material-permanente-e-de-consumo.jpg)
+*Equipamento e material de consumo numa bancada de pesquisa do agro. Imagem ilustrativa*
+
+Se o mesmo medidor fosse usado na linha de produção, e não nos ensaios do projeto, ele cairia na regra dos itens de produção e deixaria de ser financiável.
+
 A Reserva Técnica fica fora do teto de R$ 300 mil e tem duas parcelas: os Benefícios Complementares, só para o PR, e a Parcela para Custos de Infraestrutura Direta do Projeto. Com as normas novas, essa parcela pode pagar a taxa de uma incubadora credenciada. Ela também pode custear a proteção da propriedade intelectual resultante do projeto ([dúvidas frequentes](https://fapesp.br/pipe/faq)).
 
 ## Caso real: o PIPE da Cultivee (2025/27266-8)
@@ -192,6 +226,13 @@ Como o valor aprovado passou de R$ 300 mil? Porque o teto não inclui a Reserva 
 | Reserva Técnica, Benefícios Complementares | 12.000,00 |
 | Reserva Técnica, Custos de Infraestrutura Direta | 32.180,10 |
 | **Total** | **323.154,10** |
+
+O esquema abaixo mostra a mesma composição em barras. Material permanente e material de consumo somam R$ 168.034,00, cerca de 52% do valor aprovado (cálculo da Cultivee), e o subtotal dentro do teto fica abaixo da linha dos R$ 300 mil.
+
+![Barras com os itens do PIPE da Cultivee e a soma: R$ 278.974,00 dentro do teto de R$ 300 mil e R$ 44.180,10 de Reserva Técnica, total de R$ 323.154,10](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou/pipe-cultivee-composicao-do-valor-aprovado.jpg)
+*Composição do valor aprovado no PIPE da Cultivee, dentro e fora do teto*
+
+O que leva o total além da linha são as duas parcelas da Reserva Técnica, em dourado, que somam R$ 44.180,10 (cálculo da Cultivee). Por isso um PIPE Fase 1 pode ter valor aprovado acima de R$ 300 mil sem quebrar a regra do teto.
 
 O que esse caso ensina sobre as regras:
 

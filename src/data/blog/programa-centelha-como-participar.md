@@ -8,13 +8,26 @@ categoriaVariant: 'educa'
 funil: 'fomento'
 data: '2026-10-10'
 dataModificacao: '2026-11-03'
-leitura: '16 min'
+leitura: '17 min'
 tldr: >-
   O Programa Centelha financia, com recurso não reembolsável, a transformação de
   uma ideia inovadora em empresa de base tecnológica, e aceita pessoa física sem
   CNPJ. Em São Paulo, o Centelha 3 paga até R$ 128 mil de subvenção por projeto,
   mais bolsas, em 12 meses. A seleção tem duas fases, ideia e projeto, e cada
   estado publica o seu edital, com valores e datas próprios.
+imagens:
+  - src: /blog/programa-centelha-como-participar/prototipo-de-sensor-de-campo-em-bancada-de-startup-do-agro.jpg
+    alt: 'Protótipo de sensor de campo em caixa impressa em 3D numa bancada de startup do agro, com placa eletrônica aberta, ferro de solda e bandejas de mudas'
+    caption: 'Protótipo de sensor de campo em bancada de startup do agro. Imagem ilustrativa'
+  - src: /blog/programa-centelha-como-participar/centelha-3-sp-quanto-soma-um-projeto.jpg
+    alt: 'Barra em escala com a subvenção de até R$ 128.000, as bolsas do CNPq de até R$ 50.000 e as bolsas da FAPESP de até R$ 64.440, somando R$ 242.440, e a contrapartida mínima de R$ 6.400'
+    caption: 'Quanto soma um projeto do Centelha 3 SP no teto, com a contrapartida na mesma escala'
+  - src: /blog/programa-centelha-como-participar/centelha-3-sp-calendario-da-selecao-a-contratacao.jpg
+    alt: 'Linha do tempo do Centelha 3 SP, da submissão das ideias em 07/04/2026 à contratação até 20/01/2027, com a chamada de suplentes e uma linha em 03/11/2026'
+    caption: 'Calendário do Centelha 3 SP, da submissão das ideias à contratação'
+  - src: /blog/programa-centelha-como-participar/prototipo-de-semeadora-manual-em-teste-no-canteiro.jpg
+    alt: 'Protótipo de semeadora manual de estrutura de aço, com reservatório transparente e disco dosador branco, parado num canteiro de terra preparada, com sementes visíveis no sulco'
+    caption: 'Protótipo de semeadora manual depois de uma passada de teste no canteiro. Imagem ilustrativa'
 ---
 O Programa Centelha é uma iniciativa nacional do MCTI, da Finep e do CNPq, executada pelas fundações estaduais de amparo à pesquisa, que financia sem devolução a transformação de ideias inovadoras em empresas. Pessoa física sem empresa pode participar. Em São Paulo, a 3ª edição paga até R$ 128 mil de subvenção por projeto, mais bolsas, em duas fases de seleção.
 
@@ -38,6 +51,13 @@ Subvenção econômica é recurso não reembolsável: a empresa não devolve o d
 
 O programa está na 3ª edição, lançada em 2025, com R$ 155 milhões previstos e 26 estados mais o Distrito Federal participantes, segundo o [portal do Programa Centelha](https://programacentelha.com.br/) (consultado em 03/11/2026). As duas primeiras edições somaram mais de 26 mil ideias submetidas e mais de 1.500 startups apoiadas, somando os números da [Fundação CERTI](https://certi.org.br/programa-centelha/) para cada edição (cálculo da Cultivee).
 
+O Centelha financia o trecho entre um protótipo de bancada e a empresa que vai vendê-lo. Na foto, um protótipo de sensor para o campo, com a placa eletrônica ainda aberta numa caixa impressa em 3D, montado numa bancada de startup do agro ao lado das bandejas de mudas usadas nos testes.
+
+![Protótipo de sensor de campo em caixa impressa em 3D numa bancada de startup do agro, com placa eletrônica aberta, ferro de solda e bandejas de mudas](/blog/programa-centelha-como-participar/prototipo-de-sensor-de-campo-em-bancada-de-startup-do-agro.jpg)
+*Protótipo de sensor de campo em bancada de startup do agro. Imagem ilustrativa*
+
+Como a propriedade intelectual é da empresa e as instituições não ficam com parte dela, o que sai de uma bancada como essa durante o projeto continua com os sócios. O que o programa pede em troca é o plano de trabalho cumprido, com prestação de contas.
+
 ## Quanto o Centelha 3 financia
 
 O valor do Centelha 3 é definido por edital estadual: em São Paulo e no Rio de Janeiro a subvenção vai até R$ 128 mil por projeto, e em Santa Catarina até R$ 96 mil, sempre com bolsas do CNPq por fora.
@@ -55,6 +75,13 @@ Valores que circulam na internet, como "até R$ 60 mil" ou "R$ 70 mil", são de 
 **Em São Paulo, quanto soma um projeto?** Pelo edital, até R$ 128.000 de subvenção, até R$ 50.000 em Bolsas de Fomento Tecnológico e Extensão Inovadora do CNPq (modalidades DTI, EV e SET) e até R$ 64.440 em bolsas da FAPESP. A bolsa FAPESP pode ser uma Bolsa PE-1 de até 12 meses, só para o coordenador e com dedicação exclusiva, ou cotas de Treinamento Técnico para o pessoal de apoio. No teto, o projeto chega a R$ 242.440 entre subvenção e bolsas (cálculo da Cultivee a partir dos itens 2.2, 2.3 e 2.5).
 
 **Contrapartida.** A empresa precisa aportar, com recurso próprio, no mínimo 5% do valor da subvenção contratada, antes de receber as parcelas e numa conta específica (item 5.3). Num projeto de R$ 128 mil, isso dá R$ 6.400 (cálculo da Cultivee). Ela pode cobrir qualquer despesa do projeto.
+
+O esquema abaixo põe os três valores de São Paulo numa barra em escala, com a contrapartida mínima embaixo, na mesma escala. A subvenção é pouco mais da metade do teto, cerca de 53% (cálculo da Cultivee); o resto são bolsas para a equipe.
+
+![Barra em escala com a subvenção de até R$ 128.000, as bolsas do CNPq de até R$ 50.000 e as bolsas da FAPESP de até R$ 64.440, somando R$ 242.440, e a contrapartida mínima de R$ 6.400](/blog/programa-centelha-como-participar/centelha-3-sp-quanto-soma-um-projeto.jpg)
+*Quanto soma um projeto do Centelha 3 SP no teto, com a contrapartida na mesma escala*
+
+A divisão por cor importa no planejamento: só a parte verde é recurso da empresa para gastar no projeto, e as bolsas pagam as pessoas, que a subvenção não pode remunerar (item 8.1, detalhado mais abaixo). A contrapartida é pequena perto do total, mas precisa estar na conta específica antes da primeira parcela.
 
 A subvenção é liberada em até duas parcelas. A segunda depende de usar ao menos 80% da primeira e de ter a prestação de contas parcial aprovada (item 15.3).
 
@@ -159,6 +186,13 @@ Fonte: [Edital FAPESP nº 18/2026, item 11](https://fapesp.br/18109/programa-nac
 
 Em todas as fases, o envio vai até as 18h, horário de Brasília, do último dia, só pelo Sistema Centelha. Proposta em rascunho não conta como enviada (itens 4.5.4 e 4.6).
 
+O esquema abaixo põe a mesma tabela numa linha do tempo, com uma linha tracejada em 03/11/2026. Da abertura da chamada ao fim do prazo de contratação são cerca de nove meses e meio, e as duas janelas de envio somam pouco mais de dez semanas (cálculo da Cultivee a partir das datas do item 11).
+
+![Linha do tempo do Centelha 3 SP, da submissão das ideias em 07/04/2026 à contratação até 20/01/2027, com a chamada de suplentes e uma linha em 03/11/2026](/blog/programa-centelha-como-participar/centelha-3-sp-calendario-da-selecao-a-contratacao.jpg)
+*Calendário do Centelha 3 SP, da submissão das ideias à contratação*
+
+A maior parte do calendário é espera de resultado, não escrita. Entre o fim da Fase 1, em 21/05, e a lista final das 200 ideias, em 22/07, passaram dois meses, e a Fase 2 abriu no dia seguinte à lista. Quem usa essa espera para adiantar orçamento e cronograma chega à janela de menos de quatro semanas com parte do trabalho adiantada.
+
 **E os outros estados?** Cada fundação tem o seu cronograma. Em Minas Gerais, por exemplo, a submissão das ideias foi de 28/05 a 15/07/2026, o resultado final da Fase 1 saiu em 19/10/2026, retificado em 23/10/2026, a submissão dos projetos da Fase 2 vai de 20/10 a 25/11/2026 e o resultado final está previsto para 18/02/2027, após três prorrogações ([FAPEMIG, Chamada 010/2026](https://fapemig.br/oportunidades/chamadas-e-editais/programa-centelha-3-programa-nacional-de-apoio-a-geracao-de-empreendimentos-inovadores), com a [3ª prorrogação de cronograma](https://api.site.fapemig.br/wp-content/uploads/2026-10-08__178__12811__10-cronograma-3a-prorrogacao__3Uy7naHW.pdf), de 08/10/2026, consultadas em 03/11/2026).
 
 Em 03/11/2026, o portal do Centelha anuncia inscrições abertas só em Alagoas. Pelo cronograma da FAPEAL, porém, a janela seguinte ali é a da Fase 2, de 13/11 a 04/12/2026, só para as ideias aprovadas na Fase 1, cujo resultado final está previsto para 12/11/2026 ([FAPEAL, Edital nº 06/2026, 2ª retificação, de 23/10/2026](https://www.fapeal.br/wp-content/uploads/2026/10/V.03.-Edital-FAPEAL-no-06.2026-Centelha-3-AL-2a-Retificacao_resulatdo-Fase-1-em-13.11.2026.pdf), consultada em 03/11/2026). Para saber se o seu estado está com inscrições abertas, abra a página dele no [portal do Centelha](https://programacentelha.com.br/) ou cadastre-se na newsletter do programa.
@@ -196,6 +230,13 @@ Preparar-se para o Centelha é ter, antes da janela de inscrição, as respostas
 6. **Rascunhe o orçamento pelas regras do edital.** Equipamento até 20%, sem salário, sem obra. Some a contrapartida mínima e confirme que você consegue aportá-la antes da primeira parcela.
 7. **Grave um pitch de até 3 minutos.** Na Fase 1 ele é opcional e na Fase 2 é obrigatório, em link do YouTube (não listado ou público) ou do Vimeo.
 8. **Organize a futura empresa.** Em SP, houve um mês após o resultado para abrir a empresa e enviar certidões, contrato social e conta no Banco do Brasil (itens 11 e 14.1).
+
+Das tarefas da lista, a do item 4 é a que precisa começar mais cedo, porque registro de teste não se produz na semana do prazo. Na foto, um protótipo de semeadora manual de estrutura de aço, com reservatório transparente e disco dosador branco, parado no canteiro logo depois de uma passada de teste, com as sementes visíveis no sulco.
+
+![Protótipo de semeadora manual de estrutura de aço, com reservatório transparente e disco dosador branco, parado num canteiro de terra preparada, com sementes visíveis no sulco](/blog/programa-centelha-como-participar/prototipo-de-semeadora-manual-em-teste-no-canteiro.jpg)
+*Protótipo de semeadora manual depois de uma passada de teste no canteiro. Imagem ilustrativa*
+
+Um teste assim, fotografado com data e com o resultado anotado (quantas sementes caíram por metro, quantas falhas), é o tipo de evidência que sustenta o estágio atual na Fase 2. A proposta diz em que ponto da escala do Guia do Participante o projeto está e aonde chega em 12 meses, e cada registro guardado desde já reduz o que fica só na promessa.
 
 Escrever pelo critério de avaliação é o mesmo método do guia [modelo de projeto de pesquisa, escrito pelo critério de avaliação](/blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio).
 

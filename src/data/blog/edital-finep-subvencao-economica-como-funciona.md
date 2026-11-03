@@ -8,7 +8,7 @@ categoriaVariant: 'educa'
 funil: 'fomento'
 data: '2026-10-10'
 dataModificacao: '2026-11-03'
-leitura: '17 min'
+leitura: '18 min'
 tldr: >-
   A subvenção econômica da Finep é recurso não reembolsável para empresas
   brasileiras desenvolverem inovação com risco tecnológico, concedido só por
@@ -19,6 +19,19 @@ tldr: >-
   Os pedidos vão de R$ 5 milhões a R$ 40 milhões por projeto. A seleção tem
   habilitação, com análise da saúde financeira da empresa, e análise de mérito
   com nota mínima.
+imagens:
+  - src: /blog/edital-finep-subvencao-economica-como-funciona/prototipo-de-semeadora-em-oficina-de-implementos.jpg
+    alt: 'Protótipo de semeadora de pequeno porte, com estrutura de aço sem pintura, discos de corte e dois reservatórios de semente, no piso de uma oficina de implementos agrícolas'
+    caption: 'Protótipo de semeadora de pequeno porte numa oficina de implementos agrícolas. Imagem ilustrativa'
+  - src: /blog/edital-finep-subvencao-economica-como-funciona/biorreator-de-bancada-com-lote-piloto-de-bioinsumo.jpg
+    alt: 'Biorreator de bancada de vidro com tampa de inox e mangueiras, ao lado de frascos fechados com líquido âmbar, numa bancada de pequeno laboratório de bioinsumos'
+    caption: 'Biorreator de bancada com lote piloto de bioinsumo num pequeno laboratório. Imagem ilustrativa'
+  - src: /blog/edital-finep-subvencao-economica-como-funciona/finep-etapas-da-selecao-subvencao-2026.jpg
+    alt: 'Esquema das três etapas da seleção da Finep, habilitação, análise de mérito e decisão e contratação, com a régua da nota de 0 a 21 pontos e o corte em 14'
+    caption: 'As três etapas da seleção e o corte de 14 pontos na nota de mérito'
+  - src: /blog/edital-finep-subvencao-economica-como-funciona/finep-chamada-regional-2026-propostas-por-etapa.jpg
+    alt: 'Barras com as propostas da chamada Regional 2026 em cada etapa: 587 enviadas, 400 habilitadas, 226 recomendadas no mérito e 114 com recurso, sendo 78 do orçamento original e 36 da suplementação'
+    caption: 'Propostas da chamada Regional 2026 em cada etapa, do envio à contratação'
 ---
 A subvenção econômica da Finep é dinheiro público não reembolsável para empresas brasileiras desenvolverem produtos, processos ou serviços com risco tecnológico. Ela só é concedida por edital, a chamada pública. Em 03/11/2026, três chamadas de subvenção estavam abertas a empresas, com pedidos de R$ 5 milhões a R$ 40 milhões por projeto e contrapartida obrigatória.
 
@@ -72,6 +85,13 @@ Em 03/11/2026, o portal de oportunidades da Finep e as páginas de cada chamada 
 | [COOPERAMAIS Brasil Tecnologias, Empresas](https://www.finep.gov.br/e/chamada-publica/222684/1060720) (máquinas, implementos e beneficiamento para agricultura familiar, aquicultura e pesca artesanal) | 30/04/2027, 17h | R$ 120 milhões | R$ 5 a 20 milhões, em arranjo único com cooperativa |
 
 Fontes: páginas oficiais de cada chamada, consultadas em 03/11/2026; Anexo 1 de Semicondutores (12/03/2026); para Transformação Mineral, o [aviso](https://www.finep.gov.br/documents/20120/758476/Aviso+-+2a+Rerratifica%C3%A7%C3%A3o+Anexo+1.pdf/edee42e7-b72c-94a8-d9ee-955c82056533) e o [Anexo 1 da 2ª rerratificação](https://www.finep.gov.br/documents/20120/758476/Anexo1+Rerratificado+-+2a+Rerratifica%C3%A7%C3%A3o.pdf/1572ecb7-9bd7-b7d0-1a3c-57e6f911e711) (23/10/2026), que elevou o orçamento de R$ 215,2 milhões para R$ 500 milhões, e a notícia da Finep sobre a [prorrogação do prazo](https://faleconosco.finep.gov.br/web/guest/w/prazo-prorrogado-chamada-transforma%C3%A7%C3%A3o-mineral) (04/09/2026); [Anexo 1 do COOPERAMAIS Empresas](https://www.finep.gov.br/documents/20120/758476/ANEXO_1_SBV_FC_COOPERAMAIS_EMPRESAS.pdf/405edcaa-352f-ac0d-a643-c87c349b99d4) (22/09/2026).
+
+Das três chamadas, a mais ligada ao agro é o COOPERAMAIS, que pede máquinas, implementos e equipamentos de beneficiamento para a agricultura familiar, a aquicultura e a pesca artesanal. Na foto, o protótipo de uma semeadora de pequeno porte, ainda sem pintura, numa oficina de implementos: é o tipo de equipamento que uma empresa desenvolveria nessa chamada, com uma cooperativa da agricultura familiar como parceira.
+
+![Protótipo de semeadora de pequeno porte, com estrutura de aço sem pintura, discos de corte e dois reservatórios de semente, no piso de uma oficina de implementos agrícolas](/blog/edital-finep-subvencao-economica-como-funciona/prototipo-de-semeadora-em-oficina-de-implementos.jpg)
+*Protótipo de semeadora de pequeno porte numa oficina de implementos agrícolas. Imagem ilustrativa*
+
+Pelo valor mínimo, porém, o projeto precisa ter porte: no COOPERAMAIS, o pedido vai de R$ 5 milhões a R$ 20 milhões, e a cooperativa entra paga na rubrica de serviços de consultoria, como explica a seção sobre quem pode participar.
 
 Também estavam abertas em 03/11/2026 duas chamadas da Rede EUREKA em fase nacional, com prazos em [06/11/2026](https://www.finep.gov.br/e/chamada-publica/222684/1075469) e [23/11/2026](https://www.finep.gov.br/e/chamada-publica/222684/1132029). Elas só recebem a parte brasileira de projetos de consórcios internacionais que já passaram pela fase internacional, e não servem a quem começa do zero.
 
@@ -146,6 +166,13 @@ Na prática, um projeto bom pode ser indeferido porque a contrapartida ficou gra
 
 Subvenção e contrapartida pagam só atividades do projeto, de custeio ou de capital: desenvolvimento do produto, prototipagem, lotes piloto, ensaios, testes, certificação e patenteamento (item 4.3.1). Ficam de fora bolsas, pró-labore e participação nos lucros (item 4.4.3), pagamento a servidor público da ativa, salvo exceções legais (item 4.4.1), gastos anteriores ao termo de outorga (item 3.3) e a mera "tropicalização" de solução da matriz estrangeira (item 4.1.3).
 
+Na foto, um biorreator de bancada produzindo um lote piloto de bioinsumo, ao lado dos frascos separados para ensaio. Equipamento, insumos e testes desse tipo são despesas de capital e de custeio que o projeto pode pagar, desde que voltadas à atividade financiada, como permite o §8º do art. 19 da Lei de Inovação.
+
+![Biorreator de bancada de vidro com tampa de inox e mangueiras, ao lado de frascos fechados com líquido âmbar, numa bancada de pequeno laboratório de bioinsumos](/blog/edital-finep-subvencao-economica-como-funciona/biorreator-de-bancada-com-lote-piloto-de-bioinsumo.jpg)
+*Biorreator de bancada com lote piloto de bioinsumo num pequeno laboratório. Imagem ilustrativa*
+
+Se um equipamento como esse fosse comprado antes da assinatura do termo de outorga, porém, a Finep não reconheceria a despesa, nem como contrapartida (item 3.3). A ordem certa é ter a proposta aprovada, assinar o termo e só então comprar.
+
 ## Como a Finep seleciona os projetos
 
 A seleção das chamadas de subvenção de 2026 tem duas etapas, habilitação e análise de mérito, seguidas da decisão da Diretoria Executiva da Finep (seções 7 e 8 do [regulamento de Tecnologias Digitais](https://premio.finep.gov.br/images/chamadas-publicas/2026/12_03_2026_TA_Regulamento.pdf)).
@@ -172,6 +199,13 @@ Os critérios de nota são públicos e iguais nas chamadas temáticas lidas:
 
 Cada um dos dez primeiros indicadores vale 0, 1 ou 2 pontos; a regionalização vale 0 ou 1. A proposta precisa somar pelo menos 14 pontos, e nota zero em incerteza tecnológica, abrangência ou relevância do tema elimina, qualquer que seja o total (Anexo 1, item 8). Pela soma dos pesos, o máximo possível é 21 pontos, e o corte equivale a cerca de dois terços disso (cálculo da Cultivee).
 
+O esquema abaixo junta as três etapas e a régua da nota: a proposta precisa passar pela habilitação e pela consistência antes de ser pontuada, e só com 14 pontos ou mais ela pode seguir para a decisão da Diretoria Executiva.
+
+![Esquema das três etapas da seleção da Finep, habilitação, análise de mérito e decisão e contratação, com a régua da nota de 0 a 21 pontos e o corte em 14](/blog/edital-finep-subvencao-economica-como-funciona/finep-etapas-da-selecao-subvencao-2026.jpg)
+*As três etapas da seleção e o corte de 14 pontos na nota de mérito*
+
+Na régua, passar do corte não depende só da soma: uma nota zero em incerteza tecnológica, abrangência ou relevância do tema elimina a proposta mesmo acima de 14. E a primeira caixa, a habilitação, é onde caem os erros formais, antes de qualquer nota, como mostram os números da chamada Regional na próxima seção.
+
 A decisão de mérito é da Finep, que pode contar com especialistas ad hoc de fora do seu quadro, sob termo de confidencialidade. Cabe recurso em até 10 dias corridos após a comunicação do resultado, sem acrescentar informação nova à proposta (item 7.3).
 
 Uma forma útil de escrever é partir dessa tabela: cada indicador vira uma pergunta que o formulário precisa responder de forma explícita, como mostra o guia de [modelo de projeto escrito pelo critério](/blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio).
@@ -186,6 +220,13 @@ O que dizem as listas oficiais e a Finep, com a contagem da Cultivee:
 - No [resultado final](https://www.finep.gov.br/documents/20120/758476/Regional+-+Resultado+final+.pdf/7bf4f1b4-be8c-2a1f-4aba-b64f7e2e811f), publicado na página da chamada em 13/10/2026, 78 propostas ficaram recomendadas dentro do limite de recursos, 148 foram recomendadas mas ficaram fora do orçamento e 174 não foram recomendadas (contagem da Cultivee nas listas).
 - Em 16/10/2026, o MCTI e a Finep anunciaram R$ 150 milhões a mais para a chamada, para contratar 36 das propostas recomendadas que tinham ficado fora do orçamento. O total passa a 114 projetos e R$ 450 milhões, com valor médio de R$ 3,8 milhões por projeto aprovado (mesma notícia).
 - Em relação ao total enviado, as 78 equivalem a cerca de 13%, e as 114, a cerca de 19%, perto de 1 em cada 5 propostas (cálculo da Cultivee).
+
+O esquema abaixo põe essas contagens em sequência. Somando as 78 propostas dentro do limite e as 148 fora do orçamento, 226 foram recomendadas no mérito, pouco mais da metade das 400 habilitadas (cálculo da Cultivee).
+
+![Barras com as propostas da chamada Regional 2026 em cada etapa: 587 enviadas, 400 habilitadas, 226 recomendadas no mérito e 114 com recurso, sendo 78 do orçamento original e 36 da suplementação](/blog/edital-finep-subvencao-economica-como-funciona/finep-chamada-regional-2026-propostas-por-etapa.jpg)
+*Propostas da chamada Regional 2026 em cada etapa, do envio à contratação*
+
+A barra que mais encolhe é a da habilitação, antes de qualquer nota. Na última, a suplementação de 16/10/2026 levou o resultado de 78 para 114 projetos, todos tirados da lista de recomendados que já existia.
 
 Duas lições saem daí. Um terço das propostas caiu por requisito formal, o que é evitável. E passar no mérito não basta: mesmo com a suplementação, 112 projetos recomendados ficaram sem recurso porque outros tiveram nota maior (cálculo da Cultivee: 148 menos 36).
 

@@ -8,7 +8,7 @@ categoriaVariant: 'educa'
 funil: 'fomento'
 data: '2026-10-10'
 dataModificacao: '2026-11-03'
-leitura: '16 min'
+leitura: '17 min'
 tldr: >-
   A Chamada Universal é o edital do CNPq que financia projetos de pesquisa em
   qualquer área do conhecimento. A edição de 2026 (Chamada CNPq/FNDCT nº 06/2026)
@@ -18,6 +18,19 @@ tldr: >-
   recurso até 13/11/2026 e a decisão final em 04/12/2026; na consulta de
   03/11/2026, o resultado preliminar ainda não estava na página do CNPq. Na edição
   anterior, de 2024, o CNPq aprovou 24,2% da demanda.
+imagens:
+  - src: /blog/chamada-universal-cnpq-como-funciona/laboratorio-de-pesquisa-agricola-em-universidade.jpg
+    alt: 'Laboratório de pesquisa agrícola de universidade com bandejas de sementes em germinação, amostras de solo, peneiras, balança e câmara de germinação ao fundo'
+    caption: 'Laboratório de pesquisa agrícola de universidade, com amostras de solo e sementes em germinação. Imagem ilustrativa'
+  - src: /blog/chamada-universal-cnpq-como-funciona/chamada-universal-2026-tres-faixas-tetos-e-prazos.jpg
+    alt: 'Esquema das três faixas da Chamada Universal 2026: ano do doutorado, vínculo, teto por projeto, prazo de execução e estimativa de recursos das Faixas A, B e C'
+    caption: 'As três faixas da Chamada Universal 2026, com teto, prazo e quanto da chamada cabe a cada uma'
+  - src: /blog/chamada-universal-cnpq-como-funciona/chamada-universal-2026-criterios-pesos-e-exemplo-de-nota.jpg
+    alt: 'Barras com o peso dos seis critérios da Chamada Universal 2026 e, ao lado, as notas de um exemplo e os pontos que cada critério soma à nota final de 7,6'
+    caption: 'Peso de cada critério e quanto ele soma à nota final no exemplo de 7,6'
+  - src: /blog/chamada-universal-cnpq-como-funciona/campo-experimental-de-universidade-com-parcelas-de-milho.jpg
+    alt: 'Campo experimental de universidade com parcelas de milho em alturas diferentes, separadas por corredores de terra e marcadas por estacas, e uma estação meteorológica na borda'
+    caption: 'Campo experimental de universidade com parcelas de milho marcadas por estacas. Imagem ilustrativa'
 ---
 A Chamada Universal é o edital do CNPq que financia projetos de pesquisa de qualquer área do conhecimento, coordenados por doutores. A edição 2026, Chamada CNPq/FNDCT nº 06/2026, tem R$ 300 milhões e três faixas, com tetos de R$ 243.520, R$ 200 mil e R$ 250 mil. A submissão terminou em 03/08/2026. O resultado preliminar estava previsto para 03/11/2026 e, na consulta desse dia, ainda não aparecia na página do CNPq.
 
@@ -33,6 +46,13 @@ Três pontos situam o programa:
 - **O recurso é não reembolsável,** desde que usado no projeto e com a prestação de contas aprovada (item 12).
 - **Não é anual.** Segundo o [CNPq (notícia atualizada em 06/07/2026)](https://www.gov.br/cnpq/pt-br/assuntos/noticias/cnpq-em-acao/chamada-universal-vai-financiar-r-300-milhoes-em-projetos-de-pesquisa-em-todo-pais-inscricoes-vao-ate-03-08), a edição de 2026 é a terceira em quatro anos, depois das de 2023 e 2024, frequência que não ocorria desde 2014.
 
+Como o edital não define tema, a pesquisa agropecuária concorre ao lado das demais áreas, e o projeto é executado numa Instituição Científica, Tecnológica e de Inovação (ICT), pública ou privada sem fins lucrativos, como uma universidade ou um instituto de pesquisa (item 3.4). Na foto, um laboratório de pesquisa agrícola de universidade, com amostras de solo secas ao ar, peneiras, balança e bandejas de sementes em germinação na bancada.
+
+![Laboratório de pesquisa agrícola de universidade com bandejas de sementes em germinação, amostras de solo, peneiras, balança e câmara de germinação ao fundo](/blog/chamada-universal-cnpq-como-funciona/laboratorio-de-pesquisa-agricola-em-universidade.jpg)
+*Laboratório de pesquisa agrícola de universidade, com amostras de solo e sementes em germinação. Imagem ilustrativa*
+
+Um laboratório assim é a estrutura que a ICT oferece ao projeto, e é por ela que a Universal passa: o equipamento comprado com o auxílio entra como despesa de capital e é incorporado ao patrimônio da instituição, como mostra a seção sobre itens financiáveis.
+
 ## Chamada Universal 2026 em números
 
 A edição 2026 divide os R$ 300 milhões em três faixas, definidas pelo ano do doutorado do coordenador e pelo tipo de vínculo dele com a instituição onde o projeto será executado. Pelo menos 30% do total vai para projetos executados em instituições do Norte, Nordeste ou Centro-Oeste (item 4.3).
@@ -46,6 +66,13 @@ A edição 2026 divide os R$ 300 milhões em três faixas, definidas pelo ano do
 Fonte: [Chamada CNPq/FNDCT nº 06/2026, itens 1.2, 4.4 e 10.4](https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf).
 
 O dinheiro vem de duas fontes: R$ 200 milhões do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) para as Faixas A e B, e R$ 100 milhões do orçamento do CNPq para a Faixa C. A estimativa por faixa é de R$ 75 milhões para a A, R$ 125 milhões para a B e R$ 100 milhões para a C, liberados em pelo menos três parcelas anuais (itens 4.1 e 4.4).
+
+O esquema abaixo junta numa só figura o que define cada faixa e o que ela oferece: o ano do doutorado, o vínculo, o teto, o prazo de execução e a parte dos R$ 300 milhões que o CNPq estima para ela, com a fonte do dinheiro.
+
+![Esquema das três faixas da Chamada Universal 2026: ano do doutorado, vínculo, teto por projeto, prazo de execução e estimativa de recursos das Faixas A, B e C](/blog/chamada-universal-cnpq-como-funciona/chamada-universal-2026-tres-faixas-tetos-e-prazos.jpg)
+*As três faixas da Chamada Universal 2026, com teto, prazo e quanto da chamada cabe a cada uma*
+
+Lado a lado, as faixas mostram que o maior teto não vem com a maior fatia. A Faixa B tem o teto mais baixo, R$ 200 mil, e a maior estimativa, R$ 125 milhões. Dividindo a estimativa de cada faixa pelo teto, cabem pelo menos 307 projetos na A, 625 na B e 400 na C, se todos pedissem o valor máximo (cálculo da Cultivee). O número real depende do valor pedido em cada proposta e dos cortes do Comitê Julgador.
 
 **A Faixa A tem uma conta própria.** Os R$ 100 mil cobrem custeio, capital e no máximo uma bolsa de iniciação científica (IC), iniciação tecnológica e industrial (ITI) ou apoio técnico (AT). Por cima, o coordenador pode pedir para si uma bolsa de Pós-Doutorado Júnior (PDJ), se tiver até 7 anos de doutorado, ou Sênior (PDS), se tiver mais de 8 e até 10 anos, por 24 meses com taxa de bancada (item 1.2.1.3).
 
@@ -117,6 +144,13 @@ A proposta da Chamada Universal recebe uma nota de 0 a 10 em cada um de seis cri
 Fonte: [Chamada CNPq/FNDCT nº 06/2026, item 7.1.1](https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf). Redação resumida.
 
 Os pesos somam 10, então a conta é simples. Um exemplo (cálculo da Cultivee): uma proposta com notas A = 8, B = 9, C = 8, D = 7, E = 5 e F = 6 fica com (8×3 + 9×2 + 8×2 + 7 + 5 + 6) ÷ 10 = 7,6. Subir o critério A de 8 para 9 leva a nota a 7,9. Subir o plano de popularização de 5 para 9 leva a 8,0. Em empate, vale a maior nota em A e, depois, em B (item 7.1.1.3).
+
+O esquema abaixo abre o mesmo exemplo critério por critério: o comprimento da barra é o peso, e a última coluna mostra quanto cada nota soma à média final, que é a nota multiplicada pelo peso e dividida por 10.
+
+![Barras com o peso dos seis critérios da Chamada Universal 2026 e, ao lado, as notas de um exemplo e os pontos que cada critério soma à nota final de 7,6](/blog/chamada-universal-cnpq-como-funciona/chamada-universal-2026-criterios-pesos-e-exemplo-de-nota.jpg)
+*Peso de cada critério e quanto ele soma à nota final no exemplo de 7,6*
+
+No exemplo, os critérios A, B e C respondem por 5,8 dos 7,6 pontos (cálculo da Cultivee). Cada ponto a mais em A vale 0,3 na nota final; em B ou C, 0,2; em D, E ou F, 0,1. Por isso o plano de popularização, com nota baixa, ainda deixa espaço para subir, mas o maior ganho por ponto está na originalidade.
 
 Três leituras práticas:
 
@@ -215,6 +249,13 @@ O recurso começa pelos pareceres, que todos os proponentes recebem (item 7.2.3.
 O projeto aprovado começa com a assinatura do Termo de Outorga, em até 90 dias da publicação do extrato da decisão final no DOU (item 10.3). Ela depende de Acordo de Cooperação Técnica entre a executora e o CNPq, e inadimplência do proponente com o CNPq, a Receita Federal ou o SIAFI impede a contratação (itens 10.2 e 10.6).
 
 Quem coordena um Universal anterior ainda vigente precisa pedir o encerramento dele até 30 dias antes de assinar o novo Termo, sob pena de cancelamento (item 3.2.1, alínea e). Há relatório parcial anual e, no fim, o Relatório de Execução do Objeto (REO) em até 60 dias, com as ações de divulgação realizadas (itens 11.5 e 12.1).
+
+Num projeto agropecuário, o relatório parcial e o REO descrevem o que foi feito no laboratório e no campo em relação às metas e ao cronograma da proposta. Na foto, um campo experimental de universidade dividido em parcelas de milho, separadas por corredores de terra e marcadas por estacas, com uma estação meteorológica na borda.
+
+![Campo experimental de universidade com parcelas de milho em alturas diferentes, separadas por corredores de terra e marcadas por estacas, e uma estação meteorológica na borda](/blog/chamada-universal-cnpq-como-funciona/campo-experimental-de-universidade-com-parcelas-de-milho.jpg)
+*Campo experimental de universidade com parcelas de milho marcadas por estacas. Imagem ilustrativa*
+
+Cada parcela de um ensaio assim recebe um tratamento, e a diferença de altura entre elas é o tipo de resultado que o projeto mede e registra. Esse calendário de campo precisa caber no prazo da faixa, de até 24 meses na A e até 36 meses na B e na C, e é ele que o cronograma da proposta, avaliado no critério B, tem de mostrar com realismo.
 
 A Universal financia pesquisa em ICT. Para levar um resultado de pesquisa a uma empresa nascente, há outros caminhos, como o [PIPE FAPESP Fase 1](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou), em São Paulo, ou a [subvenção econômica da Finep](/blog/edital-finep-subvencao-economica-como-funciona).
 

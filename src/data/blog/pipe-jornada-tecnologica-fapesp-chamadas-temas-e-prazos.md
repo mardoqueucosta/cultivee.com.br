@@ -8,7 +8,7 @@ categoriaVariant: 'educa'
 funil: 'fomento'
 data: '2026-10-10'
 dataModificacao: '2026-11-03'
-leitura: '16 min'
+leitura: '17 min'
 tldr: >-
   O PIPE Jornada Tecnológica é a modalidade do PIPE da FAPESP com chamadas
   temáticas e prazo, que financia com recurso não reembolsável até R$ 500 mil
@@ -18,6 +18,19 @@ tldr: >-
   Educacionais). Em 03/11/2026, só a de Tecnologias Educacionais recebe
   pré-propostas, até 12/11/2026; a Agro já teve 30 projetos selecionados, e uma
   chamada Geral tem lançamento previsto para 16/11/2026.
+imagens:
+  - src: /blog/pipe-jornada-tecnologica-fapesp-chamadas-temas-e-prazos/prototipo-estacao-de-sensores-em-teste-no-talhao-de-soja.jpg
+    alt: 'Protótipo de estação de sensores em teste num talhão de soja, com caixa de proteção aberta, pequeno painel solar e sondas enterradas no solo'
+    caption: 'Protótipo de estação de sensores em teste num talhão de soja. Imagem ilustrativa'
+  - src: /blog/pipe-jornada-tecnologica-fapesp-chamadas-temas-e-prazos/pipe-jornada-2026-linha-do-tempo-das-chamadas.jpg
+    alt: 'Linha do tempo das sete chamadas do PIPE Jornada em 2026, com o fim da pré-proposta e o prazo da proposta completa de cada uma, a data da consulta e o lançamento previsto da chamada Geral'
+    caption: 'Prazos das sete chamadas de 2026 e o lançamento previsto da chamada Geral'
+  - src: /blog/pipe-jornada-tecnologica-fapesp-chamadas-temas-e-prazos/pipe-jornada-submissao-em-duas-etapas.jpg
+    alt: 'Esquema da submissão ao PIPE Jornada: pré-proposta com cinco campos e 8.000 caracteres, diligência, proposta completa em até 30 dias com projeto de 12 itens e até 25 páginas, e avaliação de mérito'
+    caption: 'As duas etapas da submissão no SAGe e os limites de cada campo da pré-proposta'
+  - src: /blog/pipe-jornada-tecnologica-fapesp-chamadas-temas-e-prazos/bancada-de-pesquisa-de-pequena-empresa-do-agro.jpg
+    alt: 'Bancada de laboratório de pequena empresa do agro com medidor de bancada, béqueres com soluções, bandejas de mudas e placa eletrônica de protótipo ligada a sensores'
+    caption: 'Bancada de pesquisa de uma pequena empresa do agro. Imagem ilustrativa'
 ---
 O PIPE Jornada Tecnológica é a modalidade do PIPE da FAPESP que abre chamadas temáticas, com prazo, para financiar sem devolução até R$ 500 mil por projeto, em até 12 meses, em pequenas empresas do estado de São Paulo. Em 03/11/2026, a única chamada que recebe pré-propostas é a de Tecnologias Educacionais, até 12/11/2026, e a próxima prevista é uma chamada Geral, com lançamento em 16/11/2026.
 
@@ -30,6 +43,13 @@ O PIPE Jornada Tecnológica é uma linha do Programa Pesquisa Inovativa em Peque
 A FAPESP lançou a modalidade em 17 de março de 2026, junto com outras ações para estimular startups de base científica, as chamadas deep techs ([Pesquisa para Inovação, FAPESP, 17/03/2026](https://pesquisaparainovacao.fapesp.br/fapesp_anuncia_serie_de_acoes_para_estimular_a_criacao_de_startups_em_sao_paulo/3967)). Os projetos são contratados como PIPE Fase 1, com regras próprias: cada chamada tem prazo e tema, e aceita projetos de qualquer grau de maturidade, desde que haja desafio tecnológico, equipe adequada e infraestrutura ([Perguntas Frequentes do PIPE Jornada, FAPESP, atualizadas em 27/07/2026](https://fapesp.br/18216)).
 
 O interesse foi alto: a FAPESP recebeu cerca de 900 propostas na modalidade desde março de 2026, segundo a gerente de Inovação da Fundação, Patrícia Tedeschi ([Agência FAPESP, 24/08/2026](https://agencia.fapesp.br/fapesp-simplifica-submissao-de-propostas-ao-pipe/59036)). O primeiro resultado saiu em 23/10/2026: 30 projetos selecionados na chamada Agro ([resultado da chamada PIPE Jornada Tecnológica Agro, FAPESP, 23/10/2026](https://fapesp.br/18469), consultado em 03/11/2026). Em 03/11/2026, as outras chamadas ainda não tinham resultado publicado.
+
+A chamada Agro tinha entre os temas a agricultura de precisão e a automação ([Anexo 1 da chamada Agro, FAPESP](https://fapesp.br/18064)). Na foto, um protótipo de estação de sensores em teste no meio de um talhão de soja, com caixa de proteção aberta, painel solar pequeno e sondas enterradas no solo: é montagem de pesquisa, e o que se quer saber no campo é se a medida funciona.
+
+![Protótipo de estação de sensores em teste num talhão de soja, com caixa de proteção aberta, pequeno painel solar e sondas enterradas no solo](/blog/pipe-jornada-tecnologica-fapesp-chamadas-temas-e-prazos/prototipo-estacao-de-sensores-em-teste-no-talhao-de-soja.jpg)
+*Protótipo de estação de sensores em teste num talhão de soja. Imagem ilustrativa*
+
+É esse ponto de partida que o PIPE Jornada financia: um desafio tecnológico ainda sem solução, mesmo quando o projeto já tem um protótipo como o da foto, porque as chamadas aceitam qualquer grau de maturidade. As regras que valem para todas elas estão na seção seguinte.
 
 ## PIPE Jornada em números
 
@@ -65,6 +85,13 @@ A FAPESP publicou sete chamadas do PIPE Jornada Tecnológica entre março e outu
 | Tecnologias Educacionais (R$ 25 mi) | 12/11/2026 | 13/01/2027 | A partir de maio de 2027 |
 
 Fonte: sumário e cronograma de cada chamada em [fapesp.br/pipejornada](https://fapesp.br/pipejornada) e [resultado da chamada Agro](https://fapesp.br/18469), consultados em 03/11/2026. Fora a Agro, a coluna de resultado traz a data prevista no edital. O prazo da proposta completa vale só para quem teve a pré-proposta enquadrada.
+
+O esquema abaixo põe as datas da tabela numa linha do tempo, com o dia desta consulta, 03/11/2026, marcado por uma linha tracejada. Em todas as chamadas, a proposta completa venceu entre 56 e 62 dias depois do fim da pré-proposta (cálculo da Cultivee a partir dos cronogramas oficiais).
+
+![Linha do tempo das sete chamadas do PIPE Jornada em 2026, com o fim da pré-proposta e o prazo da proposta completa de cada uma, a data da consulta e o lançamento previsto da chamada Geral](/blog/pipe-jornada-tecnologica-fapesp-chamadas-temas-e-prazos/pipe-jornada-2026-linha-do-tempo-das-chamadas.jpg)
+*Prazos das sete chamadas de 2026 e o lançamento previsto da chamada Geral*
+
+Na linha do tempo, a única pré-proposta ainda à frente da data da consulta é a de Tecnologias Educacionais, que fecha em 12/11/2026. A Transição Energética fecha a proposta completa no próprio dia 03/11, a Indústria do Futuro tem a dela até 09/12/2026, e logo depois vem o lançamento previsto da chamada Geral, em 16/11/2026, tratado mais abaixo.
 
 Somadas, as sete chamadas oferecem até R$ 200 milhões (cálculo da Cultivee a partir do item 3 de cada chamada). Uma ressalva: nas chamadas de Transição Energética, Indústria do Futuro e Tecnologias Educacionais, o item 3 escreve "R$ 25.000.000,00" em número e "vinte milhões" por extenso. A [Agência FAPESP (10/08/2026)](https://agencia.fapesp.br/nova-chamada-da-fapesp-apoiara-inovacoes-em-transicao-energetica/58911) e as notas da FAPESP de [08/09/2026](https://fapesp.br/pipe/pipe_apoiara_tecnologias_da_industria_do_futuro_/335/) e de [13/10/2026](https://fapesp.br/pipe/pipe_apoiara_projetos_de_tecnologias_educacionais/338/) falam em R$ 25 milhões.
 
@@ -163,6 +190,13 @@ Quem é enquadrado recebe uma diligência no SAGe e tem até 30 dias para enviar
 
 O modelo do projeto tem 12 itens e até 25 páginas no corpo principal, em Calibri ou Arial 12, espaço 1,5 ([modelo de projeto da chamada Indústria do Futuro](https://fapesp.br/files/upload/18349/pipeindustria2026-anexo2.docx)). A ordem não é a mesma do modelo do PIPE regular: no Jornada, as informações da empresa e a equipe vêm nos itens 9 e 10. O modelo é obrigatório, e documentos da pré-proposta precisam ser reenviados. Para escrever cada item pensando em quem avalia, veja o [guia de modelo de projeto de pesquisa pelo critério de avaliação](/blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio).
 
+O esquema abaixo junta as duas etapas e o que vem depois delas: os 8.000 caracteres da pré-proposta divididos pelos cinco campos, o prazo de 30 dias da proposta completa e a avaliação de mérito, detalhada na seção seguinte.
+
+![Esquema da submissão ao PIPE Jornada: pré-proposta com cinco campos e 8.000 caracteres, diligência, proposta completa em até 30 dias com projeto de 12 itens e até 25 páginas, e avaliação de mérito](/blog/pipe-jornada-tecnologica-fapesp-chamadas-temas-e-prazos/pipe-jornada-submissao-em-duas-etapas.jpg)
+*As duas etapas da submissão no SAGe e os limites de cada campo da pré-proposta*
+
+No esquema, o campo 3, Mãos à obra, é o único com 2.000 caracteres: é nele que cabem as etapas do projeto e o teste de cada uma. E o caminho não tem volta dentro da chamada: como não há reconsideração, a proposta denegada só segue, revisada, como nova proposta no PIPE regular (item 10 das chamadas).
+
 A FAPESP também orienta que o próprio interessado leia as regras e faça o cadastro da proposta, e que tire dúvidas direto com ela pelo e-mail pipe-jornada@fapesp.br ([Perguntas Frequentes do PIPE Jornada](https://fapesp.br/18216)).
 
 ## Como a proposta é avaliada
@@ -197,6 +231,13 @@ O PIPE Jornada financia material de consumo e permanente, serviços de terceiros
 - até R$ 10 mil para capacitação em incubadora credenciada, quando a empresa ainda não está constituída.
 
 A Reserva Técnica, fora do teto, pode pagar a taxa de incubadora credenciada pela FAPESP sem autorização prévia, e a Parcela para Custos de Infraestrutura Direta pode custear serviços de apoio à comercialização dos resultados.
+
+Na foto, a bancada de pesquisa de uma pequena empresa do agro, com um medidor de bancada, vidraria com soluções, bandejas de mudas e uma placa eletrônica de protótipo ligada a sensores: é o tipo de material de consumo e permanente que entra no orçamento quando serve aos experimentos do projeto.
+
+![Bancada de laboratório de pequena empresa do agro com medidor de bancada, béqueres com soluções, bandejas de mudas e placa eletrônica de protótipo ligada a sensores](/blog/pipe-jornada-tecnologica-fapesp-chamadas-temas-e-prazos/bancada-de-pesquisa-de-pequena-empresa-do-agro.jpg)
+*Bancada de pesquisa de uma pequena empresa do agro. Imagem ilustrativa*
+
+A mesma sala mostra o limite do que se pode pedir: a bancada, a pia e as paredes são infraestrutura física da empresa, e o orçamento do Jornada é dimensionado para a pesquisa, não para a estrutura nem para a produção.
 
 **Não são financiáveis:** salários, obras civis, publicações, viagens fora da pesquisa de campo e de eventos do projeto, materiais e serviços administrativos, itens de produção ou de infraestrutura física da empresa e contratação de parentes ou de empresas ligadas aos sócios. Um projeto que peça só Bolsa PE não é enquadrado ([Perguntas Frequentes do PIPE Jornada](https://fapesp.br/18216)).
 

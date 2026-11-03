@@ -8,7 +8,7 @@ categoriaVariant: 'educa'
 funil: 'fomento'
 data: '2026-10-10'
 dataModificacao: '2026-11-03'
-leitura: '16 min'
+leitura: '17 min'
 tldr: >-
   Um projeto de pesquisa tem, em geral, título, resumo, introdução e
   justificativa, objetivos, metodologia, cronograma, orçamento, resultados
@@ -16,6 +16,19 @@ tldr: >-
   15287:2025 e as regras do programa. Para agência de fomento, quem manda é o
   modelo e os critérios de avaliação publicados no edital, e o texto rende mais
   quando é escrito a partir desses critérios, seção por seção.
+imagens:
+  - src: /blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio/microverdes-de-rucula-sob-paineis-led-com-sensor-de-luz.jpg
+    alt: 'Prateleiras de cultivo interno com bandejas de microverdes de rúcula sob painéis LED de luz branca e um sensor de radiação fotossinteticamente ativa sobre uma das bandejas'
+    caption: 'Bandejas de microverdes de rúcula sob painéis LED, com sensor de luz sobre uma bandeja. Imagem ilustrativa'
+  - src: /blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio/escrever-pelo-criterio-do-edital-a-secao-do-projeto.jpg
+    alt: 'Esquema com os quatro passos de escrever pelo critério, do edital à seção do projeto, e o critério B da Chamada Universal 2026 virando pergunta e seções de orçamento e cronograma'
+    caption: 'Os quatro passos de escrever pelo critério, com o critério B da Chamada Universal 2026 como exemplo'
+  - src: /blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio/exemplo-lido-pelos-criterios-chamada-universal-pesos.jpg
+    alt: 'Barra com os pesos dos seis critérios da Chamada Universal 2026: em verde os que o exemplo responde no texto (A, B e E, 6 pontos) e em dourado os sem resposta (C, D e F, 4 pontos)'
+    caption: 'Pesos dos seis critérios da Chamada Universal 2026 e onde o exemplo das microverdes responde'
+  - src: /blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio/camara-de-crescimento-com-plantulas-em-laboratorio-de-agronomia.jpg
+    alt: 'Câmara de crescimento aberta em laboratório de agronomia, com bandejas de plântulas em prateleiras iluminadas por luz branca'
+    caption: 'Câmara de crescimento com bandejas de plântulas em laboratório de agronomia. Imagem ilustrativa'
 ---
 Um projeto de pesquisa é o plano escrito de um estudo que ainda vai ser feito: o problema, os objetivos, o método, o prazo, o custo e o resultado esperado. O modelo padrão tem título, resumo, introdução e justificativa, objetivos, metodologia, cronograma, orçamento, resultados esperados e referências. Cada seção rende mais quando parte dos critérios de quem vai avaliar.
 
@@ -68,6 +81,13 @@ Um exemplo preenchido mostra como as seções se ligam: cada objetivo específic
 3. Calcular a produtividade por quilowatt-hora e indicar a intensidade recomendada.
 
 **Metodologia:** bandejas com substrato padronizado e a mesma densidade de sementes, sob painéis LED reguláveis, com fotoperíodo, temperatura e irrigação iguais entre os tratamentos. A intensidade será conferida com sensor de radiação fotossinteticamente ativa no início de cada ciclo. Na colheita, mede-se a massa fresca por bandeja e a altura de 10 plântulas. O consumo de cada painel é registrado com medidor de energia. Os dados passam por análise de variância e regressão, a 5% de significância.
+
+Na foto, uma montagem como a dessa metodologia: prateleiras de cultivo interno com bandejas de microverdes de rúcula, cada nível sob o seu painel LED de luz branca, e um sensor de radiação fotossinteticamente ativa pousado sobre uma das bandejas para conferir a intensidade no início do ciclo.
+
+![Prateleiras de cultivo interno com bandejas de microverdes de rúcula sob painéis LED de luz branca e um sensor de radiação fotossinteticamente ativa sobre uma das bandejas](/blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio/microverdes-de-rucula-sob-paineis-led-com-sensor-de-luz.jpg)
+*Bandejas de microverdes de rúcula sob painéis LED, com sensor de luz sobre uma bandeja. Imagem ilustrativa*
+
+Cada peça da foto volta mais abaixo: os painéis e o sensor aparecem no orçamento, ligados ao objetivo 1, e os três ciclos de cultivo ocupam os meses 2 a 4 do cronograma.
 
 **Cronograma:**
 
@@ -137,6 +157,13 @@ Um padrão comum: o texto nasce de um artigo ou de uma dissertação, com introd
 3. **Diga em qual seção cada pergunta será respondida.** Se um critério não tem seção, ele fica sem resposta, e a nota daquele quesito sai do que o avaliador conseguir deduzir.
 4. **Escreva e releia com o formulário ao lado.** Leia o projeto como se você fosse dar a nota, quesito por quesito, e corte o que não responde a nenhum.
 
+O esquema abaixo põe os quatro passos lado a lado e segue, embaixo, um critério real do começo ao fim: o critério B da Chamada Universal 2026, que tem peso 2 numa soma de 10 ([Chamada CNPq/FNDCT nº 06/2026, item 7.1.1](https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-06-2026/ChamadaUniversal062026.pdf)), vira uma pergunta e ganha as duas seções que a respondem.
+
+![Esquema com os quatro passos de escrever pelo critério, do edital à seção do projeto, e o critério B da Chamada Universal 2026 virando pergunta e seções de orçamento e cronograma](/blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio/escrever-pelo-criterio-do-edital-a-secao-do-projeto.jpg)
+*Os quatro passos de escrever pelo critério, com o critério B da Chamada Universal 2026 como exemplo*
+
+Na última coluna está o ganho do método: quem relê com o critério ao lado acha o item de orçamento sem objetivo ou a etapa sem mês antes de quem vai dar a nota.
+
 O próprio roteiro da FAPESP para o Auxílio Regular recomenda ler o [formulário de parecer da assessoria](https://fapesp.br/595) antes de escrever, porque ele mostra os pontos que serão analisados. Isso é escrever pelo critério, dito pela agência.
 
 ## Onde encontrar os critérios oficiais de cada agência
@@ -191,7 +218,12 @@ Ler pelo critério é pegar o projeto pronto e conferir, quesito por quesito, on
 | E. Popularização (1) | O guia curto para produtores | Ações concretas para público leigo, com canal e prazo |
 | F. Parcerias (1) | Não aparece | Instituições ou produtores parceiros, com o papel de cada um |
 
-O exemplo funciona como projeto de disciplina ou de IC. Para um edital, três critérios que somam 4 dos 10 pontos de peso (C, D e F) ainda estão sem resposta no texto: é a lacuna que a leitura pelo critério encontra antes do envio.
+O esquema abaixo junta os pesos da Chamada Universal a essa leitura: cada critério ocupa na barra o espaço do seu peso, em verde quando o exemplo responde no texto e em dourado quando não responde.
+
+![Barra com os pesos dos seis critérios da Chamada Universal 2026: em verde os que o exemplo responde no texto (A, B e E, 6 pontos) e em dourado os sem resposta (C, D e F, 4 pontos)](/blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio/exemplo-lido-pelos-criterios-chamada-universal-pesos.jpg)
+*Pesos dos seis critérios da Chamada Universal 2026 e onde o exemplo das microverdes responde*
+
+O exemplo funciona como projeto de disciplina ou de IC. Para um edital, a parte dourada da barra pesa: três critérios que somam 4 dos 10 pontos de peso (C, D e F, cálculo da Cultivee) ainda estão sem resposta no texto. É a lacuna que a leitura pelo critério encontra antes do envio.
 
 ## Os erros mais comuns, segundo a própria FAPESP
 
@@ -205,6 +237,13 @@ A FAPESP publica nas normas do Auxílio Regular a lista das deficiências mais f
 - **Experiência insuficiente** do responsável na área do projeto ou liderança não demonstrada.
 - **Infraestrutura da instituição** que não permite executar o projeto.
 - **Itens do orçamento sem justificativa suficiente** ou orçamento superestimado.
+
+Dois itens da lista dependem do lugar onde o projeto vai rodar: a infraestrutura e a viabilidade. Na foto, uma câmara de crescimento aberta num laboratório de agronomia, com bandejas de plântulas nas prateleiras iluminadas: num experimento com luz controlada, como o das microverdes, é o tipo de equipamento que o projeto precisa dizer que a instituição já tem, ou pedir no orçamento com justificativa.
+
+![Câmara de crescimento aberta em laboratório de agronomia, com bandejas de plântulas em prateleiras iluminadas por luz branca](/blog/modelo-de-projeto-de-pesquisa-como-escrever-pelo-criterio/camara-de-crescimento-com-plantulas-em-laboratorio-de-agronomia.jpg)
+*Câmara de crescimento com bandejas de plântulas em laboratório de agronomia. Imagem ilustrativa*
+
+Para o avaliador, o equipamento só conta se aparecer no texto: na descrição da infraestrutura, na metodologia que o usa e, quando é compra, num item do orçamento ligado a um objetivo.
 
 Boa parte da lista é sobre coerência: objetivo que não fecha com o método, prazo que não fecha com a equipe, orçamento que não fecha com os objetivos. Uma releitura com os critérios ao lado costuma revelar essas falhas.
 
