@@ -47,6 +47,8 @@
   // Chaves de armazenamento (prefixo proprio, para nao colidir com o resto do site da Cultivee)
   var CHAVE_SESSAO = 'cultivee_fomento_origem_sessao';      // sessionStorage
   var CHAVE_PAGO = 'cultivee_fomento_ultimo_clique_pago';   // localStorage, 90 dias
+  var CHAVE_SITE_SESSAO = 'cultivee_site_origem_sessao';    // gravada pelo /medicao-contato.js do resto do site
+  var ROTULO_DO_CANAL = { pago: 'Anúncio', organico: 'Busca orgânica', social: 'Rede social', referencia: 'Site externo', direto: 'Direto' };
   var CHAVE_TESTE = 'cultivee_fomento_teste';               // sessionStorage + cookie
   var CHAVE_ENVIO = 'cultivee_fomento_envio';               // sessionStorage: ultimo envio do formulario
   var CHAVE_CONVERTIDOS = 'cultivee_fomento_convertidos';   // sessionStorage: envios ja contados
@@ -188,8 +190,22 @@
     var atual;
     try { atual = classificar(w.location.href, d.referrer || ''); } catch (_) { return null; }
     var sessao = leJson(sessionStorage, CHAVE_SESSAO);
+    // Chegou de outra pagina do site (ex.: artigo do blog): herda a origem que o site gravou
+    // na entrada (medicao-contato.js), para o lead do artigo nao virar "direto". `de` diz qual artigo.
+    if (!sessao && atual.interna) {
+      var doSite = leJson(sessionStorage, CHAVE_SITE_SESSAO);
+      if (doSite && doSite.canal) {
+        var via = limpaUtm(new URL(w.location.href).searchParams.get('de'), 80);
+        atual = {
+          canal: doSite.canal, rede: doSite.rede, em: doSite.em || atual.em,
+          paginaEntrada: doSite.entrada, referrer: atual.referrer, via: via,
+          rotulo: ROTULO_DO_CANAL[doSite.canal] + ' via ' + (via || 'site')
+        };
+        gravaJson(sessionStorage, CHAVE_SESSAO, atual);
+      }
+    }
     // Clique pago novo na mesma sessao substitui a origem (vale o ultimo pago, como na Biopdi)
-    if ((!sessao && !atual.interna) || (atual.canal === 'pago' && sessao && sessao.canal !== 'pago')) {
+    if ((!sessao && !atual.interna && !atual.via) || (atual.canal === 'pago' && sessao && sessao.canal !== 'pago')) {
       gravaJson(sessionStorage, CHAVE_SESSAO, atual);
     }
     if (atual.canal === 'pago') gravaJson(localStorage, CHAVE_PAGO, atual);

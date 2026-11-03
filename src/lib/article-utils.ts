@@ -36,7 +36,8 @@ export function extractFaqFromMarkdown(markdown: string): FaqItem[] {
   const body = nextH2 !== -1 ? section.slice(0, nextH2) : section;
 
   const items: FaqItem[] = [];
-  const h3 = /^###\s+(.+?)\s*$\n+([\s\S]+?)(?=^###\s|\n## |\Z)/gm;
+  // Fim do texto é (?![\s\S]): "\Z" não existe em JS (casava um "Z" literal e a última pergunta sumia do FAQPage).
+  const h3 = /^###\s+(.+?)\s*$\n+([\s\S]+?)(?=^###\s|\n## |(?![\s\S]))/gm;
   let m: RegExpExecArray | null;
   while ((m = h3.exec(body)) !== null) {
     const q = m[1].replace(/[*_]+/g, "").trim();

@@ -21,6 +21,8 @@ export interface ArticleMeta {
   leitura: string;
   tldr?: string;
   imagens?: ArticleImage[];
+  /** "fomento": artigo do funil de captação; o fim do artigo chama para a /fomento. */
+  funil?: "fomento";
 }
 
 export interface BlogArticle extends ArticleMeta {
@@ -49,6 +51,7 @@ function buildArticles(): BlogArticle[] {
       leitura: data.leitura ?? "",
       tldr: data.tldr,
       imagens: data.imagens,
+      funil: data.funil,
       conteudo: content,
     });
   }

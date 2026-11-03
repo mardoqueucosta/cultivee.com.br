@@ -915,6 +915,14 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   document.querySelectorAll('[data-abre-form]').forEach(function(b){
     b.addEventListener('click',function(){abrirForm(b);});
   });
+  /* Link dos artigos do blog (?abrir=diagnostico&de=artigo-...): abre o formulario direto, com a origem do artigo. */
+  try{
+    var qs=new URLSearchParams(location.search);
+    if(qs.get('abrir')==='diagnostico'){
+      var de=(qs.get('de')||'artigo').replace(/[^\w\-]/g,'').slice(0,60)||'artigo';
+      abrirForm({getAttribute:function(k){return k==='data-abre-form'?de:null;},focus:function(){}});
+    }
+  }catch(_){}
   function fechar(){if(dlg.open)dlg.close();}
   dlg.querySelectorAll('[data-fecha-form]').forEach(function(b){b.addEventListener('click',fechar);});
   dlg.addEventListener('click',function(e){if(e.target===dlg)fechar();});

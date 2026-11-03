@@ -20,7 +20,6 @@ import {
   extractHeadingsFromMarkdown,
   extractFaqFromMarkdown,
   injectCrossReferences,
-  buildPictureProps,
 } from "@/lib/article-utils";
 import { slugify } from "@/lib/normalize";
 import { knownEntities } from "@/data/entities";
@@ -31,19 +30,15 @@ import {
   authorJsonLd,
   organizationJsonLd,
 } from "@/lib/seo-schemas";
-import imageVariantsRaw from "@/data/image-variants.json";
-import blurDataRaw from "@/data/blur-data.json";
-import type { ImageVariants } from "@/lib/article-utils";
-
-const imageVariants = imageVariantsRaw as Record<string, ImageVariants>;
-const blurMap = blurDataRaw as Record<string, string>;
 
 function formatDate(iso: string): string {
   if (!iso) return "";
+  // "2026-10-26" é lido como meia-noite UTC: sem timeZone UTC, no Brasil aparecia o dia anterior.
   return new Date(iso).toLocaleDateString("pt-BR", {
     day: "numeric",
     month: "long",
     year: "numeric",
+    timeZone: "UTC",
   });
 }
 
@@ -67,47 +62,6 @@ const variantAccent: Record<CategoriaVariant, { bg: string; text: string; border
     gradient: "from-tech/20 via-tech/5 to-background",
   },
 };
-
-function HeroPicture({ src, alt }: { src: string; alt: string }) {
-  const { sets, sizes, blur } = buildPictureProps(src, imageVariants, blurMap);
-  const blurStyle = blur
-    ? {
-        backgroundImage: `url(${blur})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }
-    : undefined;
-
-  if (!sets) {
-    return (
-      <img
-        src={src}
-        alt={alt}
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
-        className="w-full h-full object-cover"
-        style={blurStyle}
-      />
-    );
-  }
-
-  return (
-    <picture>
-      {sets.avif && <source type="image/avif" srcSet={sets.avif} sizes={sizes} />}
-      {sets.webp && <source type="image/webp" srcSet={sets.webp} sizes={sizes} />}
-      <img
-        src={src}
-        alt={alt}
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
-        className="w-full h-full object-cover"
-        style={blurStyle}
-      />
-    </picture>
-  );
-}
 
 const BlogArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -259,7 +213,6 @@ const BlogArticlePage = () => {
         <meta name="twitter:title" content={article.titulo} />
         <meta name="twitter:description" content={article.resumo} />
         <meta name="twitter:image" content={ogImage} />
-        {heroImage && <link rel="preload" as="image" href={heroImage.src} />}
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(authorJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdArticle)}</script>
@@ -277,7 +230,7 @@ const BlogArticlePage = () => {
           overline={article.categoria}
           title={article.titulo}
           description={article.resumo}
-          centered
+          wide
           accent={article.categoriaVariant}
           hero
           breadcrumbs={[
@@ -287,22 +240,10 @@ const BlogArticlePage = () => {
         />
       </section>
 
-      {/* 2. Preâmbulo branco — imagem destacada + meta + TL;DR + ToC */}
+      {/* 2. Preâmbulo branco — meta + TL;DR + ToC. A capa (imagens[0]) não aparece aqui:
+          como nos artigos da Biopdi, ela entra no corpo, apresentada pelo texto; segue no JSON-LD. */}
       <section className="bg-background py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {heroImage && (
-            <div className="mb-10">
-              <figure className="rounded-2xl overflow-hidden shadow-elegant aspect-[16/9] bg-muted">
-                <HeroPicture src={heroImage.src} alt={heroImage.alt} />
-              </figure>
-              {heroImage.caption && (
-                <figcaption className="text-xs text-muted-foreground italic text-center mt-3">
-                  {heroImage.caption}
-                </figcaption>
-              )}
-            </div>
-          )}
-
           <div className="flex flex-wrap items-center gap-4 mb-8 pb-6 border-b border-border">
             <CategoriaBadge variant={article.categoriaVariant}>
               {article.categoria}
@@ -380,6 +321,12 @@ const BlogArticlePage = () => {
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
+                    // Tabela larga rola dentro da propria caixa: sem isso, no celular ela empurrava a pagina inteira para o lado
+                    table: ({ node: _node, ...props }) => (
+                      <div className="overflow-x-auto">
+                        <table {...props} />
+                      </div>
+                    ),
                     h2: ({ node: _node, children, ...props }) => {
                       const text = String(children);
                       return (
@@ -474,8 +421,9 @@ const BlogArticlePage = () => {
             <div>
               <h3 className="font-semibold text-foreground">Prof. Dr. Mardoqueu Costa</h3>
               <p className="text-muted-foreground text-sm mt-1">
-                Pesquisador e fundador da Cultivee. Escreve sobre hidroponia, cultivo
-                indoor e automação agrícola, sempre com fontes citadas.{" "}
+                {article.funil === "fomento"
+                  ? "Pesquisador e fundador da Cultivee. Escreve sobre captação de recursos e fomento à inovação, sempre com a fonte oficial e a data de cada regra."
+                  : "Pesquisador e fundador da Cultivee. Escreve sobre hidroponia, cultivo indoor e automação agrícola, sempre com fontes citadas."}{" "}
                 <Link to="/sobre" className="text-primary hover:underline">
                   Sobre a Cultivee
                 </Link>
@@ -505,10 +453,12 @@ const BlogArticlePage = () => {
       <section className="bg-gradient-hero py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Quer aprofundar?
+            {article.funil === "fomento" ? "Seu projeto está pronto para o edital?" : "Quer aprofundar?"}
           </h3>
           <p className="text-lg text-white/85 mb-8 max-w-xl mx-auto">
-            Conheça os cursos do Cultivee Educa: microverdes e hidroponia estão em produção, com lista de espera.
+            {article.funil === "fomento"
+              ? "Diagnóstico de Prontidão: 1 hora de consultoria em que você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta."
+              : "Conheça os cursos do Cultivee Educa: microverdes e hidroponia estão em produção, com lista de espera."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -516,7 +466,11 @@ const BlogArticlePage = () => {
               size="lg"
               className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
             >
-              <Link to={cursoSlug}>Ver os cursos</Link>
+              {article.funil === "fomento" ? (
+                <a href={`/fomento?de=artigo-${article.slug}&abrir=diagnostico`}>Conhecer o Diagnóstico</a>
+              ) : (
+                <Link to={cursoSlug}>Ver os cursos</Link>
+              )}
             </Button>
             <Button
               asChild

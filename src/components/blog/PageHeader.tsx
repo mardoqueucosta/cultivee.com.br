@@ -15,6 +15,7 @@ export function PageHeader({
   centered,
   accent = "primary",
   hero = false,
+  wide = false,
 }: {
   overline?: string;
   title: string;
@@ -23,6 +24,8 @@ export function PageHeader({
   centered?: boolean;
   accent?: "primary" | "agro" | "educa" | "tech";
   hero?: boolean;
+  /** Título e descrição na largura toda da página (artigo do blog), alinhados ao conteúdo abaixo. */
+  wide?: boolean;
 }) {
   const overlineColor = hero
     ? "text-white/80"
@@ -37,7 +40,7 @@ export function PageHeader({
   return (
     <div className={hero ? "" : "bg-background border-b border-border"}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-        <div className={centered ? "max-w-3xl mx-auto" : ""}>
+        <div className={centered && !wide ? "max-w-3xl mx-auto" : ""}>
           {breadcrumbs && (
             <nav
               aria-label="Breadcrumb"
@@ -103,7 +106,7 @@ export function PageHeader({
             className={cn(
               "text-3xl md:text-4xl lg:text-5xl font-bold text-balance break-words leading-tight",
               hero ? "text-white" : "text-foreground",
-              !centered && "max-w-3xl"
+              !centered && !wide && "max-w-3xl"
             )}
           >
             {title}
@@ -113,7 +116,7 @@ export function PageHeader({
               className={cn(
                 "mt-3 text-lg leading-relaxed",
                 hero ? "text-white/85" : "text-muted-foreground",
-                !centered && "max-w-2xl"
+                !centered && !wide && "max-w-2xl"
               )}
             >
               {description}

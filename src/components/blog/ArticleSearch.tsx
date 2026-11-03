@@ -19,6 +19,7 @@ function formatDate(iso: string): string {
     day: "numeric",
     month: "short",
     year: "numeric",
+    timeZone: "UTC", // data ISO sem hora é meia-noite UTC: sem isso, no Brasil mostrava o dia anterior
   });
 }
 
