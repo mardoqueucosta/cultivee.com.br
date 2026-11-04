@@ -7,8 +7,11 @@ import { PageHeader } from "@/components/blog/PageHeader";
 import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import {
   COTACOES, FONTES, NOME_EXIBICAO, PAGINA_DO_INDICADOR, dataPorExtenso, fmt,
-  horaDe, nomeDe,
+  horaDe, nomeDe, resumoDe,
 } from "@/lib/cotacoes";
+import { Sparkline } from "@/components/cotacoes/Sparkline";
+import { HistoricoCotacao, type OpcaoIndicador } from "@/components/cotacoes/HistoricoCotacao";
+import { ComparacaoBase100 } from "@/components/cotacoes/ComparacaoBase100";
 
 /**
  * Indice de `/cotacoes`: o painel de TODOS os indicadores que o site publica.
@@ -21,6 +24,30 @@ import {
  */
 
 const URL_PAGINA = `${SITE_BASE}/cotacoes`;
+
+// Fora do componente de proposito: os graficos buscam as series num efeito que
+// depende destas listas, e uma lista recriada a cada render buscaria de novo.
+const OPCOES_HISTORICO: OpcaoIndicador[] = COTACOES.itens.map((i) => ({
+  key: i.key,
+  rotulo: nomeDe(i),
+  moeda: i.moeda,
+  unidade: i.unidade,
+  mensal: i.periodicidade === "mensal",
+  valorPequeno: i.valor < 10,
+}));
+const ITENS_COMPARACAO = COTACOES.itens
+  .filter((i) => i.periodicidade !== "mensal")
+  .map((i) => ({ key: i.key, rotulo: nomeDe(i) }));
+
+/** Variacao com seta e sinal, nunca so cor. */
+const Var = ({ v }: { v?: number | null }) =>
+  v === null || v === undefined ? (
+    <span className="text-muted-foreground">s/ base</span>
+  ) : (
+    <span className={v > 0 ? "text-emerald-600" : v < 0 ? "text-red-600" : "text-muted-foreground"}>
+      {v > 0 ? "▲" : v < 0 ? "▼" : "="} {fmt(Math.abs(v))}%
+    </span>
+  );
 
 const CotacoesPage = () => {
   const diarios = COTACOES.itens.filter((i) => i.periodicidade !== "mensal");
@@ -69,8 +96,9 @@ const CotacoesPage = () => {
     })),
   };
 
-  const Linha = ({ i }: { i: (typeof COTACOES.itens)[number] }) => {
+  const Linha = ({ i, mensal = false }: { i: (typeof COTACOES.itens)[number]; mensal?: boolean }) => {
     const pagina = PAGINA_DO_INDICADOR[i.key];
+    const r = resumoDe(i.key);
     const sobe = (i.var_pct ?? 0) > 0;
     const desce = (i.var_pct ?? 0) < 0;
     return (
@@ -102,6 +130,19 @@ const CotacoesPage = () => {
             </span>
           )}
         </td>
+        {mensal ? null : (
+          <>
+            <td className="py-3 pr-4 text-right text-sm tabular-nums whitespace-nowrap">
+              <Var v={r?.var_7d_pct} />
+            </td>
+            <td className="py-3 pr-4 text-right text-sm tabular-nums whitespace-nowrap">
+              <Var v={r?.var_30d_pct} />
+            </td>
+            <td className="py-3 pr-4">
+              <Sparkline pontos={r?.recentes} rotulo={nomeDe(i)} />
+            </td>
+          </>
+        )}
         <td className="py-3 text-right text-xs text-muted-foreground whitespace-nowrap">
           {i.ref_rotulo || i.data_ref}
         </td>
@@ -147,9 +188,9 @@ const CotacoesPage = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="sr-only">Painel de indicadores diários</h2>
           <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
-            <table className="w-full min-w-[34rem] text-left">
+            <table className="w-full min-w-[52rem] text-left">
               <caption className="sr-only">
-                Indicadores diários com valor, unidade, variação e data de apuração
+                Indicadores diários com valor, unidade, variação no dia, em 7 e em 30 dias, tendência dos últimos pregões e data de apuração
               </caption>
               <thead>
                 <tr className="border-b border-border text-xs uppercase tracking-wide text-muted-foreground">
@@ -157,6 +198,9 @@ const CotacoesPage = () => {
                   <th scope="col" className="py-3 pr-4 text-right font-semibold">Valor</th>
                   <th scope="col" className="py-3 pr-4 font-semibold">Unidade</th>
                   <th scope="col" className="py-3 pr-4 text-right font-semibold">No dia</th>
+                  <th scope="col" className="py-3 pr-4 text-right font-semibold">7 dias</th>
+                  <th scope="col" className="py-3 pr-4 text-right font-semibold">30 dias</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Últimos 30 pregões</th>
                   <th scope="col" className="py-3 text-right font-semibold">Apuração</th>
                 </tr>
               </thead>
@@ -165,6 +209,11 @@ const CotacoesPage = () => {
               </tbody>
             </table>
           </div>
+
+          <p className="mt-3 text-xs text-muted-foreground">
+            "7 dias" e "30 dias" comparam a última apuração com o último pregão de pelo menos 7 e
+            30 dias corridos antes. A minigráfica mostra os últimos 30 pregões de cada indicador.
+          </p>
 
           {mensais.length ? (
             <div className="mt-10">
@@ -176,12 +225,95 @@ const CotacoesPage = () => {
               <div className="mt-4 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
                 <table className="w-full min-w-[34rem] text-left">
                   <tbody className="[&>tr>td:first-child]:px-4">
-                    {mensais.map((i) => <Linha key={i.key} i={i} />)}
+                    {mensais.map((i) => <Linha key={i.key} i={i} mensal />)}
                   </tbody>
                 </table>
               </div>
             </div>
           ) : null}
+        </div>
+      </section>
+
+      {/* 🟫 historico e graficos */}
+      <section className="py-16 bg-muted" id="historico">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">Histórico e gráficos das cotações</h2>
+          <p className="mt-3 leading-relaxed">
+            Escolha o indicador e o período para ver como o preço andou, com a mínima e a máxima
+            de cada intervalo. Cada ponto do gráfico é uma apuração do {COTACOES.fonte}, sem
+            suavização, e dias sem pregão não aparecem porque não existiram. Abaixo do gráfico
+            fica o histórico completo em tabela, que pode ser baixado em CSV.
+          </p>
+          <div className="mt-8">
+            <HistoricoCotacao opcoes={OPCOES_HISTORICO} inicial="boi-gordo" />
+          </div>
+
+          <h3 className="mt-12 text-xl font-bold text-foreground">Mínima e máxima de cada série</h3>
+          <p className="mt-2 text-muted-foreground">
+            Os extremos desde o início de cada série, com a data em que aconteceram.
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-2xl border border-border bg-card">
+            <table className="w-full min-w-[40rem] text-left text-sm">
+              <caption className="sr-only">
+                Mínima, máxima e variação desde o início da série de cada indicador
+              </caption>
+              <thead>
+                <tr className="border-b border-border text-xs uppercase tracking-wide text-muted-foreground">
+                  <th scope="col" className="px-4 py-3 font-semibold">Indicador</th>
+                  <th scope="col" className="py-3 pr-4 text-right font-semibold">Mínima</th>
+                  <th scope="col" className="py-3 pr-4 text-right font-semibold">Máxima</th>
+                  <th scope="col" className="py-3 pr-4 text-right font-semibold">Desde o início</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold">Série</th>
+                </tr>
+              </thead>
+              <tbody>
+                {COTACOES.itens.map((i) => {
+                  const r = resumoDe(i.key);
+                  if (!r) return null;
+                  const casas = i.valor < 10 ? 4 : 2;
+                  const v = (n: number) =>
+                    n.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });
+                  return (
+                    <tr key={i.key} className="border-b border-border last:border-0">
+                      <td className="px-4 py-3 font-medium">{nomeDe(i)}</td>
+                      <td className="py-3 pr-4 text-right tabular-nums whitespace-nowrap">
+                        {i.moeda} {v(r.minimo)}
+                        <span className="block text-xs text-muted-foreground">{r.minimo_em}</span>
+                      </td>
+                      <td className="py-3 pr-4 text-right tabular-nums whitespace-nowrap">
+                        {i.moeda} {v(r.maximo)}
+                        <span className="block text-xs text-muted-foreground">{r.maximo_em}</span>
+                      </td>
+                      <td className="py-3 pr-4 text-right tabular-nums whitespace-nowrap">
+                        <Var v={r.var_inicio_pct} />
+                      </td>
+                      <td className="py-3 pr-4 text-xs text-muted-foreground whitespace-nowrap">
+                        {r.primeiro} a {r.ultimo}, {r.pontos} apurações
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ⬜ comparacao em base 100 */}
+      <section className="py-16 bg-background" id="comparacao">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-foreground">
+            Quais cotações subiram e quais caíram nos últimos 90 dias
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            Cada indicador começa em 100 no primeiro pregão da janela de 90 dias, e todos os
+            quadros usam a mesma escala vertical: a mesma altura é a mesma variação percentual,
+            seja na arroba do boi, seja na saca do café. A linha horizontal marca o 100, o ponto
+            de partida.
+          </p>
+          <div className="mt-8">
+            <ComparacaoBase100 itens={ITENS_COMPARACAO} />
+          </div>
         </div>
       </section>
 

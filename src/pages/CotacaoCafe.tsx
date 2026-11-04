@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -9,6 +9,7 @@ import { SITE_BASE, breadcrumbJsonLd } from "@/lib/breadcrumb-schema";
 import {
   COTACOES, type ItemCotacao, dataPorExtenso, fmt, horaDe, itemPorKey, resumoDe,
 } from "@/lib/cotacoes";
+import { HistoricoCotacao, type OpcaoIndicador } from "@/components/cotacoes/HistoricoCotacao";
 
 /**
  * Pagina ancora da cotacao do cafe.
@@ -32,6 +33,16 @@ const item = itemPorKey;
 
 const ARABICA = item("cafe-arabica");
 const CONILON = item("cafe-robusta");
+
+// Fora do componente: o historico busca a serie num efeito que depende desta lista.
+const OPCOES_CAFE: OpcaoIndicador[] = [ARABICA, CONILON]
+  .filter(Boolean)
+  .map((i) => ({
+    key: i!.key,
+    rotulo: i!.key === "cafe-robusta" ? "Conilon" : "Arábica",
+    moeda: i!.moeda,
+    unidade: i!.unidade,
+  }));
 
 /**
  * Vocabulario da cotacao. Esta na pagina ANCORA de proposito: e' o que explica
@@ -175,74 +186,6 @@ function Conversor() {
         qualidade do lote, o tipo de bebida, a peneira, o prazo de pagamento e o frete.
       </p>
     </div>
-  );
-}
-
-type Ponto = { data_ref: string; valor: number };
-
-/**
- * Grafico. O outro bloco que justifica JS.
- *
- * A serie e' buscada do JSON publico DEPOIS da montagem, nunca importada: ela
- * cresce um ponto por dia util, para sempre. Enquanto nao chega, o bloco diz
- * que esta carregando, e se falhar diz que falhou. Nao inventa linha.
- */
-function Grafico({ commodity, rotulo }: { commodity: string; rotulo: string }) {
-  const [pontos, setPontos] = useState<Ponto[] | null>(null);
-  const [erro, setErro] = useState(false);
-  const ano = new Date().getFullYear();
-
-  useEffect(() => {
-    let vivo = true;
-    fetch(`/dados/cotacoes/series/${commodity}-${ano}.json`)
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((d) => vivo && setPontos((d.pontos as Ponto[]) || []))
-      .catch(() => vivo && setErro(true));
-    return () => { vivo = false; };
-  }, [commodity, ano]);
-
-  const svg = useMemo(() => {
-    if (!pontos || pontos.length < 2) return null;
-    const vals = pontos.map((p) => p.valor);
-    const min = Math.min(...vals);
-    const max = Math.max(...vals);
-    const faixa = max - min || 1;
-    const w = 720;
-    const h = 200;
-    const d = pontos
-      .map((p, i) => {
-        const x = (i / (pontos.length - 1)) * w;
-        const y = h - ((p.valor - min) / faixa) * h;
-        return `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`;
-      })
-      .join(" ");
-    return { d, w, h, min, max, primeiro: pontos[0], ultimo: pontos[pontos.length - 1] };
-  }, [pontos]);
-
-  if (erro) {
-    return (
-      <p className="text-sm text-muted-foreground">
-        A série de {rotulo} não pôde ser carregada agora. O número do topo desta página não
-        depende dela.
-      </p>
-    );
-  }
-  if (!svg) {
-    return <p className="text-sm text-muted-foreground">Carregando a série de {rotulo}...</p>;
-  }
-  return (
-    <figure>
-      <svg viewBox={`0 0 ${svg.w} ${svg.h}`} className="h-48 w-full" role="img"
-           aria-label={`Série do ${rotulo} de ${svg.primeiro.data_ref} a ${svg.ultimo.data_ref}`}>
-        <path d={svg.d} fill="none" stroke="currentColor" strokeWidth="2"
-              className="text-emerald-600" />
-      </svg>
-      <figcaption className="mt-2 flex flex-wrap justify-between gap-2 text-xs text-muted-foreground">
-        <span>início da série: {svg.primeiro.data_ref}</span>
-        <span>mínima R$ {fmt(svg.min)} · máxima R$ {fmt(svg.max)}</span>
-        <span>última apuração: {svg.ultimo.data_ref}</span>
-      </figcaption>
-    </figure>
   );
 }
 
@@ -399,21 +342,8 @@ const CotacaoCafePage = () => {
             ponto é uma apuração do {DADOS.fonte}, e dias sem pregão não aparecem porque não
             existiram.
           </p>
-          <div className="mt-8 space-y-8">
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                Arábica
-              </h3>
-              <Grafico commodity="cafe-arabica" rotulo="arábica" />
-            </div>
-            {CONILON ? (
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                  Conilon
-                </h3>
-                <Grafico commodity="cafe-robusta" rotulo="conilon" />
-              </div>
-            ) : null}
+          <div className="mt-8">
+            <HistoricoCotacao opcoes={OPCOES_CAFE} />
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
             As duas séries começam em datas diferentes porque a página da fonte publica apenas

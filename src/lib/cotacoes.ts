@@ -141,6 +141,12 @@ export type ResumoSerie = {
   maximo: number;
   maximo_em: string;
   amplitude_pct: number | null;
+  /** Variacao do ultimo ponto contra o ultimo pregao ate 7 e 30 dias antes, e desde o inicio. */
+  var_7d_pct?: number | null;
+  var_30d_pct?: number | null;
+  var_inicio_pct?: number | null;
+  /** Ultimos pontos [data_ref, valor], so para a minigrafica do painel. */
+  recentes?: [string, number][];
 };
 
 export const RESUMO = resumo as unknown as {
@@ -149,3 +155,35 @@ export const RESUMO = resumo as unknown as {
 };
 
 export const resumoDe = (key: string): ResumoSerie | undefined => RESUMO.series[key];
+
+export type PontoSerie = { data_ref: string; valor: number; var_pct?: number | null };
+
+/** "03/11/2026" ou "08/2026" (serie mensal) vira Date; null se nao der. */
+export function dataDe(ref: string): Date | null {
+  const p = (ref || "").split("/").map(Number);
+  if (p.length === 3) return new Date(Date.UTC(p[2], p[1] - 1, p[0]));
+  if (p.length === 2) return new Date(Date.UTC(p[1], p[0] - 1, 1));
+  return null;
+}
+
+/**
+ * Serie completa de um indicador, buscada do JSON publico DEPOIS da montagem.
+ *
+ * A serie e' um arquivo por ANO: busca o ano atual e o anterior e junta, para que
+ * em janeiro o grafico nao comece do zero. Ano que nao existe (404) e' ignorado;
+ * so falha se nenhum ano vier.
+ */
+export async function carregarSerie(key: string): Promise<PontoSerie[]> {
+  const ano = new Date().getFullYear();
+  const anos = [ano - 1, ano];
+  const partes = await Promise.all(
+    anos.map((a) =>
+      fetch(`/dados/cotacoes/series/${key}-${a}.json`)
+        .then((r) => (r.ok ? r.json() : null))
+        .catch(() => null),
+    ),
+  );
+  const pontos = partes.flatMap((d) => ((d?.pontos as PontoSerie[]) || []));
+  if (!partes.some(Boolean)) throw new Error(`serie ${key} indisponivel`);
+  return pontos.filter((p) => typeof p.valor === "number");
+}
