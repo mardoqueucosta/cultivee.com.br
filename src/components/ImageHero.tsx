@@ -27,6 +27,13 @@ const ImageHero = ({ image, alt, eyebrow, title, subtitle, children, aside, ilus
       className="absolute inset-0 bg-[linear-gradient(180deg,hsl(157_64%_10%/0.55)_0%,hsl(157_64%_10%/0.9)_70%)] md:bg-[linear-gradient(90deg,hsl(157_64%_10%/0.92)_0%,hsl(157_64%_10%/0.7)_45%,hsl(157_64%_10%/0.15)_100%)]"
       aria-hidden="true"
     />
+    {/* Faixa de cima: o menu e' transparente sobre o banner e a foto pode ser clara
+        a direita. Escurece so o alto, sumindo para baixo, para a letra branca do
+        menu ter contraste sem criar emenda entre menu e banner. */}
+    <div
+      className="absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,hsl(157_64%_10%/0.85)_0%,hsl(157_64%_10%/0.55)_45%,hsl(157_64%_10%/0)_100%)]"
+      aria-hidden="true"
+    />
     <div
       className={`relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-14 md:pb-16 ${
         aside ? "grid lg:grid-cols-[1.2fr_1fr] gap-10 items-end" : ""

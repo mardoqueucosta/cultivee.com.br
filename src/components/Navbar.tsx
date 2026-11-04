@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, Leaf, ChevronDown, Camera, Droplets, Sparkles, LayoutGrid } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -63,19 +63,35 @@ const NavLink = ({ item, className, onClick }: { item: NavItem; className: strin
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [rolou, setRolou] = useState(false);
   const location = useLocation();
+
+  // No topo, o menu e' transparente: o banner (que comeca por tras dele) aparece
+  // inteiro e menu + banner leem como uma peca so. Ao rolar, ganha o verde-escuro
+  // solido para continuar legivel sobre o conteudo claro.
+  useEffect(() => {
+    const ver = () => setRolou(window.scrollY > 8);
+    ver();
+    window.addEventListener("scroll", ver, { passive: true });
+    return () => window.removeEventListener("scroll", ver);
+  }, []);
 
   const isActive = (href: string) => {
     if (href === "/") return location.pathname === "/";
     return location.pathname.startsWith(href);
   };
 
+  // Paginas cujo topo e' CLARO (produto e curso): ali o menu transparente, de letra
+  // branca, sumiria. Nelas ele fica sempre solido. Topo novo claro entra aqui.
+  const topoClaro = /^\/(produtos|cursos)\/./.test(location.pathname);
+  const solido = rolou || isOpen || topoClaro;
+
   const agroActive = ["/agro", "/blog", "/cotacoes"].some(isActive);
   const educaActive = ["/educa", "/cursos"].some(isActive);
 
   const topLink = (active: boolean) =>
     `px-3 lg:px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-      active ? "text-primary bg-primary/10" : "text-foreground hover:text-primary hover:bg-primary/5"
+      active ? "text-white bg-white/15" : "text-white/85 hover:text-white hover:bg-white/10"
     }`;
 
   const trigger = (active: boolean) => `flex items-center gap-1.5 ${topLink(active)}`;
@@ -88,7 +104,11 @@ const Navbar = () => {
   const close = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        solido ? "bg-deep shadow-elegant" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -96,7 +116,7 @@ const Navbar = () => {
             <div className="flex items-center justify-center w-10 h-10 bg-gradient-primary rounded-lg shadow-elegant group-hover:shadow-glow transition-shadow duration-300">
               <Leaf className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
+            <span className="text-xl font-bold text-white">
               CULTIVEE
             </span>
           </Link>
@@ -107,7 +127,7 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className={trigger(agroActive)}>
-                  <span className="w-2 h-2 rounded-full bg-agro" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-agro-light" aria-hidden="true" />
                   Agro
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -125,7 +145,7 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className={trigger(educaActive)}>
-                  <span className="w-2 h-2 rounded-full bg-educa" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-educa-light" aria-hidden="true" />
                   Educa
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -197,7 +217,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-              className="p-2 text-foreground hover:text-primary transition-colors duration-300"
+              className="p-2 text-white/85 hover:text-white transition-colors duration-300"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
