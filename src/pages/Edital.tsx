@@ -118,7 +118,7 @@ const EditalPage = () => {
         }
       >
         <a href={ed.linkDiagnostico} target="_blank" rel="noopener" data-origem={`${o}-topo`}
-          onClick={checkout(`${o}-topo`, "consultoria-avulsa", 250)} className={BOTAO_SOL}>
+          onClick={checkout(`${o}-topo`, "consultoria-avulsa", 290)} className={BOTAO_SOL}>
           Agendar meu Diagnóstico de Prontidão
         </a>
         {/* Sem link para a FAPESP no topo (dono, 21/10/2026): o lead fica na página; o link oficial está no texto integral */}
@@ -140,12 +140,12 @@ const EditalPage = () => {
             <div className="rounded-2xl border-2 border-sun/60 bg-sun/10 p-6">
               <div className="text-xs font-bold tracking-[0.14em] uppercase text-deep mb-2">Diagnóstico de Prontidão</div>
               <p className="text-foreground mb-4">
-                1 hora de consultoria (R$ 250, Pix ou cartão em até 12x). Você sai sabendo se o seu projeto cabe neste
+                1 hora de consultoria (R$ 290, Pix ou cartão em até 12x). Você sai sabendo se o seu projeto cabe neste
                 edital, o que está forte e o que falta.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a href={ed.linkDiagnostico} target="_blank" rel="noopener" data-origem={`${o}-preambulo`}
-                  onClick={checkout(`${o}-preambulo`, "consultoria-avulsa", 250)} className={BOTAO_ESCURO}>
+                  onClick={checkout(`${o}-preambulo`, "consultoria-avulsa", 290)} className={BOTAO_ESCURO}>
                   Agendar o diagnóstico <ArrowRight className="w-4 h-4" />
                 </a>
                 <a href={wa} target="_blank" rel="noopener" data-origem={`${o}-whatsapp`} className={BOTAO_BORDA}>
@@ -195,12 +195,12 @@ const EditalPage = () => {
             <div className="rounded-2xl border-2 border-sun bg-card p-6 flex flex-col gap-2 shadow-elegant">
               <span className="self-start px-3 py-1 bg-sun text-deep text-xs font-bold rounded-full">Comece por aqui</span>
               <h3 className="text-xl font-bold text-foreground mt-1">Diagnóstico de Prontidão</h3>
-              <span className="text-3xl font-bold text-deep">R$ 250</span>
+              <span className="text-3xl font-bold text-deep">R$ 290</span>
               <p className="text-muted-foreground flex-1">
                 1 hora de consultoria: leio o seu projeto ou a sua ideia, digo se cabe neste edital e o que falta.
               </p>
               <a href={ed.linkDiagnostico} target="_blank" rel="noopener" data-origem={`${o}-diagnostico`}
-                onClick={checkout(`${o}-diagnostico`, "consultoria-avulsa", 250)} className={`${BOTAO_SOL} mt-2`}>
+                onClick={checkout(`${o}-diagnostico`, "consultoria-avulsa", 290)} className={`${BOTAO_SOL} mt-2`}>
                 Agendar o diagnóstico <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -273,13 +273,13 @@ const EditalPage = () => {
             <div className="text-xs md:text-sm font-bold tracking-[0.14em] uppercase text-sun mb-3">Diagnóstico de Prontidão</div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Seu projeto está pronto para o edital?</h2>
             <p className="text-lg text-white/80 max-w-2xl">
-              Comece pelo Diagnóstico de Prontidão: 1 hora de consultoria (R$ 250) em que eu leio o seu caso e te digo, com
+              Comece pelo Diagnóstico de Prontidão: 1 hora de consultoria (R$ 290) em que eu leio o seu caso e te digo, com
               honestidade, se e como posso ajudar.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
             <a href={ed.linkDiagnostico} target="_blank" rel="noopener" data-origem={`${o}-final`}
-              onClick={checkout(`${o}-final`, "consultoria-avulsa", 250)} className={BOTAO_SOL}>
+              onClick={checkout(`${o}-final`, "consultoria-avulsa", 290)} className={BOTAO_SOL}>
               Agendar meu Diagnóstico de Prontidão
             </a>
             <a href={wa} target="_blank" rel="noopener noreferrer" data-origem={`${o}-whatsapp-final`} className={BOTAO_BORDA_CLARA}>

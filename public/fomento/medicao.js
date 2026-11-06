@@ -82,7 +82,7 @@
     } catch (_) { return false; }
   }
   // Previa (localhost, 127.0.0.1, arquivo aberto do disco) e SEMPRE teste, mesmo sem ?teste=1 (22/10/2026):
-  // antes, a previa local mandava begin_checkout e purchase de verdade ao GA4 (2 compras falsas de R$ 4.900 em 19/10).
+  // antes, a previa local mandava begin_checkout e purchase de verdade ao GA4 (2 compras falsas de R$ 9.800 em 19/10).
   var FORA_DO_SITE = !/(^|\.)cultivee\.com\.br$/i.test(w.location.hostname || '');
   var TESTE = modoTeste() || FORA_DO_SITE;
 
@@ -478,7 +478,7 @@
   // ===== 8c. Venda direta (link do Asaas, desde 19/10/2026) =====
   // InitiateCheckout e o evento de otimizacao da campanha v3: mesmo filtro de robos do Lead
   // (nenhum com webdriver, 1 por sessao a cada 30 min). O Worker confere o plano e poe o valor.
-  var PLANOS = { 'consultoria-avulsa': 250, 'acompanhamento-completo': 2500, 'pipe-fase-1': 4900 };
+  var PLANOS = { 'consultoria-avulsa': 290, 'acompanhamento-completo': 3900, 'pipe-fase-1': 9800 };
   var CHAVE_CHECKOUT = 'cultivee_fomento_checkout_sessao';  // sessionStorage: ultimo InitiateCheckout
   function dadosDoPlano(plano) {
     return { value: PLANOS[plano], currency: 'BRL', content_ids: [plano], content_type: 'product' };
