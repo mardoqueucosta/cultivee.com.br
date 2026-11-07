@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Pagina de links da bio (07/11/2026): um link so para a bio das 5 redes.
+     Estatica e leve, sem o menu do site. noindex: e' porta de entrada das redes,
+     nao pagina para o Google. Cliques medidos no GA4 pelo evento `clique_links`
+     (parametro `botao`), sem contar como lead. Cores = tokens do site (deep, sun, agro). -->
+<title>Cultivee | Links</title>
+<meta name="description" content="A ciência por trás do que você planta e come. Curiosidades do agro, cotações do dia, fomento e cursos da Cultivee.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://cultivee.com.br/links">
+<meta property="og:title" content="Cultivee">
+<meta property="og:description" content="A ciência por trás do que você planta e come.">
+<meta property="og:image" content="https://cultivee.com.br/fomento/img/mardoqueu.jpg">
+<meta property="og:url" content="https://cultivee.com.br/links">
+<meta name="theme-color" content="#0d3a2b">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-42DX5PZB0B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-42DX5PZB0B');
+</script>
+<style>
+:root{
+  --deep:hsl(157 64% 14%);
+  --deep-dark:hsl(157 70% 8%);
+  --sun:hsl(40 77% 60%);
+  --sun-hover:hsl(40 77% 66%);
+  --agro-light:hsl(135 47% 46%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--deep-dark);color:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;
+}
+.topo{position:relative;height:170px;overflow:hidden;background:var(--deep)}
+.topo img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.topo::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,hsl(157 64% 14%/.15) 0%,hsl(157 64% 14%/.55) 55%,var(--deep) 100%)}
+.fundo{background:linear-gradient(180deg,var(--deep) 0%,var(--deep-dark) 70%);padding:0 16px 40px}
+main{max-width:440px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center}
+.foto{position:relative;z-index:1;margin-top:-62px;width:116px;height:116px;border-radius:50%;
+  object-fit:cover;border:4px solid var(--deep);box-shadow:0 0 0 3px var(--sun),0 12px 30px rgba(0,0,0,.35)}
+.marca{display:flex;align-items:center;gap:8px;margin-top:16px}
+.marca svg{width:22px;height:22px;stroke:var(--agro-light)}
+h1{font-family:'Lora',Georgia,serif;font-weight:600;font-size:1.75rem;letter-spacing:.01em}
+.linha{margin-top:6px;font-size:1rem;line-height:1.45;color:rgba(255,255,255,.78);max-width:340px;text-wrap:balance}
+nav{width:100%;margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.botao{
+  display:flex;align-items:center;gap:12px;width:100%;padding:13px 14px;border-radius:18px;text-align:left;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  color:#fff;text-decoration:none;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.botao:hover,.botao:focus-visible{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.28);transform:translateY(-1px)}
+.botao:active{transform:scale(.985)}
+.icone{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(255,255,255,.1);color:var(--sun)}
+.icone svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.texto{flex:1;min-width:0}
+.texto strong{display:block;font-size:1rem;font-weight:700;line-height:1.3}
+.texto span{display:block;margin-top:2px;font-size:.84rem;line-height:1.35;color:rgba(255,255,255,.68)}
+.seta{flex:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;opacity:.55;transition:transform .18s ease,opacity .18s ease}
+.botao:hover .seta{transform:translateX(3px);opacity:.9}
+.botao.destaque{background:var(--sun);border-color:var(--sun);color:var(--deep);padding:16px 14px;
+  box-shadow:0 10px 28px hsl(40 77% 60%/.22)}
+.botao.destaque:hover,.botao.destaque:focus-visible{background:var(--sun-hover);border-color:var(--sun-hover)}
+.botao.destaque .icone{background:var(--deep);color:var(--sun);width:44px;height:44px}
+.botao.destaque .texto strong{font-size:1.08rem}
+.botao.destaque .texto span{color:var(--deep);opacity:.78}
+.botao.destaque .seta{opacity:.8}
+.redes{display:flex;gap:10px;margin-top:32px}
+.redes a{color:rgba(255,255,255,.82);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.16);transition:background .18s ease,color .18s ease}
+.redes a:hover,.redes a:focus-visible{color:var(--deep);background:var(--sun);border-color:var(--sun)}
+.redes svg{width:20px;height:20px;fill:currentColor}
+footer{margin-top:28px;font-size:.8rem;color:rgba(255,255,255,.5)}
+footer a{color:inherit;text-decoration:none}
+footer a:hover{color:#fff}
+a:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
+@media (prefers-reduced-motion:no-preference){
+  .entra{opacity:0;transform:translateY(10px);animation:entra .35s ease both}
+  @keyframes entra{to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<div class="topo"><img src="/links/topo.webp" alt="" width="900" height="502"></div>
+<div class="fundo">
+<main>
+  <img class="foto" src="/fomento/img/mardoqueu.webp" alt="Mardoqueu, da Cultivee" width="116" height="116">
+  <div class="marca">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+    <h1>Cultivee</h1>
+  </div>
+  <p class="linha">A ciência por trás do que você planta e come</p>
+
+  <nav aria-label="Links da Cultivee">
+    <a class="botao destaque entra" style="animation-delay:60ms" href="/fomento" data-botao="fomento">
+      <span class="icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg></span>
+      <span class="texto"><strong>Dinheiro para o seu projeto</strong><span>Consultoria em editais de fomento</span></span>
+      <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+    <a class="botao entra" style="animation-delay:130ms" href="/educa" data-botao="cursos">
+      <span class="icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+      <span class="texto"><strong>Cursos</strong><span>Microverdes, hidroponia e cultivo</span></span>
+      <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+    <a class="botao entra" style="animation-delay:200ms" href="/blog" data-botao="curiosidades">
+      <span class="icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
+      <span class="texto"><strong>Curiosidades do agro</strong><span>Os artigos por trás dos vídeos</span></span>
+      <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+    <a class="botao entra" style="animation-delay:270ms" href="/cotacoes" data-botao="cotacoes">
+      <span class="icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></svg></span>
+      <span class="texto"><strong>Cotações do dia</strong><span>Preços agrícolas, todo dia útil</span></span>
+      <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  </nav>
+
+  <div class="redes">
+    <a href="https://www.instagram.com/cultivee.br" aria-label="Instagram" data-botao="rede-instagram" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2zm5.1-9.3a1.1 1.1 0 1 1 0 2.3 1.1 1.1 0 0 1 0-2.3z"/></svg></a>
+    <a href="https://www.youtube.com/@cultivee_br" aria-label="YouTube" data-botao="rede-youtube" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+    <a href="https://www.tiktok.com/@cultivee.br" aria-label="TikTok" data-botao="rede-tiktok" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.8V9.1a6.3 6.3 0 1 0 5.4 6.3V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7h-1z"/></svg></a>
+    <a href="https://www.facebook.com/cultivee.brasil" aria-label="Facebook" data-botao="rede-facebook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></a>
+    <a href="https://www.linkedin.com/company/cultivee-br" aria-label="LinkedIn" data-botao="rede-linkedin" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zm1.8 13.1H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
+  </div>
+
+  <footer><a href="/">cultivee.com.br</a></footer>
+</main>
+</div>
+<script>
+// Um ouvinte so: cada botao e cada rede manda `clique_links` com `botao` ao GA4.
+// transport_type beacon: o evento sai mesmo com a pagina indo embora no clique.
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[data-botao]');
+  if (!a || typeof gtag !== 'function') return;
+  gtag('event', 'clique_links', {
+    botao: a.getAttribute('data-botao'),
+    destino: a.getAttribute('href'),
+    transport_type: 'beacon'
+  });
+}, true);
+</script>
+</body>
+</html>
