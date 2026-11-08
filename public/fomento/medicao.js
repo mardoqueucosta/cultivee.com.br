@@ -478,7 +478,8 @@
   // ===== 8c. Venda direta (link do Asaas, desde 19/10/2026) =====
   // InitiateCheckout e o evento de otimizacao da campanha v3: mesmo filtro de robos do Lead
   // (nenhum com webdriver, 1 por sessao a cada 30 min). O Worker confere o plano e poe o valor.
-  var PLANOS = { 'consultoria-avulsa': 290, 'acompanhamento-completo': 3900, 'pipe-fase-1': 9800 };
+  // 08/11/2026: o curso online PIPE Fase 1 (R$ 497) entrou à venda (link do Asaas lchxklupakys9t0e)
+  var PLANOS = { 'consultoria-avulsa': 290, 'acompanhamento-completo': 3900, 'pipe-fase-1': 9800, 'curso-pipe-fase-1': 497 };
   var CHAVE_CHECKOUT = 'cultivee_fomento_checkout_sessao';  // sessionStorage: ultimo InitiateCheckout
   function dadosDoPlano(plano) {
     return { value: PLANOS[plano], currency: 'BRL', content_ids: [plano], content_type: 'product' };
