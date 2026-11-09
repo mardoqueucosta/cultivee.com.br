@@ -16,8 +16,12 @@
  */
 (function () {
   var d = document, w = window;
-  var vsl = d.querySelector('.vsl[data-yt]');
-  if (!vsl) return;
+  // Mais de um player por pagina (09/11/2026: a /fomento/curso-pipe tem a aula de amostra e a VSL do PIPE):
+  // cada bloco .vsl[data-yt] ganha o seu player, a sua medicao e os seus cartoes. A API do YouTube carrega 1 vez.
+  var blocos = d.querySelectorAll('.vsl[data-yt]');
+  for (var i = 0; i < blocos.length; i++) iniciar(blocos[i], i);
+
+  function iniciar(vsl, idx) {
 
   function evento(nome, extra) {
     var p = { pagina: vsl.dataset.pagina, video: vsl.dataset.video || vsl.dataset.yt };
@@ -89,6 +93,8 @@
     if (e.data === S.PLAYING) {
       clearTimeout(tPausa);
       mostra(pausa, false); mostra(fim, false);
+      // com dois videos na pagina, tocar um pausa o outro
+      (w.__cvPlayers || []).forEach(function (o) { if (o !== player && o.pauseVideo && o.getPlayerState && o.getPlayerState() === S.PLAYING) o.pauseVideo(); });
       if (!jaTocou) { jaTocou = true; evento('vsl_play', {}); }
       if (!relogio) relogio = setInterval(conferirProgresso, 1000);
     } else if (e.data === S.PAUSED) {
@@ -115,6 +121,8 @@
     if (w.YT && w.YT.Player) return pronto();
     var antes = w.onYouTubeIframeAPIReady;
     w.onYouTubeIframeAPIReady = function () { if (antes) antes(); pronto(); };
+    if (w.__cvYtPedido) return;   // outro player ja pediu a API
+    w.__cvYtPedido = true;
     var s = d.createElement('script');
     s.src = 'https://www.youtube.com/iframe_api';
     s.async = true;
@@ -126,7 +134,7 @@
     vsl.classList.add('carregando');
     carregarApi(function () {
       var alvo = el('div');
-      alvo.id = 'vsl-player';   // YT.get('vsl-player') no console, para conferir
+      alvo.id = idx ? 'vsl-player-' + idx : 'vsl-player';   // YT.get('vsl-player') no console, para conferir
       vsl.replaceChildren(alvo, pausa, fim);
       player = new w.YT.Player(alvo, {
         host: 'https://www.youtube-nocookie.com',
@@ -134,6 +142,8 @@
         playerVars: { autoplay: 1, rel: 0, playsinline: 1, modestbranding: 1 },
         events: { onStateChange: aoMudar }
       });
+      (w.__cvPlayers = w.__cvPlayers || []).push(player);
     });
   }, { once: true });
+  }
 })();

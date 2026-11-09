@@ -52,16 +52,19 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .amostra-video{position:relative;border-radius:14px;overflow:hidden;background:#0b2a1f;aspect-ratio:16/9;box-shadow:var(--shadow)}
   .amostra-video img{width:100%;height:100%;object-fit:cover;display:block}
   @media(max-width:860px){.amostra{grid-template-columns:1fr}}
-  .modulos{display:grid;gap:16px;margin-top:1.8rem}
-  .mod{display:grid;grid-template-columns:220px 1fr;gap:22px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);align-items:start}
-  .mod img{width:100%;height:auto;border-radius:10px;display:block}
-  .mod-n{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-700)}
-  .mod h3{font-size:1.2rem;margin:4px 0 8px}
-  ul.aulas{list-style:none;display:grid;gap:4px}
-  ul.aulas li{display:flex;justify-content:space-between;gap:14px;font-size:.95rem;padding:6px 0;border-bottom:1px dashed var(--line)}
-  ul.aulas li:last-child{border-bottom:0}
-  ul.aulas .min{color:var(--muted);white-space:nowrap;font-size:.88rem}
-  @media(max-width:700px){.mod{grid-template-columns:1fr}}
+  /* modulos (09/11/2026, dono: "de destaque as imagens e nao ao texto"): a capa do modulo em cima, grande, e as
+     aulas em letra pequena embaixo; 4 por linha no computador, 2 no tablet, 1 no celular */
+  .modulos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:18px;margin-top:1.8rem}
+  .mod{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+  .mod:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(13,77,58,.14)}
+  .mod img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+  .mod-txt{flex:1;padding:12px 16px 14px}
+  .mod-n{display:block;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--green-700);margin-bottom:6px}
+  ul.aulas{list-style:none;display:grid;gap:3px}
+  ul.aulas li{position:relative;padding-left:12px;font-size:.84rem;line-height:1.4;color:var(--muted)}
+  ul.aulas li::before{content:"";position:absolute;left:0;top:.58em;width:5px;height:5px;border-radius:50%;background:var(--green-500)}
+  @media(max-width:1000px){.modulos{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.modulos{grid-template-columns:1fr;grid-auto-rows:auto}}
   .pasta{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:1.6rem}
   .pasta div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
   .pasta b{display:block;font-family:'Lora',serif;color:var(--green-700);font-size:1.12rem;margin-bottom:4px}
@@ -76,6 +79,8 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .pq .nao li svg{color:#b45309}
   .pq a{color:var(--green-700);text-decoration:underline;text-underline-offset:3px}
   @media(max-width:760px){.pq{grid-template-columns:1fr}}
+  .outros{text-align:center;font-size:.93rem;color:var(--muted);margin-top:1.1rem}
+  .outros a{color:var(--green-700);text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -191,7 +196,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
           <span class="dur" aria-hidden="true">▶ 4:34</span>
         </button>
       </div>
-      <script src="/fomento/vsl.js?v=2026110902" defer></script>
+      <script src="/fomento/vsl.js?v=2026110903" defer></script>
       <div>
         <p style="font-size:1.05rem;color:var(--ink)">Na aula 1 eu mostro como o curso está organizado, onde fica cada material e como usar a pasta-modelo do começo ao fim.</p>
         <p class="muted" style="margin-top:.8rem">Todas as aulas seguem o mesmo jeito: a explicação, a tela real do SAGe ou o modelo aberto, e o que conferir antes de seguir.</p>
@@ -201,69 +206,102 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 </section>
 
 <!-- CONTEUDO -->
-<section class="sec" id="conteudo-curso">
+<section class="sec" id="conteudo-curso" style="background:var(--bg)">
   <div class="wrap">
     <span class="eyebrow">O que tem no curso</span>
     <h2>7 módulos, 19 aulas, na ordem da submissão.</h2>
     <p class="lead muted" style="margin-top:1rem;max-width:760px">Os documentos da empresa correm em paralelo à escrita, como na vida real. Cada aula traz os materiais da etapa para ler ou baixar.</p>
     <div class="modulos">
       <div class="mod">
-        <img src="/fomento/img/curso/modulo-01.webp" width="480" height="270" alt="Módulo 01: Boas-vindas" decoding="async">
+        <img src="/fomento/img/curso/modulo-01.webp" width="800" height="450" alt="Módulo 01: Boas-vindas" decoding="async">
         <div class="mod-txt">
           <span class="mod-n">Módulo 01 · 1 aula</span>
-          <h3>Boas-vindas</h3>
           <ul class="aulas"><li><span>Boas-vindas e como o curso funciona</span></li></ul>
         </div>
       </div>
       <div class="mod">
-        <img src="/fomento/img/curso/modulo-02.webp" width="480" height="270" alt="Módulo 02: Pré-requisitos" decoding="async">
+        <img src="/fomento/img/curso/modulo-02.webp" width="800" height="450" alt="Módulo 02: Pré-requisitos" decoding="async">
         <div class="mod-txt">
           <span class="mod-n">Módulo 02 · 4 aulas</span>
-          <h3>Pré-requisitos</h3>
           <ul class="aulas"><li><span>Checklist de elegibilidade</span></li><li><span>O Pesquisador Responsável tem conta no SAGe?</span></li><li><span>Empresa já aberta?</span></li><li><span>Criar a proposta no SAGe</span></li></ul>
         </div>
       </div>
       <div class="mod">
-        <img src="/fomento/img/curso/modulo-03.webp" width="480" height="270" alt="Módulo 03: Escrever o projeto" decoding="async">
+        <img src="/fomento/img/curso/modulo-03.webp" width="800" height="450" alt="Módulo 03: Escrever o projeto" decoding="async">
         <div class="mod-txt">
           <span class="mod-n">Módulo 03 · 6 aulas</span>
-          <h3>Escrever o projeto</h3>
           <ul class="aulas"><li><span>Como o assessor avalia o projeto</span></li><li><span>Projeto</span></li><li><span>Equipe de pesquisadores</span></li><li><span>Bolsistas</span></li><li><span>Orçamento</span></li><li><span>Tudo fechado?</span></li></ul>
         </div>
       </div>
       <div class="mod">
-        <img src="/fomento/img/curso/modulo-04.webp" width="480" height="270" alt="Módulo 04: Documentos da empresa (em paralelo)" decoding="async">
+        <img src="/fomento/img/curso/modulo-04.webp" width="800" height="450" alt="Módulo 04: Documentos da empresa (em paralelo)" decoding="async">
         <div class="mod-txt">
           <span class="mod-n">Módulo 04 · 1 aula</span>
-          <h3>Documentos da empresa (em paralelo)</h3>
           <ul class="aulas"><li><span>Docs da empresa</span></li></ul>
         </div>
       </div>
       <div class="mod">
-        <img src="/fomento/img/curso/modulo-05.webp" width="480" height="270" alt="Módulo 05: Preencher no SAGe" decoding="async">
+        <img src="/fomento/img/curso/modulo-05.webp" width="800" height="450" alt="Módulo 05: Preencher no SAGe" decoding="async">
         <div class="mod-txt">
           <span class="mod-n">Módulo 05 · 5 aulas</span>
-          <h3>Preencher no SAGe</h3>
           <ul class="aulas"><li><span>Identificação da proposta (Aba 1)</span></li><li><span>Dados gerais do projeto (Aba 2)</span></li><li><span>Orçamento R$ / US$ (Aba 3)</span></li><li><span>Documentos (Aba 4)</span></li><li><span>Observações e campos adicionais (Abas 5 e 6)</span></li></ul>
         </div>
       </div>
       <div class="mod">
-        <img src="/fomento/img/curso/modulo-06.webp" width="480" height="270" alt="Módulo 06: Conferir e submeter" decoding="async">
+        <img src="/fomento/img/curso/modulo-06.webp" width="800" height="450" alt="Módulo 06: Conferir e submeter" decoding="async">
         <div class="mod-txt">
           <span class="mod-n">Módulo 06 · 1 aula</span>
-          <h3>Conferir e submeter</h3>
           <ul class="aulas"><li><span>Validar, visualizar e submeter</span></li></ul>
         </div>
       </div>
       <div class="mod">
-        <img src="/fomento/img/curso/modulo-07.webp" width="480" height="270" alt="Módulo 07: Depois da submissão" decoding="async">
+        <img src="/fomento/img/curso/modulo-07.webp" width="800" height="450" alt="Módulo 07: Depois da submissão" decoding="async">
         <div class="mod-txt">
           <span class="mod-n">Módulo 07 · 1 aula</span>
-          <h3>Depois da submissão</h3>
           <ul class="aulas"><li><span>Acompanhar a proposta depois da submissão</span></li></ul>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- VSL (09/11/2026): primeiro a vsl-pipe-completa; o dono trocou pela vsl-recurso-curta v7 da /fomento/recurso
+     (YouTube nao listado Tb9NCeKO-5w, 6:50), com o cartao final e o da pausa vendendo o CURSO e capa propria ("comprar"). A fala do fecho
+     ainda cita as 4 formas de apoio e sugere comecar pela consultoria por hora. -->
+<section class="sec" id="por-que" style="background:#fff">
+  <div class="wrap">
+    <span class="eyebrow">Antes de começar</span>
+    <h2>O recurso existe. Você cumpre os requisitos?</h2>
+    <div class="amostra">
+      <div class="vsl" style="margin-top:0" data-yt="Tb9NCeKO-5w" data-pagina="curso-pipe" data-video="vsl-recurso-curta-v7"
+           data-fim-titulo="Cumpre os requisitos? O passo a passo da submissão está no curso." data-cta-href="https://www.asaas.com/c/lchxklupakys9t0e" data-cta-texto="Comprar o curso"
+           data-cta-checkout="curso-pipe-fase-1" data-cta-valor="497">
+        <button type="button" aria-label="Assistir ao vídeo (6:50)">
+          <img src="/fomento/img/vsl-recurso-curta-capa-curso.webp" width="960" height="540" alt="Mardoqueu Martins da Costa explica os requisitos do PIPE-FAPESP" decoding="async">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="dur" aria-hidden="true">▶ 6:50</span>
+        </button>
+      </div>
+      <div>
+        <p style="font-size:1.05rem;color:var(--ink)">Em 7 minutos: quanto o PIPE financia sem devolver, quem pode pedir e os dois jeitos de escrever a proposta que mais tiram pontos.</p>
+        <p class="muted" style="margin-top:.8rem">No curso, cada etapa, da elegibilidade à submissão, vira aula, modelo e exemplo pronto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FASES DO PIPE (09/11/2026, pedido do dono: destaque para as fases seguintes) -->
+<section class="sec" id="fases" style="background:var(--bg)">
+  <div class="wrap">
+    <span class="eyebrow">O PIPE não termina na Fase 1</span>
+    <h2>A Fase 1 abre a porta para valores maiores.</h2>
+    <p class="lead muted" style="margin-top:1rem">Quem conclui a Fase 1 pode seguir no programa, sempre sem devolver o recurso.</p>
+    <div class="vgrid">
+      <div class="vcard"><div class="lbl">PIPE Fase 1 · viabilidade técnica</div><div class="val">até R$ 300 mil</div><div class="dur">por até 9 meses</div></div>
+      <div class="vcard"><div class="lbl">PIPE Fase 2 · desenvolvimento da pesquisa</div><div class="val">até R$ 1,5 milhão</div><div class="dur">por até 24 meses, depois da Fase 1 ou direto</div></div>
+      <div class="vcard"><div class="lbl">PIPE Fase 3 · chegada ao mercado</div><div class="val">até R$ 2 milhões</div><div class="dur">por até 24 meses, em chamada específica (a última, de 2024, foi só da FAPESP; outras foram com a Finep)</div></div>
+    </div>
+    <p class="fonte" style="font-size:.85rem;color:var(--muted);margin-top:.9rem">Normas do PIPE-FAPESP de 15/09/2026 e chamada PIPE Fase 3 de 2024; todos os valores sem devolver. Há ainda o PIPE Invest, de R$ 500 mil a R$ 1,5 milhão, para a empresa que recebe investimento privado.</p>
   </div>
 </section>
 
@@ -282,7 +320,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
 </section>
 
 <!-- PARA QUEM -->
-<section class="sec" id="para-quem">
+<section class="sec" id="para-quem" style="background:var(--bg)">
   <div class="wrap">
     <span class="eyebrow">Para quem é</span>
     <h2>O curso serve se você quer escrever a proposta.</h2>
@@ -337,8 +375,50 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   </div>
 </section>
 
+<!-- PRECOS -->
+<section class="sec offer" id="precos" style="background:var(--bg)">
+  <div class="wrap narrow">
+    <span class="eyebrow">Quanto custa</span>
+    <h2>Preço fixo, combinado antes. Nunca percentual sobre o recurso.</h2>
+    <div class="pricing">
+      <div class="pcard">
+        <span class="pk-tag">Comece por aqui</span>
+        <div class="pk-lbl">Consultoria por hora</div>
+        <div class="pk-val">R$ 290<span> / 1 hora</span></div>
+        <p class="pk-desc">Leio o seu projeto ou a sua ideia pelos critérios do PIPE e digo o que está forte, o que falta e qual o próximo passo.</p>
+        <div class="pk-cta"><a data-origem="curso-card-250" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar a consultoria <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="pcard curso feat">
+        <span class="pk-tag">Acesso imediato</span>
+        <div class="pk-lbl">Curso online PIPE Fase 1</div>
+        <div class="pk-val">R$ 497</div>
+        <p class="pk-desc">Para quem quer escrever sozinho, com método: da ideia à submissão no SAGe, com a pasta-modelo da submissão e a norma da FAPESP.</p>
+        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Acesso por 12 meses. Pix, boleto ou cartão em até 12x. Se não for para você, cancele em até 7 dias e receba o valor de volta.</p>
+        <div class="pk-cta"><a data-origem="curso-card-curso" data-checkout="curso-pipe-fase-1" data-valor="497" href="https://www.asaas.com/c/lchxklupakys9t0e" target="_blank" rel="noopener">Comprar o curso <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="pcard">
+        <div class="pk-lbl">Acompanhamento</div>
+        <div class="pk-val" style="font-size:1.3rem;white-space:normal;line-height:1.25">Valor combinado na conversa</div>
+        <p class="pk-desc">Você escreve, eu acompanho. Do diagnóstico à submissão no SAGe, leio cada parte da proposta pelos critérios do PIPE e aponto o que ajustar, em encontros 1:1 e com dúvidas por WhatsApp, sem contador de horas.</p>
+        <div class="pk-cta"><a data-origem="curso-card-acomp" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu%21%20Quero%20saber%20como%20funciona%20o%20Acompanhamento%20%28PIPE%20Fase%201%29%20para%20o%20meu%20projeto." target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="pcard">
+        <div class="pk-lbl">Acompanhamento com escrita</div>
+        <div class="pk-val" style="font-size:1.3rem;white-space:normal;line-height:1.25">Valor combinado na conversa</div>
+        <p class="pk-desc">Envolvimento maior, que pode chegar à escrita. Construímos a proposta juntos, do resumo ao orçamento: projeto, plano de trabalho, equipe, bolsas e documentos, até a submissão no SAGe, sem contador de horas.</p>
+        <div class="pk-cta"><a data-origem="curso-card-4900" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu%21%20Quero%20saber%20como%20funciona%20o%20Acompanhamento%20com%20escrita%20%28PIPE%20Fase%201%29%20para%20o%20meu%20projeto." target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+    <div class="guarantee" style="display:flex;gap:13px;align-items:flex-start;background:var(--green-50);border:1px solid var(--green-200);border-radius:14px;padding:16px 20px;margin-top:1.3rem">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex:none;width:24px;height:24px;color:var(--green-600);margin-top:2px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <p style="margin:0;font-size:.97rem;color:var(--body)"><b style="color:var(--green-800)">Garantia sobre o meu trabalho</b>, nunca sobre a decisão da FAPESP: se na primeira hora você sair sem um diagnóstico claro do seu projeto, essa hora fica por minha conta.</p>
+    </div>
+    <p class="outros">Vai submeter a outro edital (Centelha, CNPq, bolsas)? <a href="/fomento">Veja os outros planos</a>.</p>
+  </div>
+</section>
+
 <!-- FAQ -->
-<section class="sec" id="faq">
+<section class="sec" id="faq" style="background:#fff">
   <div class="wrap narrow">
     <span class="eyebrow">Perguntas frequentes</span>
     <h2>Dúvidas sobre o curso.</h2>
