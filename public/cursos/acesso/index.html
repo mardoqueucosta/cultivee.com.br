@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <!-- Retorno do Asaas depois do Pix ou do cartão (09/11/2026): o link de pagamento do curso manda o aluno para cá
      (o Asaas só aceita endereço do domínio cadastrado na conta, www.cultivee.com.br) e esta página leva para a página
-     de acesso da plataforma, onde ele cria a senha e entra no curso. Ver moodle-cultivee/public/acesso.php. -->
+     de acesso da plataforma, onde ele cria a senha e entra no curso. Ver moodle-cultivee/public/acesso.php.
+     Medição (09/11/2026, dono: "pode fazer"): antes de sair, registra a COMPRA do curso (GA4 purchase + Meta Purchase
+     pelo Pixel e pelo Worker /capi, plano curso-pipe-fase-1, R$ 497), uma vez por navegador a cada 24 h, como o
+     /fomento/pagamento-confirmado faz com a consultoria. Espera o gtag carregar (no máximo 3 s) para o evento sair
+     de verdade. Boleto não volta para cá: essa compra fica sem registro. -->
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Pagamento confirmado | Cultivee Educa</title>
-<meta http-equiv="refresh" content="0; url=https://cursos.cultivee.com.br/acesso?pago=1">
-<script>location.replace('https://cursos.cultivee.com.br/acesso?pago=1');</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://cursos.cultivee.com.br/acesso?pago=1"></noscript>
+<script src="/fomento/medicao.js"></script>
 <style>body{font-family:system-ui,sans-serif;background:#f4f7f4;color:#0D3B29;display:grid;place-items:center;min-height:100vh;margin:0;padding:16px;text-align:center}a{color:#1d6b42}</style>
 </head>
 <body>
 <p>Pagamento confirmado. Levando você para criar sua senha…<br><a href="https://cursos.cultivee.com.br/acesso?pago=1">Clique aqui se não abrir sozinho</a></p>
+<script>
+(function () {
+  var DESTINO = 'https://cursos.cultivee.com.br/acesso?pago=1';
+  var PLANO = 'curso-pipe-fase-1', NOME = 'Curso online PIPE-FAPESP Fase 1', VALOR = 497;
+  var saiu = false;
+  function sair() { if (saiu) return; saiu = true; location.replace(DESTINO); }
+  setTimeout(sair, 4500);   // trava: nunca segura o aluno mais que isso
+  var M = window.cvMedicao;
+  if (!M) { sair(); return; }
+  var k = 'cultivee_fomento_compra_' + PLANO, agora = Date.now();
+  // em modo teste (?teste=1) o evento sai marcado (debug_mode no GA4, teste no Worker, sem Meta) e repete sem limite
+  if (!M.teste) {
+    try { var antes = Number(localStorage.getItem(k) || 0); if (agora - antes < 864e5) { sair(); return; } localStorage.setItem(k, String(agora)); } catch (_) {}
+  }
+  // espera o gtag.js carregar: evento empurrado antes disso some quando a página muda
+  var t0 = Date.now();
+  (function quandoPronto() {
+    if (window.google_tag_manager || Date.now() - t0 > 3000) {
+      try {
+        M.evento('purchase', { currency: 'BRL', value: VALOR, transaction_id: PLANO + '-' + agora,
+          items: [{ item_id: PLANO, item_name: NOME, item_category: 'curso', price: VALOR, quantity: 1 }] });
+        if (M.compra) M.compra(PLANO);
+      } catch (_) {}
+      setTimeout(sair, 900);
+    } else setTimeout(quandoPronto, 150);
+  })();
+})();
+</script>
 </body>
 </html>
