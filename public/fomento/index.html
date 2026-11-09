@@ -6,15 +6,15 @@
 <!--
   ===== FONTE DA VERDADE (atualize aqui e replique com find-replace global) =====
   WhatsApp ... 5519991644181   (todos os links a[href*="wa.me"] + rodapé)
-  Precos ..... (desde 2026-11-06; antes R$ 250/h, R$ 2.500 e R$ 4.900) R$ 290/h | curso online R$ 497 (desde 2026-10-18) | R$ 3.900 (bolsas/auxilios/Centelha) | R$ 9.800 (PIPE Fase 1), desde 2026-07-03 (R$ 9.800 do antigo PIPE F2/Finep/EMBRAPII retirado em 2026-10-19: moodle-cultivee/versoes/2026-10-19-plano-pipe-fase-2)
+  Precos ..... (desde 2026-11-06; antes R$ 250/h, R$ 2.500 e R$ 4.900) R$ 290/h | curso online R$ 497 (desde 2026-10-18) | acompanhamentos (bolsas/auxilios/Centelha e PIPE Fase 1) SEM PRECO na pagina desde 2026-11-09, botao leva ao WhatsApp (antes R$ 3.900 e R$ 9.800, desde 2026-07-03) (R$ 9.800 do antigo PIPE F2/Finep/EMBRAPII retirado em 2026-10-19: moodle-cultivee/versoes/2026-10-19-plano-pipe-fase-2)
                -> bloco .pricing (linhas de ROI nos cards) e FAQ de pagamento
   Prova ...... 18 financiamentos | 7 fontes | dezenas de projetos avaliados
                -> hero (cred-card + checks) e secao de autoridade (#guia)
-  Oferta ..... "Diagnostico de Prontidao" = consultoria PAGA de 1 hora (R$ 290, link do Asaas d0bs53iy8d2f5467) desde 2026-10-19;
+  Oferta ..... "Consultoria por hora" (ate 09/11/2026 "Diagnostico de Prontidao", trocado para casar com a VSL v7) = consultoria PAGA de 1 hora (R$ 290, link do Asaas d0bs53iy8d2f5467) desde 2026-10-19;
                antes era conversa gratuita de 20-30 min (copia: moodle-cultivee/versoes/2026-10-19-diagnostico-gratuito)
                -> hero (cta-note), secao VALORES (cta), pricing-note, CTA final, mensagens wa.me
   Tetos ...... Centelha 128 mil | Universal 250 mil | PIPE F1 300 mil | Regular 600 mil | PIPE F2 1,5 mi | Finep 5 mi
-               -> hero (H1 "128 mil a 5 milhoes"), secao VALORES (vgrid) e cards do seletor (#caminhos)
+               -> hero (H1 "128 mil a 10 milhoes", desde 09/11/2026: teto Finep R$ 10 mi; a VSL A-FOMENTO ainda diz 5 mi), secao VALORES (vgrid) e cards do seletor (#caminhos)
   Links ...... Lattes 7819717440359474 | ORCID 0000-0002-4395-3069 (secao AUTORIDADE + rodape)
   Reducao .... 2026-07-03: pagina enxugada de ~3.650 para ~2.400 palavras (fusoes: caminhos->seletor,
                transformacao->dor, prova->autoridade; cortes: stack-card, ROI da VALORES, prosa da urgencia)
@@ -23,8 +23,8 @@
   ============================================================================
 -->
 <title>Consultoria PIPE, Centelha, Finep, CNPq | Leitura antes dos pareceristas</title>
-<meta name="description" content="De R$ 128 mil a R$ 5 milhões não reembolsáveis. Consultoria de quem já avaliou dezenas de projetos e participou de 18 financiamentos aprovados. Diagnóstico de Prontidão em 1 hora de consultoria.">
-<meta property="og:title" content="O dinheiro para o seu projeto existe: de R$ 128 mil a R$ 5 milhões">
+<meta name="description" content="De R$ 128 mil a R$ 10 milhões não reembolsáveis. Consultoria de quem já avaliou dezenas de projetos e participou de 18 financiamentos aprovados. Consultoria por hora: 1 hora, R$ 290.">
+<meta property="og:title" content="O dinheiro para o seu projeto existe: de R$ 128 mil a R$ 10 milhões">
 <meta property="og:description" content="Leitura crítica de quem já avaliou dezenas de projetos e participou de 18 financiamentos aprovados. Consultoria individual: PIPE, Centelha, Finep, FAPESP, CNPq.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
@@ -35,7 +35,7 @@
 <meta property="og:image:height" content="1122">
 <meta property="og:image:alt" content="Mardoqueu Martins da Costa, mentor de captação de fomento">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="O dinheiro para a sua pesquisa existe: de R$ 128 mil a R$ 5 milhões">
+<meta name="twitter:title" content="O dinheiro para a sua pesquisa existe: de R$ 128 mil a R$ 10 milhões">
 <meta name="twitter:description" content="Leitura crítica de quem já avaliou dezenas de projetos e participou de 18 financiamentos aprovados. Consultoria individual: FAPESP, CNPq, CAPES, PIPE, Finep.">
 <meta name="twitter:image" content="https://cultivee.com.br/fomento/img/og-fomento-v2.jpg">
 <meta name="theme-color" content="#0f6e56">
@@ -276,7 +276,15 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   .cc-tag{align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--green-700);background:var(--green-100);padding:4px 10px;border-radius:999px}
   .chooser-card b{font-family:'Lora',serif;color:var(--ink);font-size:1.1rem;margin-top:4px}
   .cc-desc{font-size:.92rem;color:var(--muted)}
-  .cc-cta{margin-top:auto;align-self:flex-start;padding:11px 18px;font-size:.9rem}
+  .cc-cta{align-self:flex-start;padding:11px 18px;font-size:.9rem}
+  /* cards de caminho (09/11/2026): cada card ocupa 5 linhas da grade (subgrid), entao etiqueta, titulo, texto,
+     botao e linha secundaria ficam na MESMA altura nos 3 cards, mesmo quando so o do meio tem a linha secundaria */
+  @media(min-width:761px){@supports (grid-template-rows:subgrid){
+    .chooser-grid{grid-template-rows:repeat(5,auto);row-gap:0}
+    .chooser-card{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:7px;align-content:start}
+    .chooser-card>*{justify-self:start}
+    .chooser-card .cc-cta{margin-top:10px}
+  }}
   @media(max-width:760px){.chooser-grid{grid-template-columns:1fr}}
   .skip{position:fixed;left:8px;top:-60px;z-index:100;background:var(--green-700);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;font-weight:600;transition:top .15s}
   .skip:focus{top:8px}
@@ -343,7 +351,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       <a href="#guia">Com quem contar</a>
       <a href="#metodo">Método</a>
       <a href="#faq">Dúvidas</a>
-      <a class="btn btn-primary" data-origem="header" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Quero conversar</a>
+      <a class="btn btn-primary" data-origem="header" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20uma%20consultoria%20para%20o%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Quero conversar</a>
     </nav>
   </div>
 </header>
@@ -355,7 +363,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   <div class="wrap hero-grid" style="padding-top:clamp(2rem,4vw,3rem)">
     <div>
       <span class="eyebrow">Consultoria individual · PIPE · Centelha · Finep · FAPESP · CNPq</span>
-      <h1>O dinheiro para o seu projeto existe: <span class="hl">de R$ 128 mil a R$ 5 milhões, não reembolsáveis.</span></h1>
+      <h1>O dinheiro para o seu projeto existe: <span class="hl">de R$ 128 mil a R$ 10 milhões, não reembolsáveis.</span></h1>
       <p class="sub">Submeta sabendo onde o seu projeto está forte e onde está frágil: a leitura crítica de quem já avaliou projetos e já foi aprovado, com tempo de corrigir antes de você enviar.</p>
       <ul class="checks" style="margin-top:1.5rem">
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Para quem tem a tecnologia e quer levá-la a PIPE, Centelha ou Finep, mesmo sem empresa montada.</li>
@@ -391,7 +399,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         @media(max-width:520px){.vsl-pausa .vsl-cta{display:none}}
       </style>
       <div class="vsl" data-yt="9_ZjQcTkxyQ" data-pagina="fomento" data-video="vsl-fomento-completa"
-           data-cta-href="https://www.asaas.com/c/d0bs53iy8d2f5467" data-cta-texto="Agendar meu Diagnóstico de Prontidão"
+           data-cta-href="https://www.asaas.com/c/d0bs53iy8d2f5467" data-cta-texto="Agendar minha consultoria por hora"
            data-cta-checkout="consultoria-avulsa" data-cta-valor="290">
         <button type="button" aria-label="Assistir ao vídeo (12:38)">
           <img src="/fomento/img/vsl-fomento-completa-capa-v2.webp" width="960" height="540" alt="Mardoqueu Martins da Costa explica o caminho para a sua proposta" decoding="async">
@@ -399,11 +407,11 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
           <span class="dur" aria-hidden="true">▶ 12:38</span>
         </button>
       </div>
-      <script src="/fomento/vsl.js?v=2026102701" defer></script>
+      <script src="/fomento/vsl.js?v=2026110901" defer></script>
       <div class="hero-cta">
-        <a class="btn btn-primary" data-origem="hero-diagnostico" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar meu Diagnóstico de Prontidão <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-primary" data-origem="hero-diagnostico" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar minha consultoria por hora <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <p class="cta-note">1 hora de consultoria por R$ 290 (Pix ou cartão em até 12x): você sai sabendo qual edital cabe e o que falta no projeto. 🔒 O que você me contar sobre o seu projeto é tratado em sigilo.</p>
-        <a class="wa-direct" data-origem="hero-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a>
+        <a class="wa-direct" data-origem="hero-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20uma%20consultoria%20para%20o%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a>
       </div>
     </div>
     <aside class="cred-card">
@@ -450,10 +458,10 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       <div class="vcard"><div class="lbl">PIPE-FAPESP · Fase 2</div><div class="val">até R$ 1,5 milhão</div><div class="dur">por até 24 meses</div></div>
       <div class="vcard"><div class="lbl">Auxílio à Pesquisa Regular · FAPESP</div><div class="val">até R$ 600 mil</div><div class="dur">por até 36 meses</div></div>
       <div class="vcard"><div class="lbl">Chamada Universal · CNPq</div><div class="val">até R$ 250 mil</div><div class="dur">por faixa (A, B ou C)</div></div>
-      <div class="vcard"><div class="lbl">Finep Mais Inovação · subvenção</div><div class="val">até R$ 5 milhões</div><div class="dur">por projeto (Subvenção Econômica Regional)</div></div>
+      <div class="vcard"><div class="lbl">Finep Mais Inovação · subvenção</div><div class="val">até R$ 10 milhões</div><div class="dur">por projeto (Subvenção Econômica Regional)</div></div>
     </div>
     <div class="inline-cta" style="text-align:center">
-      <a class="btn btn-primary" data-origem="valores" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar o Diagnóstico de Prontidão <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-primary" data-origem="valores" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar a consultoria por hora <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p class="cta-note">1 hora de consultoria, R$ 290. Você sai sabendo qual edital cabe no seu projeto e se dá tempo para a próxima janela.</p>
     </div>
     <p class="muted" style="font-size:.86rem;margin-top:1.4rem;text-align:center">Tetos por projeto conforme as normas vigentes de cada edital (2026). Os valores variam por chamada e edição, e a aprovação depende sempre da avaliação dos pareceristas.</p>
@@ -632,10 +640,10 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
     <div class="pricing">
       <div class="pcard">
         <span class="pk-tag">Comece por aqui</span>
-        <div class="pk-lbl">Diagnóstico de Prontidão</div>
+        <div class="pk-lbl">Consultoria por hora</div>
         <div class="pk-val">R$ 290<span> / 1 hora</span></div>
         <p class="pk-desc">Leio o seu projeto ou a sua ideia e digo qual edital cabe, o que está forte, o que falta e qual o próximo passo.</p>
-        <div class="pk-cta"><a data-origem="card-hora" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar o diagnóstico <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="pk-cta"><a data-origem="card-hora" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar a consultoria <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard curso feat">
         <span class="pk-tag">Acesso imediato</span>
@@ -646,32 +654,30 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         <div class="pk-cta"><a data-origem="card-curso" data-checkout="curso-pipe-fase-1" data-valor="497" href="https://www.asaas.com/c/lchxklupakys9t0e" target="_blank" rel="noopener">Comprar o curso <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard">
-        <div class="pk-lbl">Acompanhamento completo</div>
-        <div class="pk-val">R$ 3.900</div>
-        <p class="pk-desc">Uma proposta, um edital, do diagnóstico à submissão, sem contador de horas. Encontros 1:1 e dúvidas pontuais por WhatsApp ao longo do caminho. Ideal para bolsas, auxílios (CNPq, FAPESP, CAPES) e Programa Centelha.</p>
-        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Menos de 2% do teto de uma Universal (R$ 250 mil).</p>
-        <div class="pk-cta"><a data-origem="card-2500" data-checkout="acompanhamento-completo" data-valor="3900" href="https://www.asaas.com/c/bglpzt54qj6fq6mo" target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="pk-lbl">Acompanhamento</div>
+        <div class="pk-val" style="font-size:1.3rem;white-space:normal;line-height:1.25">Valor combinado na conversa</div>
+        <p class="pk-desc">Você escreve, eu acompanho. Do diagnóstico à submissão, leio cada parte da proposta pelos critérios de avaliação do edital e aponto o que ajustar, em encontros 1:1 e com dúvidas por WhatsApp, sem contador de horas. Para FAPESP, CNPq, Centelha, Finep e outros editais.</p>
+        <div class="pk-cta"><a data-origem="card-2500" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu%21%20Quero%20saber%20como%20funciona%20o%20Acompanhamento%20para%20o%20meu%20projeto." target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="pcard">
-        <div class="pk-lbl">Acompanhamento PIPE Fase 1</div>
-        <div class="pk-val">R$ 9.800</div>
-        <p class="pk-desc">Do diagnóstico à submissão, sem contador de horas: projeto, plano de trabalho, orçamento, equipe, bolsas e documentos.</p>
-        <p class="pk-desc" style="margin-top:.6rem;color:var(--green-700);font-weight:600">Cerca de 3% do teto de um PIPE Fase 1 (R$ 300 mil).</p>
-        <div class="pk-cta"><a data-origem="card-4900" data-checkout="pipe-fase-1" data-valor="9800" href="https://www.asaas.com/c/puponpp5j8dlqmzn" target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="pk-lbl">Acompanhamento com escrita</div>
+        <div class="pk-val" style="font-size:1.3rem;white-space:normal;line-height:1.25">Valor combinado na conversa</div>
+        <p class="pk-desc">Envolvimento maior, que pode chegar à escrita. Construímos a proposta juntos, do resumo ao orçamento: projeto, plano de trabalho, equipe e documentos, até a submissão, sem contador de horas. Para FAPESP, CNPq, Centelha, Finep e outros editais.</p>
+        <div class="pk-cta"><a data-origem="card-4900" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu%21%20Quero%20saber%20como%20funciona%20o%20Acompanhamento%20com%20escrita%20para%20o%20meu%20projeto." target="_blank" rel="noopener">Quero o acompanhamento <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
     </div>
     <div class="psob">
       <div><b>Projetos sob medida.</b> <span>Empresas com vários editais ou escopos fora do comum.</span></div>
       <div class="psob-val">Orçamento sob medida, combinado na conversa</div>
     </div>
-    <p class="pricing-note"><b>Começamos pelo Diagnóstico de Prontidão</b>: 1 hora de consultoria (R$ 290) em que leio o seu projeto ou a sua ideia. Você sai sabendo qual edital cabe no seu caso, o que está forte, o que falta e qual o próximo passo.</p>
+    <p class="pricing-note"><b>Começamos pela consultoria por hora</b>: 1 hora (R$ 290) em que leio o seu projeto ou a sua ideia. Você sai sabendo qual edital cabe no seu caso, o que está forte, o que falta e qual o próximo passo.</p>
     <div class="guarantee" style="display:flex;gap:13px;align-items:flex-start;background:var(--green-50);border:1px solid var(--green-200);border-radius:14px;padding:16px 20px;margin-top:1.3rem;max-width:680px;margin-left:auto;margin-right:auto">
       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex:none;width:24px;height:24px;color:var(--green-600);margin-top:2px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       <p style="margin:0;font-size:.97rem;color:var(--body)"><b style="color:var(--green-800)">Garantia sobre o meu trabalho</b>, nunca sobre a decisão da agência: se na primeira hora de consultoria você sair sem um diagnóstico claro do seu projeto, essa hora fica por minha conta.</p>
     </div>
 
     <div class="inline-cta">
-      <a class="btn btn-primary" data-origem="oferta" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar o Diagnóstico de Prontidão <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-primary" data-origem="oferta" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar a consultoria por hora <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p class="cta-note">R$ 290, Pix ou cartão em até 12x. Depois do pagamento, marcamos pelo WhatsApp.</p>
     </div>
   </div>
@@ -694,8 +700,8 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       </details>
       <details>
         <summary>Como funciona o pagamento? <span class="ic" aria-hidden="true">+</span></summary>
-        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 290/hora; curso online PIPE Fase 1 por R$ 497, para quem quer escrever sozinho (acesso por 12 meses); acompanhamento completo de uma proposta até a submissão por R$ 3.900, sem contador de horas (bolsas, auxílios e Centelha); PIPE Fase 1 por R$ 9.800; ou orçamento sob medida em casos fora do comum. Nunca cobro percentual sobre o recurso captado.</p>
-        <p>O pagamento é feito pelo Asaas, em nome da Cultivee: Pix, boleto ou cartão em até 12x sem juros. Você recebe o comprovante na hora, e a nota fiscal de serviço é emitida e enviada por e-mail depois. Pago o plano, eu te chamo no WhatsApp para marcar o primeiro encontro. No curso, o acesso chega por e-mail logo após a confirmação do pagamento.</p>
+        <p>Preço fixo, combinado antes de começar. Consultoria avulsa a R$ 290/hora; curso online PIPE Fase 1 por R$ 497, para quem quer escrever sozinho (acesso por 12 meses). Há dois acompanhamentos, da proposta até a submissão e sem contador de horas: um em que você escreve e eu acompanho, e outro com envolvimento maior, que pode chegar à escrita. O valor de cada um é combinado na conversa pelo WhatsApp, conforme o edital e o escopo. Nunca cobro percentual sobre o recurso captado.</p>
+        <p>O pagamento é feito pelo Asaas, em nome da Cultivee: Pix, boleto ou cartão em até 12x sem juros. Você recebe o comprovante na hora, e a nota fiscal de serviço é emitida e enviada por e-mail depois. Pago o plano, eu te chamo no WhatsApp para marcar o primeiro encontro. No curso, o acesso chega por e-mail logo após a confirmação do pagamento. Se o e-mail não chegar, você cria a senha em cursos.cultivee.com.br/acesso, com o CPF e o celular da compra.</p>
         <p>Se mudar de ideia, você pode desistir em até 7 dias da contratação, com devolução integral do valor (art. 49 do Código de Defesa do Consumidor).</p>
       </details>
       <details>
@@ -735,15 +741,15 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   <div class="wrap narrow">
     <div class="final-card">
       <h2>Submeta sabendo o que o parecerista vai ver.</h2>
-      <p class="lead muted" style="margin-top:1rem">Comece pelo Diagnóstico de Prontidão: 1 hora de consultoria em que eu leio o seu caso e te digo, com honestidade, se e como posso ajudar.</p>
+      <p class="lead muted" style="margin-top:1rem">Comece pela consultoria por hora: 1 hora em que eu leio o seu caso e te digo, com honestidade, se e como posso ajudar.</p>
       <p style="margin-top:1.2rem">Se fizer sentido, seguimos. Se não, eu digo. Na pior hipótese, você sai entendendo melhor o próprio projeto e a leitura que ele vai receber.</p>
       <ul class="checks">
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Diagnóstico de Prontidão: 1 hora de consultoria, R$ 290</li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Consultoria por hora: 1 hora, R$ 290</li>
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Atendimento individual, do diagnóstico à submissão</li>
       </ul>
-      <a class="btn btn-primary" style="font-size:1.1rem;padding:17px 32px" data-origem="cta-final-diagnostico" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar meu Diagnóstico de Prontidão <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-primary" style="font-size:1.1rem;padding:17px 32px" data-origem="cta-final-diagnostico" data-checkout="consultoria-avulsa" data-valor="290" href="https://www.asaas.com/c/d0bs53iy8d2f5467" target="_blank" rel="noopener">Agendar minha consultoria por hora <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p class="cta-note" style="margin-top:.9rem">Pix ou cartão em até 12x. Depois do pagamento, marcamos pelo WhatsApp, em sigilo.</p>
-      <a class="wa-direct" data-origem="cta-final-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a>
+      <a class="wa-direct" data-origem="cta-final-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20uma%20consultoria%20para%20o%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -774,7 +780,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
       <h2 id="fdx-titulo" tabindex="-1">Conte sobre o seu projeto</h2>
       <button type="button" class="fdx-x" data-fecha-form aria-label="Fechar o formulário">&times;</button>
     </div>
-    <p class="fdx-sub" id="fdx-sub">Cinco respostas rápidas. Ao enviar, o WhatsApp abre com tudo escrito; você revisa e manda, e eu respondo com o caminho indicado para o seu caso. A leitura do projeto é feita no Diagnóstico de Prontidão (1 hora, R$ 290).</p>
+    <p class="fdx-sub" id="fdx-sub">Cinco respostas rápidas. Ao enviar, o WhatsApp abre com tudo escrito; você revisa e manda, e eu respondo com o caminho indicado para o seu caso. A leitura do projeto é feita na consultoria por hora (1 hora, R$ 290).</p>
     <form id="fdx-form" novalidate>
       <fieldset data-q="edital">
         <legend><span class="n" aria-hidden="true">1</span>Qual edital você tem em vista?</legend>
@@ -850,12 +856,12 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
         Enviar pelo WhatsApp
       </button>
       <p class="fdx-fine">🔒 Seu nome segue só na mensagem do WhatsApp, que você revisa antes de enviar.</p>
-      <p class="fdx-alt"><a class="wa-direct" data-origem="formulario-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a></p>
+      <p class="fdx-alt"><a class="wa-direct" data-origem="formulario-direto" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20uma%20consultoria%20para%20o%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener">Prefiro falar direto no WhatsApp</a></p>
     </form>
   </div>
 </dialog>
 
-<a class="wa-float" data-origem="flutuante" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20do%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener" aria-label="Agendar conversa pelo WhatsApp">
+<a class="wa-float" data-origem="flutuante" href="https://wa.me/5519991644181?text=Ol%C3%A1%2C%20Mardoqueu!%20Quero%20falar%20sobre%20uma%20consultoria%20para%20o%20meu%20projeto%20(capta%C3%A7%C3%A3o%20de%20fomento)." target="_blank" rel="noopener" aria-label="Agendar conversa pelo WhatsApp">
   <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-1 .9-1.2 2-.8 3.2.5 1.5 1.5 2.9 1.6 3.1.2.2 2.6 4 6.3 5.4 2.3.9 3.2.9 4.3.8.7-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.4-.1-.1-.3-.2-.6-.4z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l5-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
   <span>Quero conversar</span>
 </a>
@@ -873,7 +879,7 @@ src="https://www.facebook.com/tr?id=983656691147336&ev=PageView&noscript=1"></no
   if(!dlg||!form) return;
   var origem='form', opener=null;
   function ga(name,params){ try{ if(M) M.evento(name,params); }catch(_){} }
-  var MSG_PADRAO='Olá, Mardoqueu! Quero falar sobre o Diagnóstico de Prontidão do meu projeto (captação de fomento).';
+  var MSG_PADRAO='Olá, Mardoqueu! Quero falar sobre uma consultoria para o meu projeto (captação de fomento).';
   /* Codigos fechados das respostas: e SO isto que vai ao GA4 e ao registro (nunca nome, data ou texto livre). */
   var COD={
     edital:{'PIPE Fase 1':'pipe-f1','PIPE Fase 2':'pipe-f2','Centelha':'centelha','Universal CNPq':'universal-cnpq','Finep':'finep','Outro':'outro','Ainda não sei':'nao-sei'},

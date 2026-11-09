@@ -10,7 +10,7 @@
  *
  * Marcacao na pagina (um bloco por pagina):
  *   <div class="vsl" data-yt="<id>" data-pagina="pipe" data-video="vsl-pipe-completa"
- *        data-cta-href="<link do Asaas>" data-cta-texto="Agendar meu Diagnostico de Prontidao"
+ *        data-cta-href="<link do Asaas>" data-cta-texto="Agendar minha consultoria por hora"
  *        data-cta-checkout="consultoria-avulsa" data-cta-valor="250"> <button>capa</button> </div>
  * O botao do cartao final leva data-checkout, entao o begin_checkout da pagina mede o clique.
  */
@@ -54,7 +54,7 @@
   // Cartao final: cobre o player inteiro
   var fim = el('div', 'vsl-ov vsl-fim');
   if (capa) fim.style.backgroundImage = 'url("' + capa + '")';
-  var fimCaixa = el('div', 'vsl-caixa', '<p class="vsl-tit">O próximo passo é o Diagnóstico de Prontidão</p>');
+  var fimCaixa = el('div', 'vsl-caixa', '<p class="vsl-tit">O próximo passo é a consultoria por hora</p>');
   fimCaixa.appendChild(botaoCta('vsl-fim'));
   var deNovo = el('button', 'vsl-sec', ICONE_DE_NOVO + 'Assistir de novo');
   deNovo.type = 'button';
