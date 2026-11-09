@@ -1,6 +1,6 @@
 {
  "versao": 1,
- "atualizado_em": "2026-11-02",
+ "atualizado_em": "2026-11-09",
  "proxima_atualizacao": "semanal (segunda-feira)",
  "aviso": "Lista de triagem montada automaticamente a partir das páginas oficiais dos órgãos. Prazo, quem pode participar e contrapartida se confirmam sempre no edital oficial (link de cada item).",
  "criterio_fomento": "proposta feita por empresa, recurso não reembolsável (fundo perdido, subvenção, prêmio, bolsa ou contrato pago) e contrapartida declarada de até 20%",
@@ -11,6 +11,7 @@
   "FAPs de outros estados",
   "CNPq",
   "CAPES",
+  "BNDES",
   "Petrobras",
   "SENAI / SESI",
   "Embrapii",
@@ -20,9 +21,9 @@
   "Empresas e programas privados"
  ],
  "totais": {
-  "fomento": 45,
-  "mei": 10,
-  "itens": 53,
+  "fomento": 43,
+  "mei": 9,
+  "itens": 50,
   "previstos": 1
  },
  "fontes": [
@@ -43,33 +44,6 @@
   "softex"
  ],
  "editais": [
-  {
-   "id": "finep:1075469",
-   "orgao": "FINEP",
-   "titulo": "Programa de Cooperação para Inovação da Rede EUREKA",
-   "url": "https://www.finep.gov.br/e/chamada-publica/222684/1075469",
-   "prazo": "2026-11-06",
-   "fluxo_continuo": false,
-   "recurso": "não reembolsável",
-   "contrapartida": "contrapartida financeira (percentual no regulamento)",
-   "contrapartida_min_pct": null,
-   "mei": null,
-   "mei_regra": null,
-   "abrangencia": "Todo Brasil",
-   "publico": "receita até R$ 4,8 mi, R$ 4,8 a 16 mi, R$ 16 a 90 mi, R$ 90 a 300 mi, acima de R$ 300 mi",
-   "resumo": "Programa de Cooperação para Inovação da Rede EUREKA – Chamada para projetos de resiliência, resposta e recuperação de desastres – Fase Nacional ASPECTOS GERAIS DA CHAMADA PÚBLICA CONJUNTA A iniciativa faz parte de uma ação coordenada da rede internacional EUREKA, que reúne países e agências de fomento comprometidos com o fortalecimento da inovação colaborativa. Os projetos apoiados deverão promove",
-   "novo": false,
-   "visto_desde": "2026-10-13",
-   "fonte_coleta": "FINEP",
-   "tambem_em": [
-    "Sebrae PR (boletim)"
-   ],
-   "restricao": null,
-   "guia_cultivee": null,
-   "secoes": [
-    "fomento"
-   ]
-  },
   {
    "id": "finep:1132029",
    "orgao": "FINEP",
@@ -200,31 +174,6 @@
    ]
   },
   {
-   "id": "fapesp:18291",
-   "orgao": "FAPESP",
-   "titulo": "Chamada de Propostas para o Programa PIPE Jornada Tecnológica Transição Energética – Fase 1",
-   "url": "https://fapesp.br/18291",
-   "prazo": "2026-11-03",
-   "fluxo_continuo": false,
-   "recurso": "não reembolsável",
-   "contrapartida": null,
-   "contrapartida_min_pct": null,
-   "mei": false,
-   "mei_regra": "normas PIPE: 'Não se considera empresa: ... microempreendedor individual'",
-   "abrangencia": "SP",
-   "publico": "pesquisador ou empresa sediada em SP",
-   "resumo": "Prazo para apresentação da proposta completa para propostas enquadradas: 03/11/2026 Área: Inovação Modalidade: PIPE - Fase 1",
-   "novo": false,
-   "visto_desde": "2026-10-13",
-   "fonte_coleta": "FAPESP",
-   "tambem_em": [],
-   "restricao": null,
-   "guia_cultivee": null,
-   "secoes": [
-    "fomento"
-   ]
-  },
-  {
    "id": "fapesp:18434",
    "orgao": "FAPESP",
    "titulo": "PIPE Jornada Tecnológica Tecnologias Educacionais – Fase 1",
@@ -272,31 +221,6 @@
    "guia_cultivee": null,
    "secoes": [
     "fomento"
-   ]
-  },
-  {
-   "id": "programas:fapesq-pb-32-2026",
-   "orgao": "FAPs de outros estados",
-   "titulo": "Edital 32/2026 FAPESQ e Unidades Embrapii (Paraíba)",
-   "url": "https://fapesq.rpp.br/editais/editais-2026/",
-   "prazo": "2026-11-06",
-   "fluxo_continuo": false,
-   "recurso": "não reembolsável",
-   "contrapartida": "até R$ 200 mil, contrapartida 5% (o recurso vai para a Unidade Embrapii)",
-   "contrapartida_min_pct": null,
-   "mei": true,
-   "mei_regra": "Edital 32/2026: 'São elegíveis... Microempreendedores individuais (MEI)', com CNPJ ativo na Paraíba",
-   "abrangencia": "PB",
-   "publico": "FAPESQ-PB",
-   "resumo": "FAPESQ-PB. até R$ 200 mil, contrapartida 5% (o recurso vai para a Unidade Embrapii)",
-   "novo": false,
-   "visto_desde": "2026-10-13",
-   "fonte_coleta": "Programas MEI",
-   "tambem_em": [],
-   "restricao": null,
-   "guia_cultivee": null,
-   "secoes": [
-    "mei"
    ]
   },
   {
@@ -377,53 +301,28 @@
    ]
   },
   {
-   "id": "petrobras:2185",
-   "orgao": "Petrobras",
-   "titulo": "OP3390 - Centro de Referência em Estudos Socioeconômicos Avançados e Inteligência Territorial para a Indústria de Óleo e Gás e a Transição Energética",
-   "url": "https://sigitec-competitividade.petrobras.com.br/v2/public/opportunity/2185",
-   "prazo": "2026-11-05",
+   "id": "programas:bndes-garagem-impacto-2026",
+   "orgao": "BNDES",
+   "titulo": "BNDES Garagem Negócios de Impacto 2026: aceleração gratuita com prêmio aos finalistas",
+   "url": "https://garagem.bndes.gov.br/inscreva-se/",
+   "prazo": "2026-11-30",
    "fluxo_continuo": false,
    "recurso": "não reembolsável",
-   "contrapartida": "contrato pago pela Petrobras (verba de PD&I regulada)",
+   "contrapartida": "prêmio aos finalistas: R$ 35 a 90 mil (Criação) e R$ 70 a 170 mil (Tração); Prêmio Mais Brasil R$ 25 ou 35 mil; sem participação no capital",
    "contrapartida_min_pct": null,
-   "mei": null,
-   "mei_regra": null,
+   "mei": true,
+   "mei_regra": "Edital, definição de Startup de Impacto: 'inclusive sob a forma de empresário individual'; Anexo de documentos pede o CCMEI para MEIs; pessoa física pode entrar no Módulo de Criação (item 10.1.4)",
    "abrangencia": "Brasil",
-   "publico": "ICT credenciada na ANP e/ou empresa (conferir na oportunidade)",
-   "resumo": "Desenvolver, de forma inédita no âmbito da indústria brasileira de óleo e gás, um conjunto integrado de metodologias, indicadores e modelos analíticos para avaliação de impactos socioeconômicos ao longo de todo o ciclo de vida dos empreendimentos, incluindo as fases de implantação, operação e descomissionamento, com vistas à elaboração de Planos de Desenvolvimento Territorial e propostas de Políti",
-   "novo": false,
-   "visto_desde": "2026-10-21",
-   "fonte_coleta": "Petrobras",
-   "tambem_em": [],
-   "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
-   "guia_cultivee": null,
-   "secoes": [
-    "fomento"
-   ]
-  },
-  {
-   "id": "petrobras:2279",
-   "orgao": "Petrobras",
-   "titulo": "OP3478 - Gaseificação de resíduos sólidos urbanos (RSU) para a produção de gás de síntese",
-   "url": "https://sigitec-competitividade.petrobras.com.br/v2/public/opportunity/2279",
-   "prazo": "2026-11-06",
-   "fluxo_continuo": false,
-   "recurso": "não reembolsável",
-   "contrapartida": "contrato pago pela Petrobras (verba de PD&I regulada)",
-   "contrapartida_min_pct": null,
-   "mei": null,
-   "mei_regra": null,
-   "abrangencia": "Brasil",
-   "publico": "ICT credenciada na ANP e/ou empresa (conferir na oportunidade)",
-   "resumo": "Desenvolver e validar, em escala piloto, um processo de gaseificação de combustível derivado de resíduos (CDR) produzido a partir de resíduos sólidos urbanos (RSU) representativos da região de Três Lagoas (MS) para a obtenção de gás de síntese (CO + H2) com composição adequada ao processamento em planta de síntese de amônia, abrangendo os aspectos operacionais e técnicos do processo. A crescente g",
+   "publico": "BNDESPAR, executado pela aceleradora Quintessa",
+   "resumo": "BNDESPAR, executado pela aceleradora Quintessa. prêmio aos finalistas: R$ 35 a 90 mil (Criação) e R$ 70 a 170 mil (Tração); Prêmio Mais Brasil R$ 25 ou 35 mil; sem participação no capital",
    "novo": true,
-   "visto_desde": "2026-11-02",
-   "fonte_coleta": "Petrobras",
+   "visto_desde": "2026-11-05",
+   "fonte_coleta": "Programas MEI",
    "tambem_em": [],
-   "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
+   "restricao": null,
    "guia_cultivee": null,
    "secoes": [
-    "fomento"
+    "mei"
    ]
   },
   {
@@ -468,56 +367,6 @@
    "resumo": "Desenvolver e validar um processo estruturado orientado por dados para identificação, modelagem e mitigação de mecanismos de falha prioritários em três equipamentos de completação e produção de poços, transformando o conhecimento gerado em requisitos de projeto, fabricação e inspeção da qualidade que contribuam para o aumento da confiabilidade e da integridade operacional dos ativos fornecidos à P",
    "novo": false,
    "visto_desde": "2026-10-13",
-   "fonte_coleta": "Petrobras",
-   "tambem_em": [],
-   "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
-   "guia_cultivee": null,
-   "secoes": [
-    "fomento"
-   ]
-  },
-  {
-   "id": "petrobras:2223",
-   "orgao": "Petrobras",
-   "titulo": "OP3425 - CTPP (Coiled Tubing Propelled by PIG).",
-   "url": "https://sigitec-competitividade.petrobras.com.br/v2/public/opportunity/2223",
-   "prazo": "2026-11-13",
-   "fluxo_continuo": false,
-   "recurso": "não reembolsável",
-   "contrapartida": "contrato pago pela Petrobras (verba de PD&I regulada)",
-   "contrapartida_min_pct": null,
-   "mei": null,
-   "mei_regra": null,
-   "abrangencia": "Brasil",
-   "publico": "ICT credenciada na ANP e/ou empresa (conferir na oportunidade)",
-   "resumo": "Desenvolver pig ¿vazado¿ que possa ser propelido pneumaticamente com nitrogênio (CTPP) ou por um motor hidráulico (GeroPar) alimentado por fluido através de um Flexitubo (fornecido pela Petrobrás), cujo objetivo é realizar a limpeza de dutos submarinos em descomissionamento sem necessidade do emprego de sonda, ou seja, por meio do uso de embarcação de maior disponibilidade e menor custo. Esta nova",
-   "novo": false,
-   "visto_desde": "2026-10-14",
-   "fonte_coleta": "Petrobras",
-   "tambem_em": [],
-   "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
-   "guia_cultivee": null,
-   "secoes": [
-    "fomento"
-   ]
-  },
-  {
-   "id": "petrobras:2250",
-   "orgao": "Petrobras",
-   "titulo": "OP3451 - Flowline de Serviço para rápida dissociação de hidratos",
-   "url": "https://sigitec-competitividade.petrobras.com.br/v2/public/opportunity/2250",
-   "prazo": "2026-11-13",
-   "fluxo_continuo": false,
-   "recurso": "não reembolsável",
-   "contrapartida": "contrato pago pela Petrobras (verba de PD&I regulada)",
-   "contrapartida_min_pct": null,
-   "mei": null,
-   "mei_regra": null,
-   "abrangencia": "Brasil",
-   "publico": "ICT credenciada na ANP e/ou empresa (conferir na oportunidade)",
-   "resumo": "Desenvolver a técnica denominada ¿flowline de serviço¿ que visa a utilização da parte riser de flowlines descomissionadas, em bom estado de conservação, para realizar operações de dissociação de hidratos, próximos ou distantes da ANM, sem a necessidade de sonda, usando apenas barcos que possam lançar e recolher flowlines, como PLSV ou MPSV. Ressalva-se que essas flowlines, bem como as embarcações,",
-   "novo": false,
-   "visto_desde": "2026-10-14",
    "fonte_coleta": "Petrobras",
    "tambem_em": [],
    "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
@@ -602,6 +451,31 @@
    ]
   },
   {
+   "id": "petrobras:2259",
+   "orgao": "Petrobras",
+   "titulo": "OP3459 - Geração e calibração de modelos geológicos por Modelagem Estratigráfica Forward com dados geológicos, dinâmicos e geofísicos",
+   "url": "https://sigitec-competitividade.petrobras.com.br/v2/public/opportunity/2259",
+   "prazo": "2026-11-19",
+   "fluxo_continuo": false,
+   "recurso": "não reembolsável",
+   "contrapartida": "contrato pago pela Petrobras (verba de PD&I regulada)",
+   "contrapartida_min_pct": null,
+   "mei": null,
+   "mei_regra": null,
+   "abrangencia": "Brasil",
+   "publico": "ICT credenciada na ANP e/ou empresa (conferir na oportunidade)",
+   "resumo": "Aprimorar, estender e validar uma metodologia integrada para a calibração de modelos estratigráficos forward, preservando a informação geológica relevante durante a transferência entre diferentes representações numéricas, combinando de forma probabilística múltiplos critérios geológicos e dinâmicos e permitindo uma eficiente aplicação por especialistas de domínio em casos reais. Resumindo , visa a",
+   "novo": false,
+   "visto_desde": "2026-10-21",
+   "fonte_coleta": "Petrobras",
+   "tambem_em": [],
+   "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
+   "guia_cultivee": null,
+   "secoes": [
+    "fomento"
+   ]
+  },
+  {
    "id": "petrobras:2269",
    "orgao": "Petrobras",
    "titulo": "OP3469 - Impacto da formação de biofilmes na perda de injetividade para cenários de reinjeção de água produzida",
@@ -677,6 +551,31 @@
    ]
   },
   {
+   "id": "petrobras:2284",
+   "orgao": "Petrobras",
+   "titulo": "OP3483 - Modelo geológico evolutivo e deposicional da Plataforma de Regência, Bacia do Espírito Santo, aplicado ao armazenamento geológico de CO¿",
+   "url": "https://sigitec-competitividade.petrobras.com.br/v2/public/opportunity/2284",
+   "prazo": "2026-12-03",
+   "fluxo_continuo": false,
+   "recurso": "não reembolsável",
+   "contrapartida": "contrato pago pela Petrobras (verba de PD&I regulada)",
+   "contrapartida_min_pct": null,
+   "mei": null,
+   "mei_regra": null,
+   "abrangencia": "Brasil",
+   "publico": "ICT credenciada na ANP e/ou empresa (conferir na oportunidade)",
+   "resumo": "O objetivo principal deste projeto é a proposição de um modelo geológico evolutivo que integre a caracterização sedimentológica, deposicional, estratigráfica e estrutural da Plataforma de Regência, na Bacia do Espírito Santo. Essa caracterização integrada deve focar no entendimento da natureza e da distribuição dos reservatórios (aquíferos salinos) e selos do intervalo de estudo, visando reconhece",
+   "novo": true,
+   "visto_desde": "2026-11-09",
+   "fonte_coleta": "Petrobras",
+   "tambem_em": [],
+   "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
+   "guia_cultivee": null,
+   "secoes": [
+    "fomento"
+   ]
+  },
+  {
    "id": "petrobras:2211",
    "orgao": "Petrobras",
    "titulo": "OP3414 - Inspeção de umbilicais de serviço (downline) para intervenções em poços submarinos",
@@ -693,6 +592,56 @@
    "resumo": "O objetivo deste projeto consiste no desenvolvimento de um sistema de inspeção com capacidade de detectar e dimensionar descontinuidades internas em umbilicais TCP e HCR. O TCP tipicamente possui diâmetro externo de até 3¿ e diâmetro interno a partir 1,5¿, sendo constituído por estrutura monolítica (bonded) com múltiplas camadas fabricadas com matriz polimérica e fibras, como vidro ou carbono. Adi",
    "novo": false,
    "visto_desde": "2026-10-13",
+   "fonte_coleta": "Petrobras",
+   "tambem_em": [],
+   "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
+   "guia_cultivee": null,
+   "secoes": [
+    "fomento"
+   ]
+  },
+  {
+   "id": "petrobras:2223",
+   "orgao": "Petrobras",
+   "titulo": "OP3425 - CTPP (Coiled Tubing Propelled by PIG).",
+   "url": "https://sigitec-competitividade.petrobras.com.br/v2/public/opportunity/2223",
+   "prazo": "2026-12-11",
+   "fluxo_continuo": false,
+   "recurso": "não reembolsável",
+   "contrapartida": "contrato pago pela Petrobras (verba de PD&I regulada)",
+   "contrapartida_min_pct": null,
+   "mei": null,
+   "mei_regra": null,
+   "abrangencia": "Brasil",
+   "publico": "ICT credenciada na ANP e/ou empresa (conferir na oportunidade)",
+   "resumo": "Desenvolver pig ¿vazado¿ que possa ser propelido pneumaticamente com nitrogênio (CTPP) ou por um motor hidráulico (GeroPar) alimentado por fluido através de um Flexitubo (fornecido pela Petrobrás), cujo objetivo é realizar a limpeza de dutos submarinos em descomissionamento sem necessidade do emprego de sonda, ou seja, por meio do uso de embarcação de maior disponibilidade e menor custo. Esta nova",
+   "novo": false,
+   "visto_desde": "2026-10-14",
+   "fonte_coleta": "Petrobras",
+   "tambem_em": [],
+   "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
+   "guia_cultivee": null,
+   "secoes": [
+    "fomento"
+   ]
+  },
+  {
+   "id": "petrobras:2250",
+   "orgao": "Petrobras",
+   "titulo": "OP3451 - Flowline de Serviço para rápida dissociação de hidratos",
+   "url": "https://sigitec-competitividade.petrobras.com.br/v2/public/opportunity/2250",
+   "prazo": "2026-12-11",
+   "fluxo_continuo": false,
+   "recurso": "não reembolsável",
+   "contrapartida": "contrato pago pela Petrobras (verba de PD&I regulada)",
+   "contrapartida_min_pct": null,
+   "mei": null,
+   "mei_regra": null,
+   "abrangencia": "Brasil",
+   "publico": "ICT credenciada na ANP e/ou empresa (conferir na oportunidade)",
+   "resumo": "Desenvolver a técnica denominada ¿flowline de serviço¿ que visa a utilização da parte riser de flowlines descomissionadas, em bom estado de conservação, para realizar operações de dissociação de hidratos, próximos ou distantes da ANM, sem a necessidade de sonda, usando apenas barcos que possam lançar e recolher flowlines, como PLSV ou MPSV. Ressalva-se que essas flowlines, bem como as embarcações,",
+   "novo": false,
+   "visto_desde": "2026-10-14",
    "fonte_coleta": "Petrobras",
    "tambem_em": [],
    "restricao": "Chamada de P&D com verba da ANP: em geral exige instituição de pesquisa credenciada na ANP como executora; empresa entra como parceira.",
@@ -1131,36 +1080,11 @@
    ]
   },
   {
-   "id": "mapas:mapacultural-2501",
-   "orgao": "Cultura",
-   "titulo": "Santarém/PA | Edital PNAB nº 04/2026 — Fomento Multilinguagens",
-   "url": "https://mapacultural.pa.gov.br/oportunidade/2501/",
-   "prazo": "2026-11-04",
-   "fluxo_continuo": false,
-   "recurso": "não reembolsável",
-   "contrapartida": "valor total do edital R$ 1.494.000,00",
-   "contrapartida_min_pct": null,
-   "mei": true,
-   "mei_regra": "inscrição aberta a: Pessoa Jurídica, Coletivo, MEI, Pessoa Física (campo da plataforma)",
-   "abrangencia": "PA",
-   "publico": "Pessoa Jurídica, Coletivo, MEI, Pessoa Física",
-   "resumo": "A Prefeitura de Santarém, por meio da Secretaria Municipal de Cultura, vai apoiar 94 projetos culturais em 15 categorias, com recursos da Política Nacional Aldir Blanc. Inscrições gratuitas prorrogadas até 4 de novembro de 2026, exclusivamente pelo Mapa Cultural do Pará.",
-   "novo": false,
-   "visto_desde": "2026-10-21",
-   "fonte_coleta": "Mapas Culturais",
-   "tambem_em": [],
-   "restricao": null,
-   "guia_cultivee": null,
-   "secoes": [
-    "mei"
-   ]
-  },
-  {
    "id": "mapas:mapacultural-3447",
    "orgao": "Cultura",
    "titulo": "EDITAL Nº 001/2026 – FOMENTO CULTURAL – CRIAÇÃO E FORMAÇÃO – PNAB – CICLO 2 – PETROLÂNDIA/PE",
    "url": "https://mapacultural.pe.gov.br/oportunidade/3447/",
-   "prazo": "2026-11-08",
+   "prazo": "2026-11-11",
    "fluxo_continuo": false,
    "recurso": "não reembolsável",
    "contrapartida": "valor total do edital R$ 240.000,00",
