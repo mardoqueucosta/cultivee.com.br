@@ -88,7 +88,7 @@ const EducaPage = () => {
       { name: "Curso de Cultivo Indoor", url: "/cursos/cultivo-indoor", description: "Em breve." },
       {
         name: "Curso online PIPE-FAPESP Fase 1",
-        url: "/fomento/curso-pipe",
+        url: "/fomento/curso-pipe-fapesp",
         description: "19 aulas, pasta-modelo e mapa do SAGe. À venda.",
       },
       {

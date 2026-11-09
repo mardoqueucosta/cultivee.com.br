@@ -21,8 +21,8 @@ const STATIC_PATHS = [
   { path: "/fomento", changefreq: "monthly", priority: "0.7" },
   // Pagina de venda por programa (public/fomento/pipe/index.html, 19/10/2026): destino da campanha Meta v3.
   { path: "/fomento/pipe", changefreq: "monthly", priority: "0.7" },
-  // Pagina de venda do curso online PIPE Fase 1 (public/fomento/curso-pipe/index.html, 09/11/2026).
-  { path: "/fomento/curso-pipe", changefreq: "monthly", priority: "0.7" },
+  // Pagina de venda do curso online PIPE Fase 1 (public/fomento/curso-pipe-fapesp/index.html, 09/11/2026; antes /fomento/curso-pipe).
+  { path: "/fomento/curso-pipe-fapesp", changefreq: "monthly", priority: "0.7" },
   { path: "/fomento/recurso", changefreq: "monthly", priority: "0.6" },
   // Lista semanal de editais abertos (src/pages/Editais.tsx, le public/dados/editais/editais.json; 21/10/2026).
   { path: "/editais", changefreq: "weekly", priority: "0.7" },
@@ -171,7 +171,7 @@ ${pillars.map(line).join("\n")}
 - [Curso de Cultivo Indoor](${SITE}/cursos/cultivo-indoor): em breve
 - [Mentoria de captação de recursos de fomento](${SITE}/fomento): PIPE, Centelha, Finep, FAPESP, CNPq
 - [Consultoria para o PIPE-FAPESP Fase 1](${SITE}/fomento/pipe): escrever o projeto pelos critérios da banca, Diagnóstico de Prontidão
-- [Curso online PIPE-FAPESP Fase 1](${SITE}/fomento/curso-pipe): 19 aulas em vídeo, pasta-modelo da submissão com exemplos e mapa das telas do SAGe; aula 1 aberta
+- [Curso online PIPE-FAPESP Fase 1](${SITE}/fomento/curso-pipe-fapesp): 19 aulas em vídeo, pasta-modelo da submissão com exemplos e mapa das telas do SAGe; aula 1 aberta
 - [Até R$ 300 mil para empresas de São Paulo inovarem](${SITE}/fomento/recurso): requisitos do PIPE-FAPESP e Diagnóstico de Prontidão
 - [Editais de fomento abertos](${SITE}/editais): lista semanal de editais com recurso não reembolsável para empresas, por órgão e prazo, com link oficial e filtro MEI
 - [Edital PIPE FAPESP 2026 na íntegra](${SITE}/editais/fapesp-pipe): normas vigentes desde 15/09/2026, valores (Fase 1 até R$ 300 mil, Fase 2 até R$ 1,5 milhão), quem pode, como submeter

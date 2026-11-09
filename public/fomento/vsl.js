@@ -16,7 +16,7 @@
  */
 (function () {
   var d = document, w = window;
-  // Mais de um player por pagina (09/11/2026: a /fomento/curso-pipe tem a aula de amostra e a VSL do PIPE):
+  // Mais de um player por pagina (09/11/2026: a /fomento/curso-pipe-fapesp tem a aula de amostra e a VSL do PIPE):
   // cada bloco .vsl[data-yt] ganha o seu player, a sua medicao e os seus cartoes. A API do YouTube carrega 1 vez.
   var blocos = d.querySelectorAll('.vsl[data-yt]');
   for (var i = 0; i < blocos.length; i++) iniciar(blocos[i], i);
