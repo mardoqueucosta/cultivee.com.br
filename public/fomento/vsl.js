@@ -54,7 +54,8 @@
   // Cartao final: cobre o player inteiro
   var fim = el('div', 'vsl-ov vsl-fim');
   if (capa) fim.style.backgroundImage = 'url("' + capa + '")';
-  var fimCaixa = el('div', 'vsl-caixa', '<p class="vsl-tit">O próximo passo é a consultoria por hora</p>');
+  // titulo do cartao final: data-fim-titulo no bloco .vsl (a pagina do curso usa outro); sem ele, o da consultoria
+  var fimCaixa = el('div', 'vsl-caixa', '<p class="vsl-tit">' + (vsl.dataset.fimTitulo || 'O próximo passo é a consultoria por hora') + '</p>');
   fimCaixa.appendChild(botaoCta('vsl-fim'));
   var deNovo = el('button', 'vsl-sec', ICONE_DE_NOVO + 'Assistir de novo');
   deNovo.type = 'button';

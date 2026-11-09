@@ -1,7 +1,7 @@
 // Cursos do Cultivee Educa (fonte unica para a home e a pagina /educa).
 // Status honesto (decisao do dono 2026-10-07): nenhum curso aberto; Cultivo em
-// producao com lista de espera pelo WhatsApp; Negocios com a mentoria de captacao
-// funcionando (landing estatica /fomento, por isso `external`).
+// producao com lista de espera pelo WhatsApp; Negocios com o curso online PIPE Fase 1 a venda (09/11/2026,
+// pagina estatica /fomento/curso-pipe, por isso `external`) e a consultoria de captacao em /fomento.
 // Imagens: geradas no estilo da casa (02-Gerador-imagem-API/gerar_site_cultivee.py).
 
 const WHATSAPP = "https://wa.me/5519991644181?text=";
@@ -50,11 +50,11 @@ export const cursosNegocios: Curso[] = [
   {
     title: "Captação de recursos",
     description:
-      "Mentoria para escrever e submeter projetos a agências de fomento: PIPE e FAPESP, Centelha, CNPq, Finep e EMBRAPII. Preço fixo, sem percentual sobre o recurso.",
-    status: "Mentoria disponível",
-    href: "/fomento",
+      "Curso online do PIPE-FAPESP Fase 1, com 19 aulas, a pasta-modelo e o mapa do SAGe. Para outros editais (Centelha, CNPq, Finep e EMBRAPII), consultoria com preço fixo, sem percentual sobre o recurso.",
+    status: "Curso à venda",
+    href: "/fomento/curso-pipe",
     external: true,
-    cta: "Conhecer a mentoria",
+    cta: "Ver o curso",
     image: "/img/site/curso-captacao.jpg",
   },
   {

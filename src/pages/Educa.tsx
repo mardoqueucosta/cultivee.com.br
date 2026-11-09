@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "Os cursos já estão abertos?",
     answer:
-      "Ainda não. Os cursos de Microverdes e Hidroponia estão em produção e os demais estão em planejamento. Quem entra na lista de espera recebe o aviso da abertura da primeira turma. A mentoria de captação de recursos já está funcionando.",
+      "Ainda não. Os cursos de Microverdes e Hidroponia estão em produção e os demais estão em planejamento. Quem entra na lista de espera recebe o aviso da abertura da primeira turma. O curso online do PIPE-FAPESP Fase 1 já está à venda, e a consultoria de captação de recursos já está funcionando.",
   },
   {
     question: "Qual a diferença entre as duas trilhas?",
@@ -87,7 +87,12 @@ const EducaPage = () => {
       { name: "Curso de Hidroponia", url: "/cursos/hidroponia", description: "Em produção, lista de espera." },
       { name: "Curso de Cultivo Indoor", url: "/cursos/cultivo-indoor", description: "Em breve." },
       {
-        name: "Mentoria de captação de recursos de fomento",
+        name: "Curso online PIPE-FAPESP Fase 1",
+        url: "/fomento/curso-pipe",
+        description: "19 aulas, pasta-modelo e mapa do SAGe. À venda.",
+      },
+      {
+        name: "Consultoria de captação de recursos de fomento",
         url: "/fomento",
         description: "PIPE, Centelha, CNPq, FAPESP, Finep e EMBRAPII.",
       },
@@ -118,7 +123,7 @@ const EducaPage = () => {
         <meta property="og:title" content="Cultivee Educa: cursos de cultivo e de negócios" />
         <meta
           property="og:description"
-          content="Trilha Cultivo e trilha Negócios. Cursos em produção, com lista de espera, e mentoria de captação de recursos."
+          content="Trilha Cultivo e trilha Negócios. Curso online do PIPE Fase 1 à venda, cursos de cultivo em produção e consultoria de captação de recursos."
         />
         <script type="application/ld+json">{JSON.stringify(collectionLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
