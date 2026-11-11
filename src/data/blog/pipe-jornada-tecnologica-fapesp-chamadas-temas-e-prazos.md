@@ -285,9 +285,9 @@ As chamadas do PIPE Jornada abrem e fecham em cerca de um mês. Quem chega ao la
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Fui pesquisador responsável em três projetos PIPE da FAPESP, o mais recente o da Cultivee citado neste guia, e já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. Os dois primeiros aparecem na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/), onde qualquer pessoa confere título, datas e responsável pelo número do processo.
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso (uma chamada do Jornada, o PIPE regular ou outro), quanto ele pode financiar e se dá tempo de preparar a proposta para a próxima janela. A aprovação é sempre decisão dos pareceristas e da FAPESP; o que o diagnóstico entrega é clareza sobre onde o seu projeto está forte e onde está frágil.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso (uma chamada do Jornada, o PIPE regular ou outro), quanto ele pode financiar e se dá tempo de preparar a proposta para a próxima janela. A aprovação é sempre decisão dos pareceristas e da FAPESP; o que a consultoria entrega é clareza sobre onde o seu projeto está forte e onde está frágil.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-pipe-jornada&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-pipe-jornada)
 
 ## Fontes oficiais
 

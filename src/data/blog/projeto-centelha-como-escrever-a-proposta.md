@@ -79,7 +79,7 @@ O gráfico abaixo coloca os mesmos pesos lado a lado e destaca, em dourado, os t
 ![Gráfico de barras com o peso dos onze subcritérios da Fase 2 do Centelha 3, de 13,3% no cronograma e no orçamento a 5,6% nas evidências](/blog/projeto-centelha-como-escrever-a-proposta/centelha-3-fase-2-peso-dos-subcriterios.jpg)
 *Peso de cada subcritério na nota da Fase 2 do Centelha 3*
 
-Somados, cronograma, orçamento e modelo de negócio respondem por um terço da nota da Fase 2 (13,3% + 13,3% + 6,7%, cálculo da Cultivee). Os outros oito subcritérios ficam entre 5,6% e 11,1%, então uma proposta com boa ideia e plano fraco perde nota justamente onde a Fase 2 pesa mais.
+Somados, cronograma, orçamento e modelo de negócio respondem por um terço da nota da Fase 2 (13,3% + 13,3% + 6,7%, cálculo da Cultivee). Os outros oito subcritérios ficam entre 5,6% e 11,1%, então uma proposta com boa ideia e plano fraco perde nota justamente onde a Fase 2 pesa mais. Se quiser conferir se o seu cronograma e o seu orçamento fecham a conta, [leio a sua proposta por esses critérios em 1 hora de consultoria](/fomento?de=artigo-centelha-proposta-texto-fase2).
 
 ## Fase 1: como escrever a ideia, campo a campo
 
@@ -293,9 +293,9 @@ Conhecer os campos é o primeiro passo. O segundo é ler a sua proposta como o a
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Fui pesquisador responsável em três projetos PIPE da FAPESP e já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. Os dois primeiros estão na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/). Na proposta do Centelha, o meu método é o deste guia: ler campo a campo pelos critérios da chamada vigente.
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo se a sua ideia cabe no Centelha, no [PIPE Fase 1](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou) ou em outro programa, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos avaliadores e da fundação do seu estado, dentro do orçamento do edital; o que o diagnóstico entrega é clareza sobre onde a sua proposta está forte e onde está frágil.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo se a sua ideia cabe no Centelha, no [PIPE Fase 1](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou) ou em outro programa, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos avaliadores e da fundação do seu estado, dentro do orçamento do edital; o que a consultoria entrega é clareza sobre onde a sua proposta está forte e onde está frágil.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-projeto-centelha&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-projeto-centelha)
 
 ## Fontes oficiais
 

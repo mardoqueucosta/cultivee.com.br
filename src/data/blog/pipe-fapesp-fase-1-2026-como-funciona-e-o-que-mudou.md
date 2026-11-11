@@ -153,7 +153,7 @@ As etapas 3 e 4 examinam a proposta junto com esses pareceres, e por isso o que 
 
 As normas também dizem o que o PIPE não financia: conceito já demonstrado, assistência técnica, construção de planta piloto, revisão de literatura, pesquisa de mercado, pesquisa confidencial, pedido de patente e mera reaplicação de conhecimento existente. Produto pronto também não entra: o PIPE financia a pesquisa que leva ao produto, não a comercialização dele ([dúvidas frequentes do PIPE](https://fapesp.br/pipe/faq)).
 
-Uma forma útil de escrever a proposta é partir dessa tabela, e não do texto de um artigo científico. Cada critério vira uma pergunta que o texto precisa responder de forma explícita, na seção certa do modelo.
+Uma forma útil de escrever a proposta é partir dessa tabela, e não do texto de um artigo científico. Cada critério vira uma pergunta que o texto precisa responder de forma explícita, na seção certa do modelo. Se quiser uma segunda leitura antes de enviar, [leio a sua proposta por esses seis critérios em 1 hora de consultoria](/fomento?de=artigo-pipe-fase-1-texto-criterios); se prefere escrever sozinho, com método, o [curso online do PIPE Fase 1](/fomento/curso-pipe-fapesp?de=artigo-pipe-fase-1-texto-curso) vai da ideia à submissão no SAGe.
 
 ## O modelo de projeto de 2026, item por item
 
@@ -250,7 +250,7 @@ Três prazos práticos que costumam pegar quem submete pela primeira vez:
 
 - **Cadastro da empresa no SAGe:** pedir com no mínimo 3 dias úteis de antecedência da submissão (item 9, alínea k).
 - **Uma proposta por vez:** o mesmo PR não pode ter duas propostas PIPE em análise ao mesmo tempo.
-- **Reconsideração:** se a proposta for denegada, a FAPESP envia os pareceres com os motivos. Um pedido de reconsideração precisa ser completo e responder a todos os pontos; reformulações parciais não seguem na análise (item 11.3).
+- **Reconsideração:** se a proposta for denegada, a FAPESP envia os pareceres com os motivos. Um pedido de reconsideração precisa ser completo e responder a todos os pontos; reformulações parciais não seguem na análise (item 11.3). Se a sua proposta foi denegada, [posso ler os pareceres com você antes do pedido](/fomento?de=artigo-pipe-fase-1-texto-reconsideracao).
 
 Como o PIPE regular é de fluxo contínuo, a pressa não vem de um edital. Vem do calendário do próprio desenvolvimento: cada ciclo de análise e reescrita custa meses.
 
@@ -301,9 +301,9 @@ Conhecer as regras é o primeiro passo. O segundo é olhar a sua proposta pelos 
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Fui pesquisador responsável em três projetos PIPE da FAPESP, o mais recente o da Cultivee deste guia, e já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. Os dois primeiros já aparecem na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/), onde qualquer pessoa confere título, datas e responsável pelo número do processo.
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e da FAPESP; o que o diagnóstico entrega é clareza sobre onde o seu projeto está forte e onde está frágil.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e da FAPESP; o que a consultoria entrega é clareza sobre onde o seu projeto está forte e onde está frágil.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-pipe-fase-1&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-pipe-fase-1)
 
 ## Fontes oficiais
 

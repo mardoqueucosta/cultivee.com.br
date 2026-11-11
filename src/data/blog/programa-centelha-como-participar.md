@@ -145,7 +145,7 @@ Em SP, até 200 ideias passam para a Fase 2, uma por proponente. Dá para submet
 
 ### Fase 2: o projeto, com peso dobrado na consistência
 
-Na Fase 2, a nota soma cinco critérios, e a Consistência da Proposta, que reúne modelo de negócio, cronograma físico e orçamento, vale o dobro. Proposta com nota menor que 2 nesse critério é eliminada, qualquer que seja o resto (item 10.2, alínea c).
+Na Fase 2, a nota soma cinco critérios, e a Consistência da Proposta, que reúne modelo de negócio, cronograma físico e orçamento, vale o dobro. Proposta com nota menor que 2 nesse critério é eliminada, qualquer que seja o resto (item 10.2, alínea c). Se quiser saber se a sua ideia passa nessa conta, [leio a sua proposta pelos critérios do Centelha em 1 hora de consultoria](/fomento?de=artigo-centelha-texto-fase2).
 
 | Critério | Subcritérios | Peso na nota da Fase 2 |
 |---|---|---|
@@ -308,9 +308,9 @@ Conhecer o edital é o primeiro passo. O segundo é olhar a sua ideia pelos crit
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Fui pesquisador responsável em três projetos PIPE da FAPESP e já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. Os dois primeiros já aparecem na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/), onde qualquer pessoa confere título, datas e responsável pelo número do processo.
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, Centelha, PIPE ou outro, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos avaliadores e da fundação do seu estado, dentro do orçamento do edital; o que o diagnóstico entrega é clareza sobre onde a sua ideia está forte e onde está frágil.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, Centelha, PIPE ou outro, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos avaliadores e da fundação do seu estado, dentro do orçamento do edital; o que a consultoria entrega é clareza sobre onde a sua ideia está forte e onde está frágil.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-centelha&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-centelha)
 
 ## Fontes oficiais
 

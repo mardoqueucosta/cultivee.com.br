@@ -5,6 +5,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
+import ErroDeRota from "@/components/ErroDeRota";
 
 // Paginas em lazy: cada rota vira um chunk proprio (o SSG pre-renderiza o HTML
 // completo mesmo assim — verificado em 2026-07-10). Antes, TODAS as paginas e o
@@ -53,6 +54,8 @@ export const routes: RouteObject[] = [
   {
     path: "/",
     element: <Layout />,
+    // Aba aberta antes de uma publicacao: recarrega em vez de mostrar erro (ver ErroDeRota)
+    errorElement: <ErroDeRota />,
     children: [
       { index: true, element: <Index /> },
       { path: "agro", element: <AgroPage /> },

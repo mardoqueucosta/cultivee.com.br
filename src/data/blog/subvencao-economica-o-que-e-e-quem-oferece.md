@@ -271,9 +271,9 @@ Entender o conceito é o primeiro passo. O segundo é descobrir qual programa ac
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Participei de 18 financiamentos aprovados, de 7 fontes diferentes, fui pesquisador responsável em três projetos PIPE da FAPESP, o mais recente o da Cultivee deste guia, e já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. O histórico pode ser conferido no [currículo Lattes](http://lattes.cnpq.br/7819717440359474) e na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/).
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e da agência, dentro do orçamento de cada edital; o que o diagnóstico entrega é clareza sobre onde o seu projeto está forte e onde está frágil. Os outros caminhos de fomento estão em [/fomento](/fomento).
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e da agência, dentro do orçamento de cada edital; o que a consultoria entrega é clareza sobre onde o seu projeto está forte e onde está frágil. Os outros caminhos de fomento estão em [/fomento](/fomento).
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-subvencao&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-subvencao)
 
 ## Fontes oficiais
 

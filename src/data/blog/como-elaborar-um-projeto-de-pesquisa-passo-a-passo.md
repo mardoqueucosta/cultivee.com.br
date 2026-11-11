@@ -287,9 +287,9 @@ Um projeto bem amarrado é a base de qualquer pedido de bolsa ou de auxílio. Qu
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas, e tenho 18 financiamentos aprovados, de 7 fontes. Fui pesquisador responsável em três projetos PIPE da FAPESP (2010/52057-8, 2018/22628-5 e 2025/27266-8, este último da Cultivee, em execução), e os dois primeiros podem ser conferidos pelo número do processo na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/).
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa de fomento cabe no seu projeto, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e da agência; o diagnóstico entrega clareza sobre onde o projeto está pronto e onde ainda precisa de trabalho. Para quem tem empresa ou quer abrir uma, os guias [PIPE FAPESP Fase 1](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou) e [Projeto Centelha: como escrever a proposta](/blog/projeto-centelha-como-escrever-a-proposta) aplicam o mesmo raciocínio à inovação.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa de fomento cabe no seu projeto, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e da agência; a consultoria entrega clareza sobre onde o projeto está pronto e onde ainda precisa de trabalho. Para quem tem empresa ou quer abrir uma, os guias [PIPE FAPESP Fase 1](/blog/pipe-fapesp-fase-1-2026-como-funciona-e-o-que-mudou) e [Projeto Centelha: como escrever a proposta](/blog/projeto-centelha-como-escrever-a-proposta) aplicam o mesmo raciocínio à inovação.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-projeto-pesquisa&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-projeto-pesquisa)
 
 ## Fontes oficiais
 

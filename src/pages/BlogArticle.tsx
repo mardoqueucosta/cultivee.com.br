@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { CategoriaBadge } from "@/components/blog/Badge";
 import { PageHeader } from "@/components/blog/PageHeader";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
+import OfertaFomento from "@/components/blog/OfertaFomento";
 import {
   articlesMeta,
   getArticleBySlug,
@@ -278,6 +279,8 @@ const BlogArticlePage = () => {
             </aside>
           )}
 
+          {article.funil === "fomento" && <OfertaFomento slug={article.slug} posicao="topo" />}
+
           {headings.length >= 3 && (
             <nav
               aria-label="Índice"
@@ -321,6 +324,30 @@ const BlogArticlePage = () => {
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
+                    // Link no meio do texto para a /fomento (11/11/2026): mede como posicao "texto",
+                    // no mesmo evento dos blocos de oferta (OfertaFomento).
+                    a: ({ node: _node, href, children, ...props }) => (
+                      <a
+                        href={href}
+                        {...props}
+                        onClick={
+                          href?.startsWith("/fomento")
+                            ? () => {
+                                const gtag = (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag;
+                                if (typeof gtag === "function")
+                                  gtag("event", "clique_oferta_fomento", {
+                                    posicao: "texto",
+                                    servico: href.startsWith("/fomento/curso") ? "curso" : "consultoria",
+                                    artigo: article.slug,
+                                    transport_type: "beacon",
+                                  });
+                              }
+                            : undefined
+                        }
+                      >
+                        {children}
+                      </a>
+                    ),
                     // Tabela larga rola dentro da propria caixa: sem isso, no celular ela empurrava a pagina inteira para o lado
                     table: ({ node: _node, ...props }) => (
                       <div className="overflow-x-auto">
@@ -406,6 +433,12 @@ const BlogArticlePage = () => {
                   {section}
                 </ReactMarkdown>
               </div>
+              {/* Oferta no meio do artigo (funil de fomento): depois da secao do meio */}
+              {article.funil === "fomento" &&
+                markdownSections.length >= 3 &&
+                idx === Math.floor(markdownSections.length / 2) && (
+                  <OfertaFomento slug={article.slug} posicao="meio" />
+                )}
             </div>
           </section>
         ))}
@@ -449,16 +482,17 @@ const BlogArticlePage = () => {
         </div>
       </section>
 
-      {/* 5. CTA verde final — "Quer aprofundar?" */}
+      {/* 5. CTA final: no funil de fomento, os tres servicos de captacao; nos demais, "Quer aprofundar?" */}
+      {article.funil === "fomento" ? (
+        <OfertaFomento slug={article.slug} posicao="fim" />
+      ) : (
       <section className="bg-gradient-hero py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            {article.funil === "fomento" ? "Seu projeto está pronto para o edital?" : "Quer aprofundar?"}
+            Quer aprofundar?
           </h3>
           <p className="text-lg text-white/85 mb-8 max-w-xl mx-auto">
-            {article.funil === "fomento"
-              ? "Diagnóstico de Prontidão: 1 hora de consultoria em que você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta."
-              : "Conheça os cursos do Cultivee Educa: microverdes e hidroponia estão em produção, com lista de espera."}
+            Conheça os cursos do Cultivee Educa: microverdes e hidroponia estão em produção, com lista de espera.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -466,11 +500,7 @@ const BlogArticlePage = () => {
               size="lg"
               className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
             >
-              {article.funil === "fomento" ? (
-                <a href={`/fomento?de=artigo-${article.slug}&abrir=diagnostico`}>Conhecer o Diagnóstico</a>
-              ) : (
-                <Link to={cursoSlug}>Ver os cursos</Link>
-              )}
+              <Link to={cursoSlug}>Ver os cursos</Link>
             </Button>
             <Button
               asChild
@@ -488,6 +518,7 @@ const BlogArticlePage = () => {
           </div>
         </div>
       </section>
+      )}
 
       <Footer />
       <WhatsAppButton />

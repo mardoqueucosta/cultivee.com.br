@@ -150,7 +150,7 @@ O esquema abaixo abre o mesmo exemplo critério por critério: o comprimento da 
 ![Barras com o peso dos seis critérios da Chamada Universal 2026 e, ao lado, as notas de um exemplo e os pontos que cada critério soma à nota final de 7,6](/blog/chamada-universal-cnpq-como-funciona/chamada-universal-2026-criterios-pesos-e-exemplo-de-nota.jpg)
 *Peso de cada critério e quanto ele soma à nota final no exemplo de 7,6*
 
-No exemplo, os critérios A, B e C respondem por 5,8 dos 7,6 pontos (cálculo da Cultivee). Cada ponto a mais em A vale 0,3 na nota final; em B ou C, 0,2; em D, E ou F, 0,1. Por isso o plano de popularização, com nota baixa, ainda deixa espaço para subir, mas o maior ganho por ponto está na originalidade.
+No exemplo, os critérios A, B e C respondem por 5,8 dos 7,6 pontos (cálculo da Cultivee). Cada ponto a mais em A vale 0,3 na nota final; em B ou C, 0,2; em D, E ou F, 0,1. Por isso o plano de popularização, com nota baixa, ainda deixa espaço para subir, mas o maior ganho por ponto está na originalidade. Se quiser saber onde a sua proposta perde pontos, [leio o seu projeto pelos seis critérios antes do envio](/fomento?de=artigo-universal-cnpq-texto-criterios), em 1 hora de consultoria.
 
 Três leituras práticas:
 
@@ -242,7 +242,7 @@ O recurso administrativo da Chamada Universal é o pedido de revisão do resulta
 
 O recurso vai para a autoridade que deu a decisão. Se ela não reconsiderar, o caso segue para a Comissão Permanente de Avaliação de Recursos (COPAR), e a decisão final da Diretoria Executiva considera o que a COPAR deliberou (itens 8.2 e 9.1).
 
-O recurso começa pelos pareceres, que todos os proponentes recebem (item 7.2.3.4). Ele responde ponto a ponto ao parecer, mostrando onde a informação já estava na proposta ou onde houve erro de leitura ou de enquadramento, sem reescrever o projeto. A impugnação é outra coisa: contesta o texto da chamada, e o prazo terminou em 29/06/2026 (item 13).
+O recurso começa pelos pareceres, que todos os proponentes recebem (item 7.2.3.4). Ele responde ponto a ponto ao parecer, mostrando onde a informação já estava na proposta ou onde houve erro de leitura ou de enquadramento, sem reescrever o projeto. Se o seu pedido foi indeferido, [posso ler os pareceres com você e apontar o que cabe no recurso](/fomento?de=artigo-universal-cnpq-texto-recurso). A impugnação é outra coisa: contesta o texto da chamada, e o prazo terminou em 29/06/2026 (item 13).
 
 ## Depois da aprovação: Termo de Outorga e prestação de contas
 
@@ -291,9 +291,9 @@ Conhecer as faixas e os prazos é o primeiro passo. O segundo é ler a proposta 
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Tenho 18 financiamentos aprovados, de 7 fontes, entre coordenação e participação, e fui pesquisador responsável em três projetos PIPE da FAPESP, o mais recente o da Cultivee (processo 2025/27266-8), em execução. Também já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. O histórico pode ser conferido no meu [Currículo Lattes](http://lattes.cnpq.br/7819717440359474).
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e do CNPq, dentro do orçamento da chamada; o que o diagnóstico entrega é clareza sobre onde o seu projeto está forte e onde está frágil.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e do CNPq, dentro do orçamento da chamada; o que a consultoria entrega é clareza sobre onde o seu projeto está forte e onde está frágil.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-universal-cnpq&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-universal-cnpq)
 
 ## Fontes oficiais
 

@@ -249,9 +249,9 @@ Saber como o Sebraetec funciona resolve metade da dúvida. A outra metade é des
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Fui pesquisador responsável em três projetos PIPE da FAPESP e já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. Os dois primeiros PIPE já aparecem na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/), onde qualquer pessoa confere título, datas e responsável pelo número do processo.
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. Quando o caminho é o Sebraetec, eu indico isso e você segue direto com o Sebrae do seu estado. Nos programas de subvenção, a aprovação é sempre decisão dos pareceristas e da agência; o que o diagnóstico entrega é clareza sobre onde o seu projeto está forte e onde está frágil.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. Quando o caminho é o Sebraetec, eu indico isso e você segue direto com o Sebrae do seu estado. Nos programas de subvenção, a aprovação é sempre decisão dos pareceristas e da agência; o que a consultoria entrega é clareza sobre onde o seu projeto está forte e onde está frágil.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-sebraetec&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-sebraetec)
 
 ## Fontes oficiais
 

@@ -275,9 +275,9 @@ A Lei do Bem é um entre vários instrumentos. Para a empresa no Lucro Real com 
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Fui pesquisador responsável em três projetos PIPE da FAPESP e já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas. Os dois primeiros PIPE aparecem na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/), onde qualquer pessoa confere título, datas e responsável.
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. Se a resposta for a Lei do Bem, o enquadramento fiscal e o cálculo do benefício ficam com o contador da empresa; o diagnóstico aponta o caminho e o que precisa estar pronto do lado técnico.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. Se a resposta for a Lei do Bem, o enquadramento fiscal e o cálculo do benefício ficam com o contador da empresa; a consultoria aponta o caminho e o que precisa estar pronto do lado técnico.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-lei-do-bem&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-lei-do-bem)
 
 ## Fontes oficiais
 

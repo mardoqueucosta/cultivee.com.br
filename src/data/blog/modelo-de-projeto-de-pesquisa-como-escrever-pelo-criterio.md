@@ -282,9 +282,9 @@ Ter o modelo é o primeiro passo. O segundo é ler o seu projeto pelos critério
 
 Eu sou Mardoqueu Martins da Costa, fundador da Cultivee. Já avaliei dezenas de projetos de outros pesquisadores, na universidade e em empresas, e tenho 18 financiamentos aprovados, de 7 fontes. Fui pesquisador responsável em três projetos PIPE da FAPESP (2010/52057-8, 2018/22628-5 e 2025/27266-8, este último da Cultivee, em execução), e os dois primeiros já podem ser conferidos pelo número do processo na [Biblioteca Virtual da FAPESP](https://bv.fapesp.br/pt/pesquisador/106837/).
 
-Ofereço o Diagnóstico de Prontidão: 1 hora de consultoria comigo, em que leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e da agência; o que o diagnóstico entrega é clareza sobre onde o seu projeto responde aos critérios e onde ainda não responde.
+Ofereço a consultoria por hora: em 1 hora comigo, leio o seu projeto ou a sua ideia. Você sai sabendo qual programa cabe no seu caso, quanto ele pode financiar e se dá tempo de preparar a proposta. A aprovação é sempre decisão dos pareceristas e da agência; o que a consultoria entrega é clareza sobre onde o seu projeto responde aos critérios e onde ainda não responde.
 
-[Conhecer o Diagnóstico de Prontidão](/fomento?de=artigo-modelo-projeto&abrir=diagnostico)
+[Conhecer a consultoria por hora](/fomento?de=artigo-modelo-projeto)
 
 ## Fontes oficiais
 
