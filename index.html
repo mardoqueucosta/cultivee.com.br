@@ -22,7 +22,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-42DX5PZB0B');
+      // Fora de cultivee.com.br (prévia local, arquivo do disco) tudo vai como teste: o filtro
+      // "Tráfego do desenvolvedor" do GA4 descarta debug_mode. Mesma regra do public/fomento/medicao.js (11/11/2026).
+      var foraDoSite = !/(^|\.)cultivee\.com\.br$/i.test(location.hostname || '');
+      gtag('config', 'G-42DX5PZB0B', foraDoSite ? { debug_mode: true, traffic_type: 'internal' } : {});
     </script>
     <!-- Medicao de contato (WhatsApp, e-mail, telefone) em todo link do site: public/medicao-contato.js.
          Ao MUDAR o script, trocar o ?v= (a Cloudflare guarda o arquivo por 4 h sem versao no endereco). -->

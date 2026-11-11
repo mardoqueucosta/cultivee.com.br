@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react";
-import { Outlet, type RouteObject } from "react-router-dom";
+import { lazy, Suspense, useEffect, useRef } from "react";
+import { Outlet, useLocation, type RouteObject } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -34,9 +34,41 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
+// page_view da navegação interna, mandado DEPOIS de o <Head> trocar o título (11/11/2026). O da medição otimizada
+// do GA4 ("alterações com base no histórico do navegador", desligado no painel) saía antes e levava o título da
+// página anterior. O primeiro page_view, da carga da página, continua sendo o do config no index.html.
+function PageViewDepoisDoTitulo() {
+  const { pathname } = useLocation();
+  const primeira = useRef(true);
+  const tituloAnterior = useRef("");
+  useEffect(() => {
+    if (primeira.current) {
+      primeira.current = false;
+      tituloAnterior.current = document.title;
+      return;
+    }
+    // A página nova pode vir num pedaço carregado à parte: espera o título MUDAR (até 3 s) antes de contar.
+    const antes = tituloAnterior.current;
+    const inicio = Date.now();
+    const t = setInterval(() => {
+      const titulo = document.title;
+      if ((titulo && titulo !== antes) || Date.now() - inicio > 3000) {
+        clearInterval(t);
+        tituloAnterior.current = titulo;
+        const gtag = (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag;
+        if (typeof gtag === "function")
+          gtag("event", "page_view", { page_location: window.location.href, page_title: titulo });
+      }
+    }, 100);
+    return () => clearInterval(t);
+  }, [pathname]);
+  return null;
+}
+
 function Layout() {
   return (
     <HelmetProvider>
+      <PageViewDepoisDoTitulo />
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />

@@ -13,14 +13,17 @@ import { ArrowRight, BookOpen, Clock, MessagesSquare } from "lucide-react";
 type Posicao = "topo" | "meio" | "fim";
 type Servico = "consultoria" | "curso" | "acompanhamento" | "servicos";
 
-// [padrao do slug, "ao/à <programa>" (pergunta do meio), "o/a <programa>" (titulo do fim)]
+// [padrao do slug, pergunta do meio sem "?", "o/a <programa>" (titulo do fim)]
 const PROGRAMAS: [RegExp, string, string][] = [
-  [/pipe/, "ao PIPE-FAPESP", "o PIPE-FAPESP"],
-  [/cnpq/, "ao CNPq", "o CNPq"],
-  [/centelha/, "ao Centelha", "o Centelha"],
-  [/finep|subvencao/, "à Finep", "a Finep"],
-  [/sebraetec/, "ao Sebraetec", "o Sebraetec"],
-  [/lei-do-bem/, "à Lei do Bem", "a Lei do Bem"],
+  [/bndes-garagem/, "Vai se inscrever no BNDES Garagem", "o BNDES Garagem"],
+  [/sp-global-tech/, "Vai se inscrever no SP Global Tech", "o SP Global Tech"],
+  [/petrobras/, "Vai concorrer a uma chamada da Petrobras", "a Petrobras"],
+  [/pipe/, "Vai submeter ao PIPE-FAPESP", "o PIPE-FAPESP"],
+  [/cnpq/, "Vai submeter ao CNPq", "o CNPq"],
+  [/centelha/, "Vai submeter ao Centelha", "o Centelha"],
+  [/finep|subvencao/, "Vai submeter à Finep", "a Finep"],
+  [/sebraetec/, "Vai pedir o Sebraetec", "o Sebraetec"],
+  [/lei-do-bem/, "Vai usar a Lei do Bem", "a Lei do Bem"],
 ];
 
 function programaDoArtigo(slug: string): { ao: string; o: string } | null {
@@ -76,7 +79,7 @@ const OfertaFomento = ({ slug, posicao }: Props) => {
         aria-label="Ajuda para escrever o seu projeto"
       >
         <div className="text-xs font-bold uppercase tracking-[0.12em] text-primary mb-2">
-          {programa ? `Vai submeter ${programa.ao}?` : "Vai submeter um projeto?"}
+          {programa ? `${programa.ao}?` : "Vai submeter um projeto?"}
         </div>
         <p className="text-xl md:text-2xl font-semibold text-foreground leading-snug mb-3">
           Leio o seu projeto pelo critério de avaliação do edital, antes de você enviar.
