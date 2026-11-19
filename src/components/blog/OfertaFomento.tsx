@@ -163,7 +163,7 @@ const OfertaFomento = ({ slug, posicao }: Props) => {
             {programa ? `Precisa de ajuda com o seu projeto para ${programa.o}?` : "Precisa de ajuda com o seu projeto?"}
           </h2>
           <p className="text-lg text-white/80">
-            Três jeitos de trabalhar, do mais rápido ao mais completo. Preço fixo, nunca percentual sobre o recurso.
+            Três jeitos de trabalhar, do mais rápido ao mais completo. Tudo combinado antes de começar.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
