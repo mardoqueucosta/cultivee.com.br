@@ -1,16 +1,12 @@
 {
-  "atualizado_em": "2026-11-23T05:15:03",
+  "atualizado_em": "2026-11-24T05:15:03",
   "series": {
     "boi-gordo": {
-      "pontos": 92,
-      "var_7d_pct": 0.3,
-      "var_30d_pct": 3.96,
-      "var_inicio_pct": 21.08,
+      "pontos": 93,
+      "var_7d_pct": 0.24,
+      "var_30d_pct": 3.62,
+      "var_inicio_pct": 20.99,
       "recentes": [
-        [
-          "07/10/2026",
-          376.1
-        ],
         [
           "08/10/2026",
           376.3
@@ -126,10 +122,14 @@
         [
           "19/11/2026",
           395.5
+        ],
+        [
+          "23/11/2026",
+          395.2
         ]
       ],
       "primeiro": "10/07/2026",
-      "ultimo": "19/11/2026",
+      "ultimo": "23/11/2026",
       "minimo": 324.6,
       "minimo_em": "13/07/2026",
       "maximo": 395.5,
@@ -137,15 +137,11 @@
       "amplitude_pct": 21.84
     },
     "cafe-arabica": {
-      "pontos": 92,
-      "var_7d_pct": 5.53,
-      "var_30d_pct": 6.14,
-      "var_inicio_pct": -0.78,
+      "pontos": 93,
+      "var_7d_pct": 1.42,
+      "var_30d_pct": 5.67,
+      "var_inicio_pct": -1.72,
       "recentes": [
-        [
-          "07/10/2026",
-          1566.59
-        ],
         [
           "08/10/2026",
           1544.99
@@ -261,10 +257,14 @@
         [
           "19/11/2026",
           1709.06
+        ],
+        [
+          "23/11/2026",
+          1692.77
         ]
       ],
       "primeiro": "10/07/2026",
-      "ultimo": "19/11/2026",
+      "ultimo": "23/11/2026",
       "minimo": 1511.31,
       "minimo_em": "22/09/2026",
       "maximo": 1826.58,
@@ -272,15 +272,11 @@
       "amplitude_pct": 20.86
     },
     "cafe-robusta": {
-      "pontos": 82,
-      "var_7d_pct": -2.26,
-      "var_30d_pct": -2.13,
-      "var_inicio_pct": -11.52,
+      "pontos": 83,
+      "var_7d_pct": -3.44,
+      "var_30d_pct": -0.12,
+      "var_inicio_pct": -12.62,
       "recentes": [
-        [
-          "07/10/2026",
-          970.02
-        ],
         [
           "08/10/2026",
           955.89
@@ -396,15 +392,19 @@
         [
           "19/11/2026",
           947.36
+        ],
+        [
+          "23/11/2026",
+          935.58
         ]
       ],
       "primeiro": "24/07/2026",
-      "ultimo": "19/11/2026",
-      "minimo": 936.73,
-      "minimo_em": "23/10/2026",
+      "ultimo": "23/11/2026",
+      "minimo": 935.58,
+      "minimo_em": "23/11/2026",
       "maximo": 1114.0,
       "maximo_em": "28/07/2026",
-      "amplitude_pct": 18.92
+      "amplitude_pct": 19.07
     },
     "leite": {
       "pontos": 6,
@@ -446,15 +446,11 @@
       "amplitude_pct": 8.6
     },
     "milho": {
-      "pontos": 92,
-      "var_7d_pct": 0.59,
-      "var_30d_pct": 5.19,
-      "var_inicio_pct": 4.91,
+      "pontos": 93,
+      "var_7d_pct": 0.95,
+      "var_30d_pct": 5.52,
+      "var_inicio_pct": 5.13,
       "recentes": [
-        [
-          "07/10/2026",
-          67.24
-        ],
         [
           "08/10/2026",
           67.18
@@ -570,10 +566,14 @@
         [
           "19/11/2026",
           67.68
+        ],
+        [
+          "23/11/2026",
+          67.82
         ]
       ],
       "primeiro": "10/07/2026",
-      "ultimo": "19/11/2026",
+      "ultimo": "23/11/2026",
       "minimo": 64.24,
       "minimo_em": "22/10/2026",
       "maximo": 71.06,
@@ -581,15 +581,11 @@
       "amplitude_pct": 10.62
     },
     "soja": {
-      "pontos": 92,
-      "var_7d_pct": 3.93,
-      "var_30d_pct": 9.97,
-      "var_inicio_pct": 20.12,
+      "pontos": 93,
+      "var_7d_pct": 2.81,
+      "var_30d_pct": 12.03,
+      "var_inicio_pct": 21.58,
       "recentes": [
-        [
-          "07/10/2026",
-          153.9
-        ],
         [
           "08/10/2026",
           154.91
@@ -705,26 +701,26 @@
         [
           "19/11/2026",
           168.69
+        ],
+        [
+          "23/11/2026",
+          170.74
         ]
       ],
       "primeiro": "10/07/2026",
-      "ultimo": "19/11/2026",
+      "ultimo": "23/11/2026",
       "minimo": 139.99,
       "minimo_em": "15/07/2026",
-      "maximo": 168.69,
-      "maximo_em": "19/11/2026",
-      "amplitude_pct": 20.5
+      "maximo": 170.74,
+      "maximo_em": "23/11/2026",
+      "amplitude_pct": 21.97
     },
     "trigo": {
-      "pontos": 92,
-      "var_7d_pct": 0.02,
-      "var_30d_pct": 0.6,
-      "var_inicio_pct": 14.32,
+      "pontos": 93,
+      "var_7d_pct": 1.03,
+      "var_30d_pct": 1.82,
+      "var_inicio_pct": 15.49,
       "recentes": [
-        [
-          "07/10/2026",
-          1538.46
-        ],
         [
           "08/10/2026",
           1560.92
@@ -840,15 +836,19 @@
         [
           "19/11/2026",
           1572.74
+        ],
+        [
+          "23/11/2026",
+          1588.76
         ]
       ],
       "primeiro": "10/07/2026",
-      "ultimo": "19/11/2026",
+      "ultimo": "23/11/2026",
       "minimo": 1375.69,
       "minimo_em": "10/07/2026",
-      "maximo": 1578.12,
-      "maximo_em": "29/10/2026",
-      "amplitude_pct": 14.71
+      "maximo": 1588.76,
+      "maximo_em": "23/11/2026",
+      "amplitude_pct": 15.49
     }
   }
 }
