@@ -28,6 +28,8 @@ const STATIC_PATHS = [
   { path: "/editais", changefreq: "weekly", priority: "0.7" },
   // Edital PIPE na integra com guia proprio (public/editais/fapesp-pipe, 20/10/2026). A de Tecnologias Educacionais e noindex: fora.
   { path: "/editais/fapesp-pipe", changefreq: "monthly", priority: "0.6" },
+  // Manuais de montagem e plantio (src/pages/Manuais.tsx, lista em src/data/manuais.ts; 27/11/2026).
+  { path: "/manuais", changefreq: "monthly", priority: "0.6" },
   { path: "/aplicativos", changefreq: "monthly", priority: "0.5" },
   { path: "/produtos", changefreq: "monthly", priority: "0.7" },
   { path: "/produtos/controle-hidroponia", changefreq: "monthly", priority: "0.7" },

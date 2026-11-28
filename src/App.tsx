@@ -29,6 +29,7 @@ const CursoCultivoIndoorPage = lazy(() => import("./pages/CursoCultivoIndoor"));
 const CotacoesPage = lazy(() => import("./pages/Cotacoes"));
 const CotacaoCafePage = lazy(() => import("./pages/CotacaoCafe"));
 const EditaisPage = lazy(() => import("./pages/Editais"));
+const ManuaisPage = lazy(() => import("./pages/Manuais"));
 const EditalPage = lazy(() => import("./pages/Edital"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -121,6 +122,8 @@ export const routes: RouteObject[] = [
       { path: "cotacoes/cafe", element: <CotacaoCafePage /> },
       // Lista semanal de editais abertos (le public/dados/editais/editais.json, feito pela busca-editais)
       { path: "editais", element: <EditaisPage /> },
+      // Manuais de montagem e plantio em PDF (27/11/2026; lista em src/data/manuais.ts).
+      { path: "manuais", element: <ManuaisPage /> },
       // Editais (captacao-recursos/vendas/paginas-editais): copia integral + guia proprio
       {
         path: "editais/:slug",
